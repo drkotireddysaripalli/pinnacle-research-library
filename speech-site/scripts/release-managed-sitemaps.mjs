@@ -14,7 +14,7 @@ export const sha=b=>createHash('sha256').update(b).digest('hex');
 const git='C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe';
 const g=args=>execFileSync(git,args,{encoding:'utf8',windowsHide:true}).trim();
 function ghHeaders(){const raw=execFileSync(git,['credential','fill'],{input:'protocol=https\nhost=github.com\n\n',encoding:'utf8',windowsHide:true,env:{...process.env,GCM_INTERACTIVE:'Never',GIT_TERMINAL_PROMPT:'0'}}),c=Object.fromEntries(raw.trim().split('\n').map(l=>{const i=l.indexOf('=');return[l.slice(0,i),l.slice(i+1)]}));return{authorization:'Basic '+Buffer.from(c.username+':'+c.password).toString('base64'),'User-Agent':'Pinnacle-managed-release','Content-Type':'application/json'};}
-async function gh(route,method='GET',body){const r=await fetch('https://api.github.com/repos/drkotireddysaripalli/pinnacle-research-library'+route,{method,headers:ghHeaders(),body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(60000)}),j=await r.json();assert(r.ok,j.message||'GitHub readback');return j;}
+export async function gh(route,method='GET',body){const r=await fetch('https://api.github.com/repos/drkotireddysaripalli/pinnacle-research-library'+route,{method,headers:ghHeaders(),body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(60000)}),raw=await r.text(),j=raw?JSON.parse(raw):{};assert(r.ok,j.message||'GitHub readback');return j;}
 export async function save(p,j){await fs.mkdir(path.dirname(p),{recursive:true});await fs.writeFile(p,JSON.stringify(j,null,2)+'\n');}
 export const read=p=>fs.readFile(p,'utf8').then(JSON.parse);
 export async function api(p,method='GET',body,auth){
@@ -114,7 +114,7 @@ async function source(){
 async function ci(){
  const rec=await read(out+'/release.json');assert.equal(g(['rev-parse','HEAD']),rec.source);
  const deadline=Date.now()+25*60*1000;let last;
- while(Date.now()<deadline){const result=await gh('/actions/runs?head_sha='+rec.source+'&per_page=30'),runs=result.workflow_runs.filter(r=>['Portal quality','Sitemap manager contracts'].includes(r.name)&&r.event!=='pull_request');
+ while(Date.now()<deadline){const result=await gh('/actions/runs?head_sha='+rec.source+'&per_page=30'),runs=result.workflow_runs.filter(r=>['Portal quality','Sitemap manager contracts'].includes(r.name)&&(r.name==='Sitemap manager contracts'||r.event!=='pull_request'));
   const latest=[...new Map(runs.map(r=>[r.name,r])).values()];const summary=latest.map(r=>({id:r.id,name:r.name,status:r.status,conclusion:r.conclusion,source:r.head_sha,url:r.html_url}));await save(out+'/ci.json',{source:rec.source,at:new Date().toISOString(),runs:summary});
   const mark=JSON.stringify(summary.map(r=>[r.name,r.status,r.conclusion]));if(mark!==last){console.log(mark);last=mark;}
   if(latest.length>=2&&latest.every(r=>r.status==='completed')){assert(latest.every(r=>r.conclusion==='success'),'Exact-source CI failed; inspect retained run IDs');return;}
