@@ -1,0 +1,33 @@
+import json,sys,tempfile,unittest
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+import manager as m
+import source_refresh as s
+
+class SourceRefresh(unittest.TestCase):
+ def setUp(self):
+  self.temp=tempfile.TemporaryDirectory();self.db=m.connect(Path(self.temp.name)/'feed.sqlite3');self.url='https://pinnacleblooms.org/ask/real-parent-question';self.resource='https://materials.pinnacleblooms.org/aac';self.fp='a'*64
+  for url,family in [(self.url,'ask'),(self.resource,'materials-portal')]:
+   row=dict(url_hash=m.sha(url),url=url,host=url.split('/')[2],module_type=family,decision='INCLUDE',title='Approved title',description='Approved description',keywords_json='[]',canonical_url=url,language='en',content_modified_at=None,priority_hint=None,change_frequency_hint=None,relevance=None,og_image=None,images_json='[]',videos_json='[]',links_json='[]',llm_text=None,llm_approved=0,metadata_json=m.dump({'eligibility':{'decision':'INCLUDE','evidence_date':'2026-10-13'},'curation':{}}),row_sha256='');m.upsert(self.db,m.refresh_digest(row))
+  self.db.commit();self.baseline=[{'canonical':self.url,'public_state':'published-public','indexable':'true','publisher_source_fingerprint':self.fp}]
+ def tearDown(self):self.db.close();self.temp.cleanup()
+ def snapshot(self,rows):return {'complete':True,'stable':True,'rows':rows,'eligibleTotal':len(rows),'completedAt':'2026-10-14T00:00:00Z'}
+ def test_partial_snapshot_cannot_withdraw_a_parent(self):
+  doc=self.snapshot([]);doc['complete']=False
+  with self.assertRaises(ValueError):s.apply_ask(self.db,doc,self.baseline)
+  self.assertEqual(self.db.execute('select decision from pages where url=?',(self.url,)).fetchone()[0],'INCLUDE')
+ def test_complete_withdrawal_holds_known_parent_and_leaves_unrelated_source(self):
+  changes,holds=s.apply_ask(self.db,self.snapshot([]),self.baseline);self.assertEqual(len(changes),1);self.assertFalse(holds);self.assertEqual(self.db.execute('select decision from pages where url=?',(self.url,)).fetchone()[0],'HOLD');self.assertEqual(self.db.execute('select decision from pages where url=?',(self.resource,)).fetchone()[0],'INCLUDE')
+ def test_changed_content_needs_serving_proof_and_does_not_create_a_fake_lastmod(self):
+  doc=self.snapshot([{'slug':'real-parent-question','lang':'en','publisher_source_fingerprint':'b'*64}]);changes,holds=s.apply_ask(self.db,doc,self.baseline);self.assertFalse(changes);self.assertEqual(len(holds),1)
+  changes,holds=s.apply_ask(self.db,doc,self.baseline,lambda *_:{'publication_qualified':True,'title':'Current public title','description':'Current public description','content_sha256':'c'*64});self.assertEqual(len(changes),1);row=self.db.execute('select title,content_modified_at from pages where url=?',(self.url,)).fetchone();self.assertEqual(tuple(row),('Current public title',None))
+ def test_new_publisher_identity_stays_held(self):
+  doc=self.snapshot([{'slug':'real-parent-question','lang':'en','publisher_source_fingerprint':self.fp},{'slug':'unknown-parent','lang':'en','publisher_source_fingerprint':'c'*64}]);_,holds=s.apply_ask(self.db,doc,self.baseline);self.assertEqual(len(holds),1);self.assertEqual(self.db.execute('select count(*) from pages').fetchone()[0],2)
+ def test_first_resource_and_video_wrapper_use_current_refs_not_prior_refs(self):
+  image='https://images.pinnacleblooms.org/photo.jpg';video='https://images.pinnacleblooms.org/video.mp4';self.db.execute('update pages set images_json=?,videos_json=? where url=?',(json.dumps([{'loc':image}]),json.dumps([{'values':{'content_loc':video,'title':'Actual video','description':'Actual description','thumbnail_loc':image}}]),self.resource))
+  current={'publication_qualified':True,'media_references':[{'media_kind':'image','source_image_url':image,'media_url':image},{'media_kind':'video','media_url':video}], 'video_objects':[],'body_sha256':'d'*64,'content_sha256':'e'*64,'observed_at':'2026-10-14T00:00:00Z','title':'Approved title','description':'Approved description'}
+  changes,holds,_=s.apply_resources(self.db,{self.resource:current},{},{});self.assertFalse(changes);self.assertFalse(holds);self.assertEqual(len(json.loads(self.db.execute('select videos_json from pages where url=?',(self.resource,)).fetchone()[0])),1)
+ def test_transient_resource_failure_does_not_infer_deletion(self):
+  changes,holds,_=s.apply_resources(self.db,{self.resource:{'publication_qualified':False,'status':503,'error':'temporary'}},{},{});self.assertFalse(changes);self.assertEqual(len(holds),1);self.assertEqual(self.db.execute('select decision from pages where url=?',(self.resource,)).fetchone()[0],'INCLUDE')
+
+if __name__=='__main__':unittest.main()

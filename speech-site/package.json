@@ -33,7 +33,8 @@
     "test:ask-content": "node --test scripts/test-ask-resource-shape.mjs scripts/test-ask-search-links.mjs",
     "check:ask-account": "node scripts/check-ask-account.mjs",
     "build:shared-assets-repair": "node scripts/build-shared-assets-repair.mjs",
-    "test:shared-assets-repair": "node scripts/build-shared-assets-repair.mjs && node --test scripts/test-shared-assets-repair.mjs"
+    "test:shared-assets-repair": "node scripts/build-shared-assets-repair.mjs && node --test scripts/test-shared-assets-repair.mjs",
+    "sitemap:publish-source": "node scripts/publish-public-source.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "14.3.3",
