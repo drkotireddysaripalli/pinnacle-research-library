@@ -1,0 +1,26 @@
+name: Cloud source upkeep contracts
+on:
+  push:
+    paths: ['speech-site/scripts/cloud-source-*.mjs', 'speech-site/scripts/cloud-source-state.py', 'speech-site/scripts/publisher-platform.mjs', 'speech-site/scripts/sitemap-submission-plan.mjs', 'speech-site/scripts/test-cloud-source-*', 'speech-site/scripts/test-indexnow-host-keys.mjs', 'speech-site/scripts/prepare-indexnow-hosts.mjs', 'speech-site/deployment/managed-sitemap-runtime.mjs', '.github/workflows/sitemap-cloud-runner.yml']
+  pull_request:
+    paths: ['speech-site/scripts/cloud-source-*.mjs', 'speech-site/scripts/cloud-source-state.py', 'speech-site/scripts/publisher-platform.mjs', 'speech-site/scripts/sitemap-submission-plan.mjs', 'speech-site/scripts/test-cloud-source-*', 'speech-site/scripts/test-indexnow-host-keys.mjs', 'speech-site/scripts/prepare-indexnow-hosts.mjs', 'speech-site/deployment/managed-sitemap-runtime.mjs', '.github/workflows/sitemap-cloud-runner.yml']
+permissions:
+  contents: read
+jobs:
+  contracts:
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    defaults:
+      run:
+        working-directory: speech-site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: build-window/.node-version
+          cache: npm
+          cache-dependency-path: speech-site/package-lock.json
+      - run: npm ci
+      - run: node --test scripts/test-cloud-source-contracts.mjs scripts/test-indexnow-host-keys.mjs scripts/test-public-source.mjs scripts/test-verified-r2-source.mjs scripts/test-managed-refresh.mjs scripts/test-testingbot-contract.mjs
+      - run: python3 scripts/test-cloud-source-state.py

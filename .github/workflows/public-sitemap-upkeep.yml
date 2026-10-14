@@ -55,7 +55,7 @@ jobs:
           python3 -m pip install boto3==1.43.113
       - name: Run isolated cloud contracts
         run: |
-          node --test scripts/test-cloud-source-contracts.mjs
+          node --test scripts/test-cloud-source-contracts.mjs scripts/test-indexnow-host-keys.mjs
           python3 scripts/test-cloud-source-state.py
       - name: Reconcile and publish approved sources
         run: |

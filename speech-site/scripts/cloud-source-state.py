@@ -2,7 +2,7 @@
 import argparse,gzip,hashlib,json,os,pathlib,tempfile,zipfile,subprocess
 ACCOUNT='862998def1cd610fdb86b8e5c1d6ed4d';BUCKET='pinnacle-sitemap-state'
 BLOCKED={'bindings.json','before.json','original.json','candidate.json','upload-session.json','settings.json'}
-PATH_KEYS={'feed','policy','baseline_publisher','resource_baseline','aliases','r2_associations','baseline_receipt','baselineReceipt','baselineManifest','baselineDirectory','fullUnion','selectedRelease','previousRelease','snapshot','delta','r2','generated','archive','installedConfig','currentFeed'}
+PATH_KEYS={'preservation_proof','feed','policy','baseline_publisher','resource_baseline','aliases','r2_associations','baseline_receipt','baselineReceipt','baselineManifest','baselineDirectory','fullUnion','selectedRelease','previousRelease','snapshot','delta','r2','generated','archive','installedConfig','currentFeed'}
 def sha(b):return hashlib.sha256(b).hexdigest()
 def io_path(p):
  p=pathlib.Path(p).resolve()
@@ -35,7 +35,7 @@ def selected_files(repo,config):
    if f.is_file():
     if f.is_symlink():raise ValueError('State symlinks excluded')
     normal=pathlib.Path(str(f).removeprefix('\\\\?\\'));rel=normal.relative_to(repo).as_posix();safe_member(rel);files[rel]=f
- for k in ('feed','policy','baseline_publisher','resource_baseline','aliases','r2_associations','baseline_receipt'):add(config[k])
+ for k in ('preservation_proof','feed','policy','baseline_publisher','resource_baseline','aliases','r2_associations','baseline_receipt'):add(config[k])
  receipt=json.loads(pathlib.Path(config['baseline_receipt']).read_text(encoding='utf-8'))
  if receipt['phase']!='verified_complete':raise ValueError('Unverified publication baseline')
  add(pathlib.Path(receipt['selectedRelease'])/'manifest.json')
@@ -57,9 +57,14 @@ def selected_files(repo,config):
  return files
 def store(repo,config_path,s3,bucket=BUCKET):
  repo=pathlib.Path(repo).resolve();config=json.loads(pathlib.Path(config_path).read_text(encoding='utf-8'));config['python']='python3';config['global_lock']='ask-private/cloud-local-checkpoint.lock';config['cloud']={'enabled':True,'repository':'drkotireddysaripalli/pinnacle-research-library','workflow':'public-sitemap-upkeep.yml','ref':'main'}
+ config['gsc_site']='sc-domain:pinnacleblooms.org';config['bing_site_url']='https://pinnacleblooms.org/'
+ if not config.get('preservation_proof'):
+  proof=pathlib.Path('../../public-500-recovery-20261013/speech-site/outputs/public-500-recovery-20261013/public-proof.json').resolve()
+  if not proof.is_file():raise ValueError('Accepted receiving/public-recovery proof is required')
+  config['preservation_proof']=str(proof)
  # Only explicitly configured public-source inputs may be copied from another
  # owner worktree. They become self-contained; desktop secrets are never read.
- for k in ('feed','policy','baseline_publisher','resource_baseline','aliases','r2_associations','baseline_receipt'):
+ for k in ('preservation_proof','feed','policy','baseline_publisher','resource_baseline','aliases','r2_associations','baseline_receipt'):
   source=pathlib.Path(config[k]).resolve()
   if not source.is_relative_to(repo):
    target=repo/'speech-site/ask-private/cloud-seed'/f'{k}-{source.name}'
@@ -69,7 +74,8 @@ def store(repo,config_path,s3,bucket=BUCKET):
   if len(f.stem)==32 and all(c in '0123456789abcdef' for c in f.stem.lower()):
    value=f.read_text(encoding='utf-8').strip()
    if value!=f.stem:raise ValueError('Existing public IndexNow key differs from file name')
-   config.setdefault('indexnow_keys',{})['www.pinnacleblooms.org']={'key':value,'keyLocation':'https://www.pinnacleblooms.org/'+f.name}
+   for host in ('www.pinnacleblooms.org','pinnacleblooms.org','materials.pinnacleblooms.org','interventions.pinnacleblooms.org','pediatricians.pinnacleblooms.org'):
+    config.setdefault('indexnow_keys',{})[host]={'key':value,'keyLocation':'https://'+host+'/'+f.name}
  files=selected_files(repo,config);members=[]
  with tempfile.TemporaryDirectory() as td:
   archive=pathlib.Path(td)/'source-state.zip'
@@ -118,7 +124,7 @@ if __name__=='__main__':
   s3=client()
   if args.action=='job-store':
    data=pathlib.Path(args.job_file).read_bytes();record=json.loads(data)
-   if set(record)-{'dispatchId','scheduledTime','runId','attempt','status','startedAt','finishedAt','version','publicFilesVerified','steps','sourcePhase'}:raise ValueError('Unexpected job checkpoint fields')
+   if set(record)-{'dispatchId','scheduledTime','runId','attempt','status','startedAt','finishedAt','version','publicFilesVerified','steps','sourcePhase','readOnlyRecoveries'}:raise ValueError('Unexpected job checkpoint fields')
    s3.put_object(Bucket=BUCKET,Key='jobs/current.json',Body=data,ContentType='application/json');print(json.dumps({'jobCheckpointPersisted':True}))
   elif args.action=='outbox-store':
    data=pathlib.Path('ask-private/sitemap-submission-outbox.json').read_bytes();json.loads(data);s3.put_object(Bucket=BUCKET,Key='outbox/current.json',Body=data,ContentType='application/json');print(json.dumps({'outboxPersisted':True,'sha256':sha(data)}))
