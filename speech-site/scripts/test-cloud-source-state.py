@@ -32,4 +32,22 @@ class StateTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as td:
    with self.assertRaises(ValueError):m.hydrate(td,s3)
    self.assertFalse((pathlib.Path(td)/'speech-site').exists())
+ def chunk_fixture(self):
+  s3=self.fixture();manifest=json.loads(s3.objects['bootstrap.json']);blob=s3.objects.pop(manifest['archive_key']);cut=len(blob)//2;manifest['archive_parts']=[]
+  for i,data in enumerate((blob[:cut],blob[cut:])):
+   key=f"chunks/{manifest['archive_sha256']}/{i:03d}";s3.objects[key]=data;manifest['archive_parts'].append({'key':key,'bytes':len(data),'sha256':m.sha(data)})
+  s3.objects['bootstrap.json']=json.dumps(manifest).encode();return s3
+ def test_chunked_bootstrap_preserves_exact_archive_and_public_bytes(self):
+  with tempfile.TemporaryDirectory() as td:
+   result=m.hydrate(td,self.chunk_fixture());self.assertTrue(result['hydrated']);self.assertEqual((pathlib.Path(td)/'speech-site/public/pinnacle-pages-data/fixture.json').read_bytes(),b'{"exact":1}\n')
+ def test_corrupt_bootstrap_part_fails_before_extracting(self):
+  s3=self.chunk_fixture();manifest=json.loads(s3.objects['bootstrap.json']);s3.objects[manifest['archive_parts'][1]['key']]=b'corrupt'
+  with tempfile.TemporaryDirectory() as td:
+   with self.assertRaises(ValueError):m.hydrate(td,s3)
+   self.assertFalse((pathlib.Path(td)/'speech-site').exists())
+ def test_unapproved_bootstrap_part_key_is_rejected(self):
+  s3=self.chunk_fixture();manifest=json.loads(s3.objects['bootstrap.json']);manifest['archive_parts'][0]['key']='other-bucket-source';s3.objects['bootstrap.json']=json.dumps(manifest).encode()
+  with tempfile.TemporaryDirectory() as td:
+   with self.assertRaises(ValueError):m.hydrate(td,s3)
+   self.assertFalse((pathlib.Path(td)/'speech-site').exists())
 if __name__=='__main__':unittest.main()
