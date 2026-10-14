@@ -1,0 +1,35 @@
+import importlib.util,io,json,pathlib,tempfile,unittest,zipfile,hashlib
+spec=importlib.util.spec_from_file_location('state',pathlib.Path(__file__).with_name('cloud-source-state.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+class Missing(Exception):response={'ResponseMetadata':{'HTTPStatusCode':404}}
+class FakeS3:
+ def __init__(self,objects):self.objects=objects
+ def get_object(self,**kw):
+  if kw['Key'] not in self.objects:raise Missing()
+  return {'Body':io.BytesIO(self.objects[kw['Key']])}
+class StateTests(unittest.TestCase):
+ def test_traversal_and_secret_snapshots_rejected(self):
+  for s in ('../outside','/etc/password','speech-site/ask-private/bindings.json','speech-site/.git/config','speech-site/private/settings.json','other/data.json'):
+   with self.assertRaises(ValueError):m.safe_member(s)
+ def test_only_path_fields_are_relocated(self):
+  r=m.relocate({'feed':'C:/old/speech-site/private/feed.sqlite3','title':'C:/old/title','url':'https://www.pinnacleblooms.org/page'},'C:/old','/new')
+  self.assertEqual(r['feed'],str(pathlib.Path('/new/speech-site/private/feed.sqlite3')));self.assertEqual(r['title'],'C:/old/title')
+ def fixture(self,public=b'{"exact":1}\n',tampered=False):
+  config=json.dumps({'schema_version':1,'python':'C:/Python314/python.exe','feed':'C:/old/speech-site/ask-private/feed.sqlite3'}).encode();files={'speech-site/ask-private/public-publisher-config.json':config,'speech-site/public/pinnacle-pages-data/fixture.json':public};b=io.BytesIO()
+  with zipfile.ZipFile(b,'w') as z:
+   for p,d in files.items():z.writestr(p,d)
+  blob=b.getvalue();manifest={'schema':1,'source_root':'C:/old','archive_key':'blobs/fixture.zip','archive_sha256':hashlib.sha256(blob).hexdigest(),'archive_bytes':len(blob),'publication_version':'fixture-version','relocate_json':['speech-site/ask-private/public-publisher-config.json'],'files':[{'path':p,'bytes':len(d),'sha256':hashlib.sha256(d).hexdigest()} for p,d in files.items()]}
+  if tampered:manifest['archive_sha256']='0'*64
+  return FakeS3({'bootstrap.json':json.dumps(manifest).encode(),'blobs/fixture.zip':blob})
+ def test_hydration_keeps_public_asset_bytes(self):
+  with tempfile.TemporaryDirectory() as td:
+   m.hydrate(td,self.fixture());self.assertEqual((pathlib.Path(td)/'speech-site/public/pinnacle-pages-data/fixture.json').read_bytes(),b'{"exact":1}\n');c=json.loads((pathlib.Path(td)/'speech-site/ask-private/public-publisher-config.json').read_text());self.assertEqual(c['python'],'python3');self.assertTrue(pathlib.Path(c['feed']).resolve().is_relative_to(pathlib.Path(td).resolve()))
+ def test_corrupt_state_fails_before_extracting(self):
+  with tempfile.TemporaryDirectory() as td:
+   with self.assertRaises(ValueError):m.hydrate(td,self.fixture(tampered=True))
+   self.assertFalse((pathlib.Path(td)/'speech-site').exists())
+ def test_later_member_corruption_does_not_partially_extract(self):
+  s3=self.fixture();manifest=json.loads(s3.objects['bootstrap.json']);manifest['files'][-1]['sha256']='0'*64;s3.objects['bootstrap.json']=json.dumps(manifest).encode()
+  with tempfile.TemporaryDirectory() as td:
+   with self.assertRaises(ValueError):m.hydrate(td,s3)
+   self.assertFalse((pathlib.Path(td)/'speech-site').exists())
+if __name__=='__main__':unittest.main()

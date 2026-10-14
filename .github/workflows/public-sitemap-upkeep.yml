@@ -1,0 +1,72 @@
+name: Public sitemap upkeep
+run-name: sitemap-${{ inputs.dispatch_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      dispatch_id:
+        description: Durable controller or local enqueue ID
+        required: true
+        type: string
+      scheduled_time:
+        description: Original scheduled event timestamp
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: pinnacle-public-source-upkeep
+  cancel-in-progress: false
+jobs:
+  source:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
+    environment: pinnacle-public-source-upkeep
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    defaults:
+      run:
+        working-directory: speech-site
+    env:
+      SITEMAP_DISPATCH_ID: ${{ inputs.dispatch_id }}
+      SITEMAP_SCHEDULED_TIME: ${{ inputs.scheduled_time }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.PINNACLE_CLOUDFLARE_PUBLISHER_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.PINNACLE_GITHUB_PUBLISHER_TOKEN }}
+      SITEMAP_STATE_ACCESS_KEY_ID: ${{ secrets.PINNACLE_R2_STATE_ACCESS_KEY_ID }}
+      SITEMAP_STATE_SECRET_ACCESS_KEY: ${{ secrets.PINNACLE_R2_STATE_SECRET_ACCESS_KEY }}
+      GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.PINNACLE_GSC_SERVICE_ACCOUNT_JSON }}
+      BING_WEBMASTER_API_KEY: ${{ secrets.PINNACLE_BING_WEBMASTER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ secrets.PINNACLE_GITHUB_PUBLISHER_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: build-window/.node-version
+          cache: npm
+          cache-dependency-path: speech-site/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Install pinned source tooling
+        run: |
+          npm install --global "npm@$(cat ../build-window/.npm-version)" --no-audit --no-fund
+          npm ci
+          python3 -m pip install boto3==1.43.113
+      - name: Run isolated cloud contracts
+        run: |
+          node --test scripts/test-cloud-source-contracts.mjs
+          python3 scripts/test-cloud-source-state.py
+      - name: Reconcile and publish approved sources
+        run: |
+          git config user.name "Pinnacle source upkeep"
+          git config user.email "pinnacle-source-upkeep@users.noreply.github.com"
+          node scripts/cloud-source-run.mjs
+      - name: Save compact cloud result only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitemap-cloud-result-${{ inputs.dispatch_id }}
+          path: speech-site/outputs/cloud-source-${{ inputs.dispatch_id }}/report.json
+          if-no-files-found: error
+          retention-days: 30

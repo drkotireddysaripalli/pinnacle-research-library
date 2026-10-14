@@ -1,3 +1,4 @@
+import {cloudflareToken} from './publisher-platform.mjs';
 // Bounded metadata-only coverage of the existing reviewed public association set.
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
 const arg=n=>{const i=process.argv.indexOf('--'+n);return i<0?null:process.argv[i+1];};const root=arg('root')||'ask-private/r2-approved-current';assert(path.resolve(root).startsWith(path.resolve('ask-private')+path.sep));await fs.mkdir(root,{recursive:true});const cfg=JSON.parse(await fs.readFile('ask-private/public-publisher-config.json','utf8')),bytes=await fs.readFile(cfg.r2_associations),approved=JSON.parse(bytes),fingerprint=createHash('sha256').update(bytes).digest('hex');
@@ -8,7 +9,7 @@ const save=()=>fs.writeFile(stateFile,JSON.stringify(state,null,2)+'\n');
 while(state.pass<2&&queries<200){
  const [bucket,prefix]=scopes[state.scope],file=root+'/pass-'+state.pass+'-scope-'+state.scope+'-page-'+state.page+'.json';let page=await fs.readFile(file,'utf8').then(JSON.parse).catch(e=>{if(e.code==='ENOENT')return null;throw e;});
  if(!page){
-  const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)[1];
+  const token=await cloudflareToken();
   const params=new URLSearchParams({prefix,per_page:'1000'});if(state.cursor)params.set('cursor',state.cursor);
   const r=await fetch('https://api.cloudflare.com/client/v4/accounts/862998def1cd610fdb86b8e5c1d6ed4d/r2/buckets/'+bucket+'/objects?'+params,{headers:{authorization:'Bearer '+token},signal:AbortSignal.timeout(30000)}),d=await r.json();queries++;assert(r.ok&&d.success,'R2 read failed; no absence or change accepted');assert(Array.isArray(d.result));assert(d.result.every(x=>typeof x.key==='string'&&x.key.startsWith(prefix)),'R2 prefix mismatch');
   assert(typeof d.result_info?.is_truncated==='boolean','Missing complete pagination evidence');const known=d.result.filter(x=>approved[bucket+'/'+x.key]).map(x=>({id:bucket+'/'+x.key,etag:x.etag,size:x.size}));
