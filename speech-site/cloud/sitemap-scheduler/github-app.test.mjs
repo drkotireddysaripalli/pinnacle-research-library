@@ -7,7 +7,7 @@ const T = Date.parse('2026-10-14T04:40:00Z');
 const pair = generateKeyPairSync('rsa', { modulusLength: 2048 });
 const pkcs8 = pair.privateKey.export({ type: 'pkcs8', format: 'pem' });
 const pkcs1 = pair.privateKey.export({ type: 'pkcs1', format: 'pem' });
-const credentials = { appId: 'Iv1_unit_test', installationId: '1234', privateKey: pkcs8 };
+const credentials = { appId: 'Iv1.unit_test', installationId: '1234', privateKey: pkcs8 };
 function issued(token = 'unit-minted-token', expiry = T + 3600000) {
   return { token, expires_at: new Date(expiry).toISOString(), permissions: { actions: 'write', metadata: 'read' }, repositories: [{ full_name: 'drkotireddysaripalli/pinnacle-research-library' }] };
 }
@@ -21,7 +21,7 @@ test('App JWT is cryptographically valid and limits the credential to this repos
   const [head, payload, signature] = request.init.headers.Authorization.slice(7).split('.');
   assert.equal(JSON.parse(Buffer.from(head, 'base64url')).alg, 'RS256');
   assert(verify('RSA-SHA256', Buffer.from(`${head}.${payload}`), pair.publicKey, Buffer.from(signature, 'base64url')));
-  assert.deepEqual(JSON.parse(Buffer.from(payload, 'base64url')), { iat: T / 1000 - 60, exp: T / 1000 + 540, iss: 'Iv1_unit_test' });
+  assert.deepEqual(JSON.parse(Buffer.from(payload, 'base64url')), { iat: T / 1000 - 60, exp: T / 1000 + 540, iss: 'Iv1.unit_test' });
 });
 
 test('GitHub generated PKCS1 keys are wrapped correctly for Workers WebCrypto', async () => {
