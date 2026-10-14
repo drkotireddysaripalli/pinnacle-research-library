@@ -18,6 +18,9 @@ source refresh, search submissions, publication or a real scheduled event.
   a private store, with durable dispatch-id deduplication. An uncertain dispatch
   is not re-posted automatically. Correct an unresolved provider ambiguity
   before resuming it. Known HTTP 429 rejection respects Retry-After/reset.
+  Durable Object alarms resume explicit rate-limit delays and collect runner
+  outcomes; they preserve the original native cron timestamp. Provider reads
+  are bounded to 50 and dispatch attempts to three per daily identity.
 - A Linux runner succeeds only after complete qualified source/R2 reconciliation,
   valid generation, source-matched tests, guarded publication or verified
   unchanged output, public readback, durable submission-outbox drain and
@@ -37,9 +40,17 @@ source refresh, search submissions, publication or a real scheduled event.
 one SQLite-backed Durable Object and no public HTTP route. Set the real
 Cloudflare account explicitly during integration, preserving unrelated Workers.
 
-The scheduler's `GITHUB_DISPATCH_TOKEN` must be a dedicated token/App installation
-credential scoped to this one repository with Actions read/write and normal
-metadata read. It needs no contents, issues, organisation or clinical-data access.
+Prefer a repository-scoped GitHub App installation: set `GITHUB_APP_ID` and
+`GITHUB_APP_INSTALLATION_ID` as variables and `GITHUB_APP_PRIVATE_KEY` as a
+Cloudflare secret. The controller signs its App JWT locally and requests only
+Actions write (including read) on this one repository, caches each short-lived
+installation token until one minute before expiry, then renews it unattended.
+GitHub-generated PKCS#1 and PKCS#8 RSA keys are supported. It needs no contents,
+issues, organisation or clinical-data access.
+
+An already authorized dedicated `GITHUB_DISPATCH_TOKEN` is also supported;
+its provider expiry/rotation must be managed explicitly. Installation tokens
+must not be saved as a fixed forever credential because they expire.
 Never transfer a desktop or connector session token as a substitute. Install it
 as a Cloudflare secret using the authorized credential setup, without logging it.
 After correcting a known-rejected configuration, increment
@@ -53,7 +64,7 @@ not authorise bypassing that gate or claiming deployment.
 
 ## Verification
 
-Run `node --test controller.test.mjs` and the production owner's Wrangler dry-run.
+Run `node --test *.test.mjs` and the production owner's Wrangler dry-run.
 After deployment, read back the provider's Worker version, bindings and daily
 schedule. To verify without waiting until tomorrow, temporarily install a short
 validation cron. All invocations on one IST day deduplicate to one dispatch.

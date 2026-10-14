@@ -1,12 +1,17 @@
 import { DurableObject } from 'cloudflare:workers';
 import { ScheduledController } from './controller.mjs';
+import { schedulerCredential } from './github-app.mjs';
 
 export class SitemapScheduleLedger extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
-    this.controller = new ScheduledController({ storage: ctx.storage, token: env.GITHUB_DISPATCH_TOKEN, configRevision: env.SCHEDULE_CONFIG_REVISION });
+    this.controller = new ScheduledController({ storage: ctx.storage, token: schedulerCredential(env), configRevision: env.SCHEDULE_CONFIG_REVISION });
   }
   async trigger(event) { return this.controller.trigger(event); }
+  async alarm() {
+    const receipt = await this.controller.resume();
+    console.log(JSON.stringify({ event: 'pinnacle_sitemap_provider_reconciliation', ...receipt }));
+  }
 }
 
 export default {

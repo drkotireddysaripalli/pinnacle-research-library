@@ -4,6 +4,7 @@ export const WORKFLOW = 'public-sitemap-upkeep.yml';
 export const DAILY_CRON = '30 20 * * *'; // 02:00 Asia/Kolkata on the next day.
 const IST_OFFSET_MS = 330 * 60 * 1000;
 const TERMINAL = new Set(['runner_succeeded', 'runner_failed', 'configuration_blocked']);
+const credentialFailure = Symbol('credential failure before a dispatch request');
 
 export function dispatchIdentity(scheduledTime) {
   if (!Number.isSafeInteger(scheduledTime) || scheduledTime < 0) throw Error('Invalid native scheduled time');
@@ -19,7 +20,7 @@ export function retryAfterMillis(header, now, fallback = 300000) {
 
 export class ScheduledController {
   constructor({ storage, token, configRevision = '1', fetcher = fetch, clock = Date.now }) {
-    if (!storage?.get || !storage?.put || !storage?.delete) throw Error('Durable storage is required');
+    if (!storage?.get || !storage?.put || !storage?.delete || !storage?.setAlarm || !storage?.deleteAlarm) throw Error('Durable storage with alarms is required');
     this.storage = storage;
     this.token = token;
     this.configRevision = configRevision;
@@ -36,11 +37,36 @@ export class ScheduledController {
     return operation;
   }
 
+  resume() {
+    const operation = this.serial.then(async () => {
+      const record = await this.storage.get('active') || await this.storage.get('retry');
+      if (!record) return { phase: 'no_pending_run' };
+      try {
+        return await this.process({ scheduledTime: Date.parse(record.firstNativeScheduledTime), cron: record.cron, kind: 'alarm' });
+      } catch {
+        // Provider reads can fail independently of a successful dispatch.
+        // Retain its identity and retry only the read, within a bounded budget.
+        if ((record.providerReads || 0) < 50) await this.storage.setAlarm(this.clock() + 120000);
+        throw Error('Scheduled runner reconciliation failed; last known publication remains unchanged');
+      }
+    });
+    this.serial = operation.catch(() => {});
+    return operation;
+  }
+
   async api(method, path, body) {
-    if (typeof this.token !== 'string' || !this.token.trim()) throw Error('Dedicated GitHub Actions credential is missing');
+    let token;
+    try {
+      token = typeof this.token === 'function' ? await this.token() : this.token;
+      if (typeof token !== 'string' || !token.trim()) throw Error('Missing credential');
+    } catch {
+      const error = Error('Dedicated GitHub Actions credential is unavailable');
+      error[credentialFailure] = true;
+      throw error;
+    }
     return this.fetcher(`https://api.github.com/repos/${REPOSITORY}/actions/workflows/${WORKFLOW}${path}`, {
       method,
-      headers: { Authorization: `Bearer ${this.token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json', 'User-Agent': 'PinnacleSitemapCloudScheduler' },
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json', 'User-Agent': 'PinnacleSitemapCloudScheduler' },
       ...(body ? { body: JSON.stringify(body) } : {}),
       signal: AbortSignal.timeout(8000),
     });
@@ -49,12 +75,25 @@ export class ScheduledController {
   async save(record, active = false) {
     record.updatedAt = new Date(this.clock()).toISOString();
     await this.storage.put(`day:${record.id}`, record);
-    if (active) await this.storage.put('active', record);
+    if (active) {
+      await this.storage.put('active', record);
+      if ((record.providerReads || 0) < 50) await this.storage.setAlarm(this.clock() + 120000);
+    } else if (record.phase === 'rate_limited') {
+      await this.storage.put('retry', record);
+      await this.storage.setAlarm(record.retryAt);
+    }
     return record;
   }
 
   async reconcile(record) {
     if (TERMINAL.has(record.phase)) return record;
+    if ((record.providerReads || 0) >= 50) {
+      record.phase = 'runner_reconciliation_attention';
+      await this.storage.deleteAlarm();
+      return this.save(record, true);
+    }
+    record.providerReads = (record.providerReads || 0) + 1;
+    await this.save(record, true);
     const query = new URLSearchParams({ event: 'workflow_dispatch', branch: 'main', per_page: '50', created: `>=${record.createdAt}` });
     const response = await this.api('GET', `/runs?${query}`);
     if (response.status !== 200) throw Error(`GitHub run reconciliation failed with HTTP ${response.status}`);
@@ -77,7 +116,11 @@ export class ScheduledController {
       record.phase = record.phase === 'dispatched' ? 'dispatched' : 'dispatch_uncertain';
     }
     await this.save(record, !TERMINAL.has(record.phase));
-    if (TERMINAL.has(record.phase)) await this.storage.delete('active');
+    if (TERMINAL.has(record.phase)) {
+      await this.storage.delete('active');
+      await this.storage.delete('retry');
+      await this.storage.deleteAlarm();
+    }
     return record;
   }
 
@@ -92,8 +135,11 @@ export class ScheduledController {
       if (!TERMINAL.has(previous.phase)) return { id, phase: 'previous_run_pending', previousId: previous.id, previousPhase: previous.phase };
     }
     if (current) {
-      current.nativeInvocations = (current.nativeInvocations || 1) + 1;
-      current.latestNativeScheduledTime = new Date(event.scheduledTime).toISOString();
+      if (event.kind === 'alarm') current.alarmInvocations = (current.alarmInvocations || 0) + 1;
+      else {
+        current.nativeInvocations = (current.nativeInvocations || 1) + 1;
+        current.latestNativeScheduledTime = new Date(event.scheduledTime).toISOString();
+      }
       if (current.phase === 'configuration_blocked' && current.configRevision !== this.configRevision) {
         // The operator corrected a provider-rejected configuration. Its earlier
         // non-acceptance is known; a revision can safely resume today's job.
@@ -108,9 +154,15 @@ export class ScheduledController {
     } else {
       current = { id, configRevision: this.configRevision, createdAt: new Date(this.clock() - 1000).toISOString(), firstNativeScheduledTime: new Date(event.scheduledTime).toISOString(), latestNativeScheduledTime: new Date(event.scheduledTime).toISOString(), cron: event.cron, nativeInvocations: 1, dispatchAttempts: 0 };
     }
-    if (typeof this.token !== 'string' || !this.token.trim()) {
+    if (typeof this.token !== 'function' && (typeof this.token !== 'string' || !this.token.trim())) {
       current.phase = 'configuration_blocked';
       current.reason = 'Dedicated repository Actions credential is missing';
+      return this.save(current);
+    }
+    if (current.dispatchAttempts >= 3) {
+      current.phase = 'rate_limit_attention';
+      await this.storage.delete('retry');
+      await this.storage.deleteAlarm();
       return this.save(current);
     }
     current.phase = 'dispatch_pending';
@@ -119,7 +171,13 @@ export class ScheduledController {
     let response;
     try {
       response = await this.api('POST', '/dispatches', { ref: 'main', inputs: { dispatch_id: id, scheduled_time: new Date(event.scheduledTime).toISOString() } });
-    } catch {
+    } catch (error) {
+      if (error[credentialFailure]) {
+        current.phase = 'configuration_blocked';
+        current.reason = 'Credential acquisition failed before any workflow dispatch';
+        await this.storage.delete('active');
+        return this.save(current);
+      }
       current.phase = 'dispatch_uncertain';
       current.reason = 'Dispatch transport outcome is unknown; reconcile provider state before retrying';
       return this.save(current, true);

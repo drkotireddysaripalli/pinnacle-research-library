@@ -9,6 +9,8 @@ class Store {
   async get(key) { return structuredClone(this.data.get(key)); }
   async put(key, value) { this.data.set(key, structuredClone(value)); }
   async delete(key) { return this.data.delete(key); }
+  async setAlarm(time) { this.alarm = time; }
+  async deleteAlarm() { this.alarm = undefined; }
 }
 function setup(reply = () => new Response(null, { status: 204 })) {
   const storage = new Store(), calls = [];
@@ -152,4 +154,37 @@ test('malformed provider read cannot silently release the publication guard', as
 test('retry-after supports HTTP dates', () => {
   assert.equal(retryAfterMillis(new Date(T + 60000).toUTCString(), T), 60000);
   assert.equal(retryAfterMillis('invalid', T), 300000);
+});
+
+test('durable alarm reconciles a daily run without a second cron or mutation', async () => {
+  const s = setup((_, init) => init.method === 'POST' ? new Response(null, { status: 204 }) : runs([run(130, 'completed', 'success')]));
+  await s.controller.trigger(event);
+  assert.equal(s.storage.alarm, T + 120000);
+  s.advance(120000);
+  const result = await s.controller.resume();
+  assert.equal(result.phase, 'runner_succeeded');
+  assert.equal(result.nativeInvocations, 1);
+  assert.equal(result.alarmInvocations, 1);
+  assert.equal(s.storage.alarm, undefined);
+  assert.equal(s.calls.filter(c => c.method === 'POST').length, 1);
+});
+
+test('a rate-limit alarm resumes the original native scheduled identity', async () => {
+  let posts = 0;
+  const s = setup(() => ++posts === 1 ? new Response(null, { status: 429, headers: { 'Retry-After': '120' } }) : new Response(null, { status: 204 }));
+  await s.controller.trigger(event);
+  assert.equal(s.storage.alarm, T + 120000);
+  s.advance(120001);
+  const result = await s.controller.resume();
+  assert.equal(result.phase, 'dispatched');
+  assert.equal(result.firstNativeScheduledTime, new Date(T).toISOString());
+  assert.equal(result.nativeInvocations, 1);
+});
+
+test('a credential provider failure never counts as an uncertain workflow mutation', async () => {
+  const s = setup();
+  s.controller.token = async () => { throw Error('provider failure'); };
+  assert.equal((await s.controller.trigger(event)).phase, 'configuration_blocked');
+  assert.equal(s.calls.length, 0);
+  assert.equal(await s.storage.get('active'), undefined);
 });
