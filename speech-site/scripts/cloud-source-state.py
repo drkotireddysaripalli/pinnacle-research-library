@@ -90,7 +90,21 @@ def store(repo,config_path,s3,bucket=BUCKET):
 def hydrate(repo,s3,bucket=BUCKET):
  repo=pathlib.Path(repo).resolve();m=json.loads(s3.get_object(Bucket=bucket,Key='bootstrap.json')['Body'].read())
  if m.get('schema')!=1 or not m['archive_key'].startswith('blobs/'):raise ValueError('Invalid private state manifest')
- blob=s3.get_object(Bucket=bucket,Key=m['archive_key'])['Body'].read()
+ parts=m.get('archive_parts')
+ if parts is None:blob=s3.get_object(Bucket=bucket,Key=m['archive_key'])['Body'].read()
+ else:
+  # One-time owner REST bootstrap: each request stays below its 300 MB limit.
+  # Later S3 stores keep the existing single immutable archive contract.
+  if not isinstance(parts,list) or not 2<=len(parts)<=4:raise ValueError('Invalid bootstrap parts')
+  if not isinstance(m['archive_bytes'],int) or not 0<m['archive_bytes']<=1_200_000_000:raise ValueError('Invalid bootstrap size')
+  chunks=[]
+  for i,p in enumerate(parts):
+   if set(p)!={'key','bytes','sha256'} or p['key']!=f"chunks/{m['archive_sha256']}/{i:03d}":raise ValueError('Invalid bootstrap part key')
+   if not isinstance(p['bytes'],int) or not 0<p['bytes']<=300_000_000:raise ValueError('Invalid bootstrap part size')
+   data=s3.get_object(Bucket=bucket,Key=p['key'])['Body'].read()
+   if len(data)!=p['bytes'] or sha(data)!=p['sha256']:raise ValueError('Bootstrap part checksum mismatch')
+   chunks.append(data)
+  blob=b''.join(chunks)
  if len(blob)!=m['archive_bytes'] or sha(blob)!=m['archive_sha256']:raise ValueError('Private state archive checksum mismatch')
  import io
  with zipfile.ZipFile(io.BytesIO(blob)) as z:
