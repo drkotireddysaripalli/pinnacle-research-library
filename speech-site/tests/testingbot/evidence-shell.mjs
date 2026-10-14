@@ -5,7 +5,8 @@ export function evidenceShell(document, pathname) {
   const footer = document.querySelector('footer.evidence-footer');
   if (!header || !footer) return false;
   const links = [...header.querySelectorAll('a')];
-  if (!pathname.startsWith('/verify/evidence/')) return links.length >= 4;
+  if (links.length >= 4) return true; // Preserve the established full-header contract.
+  if (!/^\/verify\/evidence\/(?:records\/|publications\/|recognition-register\.html$)/.test(pathname)) return false;
   const urls = links.map(a => a.href);
   const section = pathname === '/verify/evidence/recognition-register.html' ? 'appreciations' : 'records';
   return urls.includes('https://www.pinnacleblooms.org/verify/') &&
