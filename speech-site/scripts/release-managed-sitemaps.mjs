@@ -6,24 +6,25 @@ import {createRequire} from 'node:module';
 import {execFileSync} from 'node:child_process';
 import {build} from 'esbuild';
 import {parse} from 'parse5';
+import {publisherGit,cloudflareToken,githubHeaders} from './publisher-platform.mjs';
 export const id='managed-sitemaps-20261013',out='outputs/'+id,priv='ask-private/'+id;
 export const names=['pinnacle-verify-route','pinnacle-legacy-social-metadata','pinnacle-ask','pinnacle-root-sitemap','materials-mobile-desktop-tracker','pbn-planetscale','pinnacle-helpline','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-google-ads-call-measurement'];
 export const hosts=['www.pinnacleblooms.org','pinnacleblooms.org','interventions.pinnacleblooms.org','materials.pinnacleblooms.org','pediatricians.pinnacleblooms.org'];
 export const base='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/',zone='/zones/8b13f18e0589996b5d6512552372b434';
 export const sha=b=>createHash('sha256').update(b).digest('hex');
-const git='C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe';
+const git=publisherGit;
 const g=args=>execFileSync(git,args,{encoding:'utf8',windowsHide:true}).trim();
-function ghHeaders(){const raw=execFileSync(git,['credential','fill'],{input:'protocol=https\nhost=github.com\n\n',encoding:'utf8',windowsHide:true,env:{...process.env,GCM_INTERACTIVE:'Never',GIT_TERMINAL_PROMPT:'0'}}),c=Object.fromEntries(raw.trim().split('\n').map(l=>{const i=l.indexOf('=');return[l.slice(0,i),l.slice(i+1)]}));return{authorization:'Basic '+Buffer.from(c.username+':'+c.password).toString('base64'),'User-Agent':'Pinnacle-managed-release','Content-Type':'application/json'};}
+const ghHeaders=()=>githubHeaders();
 export async function gh(route,method='GET',body){const r=await fetch('https://api.github.com/repos/drkotireddysaripalli/pinnacle-research-library'+route,{method,headers:ghHeaders(),body:body===undefined?undefined:JSON.stringify(body),signal:AbortSignal.timeout(60000)}),raw=await r.text(),j=raw?JSON.parse(raw):{};assert(r.ok,j.message||'GitHub readback');return j;}
 export async function save(p,j){await fs.mkdir(path.dirname(p),{recursive:true});await fs.writeFile(p,JSON.stringify(j,null,2)+'\n');}
 export const read=p=>fs.readFile(p,'utf8').then(JSON.parse);
 export async function api(p,method='GET',body,auth){
- const token=auth||(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)?.[1];assert(token);
+ const token=await cloudflareToken(auth);
  const form=body instanceof FormData,r=await fetch('https://api.cloudflare.com/client/v4'+p,{method,headers:{authorization:'Bearer '+token,...(!form?{'content-type':'application/json'}:{})},body:body===undefined?undefined:form?body:JSON.stringify(body),signal:AbortSignal.timeout(60000)}),j=await r.json();
  assert(r.ok&&j.success,JSON.stringify({status:r.status,path:p,errors:j.errors}));return j.result;
 }
 export async function state(){const [routes,workers]=await Promise.all([api(zone+'/workers/routes'),Promise.all(names.map(async n=>{const [d,s]=await Promise.all([api(base+n+'/deployments'),api(base+n+'/settings')]);return[n,{versions:d.deployments.sort((a,b)=>b.created_on.localeCompare(a.created_on))[0].versions,settings:s}]}))]);return{at:new Date().toISOString(),routes:routes.map(({id,pattern,script})=>({id,pattern,script})).sort((a,b)=>a.pattern.localeCompare(b.pattern)),workers:Object.fromEntries(workers)};}
-export async function modules(n){const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)[1],r=await fetch('https://api.cloudflare.com/client/v4'+base+n+'/content/v2',{headers:{authorization:'Bearer '+token},signal:AbortSignal.timeout(60000)});assert(r.ok,'Module read '+n+' '+r.status);const items=[];for(const [k,v]of await r.formData())if(typeof v!=='string')items.push({name:v.name||k,type:v.type,base64:Buffer.from(await v.arrayBuffer()).toString('base64')});return{entry:r.headers.get('cf-entrypoint'),items};}
+export async function modules(n){const token=await cloudflareToken(),r=await fetch('https://api.cloudflare.com/client/v4'+base+n+'/content/v2',{headers:{authorization:'Bearer '+token},signal:AbortSignal.timeout(60000)});assert(r.ok,'Module read '+n+' '+r.status);const items=[];for(const [k,v]of await r.formData())if(typeof v!=='string')items.push({name:v.name||k,type:v.type,base64:Buffer.from(await v.arrayBuffer()).toString('base64')});return{entry:r.headers.get('cf-entrypoint'),items};}
 async function capture(){
  assert(!(await fs.stat(priv+'/before.json').catch(()=>null)),'Reuse existing capture');
  const before=await state();await save(priv+'/before.json',before);

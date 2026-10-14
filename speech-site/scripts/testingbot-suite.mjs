@@ -7,6 +7,7 @@ import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
+import {evidenceShell} from '../tests/testingbot/evidence-shell.mjs';
 import {headerReferenceName,imageInViewport,desktopScreenResolution,fitCssViewport} from '../tests/testingbot/presentation-state.mjs';
 
 const option=(name,fallback)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
@@ -106,7 +107,7 @@ for(const matrixId of matrixIds){
         await check('Canonical and one meaningful main heading',()=>t.document.canonical===p.canonical&&t.document.h1.length===1&&t.document.h1[0].length>8&&t.document.title.length>15&&t.document.description?.length>30);
         await check('Loaded intended route',()=>new URL(t.document.url).pathname===new URL(target).pathname);
         await check('No page overflow',()=>evaluate('return document.documentElement.scrollWidth<=innerWidth+1'));
-        if(p.shell==='evidence')await check('Existing evidence header/footer remain present',()=>evaluate("return !!document.querySelector('header')&&!!document.querySelector('footer.evidence-footer')&&document.querySelectorAll('header a').length>=4"));
+        if(p.shell==='evidence')await check('Existing evidence header/footer remain present',()=>evaluate('return ('+evidenceShell.toString()+')(document,arguments[0])',new URL(target).pathname));
         else if(p.shell==='helpline')await check('Existing helpline header/footer remain present',()=>evaluate("return !!document.querySelector('header.site-header')&&!!document.querySelector('footer.site-footer')&&!!document.querySelector('header a[href*=\"9100181181\"]')"));
         else await check('Shared header/footer and nine usable authority links',()=>evaluate("const hs=document.querySelectorAll('.portal-site-header,.portal-header'),fs=document.querySelectorAll('.portal-site-footer'),a=[...document.querySelectorAll('.portal-main-list>a')];return hs.length>=1&&fs.length===1&&a.length===9&&a.every(n=>n.href&&n.textContent.trim().length>10)"));
         if(!p.shell)await check('Owner-approved authority wording and full evidence footer are preserved',()=>evaluate("const expected=arguments[0],a=[...document.querySelectorAll('.portal-main-list>a')],normal=s=>s.replace(/\\s+/g,' ').trim();return a.length===expected.main.length&&a.every((n,i)=>normal(n.querySelector('.portal-nav-label')?.textContent||'')===expected.main[i].label&&normal(n.querySelector('.portal-nav-detail')?.textContent||'')===expected.main[i].lines.join(' '))&&document.querySelectorAll('.verify-card').length===36&&document.querySelectorAll('nav.portal-locations li a').length===16&&document.querySelectorAll('nav.portal-community>a').length===8&&document.querySelectorAll('footer a[href$=\"/policies\"]').length===1",approvedShell));

@@ -1,9 +1,11 @@
+import {enqueueCloudSource} from './cloud-source-enqueue.mjs';
 // One native source job. No model, messages, customer records or new credentials.
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';import {createHash} from 'node:crypto';import {acquirePublisherLock} from './public-source-lock.mjs';
 import {verifiedR2Source} from './verified-r2-source.mjs';
 const configPath='ask-private/public-publisher-config.json',hash=b=>createHash('sha256').update(b).digest('hex'),read=p=>fs.readFile(p,'utf8').then(JSON.parse),save=async(p,v)=>{await fs.mkdir(path.dirname(p),{recursive:true});await fs.writeFile(p,JSON.stringify(v,null,2)+'\n')};
-const now=new Date(),id='maintenance-'+now.toISOString().replace(/[^0-9]/g,''),root=path.resolve('ask-private',id),out=path.resolve('outputs',id);await fs.mkdir(root,{recursive:true});await fs.mkdir(out,{recursive:true});
-const releaseLock=acquirePublisherLock(path.resolve('../../../work/pinnacle-growth-system/native-source-maintenance.lock'),id),receipt={id,startedAt:now.toISOString(),modelCalls:0,newCredentials:false,steps:[],status:'running'},report=out+'/report.json';await save(report,receipt);
+const installedCloud=JSON.parse(await fs.readFile(configPath,'utf8')).cloud;if(installedCloud?.enabled&&process.env.PINNACLE_CLOUD_RUNNER!=='1'){console.log(JSON.stringify(await enqueueCloudSource(installedCloud)));process.exit(0);}
+const now=new Date(),id=process.env.PINNACLE_SOURCE_EVENT_ID||'maintenance-'+now.toISOString().replace(/[^0-9]/g,'');assert(/^[a-z0-9-]{8,80}$/.test(id));const root=path.resolve('ask-private',id),out=path.resolve('outputs',id);await fs.mkdir(root,{recursive:true});await fs.mkdir(out,{recursive:true});
+const releaseLock=acquirePublisherLock(path.resolve(process.env.PINNACLE_SOURCE_MAINTENANCE_LOCK||'../../../work/pinnacle-growth-system/native-source-maintenance.lock'),id),receipt={id,startedAt:now.toISOString(),modelCalls:0,newCredentials:false,steps:[],status:'running'},report=out+'/report.json';await save(report,receipt);
 async function run(label,args){const log=root+'/'+label+'.log',stream=await fs.open(log,'w');try{const code=await new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{windowsHide:true,stdio:['ignore',stream.fd,stream.fd],env:{...process.env,PINNACLE_SOURCE_PUBLISHER_ACTIVE:'1',PINNACLE_RELEASE:'production'}});child.once('error',reject);child.once('close',resolve)});receipt.steps.push({label,exitCode:code,log,finishedAt:new Date().toISOString()});await save(report,receipt);return code;}finally{await stream.close();}}
 try{
  assert.equal(await run('auth',['node_modules/wrangler/bin/wrangler.js','whoami']),0);

@@ -3,6 +3,11 @@ import {handleManagedSitemap,HOSTS} from '../../tooling/sitemap-manager/asset-ha
 export function withManagedSitemaps(original,config){
  return {...original,async fetch(request,env,ctx){
   const url=new URL(request.url);
+  const key=config.indexnowKeys?.[url.hostname];
+  if(HOSTS.has(url.hostname)&&key&&/^[A-Za-z0-9-]{8,128}$/.test(key)&&url.pathname==='/'+key+'.txt'&&!url.search){
+   if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{Allow:'GET, HEAD'}});
+   return new Response(request.method==='HEAD'?null:key,{headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'public, max-age=86400','X-Content-Type-Options':'nosniff'}});
+  }
   const retiredNavigation=url.pathname.startsWith('/site-map/')||/^\/sitemap-(pages|images|videos|news)-[a-z0-9-]+\.xml$/.test(url.pathname);
   if(retiredNavigation&&HOSTS.has(url.hostname)&&['GET','HEAD'].includes(request.method)&&config.retiredPublicPaths?.includes(url.hostname+url.pathname)){
    return new Response(request.method==='HEAD'?null:'This superseded navigation file has been retired. Browse /site-map/ for the current public library.',{status:410,headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'public, max-age=300','X-Robots-Tag':'noindex','X-Content-Type-Options':'nosniff'}});
