@@ -1,0 +1,24 @@
+name: Cloud sitemap controller contracts
+on:
+  pull_request:
+    paths: ['speech-site/cloud/sitemap-scheduler/**', '.github/workflows/sitemap-cloud-controller.yml']
+  push:
+    branches: [main]
+    paths: ['speech-site/cloud/sitemap-scheduler/**', '.github/workflows/sitemap-cloud-controller.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  controller:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Verify schedule, durable recovery and credential scope
+        run: node --test speech-site/cloud/sitemap-scheduler/*.test.mjs
+      - name: Validate Worker module syntax
+        run: |
+          node --check speech-site/cloud/sitemap-scheduler/worker.mjs
+          node --check speech-site/cloud/sitemap-scheduler/github-app.mjs

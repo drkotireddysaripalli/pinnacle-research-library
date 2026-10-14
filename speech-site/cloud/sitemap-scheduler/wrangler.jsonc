@@ -1,0 +1,13 @@
+{
+  "name": "pinnacle-sitemap-scheduler",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-14",
+  "vars": { "SCHEDULE_CONFIG_REVISION": "1" },
+  "workers_dev": false,
+  "triggers": { "crons": ["30 20 * * *"] },
+  "observability": { "enabled": true },
+  "durable_objects": {
+    "bindings": [{ "name": "SCHEDULE_LEDGER", "class_name": "SitemapScheduleLedger" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["SitemapScheduleLedger"] }]
+}
