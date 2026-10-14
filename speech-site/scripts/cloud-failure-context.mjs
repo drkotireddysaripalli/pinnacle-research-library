@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';import path from 'node:path';
+const stages=new Set(['auth','r2-segment-0','r2-segment-1','r2-segment-2','source-publisher','source-publisher-read-retry','source-snapshot','source-delta','r2-source','qualify-r2','generate','resource-label-equivalence','publish']);
+const summaries=r=>(r?.steps||[]).filter(s=>stages.has(s.label)).map(s=>({stage:s.label,exit:Number.isInteger(s.exitCode)?s.exitCode:null}));
+const phases=new Set(['started','verified_unchanged_publication','verified_published','failed-last-good-preserved','verified','running','source-verified-pending-source-holds-or-R2-coverage']);
+async function read(file){try{return JSON.parse(await fs.readFile(file,'utf8'));}catch{return null;}}
+export async function cloudFailureContext(id,cwd=process.cwd()){
+ if(!/^[a-z0-9-]{8,80}$/.test(id))throw Error('Invalid diagnostics identity');
+ const job='cloud-'+id,maintenance=await read(path.join(cwd,'outputs',job,'report.json')),source=await read(path.join(cwd,'outputs',job+'-source','source-release.json'));
+ const result={maintenanceReceipt:maintenance?'present':'unavailable',sourceReceipt:source?'present':'unavailable',maintenanceStatus:phases.has(maintenance?.status)?maintenance.status:'unknown',sourcePhase:phases.has(source?.phase)?source.phase:'unknown',maintenanceSteps:summaries(maintenance),sourceSteps:summaries(source),publicationJournal:{archiveRecorded:!!source?.archive,pushRecorded:!!source?.pushed,versionRecorded:!!source?.version,deploymentRecorded:!!source?.deployment,pendingMutation:!!source?.pending}};
+ const logStep=[...(source?.steps||[]),...(maintenance?.steps||[])].find(s=>stages.has(s.label)&&s.exitCode!==0&&s.log);
+ if(logStep){const file=path.resolve(cwd,logStep.log),fences=[path.resolve(cwd,'ask-private',job)+path.sep,path.resolve(cwd,'ask-private',job+'-source')+path.sep];if(fences.some(p=>file.startsWith(p))&&file.endsWith('.log')){const text=await fs.readFile(file,'utf8').catch(()=>''),tail=text.slice(-16000);result.failureSignals={errorTypes:['AssertionError','TypeError','FileNotFoundError','PermissionError'].filter(x=>tail.includes(x)),codes:['ENOENT','EACCES','ERR_ASSERTION','ETIMEDOUT','ENOTFOUND'].filter(x=>tail.includes(x)),hints:[['r2-read-failed','R2 read failed'],['public-rpc-failed','Public source RPC failed'],['source-membership-changed','Source membership changed'],['source-unstable','Source changed between complete reads'],['wrangler-authentication','Authentication error'],['wrangler-account-selection','account ID'],['source-path-missing','No such file or directory']].filter(([,s])=>tail.includes(s)).map(([k])=>k)};}}
+ return result;
+}
