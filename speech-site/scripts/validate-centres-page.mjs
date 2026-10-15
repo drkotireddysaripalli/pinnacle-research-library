@@ -1,0 +1,42 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import http from 'node:http';
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright';
+import mime from 'mime';
+const out='reviews/centres-20261015';await fs.mkdir(out,{recursive:true});
+const html=await fs.readFile('dist/centers.html','utf8');
+assert(html.includes('<title>Find a Pinnacle Blooms Centre | Child Development Support</title>'));
+assert(html.includes('href="https://www.pinnacleblooms.org/centers"'));
+assert(html.includes('index, follow, max-image-preview:large'));
+assert(!html.includes('noindex'));
+const json=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
+const graph=json.find(x=>x['@graph'])['@graph'];
+assert.equal(graph.find(x=>x['@type']==='CollectionPage').dateModified,'2026-10-15');
+assert.equal(graph.find(x=>x['@type']==='FAQPage').mainEntity.length,12);
+assert.equal(json.find(x=>x['@type']==='ItemList').numberOfItems,62);
+assert(!graph.some(x=>['AggregateRating','MedicalClinic'].includes(x['@type'])));
+const evidence=JSON.parse(await fs.readFile('dist/pinnacle-pages-data/centers-evidence.json','utf8'));
+assert.equal(evidence.pageReviewedOn,'2026-10-15');assert.equal(evidence.directoryCheckedOn,'2026-09-28');
+assert(evidence.claims.some(x=>x.id==='life-first-direction'));
+assert((await fs.readFile('dist/pinnacle-pages-data/centers-machine.md','utf8')).includes('A centre visit starts the work'));
+assert(!JSON.stringify(evidence).includes('facilityId'));
+const assets=new Set([...html.matchAll(/\/pinnacle-pages-assets\/[A-Za-z0-9_./-]+/g)].map(m=>m[0]));
+for(const key of assets)assert((await fs.stat('dist'+key)).size>0,key);
+const server=http.createServer(async(req,res)=>{try{let p=decodeURIComponent(new URL(req.url,'http://local').pathname);assert(!p.includes('..'));if(p==='/centers')p='/centers.html';const b=await fs.readFile(path.join(process.cwd(),'dist',p));res.writeHead(200,{'content-type':mime.getType(p)||'application/octet-stream'}).end(b);}catch{res.writeHead(404).end();}});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const origin='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({channel:'chrome',headless:true});const results=[];
+try{for(const width of [320,768,1440]){
+ const page=await browser.newPage({viewport:{width,height:1000}});
+ await page.goto(origin+'/centers',{waitUntil:'networkidle'});await page.evaluate(()=>document.fonts.ready);
+ await page.locator('.centre-hero').screenshot({path:out+'/hero-'+width+'.png'});
+ await page.locator('#life-first-direction').scrollIntoViewIfNeeded();await page.locator('#life-first-direction img').evaluate(i=>i.decode());
+ await page.locator('#life-first-direction').screenshot({path:out+'/life-'+width+'.png'});
+ const result=await page.evaluate(()=>({width:innerWidth,overflow:document.documentElement.scrollWidth>innerWidth,heading:document.querySelector('h1').innerText,cards:document.querySelectorAll('[data-centre-name]').length,ids:[...document.querySelectorAll('[id]')].map(x=>x.id),header:!!document.querySelector('.portal-header'),footer:!!document.querySelector('.portal-site-footer'),verify:!!document.querySelector('.verify-footer'),call:!!document.querySelector('a[href="tel:+919100181181"]'),callback:!!document.querySelector('#callback'),image:{width:document.querySelector('#life-first-direction img').naturalWidth,height:document.querySelector('#life-first-direction img').naturalHeight}}));
+ assert(!result.overflow);assert.equal(result.cards,62);assert.equal(new Set(result.ids).size,result.ids.length);assert(result.header&&result.footer&&result.verify&&result.call&&result.callback);assert(Math.abs(result.image.width/result.image.height-2)<.02);
+ await page.locator('#centre-search').fill('Jaya');await page.waitForTimeout(100);
+ const searchCount=await page.locator('.directory-card:visible').count();assert(searchCount>0&&searchCount<62);
+ results.push({...result,ids:result.ids.length,searchCount});await page.close();
+}
+const report={at:new Date().toISOString(),passed:true,checks:['title/canonical/indexability','12 FAQ entries / 62 ItemList entries','dated evidence and narrative agreement','public directory privacy','all referenced image/style/script assets exist','phone/tablet/desktop layout and search','shared header/footer/Verify/callback preserved','full 2:1 narrative image'],assets:assets.size,results};await fs.writeFile(out+'/validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({passed:true,widths:results.map(x=>x.width),assets:assets.size}));
+}finally{await browser.close();server.close();}

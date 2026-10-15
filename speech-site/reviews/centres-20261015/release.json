@@ -1,0 +1,26 @@
+{
+  "id": "centre-directory-20261015",
+  "phase": "prepared",
+  "at": "2026-10-15T11:44:48.225Z",
+  "rollbackVersion": "250724d0-0e51-43c4-acaa-189f67a0be5f",
+  "fullUnion": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\centre-narrative-20261015\\speech-site\\ask-private\\centre-directory-20261015\\full-union",
+  "baselineReceipt": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\managed-media-refresh-20261013\\speech-site/outputs/ga4-handoff-receiver-20261015/release.json",
+  "baselineManifest": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\managed-media-refresh-20261013\\speech-site/ask-private/ga4-handoff-receiver-20261015/manifest.json",
+  "baseAssets": 3950,
+  "totalAssets": 3954,
+  "changedAssets": [
+    "/pinnacle-pages-html/centers.html",
+    "/pinnacle-pages-data/centers-evidence.json",
+    "/pinnacle-pages-data/centers-evidence.txt",
+    "/pinnacle-pages-data/centers-machine.md",
+    "/pinnacle-pages-data/centres-sitemap.xml",
+    "/pinnacle-pages-assets/centers.CpSarG70.css",
+    "/pinnacle-pages-assets/centres-life-path-20261015.C0AdHKzt_s28AM.webp",
+    "/pinnacle-pages-assets/centres-life-path-20261015.C0AdHKzt_1uC8OC.webp",
+    "/pinnacle-pages-assets/centres-life-path-20261015.C0AdHKzt_ZSzq1R.webp"
+  ],
+  "modifiedModules": [
+    "pinnacle-route-v12.mjs"
+  ],
+  "routes": 401
+}

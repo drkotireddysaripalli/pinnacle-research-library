@@ -12,8 +12,8 @@ export const centresContent = {
   label: 'Find a Centre',
   name: 'Pinnacle centre search and national guidance',
   type: 'Child-development centre directory and appointment guidance',
-  title: 'Find a Pinnacle Blooms Centre | Locations, Maps & Contact',
-  description: `Explore ${centreCount} published Pinnacle Blooms locations with addresses, Google Maps links, selected centre photographs, enrolment choices and national guidance on 9100 181 181.`,
+  title: 'Find a Pinnacle Blooms Centre | Child Development Support',
+  description: `Find a Pinnacle Blooms child development centre near you. Search ${centreCount} published locations, view addresses and maps, and call 9100 181 181 to plan a first conversation.`,
   citations: [
     url('/verify/'),
     url('/verify/evidence/centre-entity-reference.html'),
