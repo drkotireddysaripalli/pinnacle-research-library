@@ -19,7 +19,7 @@ export function retryAfterMillis(header, now, fallback = 300000) {
 }
 
 export class ScheduledController {
-  constructor({ storage, token, configRevision = '1', fetcher = fetch, clock = Date.now }) {
+  constructor({ storage, token, configRevision = '1', fetcher = (...args) => fetch(...args), clock = Date.now }) {
     if (!storage?.get || !storage?.put || !storage?.delete || !storage?.setAlarm || !storage?.deleteAlarm) throw Error('Durable storage with alarms is required');
     this.storage = storage;
     this.token = token;
@@ -59,9 +59,10 @@ export class ScheduledController {
     try {
       token = typeof this.token === 'function' ? await this.token() : this.token;
       if (typeof token !== 'string' || !token.trim()) throw Error('Missing credential');
-    } catch {
+    } catch (cause) {
       const error = Error('Dedicated GitHub Actions credential is unavailable');
       error[credentialFailure] = true;
+      error.safeCredentialFailure = { type: ['Error','TypeError','DataError','OperationError'].includes(cause?.name)?cause.name:'unknown', illegalReceiver: /Illegal invocation|Illegal receiver/i.test(cause?.message||''), providerStatus: Number(cause?.message?.match(/^GitHub App credential renewal failed with HTTP (\d{3})$/)?.[1])||null };
       throw error;
     }
     return this.fetcher(`https://api.github.com/repos/${REPOSITORY}/actions/workflows/${WORKFLOW}${path}`, {
@@ -170,11 +171,12 @@ export class ScheduledController {
     await this.save(current, true);
     let response;
     try {
-      response = await this.api('POST', '/dispatches', { ref: 'main', inputs: { dispatch_id: id, scheduled_time: new Date(event.scheduledTime).toISOString() } });
+      response = await this.api('POST', '/dispatches', { ref: 'main', inputs: { dispatch_id: id, scheduled_time: current.firstNativeScheduledTime } });
     } catch (error) {
       if (error[credentialFailure]) {
         current.phase = 'configuration_blocked';
         current.reason = 'Credential acquisition failed before any workflow dispatch';
+        current.credentialFailure = error.safeCredentialFailure;
         await this.storage.delete('active');
         return this.save(current);
       }

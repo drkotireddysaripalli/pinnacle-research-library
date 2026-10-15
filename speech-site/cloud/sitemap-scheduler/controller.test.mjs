@@ -22,6 +22,17 @@ function setup(reply = () => new Response(null, { status: 204 })) {
 function runs(values = []) { return Response.json({ workflow_runs: values }); }
 function run(id, status, conclusion = null) { return { id, display_title: 'sitemap-daily-20261014', event: 'workflow_dispatch', head_branch: 'main', head_sha: 'a'.repeat(40), status, conclusion }; }
 
+test('native fetch receiver and resumed original schedule are preserved', async () => {
+  const original=globalThis.fetch,storage=new Store();let input;
+  await storage.put('day:daily-20261014',{id:'daily-20261014',phase:'configuration_blocked',configRevision:'1',createdAt:new Date(T-1000).toISOString(),firstNativeScheduledTime:new Date(T).toISOString(),cron:event.cron,nativeInvocations:1,dispatchAttempts:1});
+  try {
+    globalThis.fetch=async function(_,init){assert(this===undefined||this===globalThis,'Illegal invocation');input=JSON.parse(init.body);return new Response(null,{status:204});};
+    const controller=new ScheduledController({storage,token:'unit-only-token',configRevision:'2',clock:()=>T+60000});
+    assert.equal((await controller.trigger({...event,scheduledTime:T+60000})).phase,'dispatched');
+    assert.equal(input.inputs.scheduled_time,new Date(T).toISOString());
+  }finally{globalThis.fetch=original;}
+});
+
 test('native 20:30 UTC belongs to the following IST day', () => {
   assert.equal(dispatchIdentity(Date.parse('2026-10-13T18:29:59Z')), 'daily-20261013');
   assert.equal(dispatchIdentity(Date.parse('2026-10-13T18:30:00Z')), 'daily-20261014');
