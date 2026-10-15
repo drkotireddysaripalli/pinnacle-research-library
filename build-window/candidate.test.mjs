@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {browserTestFingerprint,generatedHashes,inputFingerprint,makeSnapshots,requireCandidate} from './candidate.mjs';
+import {browserTestFingerprint,generatedHashes,inputFingerprint,makeSnapshots,requireCandidate,localCheckArtifactPaths,localCheckArtifactHashes} from './candidate.mjs';
 
 function fixture(t) {
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'pinnacle-candidate-'));
@@ -84,5 +84,46 @@ test('the timestamped centre validation receipt is separate from build inputs; o
   f.write('speech-site/deployment/centre-network-contract-20261007.json','New validation timestamp');
   assert.equal(requireCandidate(f.root,f.results).status,'passed');
   f.write('verify-site/content/source.md','Changed source evidence');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+});
+
+test('legacy runtime rebuild and a newly created composition report preserve candidate identity',t=>{
+  const f=fixture(t),runtime='speech-site/deployment/legacy-measurement.runtime.mjs';
+  const report='speech-site/outputs/managed-sitemaps-20261013/composition.json';
+  f.write(runtime,'Previous bundled runtime');
+  const before=generatedHashes(f.root);
+  const fingerprintBefore=inputFingerprint(f.root,makeSnapshots(before,before));
+  f.write(runtime,'Rebuilt bundled runtime');
+  f.write(report,'{"build":"first","stage":"temporary-build-directory"}');
+  const generatedSnapshots=makeSnapshots(before,generatedHashes(f.root));
+  assert.equal(inputFingerprint(f.root,generatedSnapshots),fingerprintBefore);
+  fs.writeFileSync(path.join(f.results,'candidate.json'),JSON.stringify({status:'passed',fingerprint:fingerprintBefore,generatedSnapshots}));
+  assert.equal(requireCandidate(f.root,f.results).status,'passed');
+  f.write(runtime,'Unexpected runtime edit after the build');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+  f.write(runtime,'Rebuilt bundled runtime');
+  f.write(report,'{"build":"unexpected later edit"}');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+});
+
+test('other local reports and actual builder source are still build inputs',t=>{
+  const f=fixture(t);
+  f.write('speech-site/outputs/another-report.json','New unregistered input');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+  fs.unlinkSync(path.join(f.root,'speech-site/outputs/another-report.json'));
+  f.write('speech-site/scripts/build-managed-sitemaps.mjs','Changed producer source');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+});
+
+test('declared postbuild check diagnostics retain independent hashes without invalidating page builds',t=>{
+  const f=fixture(t),before=localCheckArtifactHashes(f.root);
+  for (const name of localCheckArtifactPaths) f.write(name,'New check evidence');
+  assert.equal(requireCandidate(f.root,f.results).status,'passed');
+  const after=localCheckArtifactHashes(f.root);
+  for (const name of localCheckArtifactPaths) {
+    assert.notEqual(after[name],before[name]);
+    assert.match(after[name],/^[a-f0-9]{64}$/);
+  }
+  f.write('speech-site/scripts/test-site-announcement.mjs','Changed test producer');
   assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
 });
