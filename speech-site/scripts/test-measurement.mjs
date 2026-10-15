@@ -21,6 +21,18 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
+test('shared portal uses root-scoped cookies and untagged navigation does not clear campaign fields',()=>{
+ const first=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=Hyderabad_Speech&gclid=isolatedClick'});first.choose('accepted');
+ const config=h=>Array.from(h.win.dataLayer,x=>Array.from(x)).filter(x=>x[0]==='config').at(-1)[2];
+ assert.equal(config(first).cookie_path,'/');assert.equal(config(first).campaign_source,'google');
+ const next=harness({path:canonicalEnrolment,search:'',sharedStore:first.store,referrer:'https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate'});
+ assert.equal(config(next).cookie_path,'/');assert.equal(config(next).cookie_prefix,config(first).cookie_prefix);assert.equal(config(next).cookie_domain,config(first).cookie_domain);
+ for(const key of ['campaign_source','campaign_medium','campaign_name','campaign_id','campaign_term','campaign_content'])assert.equal(Object.hasOwn(config(next),key),false);
+ assert.equal(next.win.pinnacleEnquirySource().fields.utm_campaign,'Hyderabad_Speech');
+ assert(next.cookies.some(c=>c.includes('path='+canonicalEnrolment+';')));assert(!next.cookies.some(c=>c.includes('path=/;')));assert(!next.cookies.some(c=>c.startsWith('pbn_books')||c.startsWith('ph_')));
+ const direct=harness({path:canonicalEnrolment,search:'',sharedStore:first.store});assert.equal(Object.hasOwn(config(direct),'campaign_source'),false);
+ const ask=harness({origin:'https://pinnacleblooms.org',path:'/ask/pincer-grasp',variant:'ask',search:''});ask.choose('accepted');assert.equal(config(ask).cookie_path,'/ask');assert.equal(config(ask).cookie_domain,'pinnacleblooms.org');
+});
 function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
@@ -97,7 +109,7 @@ test('book acquisition sends a known origin, never referring paths, queries or a
   const h=harness({path:'/shop',commerceCatalogue,referrer});h.choose('accepted');
   assert.equal(h.events()[0][2].page_referrer,expected);
   const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.ignore_referrer,!expected);
-  assert(!JSON.stringify(h.win.dataLayer).includes('private'));assert.equal(config.campaign_term,'');
+  assert(!JSON.stringify(h.win.dataLayer).includes('private'));assert.equal(config.campaign_term,undefined);
  }
  const therapy=harness({referrer:'https://www.google.com/search?q=private'});therapy.choose('accepted');assert.equal(therapy.events()[0][2].page_referrer,'https://www.google.com/');
 });
@@ -182,7 +194,7 @@ test('unsafe, duplicate and oversized attribution is omitted without exporting p
   assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_PRIVATE_EMAIL'));
  }
  const duplicate=harness({search:'?utm_source=google&utm_source=private&gclid=test123&gclid=private'});duplicate.choose('accepted');
- const config=Array.from(duplicate.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.campaign_source,'');assert.equal(new URL(config.page_location).search,'');
+ const config=Array.from(duplicate.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.campaign_source,undefined);assert.equal(new URL(config.page_location).search,'');
 });
 test('Ask private and API descendants stay uninstrumented even with a public variant marker',()=>{
  for(const path of ['/ask/account','/ask/account/preferences','/ask/auth/callback','/ask/api/item','/ask/te/account','/ask/te/auth/callback','/ask/search/results','/ask/te/search/results']) {

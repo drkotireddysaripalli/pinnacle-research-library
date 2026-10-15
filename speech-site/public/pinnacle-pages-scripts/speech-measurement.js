@@ -72,7 +72,10 @@
   const helplinePath='/national-autism-helpline',helplineChoiceKey='pinnacle-helpline-measurement-choice-v4';
   const helplineCampaigns=new Set(['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries']);
   const validHelplineFields=fields=>!!fields&&typeof fields==='object'&&!Array.isArray(fields)&&Object.keys(fields).length===3&&fields.utm_source==='chatgpt'&&fields.utm_medium==='paid'&&helplineCampaigns.has(fields.utm_campaign);
-  const campaigns = Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
+  // An untagged internal page must not clear the campaign collected at landing.
+  // Let GA4 retain its own session attribution; the 30-day intake envelope is
+  // not permission to re-credit every returning visit to an older campaign.
+  const campaigns = {};
   const measurementURL = new URL(canonical);
   const safeAttribution = (value, click) => {
     if (typeof value !== 'string') return null;
@@ -327,11 +330,23 @@
     window.gtag('set','ads_data_redaction',true);
     window.gtag('set','url_passthrough',false);
     if (!tagStarted) window.gtag('js',new Date());
+    // Main-portal pages share this stream and consent choice. Retire only
+    // visible legacy page-scoped cookies before using its root-scoped cookies.
+    // Do not copy old client/session IDs or touch Ask, helpline or book cookies.
+    if(storage==='granted'&&!isAsk&&!isBookshop&&!knowledgePath){
+      const oldPath=location.pathname;
+      if(oldPath!=='/')for(const cookie of document.cookie.split(';')){
+        const name=cookie.trim().split('=')[0];
+        if(!/^ps_ga(?:_|$)/.test(name))continue;
+        for(const domain of ['', 'www.pinnacleblooms.org', 'pinnacleblooms.org'])
+          document.cookie=name+'=; Max-Age=0; path='+oldPath+';'+(domain?' domain='+domain+';':'')+' SameSite=Lax; Secure';
+      }
+    }
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
+      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:'/',cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
       page_location:measuredLocation,page_title:pageTitle,page_referrer:storage==='granted'?safeReferrer:'',ignore_referrer:storage!=='granted'||!safeReferrer,
-      ...Object.fromEntries(Object.values(campaignFields).map(field=>[field,''])),...fields
+      ...fields
     });
     if (!tagStarted && !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
       const script=document.createElement('script');
