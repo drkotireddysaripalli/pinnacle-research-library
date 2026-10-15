@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {startPreview,stopPreview} from './preview-process.mjs';
 import {activeQualityPage,pageContracts} from '../speech-site/scripts/page-quality-contracts.mjs';
-import {requireCandidate,browserTestFingerprint} from './candidate.mjs';
+import {requireCandidate,browserTestFingerprint,localCheckArtifactHashes} from './candidate.mjs';
 
 const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const site=path.join(root,'speech-site'),launcher=path.join(root,'build-window/workspace.mjs');
@@ -26,6 +26,7 @@ const toolHashes=()=>Object.fromEntries(toolFiles.map(file=>[file,createHash('sh
 const receiptPath=path.join(results,'ci-local-receipt.json');
 const receipt={source:source.stdout.trim(),page,startedAt:new Date().toISOString(),node:process.version,platform:process.platform,arch:process.arch,previewURL:origin,stages:[],status:'running',notEstablished:['Trusted exact-source cloud BVT','Physical devices','Private Worker runtime/full production union','Public release','Accepted lead/person URL/Slack member opening','Business outcomes']};
 receipt.toolHashesBefore=toolHashes();receipt.browserTestFingerprintBefore=browserTestFingerprint(root);
+receipt.localCheckArtifactHashesBefore=localCheckArtifactHashes(root);
 const save=()=>fs.writeFileSync(receiptPath,JSON.stringify(receipt,null,2)+'\n');save();
 function run(label,args,cwd=root,childEnv=env){
   if(interrupted)throw Error('Interrupted: '+interrupted);
@@ -78,6 +79,7 @@ finally{
   if(preview&&receipt.previewCloseConfirmed){const p=path.join(results,'preview.json');const record=JSON.parse(fs.readFileSync(p,'utf8'));fs.writeFileSync(p,JSON.stringify({...record,status:'stopped',completedAt:new Date().toISOString()},null,2)+'\n');}
   if(previewOutput!==undefined)fs.closeSync(previewOutput);
   try{
+    receipt.localCheckArtifactHashesAfter=localCheckArtifactHashes(root);
     receipt.toolHashesAfter=toolHashes();receipt.browserTestFingerprintAfter=browserTestFingerprint(root);
     if(JSON.stringify(receipt.toolHashesBefore)!==JSON.stringify(receipt.toolHashesAfter)||receipt.browserTestFingerprintBefore!==receipt.browserTestFingerprintAfter)throw Error('Tooling or browser-test source changed during acceptance');
   }catch(error){receipt.status='failed';receipt.error=error.message;process.exitCode=1;}

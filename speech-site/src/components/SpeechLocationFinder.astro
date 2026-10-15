@@ -1,0 +1,63 @@
+---
+import Icon from './Icon.astro';
+---
+<section class="wrap speech-location-finder" aria-labelledby="speech-location-title">
+  <div>
+    <p class="eyebrow">Your location. Your next step.</p>
+    <h2 id="speech-location-title">Looking for speech therapy near you?</h2>
+    <p>Tell us your preferred area. We’ll confirm the suitable centre, speech professional and appointment before you visit.</p>
+  </div>
+  <div class="speech-location-actions">
+    <form data-speech-location-form hidden>
+      <label for="speech-location-query">Area, city or postcode</label>
+      <div class="speech-location-fields">
+        <input id="speech-location-query" type="search" placeholder="Try Kukatpally or Hyderabad" autocomplete="off" />
+        <button class="button primary" type="submit">Find centres <Icon name="pin" size={20} /></button>
+      </div>
+    </form>
+    <p class="speech-location-links"><a href="#centres" data-speech-location="Hyderabad">Browse Hyderabad locations</a><a href="#centres" data-speech-location="">Browse all locations</a></p>
+  </div>
+</section>
+<script>
+  const finder = document.querySelector<HTMLElement>('.speech-location-finder');
+  const directory = document.querySelector<HTMLElement>('.centre-directory');
+  const search = directory?.querySelector<HTMLInputElement>('#centre-search');
+  const region = directory?.querySelector<HTMLSelectElement>('#centre-region');
+  if (finder && directory && search && region) {
+    const form = finder.querySelector<HTMLFormElement>('[data-speech-location-form]')!;
+    const query = finder.querySelector<HTMLInputElement>('#speech-location-query')!;
+    const find = (value: string) => {
+      region.value = 'all';
+      search.value = value.trim();
+      search.dispatchEvent(new Event('input', { bubbles: true }));
+      directory.scrollIntoView({ block: 'start' });
+      search.focus({ preventScroll: true });
+    };
+    form.hidden = false;
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      find(query.value);
+    });
+    finder.querySelectorAll<HTMLAnchorElement>('[data-speech-location]').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        query.value = link.dataset.speechLocation || '';
+        find(query.value);
+      });
+    });
+  }
+</script>
+<style>
+  .speech-location-finder { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: center; padding-block: 28px; border-bottom: 1px solid #e7dde7; }
+  .speech-location-finder h2 { font-size: clamp(24px, 2.4vw, 32px); line-height: 1.25; margin: 8px 0 12px; }
+  .speech-location-finder p { font-size: 16px; line-height: 1.6; margin-bottom: 0; }
+  .speech-location-actions { min-width: 0; }
+  label { display: block; font-weight: 700; margin-bottom: 8px; }
+  .speech-location-fields { display: flex; gap: 10px; }
+  input { min-width: 0; width: 100%; min-height: 48px; border: 1px solid #9a7493; border-radius: 8px; padding: 12px; font: inherit; font-size: 16px; }
+  button { flex: none; font: inherit; min-height: 48px; cursor: pointer; }
+  .speech-location-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+  .speech-location-links a { display: inline-block; padding-block: 12px; color: #65225b; text-underline-offset: 4px; }
+  @media (max-width: 760px) { .speech-location-finder { grid-template-columns: 1fr; gap: 18px; } }
+  @media (max-width: 420px) { .speech-location-fields { flex-direction: column; } button { justify-content: center; } }
+</style>
