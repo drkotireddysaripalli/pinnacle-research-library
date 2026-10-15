@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "atUtc": "2026-10-15T04:47:13Z",
+  "state": "TESTED_SOURCE_CANDIDATE_NOT_DEPLOYED",
+  "baseCommit": "0b56ed9e3675ed26ffe691a7e4203a4452357555",
+  "problem": "Per-page public GA4 cookie paths split the browser/session identity between a tagged service landing and untagged Enrolment. Existing per-page cookies can shadow a root cookie on returning browsers.",
+  "change": "Use one root cookie path for ordinary consented public-site pages; retire only the current page's visible old ps_ga cookie scope when permission is granted. Preserve root cookies and separate Books/Ask/knowledge scopes.",
+  "tests": {
+    "productionBuild": "PASS; CI=true PINNACLE_RELEASE=production; no source publication",
+    "targetedNode": {
+      "total": 111,
+      "passed": 110,
+      "failed": 0,
+      "skipped": 1,
+      "skipReason": "Existing narrow private receiver candidate fixture is unavailable; this does not certify receiver recovery."
+    },
+    "realSdkIsolated": {
+      "libraryExecuted": true,
+      "allCollectionAborted": true,
+      "googleHitsSent": 0,
+      "baselineIdentityContinuous": false,
+      "freshCandidateIdentityContinuous": true,
+      "existingPathCookieMigrationContinuous": true,
+      "withdrawalClearsRoot": true,
+      "pageErrors": 0
+    },
+    "guardCoverage": [
+      "consent/refusal/GPC",
+      "QA suppression",
+      "safe current-URL attribution",
+      "no broad replay of saved30day campaigns into GA4 config",
+      "book namespace",
+      "Ask/knowledge scopes",
+      "durable receipt-only acceptance",
+      "duplicate acceptance suppression",
+      "no private receipt/lead identifiers in analytics"
+    ]
+  },
+  "notProven": [
+    "Production deployment/public serving of this source",
+    "Native GA4 receipt",
+    "Private receiver reader recovery",
+    "One genuine paid accepted enquiry",
+    "Cause or amount of aggregate Ads/GA4 reporting gap"
+  ],
+  "releaseOwner": {
+    "thread": "01a0ef6b-507a-7630-828f-7ac81852a39c",
+    "scope": "Sole production integration/release; preserve complete current Worker routes/assets/modules/bindings and rollback. Build outputs are not a new production baseline."
+  },
+  "acceptance": [
+    "Owner integrate with existing GA4 work and release through complete current union",
+    "Verify public collector content/hash and same-journey identity with collection intercepted",
+    "Existing protected SELECT receiver reader succeeds after repair",
+    "A genuine eligible Google Ads landing->durable accepted enquiry has authoritative paid/QA classification plus supported native GA4 receipt; no synthetic lead or aggregate-only exact-match claim"
+  ],
+  "adsBudgetBidGoalStatusSafeguardChanges": false,
+  "references": [
+    "https://developers.google.com/analytics/devguides/collection/ga4/reference/config",
+    "https://developers.google.com/tag-platform/security/guides/customize-cookies"
+  ]
+}
