@@ -21,18 +21,18 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null}={}){
+function harness({contact=false,callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={referrer,visibilityState:'visible',body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
+ const doc={referrer,visibilityState:'visible',body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-contact[')?(contact?{dataset:{contactContract:'durable-contact-v1'}}:null):s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={__qaProgress:detail=>listeners['pinnacle:enquiry-progress']?.({detail}),addEventListener:(event,fn)=>{const previous=listeners['window:'+event];listeners['window:'+event]=data=>{previous?.(data);fn(data);};}};
  class FakePerformanceObserver{constructor(callback){this.callback=callback;}observe(options){this.callback({getEntries:()=>performanceEntries?.[options.type]||[]});}disconnect(){}}
  const testMath=Object.create(Math);testMath.random=()=>0;
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
- return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ return {dispatch:(name,detail)=>listeners[name]?.({detail}),win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 
 test('homepage uses the shared stream with populated reporting dimensions',()=>{
@@ -713,6 +713,31 @@ test('fingerprinted legacy knowledge uses only a coarse identity and canonical c
   assert(!JSON.stringify(h.events()).includes(path));assert(!JSON.stringify(h.events()).includes('PRIVATE_TEXT'));assert(!JSON.stringify(h.events()).includes('click_url'));
   h.choose('declined');const n=h.events().length;h.click('knowledge-call','tel:+919100181181');assert.equal(h.events().length,n);
  }
+});
+
+test('durable contact receipts stay distinct from the two parent-enquiry topics and contain no private analytics identifiers',()=>{
+ const path='/contact-national-autism-helpline-24-7';
+ for(const topic of ['complaint_or_compliment','Therapy Services','Assessments','foundation','employment','clinical education','research education','feedback','other']){
+  const h=harness({contact:true,path,variant:'legacy_knowledge',search:''});h.choose('accepted');
+  const detail={contract:'website_contact_v1',topic,receipt:{schemaVersion:1,requestId:'qa-contact-request',id:'qa-contact-receipt'}};
+  h.dispatch('pinnacle:contact-accepted',detail);h.dispatch('pinnacle:contact-accepted',detail);
+  h.dispatch('pinnacle:enquiry-accepted',detail);h.dispatch('pinnacle:enquiry-accepted',detail);
+  assert.equal(h.events().filter(e=>e[1]==='contact_received').length,1,topic);
+  const accepted=h.events().filter(e=>e[1]==='enquiry_accepted');assert.equal(accepted.length,['Therapy Services','Assessments'].includes(topic)?1:0,topic);
+  for(const e of accepted){assert.equal(e[2].page_group,'contact');assert.equal(e[2].destination,'existing_contact_workflow');}
+  const payload=JSON.stringify(h.events());assert(!payload.includes('qa-contact'));assert(!payload.includes(topic));
+ }
+});
+
+test('contact acceptance retains existing undecided/refusal/GPC/QA boundaries and requires the exact contract',()=>{
+ const path='/contact-national-autism-helpline-24-7',detail={contract:'website_contact_v1',topic:'Therapy Services',receipt:{schemaVersion:1,requestId:'qa-contact-request',id:'qa-contact-receipt'}};
+ const undecided=harness({contact:true,path,search:''});undecided.dispatch('pinnacle:contact-accepted',detail);undecided.dispatch('pinnacle:enquiry-accepted',detail);
+ assert.equal(undecided.events().filter(e=>e[1]==='contact_received').length,0);
+ assert.equal(undecided.events().find(e=>e[1]==='enquiry_accepted')[2].measurement_mode,'denied_storage');
+ for(const options of [{gpc:true},{search:'?validation_test=1'},{saved:{value:'declined',at:Date.now()}}]){
+  const h=harness({contact:true,path,search:'',...options});h.dispatch('pinnacle:contact-accepted',detail);h.dispatch('pinnacle:enquiry-accepted',detail);assert.equal(h.events().filter(e=>['contact_received','enquiry_accepted'].includes(e[1])).length,0);
+ }
+ const wrong=harness({contact:true,path,search:''});wrong.choose('accepted');wrong.dispatch('pinnacle:enquiry-accepted',{...detail,contract:'wrong'});wrong.dispatch('pinnacle:contact-accepted',{...detail,receipt:{...detail.receipt,leadReference:'private'}});assert.equal(wrong.events().filter(e=>['contact_received','enquiry_accepted'].includes(e[1])).length,0);
 });
 
 test('private document/account paths cannot start the shared collector even with a spoofed variant',()=>{

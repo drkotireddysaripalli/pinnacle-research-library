@@ -28,9 +28,9 @@ const requestKey=/^[A-Za-z0-9-]{8,100}$/;
 export function validAcceptedReceipt(receipt,requestId){return receipt?.schemaVersion===1&&receipt.requestId===requestId&&typeof receipt.id==='string'&&requestKey.test(receipt.id);}
 // Essential request metadata only. Contact details, note, preferences, query
 // strings and advertising identifiers never enter persistent browser storage.
-export function createAttemptStore(storage){
+export function createAttemptStore(storage,storageKey=ATTEMPT_STORAGE_KEY){
  function read(){
-  const raw=storage.getItem(ATTEMPT_STORAGE_KEY);if(!raw)return null;
+  const raw=storage.getItem(storageKey);if(!raw)return null;
   const entry=JSON.parse(raw);
   if(entry?.schemaVersion!==1||!requestKey.test(entry.requestId||'')||!['pending','unknown','accepted'].includes(entry.state)||!Number.isFinite(entry.createdAt))throw new Error('invalid-request-state');
   if(entry.state==='accepted'&&!validAcceptedReceipt(entry.receipt,entry.requestId)&&entry.contractVersion!==0)throw new Error('invalid-request-receipt');
@@ -43,10 +43,10 @@ export function createAttemptStore(storage){
    else if(entry.contractVersion===0)safe.contractVersion=0;
    else throw new Error('invalid-request-receipt');
   }
-  storage.setItem(ATTEMPT_STORAGE_KEY,JSON.stringify(safe));
+  storage.setItem(storageKey,JSON.stringify(safe));
   return safe;
  }
- return {read,write,clear:()=>storage.removeItem(ATTEMPT_STORAGE_KEY)};
+ return {read,write,clear:()=>storage.removeItem(storageKey)};
 }
 export async function submitEnrolment(endpoint, payload, {origin,fetchImpl=fetch,timeoutMs=15000,receiptRequired=false}={}) {
  const target=approvedEndpoint(endpoint,origin);

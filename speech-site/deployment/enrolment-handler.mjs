@@ -1,6 +1,7 @@
 import {centreFacilities} from './centre-facilities.mjs';
 import {toReceiptEnrolment,validReceiptEnvelope} from './enrolment-receipt.mjs';
 import {validPublicEnrolmentSource} from '../public/pinnacle-pages-scripts/enrolment-source.mjs';
+import {validatePublicContact,toLegacyContact,toReceiptContact} from './contact-handler.mjs';
 
 export const ENROLMENT_API_PATH='/api/enrolment';
 export const ENROLMENT_UPSTREAM='https://mirracle.pinnacleblooms.org/api/gl/swfs';
@@ -93,14 +94,19 @@ export async function serveEnrolmentApi(request,env,{fetchImpl=fetch,timeoutMs=1
  if(!/^application\/json(?:\s*;|$)/i.test(request.headers.get('content-type')||''))return response(415,'rejected');
  let body;
  try{body=await readBoundedJson(request);}catch{return response(422,'rejected');}
- if(!validatePublicEnrolment(body)||request.headers.get('idempotency-key')!==body.requestId)return response(422,'rejected');
+ if(body&&Object.hasOwn(body,'WebsiteReceipt'))return response(422,'rejected');
+ const contact=body?.formType==='contact';
+ if((contact?!validatePublicContact(body):body?.formType!==undefined||!validatePublicEnrolment(body))||request.headers.get('idempotency-key')!==body.requestId)return response(422,'rejected');
  // Activate only after the receiving table and versioned Worker patch are live.
  // Keeping this flag absent retains the existing organisation's intake path.
  const durableContract=env?.ENROLMENT_RECEIPT_VERSION==='1';
+ // Contact has no transitional legacy fallback: its original AJAX path must
+ // never run alongside or after an uncertain durable receipt attempt.
+ if(contact&&!durableContract)return response(503,'unknown');
  if(durableContract&&typeof env?.PINNACLE_ENROLMENT_RECEIPTS?.receive!=='function')return response(503,'unknown');
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
  try{
-  const legacy=toLegacyEnrolment(body);
+  const legacy=contact?toLegacyContact(body):toLegacyEnrolment(body);
   const upstreamOptions={method:'POST',headers:{'content-type':'application/json','accept':'text/plain, application/json'},body:JSON.stringify(legacy),signal:controller.signal};
   // The legacy API is served by another Worker in this account. A direct
   // service binding keeps the POST inside Cloudflare and avoids a routed
@@ -110,7 +116,7 @@ export async function serveEnrolmentApi(request,env,{fetchImpl=fetch,timeoutMs=1
    // A named service-binding RPC entrypoint has no public URL. Protected join
    // keys must never be returned by the legacy public /api/gl/swfs route.
    const result=await Promise.race([
-    env.PINNACLE_ENROLMENT_RECEIPTS.receive(toReceiptEnrolment(legacy,body.requestId,body.source),body.requestId),
+    env.PINNACLE_ENROLMENT_RECEIPTS.receive((contact?toReceiptContact:toReceiptEnrolment)(legacy,body.requestId,body.source),body.requestId),
     new Promise((_,reject)=>controller.signal.addEventListener('abort',()=>reject(new Error('receipt-timeout')),{once:true}))
    ]);
    upstream=new Response(JSON.stringify(result),{status:result?.httpStatus||503});

@@ -93,6 +93,16 @@ jobs:
         run: npm run test:shared-assets-repair
       - name: Verify original and minified enquiry/call behavior in browsers
         run: node scripts/check-shared-assets-browser.mjs
+      - name: Verify the durable contact browser journey without external intake
+        run: node scripts/check-contact-receipt-browser.mjs
+      - name: Save isolated contact journey evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: contact-receipt-browser
+          path: speech-site/outputs/contact-receipt-20261015/
+          if-no-files-found: error
+          retention-days: 14
       - name: Save shared asset repair evidence
         if: always()
         uses: actions/upload-artifact@v4

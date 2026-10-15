@@ -1,6 +1,7 @@
 import directory from './centre-directory.json' with {type:'json'};
 import {centreRegister,centreVideos,networkBrief,officialCentrePlaylist} from './centre-network-content.ts';
 import {assessmentContent} from './assessment-content.ts';
+import {centreSearchSnippet} from './centre-search-snippets.mjs';
 
 const origin='https://www.pinnacleblooms.org';
 export type FacilityPortalStatus='Approved'|'Submitted'|'Query Raised'|'Query Resolved';
@@ -153,6 +154,7 @@ const briefs=[
 const allBriefs=[...briefs,...centreRegister.filter(c=>c.id!=='suchitra'&&!briefs.some(b=>b.id===c.id)).map(networkBrief)];
 export const centreDetails=allBriefs.map(brief=>{
  const branch=centreRegister.find(c=>c.id===brief.id);if(!branch)throw new Error('Missing sourced centre '+brief.id);
+ const snippet=brief.sourceFlag!=='INACTIVE'&&branch.pageStatus==='centre-enquiry'?centreSearchSnippet(new URL(branch.profileUrl).pathname):null;
  const address=briefs.some(b=>b.id===brief.id)?`${brief.street}, ${brief.city}, ${brief.region} ${brief.postcode}, India`:branch.address||'Contact our team for location guidance';
  const {facilityScope,facilityDisplay,facilityRecord}=brief.hfr?describeFacilityEvidence(brief):{facilityScope:'See the network’s original software and operator records in Verify. No matched branch facility certificate is asserted here.',facilityDisplay:'Inspect our network’s original evidence in Verify.',facilityRecord:null};
  const sources=[
@@ -165,8 +167,8 @@ export const centreDetails=allBriefs.map(brief=>{
   {id:'bis',name:'Original BIS licence and scope',url:origin+'/verify/evidence/bis.pdf#page=2',scope:'Named software and quality-system scope; not approval of every centre, therapy or child outcome.'}
  ];
  return {...brief,branch,path:new URL(branch.profileUrl).pathname,address,updatedOn:'2026-10-07',localTelephone:branch.directTelephone,nearby:branch.nearbyCentres,catchmentLocalities:branch.catchmentLocalities,catchmentPostcodes:branch.catchmentPostcodes,video:centreVideos[brief.id]||null,playlist:officialCentrePlaylist,isInternational:brief.id==='usa',
-  title:brief.sourceFlag==='INACTIVE'?'Pinnacle Blooms Delhi | South Extension Status & Guidance':`Pinnacle Blooms ${brief.label} | Child Development & Therapy Enquiries`,
-  description:brief.sourceFlag==='INACTIVE'?'Looking for Pinnacle in Delhi? Check South Extension status before travelling. Call 9100 181 181 for guidance and discuss available options.':`Explore Pinnacle Blooms ${brief.label}: local contact, directions, assessment enquiries and support for communication, routines and learning. Call 9100 181 181.`,
+  title:snippet?.title??(brief.sourceFlag==='INACTIVE'?'Pinnacle Blooms Delhi | South Extension Status & Guidance':`Pinnacle Blooms ${brief.label} | Child Development & Therapy Enquiries`),
+  description:snippet?.description??(brief.sourceFlag==='INACTIVE'?'Looking for Pinnacle in Delhi? Check South Extension status before travelling. Call 9100 181 181 for guidance and discuss available options.':`Explore Pinnacle Blooms ${brief.label}: local contact, directions, assessment enquiries and support for communication, routines and learning. Call 9100 181 181.`),
   enquiry:origin+'/enroll-autism-speech-aba-therapies-india?service=help'+(branch.facilityId||branch.pageStatus==='centre-enquiry'?'&centre='+brief.id:''),
   direct:brief.sourceFlag==='INACTIVE'
    ? `Call 9100 181 181 before travelling to South Extension. Our source workbook marks this location INACTIVE; its dated facility-register approval does not confirm current operation or appointments. Ask our national team to check the current position and discuss available options for your child. The recorded location address is ${address}.`

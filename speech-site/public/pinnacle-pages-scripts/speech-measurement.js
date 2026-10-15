@@ -51,8 +51,10 @@
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   pages['/books/resources/first-conversation'] = {title:'Free First Conversation Planning Sheet',group:'family_resource',service:'help'};
   const pagePath = location.pathname;
+  const contactPage=pagePath==='/contact-national-autism-helpline-24-7'&&document.querySelector('#pinnacle-contact[data-contact-contract="durable-contact-v1"]')?.dataset?.contactContract==='durable-contact-v1';
+  if(contactPage)pages[pagePath]={title:'Contact Pinnacle Blooms',group:'contact',service:'help'};
   if(/^\/(?:account|auth|admin|internal|private|customer|customers|patient|patients|payroll|reports|report|documents|document)(?:\/|$)/i.test(pagePath))return;
-  const legacyKnowledge=location.origin===origin&&document.body?.dataset.pageVariant==='legacy_knowledge'&&(/^(?:\/ma|\/t|\/b|\/c)\/[a-z0-9-]+\/?$/.test(pagePath)||pagePath==='/contact-national-autism-helpline-24-7');
+  const legacyKnowledge=!contactPage&&location.origin===origin&&document.body?.dataset.pageVariant==='legacy_knowledge'&&(/^(?:\/ma|\/t|\/b|\/c)\/[a-z0-9-]+\/?$/.test(pagePath)||pagePath==='/contact-national-autism-helpline-24-7');
   const privateAskPath = /^\/ask\/(?:te\/)?(?:account|auth|api|search)(?:\/|$)/.test(pagePath);
   const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !privateAskPath && document.body?.dataset.pageVariant === 'ask';
   // Knowledge families use fixed buckets: never send questions, story IDs or searches.
@@ -421,14 +423,22 @@
     send(name,{schema_version:1,link_placement:pageGroup==='enrolment'?'enrolment-form':'inline-callback-form',destination:'existing_enrolment_workflow',...(detail.stage==='error'?{error_category:detail.error_category}:{}),release_id:vitalRelease});
     if(detail.stage==='start'&&production&&enabled&&!blocked&&!navigator.globalPrivacyControl&&!knowledgeSearch&&!validationTraffic)formStarted=true;
   });
+  const contactRequests=new Set();
+  document.addEventListener('pinnacle:contact-accepted',event=>{
+    const receipt=event?.detail?.receipt;
+    if(!contactPage||event.detail.contract!=='website_contact_v1'||!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k))||contactRequests.has(receipt.requestId)||!enabled||preference==='declined'||!savedPermission(key))return;
+    send('contact_received',{schema_version:1,link_placement:'contact-form',destination:'existing_contact_workflow'});
+    contactRequests.add(receipt.requestId);
+  });
   document.addEventListener('pinnacle:enquiry-accepted', event => {
     const receipt=event?.detail?.receipt;
     if(!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k)))return;
     const callbackPage=(['centre_detail','centre_directory','occupational_therapy','aba_therapy','autism_therapy'].includes(pageGroup)||location.pathname==='/speech-therapy/service-information')&&document.querySelector('#pinnacle-enrolment[data-callback-contract="durable-enrolment-v1"][data-api-endpoint="/api/enrolment"]');
-    if ((pageGroup !== 'enrolment'&&!callbackPage) || acceptedRequests.has(receipt.requestId) || !production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || preference==='declined' || (enabled&&!savedPermission(key))) return;
+    const parentContact=contactPage&&event.detail?.contract==='website_contact_v1'&&['Therapy Services','Assessments'].includes(event.detail.topic);
+    if ((pageGroup !== 'enrolment'&&!callbackPage&&!parentContact) || acceptedRequests.has(receipt.requestId) || !production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || preference==='declined' || (enabled&&!savedPermission(key))) return;
     try {
       if (!enabled) configureTag('denied',canonical);
-      const parameters={schema_version:4,page_group:'enrolment',link_placement:callbackPage?'inline-callback-form':'enrolment-form',destination:'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
+      const parameters={schema_version:4,page_group:parentContact?'contact':'enrolment',link_placement:parentContact?'contact-form':callbackPage?'inline-callback-form':'enrolment-form',destination:parentContact?'existing_contact_workflow':'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
       if (enabled) {
         // The receipt belongs to the submitted snapshot, not a later tab/URL.
         // Revalidate its expiry and both applicable permissions at emission.

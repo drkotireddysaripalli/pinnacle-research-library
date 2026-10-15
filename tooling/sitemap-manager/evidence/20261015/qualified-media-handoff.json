@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-15T15:55:30.120822+00:00",
+  "commit": "388e871c7c42747798a13337d3683fcaf0b857b1",
+  "branch": "codex/sitemap-knowledge-media-source-20261015",
+  "source_files": [
+    {
+      "path": "catalogue_source_adapter.py",
+      "sha256": "2ad76dff48e1691cebb63bb023a3722b984226a4bcf53c85558dfcfb9a3155a1",
+      "bytes": 20290,
+      "exact_match": true
+    },
+    {
+      "path": "test_catalogue_source_adapter.py",
+      "sha256": "1762387d8a35acf5ec5287786aff4138550f08dfe0f980702110ae9d7f9116fe",
+      "bytes": 11642,
+      "exact_match": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "0d424c477b1c30c2f21a4d93fcb127e0d41c55b09d33ebd49d1fe5abff095a89",
+      "bytes": 8090,
+      "exact_match": true
+    },
+    {
+      "path": "fixtures/catalogue.html",
+      "sha256": "ff408906a9714ec2e023593c8e9eb373f12cc0db595116c253ac5b9892803032",
+      "bytes": 930,
+      "exact_match": true
+    },
+    {
+      "path": "fixtures/related-card.html",
+      "sha256": "7b16fffb43690074f7bd9771700ab7090aa5d9a408b2b7f460ceeb1d16c7b096",
+      "bytes": 260,
+      "exact_match": true
+    }
+  ],
+  "fixture_tests": 15,
+  "cached_replay_checks": 9,
+  "knowledge_relationships": 404,
+  "catalogue_relationships": 663,
+  "total_qualified_relationships": 1067,
+  "catalogue_approved_union": 690,
+  "catalogue_source_withdrawals": 0,
+  "bootstrap_path": "tooling/sitemap-manager/knowledge-media/bootstrap/qualified-media-bootstrap-20261015.zip",
+  "bootstrap_blob": "ffcdd75b6a21be7975f58bfc66b4a74632ee5a5e",
+  "bootstrap_sha256": "6edcdc340b920cea654598cbb669c9f4d769cc4107be43b489cf382cbf0f2d1d",
+  "status": "source_checked_in_and_sent_to_existing_owner; not_yet_published",
+  "integration_owner_thread": "01a0ef6b-507a-7630-828f-7ac81852a39c"
+}

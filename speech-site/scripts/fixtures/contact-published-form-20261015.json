@@ -1,0 +1,8 @@
+{
+  "source": "https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7",
+  "sourceBodySHA256": "adc246e5e3c6370febe530eb9d8cddda9ba1a1888afeb0744219af31b6169bb6",
+  "formSHA256": "07914c5463147a973d7b67eee3a867c0743aec7c46d7a2a56c20a570bc33af62",
+  "fixtureSHA256": "0c2e057ff30799523eeb953ec739ca0dd4a45ab06e39e50d0f2451e8e4a03d18",
+  "actualAnalyticsTags": 6,
+  "fixtureOnly": "Outer page reduced to published blank form, actual six analytics tags, current legacy client; synthetic title/heading/newsId for isolated browser execution. No private values."
+}

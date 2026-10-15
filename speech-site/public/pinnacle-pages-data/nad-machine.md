@@ -1,4 +1,4 @@
-# Pinnacle Blooms NAD, Vizag | Child Development & Therapy Enquiries
+# Speech Therapy Enquiries, NAD Vizag | Pinnacle Blooms
 Canonical: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india
 Updated: 2026-10-07
 
