@@ -1,5 +1,9 @@
 # Current page work — 7 October 2026
 
+## Bounded centre-directory completion — 15 October 2026
+
+The owner-requested /centers story and current-session image completion is deployed, production-verified and merged (PR #85). Portal version 4d6f09b4-cbf2-4859-8790-b72450e7dc65 retains all 401 routes, 3954 assets, protected services and current enquiry/measurement integrations. The existing source-publisher baseline has been advanced to this verified release. See RELEASE-CENTRE-DIRECTORY-20261015.md and reviews/centres-20261015. This is a bounded directory completion; the other active acquisition dependencies and schedule holds below are unchanged.
+
 ## Current release and next acquisition boundary — 8 October, 21:15 IST
 
 Bounded source `dcaf6eeb7a91413d79b8fd0fa5f3a61ef75773db` is deployed and publicly verified: five reproduced legacy mobile HTTP 500 destinations now pass plain/tagged mobile requests, and the shared Materials image transport is corrected. Exact source CI passed; 265 routes, bindings, 3,706 portal assets, acquisition measurement and the receipt receiver are retained. See `RELEASE-SEMRUSH-MOBILE-MEDIA-20261008.md` and its three deployment/public receipts. This supersedes earlier current-runtime labels below; historical decisions and evidence remain.

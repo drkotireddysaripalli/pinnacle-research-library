@@ -1,6 +1,6 @@
 {
   "id": "centre-directory-20261015",
-  "phase": "prepared",
+  "phase": "verified_complete",
   "at": "2026-10-15T11:44:48.225Z",
   "rollbackVersion": "250724d0-0e51-43c4-acaa-189f67a0be5f",
   "fullUnion": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\centre-narrative-20261015\\speech-site\\ask-private\\centre-directory-20261015\\full-union",
@@ -22,5 +22,62 @@
   "modifiedModules": [
     "pinnacle-route-v12.mjs"
   ],
-  "routes": 401
+  "routes": 401,
+  "candidateVersion": "4d6f09b4-cbf2-4859-8790-b72450e7dc65",
+  "uploadedAssets": 9,
+  "source": "bc090f5178ba701e240b0a4de40db734e61842fc",
+  "releaseId": "956f48ba15cd418a6e57d72b5e3db51651f718553397b555867ceba644c40f03",
+  "publicFiles": 227,
+  "publicFilesVerified": 3,
+  "eligiblePages": 71047,
+  "selectedRelease": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\centre-narrative-20261015\\speech-site\\ask-private\\centre-directory-20261015\\selected-release",
+  "deployment": "e8d347b7-61b6-4f28-a842-33586970f098",
+  "cutoverUTC": "2026-10-15T11:56:43.116Z",
+  "verifiedAt": "2026-10-15T11:56:50.321Z",
+  "routesPreserved": 401,
+  "bindingsPreserved": true,
+  "protectedWorkersUnchanged": [
+    "pinnacle-legacy-social-metadata",
+    "pinnacle-ask",
+    "pinnacle-root-sitemap",
+    "materials-mobile-desktop-tracker",
+    "pbn-planetscale",
+    "pinnacle-helpline",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-google-ads-call-measurement"
+  ],
+  "publicChecks": [
+    {
+      "path": "/centers",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "sha256": "87e0cc542683ac65eced376339917d6088aba6f58e8da1f8822b53bf09683c1b"
+    },
+    {
+      "path": "/pinnacle-pages-data/centers-evidence.json",
+      "status": 200,
+      "type": "application/json; charset=utf-8",
+      "sha256": "d12cf2ff0cca353f4725fe5c3d5fc4d294a7107fb9036eedf5e48c0fffa04a81"
+    },
+    {
+      "path": "/pinnacle-pages-data/centers-evidence.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8",
+      "sha256": "bb505a0c4323c33f33a5774a02611ee2bd5a86cece52760e6a425b328362af56"
+    },
+    {
+      "path": "/pinnacle-pages-data/centers-machine.md",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8",
+      "sha256": "451ad06475ee80b44e50e321e63b376c491fd7269e8b080cea8cda6cabe308d4"
+    },
+    {
+      "path": "/pinnacle-pages-data/centres-sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "sha256": "7aff2d2d4c341971f88f9439577c43d1a8ef3736a5c6fae0bfd6208661065d35"
+    }
+  ],
+  "markdownNegotiation": true
 }

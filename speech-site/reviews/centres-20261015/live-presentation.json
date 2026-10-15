@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-15T12:00:42.965Z",
+  "passed": true,
+  "og": {
+    "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/centres-share-20260929.Bd4OZeub_Z28l7HB.jpg",
+    "status": 200,
+    "width": 1200,
+    "height": 630
+  },
+  "visual": {
+    "overflow": false,
+    "src": "https://www.pinnacleblooms.org/pinnacle-pages-assets/centres-life-path-20261015.C0AdHKzt_1uC8OC.webp",
+    "loaded": true,
+    "header": true,
+    "footer": true,
+    "verify": true,
+    "call": true
+  },
+  "errors": [],
+  "sitemap": {
+    "path": "/sitemaps/centres.xml",
+    "status": 200,
+    "lastmod": "2026-10-15"
+  },
+  "llms": {
+    "status": 200,
+    "centreReference": true
+  }
+}
