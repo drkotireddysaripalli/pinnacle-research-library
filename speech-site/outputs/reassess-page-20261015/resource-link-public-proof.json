@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-15T15:40:50.124Z",
+  "source": "5e32968ed8c72a394e1157cd7e507b5d78a86dde",
+  "version": "86bd3530-b843-4407-a49d-0b467618eee0",
+  "deployment": "dd3e0575-af9b-43c1-9ba8-5a92c133bf1e",
+  "scope": "Five representative live library routes + two real destinations; full maintained29759record+57alias corpus was tested offline, not recrawled publicly",
+  "checks": [
+    {
+      "url": "https://www.pinnacleblooms.org/allmirracles",
+      "status": 200,
+      "currentResourceHubs": true,
+      "centralCallPresent": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/allmirracles?page=2",
+      "status": 200,
+      "currentResourceHubs": true,
+      "centralCallPresent": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/allmirracles/category/Materials",
+      "status": 200,
+      "currentResourceHubs": true,
+      "centralCallPresent": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "status": 200,
+      "currentResourceHubs": true,
+      "centralCallPresent": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/mirracles/20708156700/-BeanBag-pinnaclemirracles-1autismtherapycentresnetwork",
+      "status": 200,
+      "currentResourceHubs": true,
+      "centralCallPresent": true
+    }
+  ],
+  "targets": [
+    {
+      "url": "https://materials.pinnacleblooms.org/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "selfCanonical": true
+    },
+    {
+      "url": "https://interventions.pinnacleblooms.org/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "selfCanonical": false,
+      "note": "Existing hub canonical absence remains a separate metadata issue"
+    }
+  ],
+  "outboundCustomerIntake": 0,
+  "calls": 0,
+  "analyticsEvents": 0,
+  "recordedAhrefsAffectedSources": 22114,
+  "vendorClearance": "Not established by HTTP/factory proof"
+}

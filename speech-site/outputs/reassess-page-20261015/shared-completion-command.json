@@ -1,0 +1,37 @@
+{
+  "startedAt": "2026-10-15T15:40:37.637Z",
+  "status": "private-upload-metadata-verified-native-hydration-pending",
+  "owner": "current website integration thread",
+  "steps": [
+    {
+      "label": "adopt-combined-prepare",
+      "exitCode": 0,
+      "at": "2026-10-15T15:42:07.593Z"
+    },
+    {
+      "label": "adopt-combined-remote",
+      "exitCode": 1,
+      "at": "2026-10-15T15:42:07.671Z"
+    }
+  ],
+  "customerIntakes": 0,
+  "calls": 0,
+  "analyticsEvents": 0,
+  "sharedPublicVerifiedAt": "2026-10-15T15:40:45.804Z",
+  "source": "5e32968ed8c72a394e1157cd7e507b5d78a86dde",
+  "version": "86bd3530-b843-4407-a49d-0b467618eee0",
+  "deployment": "dd3e0575-af9b-43c1-9ba8-5a92c133bf1e",
+  "error": "adopt-combined-remote failed; retain exact log\n\n1 !== 0\n",
+  "finishedAt": "2026-10-15T15:42:07.672Z",
+  "resumedAt": "2026-10-15T15:45:25.146308+00:00",
+  "resumeReason": "Private import name collision corrected; source/archive/public proofs unchanged",
+  "privateAdoptedAt": "2026-10-15T15:53:43.048Z",
+  "privateBaselineSHA256": "83c56da8fb03d1d88e658af877603864031cb8ac203153aaa7e3e117b6f5868c",
+  "archiveFiles": 4210,
+  "archiveBytes": 463171234,
+  "rootVersion": "86bd3530-b843-4407-a49d-0b467618eee0",
+  "verificationMethod": "Exact private manifest + authenticated object metadata/localMD5 observed equality and size for both singlePUTobjects; existing nativeS3hydrate will verify fullremote SHA256 before source execution",
+  "remoteStreamedSHA256": false,
+  "nativeHydrationRequired": true,
+  "remaining": "Nativehydrate must verify allpart/archive/member SHA256 before fullprivate-state acceptance; genuine enquiries/outcomes remain separate"
+}

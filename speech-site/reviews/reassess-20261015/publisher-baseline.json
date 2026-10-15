@@ -1,0 +1,47 @@
+{
+  "status": "metadata_verified_pending_hydration",
+  "at": "2026-10-15T15:53:41.822Z",
+  "publicationVersion": "86bd3530-b843-4407-a49d-0b467618eee0",
+  "archiveSHA256": "83c56da8fb03d1d88e658af877603864031cb8ac203153aaa7e3e117b6f5868c",
+  "archiveBytes": 463171234,
+  "files": 4210,
+  "partChecks": [
+    {
+      "key": "chunks/83c56da8fb03d1d88e658af877603864031cb8ac203153aaa7e3e117b6f5868c/000",
+      "bytes": 250000000,
+      "localSHA256": "966fdf4145f9cc881ec4132954a6f94e5827ef3552758c51ae4532e943bfeeac",
+      "localMD5": "131de7ceff4179fae6dd2832c81581b5",
+      "serverETag": "131de7ceff4179fae6dd2832c81581b5",
+      "serverSize": 250000000,
+      "equalityObserved": true,
+      "uploadedAt": "2026-10-15T15:44:47.647Z",
+      "method": "Authenticated REST metadata exactkey/size/opaque32hexETag observed equal to localMD5; not a remoteSHA256recomputation"
+    },
+    {
+      "key": "chunks/83c56da8fb03d1d88e658af877603864031cb8ac203153aaa7e3e117b6f5868c/001",
+      "bytes": 213171234,
+      "localSHA256": "f90157cce22dc1206b8ecc88991cae5726862964c07b6b388e14a71179c4cc99",
+      "localMD5": "7e92b399f038776d016d8e4698f54624",
+      "serverETag": "7e92b399f038776d016d8e4698f54624",
+      "serverSize": 213171234,
+      "equalityObserved": true,
+      "uploadedAt": "2026-10-15T15:45:31.821Z",
+      "method": "Authenticated REST metadata exactkey/size/opaque32hexETag observed equal to localMD5; not a remoteSHA256recomputation"
+    }
+  ],
+  "manifestExact": true,
+  "jobsAndOutboxesOverwritten": false,
+  "verificationMethod": "Exact private manifest + authenticated object metadata/localMD5 observed equality and size for both singlePUTobjects; existing nativeS3hydrate will verify fullremote SHA256 before source execution",
+  "remoteStreamedSHA256": false,
+  "nativeHydrationRequired": true,
+  "failedStreamPreserved": {
+    "status": "timeout",
+    "partialBytes": 14024704,
+    "file": "remote-000",
+    "verified": false
+  },
+  "nativeGuard": "cloud-source-state.py hydrate verifies everypart, fullarchive and all4210members against SHA256 before any source job",
+  "localPublisherBaselineUpdated": true,
+  "privateAdoptedAt": "2026-10-15T15:53:43.048Z",
+  "newScheduleCreated": false
+}

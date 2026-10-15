@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-15T15:40:44.487Z",
+  "checks": [
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/speech-sitemap.xml",
+      "status": 200,
+      "sha256": "ad78faa46154d9022352946d90ed8c03e5f89a9f28705c205ee5b055c86a26bf"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/speech-therapy/sitemap.xml",
+      "status": 200,
+      "sha256": "ad78faa46154d9022352946d90ed8c03e5f89a9f28705c205ee5b055c86a26bf"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centres-sitemap.xml",
+      "status": 200,
+      "sha256": "638e2e998528f11f0d544cc7e74aeae65f77ccc8f059787a5293cb1dfe29f636"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sitemaps/centres.xml",
+      "status": 200,
+      "sha256": "638e2e998528f11f0d544cc7e74aeae65f77ccc8f059787a5293cb1dfe29f636"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centerssitemap",
+      "status": 200,
+      "sha256": "638e2e998528f11f0d544cc7e74aeae65f77ccc8f059787a5293cb1dfe29f636"
+    }
+  ]
+}

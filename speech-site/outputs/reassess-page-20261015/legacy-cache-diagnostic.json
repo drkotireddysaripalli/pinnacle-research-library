@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://www.pinnacleblooms.org/sitemaps/miracles.xml",
+    "status": 200,
+    "bytes": 19252010,
+    "sha256": "fc99d19cd698001d11f21c0a7865408be09be8416cd2233fe92394f7dfbb3d1d",
+    "headers": {
+      "age": "185776",
+      "cache-control": "public, max-age=300, s-maxage=3600",
+      "cf-cache-status": "HIT",
+      "content-type": "application/xml; charset=utf-8",
+      "x-content-type-options": "nosniff",
+      "x-pinnacle-video-sitemap": "required-fields-player-20261007"
+    }
+  },
+  {
+    "url": "https://www.pinnacleblooms.org/sitemaps/miracles.xml?pbn_release=86bd3530",
+    "status": 200,
+    "bytes": 19252010,
+    "sha256": "fc99d19cd698001d11f21c0a7865408be09be8416cd2233fe92394f7dfbb3d1d",
+    "headers": {
+      "age": "185777",
+      "cache-control": "public, max-age=300, s-maxage=3600",
+      "cf-cache-status": "HIT",
+      "content-type": "application/xml; charset=utf-8",
+      "x-content-type-options": "nosniff",
+      "x-pinnacle-video-sitemap": "required-fields-player-20261007"
+    }
+  }
+]

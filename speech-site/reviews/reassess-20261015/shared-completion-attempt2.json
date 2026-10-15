@@ -1,0 +1,11 @@
+{
+  "startedAt": "2026-10-15T15:39:04.690Z",
+  "status": "stopped-at-exception",
+  "owner": "current website integration thread",
+  "steps": [],
+  "customerIntakes": 0,
+  "calls": 0,
+  "analyticsEvents": 0,
+  "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'e2eb524140dfeb84c258d06d5953ed6cda85de01b26ee4bdccf6541fb8604231'\n- '644c62ca2892c91816dd64fc4173031eae668f352defb2a5701c23e046e9d8d7'\n",
+  "finishedAt": "2026-10-15T15:39:18.389Z"
+}

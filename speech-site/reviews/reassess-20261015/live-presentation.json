@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-15T15:34:02.458Z",
+  "passed": true,
+  "og": {
+    "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/reassess-social-20261015.BnQA_AGj_19FFSt.jpg?v=2026-10-15-reassess",
+    "status": 200,
+    "width": 1200,
+    "height": 630
+  },
+  "visual": {
+    "overflow": false,
+    "src": "https://www.pinnacleblooms.org/pinnacle-pages-assets/reassess-family-review-20261015.03gSVfkd_7znQE.webp",
+    "loaded": true,
+    "header": true,
+    "footer": true,
+    "verify": true,
+    "call": true
+  },
+  "errors": [],
+  "cookieCacheControl": "no-store",
+  "sitemap": {
+    "path": "/pinnacleai/sitemap.xml",
+    "status": 200,
+    "lastmod": "2026-10-15"
+  },
+  "llms": {
+    "status": 200,
+    "productReference": true
+  }
+}
