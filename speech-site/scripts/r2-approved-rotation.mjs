@@ -1,4 +1,5 @@
 import {cloudflareToken} from './publisher-platform.mjs';
+import {r2MetadataPage} from './r2-list-pagination.mjs';
 // Bounded metadata-only coverage of the existing reviewed public association set.
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';
 const arg=n=>{const i=process.argv.indexOf('--'+n);return i<0?null:process.argv[i+1];};const root=arg('root')||'ask-private/r2-approved-current';assert(path.resolve(root).startsWith(path.resolve('ask-private')+path.sep));await fs.mkdir(root,{recursive:true});const cfg=JSON.parse(await fs.readFile('ask-private/public-publisher-config.json','utf8')),bytes=await fs.readFile(cfg.r2_associations),approved=JSON.parse(bytes),fingerprint=createHash('sha256').update(bytes).digest('hex');
@@ -12,8 +13,8 @@ while(state.pass<2&&queries<200){
   const token=await cloudflareToken();
   const params=new URLSearchParams({prefix,per_page:'1000'});if(state.cursor)params.set('cursor',state.cursor);
   const r=await fetch('https://api.cloudflare.com/client/v4/accounts/862998def1cd610fdb86b8e5c1d6ed4d/r2/buckets/'+bucket+'/objects?'+params,{headers:{authorization:'Bearer '+token},signal:AbortSignal.timeout(30000)}),d=await r.json();queries++;assert(r.ok&&d.success,'R2 read failed; no absence or change accepted');assert(Array.isArray(d.result));assert(d.result.every(x=>typeof x.key==='string'&&x.key.startsWith(prefix)),'R2 prefix mismatch');
-  assert(typeof d.result_info?.is_truncated==='boolean','Missing complete pagination evidence');const known=d.result.filter(x=>approved[bucket+'/'+x.key]).map(x=>({id:bucket+'/'+x.key,etag:x.etag,size:x.size}));
-  page={inputCursor:state.cursor,nextCursor:d.result_info?.cursor||null,truncated:d.result_info?.is_truncated===true,rowsExamined:d.result.length,known,observedAt:new Date().toISOString()};if(page.truncated)assert(page.nextCursor&&page.nextCursor!==state.cursor,'Missing or repeated cursor');await fs.writeFile(file,JSON.stringify(page)+'\n');
+  const pagination=r2MetadataPage(d,{pageSize:1000,inputCursor:state.cursor}),known=d.result.filter(x=>approved[bucket+'/'+x.key]).map(x=>({id:bucket+'/'+x.key,etag:x.etag,size:x.size}));
+  page={inputCursor:state.cursor,nextCursor:pagination.nextCursor,truncated:pagination.truncated,paginationEvidence:pagination.evidence,rowsExamined:d.result.length,known,observedAt:new Date().toISOString()};await fs.writeFile(file,JSON.stringify(page)+'\n');
  }
  assert.equal(page.inputCursor,state.cursor);state.completedPages++;state.page++;
  if(page.truncated)state.cursor=page.nextCursor;else{state.scope++;state.page=0;state.cursor=null;if(state.scope===scopes.length){state.pass++;state.scope=0;}}

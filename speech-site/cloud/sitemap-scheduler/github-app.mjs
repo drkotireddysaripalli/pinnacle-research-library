@@ -25,7 +25,7 @@ function pkcs8(pem) {
 }
 
 export class GitHubAppCredential {
-  constructor({ appId, installationId, privateKey, fetcher = fetch, clock = Date.now }) {
+  constructor({ appId, installationId, privateKey, fetcher = (...args) => fetch(...args), clock = Date.now }) {
     if (!/^[a-zA-Z0-9_.-]{1,80}$/.test(String(appId)) || !/^\d+$/.test(String(installationId))) throw Error('Invalid GitHub App installation identifiers');
     this.appId = String(appId); this.installationId = String(installationId);
     this.privateKey = privateKey; this.fetcher = fetcher; this.clock = clock;

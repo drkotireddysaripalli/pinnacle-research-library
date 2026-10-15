@@ -70,3 +70,12 @@ test('an existing specifically authorized token remains supported without a new 
   assert.equal(schedulerCredential({ GITHUB_DISPATCH_TOKEN: 'unit-existing-token' }), 'unit-existing-token');
   assert.equal(schedulerCredential({}), undefined);
 });
+
+test('default native fetch is invoked without a credential-object receiver', async () => {
+  const original=globalThis.fetch;
+  try {
+    globalThis.fetch=async function(){assert(this===undefined||this===globalThis,'Illegal invocation');return Response.json(issued(),{status:201});};
+    const app=new GitHubAppCredential({...credentials,clock:()=>T});
+    assert.equal(await app.getToken(),'unit-minted-token');
+  } finally {globalThis.fetch=original;}
+});
