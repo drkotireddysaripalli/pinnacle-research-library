@@ -1,0 +1,10 @@
+{
+  "knowledge_relationships": 404,
+  "catalogue_relationships": 663,
+  "total_relationships": 1067,
+  "zip_bytes": 149413,
+  "zip_sha256": "6edcdc340b920cea654598cbb669c9f4d769cc4107be43b489cf382cbf0f2d1d",
+  "json_sha256": "323fa54a78e4a140c62090d0b0cd74d14931af34207b8a472b13ad2755511052",
+  "source_evidence_retained_locally": true,
+  "secrets_or_media_bodies": false
+}
