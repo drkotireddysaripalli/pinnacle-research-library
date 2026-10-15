@@ -3,6 +3,8 @@ import {centreRegister,centreWalkthrough} from '../src/data/centre-network-conte
 import {centreEcosystem,centreStoryPlaylists,centreNarrativeChapters,centreHomeParticipation} from '../src/data/centre-story.ts';
 import {centreHoursPolicy,centreStaffCommitment,matchedIssuedCertificates} from '../src/data/centre-trust.ts';
 const root=path.resolve(import.meta.dirname,'..'),dir=path.join(root,'public/pinnacle-pages-data');
+const discoveryPolicy=JSON.parse(await fs.readFile(path.join(root,'../tooling/sitemap-manager/discovery-policy.json'),'utf8'));
+const indexableCentrePaths=new Set(discoveryPolicy.indexable_centre_paths);
 const certificateDocuments=JSON.parse(await fs.readFile(path.join(root,'src/data/centre-certificates-20261007.json'),'utf8'));
 const googleLocations=JSON.parse(await fs.readFile(path.join(root,'src/data/centre-google-locations.json'),'utf8'));
 const rows=[];
@@ -28,7 +30,16 @@ for(const c of centreRegister){
 }
 await fs.writeFile(path.join(dir,'centre-network.json'),JSON.stringify({updatedOn:'2026-10-07',primaryTelephone:'+919100181181',distanceBasis:'Approximate straight-line distance from supplied coordinates; not road distance or travel time',centres:rows},null,2)+'\n');
 const sitemapFile=path.join(dir,'speech-sitemap.xml');let sitemap=await fs.readFile(sitemapFile,'utf8');sitemap=sitemap.replace(/<url>\s*<loc>https:\/\/www\.pinnacleblooms\.org\/centers\/[^<]+<\/loc>[\s\S]*?<\/url>\s*/g,'');
-sitemap=sitemap.replace('</urlset>',rows.map(c=>`<url><loc>${c.canonical}</loc><lastmod>2026-10-07</lastmod></url>`).join('\n')+'\n</urlset>');await fs.writeFile(sitemapFile,sitemap);
+sitemap=sitemap.replace('</urlset>',rows.filter(c=>indexableCentrePaths.has(new URL(c.canonical).pathname)).map(c=>`<url><loc>${c.canonical}</loc><lastmod>2026-10-07</lastmod></url>`).join('\n')+'\n</urlset>');await fs.writeFile(sitemapFile,sitemap);
+// Both advertised compatibility maps use the same explicit publication set.
+// Keep all directory/location records; only discovery membership is filtered.
+const centresMap=path.join(dir,'centres-sitemap.xml');
+const currentCentres=await fs.readFile(centresMap,'utf8');
+const filteredCentres=currentCentres.replace(/<url>\s*<loc>([^<]+)<\/loc>[\s\S]*?<\/url>\s*/g,(entry,url)=>{
+ const route=new URL(url).pathname;
+ return route==='/centers'||indexableCentrePaths.has(route)?entry:'';
+});
+await fs.writeFile(centresMap,filteredCentres);
 await fs.writeFile(path.join(root,'src/data/centre-page-releases.json'),JSON.stringify(rows.map(c=>({id:c.id,path:new URL(c.canonical).pathname,status:c.status,updatedOn:'2026-10-07'})),null,2)+'\n');
 for(const c of centreRegister)for(const suffix of ['evidence.txt','machine.md']){const file=path.join(dir,c.id+'-'+suffix);await fs.writeFile(file,(await fs.readFile(file,'utf8')).replace(/[ \t]+$/gm,''));}
 console.log(`Centre network: ${rows.length} registered public routes, reading packages and sitemap entries.`);

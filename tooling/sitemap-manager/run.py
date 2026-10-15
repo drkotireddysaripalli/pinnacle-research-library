@@ -77,7 +77,9 @@ def assemble(release,asset_union,output,previous=None):
  before=tree_digest(baseline)
  old_assets={}
  if previous:
-  m.validate_release(previous)
+  # Historical accepted bytes may contain the exact defects being repaired.
+  # Verify their integrity/structure; enforce current policy on the candidate.
+  m.validate_release(previous, current_discovery=False)
   old_assets={ASSET_PREFIX+'/'+f['path']:f['sha256'] for f in json.loads(Path(previous).joinpath('manifest.json').read_text())['files'] if f['kind'] not in FRAGMENTS}
   if any(before.get(path)!=digest for path,digest in old_assets.items()):raise ValueError('Prior managed release does not match the asset baseline')
  if {p for p in before if p.startswith(ASSET_PREFIX+'/')}!=set(old_assets):raise ValueError('Existing managed assets require an exact prior-release manifest')

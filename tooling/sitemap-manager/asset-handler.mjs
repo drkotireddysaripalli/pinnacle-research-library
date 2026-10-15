@@ -9,7 +9,8 @@ export async function handleManagedSitemap(request, env) {
   let path = url.pathname;
   // Never expose the internal asset namespace, even through a catch-all fallback.
   if (path.startsWith('/_managed_sitemaps/')) return new Response('Not found',{status:404});
-  if (!(path === '/sitemap-managed.xml' || /^\/sitemap-(?:pages|images|videos|news)-[a-z0-9-]+\.xml$/.test(path) || path.startsWith('/site-map/'))) return null;
+  const legacyVideo = url.hostname === 'www.pinnacleblooms.org' && path === '/sitemaps/miracles.xml';
+  if (!(legacyVideo || path === '/sitemap-managed.xml' || /^\/sitemap-(?:pages|images|videos|news)-[a-z0-9-]+\.xml$/.test(path) || path.startsWith('/site-map/'))) return null;
   if (!['GET','HEAD'].includes(request.method)) return new Response('Method not allowed',{status:405,headers:{Allow:'GET, HEAD'}});
   if (url.search || /%|\\|\/\/|(?:^|\/)\.\.?\//.test(path)) return new Response('Not found',{status:404});
   if (path.endsWith('/')) path += 'index.html';

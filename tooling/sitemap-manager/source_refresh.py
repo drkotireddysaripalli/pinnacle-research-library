@@ -7,6 +7,7 @@ import argparse,concurrent.futures,csv,datetime as dt,hashlib,json,sqlite3,urlli
 from pathlib import Path
 from html.parser import HTMLParser
 import manager as m
+from discovery_policy import apply_discovery_policy
 from public_media_snapshot import MediaHTML,MAX_BODY
 
 def packed(x):return json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':'))
@@ -19,6 +20,12 @@ def validated_snapshot(doc):
  for r in rows:
   if len(r['publisher_source_fingerprint'])!=64 or any(c not in '0123456789abcdef' for c in r['publisher_source_fingerprint']):raise ValueError('Missing actual source fingerprint')
  return {canonical(r['slug']):r for r in rows}
+
+class NoPublicRedirect(urllib.request.HTTPRedirectHandler):
+ def redirect_request(self, req, fp, code, msg, headers, newurl):return None
+
+def open_public_source(request, timeout=30):
+ return urllib.request.build_opener(NoPublicRedirect()).open(request, timeout=timeout)
 
 class PublicHTML(MediaHTML):
  def __init__(self,url):super().__init__(url);self.ignored=[];self.body=False;self.text=[]
@@ -44,7 +51,7 @@ def public_resource(url,prior=None):
  headers={'User-Agent':'PinnaclePublisherRefresh/1.0'}
  if prior and prior.get('etag'):headers['If-None-Match']=prior['etag']
  try:
-  with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=30) as r:
+  with open_public_source(urllib.request.Request(url,headers=headers),timeout=30) as r:
    data=r.read(MAX_BODY+1);status=r.status;final=r.url;kind=r.headers.get('Content-Type','');robots=r.headers.get('X-Robots-Tag','');etag=r.headers.get('ETag')
   if len(data)>MAX_BODY or not kind.lower().startswith('text/html'):raise ValueError('Bounded HTML source unavailable')
   parser=PublicHTML(url);parser.feed(data.decode('utf8','replace'));parser.close();row=parser.current(robots)
@@ -179,6 +186,7 @@ def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None
     if len(resources)%100==0:print(packed({'resourceSnapshots':len(resources),'expected':len(urls)}),flush=True)
  try:
   target.execute('BEGIN IMMEDIATE');changes,exceptions=apply_ask(target,snapshot,baseline,metadata_reader);rchanges,rexceptions,current=apply_resources(target,resources,prior,aliases);changes+=rchanges;exceptions+=rexceptions
+  changes += apply_discovery_policy(target, m)
   target.execute('INSERT OR REPLACE INTO receipts VALUES(?,?,?)',('native-source-refresh','source_refresh',packed({'snapshot_sha256':snapshot['sourceSHA256'],'resource_source_pages':len(resources),'changes':changes,'exceptions':exceptions})));target.commit()
  finally:target.close()
  (output/'resource-snapshot.jsonl').write_text(''.join(packed(current.get(u,resources[u]))+'\n' for u in urls),encoding='utf8')
