@@ -10,5 +10,5 @@ const value={head:headHTML,html:serialize(reader),journey:serialize(journey),mea
 assert(value.html.includes('ask-reader-gate')&&value.html.includes('data-ask-profile')&&value.html.includes('type="module"'));assert(!value.html.includes('profile.name'));
 await fs.mkdir('ask-private/knowledge-journey-20261008',{recursive:true});await fs.writeFile('ask-private/knowledge-journey-20261008/reader.json',JSON.stringify(value));
 // Keep the generated runtime module reproducible from its maintained source.
-await fs.writeFile('deployment/mirracles-library.mjs',(await fs.readFile('deployment/mirracles-library-20261008/library.mjs','utf8')).replace("from './assets.mjs'","from './mirracles-library-assets.mjs'"));
+await fs.writeFile('deployment/mirracles-library.mjs',(await fs.readFile('deployment/mirracles-library-20261008/library.mjs','utf8')).replace("from './assets.mjs'","from './mirracles-library-assets.mjs'").replace("from '../public-resource-hubs.mjs'","from './public-resource-hubs.mjs'").replace("from '../../src/lib/shared-page-titles.mjs'","from '../src/lib/shared-page-titles.mjs'"));
 console.log(JSON.stringify({readerBytes:Buffer.byteLength(JSON.stringify(value)),measurement,sharedGoogle:true}));

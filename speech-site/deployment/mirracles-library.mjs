@@ -1,5 +1,6 @@
 import {css, playerJs, brandLogoBase64} from './mirracles-library-assets.mjs';
 import {brandedTitle} from '../src/lib/shared-page-titles.mjs';
+import {publicResourceHubTarget} from './public-resource-hubs.mjs';
 
 export const ORIGIN = 'https://www.pinnacleblooms.org';
 export const PAGE_SIZE = 24;
@@ -122,7 +123,7 @@ function pageURL(base, page, q = '') {
   if (q) params.set('q', q);
   return base + (params.size ? '?' + params : '');
 }
-const a = (url, label, attrs='') => `<a href="${escapeHtml(url)}"${attrs}>${escapeHtml(label)}</a>`;
+const a = (url, label, attrs='') => `<a href="${escapeHtml(publicResourceHubTarget(url))}"${attrs}>${escapeHtml(label)}</a>`;
 const call = () => a(PHONE,'Call 9100 181 181',' class="call"');
 function sharedHeader(navigation) {
   return `<a class="skip" href="#main">Skip to content</a><header class="brand-header"><div class="wrap"><div class="brand-row">${a('/', '', ' class="brand-logo" aria-label="Pinnacle Blooms Network home"').replace('</a>',`<img src="${ASSETS}logo.png" width="650" height="242" alt="Pinnacle Blooms Network" loading="eager" decoding="async"></a>`)}<div class="brand-actions">${call()}${a('/centers','Find a centre')}${a('/enroll-autism-speech-aba-therapies-india','Arrange a visit')}</div></div><nav class="brand-nav" aria-label="Pinnacle approach and evidence">${navigation.main.map(x=>a(x.url,x.label)).join('')}</nav></div></header>`;
