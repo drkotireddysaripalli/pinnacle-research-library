@@ -22,3 +22,11 @@ test('conditional News leaves use the same isolated XML handler',async()=>{
 test('unsupported methods, encoded paths and internal namespace are rejected',async()=>{
  for(const [path,method,status] of [['/site-map/%2ftest.xml','GET',404],['/sitemap-managed.xml','POST',405],['/_managed_sitemaps/www.pinnacleblooms.org/llms.txt','GET',404]]) assert.equal((await handle(new Request('https://www.pinnacleblooms.org'+path,{method}),{})).status,status);
 });
+test('advertised Mirracles compatibility XML uses reviewed managed bytes on the www host only',async()=>{
+ let internal;const env={ASSETS:{fetch:async request=>{internal=request.url;return new Response('<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>');}}};
+ const r=await handle(new Request('https://www.pinnacleblooms.org/sitemaps/miracles.xml'),env);
+ assert.equal(r.status,200);assert.match(internal,/\/_managed_sitemaps\/www\.pinnacleblooms\.org\/sitemaps\/miracles\.xml$/);
+ assert.match(r.headers.get('Content-Type'),/application\/xml/);
+ assert.equal(await handle(new Request('https://materials.pinnacleblooms.org/sitemaps/miracles.xml'),env),null);
+ assert.equal((await handle(new Request('https://www.pinnacleblooms.org/sitemaps/miracles.xml?other=1'),env)).status,404);
+});

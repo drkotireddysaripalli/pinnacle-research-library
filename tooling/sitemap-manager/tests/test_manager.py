@@ -1,5 +1,6 @@
 import csv,importlib.util,json,tempfile,unittest,sys,xml.etree.ElementTree as E
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).parents[1]))
 SPEC=importlib.util.spec_from_file_location('sitemap_manager',Path(__file__).parents[1]/'manager.py')
 m=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(m)
 sys.path.insert(0,str(Path(__file__).parents[1]))

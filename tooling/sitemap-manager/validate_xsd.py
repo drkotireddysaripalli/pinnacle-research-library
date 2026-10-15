@@ -15,7 +15,7 @@ def validate(release,schema_dir):
  schemas={kind:E.XMLSchema(E.parse(str(schema_dir/name),parser)) for kind,name in (('pages','sitemap.xsd'),('index','siteindex.xsd'),('images','image.xsd'),('videos','video.xsd'))};checked=0;images=0;videos=0;news=0
  if any(f['kind']=='news' for f in files):schemas['news']=E.XMLSchema(E.parse(str(schema_dir/'news.xsd'),parser))
  for f in files:
-  if f['kind'] not in ('pages','index','images','videos','news'):continue
+  if f['kind'] not in ('pages','index','images','videos','news','compatibility_video'):continue
   root=E.parse(str(release/f['path']),parser).getroot()
   if f['kind']=='index':schemas['index'].assertValid(root)
   else:

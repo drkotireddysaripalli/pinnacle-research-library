@@ -170,7 +170,9 @@ md.extend([
 ])
 (PUBLIC / 'centers-machine.md').write_text('\n'.join(md).rstrip() + '\n', encoding='utf-8')
 
-profile_urls = sorted({item['profileUrl'] for item in DATA if '/centers/' in item['profileUrl']})
+discovery_policy = json.loads((ROOT.parent / 'tooling/sitemap-manager/discovery-policy.json').read_text(encoding='utf8'))
+allowed_centres = {'https://www.pinnacleblooms.org' + path for path in discovery_policy['indexable_centre_paths']}
+profile_urls = sorted({item['profileUrl'] for item in DATA if item['profileUrl'] in allowed_centres})
 sitemap_urls = [CANONICAL, *profile_urls]
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for item in sitemap_urls:
