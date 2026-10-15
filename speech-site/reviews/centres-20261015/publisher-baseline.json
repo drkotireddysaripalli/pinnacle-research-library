@@ -1,0 +1,12 @@
+{
+  "status": "verified",
+  "at": "2026-10-15T12:02:54.542Z",
+  "publicationVersion": "4d6f09b4-cbf2-4859-8790-b72450e7dc65",
+  "archiveSHA256": "bb1fc9e440087f116c470381f6009ba5313b1fc703db43a704b2030299160736",
+  "archiveBytes": 460385353,
+  "files": 4202,
+  "remoteReadback": "All uploaded archive parts matched SHA256; bootstrap manifest matched exactly",
+  "localPublisherBaselineUpdated": true,
+  "jobsAndOutboxesOverwritten": false,
+  "newScheduleCreated": false
+}
