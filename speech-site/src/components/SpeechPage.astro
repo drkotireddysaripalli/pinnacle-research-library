@@ -20,6 +20,7 @@ import SpeechResources from './SpeechResources.astro';
 import TherapyBookCompanion from './TherapyBookCompanion.astro';
 import { speechOffer } from '../data/speech-offer';
 import CentreDirectory from './CentreDirectory.astro';
+import SpeechLocationFinder from './SpeechLocationFinder.astro';
 import { phone, url, speechPath } from '../data/site';
 import { steps, stepSources, proofCards } from '../data/speech';
 const { focused = false } = Astro.props;
@@ -27,6 +28,7 @@ const content = speechContent;
 ---
 <PageLayout updatedOn="2026-10-01" serviceAreaServed={null} enquiry={content.enquiry} path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} assessmentOffer={content.assessmentOffer} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="A Pinnacle Blooms speech-therapy card showing an Indian mother and child using picture cards, with the message Be understood, Make choices, Join in and the phone number 9100 181 181." imageCaption="Speech therapy for children at Pinnacle Blooms Network." shareImage={shareCard} focused={focused}>
   <div class="speech-revision"><HeroSlider content={content} /><ActionStrip focused speechActions firstLabel="Plan our first visit" firstHref="#first-visit" evidenceHref="#evidence" enrolHref={speechOffer.url}/>
+  <SpeechLocationFinder />
 
   <span class="legacy-section-anchor" id="ChildrenServices-section" aria-hidden="true"></span><section class="wrap service-fit" id="service-fit" aria-labelledby="fit-title">
     <div class="fit-heading"><p class="eyebrow">Your child. Your everyday priorities.</p><h2 id="fit-title">What would you like<br /><em>to become easier?</em></h2></div>
