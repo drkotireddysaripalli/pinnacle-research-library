@@ -6,10 +6,22 @@ import {normaliseAcquisition} from '../public/pinnacle-pages-scripts/enrolment-s
 import {validatePublicContact,toLegacyContact,toReceiptContact} from '../deployment/contact-handler.mjs';
 import {parseReceiptContact,contactPayloadDigest} from '../deployment/contact-receipt-contract.mjs';
 import {serveEnrolmentApi} from '../deployment/enrolment-handler.mjs';
-import {escapeContactMapRows} from '../deployment/contact-receipt.mjs';
+import {escapeContactMapRows,serveContactReceiptAsset,contactReceiptAssets} from '../deployment/contact-receipt.mjs';
+import fs from 'node:fs/promises';
 const values={name:'ISOLATED FIXTURE',title:'Mx',phone:'0000000000',email:'fixture@example.invalid',facilityId:CONTACT_FACILITIES[0],subject:'Therapy Services',message:'Offline fixture only.'};
 const payload=()=>makeContactPayload(values,'qa-contact-request');
 const request=body=>new Request('https://www.pinnacleblooms.org/api/enrolment',{method:'POST',headers:{origin:'https://www.pinnacleblooms.org','content-type':'application/json','idempotency-key':body.requestId},body:JSON.stringify(body)});
+test('outer contact asset precedence serves the complete maintained dependency closure before old embedded assets',async()=>{
+ const base='https://www.pinnacleblooms.org';assert.equal(contactReceiptAssets.size,6);
+ const env={ASSETS:{fetch:async r=>new Response(await fs.readFile(new URL('../public'+new URL(r.url).pathname,import.meta.url)))}};
+ for(const name of ['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js']){
+  const p='/pinnacle-pages-scripts/'+name,r=await serveContactReceiptAsset(new Request(base+p+'?v=contact-receipt-20261015'),env);assert.equal(r.status,200,name);assert.equal(await r.text(),await fs.readFile(new URL('../public'+p,import.meta.url),'utf8'),name);
+  assert.equal((await serveContactReceiptAsset(new Request(base+p,{method:'POST'}),env)).status,405);
+  assert.equal(await (await serveContactReceiptAsset(new Request(base+p,{method:'HEAD'}),env)).text(),'');
+ }
+ const source=await (await serveContactReceiptAsset(new Request(base+'/pinnacle-pages-scripts/enrolment-source.mjs?v=navratri-20261011'),env)).text();assert(source.includes("HELPLINE_CONSENT_KEY='pinnacle-helpline-measurement-choice-v4'"));assert(source.includes('pinnacle_vizag_call_enquiries'));
+ assert((await fs.readFile(new URL('../public/pinnacle-pages-scripts/contact-api.mjs',import.meta.url),'utf8')).includes("./enrolment-source.mjs?v=contact-receipt-20261015"),'Returning contact browsers must not reuse the prior immutable dependency URL');
+});
 test('contact map retains addresses and coordinates while escaping literal line breaks in row labels',()=>{
  const source='myArray.push(["Branch\\\" name\r\nRoad\nCity",17.42,78.45]);\nconst other="unchanged";';
  const repaired=escapeContactMapRows(source);
