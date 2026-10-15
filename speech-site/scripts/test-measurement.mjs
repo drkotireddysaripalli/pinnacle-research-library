@@ -44,6 +44,43 @@ test('homepage uses the shared stream with populated reporting dimensions',()=>{
  assert.equal(phone[2].link_placement,'hero-call');assert.equal(phone[2].destination,'national_helpline_9100181181');assert.equal(phone[2].measurement_mode,'consented');
 });
 
+test('consented service, centre and enrolment pages share a root cookie scope',()=>{
+ for(const path of ['/', '/top-speech-therapy-center-india-proven-improvement-rate', '/centers', '/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india', canonicalEnrolment]){
+  const h=harness({path,search:''});h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+  assert.equal(config.cookie_prefix,'ps');assert.equal(config.cookie_path,'/');assert.equal(config.cookie_domain,'www.pinnacleblooms.org');
+  h.choose('declined');
+  assert(h.cookies.some(cookie=>cookie.startsWith('ps_ga=;')&&cookie.includes('path=/;')));
+  assert(!h.cookies.some(cookie=>cookie.startsWith('pbn_books')));
+ }
+});
+test('root public cookie repair preserves Ask and knowledge scopes without replaying saved campaigns',()=>{
+ for(const [options,path,domain]of [
+  [{origin:'https://pinnacleblooms.org',path:'/ask/a-private-question',variant:'ask'},'/ask','pinnacleblooms.org'],
+  [{path:'/faq/a-private-question',variant:'knowledge'},'/faq','www.pinnacleblooms.org']
+ ]){
+  const h=harness({...options,search:''});h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+  assert.equal(config.cookie_path,path);assert.equal(config.cookie_domain,domain);
+ }
+ const landing=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech'});landing.choose('accepted');
+ const direct=harness({path:canonicalEnrolment,search:'',sharedStore:landing.store});
+ const config=Array.from(direct.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+ assert.equal(config.cookie_path,'/');assert.equal(config.campaign_source,'');assert.equal(config.campaign_name,'');
+ assert.equal(new URL(config.page_location).search,'');
+});
+test('consented public cookie migration retires only visible old page scopes',()=>{
+ const h=harness({path:canonicalEnrolment,search:''});
+ assert.equal(h.cookies.length,0);
+ h.choose('accepted');
+ assert(h.cookies.some(cookie=>cookie.startsWith('ps_ga=;')&&cookie.includes('path='+canonicalEnrolment+';')));
+ assert(!h.cookies.some(cookie=>cookie.includes('path=/;')||cookie.startsWith('pbn_books')||cookie.startsWith('ph_ga')));
+ for(const options of [{path:'/'},{origin:'https://pinnacleblooms.org',path:'/ask',variant:'ask'},{path:'/faq',variant:'knowledge'}]){
+  const separate=harness({...options,search:''});separate.choose('accepted');
+  assert.equal(separate.cookies.length,0);
+ }
+});
+
 test('sampled web vitals use coarse buckets and the five-field privacy contract',()=>{
  const h=harness({path:'/',search:'',performanceEntries:{
   'largest-contentful-paint':[{startTime:2860}],event:[{duration:176,interactionId:1}],

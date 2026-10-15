@@ -57,7 +57,9 @@ for(const campaign of campaigns){
   const captured=JSON.parse(first.store.get(sourceKey));first.advance(5000);first.choose('accepted');assert.deepEqual(JSON.parse(first.store.get(sourceKey)),captured);
   const form=client({path:enrol,store:first.store,now:Date.now()+6000});assert.equal(form.source(),null);form.choose('accepted');assert.deepEqual(form.source(),captured);
   const config=form.commands().find(x=>x[0]==='config'&&x[1]==='G-2BYLRLFRDJ')[2];assert.equal(config.campaign_name,campaign);
-  assert.equal(config.cookie_prefix,'ps');assert.equal(config.cookie_path,enrol);
+  // Enrolment joins the ordinary public-site session; the separate helpline
+  // consent and stream still gate its optional campaign envelope above.
+  assert.equal(config.cookie_prefix,'ps');assert.equal(config.cookie_path,'/');
   const f=fixtureLedger();let handoffs=0;
   const payload=makePayload(values,'qa-chatgpt-'+randomUUID(),form.source());
   const env={ENROLMENT_RECEIPT_VERSION:'1',PINNACLE_ENROLMENT_RECEIPTS:{receive:(data,key)=>receiveReceiptEnrolment(data,{idempotencyKey:key,ledger:f.ledger,handoff:async lead=>{handoffs++;assert.deepEqual(lead.FacilityIds,['']);return 'qa_fixture_v1:helpline-only';}})}};

@@ -314,6 +314,18 @@
   // An undecided visitor uses denied storage; an explicit refusal or GPC sends
   // nothing. The protected receiver ledger remains the business authority.
   const configureTag = (storage, measuredLocation, fields = {}) => {
+    // Visible legacy per-page cookies can otherwise shadow the shared root
+    // identity on a returning browser. Expire only that page's old scope,
+    // after permission; leave root, book, Ask and knowledge cookies intact.
+    if(storage==='granted'&&!isBookshop&&!isAsk&&!knowledgePath&&pagePath!=='/'){
+      for(const cookie of document.cookie.split(';')){
+        const name=cookie.trim().split('=')[0];
+        if(!/^ps_ga(?:_[A-Za-z0-9_]+)?$/.test(name))continue;
+        for(const domain of ['', 'www.pinnacleblooms.org', 'pinnacleblooms.org']){
+          document.cookie=name+'=; Max-Age=0; path='+pagePath+';'+(domain?' domain='+domain+';':'')+' SameSite=Lax; Secure';
+        }
+      }
+    }
     window['ga-disable-' + id] = false;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -329,7 +341,11 @@
     if (!tagStarted) window.gtag('js',new Date());
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
+      // One consented public-site visit must keep its GA4 identity when a
+      // family moves from a service/centre page to Enrolment. Per-page cookie
+      // paths create a new client/session at that handoff. Keep the existing
+      // separate book namespace and Ask/knowledge scopes.
+      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:'/',cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
       page_location:measuredLocation,page_title:pageTitle,page_referrer:storage==='granted'?safeReferrer:'',ignore_referrer:storage!=='granted'||!safeReferrer,
       ...Object.fromEntries(Object.values(campaignFields).map(field=>[field,''])),...fields
     });
