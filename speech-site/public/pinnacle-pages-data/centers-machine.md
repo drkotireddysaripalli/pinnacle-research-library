@@ -6,6 +6,12 @@
 
 The directory contains 62 published Pinnacle location records across 6 states or regions, checked 2026-09-28. Search by centre, city, state or postcode; open the sourced map destination; choose an enrolment preference where available; or call 9100 181 181. Confirm the centre, service, professional, appointment and current fee before travelling.
 
+## Begin with your child’s life
+
+A centre visit starts the work. Everyday life gives it direction: a self-sufficient, mainstream-included life. Bring one family priority: asking for help, taking part in a classroom activity or managing a daily routine. Present abilities, professional support, family-guided practice and review shape the next step across centre, home and school.
+
+[Read the life-first approach and its sources](https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html).
+
 ## Published location counts
 
 - Telangana: 36

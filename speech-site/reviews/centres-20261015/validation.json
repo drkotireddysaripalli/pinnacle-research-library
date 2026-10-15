@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-15T11:41:29.770Z",
+  "passed": true,
+  "checks": [
+    "title/canonical/indexability",
+    "12 FAQ entries / 62 ItemList entries",
+    "dated evidence and narrative agreement",
+    "public directory privacy",
+    "all referenced image/style/script assets exist",
+    "phone/tablet/desktop layout and search",
+    "shared header/footer/Verify/callback preserved",
+    "full 2:1 narrative image"
+  ],
+  "assets": 446,
+  "results": [
+    {
+      "width": 320,
+      "overflow": false,
+      "heading": "Find a Pinnacle Blooms centre near you.\n\nBegin with your child’s life.",
+      "cards": 62,
+      "ids": 137,
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "callback": true,
+      "image": {
+        "width": 284,
+        "height": 142
+      },
+      "searchCount": 5
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "heading": "Find a Pinnacle Blooms centre near you.\n\nBegin with your child’s life.",
+      "cards": 62,
+      "ids": 137,
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "callback": true,
+      "image": {
+        "width": 731,
+        "height": 365
+      },
+      "searchCount": 5
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "heading": "Find a Pinnacle Blooms centre near you.\n\nBegin with your child’s life.",
+      "cards": 62,
+      "ids": 137,
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "callback": true,
+      "image": {
+        "width": 633,
+        "height": 316
+      },
+      "searchCount": 5
+    }
+  ]
+}

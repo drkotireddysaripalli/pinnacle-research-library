@@ -4,17 +4,25 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "directoryCheckedOn": "2026-09-28",
-  "pageReviewedOn": "2026-09-29",
+  "pageReviewedOn": "2026-10-15",
   "statistics": {
     "locations": 62,
     "regions": 6,
-    "profilePages": 60,
+    "profilePages": 62,
     "mapLinks": 62,
-    "photoBackedListings": 52,
-    "emblemBackedListings": 57,
+    "photoBackedListings": 53,
+    "emblemBackedListings": 58,
     "enrolmentChoiceMatches": 59
   },
   "claims": [
+    {
+      "id": "life-first-direction",
+      "statement": "Pinnacle starts with the everyday life the family wants the child to grow toward. Present abilities, relevant professional support, family-guided practice and review give each next step its direction.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "checkedOn": "2026-10-15",
+      "scope": "Description of the Pinnacle life-first approach.",
+      "limits": "A direction for individual planning, not a promise of a particular outcome."
+    },
     {
       "id": "dated-directory-count",
       "statement": "The public directory contains 62 published location records across 6 states or regions.",
@@ -25,9 +33,9 @@
     },
     {
       "id": "centre-profile-coverage",
-      "statement": "60 directory records link to a centre-specific Pinnacle profile; the remaining records use a dated Pinnacle contact reference.",
+      "statement": "62 directory records link to centre-specific information pages, including location-status pages where applicable.",
       "source": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
-      "checkedOn": "2026-09-28",
+      "checkedOn": "2026-10-15",
       "scope": "First-party destination coverage for the directory records.",
       "limits": "A first-party profile is not independent endorsement and does not by itself establish the present service scope."
     },
@@ -41,9 +49,9 @@
     },
     {
       "id": "centre-photo-coverage",
-      "statement": "52 listings contain at least one selected centre photograph and 57 contain a supplied centre emblem.",
+      "statement": "53 listings contain at least one selected centre photograph and 58 contain a supplied centre emblem.",
       "source": "https://www.pinnacleblooms.org/centers#centres",
-      "checkedOn": "2026-09-28",
+      "checkedOn": "2026-10-15",
       "scope": "Media attached to the dated directory from the owner-supplied centre media set.",
       "limits": "A photograph helps identify a place; it does not establish current condition, service availability, quality or outcome."
     },

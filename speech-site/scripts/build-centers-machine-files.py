@@ -19,6 +19,7 @@ stats = {
     'enrolmentChoiceMatches': sum(bool(item.get('facilityId')) for item in DATA),
 }
 claims = [
+    {'id': 'life-first-direction', 'statement': 'Pinnacle starts with the everyday life the family wants the child to grow toward. Present abilities, relevant professional support, family-guided practice and review give each next step its direction.', 'source': 'https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html', 'checkedOn': '2026-10-15', 'scope': 'Description of the Pinnacle life-first approach.', 'limits': 'A direction for individual planning, not a promise of a particular outcome.'},
     {
         'id': 'dated-directory-count',
         'statement': f"The public directory contains {stats['locations']} published location records across {stats['regions']} states or regions.",
@@ -29,9 +30,9 @@ claims = [
     },
     {
         'id': 'centre-profile-coverage',
-        'statement': f"{stats['profilePages']} directory records link to a centre-specific Pinnacle profile; the remaining records use a dated Pinnacle contact reference.",
+        'statement': f"{stats['profilePages']} directory records link to centre-specific information pages, including location-status pages where applicable.",
         'source': 'https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html',
-        'checkedOn': CHECKED,
+        'checkedOn': '2026-10-15',
         'scope': 'First-party destination coverage for the directory records.',
         'limits': 'A first-party profile is not independent endorsement and does not by itself establish the present service scope.'
     },
@@ -47,7 +48,7 @@ claims = [
         'id': 'centre-photo-coverage',
         'statement': f"{stats['photoBackedListings']} listings contain at least one selected centre photograph and {stats['emblemBackedListings']} contain a supplied centre emblem.",
         'source': CANONICAL + '#centres',
-        'checkedOn': CHECKED,
+        'checkedOn': '2026-10-15',
         'scope': 'Media attached to the dated directory from the owner-supplied centre media set.',
         'limits': 'A photograph helps identify a place; it does not establish current condition, service availability, quality or outcome.'
     },
@@ -83,7 +84,7 @@ evidence = {
     'operator': 'Bharath Healthcare Laboratories Private Limited',
     'brand': 'Pinnacle Blooms Network',
     'directoryCheckedOn': CHECKED,
-    'pageReviewedOn': '2026-09-29',
+    'pageReviewedOn': '2026-10-15',
     'statistics': stats,
     'claims': claims,
     'directory': 'https://www.pinnacleblooms.org/pinnacle-pages-data/centre-directory.json',
@@ -119,6 +120,12 @@ md = [
     '## Direct answer',
     '',
     f"The directory contains {stats['locations']} published Pinnacle location records across {stats['regions']} states or regions, checked {CHECKED}. Search by centre, city, state or postcode; open the sourced map destination; choose an enrolment preference where available; or call 9100 181 181. Confirm the centre, service, professional, appointment and current fee before travelling.",
+    '',
+    '## Begin with your child’s life',
+    '',
+    'A centre visit starts the work. Everyday life gives it direction: a self-sufficient, mainstream-included life. Bring one family priority: asking for help, taking part in a classroom activity or managing a daily routine. Present abilities, professional support, family-guided practice and review shape the next step across centre, home and school.',
+    '',
+    '[Read the life-first approach and its sources](https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html).',
     '',
     '## Published location counts',
     '',
@@ -167,7 +174,8 @@ profile_urls = sorted({item['profileUrl'] for item in DATA if '/centers/' in ite
 sitemap_urls = [CANONICAL, *profile_urls]
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for item in sitemap_urls:
-    modified = RELEASES.get(item, {}).get('modifiedOn')
+    release = next((row for row in RELEASES if CANONICAL.removesuffix('/centers') + row['path'] == item), {}) if isinstance(RELEASES, list) else RELEASES.get(item, {})
+    modified = '2026-10-15' if item == CANONICAL else release.get('updatedOn', release.get('modifiedOn'))
     lastmod = f'<lastmod>{modified}</lastmod>' if modified else ''
     sitemap.append(f'  <url><loc>{item}</loc>{lastmod}</url>')
 sitemap.append('</urlset>')
