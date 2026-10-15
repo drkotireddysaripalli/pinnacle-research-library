@@ -4,6 +4,8 @@ import {repairCentreIndexability} from './centre-indexability.mjs';
 import {repairBookSearchMetadata} from './book-search-transform.mjs';
 import {repairStaffCanonical} from './staff-canonical-repair.mjs';
 import {publicResourceHubTarget} from './public-resource-hubs.mjs';
+import {repairContactReceipt,serveContactReceiptAsset} from './contact-receipt.mjs';
+import {serveEnrolmentApi} from './enrolment-handler.mjs';
 const origin='https://www.pinnacleblooms.org',aliases=new Map(Object.entries({...clearanceAliases,...CANONICAL_NAV_ALIASES}).map(([a,b])=>[decodeURIComponent(a),b]));
 export function clearanceTarget(value){
  if(typeof value!=='string'||!value||!(/^(?:https?:\/\/(?:www\.)?pinnacleblooms\.org(?:[/?#]|$)|\/(?!\/))/.test(value)))return value;
@@ -27,4 +29,4 @@ export async function repairBookSitemap(request,response){
  const body=await response.text();if(!/<urlset\b/.test(body))return new Response(body,response);
  const next=body.replace(/<url\b[^>]*>\s*<loc>https:\/\/www\.pinnacleblooms\.org\/shop<\/loc>[\s\S]*?<\/url>/g,'');const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified'])h.delete(k);h.set('x-pinnacle-sitemap-eligibility','noindex-chooser-20261012');return new Response(next,{status:response.status,statusText:response.statusText,headers:h});
 }
-export function createClearanceWrapper(original){return {...original,async fetch(request,env,ctx){const alias=clearanceRedirect(request);if(alias)return alias;const response=await original.fetch(request,env,ctx);return repairClearanceLinks(request,repairStaffCanonical(request,repairBookSearchMetadata(request,repairCentreIndexability(request,await repairBookSitemap(request,response)))));}};}
+export function createClearanceWrapper(original){return {...original,async fetch(request,env,ctx){const intake=await serveEnrolmentApi(request,env);if(intake)return intake;const asset=await serveContactReceiptAsset(request,env);if(asset)return asset;const alias=clearanceRedirect(request);if(alias)return alias;const response=await repairContactReceipt(request,await original.fetch(request,env,ctx));return repairClearanceLinks(request,repairStaffCanonical(request,repairBookSearchMetadata(request,repairCentreIndexability(request,await repairBookSitemap(request,response)))));}};}
