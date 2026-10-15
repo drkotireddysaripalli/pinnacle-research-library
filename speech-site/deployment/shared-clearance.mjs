@@ -3,6 +3,7 @@ import {CANONICAL_NAV_ALIASES} from './canonical-navigation-aliases.mjs';
 import {repairCentreIndexability} from './centre-indexability.mjs';
 import {repairBookSearchMetadata} from './book-search-transform.mjs';
 import {repairStaffCanonical} from './staff-canonical-repair.mjs';
+import {publicResourceHubTarget} from './public-resource-hubs.mjs';
 const origin='https://www.pinnacleblooms.org',aliases=new Map(Object.entries({...clearanceAliases,...CANONICAL_NAV_ALIASES}).map(([a,b])=>[decodeURIComponent(a),b]));
 export function clearanceTarget(value){
  if(typeof value!=='string'||!value||!(/^(?:https?:\/\/(?:www\.)?pinnacleblooms\.org(?:[/?#]|$)|\/(?!\/))/.test(value)))return value;
@@ -18,7 +19,8 @@ export function repairClearanceLinks(request,response){
  const u=new URL(request.url);if(u.origin!==origin||request.method!=='GET'||request.headers.has('authorization')||request.headers.has('cookie')||request.headers.has('range')||response.status!==200||response.headers.has('set-cookie')||/no-transform/i.test(response.headers.get('cache-control')||'')||!/^text\/html\b/i.test(response.headers.get('content-type')||''))return response;
  if(/^\/(?:api|ask\/auth|auth|account|checkout|payonline|shop\/cart|reports?)(?:\/|$)/i.test(u.pathname))return response;
  const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest'])h.delete(k);h.set('x-pinnacle-clearance-links','source-aliases-20261012');
- return new HTMLRewriter().on('a[href]',{element(e){const old=e.getAttribute('href'),next=clearanceTarget(old);if(next!==old)e.setAttribute('href',next);}}).transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers:h}));
+ const publicMetadata=value=>{try{const old=new URL(value);return old.hostname==='d.pinnacleblooms.org'&&['http:','https:'].includes(old.protocol)&&!old.port&&!old.username&&!old.password&&old.pathname===u.pathname?origin+u.pathname:value;}catch{return value;}};
+ return new HTMLRewriter().on('a[href]',{element(e){const old=e.getAttribute('href'),next=publicResourceHubTarget(clearanceTarget(old));if(next!==old)e.setAttribute('href',next);}}).on('link[rel="canonical"]',{element(e){const old=e.getAttribute('href'),next=publicMetadata(old);if(old!==next)e.setAttribute('href',next);}}).on('meta[property="og:url"],meta[name="twitter:url"]',{element(e){const old=e.getAttribute('content'),next=publicMetadata(old);if(old!==next)e.setAttribute('content',next);}}).transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers:h}));
 }
 export async function repairBookSitemap(request,response){
  const u=new URL(request.url);if(u.origin!==origin||u.pathname!=='/books/sitemap.xml'||request.method!=='GET'||request.headers.has('authorization')||response.status!==200||!/(?:application|text)\/xml/i.test(response.headers.get('content-type')||''))return response;

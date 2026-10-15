@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "archive": "baseline/publisher-refresh-maintenance-20261013222958503-source.zip",
-  "archive_sha256": "ecfd42982e15725b759619af08b57645b514ab313b7a9f7e21dab8744f291529",
-  "release_id": "aad63767dde772d1c10b939c8c6ebf4165bdb35b03c892355e01b717f3522515",
-  "expected_page_urls": 71047,
-  "reviewed_source": "Bounded owner-authorized public publisher refresh; complete stable Ask content fingerprints, current public resource DOM and existing reviewed media rights/parent associations. Source receipt maintenance-20261013222958503-source"
+  "archive": "baseline/sitemap-durable-repairs-20261015.zip",
+  "archive_sha256": "80e22844e27d7ca3f772f18c4f201fa403383423e32a9cbcfaab8337e9ae7033",
+  "release_id": "dd490ce231ea2715924d5d99bf20674a350ec766ebb51035646ce58b7c11ed7e",
+  "expected_page_urls": 71099,
+  "reviewed_source": "Approved native source, seven confirmed permanent-redirect exclusions, sixty maintained public enquiry centre pages with corrected production indexability, two explicit location-status holds, unchanged media rights/parent evidence; legacy video XML preserves exact parent/video membership using the approved formatter."
 }

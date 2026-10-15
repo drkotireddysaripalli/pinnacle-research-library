@@ -4,6 +4,7 @@ import sqlite3
 import sys
 import tempfile
 import unittest
+from contextlib import closing
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import catalogue_v2 as c
@@ -35,7 +36,7 @@ class ReviewedMediaProfiles(unittest.TestCase):
         return p.apply(self.db,self.source,c.file_hash(self.source))
 
     def collected(self):
-        with sqlite3.connect(self.db) as db:
+        with closing(sqlite3.connect(self.db)) as db:
             db.row_factory=sqlite3.Row;return n.collect(db)
 
     def test_real_original_and_rendered_renditions_share_asset_and_replay(self):
@@ -47,7 +48,7 @@ class ReviewedMediaProfiles(unittest.TestCase):
 
     def test_new_page_version_replaces_only_active_profiles_and_retains_history(self):
         self.apply();self.doc['rows'][0]['page_content_version_sha256']='b'*64;self.apply()
-        with sqlite3.connect(self.db) as db:
+        with closing(sqlite3.connect(self.db)) as db:
             self.assertEqual(db.execute('SELECT COUNT(*) FROM image_sitemap_profiles').fetchone()[0],1)
             self.assertEqual(db.execute("SELECT COUNT(*) FROM media_uses WHERE publication_state='superseded_public_use'").fetchone()[0],1)
         self.assertEqual(len(list(self.collected()['images'].values())[0]),1)
@@ -57,7 +58,7 @@ class ReviewedMediaProfiles(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'held or unknown'):self.apply()
         self.doc['rows'][0]['page_url']='https://www.example.com/resource';self.doc['rows'][0]['rights_status']='unknown'
         with self.assertRaisesRegex(ValueError,'rights/reference permission'):self.apply()
-        with sqlite3.connect(self.db) as db:self.assertEqual(db.execute('SELECT COUNT(*) FROM image_sitemap_profiles').fetchone()[0],0)
+        with closing(sqlite3.connect(self.db)) as db:self.assertEqual(db.execute('SELECT COUNT(*) FROM image_sitemap_profiles').fetchone()[0],0)
 
     def test_video_uses_reviewed_thumbnail_and_omits_unknown_optional_metrics(self):
         video={**self.doc['rows'][0],'media_kind':'video','asset_source_key':'movie.mp4',

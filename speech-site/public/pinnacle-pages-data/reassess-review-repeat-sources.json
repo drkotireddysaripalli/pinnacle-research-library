@@ -1,142 +1,333 @@
 {
-  "title": "Reassess, Review and Repeat | Keep the Child’s Plan Accountable",
+  "title": "Child Development Progress Review & Reassessment | PinnacleAI",
   "url": "https://www.pinnacleblooms.org/reassess-review-repeat",
-  "updated": "2026-09-30",
+  "updated": "2026-10-15",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
-  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
-  "parentMoment": "“What changed, and what still needs a better approach?”",
-  "lifeDecision": "How does today compare with the earlier observation, including setting and support, and which decision follows?",
-  "familyDiscussion": "A reasoned review of progress, no change or a new need, with the next decision explained.",
-  "directAnswer": "Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.",
-  "lifePurpose": "Review asks whether a skill is becoming useful in life and whether the child’s comfort, goals and context still fit the plan.",
+  "lead": "The next step should make sense to your family. See what your child can do now, understand the support that helps, and leave the review knowing what you and the team will work on next.",
+  "directAnswer": "Reassess, Review and Repeat is Pinnacle’s cycle for comparing the child’s present abilities with the earlier picture, interpreting everyday observations with the family, and agreeing what to continue, adapt or reconsider. AbilityScore® and the seven Readiness views contribute to that discussion. The professional explains the next goal, suitable support and when to review it again.",
+  "lifePurpose": "A self-sufficient, mainstream-included life is the purpose from the beginning. Your child’s communication, daily routines, learning and participation give every measurement, therapy goal and review its direction.",
   "illustrativeExample": {
-    "title": "The child can now pack a bag—with one important exception.",
-    "description": "Illustrative example only. At home the child completes most steps, while a busy school arrival still needs support.",
-    "steps": [
+    "title": "Packing a bag is one task. Joining the school day is the purpose.",
+    "intro": "Illustrative example: a five-year-old and their family are working toward taking part in the school-morning routine. The example below explains a decision. It is not a patient record or a prescribed programme.",
+    "observations": [
       {
-        "title": "Compare fairly",
-        "description": "Look at the same ability with the support and environment clearly described."
+        "label": "The earlier picture",
+        "icon": "home",
+        "title": "An adult does the packing.",
+        "setting": "At home, before leaving for school.",
+        "support": "The parent gathers the items and puts them in the bag.",
+        "response": "The child watches and joins when invited.",
+        "meaning": "The record needs to show the help provided, as well as what the child does."
       },
       {
-        "title": "Listen to life",
-        "description": "Family and teacher observations show where the skill transfers and where it does not."
+        "label": "What the family notices now",
+        "icon": "measure",
+        "title": "A picture sequence helps at home.",
+        "setting": "A familiar table, with the items within reach.",
+        "support": "The same short picture sequence; the parent points to the next item.",
+        "response": "The child follows the cue and places the item in the bag.",
+        "meaning": "Useful participation with picture and adult support. Independent packing has not been established."
       },
       {
-        "title": "Make a real decision",
-        "description": "The team may keep a useful support, change a cue, address the setting or choose a new goal."
-      },
-      {
-        "title": "Check again",
-        "description": "Later measurement and observation test whether that decision helped."
+        "label": "The different setting",
+        "icon": "book",
+        "title": "School arrival still needs a different approach.",
+        "setting": "A busy arrival area; teacher input shared with permission.",
+        "support": "The parent takes over the bag while the child waits nearby.",
+        "response": "The home routine has not been observed in this setting.",
+        "meaning": "The family and professional need to understand the setting before expecting the same response."
       }
     ],
-    "status": "Fictional explanatory example; not a patient story or observed result."
+    "comparison": "A prompted step at a quiet home table and a busy school arrival are different observations. The review keeps the activity, setting, support and child’s response together. It asks what became easier in life and what still needs a useful change.",
+    "decision": "In this example, the occupational therapist discusses the routine with the family and, with permission, the school. They keep the useful home picture sequence and agree to try one bag step in a quieter arrival spot, with one familiar adult and the same picture cue. The child can pause or ask for help. The goal is comfortable participation in the arrival routine.",
+    "family": "The parent uses the agreed picture sequence during an ordinary morning opportunity, offers the support discussed with the therapist and notices what the child chooses to attempt. The family brings back what was useful, what was difficult and any sign that the task or setting needs to change.",
+    "checkpoint": "At the next agreed review, compare the steps attempted and completed, the picture or adult help used, the setting and the child’s comfort. The quieter-arrival adjustment has not yet been tried in this example; its result is open. Agree the review date with the responsible professional.",
+    "branches": [
+      {
+        "title": "Continue what is useful",
+        "icon": "heart",
+        "text": "If the child participates comfortably with the agreed support, the team can retain it and discuss another relevant opportunity. Any change in help is planned with the professional."
+      },
+      {
+        "title": "Adapt the support or setting",
+        "icon": "plan",
+        "text": "If a step remains difficult, review access to the bag, the cue, timing, adult help and the environment. Choose a specific adjustment and say what the next observation should answer."
+      },
+      {
+        "title": "Reconsider the goal or assessment",
+        "icon": "people",
+        "text": "If comfort, participation or abilities change, the professional and family can pause the activity, revisit the goal, assess further or arrange an appropriate referral. More repetition is a decision to justify."
+      }
+    ],
+    "status": "Fictional explanation; not a patient result, prescribed plan or completed follow-up. The proposed support response remains unobserved."
   },
-  "mechanism": [
-    "Change, no change and decline all deserve an honest explanation.",
-    "A meaningful review connects assessed abilities to participation outside the assessment setting.",
-    "The child and family remain active partners in deciding what matters next."
+  "reviewCycle": [
+    {
+      "title": "Reassess the starting picture",
+      "icon": "measure",
+      "text": "Compare the relevant abilities and readiness information with the earlier record. Describe the measure, setting and help provided.",
+      "href": "/abilityscore"
+    },
+    {
+      "title": "Review what life tells us",
+      "icon": "people",
+      "text": "Bring family observations together with professional interpretation and relevant, consented school input.",
+      "href": "/fusion-module"
+    },
+    {
+      "title": "Explain the next decision",
+      "icon": "plan",
+      "text": "Agree the goal, support to continue or change, family practice and the reason for the choice.",
+      "href": "/personal-development-kernel"
+    },
+    {
+      "title": "Return to the next checkpoint",
+      "icon": "loop",
+      "text": "Look for the agreed response, discuss what happened and revise the plan toward greater participation.",
+      "href": "#next-review"
+    }
   ],
-  "limit": "Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.",
+  "stages": [
+    {
+      "title": "Understand capabilities",
+      "icon": "measure",
+      "text": "Identify what your child can do now and what support is involved.",
+      "href": "/abilityscore"
+    },
+    {
+      "title": "Plan toward readiness",
+      "icon": "compass",
+      "text": "Discuss a meaningful goal and a child-specific, revisable plan.",
+      "href": "/prognose"
+    },
+    {
+      "title": "Connect relevant therapies",
+      "icon": "people",
+      "text": "Bring the needed professional contributions around that goal.",
+      "href": "/autism-therapy"
+    },
+    {
+      "title": "Practise in daily life",
+      "icon": "home",
+      "text": "Use suitable everyday opportunities with family guidance.",
+      "href": "/everyday-therapy"
+    },
+    {
+      "title": "Track and correct",
+      "icon": "track",
+      "text": "Bring observations back into professional review.",
+      "href": "/fusion-module"
+    },
+    {
+      "title": "Reassess and repeat",
+      "icon": "loop",
+      "text": "Compare change and explain what should happen next.",
+      "href": "#worked-example"
+    },
+    {
+      "title": "Keep life as the direction",
+      "icon": "sun",
+      "text": "Work toward self-sufficiency and mainstream participation.",
+      "href": "/self-sufficient"
+    }
+  ],
+  "familyPreparation": [
+    "One everyday activity you want your child to take part in more comfortably.",
+    "What your child attempted or did, where it happened and who was there.",
+    "The picture, cue, equipment or adult help that was provided.",
+    "Your child’s choices, comfort, preferences and wish to pause.",
+    "Questions about the next goal, home practice and review date."
+  ],
+  "therapyContributions": [
+    {
+      "name": "Speech Therapy",
+      "text": "Review how a request, choice or way to ask for help works with different people.",
+      "href": "/top-speech-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "Occupational Therapy",
+      "text": "Review activity access, movement, sensory and environmental support for daily routines.",
+      "href": "/best-occupational-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "ABA & behavioural support",
+      "text": "Review the context around behaviour, communication, comfort and the response to support.",
+      "href": "/best-aba-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "Special Education",
+      "text": "Review learning access, teaching supports and participation in classroom routines.",
+      "href": "/best-special-education-center-call-9100181181"
+    }
+  ],
   "claimSourceMap": [
     {
-      "statement": "How does today compare with the earlier observation, including setting and support, and which decision follows?",
-      "kind": "programme explanation",
+      "statement": "Pinnacle’s source-linked explanation describes reassessment, plan review and eight report views: overall AbilityScore and seven readiness views.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/paradigm/08-review-and-reassess.html",
+      "scope": "Walkthrough pp. 35 and 37, methodology preprint p. 3, BIS p. 2 and supplied report formats reviewed 19 September 2026. A described monthly workflow is not a universal appointment promise."
+    },
+    {
+      "statement": "The child’s life determines abilities, goals, methods, people, practice and review. The evidence page distinguishes proposed review from later observed results.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "scope": "The new school-bag example on this page is an illustrative explanation. It does not report a completed intervention or reassessment."
+    },
+    {
+      "statement": "The methodology preprint describes instrument development and preliminary measurement findings.",
       "source": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
-      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+      "scope": "Preprint, DOI 10.5281/zenodo.19482123. Repository publication is distinct from peer review and completed independent external validation."
+    },
+    {
+      "statement": "The BIS record identifies the documented software quality-system scope and named readiness and support modules.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "scope": "Read the original scope schedule. Certification does not establish an individual child’s outcome."
     },
     {
       "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
-      "kind": "regulatory scope",
       "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
-      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
-    },
-    {
-      "statement": "Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.",
-      "kind": "claim boundary",
-      "source": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
-      "limit": "Describes a workflow; not proof that every step produces a specific result."
+      "scope": "MFG/MD/2026/000248. The licence defines intended use; it is not diagnostic authority or a guarantee of progress."
     }
   ],
   "sources": [
     {
-      "id": "workflow",
-      "name": "Documented PinnacleAI workflow",
-      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
-      "limit": "Describes a workflow; not proof that every step produces a specific result."
+      "title": "Review and reassessment in the documented workflow",
+      "text": "Pinnacle’s source-linked explanation describes reassessment, plan review and eight report views: overall AbilityScore and seven readiness views.",
+      "scope": "Walkthrough pp. 35 and 37, methodology preprint p. 3, BIS p. 2 and supplied report formats reviewed 19 September 2026. A described monthly workflow is not a universal appointment promise.",
+      "href": "/verify/evidence/paradigm/08-review-and-reassess.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/paradigm/08-review-and-reassess.html"
     },
     {
-      "id": "methods",
-      "name": "Methodology preprint and limitations",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
-      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+      "title": "The life-first approach and worked source trail",
+      "text": "The child’s life determines abilities, goals, methods, people, practice and review. The evidence page distinguishes proposed review from later observed results.",
+      "scope": "The new school-bag example on this page is an illustrative explanation. It does not report a completed intervention or reassessment.",
+      "href": "/verify/evidence/pinnacle-paradigm-shift.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html"
     },
     {
-      "id": "bis",
-      "name": "BIS named-module and quality-system scope",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
-      "limit": "Named module/quality scope; not a clinical effectiveness result."
+      "title": "AbilityScore methodology",
+      "text": "The methodology preprint describes instrument development and preliminary measurement findings.",
+      "scope": "Preprint, DOI 10.5281/zenodo.19482123. Repository publication is distinct from peer review and completed independent external validation.",
+      "href": "/verify/evidence/records/methodology.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html"
     },
     {
-      "id": "studies",
-      "name": "Study portfolio and cohort limitations",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/study-portfolio.html",
-      "limit": "Company study portfolio; cohort-bound findings are not individual guarantees."
+      "title": "BIS licence and named-module schedule",
+      "text": "The BIS record identifies the documented software quality-system scope and named readiness and support modules.",
+      "scope": "Read the original scope schedule. Certification does not establish an individual child’s outcome.",
+      "href": "/verify/evidence/records/bis.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
     },
     {
-      "id": "model",
-      "name": "Life-first programme direction",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
-      "limit": "Programme purpose; not a guarantee of a child outcome."
-    }
-  ],
-  "relatedPages": [
-    {
-      "name": "PinnacleAI®",
-      "url": "https://www.pinnacleblooms.org/pinnacleai"
-    },
-    {
-      "name": "AbilityScore®",
-      "url": "https://www.pinnacleblooms.org/abilityscore"
-    },
-    {
-      "name": "7 Readiness Indexes",
-      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
-    },
-    {
-      "name": "Personal Development Kernel",
-      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
-    },
-    {
-      "name": "Prognose",
-      "url": "https://www.pinnacleblooms.org/prognose"
-    },
-    {
-      "name": "TherapeuticAI®",
-      "url": "https://www.pinnacleblooms.org/therapeuticai"
-    },
-    {
-      "name": "Everyday Therapy™",
-      "url": "https://www.pinnacleblooms.org/everyday-therapy"
-    },
-    {
-      "name": "Fusion",
-      "url": "https://www.pinnacleblooms.org/fusion-module"
+      "title": "MD-5 intended use",
+      "text": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "scope": "MFG/MD/2026/000248. The licence defines intended use; it is not diagnostic authority or a guarantee of progress.",
+      "href": "/verify/evidence/records/md5.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
     }
   ],
   "questions": [
     {
-      "question": "How often should a child be reassessed?",
-      "answer": "A source method describes monthly reassessment in one programme. The suitable schedule depends on the child and should be agreed with the responsible professional."
+      "question": "What is a child development progress review at Pinnacle?",
+      "answer": "It is a discussion of the child’s present abilities, relevant measurements and everyday observations, compared with the earlier picture. The family and responsible professional agree what to continue, adapt or reconsider, what to practise and when to review the next response."
     },
     {
-      "question": "What if the score stays the same or goes down?",
-      "answer": "Review the measure, setting, supports, health and everyday observations. A professional and family can then decide whether to adapt the goal or support."
+      "question": "How does reassessment connect with a self-sufficient, mainstream-included life?",
+      "answer": "Growing independence and participation give the plan its direction. A review asks whether a capability is becoming useful in communication, daily routines, learning or life with others, and what support is appropriate next. Each child’s goals, pace and outcomes differ."
     },
     {
-      "question": "Is repeating therapy until independence guaranteed?",
-      "answer": "No. Growing independence and participation are directions for planning. Each child’s outcomes, pace and supports differ."
+      "question": "How often should my child be reassessed?",
+      "answer": "Agree the schedule with the responsible professional. Pinnacle’s documented methods describe monthly reassessment in one programme; the appropriate timing for an individual child depends on the measure, goals, circumstances and agreed care plan."
+    },
+    {
+      "question": "What should our family bring to a progress review?",
+      "answer": "Bring one specific everyday example, the activity and setting, what your child attempted or did, the help provided, and your child’s comfort and choices. Bring relevant existing reports and questions about the next goal, practice and review date. Use the agreed private care channel."
+    },
+    {
+      "question": "What if AbilityScore or a Readiness view does not improve?",
+      "answer": "A score is one part of the discussion. Check whether the same measure and conditions are being compared, what support was offered and what changed in everyday life. The professional can review the goal, support, assessment needs and next checkpoint with the family."
+    },
+    {
+      "question": "Can a skill look different at home and school?",
+      "answer": "Yes. People, noise, timing, activity and adult support can differ. Describe those conditions rather than assuming the skill has transferred. Relevant school observations can inform review when shared with appropriate permission."
+    },
+    {
+      "question": "Does the plan change automatically?",
+      "answer": "No. Measurements and observations inform professional interpretation. The responsible professional discusses appropriate changes with the family and explains the next observation or reassessment."
+    },
+    {
+      "question": "Can we reduce, pause or change an activity?",
+      "answer": "Bring the child’s comfort, choice and response into review. The professional and family can discuss retaining a useful support, adapting or pausing an activity, changing a goal or arranging further assessment. The appropriate decision depends on the child."
+    },
+    {
+      "question": "Do the regulatory licences guarantee independence or school admission?",
+      "answer": "No. MD-5 defines the software’s non-diagnostic intended use and the BIS record defines its documented scope. A score change or licence does not guarantee independence, school admission or a particular outcome. Actual participation and the child’s support needs guide review."
+    },
+    {
+      "question": "How can we arrange a conversation with Pinnacle?",
+      "answer": "Call 9100 181 181, choose a Pinnacle centre or use the enrolment page. Tell the team one everyday priority and ask about a suitable professional, first visit, fees and review process. Your enquiry starts a conversation; the team confirms the visit arrangements."
     }
-  ]
+  ],
+  "relatedPages": [
+    {
+      "name": "Reassess the starting picture",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "name": "Review what life tells us",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Explain the next decision",
+      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+    },
+    {
+      "name": "Return to the next checkpoint",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat#next-review"
+    },
+    {
+      "name": "Understand capabilities",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "name": "Plan toward readiness",
+      "url": "https://www.pinnacleblooms.org/prognose"
+    },
+    {
+      "name": "Connect relevant therapies",
+      "url": "https://www.pinnacleblooms.org/autism-therapy"
+    },
+    {
+      "name": "Practise in daily life",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "name": "Track and correct",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Reassess and repeat",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat#worked-example"
+    },
+    {
+      "name": "Keep life as the direction",
+      "url": "https://www.pinnacleblooms.org/self-sufficient"
+    },
+    {
+      "name": "Speech Therapy",
+      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "Occupational Therapy",
+      "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "ABA & behavioural support",
+      "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "Special Education",
+      "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+    }
+  ],
+  "citation": "Bharath Healthcare Laboratories Private Limited. (2026-10-15). Reassess, Review and Repeat: child development progress review. Pinnacle Blooms Network. https://www.pinnacleblooms.org/reassess-review-repeat"
 }

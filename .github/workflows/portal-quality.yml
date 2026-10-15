@@ -42,6 +42,7 @@ jobs:
     concurrency:
       group: portal-testingbot-builds
       cancel-in-progress: false
+      queue: max
     timeout-minutes: 20
     defaults:
       run:

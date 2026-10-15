@@ -12,7 +12,8 @@ export async function pageManifest(){
   const editions=JSON.parse(await fs.readFile(new URL('../../src/data/book-merchant-editions.json',import.meta.url)));
   const verify=JSON.parse(await fs.readFile(new URL('./verify-paths.json',import.meta.url)));
   const primary=['speech','pinnacleai','enrolment','shop'];
-  const records=Object.entries(pageContracts).filter(([id])=>!['ask','delhi'].includes(id)).map(([id,p])=>row(id,p.canonical,'portal',primary.includes(id)?'bvt':'p1',{buildPath:p.path,kind:id}));
+  // Reassess keeps its existing stable case ID below when its page contract becomes active.
+  const records=Object.entries(pageContracts).filter(([id])=>!['ask','delhi','reassess'].includes(id)).map(([id,p])=>row(id,p.canonical,'portal',primary.includes(id)?'bvt':'p1',{buildPath:p.path,kind:id}));
   records.push(row('centre-suchitra',centres.find(c=>c.id==='suchitra').path,'centre','bvt',{kind:'centre',centre:'suchitra',buildPath:centres.find(c=>c.id==='suchitra').path}));
   records.push(row('ask-answer','/ask/what-is-a-deic-and-what-services-does-it-offer','ask-answer','bvt',{canonical:'https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer',kind:'knowledge',gate:true}));
   records.push(row('verify','/verify/','verify','bvt',{kind:'verify',shell:'evidence',knownGap:'Current Verify uses its separate evidence shell; common Astro-shell migration is not delivered'}));

@@ -8,6 +8,7 @@ import argparse, collections, csv, datetime as dt, hashlib, html, json, os
 from pathlib import Path
 import math, re, shutil, sqlite3, tempfile, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
+from discovery_policy import exclusion_reason
 
 SM='http://www.sitemaps.org/schemas/sitemap/0.9'
 IM='http://www.google.com/schemas/sitemap-image/1.1'
@@ -278,6 +279,7 @@ def news_element(profile,as_of,window=True):
 
 def eligible(row,hosts,max_age_days=None):
  if row['decision']!='INCLUDE':return False
+ if exclusion_reason(row['url']):return False
  if row['host'] not in hosts:raise ValueError('Unapproved host: '+row['host'])
  if not row['url'].startswith('https://') or normal(row['canonical_url'] or row['url'])!=row['url']:raise ValueError('Included noncanonical/insecure URL')
  if max_age_days is not None:
@@ -303,8 +305,8 @@ def build_release(db,output,policy):
  out=Path(output);previous=json.loads((out/'manifest.json').read_text()) if (out/'manifest.json').exists() else {}
  prev={f['path']:f for f in previous.get('files',[])};stamp=now();warnings=[];files=[];groups=collections.defaultdict(list);news_as_of=policy.get('news_as_of',stamp)
  if not valid_date(news_as_of) or len(news_as_of)<=10:raise ValueError('News cutoff requires a W3C datetime')
- rows=[dict(r) for r in db.execute("SELECT * FROM pages WHERE decision='INCLUDE' ORDER BY url")]
  hosts=set(policy['hosts']);counts=collections.Counter()
+ rows=[dict(r) for r in db.execute("SELECT * FROM pages WHERE decision='INCLUDE' ORDER BY url") if eligible(r,hosts,policy.get('eligibility_max_age_days'))]
  for row in rows:
   if eligible(row,hosts,policy.get('eligibility_max_age_days')):groups[(row['host'],row['module_type'])].append(row);counts[row['host']]+=1
  if not isinstance(policy.get('html_page_size',500),int) or policy.get('html_page_size',500)<1:raise ValueError('Invalid HTML page size')
@@ -392,7 +394,19 @@ def build_release(db,output,policy):
     bundle='\n\n'.join(r['llm_text'] for r in approved)
     if len(bundle.encode())>policy.get('llms_full_max_bytes',250000):raise ValueError('LLM bundle exceeds reviewed corpus limit')
     save(host,'site-map/llms-full.txt',bundle,'llms_bundle')
-  generator_sha=sha(dump({name:digest_file(Path(__file__).parent/name) for name in ('manager.py','reconcile.py','run.py','asset-handler.mjs')}))
+  # Keep the already advertised legacy video endpoint on the same approved
+  # source and formatter. URL-only parents are retained; no metadata is guessed.
+  legacy_rows=[r for r in rows if r['host']=='www.pinnacleblooms.org' and r['module_type']=='mirracles']
+  if legacy_rows:
+   legacy=ET.Element('{'+SM+'}urlset')
+   for row in legacy_rows:
+    u=ET.SubElement(legacy,'{'+SM+'}url');text_tag(u,SM,'loc',row['url'])
+    if row['content_modified_at']:text_tag(u,SM,'lastmod',row['content_modified_at'])
+    for video in json.loads(row['videos_json']):
+     elem=video_element(video,warnings,row['url'])
+     if elem is not None:u.append(elem)
+   save('www.pinnacleblooms.org','sitemaps/miracles.xml',ET.tostring(legacy,encoding='utf-8',xml_declaration=True),'compatibility_video',len(legacy))
+  generator_sha=sha(dump({name:digest_file(Path(__file__).parent/name) for name in ('manager.py','reconcile.py','run.py','asset-handler.mjs','discovery_policy.py','discovery-policy.json')}))
   manifest={'schema_version':1,'created_at':stamp,'release_id':sha(dump([(f['path'],f['sha256']) for f in sorted(files,key=lambda x:x['path'])])),'generator_sha256':generator_sha,'page_urls':len(rows),'hosts':dict(counts),'files':files,'warnings':warnings,'public_status':'built_not_deployed','policy_sha256':sha(dump(policy))}
   if any(f['kind']=='news' for f in files):manifest['news_as_of']=news_as_of
   (stage/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
@@ -411,7 +425,7 @@ def build_release(db,output,policy):
 def html_page(title,body):
  return '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,follow"><title>'+html.escape(title)+' | Pinnacle Blooms Network</title><style>body{font:17px/1.6 system-ui,sans-serif;color:#19354b;background:#f6fafb;margin:0}header,main,footer{max-width:1080px;margin:auto;padding:24px}a{color:#125985;overflow-wrap:anywhere}li{margin:.5em 0}nav a{display:inline-block;padding:6px 12px}header{border-bottom:1px solid #d9e4e9}h1{font-size:clamp(24px,5vw,36px)}</style></head><body><header><a href="https://www.pinnacleblooms.org/">Pinnacle Blooms Network</a> · <a href="https://www.pinnacleblooms.org/centers">Find a centre</a> · <a href="tel:+919100181181">9100 181 181</a></header><main><h1>'+html.escape(title)+'</h1>'+body+'</main><footer><a href="https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india">Ask about an assessment or appointment</a>. The care team confirms service, professional, location and fees.</footer></body></html>'
 
-def validate_release(directory):
+def validate_release(directory, current_discovery=True):
  p=Path(directory);m=json.loads((p/'manifest.json').read_text());page_set=set();seen_files=set();media_parents=set();referenced=set();host_counts=collections.Counter();alternates={}
  records={f['path']:f for f in m['files']}
  if len(records)!=len(m['files']):raise ValueError('Duplicate file identity')
@@ -423,7 +437,7 @@ def validate_release(directory):
   if sha(blob)!=f['sha256']:raise ValueError('File hash mismatch')
   if len(blob)!=f['bytes'] or f['host'] not in m['hosts'] or f['public_url']!='https://'+f['host']+'/'+f['path'].split('/',1)[1]:raise ValueError('Manifest identity mismatch')
   seen_files.add(f['path'])
-  if f['kind'] not in ('index','pages','images','videos','news'):continue
+  if f['kind'] not in ('index','pages','images','videos','news','compatibility_video'):continue
   if len(blob)>MAX_BYTES:raise ValueError('Oversized XML')
   if b'<!DOCTYPE' in blob or b'<!ENTITY' in blob:raise ValueError('Unsafe XML declaration')
   root=ET.fromstring(blob)
@@ -438,13 +452,14 @@ def validate_release(directory):
    if loc is None or not loc.text:raise ValueError('Missing location')
    if len(entry.findall('{'+SM+'}loc'))!=1 or loc.attrib or len(loc) or normal(loc.text)!=loc.text or not loc.text.startswith('https://'):raise ValueError('Invalid canonical location')
    if urllib.parse.urlsplit(loc.text).hostname!=f['host']:raise ValueError('Cross-host location')
+   if current_discovery and f['kind'] in ('pages','compatibility_video') and exclusion_reason(loc.text):raise ValueError('Discovery policy excludes URL: '+loc.text)
    dates=entry.findall('{'+SM+'}lastmod')
    if len(dates)>1:raise ValueError('Repeated modification date')
    for date in dates:
     if date.attrib or len(date) or not valid_date(date.text):raise ValueError('Invalid XML modification date')
    allowed={'{'+SM+'}loc','{'+SM+'}lastmod'}
    if f['kind']=='images':allowed.add('{'+IM+'}image')
-   elif f['kind']=='videos':allowed.add('{'+VI+'}video')
+   elif f['kind'] in ('videos','compatibility_video'):allowed.add('{'+VI+'}video')
    elif f['kind']=='pages':allowed.update(('{'+XH+'}link','{'+SM+'}priority','{'+SM+'}changefreq'))
    elif f['kind']=='news':allowed.add('{'+NW+'}news')
    if any(e.tag not in allowed for e in entry):raise ValueError('Unsupported XML field')
@@ -477,9 +492,9 @@ def validate_release(directory):
     for image in media:
      if len(image)!=1 or image[0].tag!='{'+IM+'}loc' or not image[0].text or normal(image[0].text)!=image[0].text:raise ValueError('Invalid image reference')
     media_parents.add(loc.text)
-   if f['kind']=='videos':
+   if f['kind'] in ('videos','compatibility_video'):
     media=entry.findall('{'+VI+'}video')
-    if not media:raise ValueError('Empty video parent')
+    if not media and f['kind']=='videos':raise ValueError('Empty video parent')
     for video in media:
      if any(v.tag!='{'+VI+'}'+v.tag.split('}')[-1] or v.tag.split('}')[-1] not in VIDEO_FIELDS for v in video):raise ValueError('Unsupported video field')
      values={};counts=collections.Counter(v.tag.split('}')[-1] for v in video)

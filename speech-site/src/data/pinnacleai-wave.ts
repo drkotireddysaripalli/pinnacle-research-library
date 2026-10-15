@@ -3,6 +3,7 @@ import {prognoseContent} from './prognose-content.ts';
 import {pdkContent} from './pdk-content.ts';
 import {abilityContent} from './abilityscore-content.ts';
 import {readinessContent} from './readiness-content.ts';
+import {reassessContent} from './reassess-content.ts';
 export const waveSources = {
   model: '/verify/evidence/pinnacle-paradigm-shift.html',
   workflow: '/verify/#how-pinnacleai-works',
@@ -175,11 +176,11 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'reassess-review-repeat', short:'Reassess · Review · Repeat', label:'Reassess, Review and Repeat', title:'Reassess, Review and Repeat | Keep the Child’s Plan Accountable',
-    description:'Reassess, Review and Repeat compares a child’s everyday skill over time and helps the family and team decide what to keep or change.',
+    slug:'reassess-review-repeat', updatedOn:reassessContent.updatedOn, includeReadingFaqs:true, short:'Reassess · Review · Repeat', label:'Reassess, Review and Repeat', title:reassessContent.title,
+    description:reassessContent.description,
     eyebrow:'A plan is allowed to change', headline:'Keep what helps. Change what does not. Keep your child’s life in view.',
     lead:'A new ability may appear, a support may stop helping or a setting may change. Reassessment gives the child’s team a reason to compare today with the starting picture and choose the next step with the family.',
-    direct:'Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.',
+    direct:reassessContent.direct,
     purpose:'Review asks whether a skill is becoming useful in life and whether the child’s comfort, goals and context still fit the plan.',
     question:'What should a useful review actually decide?',
     exampleTitle:'The child can now pack a bag—with one important exception.',
@@ -190,11 +191,7 @@ export const pinnacleWave = [
     limit:'Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.',
     takeaway:'Ask what changed in everyday life, what remains difficult, what the team decided and when that decision will be revisited.',
     sourceKeys:['workflow','methods','bis','studies','model'],
-    faqs:[
-      {question:'How often should a child be reassessed?',answer:'A source method describes monthly reassessment in one programme. The suitable schedule depends on the child and should be agreed with the responsible professional.'},
-      {question:'What if the score stays the same or goes down?',answer:'Review the measure, setting, supports, health and everyday observations. A professional and family can then decide whether to adapt the goal or support.'},
-      {question:'Is repeating therapy until independence guaranteed?',answer:'No. Growing independence and participation are directions for planning. Each child’s outcomes, pace and supports differ.'}
-    ]
+    faqs:reassessContent.faqs
   }
 ] as const;
 

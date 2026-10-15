@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-15T14:31:50.843Z",
+  "passed": true,
+  "tests": 3,
+  "command": "node --test scripts/test-reassess-release.mjs",
+  "scope": [
+    "Current live-assets precedence",
+    "Cookie/auth/crawler and HTML/Markdown retrieval",
+    "HEAD/ETag/alias/adjacent-private boundaries"
+  ],
+  "realCustomerRequests": 0
+}

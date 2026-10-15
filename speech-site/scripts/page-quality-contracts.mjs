@@ -3,6 +3,7 @@ export const pageContracts = {
   about:{path:'/about',canonical:'/about-pinnacle-proven-improvement-rate'},
   specialEducation:{path:'/best-special-education-center-call-9100181181',canonical:'/best-special-education-center-call-9100181181'},
   fusion:{path:'/fusion-module',canonical:'/fusion-module'},
+  reassess:{path:'/reassess-review-repeat',canonical:'/reassess-review-repeat'},
   therapeuticai:{path:'/therapeuticai',canonical:'/therapeuticai'},
   prognose:{path:'/prognose',canonical:'/prognose'},
   pdk:{path:'/personal-development-kernel',canonical:'/personal-development-kernel'},
@@ -21,4 +22,4 @@ export const pageContracts = {
   ,policies:{path:'/policies',canonical:'/policies',static:'scripts/validate-current-policies.mjs'}
 };
 // CI follows the page currently in acceptance; change this only when the next page candidate is ready.
-export const activeQualityPage='enrolment';
+export const activeQualityPage='reassess';

@@ -7,7 +7,7 @@ test('every published video record and verified historical alias renders through
  for(const record of c.records){
   assert(!ids.has(record.id),'duplicate numeric identity '+record.id);ids.add(record.id);
   const r=await handle(new Request('https://www.pinnacleblooms.org'+record.path));assert(r,'unowned published path '+record.path);assert.equal(r.status,200,record.path);
-  const html=await r.text();assert(html.includes('<h1>'),'missing article title '+record.id);assert(!html.includes('<title>Video library temporarily unavailable'),'failed record '+record.id);checked++;
+  const html=await r.text();assert(html.includes('<h1>'),'missing article title '+record.id);assert(!html.includes('<title>Video library temporarily unavailable'),'failed record '+record.id);assert(html.includes('href="https://materials.pinnacleblooms.org/"')&&html.includes('href="https://interventions.pinnacleblooms.org/"'),'missing current resource hubs '+record.id);assert(!html.includes('href="/materials"')&&!html.includes('href="/interventions"'),'broken reserved hub link '+record.id);checked++;
  }
  for(const [p,id] of Object.entries(c.aliasPaths)){assert(ids.has(id));const r=await handle(new Request('https://www.pinnacleblooms.org'+p));assert.equal(r?.status,200,p);await r.body?.cancel();checked++;}
  assert.equal(checked,c.records.length+Object.keys(c.aliasPaths).length);

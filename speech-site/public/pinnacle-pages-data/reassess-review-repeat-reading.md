@@ -1,50 +1,131 @@
-# Reassess, Review and Repeat | Keep the Child’s Plan Accountable
+# Child Development Progress Review & Reassessment | PinnacleAI
 Canonical: https://www.pinnacleblooms.org/reassess-review-repeat
 
-> Keep what helps. Change what does not. Check again.
+## The next step your family understands
+The next step should make sense to your family. See what your child can do now, understand the support that helps, and leave the review knowing what you and the team will work on next.
 
-Your child can pack a bag at home with less help, but a busy school arrival may still need support. Reassess, Review and Repeat helps the team compare change in context and decide with you whether to continue, adapt or choose a different goal.
+## Purpose from the beginning
+A self-sufficient, mainstream-included life is the purpose from the beginning. Your child’s communication, daily routines, learning and participation give every measurement, therapy goal and review its direction.
 
-## The family question
-“What changed, and what still needs a better approach?”
+## What reassessment does
+Reassess, Review and Repeat is Pinnacle’s cycle for comparing the child’s present abilities with the earlier picture, interpreting everyday observations with the family, and agreeing what to continue, adapt or reconsider. AbilityScore® and the seven Readiness views contribute to that discussion. The professional explains the next goal, suitable support and when to review it again.
 
-## What this page helps decide
-How does today compare with the earlier observation, including setting and support, and which decision follows?
+## One illustrative school-morning review
+Packing a bag is one task. Joining the school day is the purpose.
+Illustrative example: a five-year-old and their family are working toward taking part in the school-morning routine. The example below explains a decision. It is not a patient record or a prescribed programme.
 
-## What the module does
-Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.
+## The earlier picture · An adult does the packing.
+Setting: At home, before leaving for school.
+Support: The parent gathers the items and puts them in the bag.
+Observation: The child watches and joins when invited.
+Meaning: The record needs to show the help provided, as well as what the child does.
 
-## One illustrative everyday moment
-The child can now pack a bag—with one important exception.
-Illustrative example only. At home the child completes most steps, while a busy school arrival still needs support.
-1. **Compare fairly:** Look at the same ability with the support and environment clearly described.
-2. **Listen to life:** Family and teacher observations show where the skill transfers and where it does not.
-3. **Make a real decision:** The team may keep a useful support, change a cue, address the setting or choose a new goal.
-4. **Check again:** Later measurement and observation test whether that decision helped.
+## What the family notices now · A picture sequence helps at home.
+Setting: A familiar table, with the items within reach.
+Support: The same short picture sequence; the parent points to the next item.
+Observation: The child follows the cue and places the item in the bag.
+Meaning: Useful participation with picture and adult support. Independent packing has not been established.
 
-## Claim and source map
-- **programme explanation:** How does today compare with the earlier observation, including setting and support, and which decision follows? [Source](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html). Methods and preliminary results must not be presented as completed independent validation.
-- **regulatory scope:** PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. [Source](https://www.pinnacleblooms.org/verify/evidence/records/md5.html). Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
-- **claim boundary:** Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome. [Source](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works). Describes a workflow; not proof that every step produces a specific result.
+## The different setting · School arrival still needs a different approach.
+Setting: A busy arrival area; teacher input shared with permission.
+Support: The parent takes over the bag while the child waits nearby.
+Observation: The home routine has not been observed in this setting.
+Meaning: The family and professional need to understand the setting before expecting the same response.
 
-## Boundary
-Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.
+## Compare the context
+A prompted step at a quiet home table and a busy school arrival are different observations. The review keeps the activity, setting, support and child’s response together. It asks what became easier in life and what still needs a useful change.
 
-## Further sources
-- [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
-- [Methodology preprint and limitations](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html): Methods and preliminary results must not be presented as completed independent validation.
-- [BIS named-module and quality-system scope](https://www.pinnacleblooms.org/verify/evidence/records/bis.html): Named module/quality scope; not a clinical effectiveness result.
-- [Study portfolio and cohort limitations](https://www.pinnacleblooms.org/verify/evidence/records/study-portfolio.html): Company study portfolio; cohort-bound findings are not individual guarantees.
-- [Life-first programme direction](https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html): Programme purpose; not a guarantee of a child outcome.
+## The professional and family agree the adjustment
+In this example, the occupational therapist discusses the routine with the family and, with permission, the school. They keep the useful home picture sequence and agree to try one bag step in a quieter arrival spot, with one familiar adult and the same picture cue. The child can pause or ask for help. The goal is comfortable participation in the arrival routine.
 
-## Continue through PinnacleAI
-- [PinnacleAI®](https://www.pinnacleblooms.org/pinnacleai)
-- [AbilityScore®](https://www.pinnacleblooms.org/abilityscore)
-- [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes)
-- [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel)
-- [Prognose](https://www.pinnacleblooms.org/prognose)
-- [TherapeuticAI®](https://www.pinnacleblooms.org/therapeuticai)
-- [Everyday Therapy™](https://www.pinnacleblooms.org/everyday-therapy)
-- [Fusion](https://www.pinnacleblooms.org/fusion-module)
+## Family practice
+The parent uses the agreed picture sequence during an ordinary morning opportunity, offers the support discussed with the therapist and notices what the child chooses to attempt. The family brings back what was useful, what was difficult and any sign that the task or setting needs to change.
 
-Call 9100 181 181 or [find a centre](https://www.pinnacleblooms.org/centers). A visit, professional and fees are confirmed by the team. PinnacleAI is non-diagnostic and individual outcomes are not guaranteed.
+## Next agreed checkpoint
+At the next agreed review, compare the steps attempted and completed, the picture or adult help used, the setting and the child’s comfort. The quieter-arrival adjustment has not yet been tried in this example; its result is open. Agree the review date with the responsible professional.
+
+## Continue what is useful
+If the child participates comfortably with the agreed support, the team can retain it and discuss another relevant opportunity. Any change in help is planned with the professional.
+
+## Adapt the support or setting
+If a step remains difficult, review access to the bag, the cue, timing, adult help and the environment. Choose a specific adjustment and say what the next observation should answer.
+
+## Reconsider the goal or assessment
+If comfort, participation or abilities change, the professional and family can pause the activity, revisit the goal, assess further or arrange an appropriate referral. More repetition is a decision to justify.
+
+## The review cycle
+Reassess the starting picture: Compare the relevant abilities and readiness information with the earlier record. Describe the measure, setting and help provided. https://www.pinnacleblooms.org/abilityscore
+Review what life tells us: Bring family observations together with professional interpretation and relevant, consented school input. https://www.pinnacleblooms.org/fusion-module
+Explain the next decision: Agree the goal, support to continue or change, family practice and the reason for the choice. https://www.pinnacleblooms.org/personal-development-kernel
+Return to the next checkpoint: Look for the agreed response, discuss what happened and revise the plan toward greater participation. https://www.pinnacleblooms.org/reassess-review-repeat#next-review
+
+## Prepare for the next review
+One everyday activity you want your child to take part in more comfortably.
+What your child attempted or did, where it happened and who was there.
+The picture, cue, equipment or adult help that was provided.
+Your child’s choices, comfort, preferences and wish to pause.
+Questions about the next goal, home practice and review date.
+Share relevant observations through the agreed private care channel. School input requires appropriate permission.
+
+## Seven connected stages
+Understand capabilities: Identify what your child can do now and what support is involved. https://www.pinnacleblooms.org/abilityscore
+Plan toward readiness: Discuss a meaningful goal and a child-specific, revisable plan. https://www.pinnacleblooms.org/prognose
+Connect relevant therapies: Bring the needed professional contributions around that goal. https://www.pinnacleblooms.org/autism-therapy
+Practise in daily life: Use suitable everyday opportunities with family guidance. https://www.pinnacleblooms.org/everyday-therapy
+Track and correct: Bring observations back into professional review. https://www.pinnacleblooms.org/fusion-module
+Reassess and repeat: Compare change and explain what should happen next. https://www.pinnacleblooms.org/reassess-review-repeat#worked-example
+Keep life as the direction: Work toward self-sufficiency and mainstream participation. https://www.pinnacleblooms.org/self-sufficient
+
+## Relevant therapies
+Speech Therapy: Review how a request, choice or way to ask for help works with different people. https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate
+Occupational Therapy: Review activity access, movement, sensory and environmental support for daily routines. https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate
+ABA & behavioural support: Review the context around behaviour, communication, comfort and the response to support. https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
+Special Education: Review learning access, teaching supports and participation in classroom routines. https://www.pinnacleblooms.org/best-special-education-center-call-9100181181
+
+## Sources and scope
+Review and reassessment in the documented workflow: Pinnacle’s source-linked explanation describes reassessment, plan review and eight report views: overall AbilityScore and seven readiness views. Walkthrough pp. 35 and 37, methodology preprint p. 3, BIS p. 2 and supplied report formats reviewed 19 September 2026. A described monthly workflow is not a universal appointment promise. https://www.pinnacleblooms.org/verify/evidence/paradigm/08-review-and-reassess.html
+The life-first approach and worked source trail: The child’s life determines abilities, goals, methods, people, practice and review. The evidence page distinguishes proposed review from later observed results. The new school-bag example on this page is an illustrative explanation. It does not report a completed intervention or reassessment. https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
+AbilityScore methodology: The methodology preprint describes instrument development and preliminary measurement findings. Preprint, DOI 10.5281/zenodo.19482123. Repository publication is distinct from peer review and completed independent external validation. https://www.pinnacleblooms.org/verify/evidence/records/methodology.html
+BIS licence and named-module schedule: The BIS record identifies the documented software quality-system scope and named readiness and support modules. Read the original scope schedule. Certification does not establish an individual child’s outcome. https://www.pinnacleblooms.org/verify/evidence/records/bis.html
+MD-5 intended use: PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. MFG/MD/2026/000248. The licence defines intended use; it is not diagnostic authority or a guarantee of progress. https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+
+## What is a child development progress review at Pinnacle?
+It is a discussion of the child’s present abilities, relevant measurements and everyday observations, compared with the earlier picture. The family and responsible professional agree what to continue, adapt or reconsider, what to practise and when to review the next response.
+
+## How does reassessment connect with a self-sufficient, mainstream-included life?
+Growing independence and participation give the plan its direction. A review asks whether a capability is becoming useful in communication, daily routines, learning or life with others, and what support is appropriate next. Each child’s goals, pace and outcomes differ.
+
+## How often should my child be reassessed?
+Agree the schedule with the responsible professional. Pinnacle’s documented methods describe monthly reassessment in one programme; the appropriate timing for an individual child depends on the measure, goals, circumstances and agreed care plan.
+
+## What should our family bring to a progress review?
+Bring one specific everyday example, the activity and setting, what your child attempted or did, the help provided, and your child’s comfort and choices. Bring relevant existing reports and questions about the next goal, practice and review date. Use the agreed private care channel.
+
+## What if AbilityScore or a Readiness view does not improve?
+A score is one part of the discussion. Check whether the same measure and conditions are being compared, what support was offered and what changed in everyday life. The professional can review the goal, support, assessment needs and next checkpoint with the family.
+
+## Can a skill look different at home and school?
+Yes. People, noise, timing, activity and adult support can differ. Describe those conditions rather than assuming the skill has transferred. Relevant school observations can inform review when shared with appropriate permission.
+
+## Does the plan change automatically?
+No. Measurements and observations inform professional interpretation. The responsible professional discusses appropriate changes with the family and explains the next observation or reassessment.
+
+## Can we reduce, pause or change an activity?
+Bring the child’s comfort, choice and response into review. The professional and family can discuss retaining a useful support, adapting or pausing an activity, changing a goal or arranging further assessment. The appropriate decision depends on the child.
+
+## Do the regulatory licences guarantee independence or school admission?
+No. MD-5 defines the software’s non-diagnostic intended use and the BIS record defines its documented scope. A score change or licence does not guarantee independence, school admission or a particular outcome. Actual participation and the child’s support needs guide review.
+
+## How can we arrange a conversation with Pinnacle?
+Call 9100 181 181, choose a Pinnacle centre or use the enrolment page. Tell the team one everyday priority and ask about a suitable professional, first visit, fees and review process. Your enquiry starts a conversation; the team confirms the visit arrangements.
+
+## Citation
+Bharath Healthcare Laboratories Private Limited. (2026-10-15). Reassess, Review and Repeat: child development progress review. Pinnacle Blooms Network. https://www.pinnacleblooms.org/reassess-review-repeat
+
+## Begin with Pinnacle
+Call 9100 181 181 (tel:+919100181181). Ask about a suitable professional, first visit, fees and review process.
+https://www.pinnacleblooms.org/centers
+https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india
+
+## Publisher
+Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited. Page/source review: 2026-10-15. Individual outcomes vary.

@@ -2,13 +2,19 @@ import fs from 'node:fs/promises';import path from 'node:path';import assert fro
 import {centreRegister} from '../src/data/centre-network-content.ts';
 import {CENTRE_DETAIL_ROUTES,serveSpeech} from '../deployment/speech-handler.mjs';
 const root=path.resolve(import.meta.dirname,'..'),rows=[];
+const discoveryPolicy=JSON.parse(await fs.readFile(path.join(root,'../tooling/sitemap-manager/discovery-policy.json'),'utf8'));
+const approvedIndexable=new Set(discoveryPolicy.indexable_centre_paths),explicitHolds=new Set(discoveryPolicy.held_centre_paths);
 function walk(n,fn){fn(n);for(const c of n.childNodes||[])walk(c,fn);}
 const attr=(n,k)=>n.attrs?.find(a=>a.name===k)?.value;
 for(const c of centreRegister){
  const pathname=new URL(c.profileUrl).pathname,html=await fs.readFile(path.join(root,'dist',pathname+'.html'),'utf8'),dom=parse(html),nodes=[];walk(dom,n=>nodes.push(n));
  assert.equal(nodes.filter(n=>n.tagName==='h1').length,1,c.id+' one primary heading');
  assert.equal(nodes.find(n=>n.tagName==='link'&&attr(n,'rel')==='canonical')?.attrs.find(a=>a.name==='href')?.value,c.profileUrl,c.id+' canonical');
- assert(nodes.some(n=>n.tagName==='meta'&&attr(n,'name')==='robots'&&attr(n,'content').startsWith('index, follow')),c.id+' production indexing');
+ const shouldIndex=approvedIndexable.has(pathname),robots=nodes.filter(n=>n.tagName==='meta'&&attr(n,'name')==='robots');
+ assert.equal(shouldIndex,c.pageStatus==='centre-enquiry',c.id+' explicit source publication decision');
+ assert.equal(explicitHolds.has(pathname),!shouldIndex,c.id+' status exclusion is explicit');
+ assert.equal(robots.length,1,c.id+' one robots directive');
+ assert(shouldIndex?attr(robots[0],'content').startsWith('index, follow'):/\bnoindex\b/.test(attr(robots[0],'content')),c.id+' production indexing matches source intent');
  const ids=nodes.map(n=>attr(n,'id')).filter(Boolean);assert.equal(new Set(ids).size,ids.length,c.id+' unique IDs');
  const anchors=nodes.filter(n=>n.tagName==='a'&&attr(n,'href')?.startsWith('#')).map(n=>attr(n,'href').slice(1));assert(anchors.every(id=>!id||ids.includes(id)),c.id+' all local anchors exist: '+anchors.filter(id=>!ids.includes(id)));
  const schema=JSON.parse(nodes.find(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').childNodes[0].value),graph=schema['@graph'];
@@ -46,5 +52,5 @@ for(const c of centreRegister){
  rows.push({id:c.id,url:c.profileUrl,assets:assets.size,localPhone:!!c.directTelephone,photos:c.images.length,status:c.pageStatus});
 }
 function recordPlaceholderGuard(html){return !html.includes('Pinnacle undefined')&&!html.includes('Pinnacle null');}
-assert.equal(rows.length,62);const sitemap=await fs.readFile(path.join(root,'dist/pinnacle-pages-data/speech-sitemap.xml'),'utf8');for(const c of centreRegister)assert.equal(sitemap.split('<loc>'+c.profileUrl+'</loc>').length-1,1,c.id+' one sitemap entry');
+assert.equal(rows.length,62);assert.equal(approvedIndexable.size,60);assert.equal(explicitHolds.size,2);const sitemap=await fs.readFile(path.join(root,'dist/pinnacle-pages-data/speech-sitemap.xml'),'utf8');for(const c of centreRegister)assert.equal(sitemap.split('<loc>'+c.profileUrl+'</loc>').length-1,approvedIndexable.has(new URL(c.profileUrl).pathname)?1:0,c.id+' sitemap follows explicit publication decision');
 await fs.mkdir(path.join(root,'deployment'),{recursive:true});await fs.writeFile(path.join(root,'deployment/centre-network-contract-20261007.json'),JSON.stringify({at:new Date().toISOString(),passed:rows.length,rows},null,2)+'\n');console.log(JSON.stringify({passed:rows.length,localPhoneAlternatives:rows.filter(r=>r.localPhone).length,canonicalRouteAssetSchemaAndAnchorChecks:true}));

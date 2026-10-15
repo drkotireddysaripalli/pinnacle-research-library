@@ -274,3 +274,7 @@ Official Pinnacle network collections: professional AbilityScore/RWE (`PL0lwT9W0
 ## Centre directory life-first illustration · 15 October 2026
 
 `src/assets/centres-life-path-20261015.png` was edited with the built-in image-generation tool in this conversation, using the earlier session-created family/pathway image and the official Pinnacle emblem as references. No separately billed API or API key was used. The tool does not expose a model-version identifier. The therapist coat/emblem correction preserves the family/home/peer story. It is a conceptual illustration; all directory location photographs remain sourced real-centre imagery. WebP derivatives preserve the complete 2:1 composition with descriptive alt text and a short illustration caption.
+
+## Reassess, Review and Repeat · 15 October 2026
+
+`src/assets/reassess-family-review-20261015.png` and `src/assets/reassess-social-20261015.png` are complete illustrated brand creatives generated through the current conversation built-in image tool with the official emblem reference. They depict a fictional family/professional review and supported home/school moments, not patient outcomes or a real centre. Prompts, references and use: `reviews/reassess-20261015/IMAGE-PROMPTS.md`. Native source assets are retained; Astro provides responsive WebP and the 1200×630 JPEG share derivative without redesigning the artwork.

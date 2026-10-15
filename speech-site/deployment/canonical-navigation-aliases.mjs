@@ -1,5 +1,6 @@
 // Exact aliases read back from the live site on 12 October. This changes
 // emitted navigation, not redirects, forms, labels, payments or route ownership.
+import {publicResourceHubTarget} from './public-resource-hubs.mjs';
 export const CANONICAL_NAV_ALIASES=Object.freeze({
  '/about':'/about-pinnacle-proven-improvement-rate',
  '/all-resources':'/autism-speech-aba-parent-family-resources',
@@ -7,6 +8,7 @@ export const CANONICAL_NAV_ALIASES=Object.freeze({
  '/everyday-therapy-program':'/everyday-therapy-home-study'
 });
 export function canonicalNavigationTarget(href){
+ const hub=publicResourceHubTarget(href);if(hub!==href)return hub;
  if(typeof href!=='string'||!(/^(?:https?:\/\/(?:www\.)?pinnacleblooms\.org(?:[/?#]|$)|\/(?!\/))/.test(href)))return href;
  let u;try{u=new URL(href.replace(/&(?:amp|#0*38|#x0*26);/gi,'&'),'https://www.pinnacleblooms.org');}catch{return href;}
  if(u.port||u.username||u.password)return href;

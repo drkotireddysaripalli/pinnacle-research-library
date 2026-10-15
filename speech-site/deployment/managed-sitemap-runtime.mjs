@@ -3,6 +3,12 @@ import {handleManagedSitemap,HOSTS} from '../../tooling/sitemap-manager/asset-ha
 export function withManagedSitemaps(original,config){
  return {...original,async fetch(request,env,ctx){
   const url=new URL(request.url);
+  if(url.hostname==='www.pinnacleblooms.org'&&url.pathname==='/centerssitemap'&&['GET','HEAD'].includes(request.method)&&!request.headers.has('authorization')&&!request.headers.has('range')){
+   const source=await env.ASSETS.fetch(new Request('https://assets.local/pinnacle-pages-data/centres-sitemap.xml',{method:request.method}));
+   if(source.status!==200)return new Response('Current centre sitemap unavailable',{status:503});
+   const h=new Headers(source.headers);h.set('Content-Type','application/xml; charset=utf-8');h.set('Cache-Control','public, max-age=300');h.set('X-Content-Type-Options','nosniff');
+   return new Response(request.method==='HEAD'?null:source.body,{status:200,headers:h});
+  }
   const key=config.indexnowKeys?.[url.hostname];
   if(HOSTS.has(url.hostname)&&key&&/^[A-Za-z0-9-]{8,128}$/.test(key)&&url.pathname==='/'+key+'.txt'&&!url.search){
    if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{Allow:'GET, HEAD'}});

@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-15T14:49:23.770Z",
+  "failedCI": 38753434023,
+  "source": "a972c2069359e6e3ed9915f12632cf2805253b53",
+  "finding": "link-in-text-block: inline citation URL relied on colour alone",
+  "correction": "Underline inline paragraph links in page-scoped CSS",
+  "affectedCheck": "Chrome390 whole-document Axe WCAG2A/AA and2.1AA",
+  "seriousOrCriticalAfter": 0,
+  "contentAndImagesChanged": false,
+  "broaderCIStillRequired": true
+}
