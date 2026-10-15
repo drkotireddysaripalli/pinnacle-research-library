@@ -6,9 +6,18 @@ import {normaliseAcquisition} from '../public/pinnacle-pages-scripts/enrolment-s
 import {validatePublicContact,toLegacyContact,toReceiptContact} from '../deployment/contact-handler.mjs';
 import {parseReceiptContact,contactPayloadDigest} from '../deployment/contact-receipt-contract.mjs';
 import {serveEnrolmentApi} from '../deployment/enrolment-handler.mjs';
+import {escapeContactMapRows} from '../deployment/contact-receipt.mjs';
 const values={name:'ISOLATED FIXTURE',title:'Mx',phone:'0000000000',email:'fixture@example.invalid',facilityId:CONTACT_FACILITIES[0],subject:'Therapy Services',message:'Offline fixture only.'};
 const payload=()=>makeContactPayload(values,'qa-contact-request');
 const request=body=>new Request('https://www.pinnacleblooms.org/api/enrolment',{method:'POST',headers:{origin:'https://www.pinnacleblooms.org','content-type':'application/json','idempotency-key':body.requestId},body:JSON.stringify(body)});
+test('contact map retains addresses and coordinates while escaping literal line breaks in row labels',()=>{
+ const source='myArray.push(["Branch\\\" name\r\nRoad\nCity",17.42,78.45]);\nconst other="unchanged";';
+ const repaired=escapeContactMapRows(source);
+ assert.equal(repaired,'myArray.push(["Branch\\\" name\\nRoad\\nCity",17.42,78.45]);\nconst other="unchanged";');
+ assert.equal(escapeContactMapRows(repaired),repaired);
+ assert.equal(escapeContactMapRows('myArray.push(["Already escaped\\naddress",-17.42,78.45]);'),'myArray.push(["Already escaped\\naddress",-17.42,78.45]);');
+ new Function('myArray',repaired)([]);
+});
 test('published contact options and exact legacy/private shapes agree across every topic, title and facility',()=>{
  assert.equal(CONTACT_FACILITIES.length,62);assert.equal(CONTACT_TITLES.length,8);assert.equal(CONTACT_TOPICS.length,9);
  for(const field of ['subject','title','facilityId'])for(const value of {subject:CONTACT_TOPICS,title:CONTACT_TITLES,facilityId:CONTACT_FACILITIES}[field]){

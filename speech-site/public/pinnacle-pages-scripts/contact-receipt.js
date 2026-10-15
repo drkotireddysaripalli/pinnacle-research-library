@@ -9,8 +9,8 @@ if(form&&!form.dataset.contactClientReady){
  const inputs=Object.fromEntries(Object.entries(fields).map(([key,id])=>[key,document.getElementById(id)]));
  let store,pending=false,finished=false,uncertain=false,frozen=null,attempt=null,storageReady=false;
  const lock='pbn-contact-request';
- const retry=document.createElement('button');retry.type='button';retry.textContent='Retry the same request';retry.hidden=true;status.after(retry);
- const another=document.createElement('button');another.type='button';another.textContent='Send a different message';another.hidden=true;retry.after(another);
+ const retry=document.createElement('button');retry.type='button';retry.dataset.contactSecondary='';retry.textContent='Retry the same request';retry.hidden=true;status.after(retry);
+ const another=document.createElement('button');another.type='button';another.dataset.contactSecondary='';another.textContent='Send a different message';another.hidden=true;retry.after(another);
  const values=()=>Object.fromEntries(Object.entries(inputs).map(([key,input])=>[key,input.value]));
  function busy(value){pending=value;form.setAttribute('aria-busy',String(value));for(const input of Object.values(inputs))input.disabled=value||finished||uncertain;button.disabled=value||finished||uncertain;retry.disabled=value;}
  function accepted(){finished=true;uncertain=false;form.reset();status.textContent='Thank you. Your message has been received by Pinnacle. The team will review it and contact you about the next step. An appointment is confirmed separately.';button.textContent='Message received';retry.hidden=true;another.hidden=false;busy(false);}
