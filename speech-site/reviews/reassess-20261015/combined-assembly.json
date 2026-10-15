@@ -1,0 +1,25 @@
+{
+  "at": "2026-10-15T15:16:24.160Z",
+  "source": "5e32968ed8c72a394e1157cd7e507b5d78a86dde",
+  "baselineVersion": "4d6f09b4-cbf2-4859-8790-b72450e7dc65",
+  "routes": 401,
+  "modules": 65,
+  "modifiedModules": [
+    "managed-sitemap-runtime.mjs",
+    "pinnacle-route-v12.mjs",
+    "shared-clearance-runtime.mjs",
+    "mirracles-library.mjs",
+    "speech-handler.mjs"
+  ],
+  "assets": 3961,
+  "pageAssetsReused": 12,
+  "sharedModulesReused": 4,
+  "actualSharedModuleByteChanges": [
+    "managed-sitemap-runtime.mjs",
+    "mirracles-library.mjs",
+    "shared-clearance-runtime.mjs"
+  ],
+  "disjointChangesVerified": true,
+  "candidateArtifactSHA256": "853fbe172363c67d062fc844c6593cdc18753eb92aa5daa9f2cb949ed16e77e8",
+  "assetManifestSHA256": "392633d8fd6b81f053d2bd4116563e46501bd8d1e6e6d5efe46ce0359aa2e2e6"
+}

@@ -1,0 +1,11 @@
+{
+  "startedAt": "2026-10-15T15:19:46.301Z",
+  "status": "stopped-at-exception",
+  "owner": "current website integration thread",
+  "steps": [],
+  "customerIntakes": 0,
+  "calls": 0,
+  "analyticsEvents": 0,
+  "error": "Public bytes/status/MIME mismatch; retain exact failed URLs, do not submit",
+  "finishedAt": "2026-10-15T15:34:56.323Z"
+}

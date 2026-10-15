@@ -1,0 +1,30 @@
+{
+  "status": "queued-cloud-not-published",
+  "dispatchId": "postrepair-20261015-5e32968",
+  "modelCalls": 0,
+  "updatedAt": "2026-10-15T15:54:17.786Z",
+  "source": "5e32968ed8c72a394e1157cd7e507b5d78a86dde",
+  "version": "86bd3530-b843-4407-a49d-0b467618eee0",
+  "privateBaselineSHA256": "83c56da8fb03d1d88e658af877603864031cb8ac203153aaa7e3e117b6f5868c",
+  "publicFiles": 228,
+  "allPriorJobsAndOutboxesPreserved": true,
+  "dispatchRequested": true,
+  "dispatchRequestedAt": "2026-10-15T15:53:43.050Z",
+  "enqueue": {
+    "status": "queued-cloud-not-published",
+    "dispatchId": "postrepair-20261015-5e32968",
+    "scheduledTime": "2026-10-15T15:53:43.056Z",
+    "repository": "drkotireddysaripalli/pinnacle-research-library",
+    "workflow": "public-sitemap-upkeep.yml",
+    "localPublication": false
+  },
+  "runId": 38764324835,
+  "run": {
+    "id": 38764324835,
+    "status": "in_progress",
+    "conclusion": null,
+    "source": "1f207f9628909197feabb8aadcc420fab4915e25",
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/38764324835",
+    "attempt": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-15T15:45:25.079Z",
+  "httpStatus": 200,
+  "dispatchId": "daily-20261015",
+  "runId": "38674597995",
+  "attempt": "1",
+  "status": "verified-cloud-source-and-distribution",
+  "startedAt": "2026-10-15T03:19:52.242Z",
+  "finishedAt": "2026-10-15T03:35:12.077Z",
+  "version": "c7c0e724-40e8-42be-ae1f-775e39c5eb18",
+  "sourcePhase": "verified_unchanged_publication",
+  "readOnlyRecoveries": 1,
+  "actualRun": {
+    "id": 38674597995,
+    "status": "completed",
+    "conclusion": "success",
+    "source": "82874a605168aa7c86df496a26449f0777f6608f"
+  }
+}

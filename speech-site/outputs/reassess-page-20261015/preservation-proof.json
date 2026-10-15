@@ -1,0 +1,135 @@
+{
+  "at": "2026-10-15T15:40:45.802Z",
+  "source": "5e32968ed8c72a394e1157cd7e507b5d78a86dde",
+  "version": "86bd3530-b843-4407-a49d-0b467618eee0",
+  "deployment": "dd3e0575-af9b-43c1-9ba8-5a92c133bf1e",
+  "routeCount": 402,
+  "oldRoutesPreserved": 401,
+  "addedRoutes": [
+    {
+      "id": "d76d6a8cb7ee4879842557c966486c36",
+      "pattern": "www.pinnacleblooms.org/sitemaps/miracles.xml",
+      "script": "pinnacle-verify-route"
+    }
+  ],
+  "modules": 65,
+  "changedManagedModules": [
+    "managed-sitemap-runtime.mjs",
+    "pinnacle-route-v12.mjs",
+    "shared-clearance-runtime.mjs",
+    "mirracles-library.mjs",
+    "speech-handler.mjs"
+  ],
+  "protectedSettingsAndVersions": true,
+  "retired": [
+    {
+      "url": "https://www.pinnacleblooms.org/site-map/publisher-guides/public-library-guide.html",
+      "status": 410
+    }
+  ],
+  "retainedRecovery": [
+    {
+      "url": "https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate",
+      "status": 200,
+      "sha256": "2b20513fa4ebb178d5c8739aaf79cc4e64dc147cf01dffd4bf20b819e882ebb9",
+      "robots": "index, follow, max-image-preview:large"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/physiotherapy",
+      "status": 200,
+      "sha256": "e6cdcc9e1c58d967750950bdf64c8cc7a1ee39c1eeea88b5d91e64f418eb322a",
+      "robots": "index, follow, max-image-preview:large"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/child-psychological-counseling",
+      "status": 200,
+      "sha256": "f08102e12e5e210fc987b5b5c9f67d276a829e58b1f380e3ea3236c95ea1ecd1",
+      "robots": "index, follow, max-image-preview:large"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/speech",
+      "status": 200,
+      "sha256": "0418cbdf8e17ec5415fae79658f1b58c7a20424a2ebbba0f3b0f42f5dee9db07",
+      "robots": "noindex, nofollow"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/special-education",
+      "status": 200,
+      "sha256": "6f05bb879d1e0594265870d42bbdbda4f3ca842d5147c22db4b7596bb669bb03",
+      "robots": "noindex, nofollow"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/psychological",
+      "status": 200,
+      "sha256": "f3ca4b072ed8a8c61f0152168bd2166015f044952fa86de4cdbfb5e4de65cbff",
+      "robots": "noindex, nofollow"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/personality",
+      "status": 200,
+      "sha256": "72c2f354551804c862077768b9000e21e9689341458de9e4f4d7b60cdbf2a6f9",
+      "robots": "noindex, nofollow"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/occupational",
+      "status": 200,
+      "sha256": "cf3981fc97baed38c613875ce6d33519e42eebb2df7290880a2e7b76caf5d3a3",
+      "robots": "noindex, nofollow"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/lifestyle",
+      "status": 200,
+      "sha256": "a5524a6e9e9f5fc4d5e4bbf09249ed62638d7045bb31837b29dffe1821eb9fc9",
+      "robots": "noindex, nofollow"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/autism",
+      "status": 200,
+      "sha256": "ec355b92262e3237bb4ee29ab53e7d71ed880bc69835b28503a00b8bbb2d4ba1",
+      "robots": "noindex, nofollow"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/assesments/adhd",
+      "status": 200,
+      "sha256": "32020c8de44d18e1edc5b5e12ca9c2cb33b2be5e1521ffbc1df666e4ed0d6ab6",
+      "robots": "noindex, nofollow"
+    }
+  ],
+  "protectedChecks": [
+    {
+      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "sha256": "e2eb524140dfeb84c258d06d5953ed6cda85de01b26ee4bdccf6541fb8604231"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "sha256": "aeaacad8069e48c84f5c7c9f874ede82f1617cd56b32a8f8fc5036c7e94a977b"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/shop",
+      "status": 200,
+      "sha256": "eaec90f4458055dc281cb3bc5980dfe9262069fe7818e6e4c2d2ba595e472b7b"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "status": 200,
+      "sha256": "2b5cda87bb6e170b006e52fb2a79ad6ff5da82b2b67fbffdedb12e951450a60a"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/api/enrolment",
+      "status": 405,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "status": 200,
+      "sha256": "832667a3453a97e7001e6c4e69d592f3f66720d002ae578d748d34164514ddd7"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism.json",
+      "status": 200,
+      "sha256": "9964b875900a6ae2c8b6d0466e0ead5c50ea21174c32f17cde02493b7db8641f"
+    }
+  ]
+}
