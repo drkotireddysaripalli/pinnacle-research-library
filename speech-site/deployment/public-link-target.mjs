@@ -2,6 +2,7 @@ import {currentStaffPaths} from './legacy-social-metadata/staff-records.mjs';
 import {recoveryPath,invalidSunshineLinks} from './sunshine-recovery-routes.mjs';
 import {CENTRE_CANONICAL_PATHS} from './centre-canonical-paths.mjs';
 import {CANONICAL_NAV_ALIASES} from './canonical-navigation-aliases.mjs';
+import {publicResourceHubTarget} from './public-resource-hubs.mjs';
 // Existing compatibility routes, publicly reconciled on 7 October. Link to
 // their actual final page while keeping source parameters and fragments.
 export const PUBLIC_PAGE_ALIASES={
@@ -22,6 +23,7 @@ export const PUBLIC_PAGE_ALIASES={
 // Only known public aliases. Keep tracking queries/fragments and case-sensitive
 // documents, downloads, authentication and arbitrary external destinations intact.
 export function publicLinkTarget(href) {
+ const hub=publicResourceHubTarget(href);if(hub!==href)return hub;
  if(typeof href!=='string'||!(/^(?:https?:\/\/(?:www\.)?pinnacleblooms\.org(?:[/?#]|$)|\/(?!\/))/.test(href)))return href;
  // HTMLRewriter exposes character references in legacy attribute values.
  // Decode only ampersands for URL matching; untouched links retain their source.
