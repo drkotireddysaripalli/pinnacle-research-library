@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "at": "2026-10-15T14:29:06.681Z",
+  "checks": [
+    "Title/canonical/indexability",
+    "visible FAQ/schema/source parity",
+    "7 stages and 4 review steps",
+    "fictional example and open checkpoint agree across formats",
+    "all page asset files present",
+    "1200x630 social card",
+    "5 responsive widths",
+    "Chrome and WebKit render",
+    "unique anchors and keyboard FAQ",
+    "current common header/footer/Verify and contact"
+  ],
+  "assets": 12,
+  "results": [
+    {
+      "engine": "Chrome",
+      "width": 320,
+      "overflow": false,
+      "h1": 1,
+      "ids": 39,
+      "brokenAnchors": [],
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "stages": 7,
+      "faq": 10,
+      "image": {
+        "width": 320,
+        "height": 213
+      },
+      "bodyColor": "rgb(21, 36, 75)",
+      "sourceLinks": 5,
+      "errors": [],
+      "keyboardFaq": true
+    },
+    {
+      "engine": "Chrome",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "ids": 39,
+      "brokenAnchors": [],
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "stages": 7,
+      "faq": 10,
+      "image": {
+        "width": 389,
+        "height": 259
+      },
+      "bodyColor": "rgb(21, 36, 75)",
+      "sourceLinks": 5,
+      "errors": [],
+      "keyboardFaq": true
+    },
+    {
+      "engine": "Chrome",
+      "width": 768,
+      "overflow": false,
+      "h1": 1,
+      "ids": 39,
+      "brokenAnchors": [],
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "stages": 7,
+      "faq": 10,
+      "image": {
+        "width": 649,
+        "height": 433
+      },
+      "bodyColor": "rgb(21, 36, 75)",
+      "sourceLinks": 5,
+      "errors": [],
+      "keyboardFaq": true
+    },
+    {
+      "engine": "Chrome",
+      "width": 1024,
+      "overflow": false,
+      "h1": 1,
+      "ids": 39,
+      "brokenAnchors": [],
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "stages": 7,
+      "faq": 10,
+      "image": {
+        "width": 471,
+        "height": 314
+      },
+      "bodyColor": "rgb(21, 36, 75)",
+      "sourceLinks": 5,
+      "errors": [],
+      "keyboardFaq": true
+    },
+    {
+      "engine": "Chrome",
+      "width": 1440,
+      "overflow": false,
+      "h1": 1,
+      "ids": 39,
+      "brokenAnchors": [],
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "stages": 7,
+      "faq": 10,
+      "image": {
+        "width": 662,
+        "height": 441
+      },
+      "bodyColor": "rgb(21, 36, 75)",
+      "sourceLinks": 5,
+      "errors": [],
+      "keyboardFaq": true
+    },
+    {
+      "engine": "WebKit",
+      "width": 390,
+      "overflow": false,
+      "h1": 1,
+      "ids": 39,
+      "brokenAnchors": [],
+      "header": true,
+      "footer": true,
+      "verify": true,
+      "call": true,
+      "stages": 7,
+      "faq": 10,
+      "image": {
+        "width": 389,
+        "height": 259
+      },
+      "bodyColor": "rgb(21, 36, 75)",
+      "sourceLinks": 5,
+      "errors": [],
+      "keyboardFaq": true
+    }
+  ]
+}

@@ -144,7 +144,7 @@ export async function serveSpeech(request,env,inventory){
  if(!Object.hasOwn(inventory,key)&&!readinessHash(key)&&!abilityscoreHash(key)&&!everydayHash(key)&&!occupationalHash(key)&&!pdkHash(key)&&!prognoseHash(key)&&!therapeuticaiHash(key)&&!abaHash(key)&&!fusionHash(key)&&!specialEducationHash(key)&&!aboutHash(key)&&!autismHash(key)&&!enrolmentHash(key)&&!suchitraHash(key))return null;
  // These common files belong to the complete live release, rather than a
  // therapy page's historical embedded snapshot of the same mutable file.
- const commonAsset=key==='/pinnacle-pages-data/speech-sitemap.xml'||key==='/pinnacle-pages-scripts/speech-measurement.js';
+ const commonAsset=key==='/pinnacle-pages-data/speech-sitemap.xml'||key==='/pinnacle-pages-scripts/speech-measurement.js'||key==='/pinnacle-pages-data/pinnacleai-sitemap.xml'||key==='/pinnacle-pages-data/pinnacleai-llms.txt'||key==='/pinnacle-pages-html/reassess-review-repeat.html'||/^\/pinnacle-pages-data\/reassess-review-repeat-(?:sources\.(?:json|txt)|reading\.md)$/.test(key);
  const isHtml=key.endsWith('.html');
  const isMachineDocument=key.endsWith('.md');
  if(!env.ASSETS)return new Response('Temporarily unavailable',{status:503,headers:{'cache-control':'no-store'}});
