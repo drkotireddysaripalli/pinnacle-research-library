@@ -1,0 +1,220 @@
+{
+  "assessments": {
+    "actual_published_reader_relationships_resolved": 0,
+    "completion_condition": "Each candidate needs source-backed current reader selection and an explicit access/publishing class for its real approved parent. Keep registration-gated eligibility separate from public source policy. Include only owner-approved eligible relationships through the existing pipeline; preserve explicit held/excluded reasons for everything else. Storage delivery, active definition membership and matching filenames do not prove actual public reader use.",
+    "definition_export_scope": "assessment-question-definition-metadata-20261015.json contains 988 active eipassessment definition identities/assessment IDs/cohort/ordinal/status/dates; no selected image field, reader route, publication/access classification or rendered-use version.",
+    "disposition": "HOLD_MISSING_PUBLISHED_READER_MEDIA_SELECTION_AND_ACCESS_MAPPING",
+    "exact_candidate_prefixes": [
+      "https://images.pinnacleblooms.org/Ability/Questions/<question_id>.jpg",
+      "https://images.pinnacleblooms.org/Ability/Examples/<question_id>.jpg"
+    ],
+    "existing_candidate_contract": "work/url-reconciliation/assessment-definition-image-join-20261015.json#/candidates[*]: current_reader_use=publisher_confirmation_required; decision=HOLD_FOR_RENDERER_VISIBILITY_QUALIFICATION",
+    "existing_definition_join": {
+      "assessment_ids_without_qualified_parent": [
+        1426,
+        1849
+      ],
+      "current_reader_visibility": "owner verification pending; no sitemap promotion inferred",
+      "held_objects": 65,
+      "held_reasons": {
+        "assessment_not_in_qualified_abs_snapshot": 61,
+        "noncanonical_filename_or_nonimage_object": 4
+      },
+      "mapped_parents": 47,
+      "mapped_relationship_candidates": 1899,
+      "mapped_roles": {
+        "example_image": 948,
+        "question_image": 951
+      },
+      "object_media_kinds": [
+        {
+          "count": 978,
+          "family": "Examples",
+          "kind": "image"
+        },
+        {
+          "count": 1,
+          "family": "Examples",
+          "kind": "other"
+        },
+        {
+          "count": 984,
+          "family": "Questions",
+          "kind": "image"
+        },
+        {
+          "count": 1,
+          "family": "Questions",
+          "kind": "other"
+        }
+      ],
+      "patients_or_responses_read": false,
+      "prefix_raw_objects": {
+        "Examples": 979,
+        "Questions": 985
+      },
+      "qualified_snapshot_abs_parents": 47,
+      "qualified_snapshot_assessment_ids": 47,
+      "source_active_question_definitions": 988,
+      "source_assessment_ids": 49
+    },
+    "maintained_reader_source_search": "No Questions/, Examples/, eipassessment, questionImage or exampleImage selection found in the scoped maintained src/lib, ask-runtime or cached assessment public JavaScript. This is absence within the inspected source, not a claim that no reader exists elsewhere.",
+    "owner": "Windows / legacy assessment published-reader source owner",
+    "saved_public_reader_evidence": {
+      "discovery": "outputs/sitemap-assessment-reader-discovery-20261015.json contains an anonymous /a/articulation-assessment and /abs/pinnacle-i-abas-3-adaptive-behavior-assessment-system%E2%80%933 HTML capture; neither contains Questions/Examples image references. The /abs hero is Ability/Assessments/1417.jpg, which establishes assessment-page media, not question/example use.",
+      "lead_page": "outputs/sitemap-assessment-lead-reader-20261015.json records zero question_example_images on /assessmentlead/articulation-assessment and a POST form. No form was submitted. Neither the form nor sign-in proves a private or noindex classification.",
+      "scripts": "outputs/sitemap-assessment-public-script-source-20261015.json lists two public static bundles with empty reference_hits."
+    },
+    "smallest_missing_source_export": {
+      "exclude": "No respondent answers, sessions, patient data, private clinical uploads or new standalone question URLs.",
+      "required_output_contract_not_claimed_database_columns": [
+        "question_id",
+        "assessment_id",
+        "cohort_type",
+        "accepted_public_parent_url",
+        "role_question_or_example",
+        "exact_selected_image_url_or_object_key",
+        "reader_route_template_or_public_API_projection",
+        "actual_rendered_use",
+        "published_current_definition_version",
+        "access_class_anonymous_registration_staff_or_unknown",
+        "source_version_or_updated_at",
+        "renderer_source_reference_and_hash"
+      ],
+      "scope": "The already joined 1,899 question/example candidates on the 47 accepted /abs parents; reuse the existing active definition IDs and object references.",
+      "source_requirement": "Provide the maintained published-reader template/controller/API projection that actually selects those image fields, with its public-parent and access qualification. A metadata-only export of that selected relation is sufficient; more filename joins are not."
+    }
+  },
+  "database_queries": 0,
+  "guru": {
+    "api_projection": {
+      "original_gallery_array_retained": false,
+      "path": "deployment/guru-recovery-20261009/capture-public.py:16-17,31-37",
+      "selected_image_fields": [
+        "Current.ImageUrl",
+        "Current.TotalImages"
+      ],
+      "source": "https://psapi.pinnacleblooms.org/api/getgurudatabyid?id=<exact public article ID>",
+      "source_endpoint_invoked_in_this_review": false
+    },
+    "authoritative_maintained_renderer": "deployment/guru-recovery.mjs:25-34 renders records[id].images[].src in .guru-gallery and record.body in .guru-article",
+    "broken_target_list": "work/url-reconciliation/cached-media-dispositions-20261015/data/guru-thumbnail-dispositions.jsonl",
+    "capture_limitation": {
+      "missing_local_recorded_capture_paths": [
+        "work/sitemap-manager-repo/speech-site/ask-private/guru-recovery-20261009/public-capture.json",
+        "work/sitemap-manager-repo/speech-site/ask-private/guru-recovery-20261009/media-capture.json"
+      ],
+      "path": "deployment/guru-recovery-20261009/capture-media.py:19-22",
+      "selection": "Only img[src] on images.pinnacleblooms.org matching the article ID is retained. Original/lightbox anchor hrefs, data-original fields and gallery arrays are not projected. The suffix regex allows original-looking names, but every saved selected URL is a thumbnail; do not derive another URL from the regex."
+    },
+    "completion_condition": "For each broken article, provide an exact publisher-backed original relation and the current renderer selection (or a documented intentional no-image disposition). A repaired URL or alias must be explicit, never inferred by filename/case/extension, and must pass the existing owner delivery and publication pipeline. No image becomes publishable merely because a proposed original exists.",
+    "disposition": "HOLD_MISSING_AUTHORITATIVE_ORIGINAL_GALLERY_MAPPING",
+    "existing_mapping": {
+      "all_gallery_urls_are_THUMB_jpeg": true,
+      "body_media_entries": 0,
+      "gallery_entries": 149,
+      "gallery_source_provenance_records": 149,
+      "records": 491
+    },
+    "known_broken_thumbnail_urls": 147,
+    "maintained_data_path": "deployment/guru-recovery-20261009/data/articles.json#/records/<public_article_id>",
+    "owner": "Windows / legacy Guru publisher and gallery-source owner",
+    "provable_original_alias_repairs_found": 0,
+    "reference_metadata": {
+      "declared_ImageUrl_nonnull_rows": 0,
+      "meaning": "A declared count is not an original-image address or gallery relation.",
+      "path": "work/url-reconciliation/guru-public-media-reference-metadata-20261015.json#/rows",
+      "public_article_ids": 156
+    },
+    "smallest_missing_source_export": {
+      "exclude": "No article body, author/centre/patient identifiers, responses or private uploads.",
+      "required_output_contract_not_claimed_database_columns": [
+        "public_article_id",
+        "accepted_canonical_parent_url",
+        "gallery_item_id_or_sequence",
+        "exact_original_image_url_or_object_key",
+        "exact_thumbnail_url_or_object_key",
+        "publisher_selected_rendered_image_field",
+        "published_or_active_state",
+        "public_access_class",
+        "source_version_or_updated_at",
+        "publisher_source_file_or_query_hash"
+      ],
+      "scope": "Only the already identified 147 public article IDs with broken thumbnail URLs; metadata only.",
+      "source_requirement": "Use the original gallery publisher/lightbox/asset association, or its maintained source export. No authoritative table or additional endpoint for that relation is present in these artifacts. ImageUrl/TotalImages alone cannot close it."
+    }
+  },
+  "network_requests": 0,
+  "next_action": "Hand these two exact metadata/source dependencies to the existing Windows publisher owners. Do not recrawl, probe endpoints, rescan R2 or query clinical data to substitute for missing publisher relations.",
+  "publication_actions": 0,
+  "scope": "Existing local source and saved public metadata only; no new requests, tests, database queries, media bodies, patient responses or clinical uploads.",
+  "source_files": [
+    {
+      "bytes": 1251099,
+      "path": "work/sitemap-manager-repo/speech-site/deployment/guru-recovery-20261009/data/articles.json",
+      "sha256": "9a802f33235da5d1632f67bfeadac48df4042d2405c9bd8418fc8873015d13a7"
+    },
+    {
+      "bytes": 2851,
+      "path": "work/sitemap-manager-repo/speech-site/deployment/guru-recovery-20261009/capture-public.py",
+      "sha256": "b2d4ba9fa284d4a0af3cd65fcc33cd129df0a13a25e3fdd7a246c4a178d66e14"
+    },
+    {
+      "bytes": 2636,
+      "path": "work/sitemap-manager-repo/speech-site/deployment/guru-recovery-20261009/capture-media.py",
+      "sha256": "abd65bae431efa694d807dd08ae591d3a6c1ae1a07d77075e321e4f374effc0c"
+    },
+    {
+      "bytes": 7880,
+      "path": "work/sitemap-manager-repo/speech-site/deployment/guru-recovery-20261009/build-data.py",
+      "sha256": "28d684e64c1134c1bf87475816196b19c704a9c83161fdc4178ef94ce7871bef"
+    },
+    {
+      "bytes": 5423,
+      "path": "work/sitemap-manager-repo/speech-site/deployment/guru-recovery-20261009/README.md",
+      "sha256": "892101203d48f9b27e103721666711997e60b2840aad6b3fec09ed97b1829cff"
+    },
+    {
+      "bytes": 12729,
+      "path": "work/sitemap-manager-repo/speech-site/deployment/guru-recovery.mjs",
+      "sha256": "9fb2f4feb5a3a0148c494fb8f459aa16044bc9f98882dfe234a72b2647c7ade1"
+    },
+    {
+      "bytes": 29315,
+      "path": "work/url-reconciliation/guru-public-media-reference-metadata-20261015.json",
+      "sha256": "615a284b5dac4e450d73f64e9f21f41a711e0fe687fbb68f2acd10e9c2a33188"
+    },
+    {
+      "bytes": 204719,
+      "path": "work/url-reconciliation/cached-media-dispositions-20261015/data/guru-thumbnail-dispositions.jsonl",
+      "sha256": "6cc866c63eb5a319d3c5cfa7b75fcd66bb1419e35a48f5446d8aa121092e7ad4"
+    },
+    {
+      "bytes": 218046,
+      "path": "work/url-reconciliation/assessment-question-definition-metadata-20261015.json",
+      "sha256": "e02ad620ea897e139ecde3a51f4918109540e334e324f56719bbd8534b353932"
+    },
+    {
+      "bytes": 2428456,
+      "path": "work/url-reconciliation/assessment-definition-image-join-20261015.json",
+      "sha256": "39c3cb095ffe2275fcd70639bd6f37815b93681a90caed23753ff6434c1d64ba"
+    },
+    {
+      "bytes": 50965,
+      "path": "outputs/sitemap-assessment-reader-discovery-20261015.json",
+      "sha256": "9fb3a8777051b858ffa4f437fbfd79989f5e42ee393cdd71bdcc56feba635cc0"
+    },
+    {
+      "bytes": 1193,
+      "path": "outputs/sitemap-assessment-public-script-source-20261015.json",
+      "sha256": "b0c5bb25f3efd8dfd3c260fe82a9e2cd836088eb79939ace0a34ec387a3a3a4c"
+    },
+    {
+      "bytes": 1042,
+      "path": "outputs/sitemap-assessment-lead-reader-20261015.json",
+      "sha256": "6b8e95ce9d9ec6ba9cb9d6abba41a3ec7d0b9a88242af8ad593f65b3a590e074"
+    }
+  ],
+  "status": "bounded_local_source_review_complete_two_source_gaps_unresolved",
+  "tests_run": 0
+}
