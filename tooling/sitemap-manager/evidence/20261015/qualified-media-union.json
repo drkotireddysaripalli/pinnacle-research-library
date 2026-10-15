@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-15T15:58:21.713791+00:00",
+  "accepted_release_id": "dd490ce231ea2715924d5d99bf20674a350ec766ebb51035646ce58b7c11ed7e",
+  "accepted_image_references": 66537,
+  "accepted_unique_relationships": 66537,
+  "bootstrap_relationships": 1067,
+  "bootstrap_unique_relationships": 1067,
+  "already_present": 0,
+  "additional_exact_relationships": 1067,
+  "expected_unique_relationship_union_if_all_accepted": 67604,
+  "does_not_imply_new_distinct_physical_assets": true
+}

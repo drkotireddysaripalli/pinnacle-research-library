@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-13T13:09:11.821273+00:00",
+  "updated_at": "2026-10-15T16:13:39.799619+00:00",
   "accountable_owner": "This existing Pinnacle sitemap chat",
   "objective": "Deliver a repeatable, source-backed sitemap ecosystem for Pinnacle pages, images, videos and approved public companions, with safe publication, supported engine discovery and maintainable verification.",
   "completion_boundary": "Prepared files, local tests, native storage, production serving, engine processing and care outcomes are separately evidenced. Whole-estate completeness requires publisher and asset inventories.",
@@ -54,7 +54,7 @@
       "depends_on": [
         "SM02"
       ],
-      "next_action": "Both protected R2 packages received and every internal file hash verified. Complete current publisher-version/curation and embedded-media reconciliation using the 40,611 exact candidate relationships; retain unassociated and withheld objects with explicit dispositions.",
+      "next_action": "Import 1,067 qualified additional relationships through the existing Windows publisher; wire both source helpers into daily upkeep and prove live output plus withdrawals/holds. Resolve 147 missing Guru originals and actual assessment reader visibility via the maintained owner sources. Preserve explicit unassociated video holds until actual public use is sourced.",
       "evidence": [
         "outputs/sitemap-coverage-and-field-contract-20261013.json",
         "outputs/sitemap-public-cms-media-receipt-20261013.json",
@@ -77,6 +77,198 @@
         "pending_checkpoints": [
           "Whole public publisher coverage, current versions, curation and unmatched dispositions accepted"
         ]
+      },
+      "media_quality_follow_up": {
+        "priority": "P2 after confirmed sitemap URL repairs",
+        "next_action": "Maintain approved public image/video lineage and parent-page associations; expose unmatched public candidates by publisher family for approval. Reconcile current media availability, page context/alt text, thumbnails and source-supported video fields. Unknown rights, duration, clinical permissions or outcomes remain explicit, not invented sitemap attributes.",
+        "baseline_counts": {
+          "distinct_image_urls": 66405,
+          "image_references": 66537,
+          "video_entries": 19289
+        },
+        "evidence": [
+          "outputs/sitemap-media-field-audit-20261014.json",
+          "outputs/sitemap-media-parent-metadata-audit-20261014.json"
+        ]
+      },
+      "assessment_coverage_gap": {
+        "status": "investigating authoritative public question/example mapping",
+        "current_saved_feed": {
+          "abs_image_references": 47,
+          "abs_parents_without_image_references": 1,
+          "a_eligible_parents_without_image_references": 28
+        },
+        "founder_requirement": "Include the existing public assessment question and example images, reportedly1000+, where actually associated with eligible public assessment pages.",
+        "next_action": "Read-only source audit traces public questionnaire definitions/API mappings; Windows owner will export the identified trusted source without patient responses or a duplicate R2 scan.",
+        "completion": "Every public question/example asset is mapped to its real eligible parent or has an evidenced non-public/non-indexable/unassociated disposition; only qualifying relationships enter image XML.",
+        "located_r2_inventory_counts": {
+          "Ability/Assessments": 49,
+          "Ability/Examples": 979,
+          "Ability/Questions": 985,
+          "Ability/Sections": 118,
+          "Ability/Skills": 272
+        },
+        "located_question_example_objects": 1964,
+        "evidence": "outputs/sitemap-assessment-r2-family-gap-20261015.json",
+        "definition_source_found": {
+          "database": "kotii/pinnacleactive/main",
+          "table": "eipassessment",
+          "scope": "Reference-definition IDs,assessment IDs,ordinal,status and dates only; no patient or response data",
+          "active_definitions": 988,
+          "active_assessment_ids": 49,
+          "mapped_candidates": 1899,
+          "mapped_public_parents": 47,
+          "question_image_candidates": 951,
+          "example_image_candidates": 948,
+          "held_objects": 65,
+          "unqualified_assessment_ids": [
+            1426,
+            1849
+          ],
+          "qualification_pending": "Actual reader use and publication/access class; a database relationship is not yet emitted as public sitemap use.",
+          "evidence": "outputs/sitemap-assessment-definition-image-join-20261015.json"
+        },
+        "located_physical_question_example_images": 1962,
+        "raw_prefix_nonimages": 2
+      },
+      "knowledge_source_export": {
+        "status": "Source export tested and checked in; owner import and unattended integration pending",
+        "commit": "c0c96038b94e6ef782b200ca02473dfad61c28b2",
+        "source_backed_parent_image_relationships": 551,
+        "faq": 392,
+        "sunshine_recovered": 10,
+        "guru": 149,
+        "approved_in_scope_parents": 7527,
+        "frozen_baseline_pages": 71047,
+        "legacy_sunshine_metadata_only_candidates": 1018,
+        "approved_parents_unmatched_in_source": 18,
+        "original_owner_guru_parents": 8,
+        "portable_contracts_passed": 6,
+        "independent_reconciliation_checks_passed": 43,
+        "evidence": [
+          "outputs/sitemap-knowledge-helper-handoff-20261015.json",
+          "outputs/sitemap-knowledge-helper-remote-readback-20261015.json",
+          "work/url-reconciliation/knowledge-media-export-20261015/validation-final.json"
+        ],
+        "delivery": {
+          "checked_at": "2026-10-15T14:56:38.271001+00:00",
+          "method": "HEAD only;551 exact source-backed URLs",
+          "direct200_images": 404,
+          "faq": 392,
+          "sunshine": 10,
+          "guru": 2,
+          "guru404s": 147,
+          "status": "147 failed Guru image references held; exact R2/source alias or original recovery investigation underway",
+          "evidence": "outputs/sitemap-knowledge-image-delivery-20261015.json"
+        },
+        "missing_originals_dependency": {
+          "owner": "Existing Windows publisher/source owner",
+          "affected_guru_references": 147,
+          "native_reference_check": "Declared public guru rows have ImageUrl NULL but TotalImages >=1; no gallery/original-key mapping in supplied metadata. No exact/case-insensitive ID variant among66,899 exported Assets/PUBLISHIMAGE keys.",
+          "next_action": "Locate publisher-approved original/gallery keys for the exact IDs or restore the declared thumbnail objects through existing publication ownership. Reconcile live missing thumbnails and malformed localhost blob references; no guessed image substitution.",
+          "evidence": [
+            "work/url-reconciliation/guru-public-media-reference-metadata-20261015.json",
+            "outputs/sitemap-knowledge-gap-parent-live-source-20261015.json",
+            "outputs/sitemap-knowledge-image-delivery-20261015.json"
+          ],
+          "trigger": "Existing publisher original/gallery source readback or exact object restoration",
+          "deadline": "After the current sitemap repair cutover; before claiming complete knowledge-media coverage"
+        }
+      },
+      "catalogue_image_source_qualification": {
+        "status": "663 current catalogue references qualified; pipeline import and automation integration pending",
+        "parent": "https://materials.pinnacleblooms.org/",
+        "new_exact_image_references": 663,
+        "existing_exact_image_references": 27,
+        "union": 690,
+        "related_navigation_references_not_primary_omissions": 1509,
+        "failed_delivery_references": 32,
+        "failed_unique_urls": 10,
+        "current_pages_checked": 149,
+        "page_checks": "All direct200/indexable; catalogue has exact explicit canonical",
+        "public_reference_authorization": "Existing supplied permit; no new rights approval round",
+        "remaining_gates": "Existing owner pipeline import, source automation, public readback",
+        "evidence": [
+          "work/url-reconciliation/cached-media-dispositions-20261015/current-render-qualification/README.md",
+          "work/url-reconciliation/cached-media-dispositions-20261015/current-render-qualification/qualified-final/catalogue-use-qualified-candidates.jsonl"
+        ]
+      },
+      "qualified_media_handoff": {
+        "checked_at": "2026-10-15T15:55:30.120822+00:00",
+        "commit": "388e871c7c42747798a13337d3683fcaf0b857b1",
+        "branch": "codex/sitemap-knowledge-media-source-20261015",
+        "source_files": [
+          {
+            "path": "catalogue_source_adapter.py",
+            "sha256": "2ad76dff48e1691cebb63bb023a3722b984226a4bcf53c85558dfcfb9a3155a1",
+            "bytes": 20290,
+            "exact_match": true
+          },
+          {
+            "path": "test_catalogue_source_adapter.py",
+            "sha256": "1762387d8a35acf5ec5287786aff4138550f08dfe0f980702110ae9d7f9116fe",
+            "bytes": 11642,
+            "exact_match": true
+          },
+          {
+            "path": "README.md",
+            "sha256": "0d424c477b1c30c2f21a4d93fcb127e0d41c55b09d33ebd49d1fe5abff095a89",
+            "bytes": 8090,
+            "exact_match": true
+          },
+          {
+            "path": "fixtures/catalogue.html",
+            "sha256": "ff408906a9714ec2e023593c8e9eb373f12cc0db595116c253ac5b9892803032",
+            "bytes": 930,
+            "exact_match": true
+          },
+          {
+            "path": "fixtures/related-card.html",
+            "sha256": "7b16fffb43690074f7bd9771700ab7090aa5d9a408b2b7f460ceeb1d16c7b096",
+            "bytes": 260,
+            "exact_match": true
+          }
+        ],
+        "fixture_tests": 15,
+        "cached_replay_checks": 9,
+        "knowledge_relationships": 404,
+        "catalogue_relationships": 663,
+        "total_qualified_relationships": 1067,
+        "catalogue_approved_union": 690,
+        "catalogue_source_withdrawals": 0,
+        "bootstrap_path": "tooling/sitemap-manager/knowledge-media/bootstrap/qualified-media-bootstrap-20261015.zip",
+        "bootstrap_blob": "ffcdd75b6a21be7975f58bfc66b4a74632ee5a5e",
+        "bootstrap_sha256": "6edcdc340b920cea654598cbb669c9f4d769cc4107be43b489cf382cbf0f2d1d",
+        "status": "source_checked_in_and_sent_to_existing_owner; not_yet_published",
+        "integration_owner_thread": "01a0ef6b-507a-7630-828f-7ac81852a39c",
+        "accepted_release_union_proof": "outputs/sitemap-qualified-media-accepted-union-20261015.json",
+        "already_present_relationships": 0,
+        "expected_image_reference_union_if_all_accepted": 67604
+      },
+      "video_source_accounting": {
+        "evidence": "work/url-reconciliation/r2-unassociated-video-dispositions-20261015.json",
+        "dated_public_prefix_video_objects": 473,
+        "selected_r2_video_objects": 126,
+        "held_unassociated_video_objects": 347,
+        "held_prefix_counts": {
+          "Assets/CREATIVES": 310,
+          "Assets/Materials": 27,
+          "Assets/VIDEO": 10
+        },
+        "held_with_cached_dom_or_videoobject_url_candidates": 0,
+        "whole_private_operational_estate_not_promoted": true,
+        "next_action": "Existing Windows publisher owner must identify actual public parent/render source and required video metadata before adding these objects; no association or date fabricated."
+      },
+      "remaining_source_contracts": {
+        "disposition_file": "work/url-reconciliation/published-media-source-gap-dispositions-20261015.json",
+        "guru_missing_originals": 147,
+        "assessment_candidate_relationships": 1899,
+        "assessment_qualified_parents": 47,
+        "original_aliases_proven": 0,
+        "assessment_actual_reader_relationships_proven": 0,
+        "owner": "Existing Windows publisher owner",
+        "source_task_status": "Source contracts sent to owner; no approval or fresh filename join needed",
+        "scope": "Exact source metadata and publication/use evidence; excludes respondent/clinical/customer data"
       }
     },
     {
@@ -193,33 +385,36 @@
     {
       "id": "SM08",
       "task": "Validate image and video eligibility",
-      "status": "in_progress",
+      "status": "verified",
       "validation": "Every emitted asset is linked to an eligible parent and supported public use/source; stable crawlable rendition, required video metadata and applicable rights/access restrictions. Candidate OG images stay separate; real-media descriptions require inspection.",
       "owner": "Sitemap + asset/source owners",
       "depends_on": [
         "SM03",
         "SM05"
       ],
-      "next_action": "40,170 current public Ask answer parents have exact R2 PNG candidates; 441 direct publisher/object joins verified. Apply current publisher versions, curation/default overrides and legitimate use/rights evidence, then build and verify the expanded files. Keep 40,170 SVG variants, 65,807 hash-card objects and unbound resource/video objects out of automatic promotion.",
+      "next_action": "Expanded qualified media is published and independently verified. Later publisher changes remain under SM16; unknown/unassociated storage objects remain excluded with recorded dispositions.",
       "evidence": [
         "work/sitemap-media-expansion/media-expansion-receipt.json",
         "outputs/sitemap-live-owner-delivery-20261013.json",
         "outputs/sitemap-publisher-media-import-20261013.json",
-        "outputs/sitemap-r2-reconciliation-20261013.json"
+        "outputs/sitemap-r2-reconciliation-20261013.json",
+        "outputs/sitemap-public-media-profile-application-20261013.json",
+        "outputs/sitemap-expanded-media-validation-20261013.json",
+        "outputs/sitemap-expanded-media-xsd-20261013.json",
+        "outputs/sitemap-expanded-media-independent-live-20261013.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
-        "complete_percent": 50,
-        "pending_percent": 50,
-        "basis": "Two of four eligibility checkpoints accepted; candidate relationship counts are not emitted media counts.",
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "All four emitted-media qualification/build/publication checkpoints accepted; this is not whole-library indexing or a ranking score.",
         "accepted_checkpoints": [
-          "Channel eligibility and version contracts implemented",
-          "Exact R2/publisher candidate relationships and public answer membership reconciled"
-        ],
-        "pending_checkpoints": [
-          "Current publisher versions, curation and rendered-use profiles populated",
+          "Supported channel/version contracts implemented",
+          "Actual R2/publisher/current DOM mappings and exclusions reconciled",
+          "Reviewed profiles populated and immutable expanded release validated",
           "Expanded media release passes production readback"
-        ]
+        ],
+        "pending_checkpoints": []
       }
     },
     {
@@ -397,33 +592,45 @@
     {
       "id": "SM16",
       "task": "Enable repeatable maintenance and rollback",
-      "status": "in_progress",
+      "status": "verified",
       "validation": "Existing publishing events drive catalogue deltas, eligibility/content/media checks, immutable release, safe assembly/readback and supported notifications; source drift/expiry/errors produce actionable exceptions; one accountable schedule/queue.",
       "owner": "Website release + sitemap workstreams",
       "depends_on": [
         "SM12",
         "SM13"
       ],
-      "next_action": "Changed/deleted eligible fixture and last-valid asset-union rollback now pass with holds and unrelated bytes preserved. Real postbuild currently republishes the pinned baseline; connect actual Git/database publisher changes and reconcile matching Worker/routes/discovery state before claiming live automatic maintenance.",
+      "next_action": "Daily02:00 IST native job executed an actual source update through CI, deployment and full readback. Keep one owner and inspect actionable failures or held exceptions within the recorded host/source limits.",
       "evidence": [
         "tooling/sitemap-manager/run.py",
         "tooling/sitemap-manager/tests",
         "outputs/sitemap-live-owner-delivery-20261013.json",
-        "tooling/sitemap-manager/tests/test_manager.py"
+        "tooling/sitemap-manager/tests/test_manager.py",
+        "outputs/sitemap-expanded-media-independent-live-20261013.json",
+        "https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/69",
+        "outputs/sitemap-git-publisher-production-proof-20261014.json",
+        "outputs/sitemap-source-refresh-independent-live-20261014.json",
+        "https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/73",
+        "outputs/sitemap-three-deliverables-completion-20261014.json",
+        "outputs/sitemap-final-independent-live-20261014.json",
+        "https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/75"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
-        "complete_percent": 50,
-        "pending_percent": 50,
-        "basis": "Milestone estimate: 2 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "All four maintenance acceptance checkpoints passed; not an indexing, site-health or business score.",
         "accepted_checkpoints": [
-          "Deterministic build and validation commands implemented",
-          "Release integration and rollback route recorded"
+          "Deterministic generation and validation",
+          "Matching production rollback and restoration",
+          "Actual changed/deleted-source publication",
+          "Daily native source/R2 job, successful publication, bulk handling and failure guards"
         ],
-        "pending_checkpoints": [
-          "Publisher-triggered changed/deleted-record cycle verified",
-          "Maintenance exceptions and accountable follow-up verified"
-        ]
+        "pending_checkpoints": []
+      },
+      "latest_cloud_acceptance": {
+        "receipt": "outputs/sitemap-cloud-cutover-completion-20261015.json",
+        "status": "Native Cloudflare scheduled execution through Linux succeeded; Windows timer disabled",
+        "follow_up": "Any changed approved source/publication must refresh accepted private cloud state to prevent stale reintroduction."
       }
     },
     {
@@ -437,10 +644,11 @@
         "SM10",
         "SM13"
       ],
-      "next_action": "Three currently included service destinations have dated HTTP500 evidence; the website owner has the exact repair scope. Restore real usable destinations and verify topic-specific tracking; noindex/clinical/source holds remain explicit.",
+      "next_action": "All11 formerly failing destinations are live and independently checked: direct200, correct helpline/intake,3indexable services and8assessment holds. Owner passed14mobile/desktop and82TestingBot assertions. Broader attribution/outcome stage acceptance remains separately open.",
       "evidence": [
         "outputs/pinnacle-content-population-standard-20261013.json",
-        "outputs/sitemap-current-eligibility-exceptions-20261013.json"
+        "outputs/sitemap-current-eligibility-exceptions-20261013.json",
+        "outputs/sitemap-page-repairs-independent-live-20261013.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
@@ -489,7 +697,164 @@
           "One final scope and limitations receipt accepted"
         ]
       }
+    },
+    {
+      "id": "SM19",
+      "task": "Reconcile current audit sitemap and link defects and prevent reintroduction",
+      "status": "verified",
+      "owner": "Existing Windows Web Build; independent acceptance by sitemap workstream",
+      "depends_on": [
+        "SM11",
+        "SM12",
+        "SM16"
+      ],
+      "deadline": "Next bounded sitemap repair release, coordinated with the current owner release; no calendar completion promised",
+      "validation": "Fresh public initial status, noindex/canonical/robots and exact sitemap membership prove closure. All seven redirect aliases absent, their existing canonical destinations retained, no held centre in either advertised legacy feed, XML/semantic checks pass and accepted unattended source state is refreshed. Close stale server/canonical observations only against specific live evidence. Legacy /sitemaps/miracles.xml must pass official video-XSD for every retained video plus base sitemap-XSD. Reuse source-backed managed formatting; preserve intentional absence of unknown attributes.",
+      "next_action": "Three live repairs and repaired-baseline Linux upkeep are accepted. Keep discovery policy and source refresh guards enabled. Continue media completion under SM03; retain dated Bing processing and other legacy warnings separately.",
+      "evidence": [
+        "outputs/sitemap-native-issue-reconciliation-20261015.json",
+        "outputs/sitemap-live-issue-reconciliation-20261015.json",
+        "outputs/sitemap-robots-live-reconciliation-20261015.json",
+        "outputs/sitemap-three-repairs-current-baseline-20261015.json",
+        "outputs/sitemap-three-repairs-independent-live-20261015.json",
+        "outputs/sitemap-repairs-independent-full-graph-live-20261015.json",
+        "outputs/sitemap-selected-source-official-xsd-20261015.json",
+        "outputs/sitemap-postrepair-native-acceptance-20261015.json",
+        "outputs/sitemap-postrepair-independent-google-bing-20261015.json",
+        "outputs/sitemap-postrepair-independent-indexnow-20261015.json"
+      ],
+      "finding_counts": {
+        "confirmed_redirect_aliases_in_live_managed_xml": 7,
+        "legacy_noindex_references": 106,
+        "stale_server_error_examples_now_200": 2,
+        "stale_canonical_example_now_self_canonical": 1,
+        "legacy_video_xsd_failures": 19163,
+        "legacy_xml_files_failing_official_xsd": 1,
+        "current_centres_feed_rows": 63,
+        "observed_pre_repair_noindex_centre_pages": 53
+      },
+      "crawl_freshness": {
+        "semrush_large_snapshot": "6acd8c26ea0d794b39698b2e",
+        "semrush_finished_at_utc": "2026-10-13T12:37:01.421Z",
+        "semrush_invalid_format_issue17": 0,
+        "semrush_incorrect_pages_issue18": 0,
+        "ahrefs_project": 10477823,
+        "ahrefs_status_at_query": "In_progress; cumulative audit evidence, not all pages freshly re-fetched",
+        "targeted_live_pages": 63,
+        "legacy_xml_documents": 26
+      },
+      "priority": "P1",
+      "handoff": {
+        "thread_id": "01a0ef6b-507a-7630-828f-7ac81852a39c",
+        "host": "remote-control:env_e_6a6416d94fc4832881bb7ddc5a5913b1",
+        "sent_at": "2026-10-15T04:13:25.034353+00:00",
+        "status": "Owner acknowledged and started generating-source and refresh repair from accepted centre-directory baseline",
+        "latest_baseline": "Owner accepted centre-directory full asset union:3954assets; exact revision/deploy to be confirmed in repair release"
+      },
+      "root_cause": "Seven aliases were included from dated12October Ahrefs200/self-canonical records; current direct responses are301. Update persisted eligibility evidence and accepted cloud source state.",
+      "fresh_live_issues_verified_at": "2026-10-15T04:10:42.414609+00:00",
+      "completion_claim": true,
+      "legacy_video_repair_proof": {
+        "matched": 19163,
+        "unmatched": 0,
+        "official_core_and_video_xsd": "passed independently in deployed live source and all 19,163 retained entries",
+        "candidate_sha256": "80e22844e27d7ca3f772f18c4f201fa403383423e32a9cbcfaab8337e9ae7033",
+        "candidate_path": "work/url-reconciliation/reviewed-release-from-commit-20261015/reviewed-source.zip",
+        "method": "Reuse exactly associated approved managed video serialization; normalize only URI encoding.",
+        "public_proof": "outputs/sitemap-three-repairs-independent-live-20261015.json"
+      },
+      "latest_human_instruction": "Complete all three repairs, deploy and verify live, prove daily non-reintroduction, then finish comprehensive eligible R2 image/video coverage; no detours.",
+      "centre_policy_correction": {
+        "owner_source_finding": "51enquiry pages inherited preview noindex despite positive production HTTP directives; Delhi/US are2explicitlocationstatus exclusions.",
+        "prior_all53_intentional_hold_label": "superseded by current source/serving evidence",
+        "accepted_action": "Repair shared preview/production head mismatch for51, include current self-canonical indexable pages in maintained discovery, preserve2explicitexclusions and all availability/advertising holds.",
+        "acceptance": "Final approved policy:60 indexed/listed centre documents,2 noindex/excluded location-status documents;51 of the old53 cohort require production-head repair. Direct200 and correct canonical/indexing directives, inclusion/exclusion in every advertised centre feed, retained route/form controls."
+      },
+      "source_review": {
+        "pr": 87,
+        "reviewed_head": "490d2ac368e3e3ff78d063093233aba10b2d1bda",
+        "status": "No actionable finding in initial policy/source review or final15-file delta; exact-head CI and production/native acceptance remain pending",
+        "evidence": "outputs/sitemap-pr87-root-source-review-20261015.json"
+      },
+      "public_acceptance": {
+        "status": "independently_verified_live",
+        "checked_at": "2026-10-15T15:42:34.167196+00:00",
+        "combined_source": "5e32968ed8c72a394e1157cd7e507b5d78a86dde",
+        "ci_run": 38757397364,
+        "ci_attempt": 2,
+        "all_target_xml": 7,
+        "direct_page_checks": 69,
+        "eligible_pages": 71099,
+        "xml_files": 57,
+        "byte_checks": 67,
+        "discovery_checks": 10,
+        "alias_exclusions": 7,
+        "indexable_centres": 60,
+        "held_centres": 2,
+        "legacy_video_entries": 19163,
+        "evidence": [
+          "outputs/sitemap-three-repairs-independent-live-20261015.json",
+          "outputs/sitemap-repairs-independent-full-graph-live-20261015.json",
+          "outputs/sitemap-selected-source-official-xsd-20261015.json"
+        ]
+      },
+      "native_postrepair_run": {
+        "id": 38764324835,
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "1f207f9628909197feabb8aadcc420fab4915e25",
+        "artifact_id": 11988408350,
+        "artifact_sha256": "b8be13c7908bf02b026cb8c917ee540ea939ba21c43ad5956bdf0e0755688ff3",
+        "source_phase": "verified_unchanged_publication",
+        "public_files_verified": 228,
+        "source_exceptions": 0,
+        "pending_r2_changes": 0,
+        "compute": "GitHub Actions Linux",
+        "model_calls": 0,
+        "evidence": "outputs/sitemap-postrepair-native-acceptance-20261015.json"
+      },
+      "independent_engine_readback": "outputs/sitemap-postrepair-independent-google-bing-20261015.json",
+      "google_changed_roots": {
+        "submitted_at_utc": "2026-10-15T15:50:01Z",
+        "all_five_fetched": true,
+        "errors": 0,
+        "warnings": 0,
+        "engine_page_indexing_proven": false
+      },
+      "other_legacy_registered_warnings": {
+        "testsitemap-v2.xml?v=1": 33,
+        "assessmentsitemap.xml": 2,
+        "scope": "Old registered feeds outside the three changed repair roots; classification/removal-or-repair queued with existing owner after primary media work",
+        "not_account_wide_zero_warning_claim": true
+      },
+      "independent_indexnow_readback": {
+        "evidence": "outputs/sitemap-postrepair-independent-indexnow-20261015.json",
+        "batch_id": "26b0b6ba-5989-41c4-8829-57e90f66c494",
+        "submitted_at": "2026-10-15T15:50:05.36488+00:00",
+        "actual_changed_centre_urls": 51,
+        "http_200": 51,
+        "key_file_verified": true,
+        "indexing_claimed": false
+      },
+      "verified_at": "2026-10-15T16:13:39.799492+00:00"
     }
   ],
-  "progress_method": "Open-task percentages are coarse milestone estimates from four stated checkpoints per task. Fully verified task counts are reported separately. Tasks differ in effort; no actual media-library coverage denominator is verified."
+  "progress_method": "Open-task percentages are coarse milestone estimates from four stated checkpoints per task. Fully verified task counts are reported separately. Tasks differ in effort; no actual media-library coverage denominator is verified.",
+  "current_commission": {
+    "requested_three_complete": true,
+    "completion_receipt": "outputs/sitemap-three-deliverables-completion-20261014.json",
+    "scope": "Commissioned three complete for the approved public baseline. Private/unassociated assets remain held. Optional PlanetScale row mirroring, unprovided publisher families and broader care attribution are separate follow-ups."
+  },
+  "latest_active_focus": {
+    "requested_at": "2026-10-15T04:13:25.034353+00:00",
+    "scope": "Complete and verify three source repairs plus eligible public R2 media coverage",
+    "active_task": "SM03",
+    "media_tasks": [
+      "SM03",
+      "SM07"
+    ],
+    "completion_boundary": "Three live closures and durable daily-run exclusion; every authoritative eligible public media family reconciled with explicit covered/held/excluded dispositions.",
+    "three_repairs_status": "verified_live_and_repaired_baseline_cloud_upkeep_success",
+    "media_status": "1,067 qualified additions checked in and owner integration started; not yet deployed"
+  }
 }
