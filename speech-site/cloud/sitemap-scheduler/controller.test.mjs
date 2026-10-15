@@ -26,10 +26,10 @@ test('native fetch receiver and resumed original schedule are preserved', async 
   const original=globalThis.fetch,storage=new Store();let input;
   await storage.put('day:daily-20261014',{id:'daily-20261014',phase:'configuration_blocked',configRevision:'1',createdAt:new Date(T-1000).toISOString(),firstNativeScheduledTime:new Date(T).toISOString(),cron:event.cron,nativeInvocations:1,dispatchAttempts:1});
   try {
-    globalThis.fetch=async function(_,init){assert(this===undefined||this===globalThis,'Illegal invocation');input=JSON.parse(init.body);return new Response(null,{status:204});};
+    globalThis.fetch=async function(_,init){assert(this===undefined||this===globalThis,'Illegal invocation');if(init.method==='GET')return runs([run(240,'in_progress')]);input=JSON.parse(init.body);return new Response(null,{status:204});};
     const controller=new ScheduledController({storage,token:'unit-only-token',configRevision:'2',clock:()=>T+60000});
     assert.equal((await controller.trigger({...event,scheduledTime:T+60000})).phase,'dispatched');
-    assert.equal(input.inputs.scheduled_time,new Date(T).toISOString());
+    assert.equal(input.inputs.scheduled_time,new Date(T).toISOString());assert.equal((await controller.trigger({...event,scheduledTime:T+120000})).phase,'runner_active');
   }finally{globalThis.fetch=original;}
 });
 
