@@ -153,9 +153,7 @@ def refresh(db,repo,approved_release,resources,output,now=None):
   from selected_reference_sources import refresh as refresh_references
   selected,reference_proof,reference_holds=refresh_references(db,resources,cache,now,probe,head_ok,fresh)
   if selected:
-   # Selected adapters can extend the delivery cache. Keep confirmed parent
-   # and image vetoes active through the final reconciliation too.
-   blocked|={u for u,r in cache.items() if fresh(r.get('checked_at'),now) and definitively_disqualified(r)}
+   blocked|={u for u,r in cache.items() if fresh(r.get('checked_at') or r.get('observed_at'),now) and definitively_disqualified(r)}
    selected_changes,selected_counts=reconcile(db,selected,blocked);changes+=selected_changes
    counts['added']+=selected_counts['added'];counts['removed']+=selected_counts['removed'];counts['retained']=selected_counts['retained']
   held+=reference_holds;urls=sorted(set(urls)|set(cache))

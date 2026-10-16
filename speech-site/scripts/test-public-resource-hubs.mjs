@@ -1,9 +1,24 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {publicResourceHubTarget} from '../deployment/public-resource-hubs.mjs';
+import {publicResourceHubTarget,publicResourceHubRedirect} from '../deployment/public-resource-hubs.mjs';
+import {createClearanceWrapper} from '../deployment/shared-clearance.mjs';
+import fs from 'node:fs/promises';
 import {publicLinkTarget} from '../deployment/public-link-target.mjs';
 import {canonicalNavigationTarget} from '../deployment/canonical-navigation-aliases.mjs';
 import {withManagedSitemaps} from '../deployment/managed-sitemap-runtime.mjs';
+test('old resource roots reach their actual maintained portals before any legacy fallback',async()=>{
+ const wrapper=createClearanceWrapper({async fetch(){throw Error('Known broken root must not fall through');}});
+ for(const name of ['materials','interventions'])for(const method of ['GET','HEAD'])for(const slash of ['','/']){
+  const request=new Request('https://www.pinnacleblooms.org/'+name+slash+'?utm_source=google&campaign=fixture',{method}),r=await wrapper.fetch(request,{},{});
+  assert.equal(r.status,301);assert.equal(r.headers.get('location'),'https://'+name+'.pinnacleblooms.org/?utm_source=google&campaign=fixture');assert.equal(await r.text(),'');
+ }
+ for(const request of [new Request('https://www.pinnacleblooms.org/materials',{method:'POST',body:'fixture'}),new Request('https://www.pinnacleblooms.org/materials',{headers:{authorization:'fixture'}}),new Request('https://www.pinnacleblooms.org/materials',{headers:{range:'bytes=0-5'}}),new Request('https://unrelated.example/materials'),new Request('https://www.pinnacleblooms.org/materials/private'),new Request('https://www.pinnacleblooms.org/api/enrolment')])assert.equal(publicResourceHubRedirect(request),null);
+});
+test('maintained common navigation emits the direct working portal roots',async()=>{
+ const source=await fs.readFile(new URL('../src/data/portal-navigation.json',import.meta.url),'utf8'),urls=[];
+ const visit=v=>{if(!v||typeof v!=='object')return;if(v.url)urls.push(v.url);for(const x of Object.values(v))visit(x);};visit(JSON.parse(source));
+ for(const name of ['materials','interventions']){assert(urls.includes('https://'+name+'.pinnacleblooms.org/'));assert(!urls.some(u=>u==='/'+name||u==='https://www.pinnacleblooms.org/'+name));}
+});
 for(const map of [publicResourceHubTarget,publicLinkTarget,canonicalNavigationTarget]){
  test(map.name+': exact owned resource links retain query/fragment',()=>{
   for(const name of ['materials','interventions'])for(const prefix of ['','https://www.pinnacleblooms.org','https://pinnacleblooms.org']){

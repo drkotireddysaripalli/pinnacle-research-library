@@ -7,6 +7,7 @@ import concurrent.futures,datetime as dt,functools,hashlib,importlib.util,json,z
 from html.parser import HTMLParser
 from pathlib import Path
 import manager as m
+from managed_media_sources import definitively_disqualified,robots_restricted
 HERE=Path(__file__).resolve().parent
 ABILITY='ability_reference_illustrations_v1';GURU='guru_selected_reference_galleries_v1'
 ABILITY_PACKET=HERE/'ability-reference-assets/bootstrap/ability-reference-publication-bootstrap-20261016.zip'
@@ -29,14 +30,16 @@ def guru_packet():
  return plans,heads
 class GuruHTML(HTMLParser):
  def __init__(self,plan):
-  super().__init__(convert_charrefs=True);self.plan=plan;self.depth=0;self.sections=0;self.current=None;self.images={};self.errors=[];self.cta=0;self.section_depth=0
+  super().__init__(convert_charrefs=True);self.plan=plan;self.depth=0;self.sections=0;self.current=None;self.sequence=None;self.images={};self.errors=[];self.cta=0;self.section_depth=0;self.closed_sections=0;self.selection_complete=False
  def handle_starttag(self,tag,attrs):
   a=dict(attrs);self.depth+=tag not in ('img','br','hr','meta','link','input','source','wbr','area','base','embed','param','track','col')
   if 'data-guru-gallery-source' in a:
    self.sections+=1;self.section_depth=self.depth
+   self.selection_complete=a.get('data-observed-set-complete')=='true'
    expected=self.plan['manifest']
    if (a.get('data-guru-gallery-source'),a.get('data-guru-id'),a.get('data-guru-render-manifest-sha256'),a.get('data-guru-selection-sha256'))!=(GURU,str(expected['guru_id']),self.plan['sha256'],expected['selection_scope_sha256']):self.errors.append('selection-marker-mismatch')
   if not self.section_depth:return
+  if len(a)!=len(attrs):self.errors.append('duplicate-attribute')
   if tag in ('template','script','style','iframe','form','input','details') or 'hidden' in a or 'inert' in a or a.get('aria-hidden')=='true' or any(x in a.get('style','').replace(' ','').lower() for x in ('display:none','visibility:hidden','opacity:0')):self.errors.append('hidden-or-active-reference')
   if tag=='figure':
    self.current=a.get('data-guru-gallery-asset');self.sequence=a.get('data-guru-gallery-sequence')
@@ -47,11 +50,24 @@ class GuruHTML(HTMLParser):
   if tag=='a' and a.get('href')=='tel:+919100181181':self.cta+=1
  def handle_endtag(self,tag):
   if tag=='figure':self.current=None
-  if tag=='section' and self.depth==self.section_depth:self.section_depth=0
+  if tag=='section' and self.depth==self.section_depth:self.section_depth=0;self.closed_sections+=1
   self.depth=max(0,self.depth-1)
  def qualified(self):
   expected={r['asset_id']:{'src':r['selected_url'],'alt':r['purpose_alt'],'sequence':str(r['sequence'])} for r in self.plan['manifest']['assets']}
-  return self.sections==1 and not self.errors and self.images==expected and self.cta==1
+  return self.sections==1 and self.closed_sections==1 and not self.section_depth and not self.errors and self.images==expected and self.cta==1
+def current_parent_veto(row,cap,parent,now,fresh):
+ proof=cap.get('proof',{}) if isinstance(cap,dict) else {}
+ if not isinstance(proof,dict):proof={}
+ if row.get('page_url',proof.get('page_url'))!=parent or not fresh(row.get('observed_at') or proof.get('observed_at'),now):return False
+ if any(value.get(k) for value in (row,proof) for k in ('noindex','noimageindex','canonical_conflict')) or robots_restricted(row) or robots_restricted(proof):return True
+ status=row.get('status',proof.get('status'))
+ if type(status) is int and 200<=status<=499 and status not in (200,429):return True
+ if row.get('location') or proof.get('location') or row.get('final_url',proof.get('final_url',parent))!=parent:return True
+ return status==200 and row.get('publication_qualified') is False
+def complete_parent_capture(row,cap,parent,now,fresh):
+ if not isinstance(cap,dict) or not isinstance(cap.get('proof'),dict):return False
+ p=cap['proof']
+ return row.get('publication_qualified') is True and p.get('page_url')==parent and p.get('method')=='GET' and p.get('status')==200 and p.get('final_url')==parent and p.get('publication_qualified') is True and p.get('body_complete') is True and p.get('content_type','').lower().startswith('text/html') and fresh(p.get('observed_at'),now) and all(p.get(k) is False for k in ('credentials_sent','redirects_followed','media_bodies_downloaded'))
 def prior_guru(db,allowed):
  result={}
  for row in db.execute('SELECT url,metadata_json FROM pages WHERE instr(metadata_json,?)>0',(GURU,)):
@@ -62,7 +78,6 @@ def prior_guru(db,allowed):
    result[pair]={'page_url':row['url'],'image_url':image,'source_sha256':proof['source_sha256'][GURU]}
  return result
 def refresh(db,resources,cache,now,probe,head_ok,fresh):
- from managed_media_sources import definitively_disqualified
  ability=ability_module();packet=ability.load_packet(ABILITY_PACKET);plans,guru_heads=guru_packet()
  expected=set(packet['parents'])|set(plans)
  if not expected.issubset(resources):return {},{'status':'capture-pending','requiredParents':193,'capturedParents':len(expected&set(resources))},[]
@@ -82,26 +97,28 @@ def refresh(db,resources,cache,now,probe,head_ok,fresh):
  for u in packet['parents']:
   cap=resources[u].get('reference_capture')
   if cap:observations['parents'].append({**cap['proof'],'body_hex':cap['body_hex']})
+ observations['complete_observed_parent_set']=len(observations['parents'])==len(packet['parents'])
  state=ability.feed_state_from_db(db,packet);qualified=ability.qualify(packet,observations,cache,state,now)
  desired={};holds=[]
  if qualified['can_reconcile']:
   ability.assert_feed_state_unchanged(db,packet,qualified);desired[ABILITY]=qualified['desired']
  holds.extend(qualified['held'])
- allowed={(u,im['selected_url']) for u,p in plans.items() for im in p['manifest']['assets']};wanted=prior_guru(db,allowed);guru_qualified=0
+ allowed={(u,im['selected_url']) for u,p in plans.items() for im in p['manifest']['assets']};wanted=prior_guru(db,allowed);guru_qualified=0;guru_withdrawn=0
  for u,p in plans.items():
-  row=resources[u];cap=row.get('reference_capture');valid=False;observed=False
-  if cap and fresh(cap['proof'].get('observed_at'),now):
-   proof=cap['proof'];body=bytes.fromhex(cap['body_hex'])
-   observed=proof.get('method')=='GET' and proof.get('status')==200 and proof.get('final_url')==u and proof.get('body_complete') is True and hashlib.sha256(body).hexdigest()==proof['body_sha256'] and len(body)==proof['body_bytes']
-   if observed and row.get('publication_qualified') and not any(row.get(k) for k in ('noindex','noimageindex','canonical_conflict')):
-    parser=GuruHTML(p);parser.feed(body.decode('utf8'));parser.close();valid=parser.qualified()
+  row=resources[u];cap=row.get('reference_capture');valid=False;complete=False;parser=None;veto=current_parent_veto(row,cap,u,now,fresh)
+  if not veto and complete_parent_capture(row,cap,u,now,fresh):
+   try:
+    body=bytes.fromhex(cap['body_hex']);valid=hashlib.sha256(body).hexdigest()==cap['proof']['body_sha256'] and len(body)==cap['proof']['body_bytes']
+    if valid:
+     parser=GuruHTML(p);parser.feed(body.decode('utf8'));parser.close();valid=parser.qualified();complete=parser.selection_complete and parser.sections==1 and parser.closed_sections==1 and not parser.section_depth and not parser.errors and parser.cta==1
+   except (ValueError,TypeError,KeyError,UnicodeError):valid=False;complete=False
   for im in p['manifest']['assets']:
-   pair=(u,im['selected_url'])
-   if valid and head_ok(cache[im['selected_url']]):wanted[pair]={'page_url':u,'image_url':im['selected_url'],'source_sha256':cap['proof']['body_sha256']};guru_qualified+=1
-   else:
-    head=cache[im['selected_url']]
-    if observed and not valid or fresh(head.get('checked_at'),now) and definitively_disqualified(head):wanted.pop(pair,None)
-    holds.append({'source':GURU,'page_url':u,'media_url':im['selected_url'],'condition':'current-render-or-delivery-not-qualified'})
+   pair=(u,im['selected_url']);head=cache[im['selected_url']];image_veto=fresh(head.get('checked_at') or head.get('observed_at'),now) and definitively_disqualified(head);absent=complete and im['asset_id'] not in parser.images
+   if veto or image_veto or absent:
+    if pair in wanted:wanted.pop(pair);guru_withdrawn+=1
+    holds.append({'source':GURU,'page_url':u,'media_url':im['selected_url'],'condition':'current-parent-veto' if veto else 'current-image-veto' if image_veto else 'current-complete-render-absence'})
+   elif valid and head_ok(head):wanted[pair]={'page_url':u,'image_url':im['selected_url'],'source_sha256':cap['proof']['body_sha256']};guru_qualified+=1
+   else:holds.append({'source':GURU,'page_url':u,'media_url':im['selected_url'],'condition':'current-render-or-delivery-not-qualified'})
  desired[GURU]=list(wanted.values())
- result={'status':'qualified-complete' if not holds else 'qualified-with-source-holds','ability':qualified['counts'],'guru':{'parents':146,'selectedPairs':150,'qualifiedPairs':guru_qualified,'desiredPairs':len(wanted)},'held':len(holds),'headsQueried':len(pending),'headsReused':len(urls)-len(pending),'unknownLicenceRetained':True,'clinicalSourceRowsModified':False,'mediaBodiesDownloaded':False}
+ result={'status':'qualified-complete' if not holds else 'qualified-with-source-holds','ability':qualified['counts'],'guru':{'parents':146,'selectedPairs':150,'qualifiedPairs':guru_qualified,'desiredPairs':len(wanted),'sourceWithdrawals':guru_withdrawn},'held':len(holds),'headsQueried':len(pending),'headsReused':len(urls)-len(pending),'unknownLicenceRetained':True,'clinicalSourceRowsModified':False,'mediaBodiesDownloaded':False}
  return desired,result,holds

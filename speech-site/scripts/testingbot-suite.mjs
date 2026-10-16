@@ -127,7 +127,10 @@ for(const matrixId of matrixIds){
           const visualLayout=config.kind==='desktop'?await evaluate("const e=document.documentElement;const old=e.getAttribute('style');const before={innerWidth,clientWidth:e.clientWidth};e.style.setProperty('overflow-y','hidden','important');return {old,before,snapshotClientWidth:e.clientWidth}"):null;
           if(visualLayout)t.visualLayout=visualLayout;
           try{
-            if(t.visualAnnouncementDismissed)await snap(t,'reference-ready');
+            // The viewport change must reach a painted frame before the
+            // provider's CSS crop. The approved capture used this same step.
+            await evaluate('return document.fonts.ready.then(()=>true)');
+            await snap(t,'reference-ready');
             // Appium's native interception did not resolve CSS crops on the
             // physical web sessions. Use the documented viewport mode there.
             const result=await evaluate('tb:visual.snapshot='+JSON.stringify({name,options:{...(config.kind==='desktop'?{selector:'.portal-header'}:{}),threshold:0.1,antialiasing:true}}));
