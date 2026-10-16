@@ -1,4 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
+import './test-evidence-shell.mjs';
 import {pageManifest,selectCases} from '../tests/testingbot/page-manifest.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
 import {dailyPlan} from '../tests/testingbot/daily-plan.mjs';

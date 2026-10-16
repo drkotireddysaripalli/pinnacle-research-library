@@ -120,6 +120,11 @@ for(const matrixId of matrixIds){
           const activePath=await evaluate("return [...new Set([...document.querySelectorAll('.portal-main-nav a[aria-current=page],.portal-therapy-nav a[aria-current=page]')].map(a=>new URL(a.href).pathname))].sort().join('--')");
           const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath});
           const reference=visualReferences.approved.find(r=>r.name===name);
+          // The provider hides native scrollbars when capturing. Freeze that
+          // layout explicitly so scrollbar removal cannot race the CSS crop.
+          // Restore it before interaction/readability checks; never replace a baseline.
+          const visualLayout=config.kind==='desktop'?await evaluate("const e=document.documentElement;const old=e.getAttribute('style');const before={innerWidth,clientWidth:e.clientWidth};e.style.setProperty('overflow-y','hidden','important');return {old,before,snapshotClientWidth:e.clientWidth}"):null;
+          if(visualLayout)t.visualLayout=visualLayout;
           try{
             // Appium's native interception did not resolve CSS crops on the
             // physical web sessions. Use the documented viewport mode there.
@@ -133,6 +138,8 @@ for(const matrixId of matrixIds){
             const error='Provider visual comparison unavailable: '+redact(e.message);
             if(reference)t.checks.push({name:'Approved visual reference is verifiable',passed:false,error});
             else t.skipped.push(error);
+          }finally{
+            if(visualLayout)await evaluate("const e=document.documentElement;if(arguments[0]===null)e.removeAttribute('style');else e.setAttribute('style',arguments[0]);return true",visualLayout.old);
           }
         }
         if(p.gate){await check('Anonymous reader gets branded Google sign-in gate',()=>evaluate("const d=document.querySelector('#ask-reader-gate');return !!d?.open&&!!d.querySelector('[name=returnTo]')&&!!d.querySelector('img')"));t.skipped.push('Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite');}
