@@ -3,6 +3,9 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 import manager as m
 import source_refresh as s
+from unittest.mock import patch
+from email.message import Message
+import urllib.error
 
 class SourceRefresh(unittest.TestCase):
  def setUp(self):
@@ -29,6 +32,12 @@ class SourceRefresh(unittest.TestCase):
   changes,holds,_=s.apply_resources(self.db,{self.resource:current},{},{});self.assertFalse(changes);self.assertFalse(holds);self.assertEqual(len(json.loads(self.db.execute('select videos_json from pages where url=?',(self.resource,)).fetchone()[0])),1)
  def test_transient_resource_failure_does_not_infer_deletion(self):
   changes,holds,_=s.apply_resources(self.db,{self.resource:{'publication_qualified':False,'status':503,'error':'temporary'}},{},{});self.assertFalse(changes);self.assertEqual(len(holds),1);self.assertEqual(self.db.execute('select decision from pages where url=?',(self.resource,)).fetchone()[0],'INCLUDE')
+ def test_304_current_robot_headers_override_old_positive_eligibility(self):
+  url='https://materials.pinnacleblooms.org/'
+  for directive in ['noimageindex','noindex']:
+   prior={'etag':'unchanged','robots':['index,follow'],'publication_qualified':True,'noindex':False,'noimageindex':False,'catalogue_capture':{'body_hex':'3c2f68746d6c3e','proof':{'observed_at':'2026-10-15T00:00:00Z','response_headers':{'Content-Type':'text/html'}}}};headers=Message();headers.add_header('X-Robots-Tag','index');headers.add_header('X-Robots-Tag',directive)
+   with patch.object(s,'open_public_source',side_effect=urllib.error.HTTPError(url,304,'Not modified',headers,None)):actual=s.public_resource(url,prior)
+   self.assertTrue(actual[directive]);self.assertTrue(actual['catalogue_capture']['proof'][directive]);self.assertEqual(actual['publication_qualified'],directive!='noindex')
  def test_navigation_requires_exact_authoritative_head_title_not_a_denylist(self):
   self.db.commit();root=Path(self.temp.name)/'release';root.mkdir();(root/'manifest.json').write_text(json.dumps({'files':[{'kind':'html','path':'index.html'}]}));source=[{'page_url':self.resource,'publication_qualified':True,'title':'Approved title'}]
   (root/'index.html').write_text('<nav><a href="'+self.resource+'">Materials</a></nav><main><a href="/site-map/">Index</a><a href="'+self.resource+'">Approved title</a></main>')

@@ -21,7 +21,7 @@ receipt and the actual native upkeep result remain the release acceptance.
 
 ## R2 progress and failure evidence
 
-R2 remains metadata-only and bounded to three 200-query segments. Progress is now
+R2 remains metadata-only: three 200-query segments, with at most one same-job continuation (1,200 requests maximum) solely for checkpointed incomplete coverage. Source errors, source holds and possible mutations never enter that continuation. Progress is now
 checksum-verified and persisted separately from the accepted publication, so a
 failed run does not destroy its cursor/observations. Every complete proof reports
 the oldest/newest page observations and each pass's actual time range; a completion
@@ -43,3 +43,5 @@ workflow runs these same contracts, then the existing publisher, live-byte check
 and deduplicated distribution outbox. Repeat changed-source verification only for
 an actual change or a newly identified failure. Preserve current routes, bindings,
 contact/source measurement, authentication, held-centre policy and source holds.
+
+Checkpoint acceptance verifies both SHA256 integrity and complete contiguous five-scope/two-pass page chains, actual cursor transitions, observation identity and page counts. The internally hash-consistent missing-scope counterexample is rejected before restore and before any absence proof. Public artifacts expose only allowlisted counters/categories; exact source exceptions are retained separately in the existing protected state bucket.

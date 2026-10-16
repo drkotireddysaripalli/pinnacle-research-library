@@ -51,6 +51,19 @@ def head_ok(row):
 def definitively_disqualified(row):
  status=row.get('status')
  return robots_restricted(row) or isinstance(status,int) and 200<=status<=499 and status!=429 and not head_ok(row)
+def resolve_qualified_exceptions(db,exceptions):
+ """Clear only an exact newly admitted image's earlier DOM qualification hold."""
+ heads={m.normal(u):h for u,h in read_state(db).get('heads',{}).items()};remaining=[];resolved=0
+ condition='New/unmapped media reference needs existing R2/rights association; not promoted'
+ for item in exceptions:
+  url=item.get('url');image=item.get('media_url');admitted=False
+  if item.get('condition')==condition and url and image and head_ok(heads.get(m.normal(image),{})):
+   parent=db.execute('SELECT decision,images_json,metadata_json FROM pages WHERE url=?',(m.normal(url),)).fetchone()
+   if parent and parent['decision']=='INCLUDE':
+    owned=json.loads(parent['metadata_json']).get('managed_image_ownership',{});admitted=any(m.normal(u)==m.normal(image) and set(p.get('owners',[]))&SOURCES for u,p in owned.items()) and any(m.normal(i['loc'])==m.normal(image) for i in json.loads(parent['images_json']))
+  if admitted:resolved+=1
+  else:remaining.append(item)
+ return remaining,resolved
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args):return None
 def probe(url,now):

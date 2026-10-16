@@ -26,8 +26,13 @@ def client():
   if not os.environ.get(name):raise RuntimeError('Required private state credential missing: '+name)
  return boto3.client('s3',endpoint_url=f'https://{ACCOUNT}.r2.cloudflarestorage.com',region_name='auto',aws_access_key_id=os.environ['SITEMAP_STATE_ACCESS_KEY_ID'],aws_secret_access_key=os.environ['SITEMAP_STATE_SECRET_ACCESS_KEY'])
 ROTATION_FILE=re.compile(r'(?:state|proof|qualified-changes|pass-[01]-scope-[0-4]-page-[0-9]+)\.json\Z')
+def verify_rotation(root):
+ node=os.environ.get('NODE_EXECUTABLE','node')
+ result=subprocess.run([node,str(pathlib.Path(__file__).with_name('verify-r2-progress.mjs').resolve()),str(root)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+ if result.returncode:raise ValueError('R2 observation chain is not complete/consistent with its frontier')
 def rotation_store(repo,s3,bucket=BUCKET):
  root=pathlib.Path(repo).resolve()/'speech-site/ask-private/r2-approved-current'
+ verify_rotation(root)
  state=json.loads((root/'state.json').read_bytes());members=[];stream=io.BytesIO()
  with zipfile.ZipFile(stream,'w',zipfile.ZIP_DEFLATED) as z:
   for f in sorted(root.iterdir()):
@@ -60,6 +65,9 @@ def rotation_hydrate(repo,s3,bucket=BUCKET):
    json.loads(data)
   state=json.loads(z.read('state.json'))
   if state['registrySHA256']!=p['registrySHA256'] or state['startedAt']!=p['startedAt']:raise ValueError('R2 progress identity mismatch')
+  with tempfile.TemporaryDirectory(prefix='pinnacle-r2-progress-') as td:
+   for name in expected:(pathlib.Path(td)/name).write_bytes(z.read(name))
+   verify_rotation(td)
   root=pathlib.Path(repo).resolve()/'speech-site/ask-private/r2-approved-current';root.mkdir(parents=True,exist_ok=True)
   for f in root.iterdir():
    if not f.is_file() or not ROTATION_FILE.fullmatch(f.name):raise ValueError('Unexpected prior R2 progress member')
@@ -176,10 +184,14 @@ def hydrate(repo,s3,bucket=BUCKET):
  rotation=rotation_hydrate(repo,s3,bucket)
  return {'hydrated':True,'archive_sha256':m['archive_sha256'],'files':len(expected),'baseline_version':m['publication_version'],**rotation}
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('action',choices=('hydrate','store','outbox-store','job-store','rotation-store'));p.add_argument('--repo',default='..');p.add_argument('--config',default='ask-private/public-publisher-config.json');p.add_argument('--job-file');args=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('action',choices=('hydrate','store','outbox-store','job-store','rotation-store','diagnostics-store'));p.add_argument('--repo',default='..');p.add_argument('--config',default='ask-private/public-publisher-config.json');p.add_argument('--job-file');args=p.parse_args()
  try:
   s3=client()
-  if args.action=='rotation-store':print(json.dumps(rotation_store(args.repo,s3)))
+  if args.action=='diagnostics-store':
+   data=pathlib.Path(args.job_file).read_bytes();record=json.loads(data)
+   if set(record)!={'schema','dispatchId','context','sourceExceptions'} or not re.fullmatch('[a-z0-9-]{8,80}',record['dispatchId']) or len(data)>2_000_000:raise ValueError('Invalid private diagnostic record')
+   s3.put_object(Bucket=BUCKET,Key='diagnostics/'+record['dispatchId']+'.json',Body=data,ContentType='application/json');print(json.dumps({'privateSourceDiagnosticsPersisted':True}))
+  elif args.action=='rotation-store':print(json.dumps(rotation_store(args.repo,s3)))
   elif args.action=='job-store':
    data=pathlib.Path(args.job_file).read_bytes();record=json.loads(data)
    if set(record)-{'dispatchId','scheduledTime','runId','attempt','status','startedAt','finishedAt','version','publicFilesVerified','steps','sourcePhase','readOnlyRecoveries'}:raise ValueError('Unexpected job checkpoint fields')

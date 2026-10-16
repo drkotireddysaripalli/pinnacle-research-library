@@ -53,7 +53,7 @@ def public_resource(url,prior=None):
  if prior and prior.get('etag'):headers['If-None-Match']=prior['etag']
  try:
   with open_public_source(urllib.request.Request(url,headers=headers),timeout=30) as r:
-   data=r.read(MAX_BODY+1);status=r.status;final=r.url;kind=r.headers.get('Content-Type','');robots=r.headers.get('X-Robots-Tag','');etag=r.headers.get('ETag');response_headers=dict(r.headers)
+   data=r.read(MAX_BODY+1);status=r.status;final=r.url;kind=r.headers.get('Content-Type','');robots=', '.join(r.headers.get_all('X-Robots-Tag',[]));etag=r.headers.get('ETag');response_headers=dict(r.headers)
   if len(data)>MAX_BODY or not kind.lower().startswith('text/html'):raise ValueError('Bounded HTML source unavailable')
   parser=PublicHTML(url);parser.feed(data.decode('utf8','replace'));parser.close();row=parser.current(robots)
   row.update(status=status,final_url=final,body_sha256=hashlib.sha256(data).hexdigest(),etag=etag,observed_at=dt.datetime.now(dt.timezone.utc).isoformat(),conditional=False)
@@ -64,8 +64,9 @@ def public_resource(url,prior=None):
  except urllib.error.HTTPError as e:
   if e.code==304 and prior:
    row=dict(prior);row.update(conditional=True,observed_at=dt.datetime.now(dt.timezone.utc).isoformat())
+   directives=list(prior.get('robots',[]))+e.headers.get_all('X-Robots-Tag',[]);tokens=set(__import__('re').findall(r'[a-z_]+',' '.join(directives).lower()));row.update(robots=directives,noindex=bool(tokens&{'noindex','none'}),noimageindex='noimageindex' in tokens);row['publication_qualified']=prior.get('publication_qualified',False) and not row['noindex']
    if row.get('catalogue_capture'):
-    row['catalogue_capture']=json.loads(json.dumps(row['catalogue_capture']));proof=row['catalogue_capture']['proof'];proof.setdefault('original_capture_at',proof['observed_at']);proof.update(observed_at=row['observed_at'],conditional_revalidation_status=304)
+    row['catalogue_capture']=json.loads(json.dumps(row['catalogue_capture']));proof=row['catalogue_capture']['proof'];proof.setdefault('original_capture_at',proof['observed_at']);proof.update(observed_at=row['observed_at'],conditional_revalidation_status=304,robots=directives,noindex=row['noindex'],noimageindex=row['noimageindex']);proof['response_headers']['X-Robots-Tag']=', '.join(directives)
    elif url=='https://materials.pinnacleblooms.org/':return public_resource(url)
    return row
   return {'page_url':url,'status':e.code,'publication_qualified':False,'error':'public source HTTP '+str(e.code)}
@@ -196,8 +197,9 @@ def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None
   target.execute('BEGIN IMMEDIATE');changes,exceptions=apply_ask(target,snapshot,baseline,metadata_reader);rchanges,rexceptions,current=apply_resources(target,resources,prior,aliases);changes+=rchanges;exceptions+=rexceptions
   media_proof=None
   if approved_release:
-   from managed_media_sources import refresh as refresh_managed_media
+   from managed_media_sources import refresh as refresh_managed_media,resolve_qualified_exceptions
    media_changes,media_proof=refresh_managed_media(target,Path(__file__).resolve().parents[2],approved_release,resources,output/'managed-media');changes+=media_changes
+   exceptions,resolved=resolve_qualified_exceptions(target,exceptions);media_proof['resolvedUnmappedImageExceptions']=resolved
   changes += apply_discovery_policy(target, m)
   target.execute('INSERT OR REPLACE INTO receipts VALUES(?,?,?)',('native-source-refresh','source_refresh',packed({'snapshot_sha256':snapshot['sourceSHA256'],'resource_source_pages':len(resources),'changes':changes,'exceptions':exceptions})));target.commit()
  finally:target.close()

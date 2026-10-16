@@ -42,6 +42,17 @@ class ManagedMedia(unittest.TestCase):
   self.db.execute('update pages set images_json=?',(json.dumps([{'loc':self.image}]),));s.reconcile(self.db,{s.KNOWLEDGE:[]},{self.image});self.assertEqual(self.images(),[])
  def test_multiple_raw_robots_headers_cannot_be_hidden_by_blank_normalized_field(self):
   self.assertTrue(s.robots_restricted({'x_robots':'','headers':{'X-Robots-Tag':'noimageindex'}}));self.assertFalse(s.definitively_disqualified({'status':503}));self.assertFalse(s.definitively_disqualified({'status':429}))
+ def test_new_catalogue_image_clears_only_its_exact_resolved_dom_hold(self):
+  # Reuse the strict adapter's real isolated HTML/HEAD/permission/release fixture.
+  directory=Path(__file__).resolve().parents[1]/'materials-catalogue';sys.path.insert(0,str(directory));fixture_module=s.load_module('catalogue_fixture',directory/'test_catalogue_source_adapter.py');f=fixture_module.ContractTests();f.setUp()
+  try:
+   f.run_export();rows=f.read('catalogue-use-qualified-candidates.jsonl');self.url=s.CATALOGUE;u1,u2=[h['url'] for h in f.heads[:2]];video='https://images.pinnacleblooms.org/new-video.mp4';self.db.execute('UPDATE pages SET url_hash=?,url=?,canonical_url=?,images_json=?',(m.sha(self.url),self.url,self.url,json.dumps([{'loc':u1}])))
+   reference=lambda u,kind:{'media_kind':kind,'media_url':u,'source_image_url':u}
+   current={'publication_qualified':True,'media_references':[reference(u1,'image'),reference(u2,'image'),reference(video,'video')],'video_objects':[],'body_sha256':'d'*64,'content_sha256':'e'*64,'observed_at':f.proof['observed_at'],'title':'Approved title','description':'Approved description'};previous={self.url:{'media_references':[reference(u1,'image')]}}
+   _,holds,_=refresh.apply_resources(self.db,{self.url:current},previous,{});self.assertEqual(len(holds),2)
+   desired={s.CAT_SOURCE:[{'page_url':self.url,'image_url':r['media_url'],'source_sha256':f.proof['body_sha256']} for r in rows]};s.reconcile(self.db,desired);self.db.execute('INSERT OR REPLACE INTO receipts VALUES(?,?,?)',('managed-media-sources-v1','managed-media-sources',json.dumps({'heads':{h['url']:h for h in f.heads}})))
+   remaining,resolved=s.resolve_qualified_exceptions(self.db,holds);self.assertEqual(resolved,1);self.assertEqual([h['media_url'] for h in remaining],[video]);self.assertIn(u2,[i['loc'] for i in self.images()])
+  finally:f.doCleanups();sys.path.remove(str(directory))
  def test_1001_images_fail_without_truncating(self):
   desired={s.KNOWLEDGE:[{'page_url':self.url,'image_url':f'https://www.pinnacleblooms.org/images/{i}.jpg','source_sha256':'a'*64} for i in range(1001)]}
   with self.assertRaisesRegex(ValueError,'1000-image'):s.reconcile(self.db,desired)
