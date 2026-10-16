@@ -6,6 +6,7 @@ class FakeS3:
  def get_object(self,**kw):
   if kw['Key'] not in self.objects:raise Missing()
   return {'Body':io.BytesIO(self.objects[kw['Key']])}
+ def put_object(self,**kw):self.objects[kw['Key']]=kw['Body']
 class StateTests(unittest.TestCase):
  def test_traversal_and_secret_snapshots_rejected(self):
   for s in ('../outside','/etc/password','speech-site/ask-private/bindings.json','speech-site/.git/config','speech-site/private/settings.json','other/data.json'):
@@ -13,6 +14,14 @@ class StateTests(unittest.TestCase):
  def test_only_path_fields_are_relocated(self):
   r=m.relocate({'feed':'C:/old/speech-site/private/feed.sqlite3','title':'C:/old/title','url':'https://www.pinnacleblooms.org/page'},'C:/old','/new')
   self.assertEqual(r['feed'],str(pathlib.Path('/new/speech-site/private/feed.sqlite3')));self.assertEqual(r['title'],'C:/old/title')
+ def test_rotation_progress_survives_without_advancing_publication_baseline(self):
+  with tempfile.TemporaryDirectory() as source,tempfile.TemporaryDirectory() as target:
+   root=pathlib.Path(source)/'speech-site/ask-private/r2-approved-current';root.mkdir(parents=True);state={'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':False,'completedPages':200,'pass':0,'scope':3,'cursor':'opaque-list-position'};(root/'state.json').write_text(json.dumps(state));(root/'pass-0-scope-3-page-0.json').write_text(json.dumps({'known':[],'observedAt':'2026-10-16T00:01:00Z'}));s3=FakeS3({});m.rotation_store(source,s3);self.assertNotIn('bootstrap.json',s3.objects);result=m.rotation_hydrate(target,s3);self.assertEqual(result['pages'],200);self.assertEqual(json.loads((pathlib.Path(target)/'speech-site/ask-private/r2-approved-current/state.json').read_text()),state)
+ def test_rotation_corruption_does_not_extract(self):
+  with tempfile.TemporaryDirectory() as source,tempfile.TemporaryDirectory() as target:
+   root=pathlib.Path(source)/'speech-site/ask-private/r2-approved-current';root.mkdir(parents=True);(root/'state.json').write_text(json.dumps({'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':False,'completedPages':1}));s3=FakeS3({});m.rotation_store(source,s3);p=json.loads(s3.objects['rotation/current.json']);s3.objects[p['key']]=b'tampered'
+   with self.assertRaises(ValueError):m.rotation_hydrate(target,s3)
+   self.assertFalse((pathlib.Path(target)/'speech-site').exists())
  def fixture(self,public=b'{"exact":1}\n',tampered=False):
   config=json.dumps({'schema_version':1,'python':'C:/Python314/python.exe','feed':'C:/old/speech-site/ask-private/feed.sqlite3'}).encode();files={'speech-site/ask-private/public-publisher-config.json':config,'speech-site/public/pinnacle-pages-data/fixture.json':public};b=io.BytesIO()
   with zipfile.ZipFile(b,'w') as z:

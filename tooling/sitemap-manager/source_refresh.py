@@ -9,6 +9,7 @@ from html.parser import HTMLParser
 import manager as m
 from discovery_policy import apply_discovery_policy
 from public_media_snapshot import MediaHTML,MAX_BODY
+from managed_media_sources import protected_images
 
 def packed(x):return json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':'))
 def digest(x):return hashlib.sha256(packed(x).encode()).hexdigest()
@@ -52,15 +53,21 @@ def public_resource(url,prior=None):
  if prior and prior.get('etag'):headers['If-None-Match']=prior['etag']
  try:
   with open_public_source(urllib.request.Request(url,headers=headers),timeout=30) as r:
-   data=r.read(MAX_BODY+1);status=r.status;final=r.url;kind=r.headers.get('Content-Type','');robots=r.headers.get('X-Robots-Tag','');etag=r.headers.get('ETag')
+   data=r.read(MAX_BODY+1);status=r.status;final=r.url;kind=r.headers.get('Content-Type','');robots=r.headers.get('X-Robots-Tag','');etag=r.headers.get('ETag');response_headers=dict(r.headers)
   if len(data)>MAX_BODY or not kind.lower().startswith('text/html'):raise ValueError('Bounded HTML source unavailable')
   parser=PublicHTML(url);parser.feed(data.decode('utf8','replace'));parser.close();row=parser.current(robots)
   row.update(status=status,final_url=final,body_sha256=hashlib.sha256(data).hexdigest(),etag=etag,observed_at=dt.datetime.now(dt.timezone.utc).isoformat(),conditional=False)
   row['publication_qualified']=status==200 and m.normal(final)==m.normal(url) and not row['canonical_conflict'] and not row['noindex']
+  if url=='https://materials.pinnacleblooms.org/':
+   row['catalogue_capture']={'body_hex':data.hex(),'proof':{**row,'method':'GET','body_bytes':len(data),'response_headers':{'Content-Type':kind,'X-Robots-Tag':robots},'credentials_sent':False,'redirects_followed':False,'media_bodies_downloaded':False}}
   return row
  except urllib.error.HTTPError as e:
   if e.code==304 and prior:
-   row=dict(prior);row.update(conditional=True,observed_at=dt.datetime.now(dt.timezone.utc).isoformat());return row
+   row=dict(prior);row.update(conditional=True,observed_at=dt.datetime.now(dt.timezone.utc).isoformat())
+   if row.get('catalogue_capture'):
+    row['catalogue_capture']=json.loads(json.dumps(row['catalogue_capture']));proof=row['catalogue_capture']['proof'];proof.setdefault('original_capture_at',proof['observed_at']);proof.update(observed_at=row['observed_at'],conditional_revalidation_status=304)
+   elif url=='https://materials.pinnacleblooms.org/':return public_resource(url)
+   return row
   return {'page_url':url,'status':e.code,'publication_qualified':False,'error':'public source HTTP '+str(e.code)}
  except (OSError,ValueError) as e:return {'page_url':url,'status':None,'publication_qualified':False,'error':str(e)}
 
@@ -155,7 +162,8 @@ def apply_resources(db,records,previous,aliases=None):
       if isinstance(address,str) and address.startswith('https://'):previous_refs.add(mapped(address))
    new=refs-known-previous_refs
    for item in sorted(new):exceptions.append({'url':url,'media_url':item,'condition':'New/unmapped media reference needs existing R2/rights association; not promoted','owner':'resource publisher'})
-   removed_images=[i for i in images if m.normal(i['loc']) not in refs];removed_videos=[v for v in videos if m.normal(video_location(v)) not in refs]
+   owned={m.normal(u) for u in protected_images(meta)}
+   removed_images=[i for i in images if data.get('noimageindex') or m.normal(i['loc']) not in refs and m.normal(i['loc']) not in owned];removed_videos=[v for v in videos if m.normal(video_location(v)) not in refs]
    # A fetched complete DOM can retire a previously approved reference from this parent.
    if removed_images or removed_videos:
     row['images_json']=m.dump([i for i in images if i not in removed_images]);row['videos_json']=m.dump([v for v in videos if v not in removed_videos]);changes.append({'url':url,'kind':'rendered_media_reference_removed','images':len(removed_images),'videos':len(removed_videos)})
@@ -166,7 +174,7 @@ def apply_resources(db,records,previous,aliases=None):
   row['metadata_json']=m.dump(meta);m.upsert(db,m.refresh_digest(row))
  return changes,exceptions,current
 
-def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None,aliases=None,reuse_resources=None):
+def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None,aliases=None,reuse_resources=None,approved_release=None):
  output=Path(output)
  if output.exists():raise ValueError('Use a new immutable source refresh checkpoint')
  output.mkdir(parents=True);candidate=output/'candidate.sqlite3';source=sqlite3.connect('file:'+str(Path(feed).resolve())+'?mode=ro',uri=True);target=m.connect(candidate)
@@ -186,11 +194,16 @@ def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None
     if len(resources)%100==0:print(packed({'resourceSnapshots':len(resources),'expected':len(urls)}),flush=True)
  try:
   target.execute('BEGIN IMMEDIATE');changes,exceptions=apply_ask(target,snapshot,baseline,metadata_reader);rchanges,rexceptions,current=apply_resources(target,resources,prior,aliases);changes+=rchanges;exceptions+=rexceptions
+  media_proof=None
+  if approved_release:
+   from managed_media_sources import refresh as refresh_managed_media
+   media_changes,media_proof=refresh_managed_media(target,Path(__file__).resolve().parents[2],approved_release,resources,output/'managed-media');changes+=media_changes
   changes += apply_discovery_policy(target, m)
   target.execute('INSERT OR REPLACE INTO receipts VALUES(?,?,?)',('native-source-refresh','source_refresh',packed({'snapshot_sha256':snapshot['sourceSHA256'],'resource_source_pages':len(resources),'changes':changes,'exceptions':exceptions})));target.commit()
  finally:target.close()
  (output/'resource-snapshot.jsonl').write_text(''.join(packed(current.get(u,resources[u]))+'\n' for u in urls),encoding='utf8')
  result={'candidate_feed':str(candidate.resolve()),'source_snapshot_sha256':snapshot['sourceSHA256'],'ask_eligible_checked':snapshot['eligibleTotal'],'resources_checked':len(resources),'changes':changes,'exceptions':exceptions,'source_rows_modified':False,'private_objects_inventoried':False,'observation_is_not_lastmod':True}
+ if media_proof:result['managed_media']=media_proof
  (output/'source-delta.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8');return result
 
 def main():
@@ -227,13 +240,13 @@ def main():
   with zipfile.ZipFile(v.archive,'w',zipfile.ZIP_DEFLATED) as z:
    for name in ['manifest.json']+[f['path'] for f in manifest['files']]:z.write(v.package_release/name,name)
   print(packed({'archive_sha256':m.digest_file(v.archive),'release':manifest['release_id']}));return
- p=argparse.ArgumentParser();p.add_argument('--feed',required=True,type=Path);p.add_argument('--snapshot',required=True,type=Path);p.add_argument('--baseline-publisher',required=True,type=Path);p.add_argument('--resource-baseline',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--node',required=True);p.add_argument('--bindings',required=True);p.add_argument('--aliases',type=Path);p.add_argument('--reuse-resources',type=Path);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--feed',required=True,type=Path);p.add_argument('--snapshot',required=True,type=Path);p.add_argument('--baseline-publisher',required=True,type=Path);p.add_argument('--resource-baseline',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--node',required=True);p.add_argument('--bindings',required=True);p.add_argument('--aliases',type=Path);p.add_argument('--reuse-resources',type=Path);p.add_argument('--approved-release',type=Path);a=p.parse_args()
  snapshot=json.loads(a.snapshot.read_text(encoding='utf8'));baseline=list(csv.DictReader(a.baseline_publisher.open(encoding='utf-8-sig')));resources=[json.loads(line) for line in a.resource_baseline.read_text(encoding='utf8').splitlines() if line]
  def reader(url,source):
   target=a.output/'answer-readbacks'/('source-'+hashlib.sha256(url.encode()).hexdigest()+'.json');target.parent.mkdir(parents=True,exist_ok=True)
   r=subprocess.run([a.node,'scripts/current-public-answer.mjs','--url',url,'--bindings',a.bindings,'--output',str(target)],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf8')
   if r.returncode:return {'publication_qualified':False,'error':'Current maintained-reader comparison failed; see private source exception'}
   return json.loads(target.read_text(encoding='utf8'))
- result=refresh(a.feed,snapshot,baseline,resources,a.output,reader,json.loads(a.aliases.read_text(encoding='utf8')) if a.aliases else None,a.reuse_resources);print(packed({k:result[k] for k in ('candidate_feed','ask_eligible_checked','resources_checked','source_rows_modified','private_objects_inventoried')}|{'changes':len(result['changes']),'exceptions':len(result['exceptions'])}))
+ result=refresh(a.feed,snapshot,baseline,resources,a.output,reader,json.loads(a.aliases.read_text(encoding='utf8')) if a.aliases else None,a.reuse_resources,a.approved_release);print(packed({k:result[k] for k in ('candidate_feed','ask_eligible_checked','resources_checked','source_rows_modified','private_objects_inventoried')}|{'changes':len(result['changes']),'exceptions':len(result['exceptions'])}))
 
 if __name__=='__main__':main()

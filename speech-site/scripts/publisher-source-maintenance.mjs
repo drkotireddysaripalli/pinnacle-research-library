@@ -16,12 +16,13 @@ try{
  if(seed?.complete&&seed.registrySHA256===registrySHA&&Date.now()-Date.parse(seed.completedAt)<3600000){r2root=initial;receipt.r2ReusedVerifiedObservation=seed.completedAt;}
  else{
   const state=await read(r2root+'/state.json').catch(()=>null);
-  if(state&&(state.complete||state.registrySHA256!==registrySHA))await fs.rename(r2root,root+'/previous-r2-cycle');
+  if(state&&(state.complete||state.registrySHA256!==registrySHA||Date.now()-Date.parse(state.startedAt)>23*3600000))await fs.rename(r2root,root+'/previous-r2-cycle');
   for(let segment=0;segment<3;segment++){assert.equal(await run('r2-segment-'+segment,['scripts/r2-approved-rotation.mjs','--root',r2root]),0);if((await read(r2root+'/state.json')).complete)break;}
  }
- const r2state=await read(r2root+'/state.json');receipt.r2Complete=r2state.complete;receipt.r2MetadataPages=r2state.completedPages;
- let qualifiedR2;
- if(r2state.complete){const p=await read(r2root+'/proof.json'),delta=await read(r2root+'/qualified-changes.json');receipt.r2Proof=p;receipt.r2ObservedAt=r2state.completedAt;
+ const r2state=await read(r2root+'/state.json');receipt.r2Complete=r2state.complete;receipt.r2MetadataPages=r2state.completedPages;receipt.r2Checkpoint={startedAt:r2state.startedAt,completedAt:r2state.completedAt||null,pass:r2state.pass,scope:r2state.scope,page:r2state.page,cursorPresent:!!r2state.cursor,complete:r2state.complete};await save(report,receipt);
+ if(process.env.PINNACLE_CLOUD_RUNNER==='1'){const c=spawn(process.env.PYTHON_EXECUTABLE||'python3',['scripts/cloud-source-state.py','rotation-store'],{windowsHide:true,stdio:'inherit'});assert.equal(await new Promise((resolve,reject)=>{c.once('error',reject);c.once('close',resolve)}),0,'R2 checkpoint must persist separately from accepted publication');}let qualifiedR2;
+ if(!r2state.complete){receipt.status='source-verified-pending-source-holds-or-R2-coverage';receipt.finishedAt=new Date().toISOString();await save(report,receipt);throw Error('Bounded R2 coverage remains incomplete; separate progress retained and no source publication started');}
+ if(r2state.complete){const p=await read(r2root+'/proof.json'),delta=await read(r2root+'/qualified-changes.json');receipt.r2Proof=p;receipt.r2ObservedAt=r2state.completedAt;assert(p.coverageFreshness?.fresh,'Complete R2 metadata coverage is stale; last-good preserved');await save(report,receipt);
   // Initialization records are metadata only; never a reason to remove video.
   if(delta.initializations?.length){for(const x of delta.initializations)if(approved[x.id]&&!approved[x.id].etag)approved[x.id].etag=x.etag;cfg.r2_associations=root+'/initialized-r2-associations.json';await save(cfg.r2_associations,approved);await save(configPath,cfg);receipt.metadataInitializations=delta.initializations.length;}
   qualifiedR2=verifiedR2Source(p,delta,approved,registrySHA,r2state.completedAt);receipt.r2StableChangesDrained=qualifiedR2.totalStableChangesApplied;receipt.pendingR2Changes=qualifiedR2.remainingStableChanges;receipt.unstableR2Holds=delta.holds.length;
