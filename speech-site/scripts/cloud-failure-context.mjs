@@ -19,11 +19,22 @@ function exceptionCategory(value){
  return known.find(([,prefix])=>typeof value==='string'&&value.startsWith(prefix))?.[0]||'qualification-unknown';
 }
 async function read(file){try{return JSON.parse(await fs.readFile(file,'utf8'));}catch{return null;}}
+async function publicationProviderFailure(id,cwd){
+ const job='cloud-'+id;
+ for(const suffix of ['-source-release','-frozen-release']){
+  const event=await read(path.join(cwd,'outputs',job+suffix,'publisher-event.json'));
+  const failed=(event?.steps||[]).find(s=>s.exitCode!==0&&['capture','regenerate-publication','prepare','source','ci','upload','deploy','verify'].includes(s.label));
+  if(!failed?.log)continue;
+  const file=path.resolve(cwd,failed.log),fence=path.resolve(cwd,'ask-private',job+suffix)+path.sep;if(!file.startsWith(fence)||!file.endsWith('.log'))continue;
+  const tail=(await fs.readFile(file,'utf8').catch(()=>'' )).slice(-24000),match=tail.match(/\{"status":\d+,"path":"[^"]*","errors":\[[^\n]*\]\}/);
+  if(match){try{const value=JSON.parse(match[0]);if(Number.isInteger(value.status)&&Array.isArray(value.errors))return{stage:failed.label,status:value.status,errors:value.errors.slice(0,8).map(e=>({code:Number.isInteger(e.code)?e.code:null,message:typeof e.message==='string'?e.message.slice(0,3000):''}))};}catch{}}
+ }return null;
+}
 export async function privateSourceDiagnostics(id,cwd=process.cwd()){
  if(!/^[a-z0-9-]{8,80}$/.test(id))throw Error('Invalid diagnostics identity');
  const job='cloud-'+id,source=await read(path.join(cwd,'outputs',job+'-source','source-release.json')),file=source?.delta?path.resolve(cwd,source.delta):null,fence=path.resolve(cwd,'ask-private',job+'-source')+path.sep;
  const delta=file?.startsWith(fence)&&file.endsWith('.json')?await read(file):null;
- return{schema:1,dispatchId:id,context:await cloudFailureContext(id,cwd),sourceExceptions:(delta?.exceptions||[]).map(x=>Object.fromEntries(['url','media_url','condition','owner','subject_sha256'].filter(k=>typeof x[k]==='string').map(k=>[k,x[k]])))};
+ return{schema:1,dispatchId:id,context:await cloudFailureContext(id,cwd),publicationFailure:await publicationProviderFailure(id,cwd),sourceExceptions:(delta?.exceptions||[]).map(x=>Object.fromEntries(['url','media_url','condition','owner','subject_sha256'].filter(k=>typeof x[k]==='string').map(k=>[k,x[k]])))};
 }
 export async function cloudFailureContext(id,cwd=process.cwd()){
  if(!/^[a-z0-9-]{8,80}$/.test(id))throw Error('Invalid diagnostics identity');
@@ -38,6 +49,7 @@ export async function cloudFailureContext(id,cwd=process.cwd()){
  result.publicationJournal.versionRecorded ||= !!release?.candidateVersion;
  result.publicationJournal.deploymentRecorded ||= !!release?.deployment;
  result.publicationJournal.pendingMutation ||= !!release?.pending;
+ const provider=await publicationProviderFailure(id,cwd);if(provider)result.providerFailure={stage:provider.stage,status:provider.status,codes:provider.errors.map(e=>e.code).filter(Number.isInteger)};
  result.coverage={r2Complete:boolean(maintenance?.r2Complete),metadataPages:count(maintenance?.r2MetadataPages),pendingR2Changes:count(maintenance?.pendingR2Changes),unstableR2Holds:count(maintenance?.unstableR2Holds),sourceExceptions:count(source?.sourceExceptions),r2Proof:safeProof(maintenance?.r2Proof),r2Checkpoint:safeCheckpoint(maintenance?.r2Checkpoint)};
  const deltaPath=source?.delta?path.resolve(cwd,source.delta):null,deltaFence=path.resolve(cwd,'ask-private',job+'-source')+path.sep;
  const delta=deltaPath?.startsWith(deltaFence)&&deltaPath.endsWith('.json')?await read(deltaPath):null;
