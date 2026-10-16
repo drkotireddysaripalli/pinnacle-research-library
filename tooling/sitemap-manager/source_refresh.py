@@ -174,6 +174,7 @@ def apply_resources(db,records,previous,aliases=None):
    if removed_images or removed_videos:
     row['images_json']=m.dump([i for i in images if i not in removed_images]);row['videos_json']=m.dump([v for v in videos if v not in removed_videos]);changes.append({'url':url,'kind':'rendered_media_reference_removed','images':len(removed_images),'videos':len(removed_videos)})
    if old.get('body_sha256')!=data['body_sha256'] or old.get('content_sha256') and old['content_sha256']!=data['content_sha256']:
+    if old.get('content_sha256') and old['content_sha256']!=data['content_sha256']:changes.append({'url':url,'kind':'public_resource_content_change'})
     row['title']=data['title'] or row['title'];row['description']=data['description'] or row['description'];m.invalidate_approval(row,meta)
     if row['title']!=db.execute('SELECT title FROM pages WHERE url=?',(url,)).fetchone()[0] or row['description']!=db.execute('SELECT description FROM pages WHERE url=?',(url,)).fetchone()[0]:changes.append({'url':url,'kind':'public_resource_metadata_change'})
    meta.setdefault('native_source',{}).update(source='public_resource_DOM',content_sha256=data['content_sha256'],body_sha256=data['body_sha256'],observed_at=data['observed_at'])
