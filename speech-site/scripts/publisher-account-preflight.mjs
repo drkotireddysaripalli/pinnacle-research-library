@@ -8,6 +8,8 @@ export function publisherSettings(settings,{root=false}={}){
  if(value.bindings)value.bindings.sort((a,b)=>a.name.localeCompare(b.name));
  return value;
 }
+// Cloudflare sets triggered_by itself; it is readable but not an upload input.
+export function publisherUploadAnnotations(annotations,id){const next={...(annotations||{}),'workers/message':id};delete next['workers/triggered_by'];return next;}
 export async function publisherAccountPreflight({env=process.env,readResource,whoami,probeLegacy=false}){
  if(env.CLOUDFLARE_API_TOKEN){
   if(env.CLOUDFLARE_ACCOUNT_ID)assert.equal(env.CLOUDFLARE_ACCOUNT_ID,PUBLISHER_ACCOUNT);

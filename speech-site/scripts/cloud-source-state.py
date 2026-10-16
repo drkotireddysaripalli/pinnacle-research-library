@@ -189,7 +189,7 @@ if __name__=='__main__':
   s3=client()
   if args.action=='diagnostics-store':
    data=pathlib.Path(args.job_file).read_bytes();record=json.loads(data)
-   if set(record)!={'schema','dispatchId','context','sourceExceptions'} or not re.fullmatch('[a-z0-9-]{8,80}',record['dispatchId']) or len(data)>2_000_000:raise ValueError('Invalid private diagnostic record')
+   if set(record)-{'schema','dispatchId','context','sourceExceptions','publicationFailure'} or not {'schema','dispatchId','context','sourceExceptions'}.issubset(record) or not re.fullmatch('[a-z0-9-]{8,80}',record['dispatchId']) or len(data)>2_000_000:raise ValueError('Invalid private diagnostic record')
    s3.put_object(Bucket=BUCKET,Key='diagnostics/'+record['dispatchId']+'.json',Body=data,ContentType='application/json');print(json.dumps({'privateSourceDiagnosticsPersisted':True}))
   elif args.action=='rotation-store':print(json.dumps(rotation_store(args.repo,s3)))
   elif args.action=='job-store':
