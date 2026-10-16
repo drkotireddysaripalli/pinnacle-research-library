@@ -46,6 +46,7 @@ export function stripLegacyNoscript(body){
 // is active. No public collector, preferences, call helper or links are added.
 export async function repairLegacyExclusions(request,response){
  const scope=legacyMeasurementScope(request);
+ if(scope!=='private'&&(request.headers.has('authorization')||response.headers.has('set-cookie')))return response;
  if(!scope||response.status!==200||!response.body||!response.headers.get('content-type')?.includes('text/html')||/no-transform/i.test(response.headers.get('cache-control')||''))return response;
  if(scope==='private')return repairLegacyMeasurement(request,response);
  const headers=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])headers.delete(k);
@@ -54,6 +55,7 @@ export async function repairLegacyExclusions(request,response){
 }
 export async function repairLegacyMeasurement(request,response){
  const scope=legacyMeasurementScope(request);
+ if(scope!=='private'&&(request.headers.has('authorization')||response.headers.has('set-cookie')))return response;
  if(!scope||response.status!==200||!response.body||response.headers.has('content-security-policy')||!response.headers.get('content-type')?.includes('text/html')||/no-transform/i.test(response.headers.get('cache-control')||''))return response;
  const reader=response.body.getReader(),decoder=new TextDecoder(),encoder=new TextEncoder(),chunks=[];let prefix='',done=false;
  // The maintained Android contact variant places its known delayed analytics

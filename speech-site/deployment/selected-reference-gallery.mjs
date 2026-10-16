@@ -1,5 +1,5 @@
-import selection from './selected-reference-data.json';
-import optimized from './selected-reference-optimized.json';
+import selection from './selected-reference-data.json' with {type:'json'};
+import optimized from './selected-reference-optimized.json' with {type:'json'};
 const origin='https://www.pinnacleblooms.org';
 const key=value=>{const u=new URL(value);return u.origin+u.pathname.replace(/%[0-9a-f]{2}/gi,v=>v.toUpperCase());};
 const selected=new Map(Object.entries(selection).map(([u,r])=>[key(u),r]));
