@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "archive": "baseline/publisher-refresh-cloud-media-repair-20261016-ec1825c-source.zip",
-  "archive_sha256": "67eac4a72892f55c5ece01ce41fcba10d12598e2aaa698ea86cd904007f07a9b",
-  "release_id": "a70c763dc48e5ad7cded6083855b488a86ca750a91f0f1f2703342c5048dd3d3",
+  "archive": "baseline/publisher-refresh-cloud-manual-selected-reference-20261016-source.zip",
+  "archive_sha256": "aeba81733f18161597bada981895ae1691fa2e3843c8377158041f6bc31794fc",
+  "release_id": "a4c203afaab81dbf2dc07ef4137624c05771b52bae28f8924b48ac039134f123",
   "expected_page_urls": 71099,
-  "reviewed_source": "Bounded owner-authorized public publisher refresh; complete stable Ask content fingerprints, current public resource DOM and existing reviewed media rights/parent associations. Source receipt cloud-media-repair-20261016-ec1825c-source"
+  "reviewed_source": "Bounded owner-authorized public publisher refresh; complete stable Ask content fingerprints, current public resource DOM and existing reviewed media rights/parent associations. Source receipt cloud-manual-selected-reference-20261016-source"
 }
