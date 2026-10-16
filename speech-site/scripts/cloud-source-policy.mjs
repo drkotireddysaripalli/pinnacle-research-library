@@ -22,5 +22,6 @@ export function mayRecoverReadOnly(source,before,after,count=0) {
 }
 export function priorJobPermitsExecution(job) {
   return !job||['verified-cloud-source-and-distribution','source-verified-submission-pending','owner-reconciled-last-good'].includes(job.status)||
-    (job.status==='verified-read-only-failure'&&Number(job.readOnlyRecoveries)<3);
+    (job.status==='verified-read-only-failure'&&Number(job.readOnlyRecoveries)<3)||
+    (job.status==='source-verified-source-holds-pending'&&['verified_unchanged_publication','verified_published'].includes(job.sourcePhase)&&typeof job.version==='string'&&job.version.length>0&&Number(job.publicFilesVerified)>0);
 }
