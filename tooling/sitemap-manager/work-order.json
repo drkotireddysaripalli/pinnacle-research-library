@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T09:27:27.597869+00:00",
+  "updated_at": "2026-10-16T09:34:46.772054+00:00",
   "accountable_owner": "This existing Pinnacle sitemap chat",
   "objective": "Deliver a repeatable, source-backed sitemap ecosystem for Pinnacle pages, images, videos and approved public companions, with safe publication, supported engine discovery and maintainable verification.",
   "completion_boundary": "Prepared files, local tests, native storage, production serving, engine processing and care outcomes are separately evidenced. Whole-estate completeness requires publisher and asset inventories.",
@@ -54,7 +54,7 @@
       "depends_on": [
         "SM02"
       ],
-      "next_action": "Windows integrates checked-in pure formatter and observed-use adapter on47existingAbilityparents; verify actualpublic1899pairs, sourceownership and7scope daily R2proof. Guru150originalcandidates await authoritative uploader/galleryassociation;347video files remain unassociated;63Abilityimagesheld.",
+      "next_action": "Existing Windows publisher integrates current Ability reference sections (1,899 exact pairs on47 existing parents) and new selected Guru galleries (150 pairs on146 existing parents), conditionally repairs146 confirmed broken primary thumbnails, and verifies actual live rendering before image XML admission. Use one fresh eight-scope registry/observation cycle and an actual Cloudflare scheduled acceptance. Keep63 Ability image objects and322 unresolved video source selections explicitly held.",
       "evidence": [
         "outputs/sitemap-coverage-and-field-contract-20261013.json",
         "outputs/sitemap-public-cms-media-receipt-20261013.json",
@@ -347,7 +347,8 @@
           6132
         ],
         "receipt": "work/url-reconciliation/guru-gallery-source-20261016/guru-gallery-disposition.json",
-        "remote_candidate_commit": "a0a6fa3e2535a53efd1d688958c640c1bad5e4e4"
+        "remote_candidate_commit": "a0a6fa3e2535a53efd1d688958c640c1bad5e4e4",
+        "superseded_gate": "Legacy uploader-code recovery is unnecessary for this new explicit150-object/146-parent publication selection; current rendering qualification remains mandatory."
       },
       "ability_reference_formatter": {
         "status": "checked_in_current_public_labels_pending_owner_integration_and_live_readback",
@@ -383,7 +384,8 @@
         ],
         "contracts_passed": 22,
         "transition": "Snapshot old observation pointer/archive/checkpoint; fresh7scope cycle; retain acceptedpublication separately; never relabelold5scopeabsence.",
-        "evidence": "work/url-reconciliation/ability-r2-scopes-20261016/checkin-receipt.json"
+        "evidence": "work/url-reconciliation/ability-r2-scopes-20261016/checkin-receipt.json",
+        "superseded_by": "tooling/sitemap-manager/selected-media-r2-scopes-20261016/patch-receipt.json"
       },
       "video_source_qualification_20261016": {
         "held_storage_objects": 347,
@@ -416,6 +418,40 @@
           "evidence": "current-tactile-readback/report.json"
         },
         "native_packet": "tooling/sitemap-manager/knowledge-media/video-source-20261016/public-video-source-disposition-packet-20261016.zip"
+      },
+      "selected_guru_publication_20261016": {
+        "status": "prepared, current delivery and parent preflight passed; actual rendering and sitemap admission pending",
+        "selection_provenance": "New explicit exact-object publishing selection, derived from public Guru IDs, contiguous sequences and declared image counts; no legacy upload/render provenance asserted",
+        "parents": 146,
+        "image_pairs": 150,
+        "primary_404_fallbacks_permitted": 146,
+        "og_fallbacks_permitted": 145,
+        "unrelated_og_6129_preserved": true,
+        "missing_original_parents_excluded": 2,
+        "null_count_parents_excluded": 8,
+        "current_observed_from": "2026-10-16T09:26:25.667353+00:00",
+        "current_observed_to": "2026-10-16T09:26:52.268710+00:00",
+        "tests_passed": 10,
+        "feed_rows_created": 0,
+        "sitemap_admissions": 0,
+        "packet": "tooling/sitemap-manager/guru-selected-galleries/guru-selected-galleries-bootstrap-20261016.zip",
+        "packet_sha256": "4b8f2c17221066c4483af541fbc2d55de62628189cbaeb000c85b5dcfe7b520f",
+        "receipt": "tooling/sitemap-manager/guru-selected-galleries/bootstrap-receipt.json"
+      },
+      "selected_media_r2_scope_extension": {
+        "status": "prepared, independently accepted; not yet a deployed eight-scope proof",
+        "scope_count": 8,
+        "original_five_indices_preserved": true,
+        "new_prefixes": [
+          "Ability/Questions/",
+          "Ability/Examples/",
+          "Assets/IMAGEGALLERY/"
+        ],
+        "tests_passed": 22,
+        "fresh_observation_cycle_required": true,
+        "prior_state_snapshot_required": true,
+        "accepted_publication_bootstrap_unchanged": true,
+        "receipt": "tooling/sitemap-manager/selected-media-r2-scopes-20261016/patch-receipt.json"
       }
     },
     {
@@ -1167,10 +1203,10 @@
     "historical_scope_notice": "The14Oct approved-baseline completion is historical;16Oct comprehensive media and corrected native daily publication are not complete."
   },
   "latest_active_focus": {
-    "at": "2026-10-16T09:27:27.597869+00:00",
+    "at": "2026-10-16T09:34:46.772054+00:00",
     "current_gate": "PR97 exact-source CI passed and merged; selected media integration is next",
-    "selected_media": "Ability 1,899 image pairs on 47 parents prepared; new Guru selection of 150 images on 146 existing parents undergoing current preflight",
-    "automation": "Independently accepted eight-scope patch; one fresh selected-registry cycle and actual Cloudflare Scheduled proof; desktops are not runtime dependencies",
+    "selected_media": "Ability1,899/47 and Guru150/146 prepared for integration; current exact image/parent checks passed; live render and sitemap inclusion remain pending",
+    "automation": "Combined eight-scope packet checked in at cac47cec; one fresh selected-registry cycle and actual Cloudflare Scheduled proof remain pending; no desktop unlock runtime dependency",
     "remaining": "Deploy and verify actual media rendering plus sitemap pairs; current Windows upkeep timer-disabled readback; Tactile placeholder VideoObject repair; 322 video selections remain unsupported"
   }
 }
