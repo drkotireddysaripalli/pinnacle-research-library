@@ -194,7 +194,7 @@ if __name__=='__main__':
   elif args.action=='rotation-store':print(json.dumps(rotation_store(args.repo,s3)))
   elif args.action=='job-store':
    data=pathlib.Path(args.job_file).read_bytes();record=json.loads(data)
-   if set(record)-{'dispatchId','scheduledTime','runId','attempt','status','startedAt','finishedAt','version','publicFilesVerified','steps','sourcePhase','readOnlyRecoveries'}:raise ValueError('Unexpected job checkpoint fields')
+   if set(record)-{'dispatchId','scheduledTime','runId','attempt','status','startedAt','finishedAt','version','publicFilesVerified','steps','sourcePhase','readOnlyRecoveries','submissionsAccepted','engineProcessingPending'}:raise ValueError('Unexpected job checkpoint fields')
    s3.put_object(Bucket=BUCKET,Key='jobs/current.json',Body=data,ContentType='application/json');print(json.dumps({'jobCheckpointPersisted':True}))
   elif args.action=='outbox-store':
    data=pathlib.Path('ask-private/sitemap-submission-outbox.json').read_bytes();json.loads(data);s3.put_object(Bucket=BUCKET,Key='outbox/current.json',Body=data,ContentType='application/json');print(json.dumps({'outboxPersisted':True,'sha256':sha(data)}))
