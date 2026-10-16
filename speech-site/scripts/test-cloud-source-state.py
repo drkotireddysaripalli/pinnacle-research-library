@@ -6,6 +6,11 @@ class FakeS3:
  def get_object(self,**kw):
   if kw['Key'] not in self.objects:raise Missing()
   return {'Body':io.BytesIO(self.objects[kw['Key']])}
+ def put_object(self,**kw):self.objects[kw['Key']]=kw['Body']
+def rotation_fixture(source):
+ root=pathlib.Path(source)/'speech-site/ask-private/r2-approved-current';root.mkdir(parents=True)
+ page={'pass':0,'scope':0,'page':0,'bucket':'pbn-test','prefix':'Assets/InterventionTechniques/','registrySHA256':'a'*64,'inputCursor':None,'nextCursor':'opaque-list-position','truncated':True,'paginationEvidence':'explicit-truncation-flag','rowsExamined':1000,'known':[],'observedAt':'2026-10-16T00:01:00Z'};data=json.dumps(page).encode();name='pass-0-scope-0-page-0.json';(root/name).write_bytes(data)
+ state={'schemaVersion':2,'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':False,'completedPages':1,'pass':0,'scope':0,'page':1,'cursor':'opaque-list-position','pageHashes':{name:m.sha(data)}};(root/'state.json').write_text(json.dumps(state));return root,state
 class StateTests(unittest.TestCase):
  def test_traversal_and_secret_snapshots_rejected(self):
   for s in ('../outside','/etc/password','speech-site/ask-private/bindings.json','speech-site/.git/config','speech-site/private/settings.json','other/data.json'):
@@ -13,6 +18,25 @@ class StateTests(unittest.TestCase):
  def test_only_path_fields_are_relocated(self):
   r=m.relocate({'feed':'C:/old/speech-site/private/feed.sqlite3','title':'C:/old/title','url':'https://www.pinnacleblooms.org/page'},'C:/old','/new')
   self.assertEqual(r['feed'],str(pathlib.Path('/new/speech-site/private/feed.sqlite3')));self.assertEqual(r['title'],'C:/old/title')
+ def test_rotation_progress_survives_without_advancing_publication_baseline(self):
+  with tempfile.TemporaryDirectory() as source,tempfile.TemporaryDirectory() as target:
+   root,state=rotation_fixture(source);s3=FakeS3({});m.rotation_store(source,s3);self.assertNotIn('bootstrap.json',s3.objects);result=m.rotation_hydrate(target,s3);self.assertEqual(result['pages'],1);self.assertEqual(json.loads((pathlib.Path(target)/'speech-site/ask-private/r2-approved-current/state.json').read_text()),state)
+ def test_rotation_corruption_does_not_extract(self):
+  with tempfile.TemporaryDirectory() as source,tempfile.TemporaryDirectory() as target:
+   rotation_fixture(source);s3=FakeS3({});m.rotation_store(source,s3);p=json.loads(s3.objects['rotation/current.json']);s3.objects[p['key']]=b'tampered'
+   with self.assertRaises(ValueError):m.rotation_hydrate(target,s3)
+   self.assertFalse((pathlib.Path(target)/'speech-site').exists())
+ def test_valid_hashes_with_missing_scope_terminals_cannot_restore_or_imply_deletion(self):
+  files={};state={'schemaVersion':2,'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':True,'completedPages':2,'pass':2,'scope':0,'page':0,'cursor':None,'pageHashes':{}}
+  for p in range(2):
+   name=f'pass-{p}-scope-0-page-0.json';data=json.dumps({'pass':p,'scope':0,'page':0,'bucket':'pbn-test','prefix':'Assets/InterventionTechniques/','registrySHA256':'a'*64,'inputCursor':None,'nextCursor':None,'truncated':False,'paginationEvidence':'short-terminal-page-without-cursor','rowsExamined':0,'known':[],'observedAt':'2026-10-16T00:01:00Z'}).encode();files[name]=data;state['pageHashes'][name]=m.sha(data)
+  files['state.json']=json.dumps(state).encode();stream=io.BytesIO()
+  with zipfile.ZipFile(stream,'w') as z:
+   for name,data in files.items():z.writestr(name,data)
+  blob=stream.getvalue();key='rotation/'+m.sha(blob)+'.zip';pointer={'schema':1,'key':key,'sha256':m.sha(blob),'bytes':len(blob),'registrySHA256':state['registrySHA256'],'startedAt':state['startedAt'],'files':[{'name':n,'bytes':len(b),'sha256':m.sha(b)} for n,b in files.items()]};s3=FakeS3({'rotation/current.json':json.dumps(pointer).encode(),key:blob})
+  with tempfile.TemporaryDirectory() as target:
+   with self.assertRaisesRegex(ValueError,'chain'):m.rotation_hydrate(target,s3)
+   self.assertFalse((pathlib.Path(target)/'speech-site').exists())
  def fixture(self,public=b'{"exact":1}\n',tampered=False):
   config=json.dumps({'schema_version':1,'python':'C:/Python314/python.exe','feed':'C:/old/speech-site/ask-private/feed.sqlite3'}).encode();files={'speech-site/ask-private/public-publisher-config.json':config,'speech-site/public/pinnacle-pages-data/fixture.json':public};b=io.BytesIO()
   with zipfile.ZipFile(b,'w') as z:

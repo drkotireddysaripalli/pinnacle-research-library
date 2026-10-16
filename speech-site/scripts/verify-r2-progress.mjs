@@ -1,0 +1,2 @@
+import fs from'node:fs/promises';import path from'node:path';import{validateCoverageChain}from'./r2-coverage-chain.mjs';
+const root=process.argv[2];if(!root)throw Error('Progress directory required');const state=JSON.parse(await fs.readFile(path.join(root,'state.json'),'utf8')),files={};for(const name of await fs.readdir(root))if(/^pass-[01]-scope-[0-4]-page-\d+\.json$/.test(name))files[name]=await fs.readFile(path.join(root,name));console.log(JSON.stringify(validateCoverageChain(state,files)));
