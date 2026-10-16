@@ -1,8 +1,11 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {build} from 'esbuild';import{Miniflare,convertV4MiniflareOptions}from'miniflare';
-import{presentationPath,presentationCSS,servePresentationRepair}from'../deployment/public-presentation-repair.mjs';
+import{presentationPath,presentationCSS,legacyPresentationPath,legacyPresentationCSS,servePresentationRepair}from'../deployment/public-presentation-repair.mjs';
+import {createHash} from 'node:crypto';
 test('Public repair CSS serves exact bytes and HEAD without intercepting another host or method',async()=>{
  assert.equal(await servePresentationRepair(new Request('https://www.pinnacleblooms.org'+presentationPath)).text(),presentationCSS);
+ assert.equal(await servePresentationRepair(new Request('https://www.pinnacleblooms.org'+legacyPresentationPath)).text(),legacyPresentationCSS);
+ assert.equal(createHash('sha256').update(legacyPresentationCSS).digest('hex'),'4d87d00cfa1970e2b2e0451d6f3738221e7d97d7aa450d9160ed8883a0319c58');
  assert.equal(await servePresentationRepair(new Request('https://www.pinnacleblooms.org'+presentationPath,{method:'HEAD'})).text(),'');
  assert.equal(servePresentationRepair(new Request('https://other.example'+presentationPath)),null);
 });
