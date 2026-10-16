@@ -1,3 +1,4 @@
+import{retainedPublisherTemplate}from'./publisher-template.mjs';
 // One bounded publishing job, launched for a committed/pushed source event.
 // This is not a recurring scheduler, source poller or new credential gateway.
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {execFileSync,spawn} from 'node:child_process';
@@ -8,11 +9,16 @@ const requiresNewReview=/speech-site\/(src\/lib\/ask|ask-runtime)/.test(changed)
 const baselineManifest=flag('baseline-manifest',path.resolve('ask-private',previous.id,'manifest.json')),previousRelease=previous.selectedRelease||flag('previous-release');assert(previousRelease,'Verified prior managed release directory required');await fs.access(baselineManifest);await fs.access(path.join(previousRelease,'manifest.json'));
 const out='outputs/'+id,priv='ask-private/'+id;await fs.mkdir(out,{recursive:true});await fs.mkdir(priv,{recursive:true});const saved=await fs.readFile(out+'/publisher-event.json','utf8').then(JSON.parse).catch(e=>{if(e.code==='ENOENT')return null;throw e;});if(saved)assert.equal(saved.source,head,'Resume the same source event only');const event=saved||{source:head,previousSource:previous.source,branch,sourceEvent:changed.split('\n'),sourceScope:hasReviewedArchiveChange?'reviewed-source-archive-and-Git-publication':'Git-maintained-non-care-publisher-record',startedAt:new Date().toISOString(),steps:[],scopeLimits:['This job detects committed/pushed supported Git source changes. Database/R2 writers need their explicit reviewed publication signal; object timestamps or a stale archive cannot establish current source changes.','No care records, source holds, advertising settings, new credentials or stopped schedules are changed.']};
 const save=()=>fs.writeFile(out+'/publisher-event.json',JSON.stringify(event,null,2)+'\n');await save();
-async function run(label,args){const log=path.resolve(priv,label+'.log'),stream=await fs.open(log,'w');try{const code=await new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{windowsHide:true,env:{...process.env,PINNACLE_RELEASE:'production'},stdio:['ignore',stream.fd,stream.fd]});child.on('error',reject);child.on('close',resolve);});event.steps.push({label,exitCode:code,log,finishedAt:new Date().toISOString()});await save();assert.equal(code,0,'Publisher checkpoint failed: '+label+'; inspect '+log);}finally{await stream.close();}}
+async function run(label,args,extraEnv={}){const log=path.resolve(priv,label+'.log'),stream=await fs.open(log,'w');try{const code=await new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{windowsHide:true,env:{...process.env,PINNACLE_RELEASE:'production',...extraEnv},stdio:['ignore',stream.fd,stream.fd]});child.on('error',reject);child.on('close',resolve);});event.steps.push({label,exitCode:code,log,finishedAt:new Date().toISOString()});await save();assert.equal(code,0,'Publisher checkpoint failed: '+label+'; inspect '+log);}finally{await stream.close();}}
 const receiptPath=out+'/release.json';let current=await fs.readFile(receiptPath,'utf8').then(JSON.parse).catch(e=>{if(e.code==='ENOENT')return null;throw e;});
 if(!current){await run('capture',['scripts/release-managed-refresh.mjs','capture','--id',id,'--baseline-receipt',baseline,'--baseline-manifest',baselineManifest,'--previous-release',previousRelease]);current=JSON.parse(await fs.readFile(receiptPath,'utf8'));}
 if(current.phase==='captured'){
- await run('regenerate-publication',['scripts/build-managed-sitemaps.mjs']);
+ let templateEnv={};
+ if(!await fs.stat('dist/policies.html').catch(()=>null)){
+  const changedInputs=g(['diff','--name-only',previous.source+'..'+head,'--','src','public','package.json','package-lock.json','astro.config.mjs','astro.config.ts','.npmrc','.nvmrc','../build-window']);
+  event.retainedTemplate=await retainedPublisherTemplate(previous,JSON.parse(await fs.readFile(baselineManifest,'utf8')),changedInputs);await save();templateEnv.PINNACLE_MANAGED_BASE_TEMPLATE=event.retainedTemplate.path;
+ }
+ await run('regenerate-publication',['scripts/build-managed-sitemaps.mjs'],templateEnv);
  if(process.env.PINNACLE_RESOURCE_QUALIFIED_FEED&&process.env.PINNACLE_RESOURCE_QUALIFIED_SOURCE){
   const python=process.env.PYTHON_EXECUTABLE||(process.platform==='win32'?'C:/Python314/python.exe':'python3');
   const proof=execFileSync(python,['../tooling/sitemap-manager/source_refresh.py','--validate-resource-labels','release-managed-sitemaps-20261013','--resource-source',process.env.PINNACLE_RESOURCE_QUALIFIED_SOURCE,'--feed',process.env.PINNACLE_RESOURCE_QUALIFIED_FEED,'--proof',priv+'/composed-resource-label-equivalence.json'],{encoding:'utf8',windowsHide:true});

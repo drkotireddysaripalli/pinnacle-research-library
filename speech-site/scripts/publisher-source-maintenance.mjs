@@ -13,7 +13,8 @@ try{
  // The first invocation can reuse the just-verified full estate observation;
  // the receipt exposes its original time. Daily runs start a fresh cycle.
  const recent=await read(r2root+'/state.json').catch(()=>null);
- if(recent?.complete&&recent.schemaVersion===2&&recent.registrySHA256===registrySHA&&Date.now()-Date.parse(recent.completedAt)<3600000){assert.equal(await run('r2-cache-validation',['scripts/verify-r2-progress.mjs',r2root,'--require-fresh-complete']),0);assert.equal(await run('r2-cache-rederive',['scripts/r2-approved-rotation.mjs','--root',r2root]),0);const freshProof=await read(r2root+'/proof.json');assert.equal(freshProof.queriesThisInvocation,0);assert.equal(freshProof.registrySHA256,registrySHA);receipt.r2ReusedVerifiedObservation=recent.completedAt;receipt.r2QueriesThisMaintenance=0;}
+ const reuseWindow=process.env.PINNACLE_CLOUD_RUNNER==='1'&&process.env.PINNACLE_FROZEN_PUBLICATION_RECOVERED==='1'?24*3600000:3600000;
+ if(recent?.complete&&recent.schemaVersion===2&&recent.registrySHA256===registrySHA&&Date.now()-Date.parse(recent.completedAt)<reuseWindow){assert.equal(await run('r2-cache-validation',['scripts/verify-r2-progress.mjs',r2root,'--require-fresh-complete']),0);assert.equal(await run('r2-cache-rederive',['scripts/r2-approved-rotation.mjs','--root',r2root]),0);const freshProof=await read(r2root+'/proof.json');assert.equal(freshProof.queriesThisInvocation,0);assert.equal(freshProof.registrySHA256,registrySHA);receipt.r2ReusedVerifiedObservation=recent.completedAt;receipt.r2QueriesThisMaintenance=0;}
  else{
   const state=await read(r2root+'/state.json').catch(()=>null);const reset=state&&(state.complete||state.schemaVersion!==2||state.registrySHA256!==registrySHA||Date.now()-Date.parse(state.startedAt)>23*3600000);const priorQueries=reset?0:state?.totalQueries||0;
   if(reset)await fs.rename(r2root,root+'/previous-r2-cycle');
