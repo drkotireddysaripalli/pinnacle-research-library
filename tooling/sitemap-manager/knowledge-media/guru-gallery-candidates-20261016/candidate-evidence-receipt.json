@@ -1,0 +1,26 @@
+{
+  "status": "HELD_CANDIDATES_NOT_RENDERED_OR_ADMITTED",
+  "archive": "guru-gallery-candidate-evidence-20261016.zip",
+  "bytes": 15022,
+  "sha256": "bf022c4cb16511514a5ab2adaf7e16c8b0bbf72591bcd28bc4a25ceb8dbc33ff",
+  "candidate_objects": 150,
+  "candidate_known_public_guru_ids": 146,
+  "current_rendered_original_relationships_proven": 0,
+  "required_source": "AuthoritativeGuruID+sequence\u2192key/URI association or upload/gallery construction, then real rendering and delivery qualification",
+  "members": [
+    {
+      "name": "guru-gallery-disposition.json",
+      "sha256": "11514084a9d7abf54934379fcd4a1b7b04ee1fe9adbca36d756d4104451c1bd0"
+    },
+    {
+      "name": "gallery-candidates.jsonl",
+      "sha256": "14544936ab7321fafe4434a42cd691c9d9e6eedd8a8811e9dec2c8abb1404786"
+    },
+    {
+      "name": "public-source-observations.json",
+      "sha256": "5860306c01583d4bbc6856d0bdd2e40fddbb623c9f5537fd798fe6d21b17cb85"
+    }
+  ],
+  "media_bodies": 0,
+  "private_records": 0
+}
