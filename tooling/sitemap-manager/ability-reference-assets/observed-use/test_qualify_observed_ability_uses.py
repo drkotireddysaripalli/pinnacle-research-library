@@ -3,8 +3,8 @@ HERE=pathlib.Path(__file__).resolve().parent
 spec=importlib.util.spec_from_file_location('ability',HERE/'qualify_observed_ability_uses.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 NOW='2026-10-16T05:10:00+00:00';AT='2026-10-16T05:00:00+00:00'
 class Fixture:
-    def __init__(self,root):
-        self.root=pathlib.Path(root);self.parents=['https://www.pinnacleblooms.org/abs/one','https://www.pinnacleblooms.org/abs/two'];self.pairs=[]
+    def __init__(self,root,parents=None):
+        self.root=pathlib.Path(root);self.parents=parents or ['https://www.pinnacleblooms.org/abs/one','https://www.pinnacleblooms.org/abs/two'];self.pairs=[]
         for n,(parent,q,role) in enumerate([(self.parents[0],1,'question_image'),(self.parents[0],1,'example_image'),(self.parents[1],2,'question_image')]):
             key=f'Ability/{"Questions" if role=="question_image" else "Examples"}/{q}.jpg';self.pairs.append(dict(parent_url=parent,asset_id=m.sha(str(n).encode()),object_key=key,image_url='https://images.pinnacleblooms.org/'+key,question_id=q,assessment_id=100+self.parents.index(parent),role=role))
         raw=b''.join(m.pack(p)+b'\n' for p in self.pairs);(self.root/'pairs.jsonl').write_bytes(raw)
@@ -84,6 +84,16 @@ class AdapterTests(unittest.TestCase):
         parent=self.f.parents[0];body=self.f.body(parent).replace(b'</head>',b'<meta name="robots" content="noindex"></head>');obs=self.f.observations([self.f.record(parent,body),self.f.record(self.f.parents[1])]);r=self.f.run(obs,owned=(0,1,2))
         self.assertFalse(r['can_reconcile']);self.assertEqual(r['parent_vetoes'][parent],'current_parent_robots_or_canonical_veto');self.assertIn(parent,r['reconciliation_parent_vetoes']);self.assertEqual(r['withdrawals'],[]);self.assertEqual(len(r['desired']),3)
         obs['parents'][0]['observed_at']='2026-10-12T00:00:00Z';r=self.f.run(obs,owned=(0,1,2));self.assertTrue(r['can_reconcile']);self.assertEqual(r['parent_vetoes'],{});self.assertEqual(r['withdrawals'],[])
+    def test_HTML_canonical_IRI_equivalence_preserves_reserved_and_other_URL_parts(self):
+        parent='https://www.pinnacleblooms.org/abs/child%E2%80%99s-balance%E2%80%93guide/step';iri='https://www.pinnacleblooms.org/abs/child’s-balance–guide/step';self.f=Fixture(self.temp.name,[parent,self.f.parents[1]]);base=self.f.body(parent).decode()
+        def run(href):
+            body=base.replace('href="'+parent+'"','href="'+href+'"');return self.f.run(self.f.observations([self.f.record(parent,body.encode()),self.f.record(self.f.parents[1])]),owned=(0,1,2))
+        for href in (iri,parent.replace('%E2','%e2')):
+            with self.subTest(accepted=href):
+                r=run(href);self.assertEqual(r['status'],'qualified_complete');self.assertTrue(r['can_reconcile']);self.assertEqual(len(r['qualified']),3)
+        for href in (iri.replace('guide','changed'),iri.replace('/step','%2Fstep'),iri+'?version=2',iri+'#section',iri.replace('https:','http:'),iri.replace('www.pinnacleblooms.org','WWW.pinnacleblooms.org')):
+            with self.subTest(rejected=href):
+                r=run(href);self.assertEqual(r['parent_vetoes'][parent],'current_parent_canonical_conflict');self.assertFalse(r['can_reconcile']);self.assertEqual(r['withdrawals'],[])
     def test_current_DB_state_guard_and_other_owner_untouched(self):
         db=self.f.db((0,));before=list(db.execute('SELECT * FROM pages'));state=m.feed_state_from_db(db,self.f.packet);r=m.qualify(self.f.packet,self.f.observations(),self.f.heads(),state,NOW);m.assert_feed_state_unchanged(db,self.f.packet,r);self.assertEqual(before,list(db.execute('SELECT * FROM pages')))
         meta=json.loads(before[0][3]);meta['managed_image_ownership'][self.f.pairs[1]['image_url']]={'owners':[m.SOURCE],'source_sha256':{m.SOURCE:'3'*64}};db.execute('UPDATE pages SET metadata_json=? WHERE url=?',(json.dumps(meta),self.f.parents[0]))

@@ -72,7 +72,12 @@ Retain raw response robots evidence, e.g. `response_headers: {"X-Robots-Tag": []
 when absent. Header aliases `headers`, `raw_headers`, `raw_header`, `x_robots`
 and `x_robots_tags` are supported; repeated values combine. Raw header or HTML
 `noindex`/`none`/`noimageindex` vetoes override producer booleans. An HTML canonical,
-if present, must be the one exact parent. Otherwise an unchanged approved feed
+if present, must match the one approved parent after narrowly scoped IRI-to-URI
+comparison: UTF-8 percent-encode literal non-ASCII characters and uppercase percent
+hex digits. No percent escapes are decoded; reserved encodings such as `%2F`,
+changed slugs, query/fragment differences and other scheme/authority/path changes
+remain distinct. Feed keys and consent pairs retain their exact stored spelling.
+Otherwise an unchanged approved feed
 canonical is recorded as the basis. The caller supplies its existing current
 public-parent/crawler qualification via `publication_qualified`; this helper
 does not fetch robots.txt or infer eligibility from sign-in UI.
@@ -164,12 +169,14 @@ means complete qualification; exit 2 means a valid held result, whose desired
 snapshot may still be safely applied when `can_reconcile` is true. Malformed or
 unbound input fails before output staging.
 
-Ten focused tests pass: exact positive use, packet/provenance tampering,
+Eleven focused tests pass: exact positive use, packet/provenance tampering,
 unknown/changed/hidden/inert/duplicate/srcset renderer rejection, completeness
 and ownership-only withdrawal, stale/missing evidence retention, independent
 raw robots vetoes, incomplete/out-of-scope ownership rejection, read-only DB
 projection/concurrent-change guard, HEAD receipt binding, and a fresh parent
-noindex veto against a stale-positive feed (with stale-evidence retention).
+noindex veto against a stale-positive feed (with stale-evidence retention), and
+literal Unicode/percent-case canonical equivalence with reserved-escape and
+changed-URL rejection.
 
 `cached-packet-replay.json` is a bounded offline safety replay: accepted ZIP and
 directory agree; all 1,899 scoped cached HEADs pass at the cached receipt clock;

@@ -12,6 +12,10 @@ MARKERS=('data-ability-reference-asset','data-reference-question-id','data-refer
 VOID={'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 pack=lambda v:json.dumps(v,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()
 sha=lambda b:hashlib.sha256(b).hexdigest()
+def canonical_uri(value):
+    """IRI spelling only: UTF-8 encode non-ASCII and uppercase existing escapes; never decode."""
+    value=''.join(c if c.isascii() else ''.join(f'%{b:02X}' for b in c.encode('utf-8')) for c in value)
+    return re.sub(r'%[0-9a-fA-F]{2}',lambda match:match[0].upper(),value)
 def stamp(v):
     x=dt.datetime.fromisoformat(v.replace('Z','+00:00'))
     if x.tzinfo is None:raise ValueError('Timezone required')
@@ -128,7 +132,8 @@ class RenderHTML(HTMLParser):
         if tag not in VOID:self.handle_endtag(tag)
     def handle_starttag(self,tag,attrs):
         a=dict(attrs);inside=any(f['inside'] for f in self.stack);hidden=any(f['hidden'] or f['tag'] in ('template','noscript','script','style') for f in self.stack) or 'hidden' in a or a.get('aria-hidden','').lower()=='true' or bool(re.search(r'display\s*:\s*none|visibility\s*:\s*hidden',a.get('style',''),re.I)) or bool({'hidden','sr-only','visually-hidden','is-hidden'}&set(a.get('class','').split()))
-        if tag=='link' and 'canonical' in a.get('rel','').lower().split() and not any(f['tag'] in ('template','noscript','script') for f in self.stack):self.canonical.append(urljoin(self.parent,a.get('href','')))
+        if tag=='link' and 'canonical' in a.get('rel','').lower().split() and not any(f['tag'] in ('template','noscript','script') for f in self.stack):
+            href=a.get('href','');self.canonical.append(href if re.match(r'^[A-Za-z][A-Za-z0-9+.-]*:',href) else urljoin(self.parent,href))
         if tag=='meta' and a.get('name','').lower() in ('robots','googlebot','bingbot'):self.robots.append(a.get('content',''))
         if tag=='section' and a.get('id')==SECTION:
             self.sections+=1;inside=True
@@ -177,7 +182,7 @@ def parent_observation(row,parent,plan,packet,feed,now,base):
     parser=RenderHTML(parent,plan,packet['consent_sha256']);parser.feed(body.decode('utf-8'));parser.finish()
     if not raw_robots_present(row):return None,'raw_parent_robots_evidence_unknown'
     if restricted(row,parser.robots+strings(row.get('robots'))) or row.get('noindex') is True or row.get('noimageindex') is True or row.get('canonical_conflict') is True:return None,'current_parent_robots_or_canonical_veto'
-    if parser.canonical and parser.canonical!=[parent]:return None,'current_parent_canonical_conflict'
+    if parser.canonical and (len(parser.canonical)!=1 or canonical_uri(parser.canonical[0])!=canonical_uri(parent)):return None,'current_parent_canonical_conflict'
     if parser.errors:return None,';'.join(sorted(set(parser.errors)))
     return {'images':parser.images,'selection_complete':parser.selection_complete,'body_sha256':sha(body),'observed_at':row['observed_at'],'canonical_basis':'explicit_HTML' if parser.canonical else 'approved_feed_preferred_URL_no_HTML_conflict'},None
 

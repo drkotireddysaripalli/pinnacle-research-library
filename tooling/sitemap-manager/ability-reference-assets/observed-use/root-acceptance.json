@@ -1,11 +1,12 @@
 {
-  "accepted_at": "2026-10-16T05:06:50.397411+00:00",
+  "accepted_at": "2026-10-16T05:17:53.799650+00:00",
   "decision": "source_helper_accepted",
   "scope": "Offline Ability observed-use adapter only",
-  "tests": 10,
+  "tests": 11,
   "root_review_finding_closed": "Fresh parent veto blocks stale-positive feed reconciliation",
   "current_rendered_admissions": 0,
   "current_source_withdrawals": 0,
   "live_integration_pending": true,
-  "source_packet_commit": "7a81a90869d3505383faddfadc877973b58cb532"
+  "source_packet_commit": "7a81a90869d3505383faddfadc877973b58cb532",
+  "canonical_followup": "Verified URI-equivalent Unicode spelling for all47parents including11literalUnicode canonicals; reserved encoding and changed URI parts remain distinct."
 }
