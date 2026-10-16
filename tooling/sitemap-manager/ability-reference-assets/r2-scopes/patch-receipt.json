@@ -1,0 +1,147 @@
+{
+  "base_sha": "f64e18a0ad9e51899e20e9fe202922f3f2c0ba4f",
+  "canonical_checkout_edits": 0,
+  "changed_file_count": 8,
+  "changed_files": [
+    {
+      "base_sha256": "bb240d293ce909beab1b1408ba46870d4a167ea7a6cb6ea4527574623018e6cc",
+      "patched_bytes": 3889,
+      "patched_sha256": "d2cb660c2891d192d1cdf0172f2ec97a2190b51658af88ba0d313c040e36d2d9",
+      "path": "speech-site/scripts/r2-coverage-chain.mjs"
+    },
+    {
+      "base_sha256": "37e94b8abe4973133204d0bf58489e8e20b2a98382419ed997ed58e01919a2df",
+      "patched_bytes": 6048,
+      "patched_sha256": "6b0c4924f79996fbf4b194779078879f8c1ac79a2035561f6d0d74521c558f70",
+      "path": "speech-site/scripts/r2-approved-rotation.mjs"
+    },
+    {
+      "base_sha256": "ff208d9d35f74b1363fc2eaebe1550e52057788ed102b3f1e8719e2799e68a05",
+      "patched_bytes": 928,
+      "patched_sha256": "e4ba2e42d5cef712ac822d67987869332b135b5fe01a090488a22aabd9d45236",
+      "path": "speech-site/scripts/verify-r2-progress.mjs"
+    },
+    {
+      "base_sha256": "b5d3d7cefa2cc5d928263d2778d6f8ca706c5ab3c30394d1925e70c0bb1495cc",
+      "patched_bytes": 2212,
+      "patched_sha256": "e8bb057f7ec649793d68358c3fb05a656c99bf0a1e2afab77c6fa698f927e53b",
+      "path": "speech-site/scripts/verified-r2-source.mjs"
+    },
+    {
+      "base_sha256": "2b42adea0f63584843f409295cc587c90666f597d38c1b806b38dbe6b2c9b2dd",
+      "patched_bytes": 12481,
+      "patched_sha256": "b0b836aa9d49e9af3adcd7fbcd9fb804d7644e2717cec74d7b11682dcb98be01",
+      "path": "speech-site/scripts/test-r2-coverage-chain.mjs"
+    },
+    {
+      "base_sha256": "4fec38f612a56917b2b2e568da6aef6c81906e0eb84b0f566064144ff77e9f63",
+      "patched_bytes": 17121,
+      "patched_sha256": "5e7539d4cf822e9ab53437ef2643bd2a42aee4b73c0e0bc2577ba34b86de04f0",
+      "path": "speech-site/scripts/cloud-source-state.py"
+    },
+    {
+      "base_sha256": "5cf7cf9f482fa0f9e813d3637b0319d53fd83cc94d77976198018053c40e80a7",
+      "patched_bytes": 8637,
+      "patched_sha256": "03ebca8aa509433ff08e16a8494778dfabaee3b4435de478e1a220f921634426",
+      "path": "speech-site/scripts/test-cloud-source-state.py"
+    },
+    {
+      "base_sha256": "0d014c89a1a32fddba2d167bb46be577ecaedb8fccef61c319ff5715c5d5b6f9",
+      "patched_bytes": 1848,
+      "patched_sha256": "92f3a2385855d4a9eb5859a482a2c34013f24b653340c61ea8fb74eba2798d9b",
+      "path": "speech-site/scripts/test-verified-r2-source.mjs"
+    }
+  ],
+  "cloud_R2_or_S3_calls": 0,
+  "commits": 0,
+  "database_writes": 0,
+  "files": {
+    "README.md": {
+      "bytes": 4813,
+      "sha256": "1524c2488a52ad025f6d3cf6ea6df97a6616ab2cb2d9c1b153503ef2f94ae6a0"
+    },
+    "ability-r2-scopes.patch": {
+      "bytes": 40792,
+      "sha256": "dc4c830f261437749c5659112ffca3a1afabb15ca46a041a19a130a6a625be72"
+    },
+    "base-source-receipt.json": {
+      "bytes": 4786,
+      "sha256": "7727015d1591f9fb85a2256031bd1e312ac0b3094c8db5c8275e41d9ed02a45a"
+    },
+    "python-tests.log": {
+      "bytes": 110,
+      "sha256": "89c48ea958c8c59bec5bffc7ebf46f45d438a38afae22ecf9e5cda42c5b3009f"
+    },
+    "tests.log": {
+      "bytes": 976,
+      "sha256": "0bd1224cf539fbc6d17d9574d6db10bdec03a9c36d757b96c75c6a2554fc09e9"
+    },
+    "verified-source-tests.log": {
+      "bytes": 287,
+      "sha256": "5f920763ded61c3d4e51ff045b4810d20d68e3758c6beb6961b7ef2a3224ed75"
+    }
+  },
+  "media_bodies": 0,
+  "owner_transition": {
+    "accepted_publication_bootstrap_unchanged": true,
+    "automatic_private_state_reset_implemented": false,
+    "fresh_seven_scope_observation_cycle_required": true,
+    "protected_prior_pointer_archive_and_local_checkpoint_snapshot_required": true,
+    "reuse_old_absence_proof_cursors": false
+  },
+  "prepared_at": "2026-10-16T06:04:53.755699+00:00",
+  "publication_actions": 0,
+  "repository": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+  "schema_version": 1,
+  "scope_identity": {
+    "scopeCount": 7,
+    "scopeSetSHA256": "3f16e414d3c9eac96063396e2ebef700eed9650fb956eb704d81916e4da8efe3",
+    "scopes": [
+      [
+        "pbn-test",
+        "Assets/InterventionTechniques/"
+      ],
+      [
+        "pbn-test",
+        "Assets/InterventionTechniquePdf/"
+      ],
+      [
+        "pbn-test",
+        "Assets/Materials/"
+      ],
+      [
+        "pbn-test",
+        "Ability/Assessments/"
+      ],
+      [
+        "pinnacle-ask-og",
+        ""
+      ],
+      [
+        "pbn-test",
+        "Ability/Questions/"
+      ],
+      [
+        "pbn-test",
+        "Ability/Examples/"
+      ]
+    ]
+  },
+  "source_requests": "immutable public GitHub only",
+  "status": "OFFLINE_PATCH_READY_OWNER_TRANSITION_AND_DEPLOYMENT_PENDING",
+  "tests": {
+    "chain_contracts_passed": 9,
+    "checkpoint_contracts_passed": 11,
+    "commands": [
+      "node --test scripts/test-r2-coverage-chain.mjs",
+      "node --test scripts/test-verified-r2-source.mjs",
+      "NODE_EXECUTABLE=/absolute/path/to/node python3 -B scripts/test-cloud-source-state.py"
+    ],
+    "failures": 0,
+    "git_apply_check_exit": 0,
+    "node_version": "v24.19.0",
+    "python_version": "3.14.2",
+    "total_passed": 22,
+    "verified_source_contracts_passed": 2
+  }
+}

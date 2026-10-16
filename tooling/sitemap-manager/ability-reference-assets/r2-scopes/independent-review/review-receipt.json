@@ -1,0 +1,34 @@
+{
+  "base": "f64e18a0ad9e51899e20e9fe202922f3f2c0ba4f",
+  "patchSHA256": "dc4c830f261437749c5659112ffca3a1afabb15ca46a041a19a130a6a625be72",
+  "authorReceiptSHA256": "dd43b24cd37e335bb1da1a6635dd47907e84a9909b01f3052031992e3440624c",
+  "disposition": "accepted-offline-patch-with-required-owner-transition",
+  "findings": [],
+  "reviewedFiles": 8,
+  "resolvedConcern": "New mandatory scope proof fields initially broke the existing adjacent bulk-source contract. The final eighth-file fixture update supplies current scope identity/count and retains targeted partial-pass and unconfirmed-deletion negative assertions. Author's corrected adjacent suite passes 2/2.",
+  "acceptedWithinScope": [
+    "Only exact Ability/Questions/ and Ability/Examples/ prefixes are appended; the original five indices remain stable.",
+    "Ordered scope-set SHA256 and exact scope count bind state, pages and derived proof. Old/unidentified five-scope evidence cannot authorize current seven-scope absence.",
+    "Node page readers use current scope count and reject unknown/noncanonical reserved names. Python transfer accepts numeric filenames only after Node semantic chain validation; pointer/archive identity is checked before local checkpoint replacement.",
+    "Complete-chain hash, cursor/terminal/two-pass absence, approved registry, zero-query derivation and current freshness gates remain enforced.",
+    "No accepted-publication selection or bootstrap mutation is introduced. Observation checkpoint migration is explicitly separate from accepted live-publication state."
+  ],
+  "requiredOwnerTransition": {
+    "protectPriorState": "Snapshot old rotation/current pointer, its referenced archive and local observation checkpoint in protected storage.",
+    "freshCycle": "Start current seven-scope identity/count and registry hash with new start time, pass/scope/page zero, null cursor and empty page hashes. Do not reuse old absence/proof/delta/cursors or relabel old counters.",
+    "publicationBaseline": "Keep accepted-publication bootstrap unchanged; replace only the observation checkpoint independently.",
+    "automaticResetProvided": false,
+    "completionCondition": "Existing owner applies against current authoritative source, reconciles subsequent main changes, performs the protected fresh-cycle transition and verifies two complete current seven-scope passes before absence/publication use."
+  },
+  "verification": {
+    "patchAndAuthorReceiptHashes": "matched",
+    "patchedFileHashes": {"matched": 8, "checked": 8},
+    "authorEvidenceReviewed": {"chainContracts": 9, "adjacentVerifiedSourceContracts": 2, "pythonCheckpointContracts": 11, "totalPassed": 22},
+    "testRepetition": "Existing passing 9+11 suites were not repeated. Reviewer ran only the adjacent base contract to prove the concrete missing-fixture defect; author corrected it and supplied 2/2 passing log.",
+    "R2Calls": 0,
+    "engineQueries": 0,
+    "accountCalls": 0,
+    "productionWrites": 0
+  },
+  "limits": "Offline patch acceptance only. No asset relationships, rights, rendered-use proof, sitemap admission, private-state migration or production deployment is established by this review."
+}
