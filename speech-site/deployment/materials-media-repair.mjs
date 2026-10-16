@@ -5,8 +5,11 @@ export const unavailableMaterialImage=placeholder;
 export function materialImageTarget(value){
  if(typeof value!=='string'||!/^https?:\/\//i.test(value))return null;
  let u;try{u=new URL(value);}catch{return null;}
- if(!['pinnacleblooms.org','www.pinnacleblooms.org'].includes(u.hostname)||u.username||u.password||u.port||u.search||u.hash||!/^\/Assets\/Materials\/\d+\.(?:jpg|jpeg|png|webp)$/i.test(u.pathname))return null;
- if(['/Assets/Materials/309.jpg','/Assets/Materials/2484.jpg'].includes(u.pathname))return{unavailable:true,url:placeholder};
+ if(u.username||u.password||u.port||u.search||u.hash||!/^\/Assets\/Materials\/\d+\.(?:jpg|jpeg|png|webp)$/i.test(u.pathname))return null;
+ if(u.hostname==='images.pinnacleblooms.org'&&['/Assets/Materials/2400.jpg','/Assets/Materials/236.jpg','/Assets/Materials/279.jpg'].includes(u.pathname))return{unavailable:true,url:placeholder};
+ if(!['pinnacleblooms.org','www.pinnacleblooms.org'].includes(u.hostname))return null;
+ // Exact 2400/236/279 sources returned 404 on both www and images hosts on 2026-10-16; no supported replacement is recorded.
+ if(['/Assets/Materials/309.jpg','/Assets/Materials/2484.jpg','/Assets/Materials/2400.jpg','/Assets/Materials/236.jpg','/Assets/Materials/279.jpg'].includes(u.pathname))return{unavailable:true,url:placeholder};
  return{unavailable:false,url:'https://www.pinnacleblooms.org'+u.pathname};
 }
 export function repairMaterialsMedia(request,response){

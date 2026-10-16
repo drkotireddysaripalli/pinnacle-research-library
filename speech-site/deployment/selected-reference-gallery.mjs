@@ -2,6 +2,9 @@ import selection from './selected-reference-data.json' with {type:'json'};
 import optimized from './selected-reference-optimized.json' with {type:'json'};
 const origin='https://www.pinnacleblooms.org';
 const key=value=>{const u=new URL(value);return u.origin+u.pathname.replace(/%[0-9a-f]{2}/gi,v=>v.toUpperCase());};
+// HTMLRewriter exposes source attribute text. Legacy canonicals can encode a
+// Unicode path character as a numeric HTML entity; compare its browser value.
+const canonicalAttribute=value=>typeof value==='string'?value.replace(/&#(?:x([0-9a-f]+)|([0-9]+));/gi,(raw,hex,decimal)=>{const code=parseInt(hex||decimal,hex?16:10);return code>0&&code<=0x10ffff&&!(code>=0xd800&&code<=0xdfff)?String.fromCodePoint(code):raw;}).replace(/&amp;/gi,'&'):value;
 const selected=new Map(Object.entries(selection).map(([u,r])=>[key(u),r]));
 export const referenceStylePath='/pinnacle-pages-styles/selected-reference-20261016.css';
 export const referenceCSS=`#ability-reference-illustrations,[data-guru-gallery-source]{font-family:'Pinnacle Anek',Sintony,Arial,sans-serif;font-weight:600}#ability-reference-illustrations :is(h2,h3),[data-guru-gallery-source] h2{font-weight:800}#ability-reference-illustrations,[data-guru-gallery-source]{margin:2rem 0;padding:clamp(1rem,3vw,2rem);border:1px solid #dce7ec;border-radius:16px;background:#f7fbfc;color:#122b49;line-height:1.7;overflow-wrap:anywhere}#ability-reference-illustrations h2,[data-guru-gallery-source] h2{font-size:clamp(1.35rem,3vw,1.9rem);line-height:1.4}#ability-reference-illustrations h3{font-size:1.1rem;line-height:1.6}#ability-reference-illustrations figure,[data-guru-gallery-source] figure{margin:1.25rem 0;padding:1rem;background:#fff;border:1px solid #e3ebef;border-radius:12px;content-visibility:auto;contain-intrinsic-size:auto 400px}#ability-reference-illustrations img,[data-guru-gallery-source] img{display:block;width:auto;max-width:100%;height:auto;max-height:520px;object-fit:contain;margin-inline:auto}#ability-reference-illustrations figcaption,[data-guru-gallery-source] figcaption{margin-top:.8rem;font-size:1rem}#ability-reference-illustrations a,[data-guru-gallery-source] a{text-decoration:underline;text-underline-offset:.18em}#ability-reference-illustrations :is([lang=te],[lang=hi]){font-family:'Pinnacle Anek',Arial,sans-serif;font-weight:600}#ability-reference-illustrations :is(h2,h3)[lang]{font-weight:800}`;
@@ -19,7 +22,7 @@ export function repairSelectedReferences(request,response,Rewriter=globalThis.HT
  const headers=new Headers(response.headers);for(const name of ['content-length','content-encoding','etag','last-modified','digest','content-digest','repr-digest','content-md5'])headers.delete(name);
  headers.set('x-pinnacle-selected-reference','20261016');
  let canonicalCount=0,canonicalOK=false,inserted=false;
- const exactCanonical=value=>{try{const v=new URL(value);return !v.search&&!v.hash&&key(v)===key(u);}catch{return false;}};
+ const exactCanonical=value=>{try{const v=new URL(canonicalAttribute(value));return !v.search&&!v.hash&&key(v)===key(u);}catch{return false;}};
  const permitted=(slot,value)=>row.kind==='guru'&&canonicalCount===1&&canonicalOK&&row.replacement[slot]?.fallback_permitted_for_integration&&row.replacement[slot].observed_exact_urls.includes(value);
  const insert={element(e){if(canonicalCount!==1||!canonicalOK||inserted)return;inserted=true;e.append(row.html,{html:true});}};
  let rewriter=new Rewriter().on('link[rel=canonical]',{element(e){canonicalCount++;canonicalOK=exactCanonical(e.getAttribute('href'));}})
@@ -27,11 +30,14 @@ export function repairSelectedReferences(request,response,Rewriter=globalThis.HT
   .on('link[data-selected-reference-style]',{element(e){e.remove();}})
   .on('#ability-reference-illustrations,[data-guru-gallery-source]',{element(e){e.remove();}})
   .on('meta[property="og:image"]',{element(e){if(permitted('og_image',e.getAttribute('content')))e.setAttribute('content',row.replacement.sequence_zero_url);}})
-  .on('.guru-gallery > figure > img',{element(e){
+  .on('.guru-gallery > figure > img, #cm-news-page-content > .cm-np-c-data > .image > img',{element(e){
    if(!permitted('visible_primary',e.getAttribute('src')))return;
    const url=row.replacement.sequence_zero_url,image=optimized[url];e.setAttribute('src',url);e.setAttribute('data-selected-reference-primary','20261016');
    if(image){e.before(`<picture><source type="image/webp" srcset="${image.path}">`,{html:true});e.after('</picture>',{html:true});e.setAttribute('width',String(image.width));e.setAttribute('height',String(image.height));}
   }});
- rewriter=row.kind==='guru'?rewriter.on('article.guru-article',insert):rewriter.on('main',insert);
+ // The maintained Guru template uses an article; the remaining selected Guru
+ // and Ability pages still use their original ASP.NET content containers.
+ // The exact parent/canonical/selection gates above apply to both forms.
+ rewriter=row.kind==='guru'?rewriter.on('article.guru-article, #cm-news-page-content > .cm-np-c-data',insert):rewriter.on('main, .cm-section-main.sunshine',insert);
  return rewriter.transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers}));
 }
