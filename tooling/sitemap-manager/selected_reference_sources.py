@@ -62,6 +62,7 @@ def prior_guru(db,allowed):
    result[pair]={'page_url':row['url'],'image_url':image,'source_sha256':proof['source_sha256'][GURU]}
  return result
 def refresh(db,resources,cache,now,probe,head_ok,fresh):
+ from managed_media_sources import definitively_disqualified
  ability=ability_module();packet=ability.load_packet(ABILITY_PACKET);plans,guru_heads=guru_packet()
  expected=set(packet['parents'])|set(plans)
  if not expected.issubset(resources):return {},{'status':'capture-pending','requiredParents':193,'capturedParents':len(expected&set(resources))},[]
@@ -88,15 +89,19 @@ def refresh(db,resources,cache,now,probe,head_ok,fresh):
  holds.extend(qualified['held'])
  allowed={(u,im['selected_url']) for u,p in plans.items() for im in p['manifest']['assets']};wanted=prior_guru(db,allowed);guru_qualified=0
  for u,p in plans.items():
-  row=resources[u];cap=row.get('reference_capture');valid=False
-  if cap and row.get('publication_qualified') and not row.get('noimageindex') and fresh(cap['proof'].get('observed_at'),now):
-   body=bytes.fromhex(cap['body_hex']);valid=hashlib.sha256(body).hexdigest()==cap['proof']['body_sha256'] and len(body)==cap['proof']['body_bytes']
-   if valid:
+  row=resources[u];cap=row.get('reference_capture');valid=False;observed=False
+  if cap and fresh(cap['proof'].get('observed_at'),now):
+   proof=cap['proof'];body=bytes.fromhex(cap['body_hex'])
+   observed=proof.get('method')=='GET' and proof.get('status')==200 and proof.get('final_url')==u and proof.get('body_complete') is True and hashlib.sha256(body).hexdigest()==proof['body_sha256'] and len(body)==proof['body_bytes']
+   if observed and row.get('publication_qualified') and not any(row.get(k) for k in ('noindex','noimageindex','canonical_conflict')):
     parser=GuruHTML(p);parser.feed(body.decode('utf8'));parser.close();valid=parser.qualified()
   for im in p['manifest']['assets']:
    pair=(u,im['selected_url'])
    if valid and head_ok(cache[im['selected_url']]):wanted[pair]={'page_url':u,'image_url':im['selected_url'],'source_sha256':cap['proof']['body_sha256']};guru_qualified+=1
-   else:holds.append({'source':GURU,'page_url':u,'media_url':im['selected_url'],'condition':'current-render-or-delivery-not-qualified'})
+   else:
+    head=cache[im['selected_url']]
+    if observed and not valid or fresh(head.get('checked_at'),now) and definitively_disqualified(head):wanted.pop(pair,None)
+    holds.append({'source':GURU,'page_url':u,'media_url':im['selected_url'],'condition':'current-render-or-delivery-not-qualified'})
  desired[GURU]=list(wanted.values())
  result={'status':'qualified-complete' if not holds else 'qualified-with-source-holds','ability':qualified['counts'],'guru':{'parents':146,'selectedPairs':150,'qualifiedPairs':guru_qualified,'desiredPairs':len(wanted)},'held':len(holds),'headsQueried':len(pending),'headsReused':len(urls)-len(pending),'unknownLicenceRetained':True,'clinicalSourceRowsModified':False,'mediaBodiesDownloaded':False}
  return desired,result,holds
