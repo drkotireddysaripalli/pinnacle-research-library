@@ -1,10 +1,12 @@
 // Compare the same approved UI state. Current-page highlighting and the
 // anonymous reader backdrop are intentional states, not neutral headers.
-export function headerReferenceName(identity,{gate=false,activePath='',browserVersion='',announcement=true}={}){
+import{createHash}from'node:crypto';
+export function headerReferenceName(identity,{gate=false,activePath='',browserVersion='',announcement=true,previewNote=true}={}){
   const major=String(browserVersion).split('.')[0];
   if(major&&!/^\d+$/.test(major))throw Error('Actual browser version required for visual reference');
   const variant=gate?'reader-gate':activePath?'active-'+activePath.replace(/[^a-zA-Z0-9]+/g,'-').replace(/^-|-$/g,''):'';
-  return 'pinnacle-common-v159-'+identity+(major?'-browser-'+major:'')+(major&&!announcement?'-no-announcement':'')+(variant?'-'+variant:'');
+  const name='pinnacle-common-v159-'+identity+(major?'-browser-'+major:'')+(major&&!announcement?'-no-announcement':'')+(major&&!previewNote?'-no-preview-note':'')+(variant?'-'+variant:'');
+  return name.length<=128?name:name.slice(0,111)+'-'+createHash('sha256').update(name).digest('hex').slice(0,16);
 }
 
 // Self-contained for actual browser execution. Native closed details can

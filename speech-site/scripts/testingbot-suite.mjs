@@ -119,7 +119,7 @@ for(const matrixId of matrixIds){
           if(process.argv.includes('--dismiss-announcement')&&await visible('#pinnacle-site-announcement')){await click('#pinnacle-site-announcement [data-announcement-dismiss]');t.visualAnnouncementDismissed=true;}
           const identity=[matrixId,config.kind==='physical'?device.name:config.platformName,t.document.width+'x'+t.document.height].join('-').replace(/[^a-zA-Z0-9-]/g,'-');
           const activePath=await evaluate("return [...new Set([...document.querySelectorAll('.portal-main-nav a[aria-current=page],.portal-therapy-nav a[aria-current=page]')].map(a=>new URL(a.href).pathname))].sort().join('--')");
-          const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath,browserVersion:session.providerCapabilities.browserVersion||device.version,announcement:await visible('#pinnacle-site-announcement')});
+          const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath,browserVersion:session.providerCapabilities.browserVersion||device.version,announcement:await visible('#pinnacle-site-announcement'),previewNote:await visible('.preview-note')});
           const reference=visualReferences.approved.find(r=>r.name===name);
           // The provider hides native scrollbars when capturing. Freeze that
           // layout explicitly so scrollbar removal cannot race the CSS crop.
