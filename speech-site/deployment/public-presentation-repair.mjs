@@ -1,10 +1,12 @@
 // Same scoped corrections as the maintained Astro styles, for already-published
 // documents in the current complete asset union. No contact or intake changes.
-export const presentationPath='/pinnacle-pages-scripts/presentation-repair-20261016.css';
-export const presentationCSS=`.centre-proof-context{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))!important}@media(max-width:760px){.centre-proof-context{grid-template-columns:1fr!important}}.institutional-hero~section p a,.institutional-research-aliases p a{text-decoration:underline;text-underline-offset:.18em}@media(max-width:600px){.pbn-book-upsells{grid-template-columns:minmax(0,1fr)!important}}`;
+export const legacyPresentationPath='/pinnacle-pages-scripts/presentation-repair-20261016.css';
+export const presentationPath='/pinnacle-pages-scripts/presentation-repair-20261016b.css';
+export const legacyPresentationCSS=`.centre-proof-context{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))!important}@media(max-width:760px){.centre-proof-context{grid-template-columns:1fr!important}}.institutional-hero~section p a,.institutional-research-aliases p a{text-decoration:underline;text-underline-offset:.18em}@media(max-width:600px){.pbn-book-upsells{grid-template-columns:minmax(0,1fr)!important}}`;
+export const presentationCSS=legacyPresentationCSS+`.pbn-book-digital-note a{text-decoration:underline;text-underline-offset:.18em}`;
 export function servePresentationRepair(request){
- const u=new URL(request.url);if(u.origin!=='https://www.pinnacleblooms.org'||u.pathname!==presentationPath||!['GET','HEAD'].includes(request.method))return null;
- return new Response(request.method==='HEAD'?null:presentationCSS,{headers:{'content-type':'text/css; charset=utf-8','cache-control':'public,max-age=31536000,immutable','x-content-type-options':'nosniff'}});
+ const u=new URL(request.url);if(u.origin!=='https://www.pinnacleblooms.org'||![presentationPath,legacyPresentationPath].includes(u.pathname)||!['GET','HEAD'].includes(request.method))return null;
+ return new Response(request.method==='HEAD'?null:u.pathname===legacyPresentationPath?legacyPresentationCSS:presentationCSS,{headers:{'content-type':'text/css; charset=utf-8','cache-control':'public,max-age=31536000,immutable','x-content-type-options':'nosniff'}});
 }
 export function repairPublicPresentation(request,response,Rewriter=globalThis.HTMLRewriter){
  const u=new URL(request.url);
