@@ -116,9 +116,10 @@ for(const matrixId of matrixIds){
         await snap(t,'opening');
         const gated=await visible('#ask-reader-gate[open]');
         if(process.argv.includes('--visual')&&!p.shell){
+          if(process.argv.includes('--dismiss-announcement')&&await visible('#pinnacle-site-announcement')){await click('#pinnacle-site-announcement [data-announcement-dismiss]');t.visualAnnouncementDismissed=true;}
           const identity=[matrixId,config.kind==='physical'?device.name:config.platformName,t.document.width+'x'+t.document.height].join('-').replace(/[^a-zA-Z0-9-]/g,'-');
           const activePath=await evaluate("return [...new Set([...document.querySelectorAll('.portal-main-nav a[aria-current=page],.portal-therapy-nav a[aria-current=page]')].map(a=>new URL(a.href).pathname))].sort().join('--')");
-          const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath,browserVersion:session.providerCapabilities.browserVersion||device.version});
+          const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath,browserVersion:session.providerCapabilities.browserVersion||device.version,announcement:await visible('#pinnacle-site-announcement')});
           const reference=visualReferences.approved.find(r=>r.name===name);
           // The provider hides native scrollbars when capturing. Freeze that
           // layout explicitly so scrollbar removal cannot race the CSS crop.
@@ -126,10 +127,12 @@ for(const matrixId of matrixIds){
           const visualLayout=config.kind==='desktop'?await evaluate("const e=document.documentElement;const old=e.getAttribute('style');const before={innerWidth,clientWidth:e.clientWidth};e.style.setProperty('overflow-y','hidden','important');return {old,before,snapshotClientWidth:e.clientWidth}"):null;
           if(visualLayout)t.visualLayout=visualLayout;
           try{
+            if(t.visualAnnouncementDismissed)await snap(t,'reference-ready');
             // Appium's native interception did not resolve CSS crops on the
             // physical web sessions. Use the documented viewport mode there.
             const result=await evaluate('tb:visual.snapshot='+JSON.stringify({name,options:{...(config.kind==='desktop'?{selector:'.portal-header'}:{}),threshold:0.1,antialiasing:true}}));
             const v=typeof result==='string'?JSON.parse(result):result;
+            if(typeof v?.match!=='boolean'&&v?.visualId)t.visualProvisional={name,visualId:v.visualId,runId:v.runId,url:v.url};
             if(typeof v?.match!=='boolean'||!v.visualId)throw Error('Provider did not return a real visual-comparison result');
             t.visual={name,...v,approval:reference?'approved-reference':'provisional-first-capture',referenceScope:config.kind==='physical'?'Exact page opening on this physical device/viewport':'Shared header only; narrative/body/footer are separate checks and screenshots'};
             if(reference&&(String(reference.visualId)!==String(v.visualId)||!v.match))t.checks.push({name:'Approved visual reference matches',passed:false,error:'Visual ID changed or pixel regression detected',evidence:t.visual});

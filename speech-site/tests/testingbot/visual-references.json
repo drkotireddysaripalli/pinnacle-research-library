@@ -26,6 +26,18 @@
       "providerReference": "https://testingbot.com/members/visual/21210/runs/3607431",
       "scope": "Neutral desktop common header on Chrome155/Windows11/1440x900 only",
       "pixelDifferenceNote": "Original cross-version failures and20711 retained. A fresh comparison against21210 remains required; first capture and functional pass alone were not visual acceptance."
+    },
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900-browser-155-no-announcement",
+      "visualId": 21222,
+      "browserVersion": "155",
+      "reviewedAt": "2026-10-16T11:17:53.980057+00:00",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Actual Chrome155 neutral header after the ordinary announcement-dismiss action reviewed against the retained owner-approved common source and the no-announcement build capture. Separate state from public reference21210; neither older baseline is replaced.",
+      "sourceCommit": "5493522055b31acce3263d1ea36d02a05b1eee66",
+      "providerReference": "https://testingbot.com/members/visual/21222",
+      "scope": "Neutral Chrome155/Windows11/1440x900 common header without the announcement; first approved reference for this separate state",
+      "pixelDifferenceNote": "Review based on the actual reference-ready screenshot and provider identity. Exact-source build comparison still required."
     }
   ]
 }
