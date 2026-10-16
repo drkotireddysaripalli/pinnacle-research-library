@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-16T06:10:41.176574+00:00",
+  "status": "ACCEPTED_PUBLIC_LABEL_FORMATTER_PENDING_OWNER_INTEGRATION_AND_LIVE_READBACK",
+  "supersedes_formatter_commit": "42dd8b2532c788c89afb1ed2f028e8ffa0874ba8",
+  "source_packet_unchanged": true,
+  "consent_and_exact_pairs_unchanged": true,
+  "source_purpose_alt_preserved_as": "manifest_alt",
+  "ID_only_alt_fallbacks_replaced_from_literal_question": 472,
+  "parent_count": 47,
+  "reference_items": 957,
+  "image_pairs": 1899,
+  "current_helper_tests_passed": 14,
+  "fresh_offline_wrapper_replay": {
+    "qualified": 1899,
+    "held": 0,
+    "withdrawals": 0,
+    "synthetic_HTTP_robots_feed": true
+  },
+  "fragment_index_sha256": "c0f1a5f7db1d0d12be034bfc9e35ebb997e137b9da85877b45f00e08e106f5f4",
+  "live_rendered_use_proven": false,
+  "generated_HTML_bodies_checked_in": false
+}

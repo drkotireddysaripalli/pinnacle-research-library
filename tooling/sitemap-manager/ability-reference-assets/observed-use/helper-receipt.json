@@ -30,16 +30,20 @@
   "database_writes": 0,
   "files": {
     "README.md": {
-      "bytes": 12945,
-      "sha256": "e02922f314800dc41aa5df9f85110ec7c5ab1adf268e0ff69b6b697b0f9024e5"
+      "bytes": 14381,
+      "sha256": "29bc3b1ce91bec7c022b02b496f907d8f9a49c8e3fb0252abb96240ca9bd891d"
     },
     "cached-packet-replay.json": {
       "bytes": 1462,
       "sha256": "75a0cf85d9d0f861ce230bbdceca8829f6adb327d5ca0c572028a1c743b5f343"
     },
     "format_reference_sections.py": {
-      "bytes": 7170,
-      "sha256": "2254e509510d3cc51dd7c339be7ebc7a1a53f16ce2f92759e95a5722112cbc67"
+      "bytes": 6984,
+      "sha256": "f84b7d2be7e60d27d315535b0beb9b363c5befa417a3e7b6d7a0a42ee3754912"
+    },
+    "formatted-reference-sections-public-labels/fragments-index.json": {
+      "bytes": 24010,
+      "sha256": "c0f1a5f7db1d0d12be034bfc9e35ebb997e137b9da85877b45f00e08e106f5f4"
     },
     "formatted-reference-sections/fragments-index.json": {
       "bytes": 24011,
@@ -49,17 +53,29 @@
       "bytes": 1584,
       "sha256": "864b0d563293bd59d6c3464d60c6040326d154e832b2856b654bb97ba457374d"
     },
+    "formatter-root-acceptance.json": {
+      "bytes": 2404,
+      "sha256": "1f16827cb175ce4016212cb98532b4e3a5cbf84a48c53badba135a8e8504eee8"
+    },
     "formatter-tests.log": {
       "bytes": 100,
       "sha256": "d1276a2d9d79b9ed0a61446aa751886a8b573a45c52c4fe838159bc8be061837"
     },
+    "public-labels-cached-replay.json": {
+      "bytes": 2504,
+      "sha256": "2fa668bedb82b00bba5453f322f9a67426f70ddce6580e1403b47be98e376fc4"
+    },
     "qualify_observed_ability_uses.py": {
-      "bytes": 26997,
-      "sha256": "4044f1c96231c40a4124c244eefe4b7c2711c6fe285dbb1ada11132b8a035cce"
+      "bytes": 27640,
+      "sha256": "337acd727f711d00626a6d7caf9dc6b4adf01bce04bb35bd2aa7f9625349fb0c"
+    },
+    "root-acceptance.json": {
+      "bytes": 2341,
+      "sha256": "9d591b5a2eea236674dd816433853369d75b463986753b0bb5c36866d79dd788"
     },
     "test_format_reference_sections.py": {
-      "bytes": 5718,
-      "sha256": "ff78e2fa310afa5313a09c96ffc18b4bf8120ddc2d77ad03415ac37dc81e870c"
+      "bytes": 6887,
+      "sha256": "c2998c63ee93bc5a0307dbdebb8535158fe439c42be3540fabc951fd39688839"
     },
     "test_qualify_observed_ability_uses.py": {
       "bytes": 14760,
@@ -72,33 +88,41 @@
   },
   "formatter": {
     "HTTP_robots_feed_are_fixture_evidence": true,
+    "ID_only_alt_fallbacks_replaced": 472,
     "actual_live_rendered_use_proven": false,
     "canonical_or_publisher_edits": 0,
     "command": "python3 -B format_reference_sections.py --packet bootstrap.zip --out fresh-reference-fragments",
     "database_writes": 0,
     "exact_image_pairs": 1899,
-    "fragment_directory": "formatted-reference-sections",
+    "fragment_directory": "formatted-reference-sections-public-labels",
     "fragment_files": 47,
     "fragment_hashes_in_index_verified": true,
-    "fragment_index": "formatted-reference-sections/fragments-index.json",
-    "generated_fragment_bytes": 1494775,
+    "fragment_index": "formatted-reference-sections-public-labels/fragments-index.json",
+    "generated_fragment_bytes": 1225309,
     "hash_pins_reused": true,
+    "historical_tests": {
+      "command": "python3 -B test_format_reference_sections.py",
+      "exit_code": 0,
+      "failed": 0,
+      "log_file": "formatter-tests.log",
+      "passed": 2
+    },
     "network_requests": 0,
     "new_pages": 0,
     "no_input_overwrite": true,
     "offline_replay_held_pairs": 0,
     "offline_replay_qualified_pairs": 1899,
     "offline_replay_withdrawals": 0,
-    "offline_wrapper_replay": "formatter-cached-replay.json",
+    "offline_wrapper_replay": "public-labels-cached-replay.json",
+    "old_output_preserved": "formatted-reference-sections",
     "reference_items": 957,
     "single_CTA_checks_passed": 47,
     "status": "LOCAL_FORMATTER_COMPLETE_INTEGRATION_AND_LIVE_READBACK_PENDING",
     "tests": {
-      "command": "python3 -B test_format_reference_sections.py",
-      "exit_code": 0,
-      "failed": 0,
-      "log_file": "formatter-tests.log",
-      "passed": 2
+      "basis": "Root reported14 combined helper contracts passed after public-label source change; reused without repeating",
+      "independent_full_synthetic_wrapper_replay": "public-labels-cached-replay.json",
+      "root_reported_combined_passed": 14,
+      "unit_tests_repeated_in_this_regeneration": false
     }
   },
   "integration": {
@@ -123,8 +147,50 @@
     "sha256": "459e614a88632f9b2aa705464806f2dfffef8298b14872626f4ceaa7c7479714",
     "total": 47
   },
-  "prepared_at": "2026-10-16T05:45:37.818352+00:00",
+  "prepared_at": "2026-10-16T06:08:56.135243+00:00",
   "private_respondent_or_clinical_fields": 0,
+  "public_label_followup": {
+    "ID_only_alts_replaced": 472,
+    "actual_live_rendered_use_proven": false,
+    "current_formatter_sha256": "f84b7d2be7e60d27d315535b0beb9b363c5befa417a3e7b6d7a0a42ee3754912",
+    "current_qualifier_sha256": "337acd727f711d00626a6d7caf9dc6b4adf01bce04bb35bd2aa7f9625349fb0c",
+    "database_writes": 0,
+    "fixture_HTTP_robots_feed": true,
+    "fragment_directory": "formatted-reference-sections-public-labels",
+    "fragment_index": "formatted-reference-sections-public-labels/fragments-index.json",
+    "fragments_index_sha256": "c0f1a5f7db1d0d12be034bfc9e35ebb997e137b9da85877b45f00e08e106f5f4",
+    "held_pairs": 0,
+    "image_relationships": 1899,
+    "network_requests": 0,
+    "old_fragments_and_replay_preserved": true,
+    "old_output_checks": {
+      "directory": "formatted-reference-sections",
+      "fragment_hashes_rechecked": 47,
+      "fragments_index_sha256": "71ae0c2e33c74e3e21bb5772d4db54507b9d9b55cba5af06f5f4da68c073b955",
+      "replay_file": "formatter-cached-replay.json",
+      "replay_sha256": "864b0d563293bd59d6c3464d60c6040326d154e832b2856b654bb97ba457374d"
+    },
+    "parent_count": 47,
+    "prepared_at": "2026-10-16T06:08:56.135243+00:00",
+    "qualified_pairs_in_synthetic_replay": 1899,
+    "reference_items": 957,
+    "replay": "public-labels-cached-replay.json",
+    "replay_sha256": "2fa668bedb82b00bba5453f322f9a67426f70ddce6580e1403b47be98e376fc4",
+    "root_reported_current_helper_tests_passed": 14,
+    "root_tests": {
+      "command": "python3 -B -m unittest test_qualify_observed_ability_uses test_format_reference_sections",
+      "exit_code": 0,
+      "failed": 0,
+      "passed": 14,
+      "performed_after_current_code_change": true,
+      "rerun_for_docs_only": false,
+      "runtime_seconds": 0.043
+    },
+    "source_helper_commit_prefix_superseded": "42dd8b",
+    "source_local_withdrawals": 0,
+    "status": "OFFLINE_PUBLIC_LABEL_REPLAY_PASSED_PENDING_OWNER_INTEGRATION_AND_LIVE_READBACK",
+    "unit_tests_repeated_in_this_regeneration": false
+  },
   "publication_actions": 0,
   "schema_version": 1,
   "source": "ability_reference_illustrations_v1",

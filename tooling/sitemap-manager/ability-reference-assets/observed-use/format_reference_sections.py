@@ -30,9 +30,9 @@ def _fragment(document, plan, consent_sha256):
     lines = ['<section ' + ' '.join(k + '="' + escaped(v) + '"' for k, v in attrs.items()) + '>']
     lines += ['<h2 id="' + escaped(ability.SECTION + '-title') + '">' + escaped(section['heading']) + '</h2>', '<p>' + escaped(section['notice']) + '</p>']
     for item in section['reference_items']:
-        lines += ['<article>', '<h3>Reference item ' + escaped(item['question_id']) + '</h3>', '<p>' + escaped(item['source_question']) + '</p>']
+        lines += ['<article>', '<h3>' + escaped(item['source_question']) + '</h3>']
         if item['source_keyword']:
-            lines.append('<p><strong>Source topic:</strong> ' + escaped(item['source_keyword']) + '</p>')
+            lines.append('<p><strong>Topic:</strong> ' + escaped(item['source_keyword']) + '</p>')
         examples = item['reference_examples']
         if examples:
             lines.append('<dl>')
@@ -42,15 +42,15 @@ def _fragment(document, plan, consent_sha256):
                 if field not in ('E1', 'E2', 'E3') or field in fields:
                     raise ValueError('Only distinct source E1/E2/E3 reference examples allowed')
                 fields.add(field)
-                lines += ['<dt>' + escaped(field) + ' source example</dt>', '<dd>' + escaped(example['text']) + '</dd>']
+                lines += ['<dt>Example ' + escaped(field[1:]) + '</dt>', '<dd>' + escaped(example['text']) + '</dd>']
             lines.append('</dl>')
-        lines.append('<p>Source reference: question ' + escaped(item['question_id']) + '; assessment ' + escaped(item['assessment_id']) + '. ' + escaped(item['context_purpose']) + '</p>')
         for image in item['illustrations']:
             expected = plan['images'].get(image['asset_id'])
-            if not expected or image['image_url'] != expected['image_url'] or image['proposed_dom_marker'] != expected['markers'] or image['purpose_alt_suggestion'] != expected['alt']:
+            if not expected or image['image_url'] != expected['image_url'] or image['proposed_dom_marker'] != expected['markers'] or image['purpose_alt_suggestion'] != expected['manifest_alt']:
                 raise ValueError('Unknown or changed authorized image pair')
             markers = ' '.join(k + '="' + escaped(v) + '"' for k, v in image['proposed_dom_marker'].items())
-            lines += ['<figure ' + markers + '>', '<img src="' + escaped(image['image_url']) + '" alt="' + escaped(image['purpose_alt_suggestion']) + '" loading="lazy" decoding="async">', '<figcaption>' + escaped(image['purpose_caption_suggestion']) + '</figcaption>', '</figure>']
+            caption = 'Question illustration' if image['role']=='question_image' else 'Example illustration'
+            lines += ['<figure ' + markers + '>', '<img src="' + escaped(image['image_url']) + '" alt="' + escaped(expected['alt']) + '" loading="lazy" decoding="async">', '<figcaption>' + escaped(caption) + '</figcaption>', '</figure>']
         lines.append('</article>')
     lines += ['<p class="ability-reference-cta"><strong>' + escaped(cta['brand']) + '</strong> <a href="' + escaped(cta['href']) + '">' + escaped(cta['text']) + '</a></p>', '</section>']
     return ('\n'.join(lines) + '\n').encode('utf-8')

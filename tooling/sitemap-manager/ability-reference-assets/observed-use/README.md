@@ -34,13 +34,17 @@ Each current, anonymously captured HTML page must emit one visible section:
   <figure data-ability-reference-asset="EXACT_ASSET_ID"
     data-reference-question-id="EXACT_QUESTION_ID"
     data-reference-role="question_image">
-    <img src="EXACT_AUTHORIZED_URL" alt="EXACT_PURPOSE_ALT_SUGGESTION">
+    <img src="EXACT_AUTHORIZED_URL" alt="EXACT_PUBLIC_PURPOSE_ALT">
   </figure>
 </section>
 ```
 
-Use each manifest's actual `proposed_dom_marker`, `image_url` and
-`purpose_alt_suggestion`. The three asset markers may instead be on the `img`;
+Use each manifest's actual `proposed_dom_marker` and `image_url`, and the validated
+`load_packet(...)["parents"][parent]["images"][asset]["alt"]`. The shared
+`public_purpose_alt` replaces the 472 ID-only manifest alt fallbacks with the literal
+source question; other purpose alts remain exact. The original manifest alt is
+retained separately as `manifest_alt`, so the packet/consent stays unchanged. The
+three asset markers may instead be on the `img`;
 conflicting ancestor markers fail. Each marked figure must contain exactly one
 image. Shell references, hidden/inert template content, ambiguous lazy/srcset
 sources, duplicate images and unknown markers do not qualify. This checks emitted
@@ -191,9 +195,12 @@ was performed by this helper task.
 
 `format_reference_sections.py` reuses `load_packet` with the same external trusted
 pins, then rechecks each manifest's bytes/hash before formatting. It emits only
-the exact authorized section: literal source question, keyword and available
-E1/E2/E3 examples; exact figure markers and image URL/purpose alt; source context
-and suggested captions; lazy/async images; one Pinnacle/9100181181 CTA. Every source
+the exact authorized section: literal source question as its heading, keyword and
+available E1/E2/E3 examples shown as “Example 1/2/3”; exact figure markers and image
+URL/public purpose alt; role captions; lazy/async images; one Pinnacle/9100181181
+CTA. IDs remain provenance attributes rather than visible reference labels, and
+the shared alt function replaces ID-only fallbacks with literal source context.
+Every source
 text and attribute is escaped. There are no forms, scores, result claims, scripts,
 styles, hidden details or new page URLs.
 
@@ -217,7 +224,7 @@ capture the actual public HTML and qualify it with current feed/HEAD/parent
 evidence through the existing adapter; generated fragments alone do not admit
 sitemap relationships.
 
-Two formatter tests pass for escaping/literal E1–E3 content, deterministic bytes,
+The initial two formatter tests passed for escaping/literal E1–E3 content, deterministic bytes,
 the exact qualifier interface, changed-hash/unknown-pair rejection and prevention
 of input/output overwrite. `formatted-reference-sections/` contains the local
 47-parent output (957 reference items; 1,899 exact image pairs).
@@ -226,3 +233,17 @@ replay through the existing qualifier: **1,899 qualified, 0 held, 0 withdrawals*
 at the cached HEAD clock. It uses fixture HTTP/robots/feed flags and the cached
 canonical spellings, including the 11 IRI differences. It proves formatter/interface
 compatibility, not live rendered use, current delivery or deployment.
+
+The public-label follow-up is the current handoff: use
+`formatted-reference-sections-public-labels/` and its `fragments-index.json`.
+It contains 47 fragments, 957 literal-question headings and 1,899 exact image pairs,
+including 472 source-question alt replacements. Visible DB reference IDs and E1–E3
+field labels are absent; provenance markers remain intact. The owner reported all
+14 current helper tests passed after this change; this regeneration reused that
+result and ran the complete offline wrapper replay independently.
+
+`public-labels-cached-replay.json` records **1,899 qualified, 0 held, 0 withdrawals**
+with the current formatter/qualifier hashes, fixture HTTP/robots/feed flags and the
+cached HEAD clock. The earlier `formatted-reference-sections/` and
+`formatter-cached-replay.json` are preserved historical outputs and are superseded
+by the public-label version. No actual live rendered use or deployment is proved.

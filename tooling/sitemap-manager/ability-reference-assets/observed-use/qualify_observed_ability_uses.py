@@ -12,6 +12,15 @@ MARKERS=('data-ability-reference-asset','data-reference-question-id','data-refer
 VOID={'area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'}
 pack=lambda v:json.dumps(v,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()
 sha=lambda b:hashlib.sha256(b).hexdigest()
+def public_purpose_alt(item,image):
+    """Replace the source packet's ID-only fallback with its literal reference topic."""
+    planned=image['purpose_alt_suggestion']
+    if re.fullmatch(r'(Question|Example) illustration accompanying reference question \d+',planned):
+        question=' '.join(item.get('source_question','').split())
+        if not question:raise ValueError('Literal source question required for public alt fallback')
+        role={'question_image':'Question','example_image':'Example'}[image['role']]
+        return role+' illustration accompanying: '+question
+    return planned
 def canonical_uri(value):
     """IRI spelling only: UTF-8 encode non-ASCII and uppercase existing escapes; never decode."""
     value=''.join(c if c.isascii() else ''.join(f'%{b:02X}' for b in c.encode('utf-8')) for c in value)
@@ -76,7 +85,7 @@ def load_packet(path,expected_consent=CONSENT_SHA256,expected_index=INDEX_SHA256
                     if not p or a in images or (im['image_url'],im['object_key'],im['role'],item['question_id'],item['assessment_id'])!=(p['image_url'],p['object_key'],p['role'],p['question_id'],p['assessment_id']) or im['authorization']['consent_sha256']!=expected_consent or im['authorization']['scope_pair_file_sha256']!=scope['pair_file_sha256']:raise ValueError('Illustration differs from consent scope')
                     marker=dict(zip(MARKERS,(a,str(item['question_id']),im['role'])))
                     if im['proposed_dom_marker']!=marker:raise ValueError('Unknown planned marker contract')
-                    images[a]={**p,'alt':im['purpose_alt_suggestion'],'markers':marker}
+                    images[a]={**p,'alt':public_purpose_alt(item,im),'manifest_alt':im['purpose_alt_suggestion'],'markers':marker}
             if set(images)!=set(byparent[parent]) or len(images)!=e['image_relationships'] or d['section']['id']!=SECTION:raise ValueError('Render scope differs from authorized pairs')
             parents[parent]={'manifest_sha256':e['sha256'],'images':images}
         if set(parents)!=set(byparent):raise ValueError('Missing/unknown render parent')

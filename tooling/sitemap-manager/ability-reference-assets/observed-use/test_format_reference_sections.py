@@ -108,6 +108,23 @@ class FormatterTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Illustration'):
             formatter.format_packet(self.root, self.fixture.csha, ability.sha(raw))
 
+    def test_public_alt_fallback_uses_literal_question_not_database_id(self):
+        question='Can a child respond to “Where is your nose?”'
+        for role,label in [('question_image','Question'),('example_image','Example')]:
+            image={'role':role,'purpose_alt_suggestion':label+' illustration accompanying reference question 1484'}
+            self.assertEqual(ability.public_purpose_alt({'source_question':question},image),label+' illustration accompanying: '+question)
+            with self.assertRaisesRegex(ValueError,'Literal source question'):
+                ability.public_purpose_alt({'source_question':''},image)
+        self.assertEqual(ability.public_purpose_alt({}, {'role':'question_image','purpose_alt_suggestion':self.literal}),self.literal)
+        fragments,_=self.formatted()
+        for fragment in fragments.values():
+            tags=Tags();tags.feed(fragment.decode())
+            visible=' '.join(tags.text)
+            self.assertNotIn('Source reference:',visible)
+            self.assertNotIn('Reference item ',visible)
+            self.assertNotIn('E1 source example',visible)
+            self.assertIn('Example 1',visible)
+
 
 if __name__ == '__main__':
     unittest.main()

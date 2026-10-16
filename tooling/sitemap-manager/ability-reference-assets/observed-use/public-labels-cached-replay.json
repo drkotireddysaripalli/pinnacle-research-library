@@ -1,0 +1,57 @@
+{
+  "HTTP_and_robots_flags_are_fixture": true,
+  "actual_live_rendered_use_proven": false,
+  "cached_as_of": "2026-10-16T04:30:30.585769+00:00",
+  "cached_literal_canonical_spellings_reused": true,
+  "consent_sha256": "63be2d9baff41c2ca0fbfe60c8c20d9dfd510ac1a9656e7d1a0916359df2aaa0",
+  "current_publication_or_current_delivery_proven": false,
+  "database_writes": 0,
+  "deterministic_reformat_bytes_match": true,
+  "feed_projection_is_fixture": true,
+  "formatter_sha256": "f84b7d2be7e60d27d315535b0beb9b363c5befa417a3e7b6d7a0a42ee3754912",
+  "fragment_bytes": 1225309,
+  "fragment_directory": "formatted-reference-sections-public-labels",
+  "fragment_parents": 47,
+  "fragments_index_sha256": "c0f1a5f7db1d0d12be034bfc9e35ebb997e137b9da85877b45f00e08e106f5f4",
+  "head_jsonl_sha256": "faeb007092d077d57ea69033f947dd114aca38bde09e7694dfedc057a68876eb",
+  "head_receipt_sha256": "79d26f692dfb570305bc3dbafac7cebb9a7bbaa46e19f75b7cdb47261425c255",
+  "network_requests": 0,
+  "new_pages": 0,
+  "packet_sha256": "12b11a7e79de7beb6b98764f2a0c1966016990bf1168f80543ccf9350c1d7eca",
+  "public_label_checks": {
+    "ID_only_alt_fallbacks_replaced_from_literal_questions": 472,
+    "literal_question_headings": 957,
+    "single_CTA_parent_checks": 47,
+    "visible_DB_reference_labels": 0,
+    "visible_E1_E2_E3_field_labels": 0
+  },
+  "qualifier_sha256": "337acd727f711d00626a6d7caf9dc6b4adf01bce04bb35bd2aa7f9625349fb0c",
+  "reference_items": 957,
+  "render_index_sha256": "c0e64be28c26572a55cf3ace3427dc6eb8e6ca2f02f63a9aca6bad5926e62654",
+  "result": {
+    "can_reconcile": true,
+    "complete_safe_observed_parent_set": true,
+    "counts": {
+      "authorized_pairs": 1899,
+      "carried_forward_pairs": 0,
+      "held_pairs": 0,
+      "observed_parents": 47,
+      "prior_owned_pairs": 0,
+      "qualified_pairs": 1899,
+      "source_local_withdrawals": 0
+    },
+    "status": "qualified_complete"
+  },
+  "schema_version": 1,
+  "source": "ability_reference_illustrations_v1",
+  "source_helper_commit_prefix_superseded": "42dd8b",
+  "status": "OFFLINE_PUBLIC_LABEL_RENDER_REPLAY_PASSED_NOT_LIVE_PROOF",
+  "superseded_outputs_preserved": {
+    "directory": "formatted-reference-sections",
+    "fragment_hashes_rechecked": 47,
+    "fragments_index_sha256": "71ae0c2e33c74e3e21bb5772d4db54507b9d9b55cba5af06f5f4da68c073b955",
+    "replay_file": "formatter-cached-replay.json",
+    "replay_sha256": "864b0d563293bd59d6c3464d60c6040326d154e832b2856b654bb97ba457374d"
+  },
+  "synthetic_parent_wrappers": true
+}
