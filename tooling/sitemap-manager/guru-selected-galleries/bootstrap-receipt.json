@@ -1,0 +1,81 @@
+{
+  "authorization_provenance": "NEW explicit exact-object selection under user R2 publication instruction; derived GuruID+contiguous sequence+exact TotalImages. No historical render/upload/ownership claim.",
+  "capture_index_sha256": "68e734dbff277a5f97ead585e3ae3d5bf10d7932363ef152c116a5d0e8ce862a",
+  "copyright_ownership": "UNKNOWN",
+  "counts": {
+    "OG_fallbacks_permitted": 145,
+    "bounded_network_requests": 444,
+    "database_queries": 0,
+    "database_writes": 0,
+    "declared_missing_original_parents_excluded": 2,
+    "feed_rows_created": 0,
+    "image_HEAD_direct200": 150,
+    "image_delivery_and_crawl_preflight_qualified": 150,
+    "media_bodies_downloaded": 0,
+    "new_pages": 0,
+    "null_count_parents_excluded": 8,
+    "other_existing_OG_preserved": 1,
+    "parent_GET_and_canonical_robots_qualified": 146,
+    "rendered_new_gallery_pairs_verified": 0,
+    "same_id_primary_thumbnails_current404": 146,
+    "selected_exact_objects_and_pairs": 150,
+    "selected_parents": 146,
+    "sitemap_admissions": 0,
+    "source_public_parents": 156,
+    "visible_primary_fallbacks_permitted": 146
+  },
+  "credential_material_included": false,
+  "current_observation_from": "2026-10-16T09:26:25.667353+00:00",
+  "current_observation_to": "2026-10-16T09:26:52.268710+00:00",
+  "current_preflight_summary_sha256": "1672979231ff1683a6397bc69d1019ed88b827e18225c2bb9df20ccb9de3c675",
+  "excluded": {
+    "missing_cached_original_ids": [
+      6104,
+      6132
+    ],
+    "null_count_ids": [
+      5974,
+      5979,
+      6015,
+      6380,
+      6381,
+      6382,
+      6383,
+      6385
+    ]
+  },
+  "focused_tests": {
+    "failed": 0,
+    "log_sha256": "ef61ed95df29d949f181f3dbca14179c74ef98bbb04cafebf38aecbc9e110610",
+    "no_additional_tests_or_network_during_packaging": true,
+    "passed": 10
+  },
+  "integration_owner": "Existing source publisher / Windows; root handles native checkin and independent postdeployment proof",
+  "licence": "UNKNOWN; no licence grant",
+  "loose_helper_sha256": {
+    "README.md": "3b142b00b9980a646d51b6cfe82177ab038728e3b042a48c214b9081e952a058",
+    "build_selected_galleries.py": "0e3382f794d226c03b491dbe10b67b93cf234d4e5a5cd196a15856f193194803",
+    "preflight_selected_galleries.py": "c6469eb1ea23450f06822f5820c6725742fe947344c171db182ddcfd840fd351",
+    "test_selected_galleries.py": "b5f2d952318d9de8543ebda9c6149e3bf63a789f99589ec9de2781db2cb89027"
+  },
+  "owner_reported_native_base_sha": "cac47cec132eca4547e9d91560e153d80b7d5071",
+  "packet_file_manifest_sha256": "cb9fe282c20d29c8361456e2e145c256c76e7ccf4176e00238c22cf39fa6e451",
+  "plan_index_sha256": "699385f9f689294d097578ecb0ef64ef4be98f9ab6de84992ee50d17bccbac66",
+  "prepared_at": "2026-10-16T09:33:30.549284+00:00",
+  "primary_exception": {
+    "OG": "Existing other emblem preserved; no automatic OG replacement.",
+    "guru_id": 6129,
+    "visible_primary_same_id_thumb404": true
+  },
+  "public_parent_raw_HTML_policy": "146 bodies retained locally and hash-pinned in local-evidence-receipt.json; not duplicated in ZIP.",
+  "public_private_boundary": "Reference-only projection, public object metadata, public HTML/header evidence; no patient/respondent/session/clinical rows.",
+  "schema": "guru-selected-galleries-bootstrap-receipt-v1",
+  "selection_scope_sha256": "f5c71d363e6716a2ddf3671754b6222b6add232cba248ffc35dbf59cd7b54733",
+  "sitemap_admission": "HOLD_UNTIL_RENDERED_DELIVERY_AND_PARENT_QUALIFIED",
+  "status": "PREPARED_SOURCE_SELECTION_AND_CURRENT_PREFLIGHT_NOT_INTEGRATED",
+  "zip": {
+    "bytes": 401754,
+    "file": "guru-selected-galleries-bootstrap-20261016.zip",
+    "sha256": "4b8f2c17221066c4483af541fbc2d55de62628189cbaeb000c85b5dcfe7b520f"
+  }
+}

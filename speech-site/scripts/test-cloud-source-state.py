@@ -1,5 +1,7 @@
-import importlib.util,io,json,pathlib,tempfile,unittest,zipfile,hashlib
+import importlib.util,io,json,pathlib,tempfile,unittest,zipfile,hashlib,os,subprocess
 spec=importlib.util.spec_from_file_location('state',pathlib.Path(__file__).with_name('cloud-source-state.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+scope_module=pathlib.Path(__file__).with_name('r2-coverage-chain.mjs').resolve().as_uri()
+scope_contract=json.loads(subprocess.check_output([os.environ.get('NODE_EXECUTABLE','node'),'--input-type=module','-e',f"import{{R2_SCOPES,R2_SCOPE_SHA256}}from {json.dumps(scope_module)};console.log(JSON.stringify({{scopeSetSHA256:R2_SCOPE_SHA256,scopeCount:R2_SCOPES.length}}));"],text=True))
 class Missing(Exception):response={'ResponseMetadata':{'HTTPStatusCode':404}}
 class FakeS3:
  def __init__(self,objects):self.objects=objects
@@ -9,8 +11,8 @@ class FakeS3:
  def put_object(self,**kw):self.objects[kw['Key']]=kw['Body']
 def rotation_fixture(source):
  root=pathlib.Path(source)/'speech-site/ask-private/r2-approved-current';root.mkdir(parents=True)
- page={'pass':0,'scope':0,'page':0,'bucket':'pbn-test','prefix':'Assets/InterventionTechniques/','registrySHA256':'a'*64,'inputCursor':None,'nextCursor':'opaque-list-position','truncated':True,'paginationEvidence':'explicit-truncation-flag','rowsExamined':1000,'known':[],'observedAt':'2026-10-16T00:01:00Z'};data=json.dumps(page).encode();name='pass-0-scope-0-page-0.json';(root/name).write_bytes(data)
- state={'schemaVersion':2,'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':False,'completedPages':1,'pass':0,'scope':0,'page':1,'cursor':'opaque-list-position','pageHashes':{name:m.sha(data)}};(root/'state.json').write_text(json.dumps(state));return root,state
+ page={'pass':0,'scope':0,'page':0,'bucket':'pbn-test','prefix':'Assets/InterventionTechniques/','scopeSetSHA256':scope_contract['scopeSetSHA256'],'registrySHA256':'a'*64,'inputCursor':None,'nextCursor':'opaque-list-position','truncated':True,'paginationEvidence':'explicit-truncation-flag','rowsExamined':1000,'known':[],'observedAt':'2026-10-16T00:01:00Z'};data=json.dumps(page).encode();name='pass-0-scope-0-page-0.json';(root/name).write_bytes(data)
+ state={'schemaVersion':2,**scope_contract,'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':False,'completedPages':1,'pass':0,'scope':0,'page':1,'cursor':'opaque-list-position','pageHashes':{name:m.sha(data)}};(root/'state.json').write_text(json.dumps(state));return root,state
 class StateTests(unittest.TestCase):
  def test_traversal_and_secret_snapshots_rejected(self):
   for s in ('../outside','/etc/password','speech-site/ask-private/bindings.json','speech-site/.git/config','speech-site/private/settings.json','other/data.json'):
@@ -27,13 +29,13 @@ class StateTests(unittest.TestCase):
    with self.assertRaises(ValueError):m.rotation_hydrate(target,s3)
    self.assertFalse((pathlib.Path(target)/'speech-site').exists())
  def test_valid_hashes_with_missing_scope_terminals_cannot_restore_or_imply_deletion(self):
-  files={};state={'schemaVersion':2,'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':True,'completedPages':2,'pass':2,'scope':0,'page':0,'cursor':None,'pageHashes':{}}
+  files={};state={'schemaVersion':2,**scope_contract,'registrySHA256':'a'*64,'startedAt':'2026-10-16T00:00:00Z','complete':True,'completedPages':2,'pass':2,'scope':0,'page':0,'cursor':None,'pageHashes':{}}
   for p in range(2):
-   name=f'pass-{p}-scope-0-page-0.json';data=json.dumps({'pass':p,'scope':0,'page':0,'bucket':'pbn-test','prefix':'Assets/InterventionTechniques/','registrySHA256':'a'*64,'inputCursor':None,'nextCursor':None,'truncated':False,'paginationEvidence':'short-terminal-page-without-cursor','rowsExamined':0,'known':[],'observedAt':'2026-10-16T00:01:00Z'}).encode();files[name]=data;state['pageHashes'][name]=m.sha(data)
+   name=f'pass-{p}-scope-0-page-0.json';data=json.dumps({'pass':p,'scope':0,'page':0,'bucket':'pbn-test','prefix':'Assets/InterventionTechniques/','scopeSetSHA256':scope_contract['scopeSetSHA256'],'registrySHA256':'a'*64,'inputCursor':None,'nextCursor':None,'truncated':False,'paginationEvidence':'short-terminal-page-without-cursor','rowsExamined':0,'known':[],'observedAt':'2026-10-16T00:01:00Z'}).encode();files[name]=data;state['pageHashes'][name]=m.sha(data)
   files['state.json']=json.dumps(state).encode();stream=io.BytesIO()
   with zipfile.ZipFile(stream,'w') as z:
    for name,data in files.items():z.writestr(name,data)
-  blob=stream.getvalue();key='rotation/'+m.sha(blob)+'.zip';pointer={'schema':1,'key':key,'sha256':m.sha(blob),'bytes':len(blob),'registrySHA256':state['registrySHA256'],'startedAt':state['startedAt'],'files':[{'name':n,'bytes':len(b),'sha256':m.sha(b)} for n,b in files.items()]};s3=FakeS3({'rotation/current.json':json.dumps(pointer).encode(),key:blob})
+  blob=stream.getvalue();key='rotation/'+m.sha(blob)+'.zip';pointer={'schema':1,**scope_contract,'key':key,'sha256':m.sha(blob),'bytes':len(blob),'registrySHA256':state['registrySHA256'],'startedAt':state['startedAt'],'files':[{'name':n,'bytes':len(b),'sha256':m.sha(b)} for n,b in files.items()]};s3=FakeS3({'rotation/current.json':json.dumps(pointer).encode(),key:blob})
   with tempfile.TemporaryDirectory() as target:
    with self.assertRaisesRegex(ValueError,'chain'):m.rotation_hydrate(target,s3)
    self.assertFalse((pathlib.Path(target)/'speech-site').exists())

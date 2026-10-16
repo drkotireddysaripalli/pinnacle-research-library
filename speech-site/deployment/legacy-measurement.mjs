@@ -53,12 +53,17 @@ export async function repairLegacyExclusions(request,response){
  return new Response(stripLegacyNoscript(response.body),{status:response.status,statusText:response.statusText,headers});
 }
 export async function repairLegacyMeasurement(request,response){
- if(!legacyMeasurementScope(request)||response.status!==200||!response.body||response.headers.has('content-security-policy')||!response.headers.get('content-type')?.includes('text/html')||/no-transform/i.test(response.headers.get('cache-control')||''))return response;
+ const scope=legacyMeasurementScope(request);
+ if(!scope||response.status!==200||!response.body||response.headers.has('content-security-policy')||!response.headers.get('content-type')?.includes('text/html')||/no-transform/i.test(response.headers.get('cache-control')||''))return response;
  const reader=response.body.getReader(),decoder=new TextDecoder(),encoder=new TextEncoder(),chunks=[];let prefix='',done=false;
- while(prefix.length<131072&&!/<body\b[^>]*>/i.test(prefix)){const part=await reader.read();if(part.done){done=true;break;}chunks.push(part.value);prefix+=decoder.decode(part.value,{stream:true});}
+ // The maintained Android contact variant places its known delayed analytics
+ // installer after the form. Its complete bounded body must be fingerprinted;
+ // a header-only migration would leave a second competing collector behind.
+ const completeContact=scope==='helpline',limit=completeContact?2097152:131072;let bytesRead=0;
+ while(bytesRead<limit&&(completeContact||!/<body\b[^>]*>/i.test(prefix))){const part=await reader.read();if(part.done){done=true;break;}chunks.push(part.value);bytesRead+=part.value.length;prefix+=decoder.decode(part.value,{stream:true});}
  if(done)prefix+=decoder.decode();
  const raw=new Uint8Array(chunks.reduce((n,b)=>n+b.length,0));let offset=0;for(const part of chunks){raw.set(part,offset);offset+=part.length;}
- const migrated=migrateLegacyPrefix(prefix,request),headers=new Headers(response.headers),pending=raw.subarray(encoder.encode(prefix).length);
+ const migrated=completeContact&&!done?null:migrateLegacyPrefix(prefix,request),headers=new Headers(response.headers),pending=raw.subarray(encoder.encode(prefix).length);
  if(migrated){for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])headers.delete(k);headers.set('x-pinnacle-legacy-measurement',migrated.scope);headers.set('x-pinnacle-removed-tag-count',String(migrated.removed));}
  const parts=migrated?[encoder.encode(migrated.html),pending]:[raw];if(done)reader.releaseLock();
  let result=new Response(done?(migrated?migrated.html:raw):resume(parts,reader),{status:response.status,statusText:response.statusText,headers});

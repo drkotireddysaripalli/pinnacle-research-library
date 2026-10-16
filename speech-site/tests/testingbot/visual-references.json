@@ -6,6 +6,7 @@
     {
       "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
       "visualId": 20711,
+      "browserVersion": "153.0.8010.37",
       "reviewedAt": "2026-10-07T05:03:46.248Z",
       "reviewer": "Website implementation owner",
       "approvalBasis": "Owner-approved common-shell tag and exact authority fixture; actual CI Shop and Speech opening screenshots reviewed",
@@ -13,6 +14,18 @@
       "providerReference": "https://testingbot.com/members/visual/20711/runs/3562595",
       "scope": "Desktop common header only; no whole-page or physical baseline approval",
       "pixelDifferenceNote": "Speech/Enrolment/Suchitra returned 0; provisional first PinnacleAI capture reported 146 and is retained for comparison"
+    },
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900-browser-155",
+      "visualId": 21210,
+      "browserVersion": "155",
+      "reviewedAt": "2026-10-16T10:21:00Z",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Explicit review of Chrome155 Shop opening against the owner-approved common source, nine exact authority labels and the retained Chrome153 reference. Provider UI independently identifies21210 as Chrome155 and20711 as Chrome153. No production header design change or replacement of20711.",
+      "sourceCommit": "6f7f9082ad4d407114c7b762a1fb78f33bcd5b68",
+      "providerReference": "https://testingbot.com/members/visual/21210/runs/3607431",
+      "scope": "Neutral desktop common header on Chrome155/Windows11/1440x900 only",
+      "pixelDifferenceNote": "Original cross-version failures and20711 retained. A fresh comparison against21210 remains required; first capture and functional pass alone were not visual acceptance."
     }
   ]
 }

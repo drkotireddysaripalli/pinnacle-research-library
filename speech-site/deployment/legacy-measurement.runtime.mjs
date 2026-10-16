@@ -369,16 +369,20 @@ async function repairLegacyExclusions(request, response) {
   return new Response(stripLegacyNoscript(response.body), { status: response.status, statusText: response.statusText, headers });
 }
 async function repairLegacyMeasurement(request, response) {
-  if (!legacyMeasurementScope(request) || response.status !== 200 || !response.body || response.headers.has("content-security-policy") || !response.headers.get("content-type")?.includes("text/html") || /no-transform/i.test(response.headers.get("cache-control") || "")) return response;
+  const scope = legacyMeasurementScope(request);
+  if (!scope || response.status !== 200 || !response.body || response.headers.has("content-security-policy") || !response.headers.get("content-type")?.includes("text/html") || /no-transform/i.test(response.headers.get("cache-control") || "")) return response;
   const reader = response.body.getReader(), decoder = new TextDecoder(), encoder = new TextEncoder(), chunks = [];
   let prefix = "", done = false;
-  while (prefix.length < 131072 && !/<body\b[^>]*>/i.test(prefix)) {
+  const completeContact = scope === "helpline", limit = completeContact ? 2097152 : 131072;
+  let bytesRead = 0;
+  while (bytesRead < limit && (completeContact || !/<body\b[^>]*>/i.test(prefix))) {
     const part = await reader.read();
     if (part.done) {
       done = true;
       break;
     }
     chunks.push(part.value);
+    bytesRead += part.value.length;
     prefix += decoder.decode(part.value, { stream: true });
   }
   if (done) prefix += decoder.decode();
@@ -388,7 +392,7 @@ async function repairLegacyMeasurement(request, response) {
     raw.set(part, offset);
     offset += part.length;
   }
-  const migrated = migrateLegacyPrefix(prefix, request), headers = new Headers(response.headers), pending = raw.subarray(encoder.encode(prefix).length);
+  const migrated = completeContact && !done ? null : migrateLegacyPrefix(prefix, request), headers = new Headers(response.headers), pending = raw.subarray(encoder.encode(prefix).length);
   if (migrated) {
     for (const k of ["content-length", "content-encoding", "etag", "last-modified", "content-md5", "digest"]) headers.delete(k);
     headers.set("x-pinnacle-legacy-measurement", migrated.scope);
