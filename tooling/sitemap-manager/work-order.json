@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-15T16:13:39.799619+00:00",
+  "updated_at": "2026-10-16T06:33:10.056765+00:00",
   "accountable_owner": "This existing Pinnacle sitemap chat",
   "objective": "Deliver a repeatable, source-backed sitemap ecosystem for Pinnacle pages, images, videos and approved public companions, with safe publication, supported engine discovery and maintainable verification.",
   "completion_boundary": "Prepared files, local tests, native storage, production serving, engine processing and care outcomes are separately evidenced. Whole-estate completeness requires publisher and asset inventories.",
@@ -54,7 +54,7 @@
       "depends_on": [
         "SM02"
       ],
-      "next_action": "Import 1,067 qualified additional relationships through the existing Windows publisher; wire both source helpers into daily upkeep and prove live output plus withdrawals/holds. Resolve 147 missing Guru originals and actual assessment reader visibility via the maintained owner sources. Preserve explicit unassociated video holds until actual public use is sourced.",
+      "next_action": "Windows integrates checked-in pure formatter and observed-use adapter on47existingAbilityparents; verify actualpublic1899pairs, sourceownership and7scope daily R2proof. Guru150originalcandidates await authoritative uploader/galleryassociation;347video files remain unassociated;63Abilityimagesheld.",
       "evidence": [
         "outputs/sitemap-coverage-and-field-contract-20261013.json",
         "outputs/sitemap-public-cms-media-receipt-20261013.json",
@@ -62,7 +62,10 @@
         "outputs/sitemap-publisher-media-import-20261013.json",
         "outputs/sitemap-current-eligibility-exceptions-20261013.json",
         "outputs/sitemap-execution-route-receipt-20261013.json",
-        "outputs/sitemap-r2-reconciliation-20261013.json"
+        "outputs/sitemap-r2-reconciliation-20261013.json",
+        "outputs/sitemap-media-source-official-xsd-20261016.json",
+        "outputs/sitemap-media-recovery-native-acceptance-20261016.json",
+        "work/url-reconciliation/pr92-review-20261016/media-acceptance/new-release-acceptance.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
@@ -269,6 +272,150 @@
         "owner": "Existing Windows publisher owner",
         "source_task_status": "Source contracts sent to owner; no approval or fresh filename join needed",
         "scope": "Exact source metadata and publication/use evidence; excludes respondent/clinical/customer data"
+      },
+      "latest_candidate": {
+        "eligible_parents": 71099,
+        "image_references": 67604,
+        "primary_video_entries": 19289,
+        "additional_image_relationships": 1067,
+        "unchanged_replay_changes": 0,
+        "unchanged_replay_new_image_requests": 0,
+        "source": "811df28c2fb1d246151e888a3c1f57d03a71e00a",
+        "status": "native_generated_independent_source_XSD_and_exact_pair_membership_accepted_public_deployment_pending",
+        "known_source_gaps": [
+          "147 Guru image references need exact publisher original relation or restored declared files",
+          "1,899 assessment question/example candidates need actual maintained reader selection and access/publication qualification",
+          "347 unassociated public-prefix physical videos need actual public-parent use and required source metadata"
+        ],
+        "distinct_image_urls": 67472,
+        "xml_files": 60,
+        "release_id": "a70c763dc48e5ad7cded6083855b488a86ca750a91f0f1f2703342c5048dd3d3",
+        "archive_sha256": "67eac4a72892f55c5ece01ce41fcba10d12598e2aaa698ea86cd904007f07a9b"
+      },
+      "assessment_asset_publication": {
+        "status": "source_metadata_delivery_and_render_plan_prepared_owner_integration_pending",
+        "founder_direction": "16Oct direct public reference asset publication forSEO/AEO/AI/LLM with9100181181; no standalone question URLs",
+        "active_reference_questions": 988,
+        "written_examples": 2964,
+        "image_asset_records": 1962,
+        "reference_context_matched_images": 1960,
+        "noncanonical_filename_images": 2,
+        "fresh_HEAD200_image": 1962,
+        "HEAD_robots_vetoes": 0,
+        "planned_image_relationships": 1899,
+        "existing_abs_parents": 47,
+        "unmapped_images": 63,
+        "source_commit": "7a81a90869d3505383faddfadc877973b58cb532",
+        "repository_directory": "tooling/sitemap-manager/ability-reference-assets/",
+        "bootstrap_sha256": "12b11a7e79de7beb6b98764f2a0c1966016990bf1168f80543ccf9350c1d7eca",
+        "current_scope_authorization": "recorded founder public reference-use instruction; copyright/licence fields remainunknown without an unnecessary new project approvalgate",
+        "current_rendered_use": "pending integration/readback",
+        "required_R2_watch_extension": [
+          "pbn-test/Ability/Questions/",
+          "pbn-test/Ability/Examples/"
+        ],
+        "evidence": [
+          "work/url-reconciliation/planetscale-asset-source-20261016/ability-source-checkin-receipt.json",
+          "work/url-reconciliation/planetscale-asset-source-20261016/ability-delivery/summary.json",
+          "work/url-reconciliation/planetscale-asset-source-20261016/ABILITY-REFERENCE-RENDER-PLAN.md"
+        ]
+      },
+      "ability_observed_use_adapter": {
+        "commit": "b958e01da0ea3a2019b2b3acfb44abb663d1fd83",
+        "source_packet_parent": "7a81a90869d3505383faddfadc877973b58cb532",
+        "remote_readback_verified_files": 10,
+        "focused_tests_passed": 11,
+        "existing_parent_live_preflight": "47/47 passed",
+        "image_robots_preflight": "1962/1962 not blocked; images host robots404",
+        "actual_rendered_image_admissions": 0,
+        "integration_owner": "Existing Windows publisher owner",
+        "receipt": "work/url-reconciliation/planetscale-asset-source-20261016/ability-observed-checkin-receipt.json",
+        "latest_followup_commit": "4bdc2fb513b7c27c59e7c09f779d0b63e91d884b",
+        "canonical_readiness": "47/47equivalentURI;11Unicode spellings handled without decoding reserved delimiters",
+        "followup_receipt": "work/url-reconciliation/planetscale-asset-source-20261016/ability-uri-checkin-receipt.json"
+      },
+      "guru_original_mapping_review": {
+        "candidate_objects": 150,
+        "candidate_known_public_guru_ids": 146,
+        "total_images_count_matches": true,
+        "actual_original_rendered_use_proven": false,
+        "public_source_reads": 3,
+        "database_extra_fields": "AllF1-F5/F25empty on156knownpublic rows",
+        "required_owner_source": "Uploader/gallery authoritative GuruID+sequence→original key rule or association; sourceownerchecking boundedcurrentWorker code",
+        "missing_declared_original_ids": [
+          6104,
+          6132
+        ],
+        "receipt": "work/url-reconciliation/guru-gallery-source-20261016/guru-gallery-disposition.json",
+        "remote_candidate_commit": "a0a6fa3e2535a53efd1d688958c640c1bad5e4e4"
+      },
+      "ability_reference_formatter": {
+        "status": "checked_in_current_public_labels_pending_owner_integration_and_live_readback",
+        "commit": "b9f10b29dac1f236dae86f1cc7bb11f1a0dbfa0c",
+        "parents": 47,
+        "reference_items": 957,
+        "exact_image_pairs": 1899,
+        "focused_tests_passed": 14,
+        "offline_qualifier_replay_pairs": 1899,
+        "live_pairs_proven": 0,
+        "one_helpline_CTA_per_parent": "9100181181",
+        "evidence": "work/url-reconciliation/planetscale-asset-source-20261016/ability-public-labels-checkin-receipt.json",
+        "label_quality_followup": {
+          "status": "checked_in_offline_accepted_pending_live",
+          "internal_id_only_alt_fallbacks_replaced": 472,
+          "replacement_basis": "Literal source question, no invented visual depiction",
+          "internal_ids_removed_from_visible_headings_and_captions": true,
+          "new_fragment_index_sha256": "c0f1a5f7db1d0d12be034bfc9e35ebb997e137b9da85877b45f00e08e106f5f4",
+          "parent_count": 47,
+          "offline_qualified_pairs": 1899,
+          "live_pairs_proven": 0,
+          "commit": "b9f10b29dac1f236dae86f1cc7bb11f1a0dbfa0c"
+        }
+      },
+      "ability_r2_scope_extension": {
+        "status": "reviewed_patch_checked_in_pending_owner_integration_fresh_cycle_and_live_verification",
+        "commit": "7492730a453fcd9498a83d9aac56dfcdaf0ad2bf",
+        "patch_base": "f64e18a0ad9e51899e20e9fe202922f3f2c0ba4f",
+        "patch_sha256": "dc4c830f261437749c5659112ffca3a1afabb15ca46a041a19a130a6a625be72",
+        "new_scopes": [
+          "pbn-test/Ability/Questions/",
+          "pbn-test/Ability/Examples/"
+        ],
+        "contracts_passed": 22,
+        "transition": "Snapshot old observation pointer/archive/checkpoint; fresh7scope cycle; retain acceptedpublication separately; never relabelold5scopeabsence.",
+        "evidence": "work/url-reconciliation/ability-r2-scopes-20261016/checkin-receipt.json"
+      },
+      "video_source_qualification_20261016": {
+        "held_storage_objects": 347,
+        "cached_duplicate_candidates": 25,
+        "other_source_holds": 322,
+        "new_admitted_relationships": 0,
+        "new_page_defects_confirmed": 1,
+        "status": "347accounted;25metadata-identicalcandidates;322sourceholds;1livepageschemarepair",
+        "evidence": "work/url-reconciliation/video-source-20261016/video-source-report.json",
+        "packet_sha256": "7bdfa95470a1990fe9d993ec47b0ecda423fdba94e19ff03ea60f987e720cd18",
+        "required_owner_projection": {
+          "CREATIVES_310": "Provide the public creative-reference catalogue projection selecting exact object keys/URLs, with publication/access and existing canonical parent mapping plus title/description/thumbnail. Otherwise retain explicit storage-only/source-unknown holds. No user, session, patient or clinical fields.",
+          "Materials_2": "Provide exact existing public catalogue selection (or explicit inactive/duplicate disposition) for the two named objects; the Tactile cached page currently points at other/placeholder video metadata.",
+          "VIDEO_10": "Provide exact public campaign/Guru/video publisher selection and source version. ID-like filenames and year-labelled offers do not prove active/inactive/public status or a R2 alias to an external link.",
+          "metadata_matches_25": "Retain existing selected URI and its public metadata. Confirm any duplicate/archive policy through source ownership or byte-hash metadata already held by the publisher; do not rewrite URLs from matching ETag/size alone.",
+          "owner": "Existing Windows public resource/creative publisher owner"
+        },
+        "current_tactile_followup": {
+          "observed_at": "2026-10-16T06:29:39.975716+00:00",
+          "page": "https://materials.pinnacleblooms.org/tactile-sensory-kit-texture-exploration",
+          "status": 200,
+          "body_sha256": "06c252e7dbd6cbc005f307cc39116c5188651c20fb4a4065d1d4bd67600bc8ab",
+          "actual_selected_player_URI": "https://images.pinnacleblooms.org/Assets/Materials/video/sunglasses-light-filtering-visual-sensory.mp4",
+          "structured_VideoObject_embedUrl": "https://www.youtube.com/embed/VIDEO_ID",
+          "structured_VideoObject_contentUrl": "https://pinnacleblooms.org/videos/tactile-sensory-guide.mp4",
+          "currently_in_managed_video_XML": false,
+          "video_XML_placeholder_present": false,
+          "disposition": "CONFIRMED_PLACEHOLDER_SCHEMA_REPAIR; exact intendedR2video association remainsunproven; do notinfercontentidentityfromfilename",
+          "required_owner_action": "Remove unsupportedplaceholderVideoObject or replace onlywithsource-proven selectedvideo+requiredmetadata; reconcile actualplayerselectionwithcatalogue and preserve unrelatedpagecontent. Add regression that placeholder/nonselectedvideo metadata cannot enterpage schema or managedvideo XML.",
+          "evidence": "current-tactile-readback/report.json"
+        },
+        "native_packet": "tooling/sitemap-manager/knowledge-media/video-source-20261016/public-video-source-disposition-packet-20261016.zip"
       }
     },
     {
@@ -392,7 +539,7 @@
         "SM03",
         "SM05"
       ],
-      "next_action": "Expanded qualified media is published and independently verified. Later publisher changes remain under SM16; unknown/unassociated storage objects remain excluded with recorded dispositions.",
+      "next_action": "16Oct1067qualifiedimageaddition is public and independently verified. Continue Ability1899rendered reference images, Guru original association and unassociated R2video evidence underSM03; actual scheduledmaintenance/distribution underSM16.",
       "evidence": [
         "work/sitemap-media-expansion/media-expansion-receipt.json",
         "outputs/sitemap-live-owner-delivery-20261013.json",
@@ -401,7 +548,8 @@
         "outputs/sitemap-public-media-profile-application-20261013.json",
         "outputs/sitemap-expanded-media-validation-20261013.json",
         "outputs/sitemap-expanded-media-xsd-20261013.json",
-        "outputs/sitemap-expanded-media-independent-live-20261013.json"
+        "outputs/sitemap-expanded-media-independent-live-20261013.json",
+        "tooling/sitemap-manager/acceptance/20261016/verified-live-sitemap-media-receipts-20261016.zip"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
@@ -415,6 +563,18 @@
           "Expanded media release passes production readback"
         ],
         "pending_checkpoints": []
+      },
+      "accepted_scope_note": "Verified status describes the earlier emitted and publicly accepted media baseline only. Current 1,067-image candidate and 1,899 Ability illustration phase have separate source, deployment and readback gates under SM03/SM16.",
+      "latest_accepted_media_release": {
+        "date": "2026-10-16",
+        "source_release_id": "a70c763dc48e5ad7cded6083855b488a86ca750a91f0f1f2703342c5048dd3d3",
+        "page_urls": 71099,
+        "image_refs": 67604,
+        "primary_video_entries": 19289,
+        "new_exact_parent_image_pairs": 1067,
+        "public_XML_text_files_checked": 70,
+        "discovery_checks": 10,
+        "source_to_live_receipt": "outputs/sitemap-media-source-to-live-acceptance-20261016.json"
       }
     },
     {
@@ -592,14 +752,14 @@
     {
       "id": "SM16",
       "task": "Enable repeatable maintenance and rollback",
-      "status": "verified",
+      "status": "in_progress",
       "validation": "Existing publishing events drive catalogue deltas, eligibility/content/media checks, immutable release, safe assembly/readback and supported notifications; source drift/expiry/errors produce actionable exceptions; one accountable schedule/queue.",
       "owner": "Website release + sitemap workstreams",
       "depends_on": [
         "SM12",
         "SM13"
       ],
-      "next_action": "Daily02:00 IST native job executed an actual source update through CI, deployment and full readback. Keep one owner and inspect actionable failures or held exceptions within the recorded host/source limits.",
+      "next_action": "Resolve exactPR97BVT session-startup gate; merge acceptedb8c57be afterrequiredCI; verify realCloudflareScheduled→Linuxrun, retainedacceptedsource, freshR2normalmode, changedrootacknowledgments, explicitengineprocessing and disabledWindows timer. Abilitypublication/sourceautomationremainsSM03.",
       "evidence": [
         "tooling/sitemap-manager/run.py",
         "tooling/sitemap-manager/tests",
@@ -612,25 +772,165 @@
         "https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/73",
         "outputs/sitemap-three-deliverables-completion-20261014.json",
         "outputs/sitemap-final-independent-live-20261014.json",
-        "https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/75"
+        "https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/75",
+        "tooling/sitemap-manager/acceptance/20261016/verified-live-sitemap-media-receipts-20261016.zip"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
-        "complete_percent": 100,
-        "pending_percent": 0,
-        "basis": "All four maintenance acceptance checkpoints passed; not an indexing, site-health or business score.",
+        "complete_percent": 75,
+        "pending_percent": 25,
+        "basis": "Three maintenance checkpoints remain accepted; daily unattended verification reopened after actual16Oct failure. This is a checkpoint estimate, not a media/indexing/site-health score.",
         "accepted_checkpoints": [
           "Deterministic generation and validation",
           "Matching production rollback and restoration",
-          "Actual changed/deleted-source publication",
-          "Daily native source/R2 job, successful publication, bulk handling and failure guards"
+          "Actual changed/deleted-source publication"
         ],
-        "pending_checkpoints": []
+        "pending_checkpoints": [
+          "Corrected daily source/R2 job and updated media publication verified on a native runner"
+        ]
       },
       "latest_cloud_acceptance": {
         "receipt": "outputs/sitemap-cloud-cutover-completion-20261015.json",
         "status": "Native Cloudflare scheduled execution through Linux succeeded; Windows timer disabled",
         "follow_up": "Any changed approved source/publication must refresh accepted private cloud state to prevent stale reintroduction."
+      },
+      "latest_native_daily_failure": {
+        "run_id": 38802444272,
+        "source_commit": "3c1c19d946af088833534d441ade8f60bc3adab2",
+        "scheduled_utc": "2026-10-15T20:30:03.000Z",
+        "local_schedule": "2026-10-16 02:00 Asia/Kolkata",
+        "conclusion": "failure",
+        "artifact_id": 12005868408,
+        "artifact_sha256": "55caf420bfc0c339e3ca2d141bde572fb314c860996d099b887f141136d6dba0",
+        "maintenance_status": "source-verified-pending-source-holds-or-R2-coverage",
+        "source_phase": "verified_unchanged_publication",
+        "pending_mutation": false,
+        "publication_changed": false,
+        "evidence": "work/url-reconciliation/native-daily-failure-20261016/report.json"
+      },
+      "reviewed_recovery_source": {
+        "pr": 92,
+        "reviewed_head": "dd52963b52f197dad4b6fc6983860f6c6adf8830",
+        "merged_as": "765f4fdcccd0f75a7bb05b984bb7a74afffb7693",
+        "media_review": "accepted",
+        "cloud_R2_review": "accepted",
+        "targeted_cloud_tests_passed": 13,
+        "evidence": [
+          "outputs/sitemap-pr92-media-review-20261016.json",
+          "work/url-reconciliation/pr92-review-20261016/cloud-r2-review-dd52963.json"
+        ],
+        "native_deployment_acceptance_pending": true
+      },
+      "latest_recovery_result": {
+        "run_id": 38846235357,
+        "status": "failed_last_good_preserved",
+        "failure_stage": "publish",
+        "error": "AssertionError",
+        "source_exceptions": 0,
+        "r2_complete": true,
+        "r2_metadata_queries": 404,
+        "approved_keys": 62477,
+        "complete_matching_passes": 2,
+        "pending_r2_changes": 0,
+        "unstable_r2_holds": 0,
+        "archive_recorded": true,
+        "push_recorded": true,
+        "version_recorded": false,
+        "deployment_recorded": false,
+        "pending_mutation": false,
+        "evidence": "outputs/sitemap-media-recovery-native-acceptance-20261016.json"
+      },
+      "latest_recovery_result_2": {
+        "run_id": 38851323610,
+        "source": "a2ae2c9e2f77d2eaa5ead41ff63f0872a946c041",
+        "artifact_id": 12025636648,
+        "artifact_sha256": "04f32332d6cb15da038b58da5a305c02d8152c8abdba931c1f378964d0acfa46",
+        "approved_frozen_source_guard": "passed",
+        "capture": "passed",
+        "failed_stage": "regenerate-publication",
+        "version_recorded": false,
+        "deployment_recorded": false,
+        "pending_mutation": false,
+        "evidence": "work/url-reconciliation/native-frozen-recovery-20261016/report.json"
+      },
+      "reviewed_recovery_source_2": {
+        "pr": 93,
+        "head": "9762745c810eb9b79469437c2360e11987ab5b76",
+        "merged_as": "a2ae2c9e2f77d2eaa5ead41ff63f0872a946c041",
+        "status": "root_and_cloud_source_review_accepted",
+        "cloud_tests_passed": 10,
+        "account_helper_tests_passed": 4,
+        "evidence": [
+          "work/url-reconciliation/publisher-recovery-review-20261016/root-preflight-review.json",
+          "work/url-reconciliation/publisher-recovery-review-20261016/recovery-source-scope-review-9762745.json"
+        ]
+      },
+      "latest_reviewed_repair": {
+        "pr": 96,
+        "source": "2b336b99e6ac752653859ab9734126713b469283",
+        "decision": "source_delta_accepted",
+        "focused_tests_passed": 10,
+        "cause": "Cloudflare refused version upload; exclude server-owned workers/triggered_by from request and preserve protected provider detail",
+        "receipt": "outputs/sitemap-pr96-upload-delta-acceptance-20261016.json",
+        "native_acceptance_pending": true
+      },
+      "latest_native_recovery": {
+        "run_id": 38853331756,
+        "source": "dcf4aa86436edfebfca9e9c135ec2f998bff341e",
+        "artifact_id": 12026186769,
+        "artifact_sha256": "93176d72b90a5ea3e5cb4bde71ef8c7350468b905119376d21ef6097f52750e7",
+        "status": "failed_at_upload",
+        "accepted_stages": [
+          "hydrate",
+          "accepted-source-branch",
+          "capture",
+          "regenerate-publication",
+          "prepare",
+          "source",
+          "ci"
+        ],
+        "failed_stage": "upload",
+        "pending_mutation": true,
+        "version_recorded": false,
+        "deployment_recorded": false,
+        "receipt": "work/url-reconciliation/native-template-recovery-20261016/report.json",
+        "superseded_by_live_run": 38855312447
+      },
+      "current_live_recovery": {
+        "run": 38855312447,
+        "source": "f64e18a0ad9e51899e20e9fe202922f3f2c0ba4f",
+        "worker_version": "d14474cb-29b9-4f90-b6f3-245bf5c69e31",
+        "deployment": "2297308f-7a86-49a4-bc8d-83aa98cadf7f",
+        "public_sitemap_readback": "accepted",
+        "native_full_completion": "source/publication/persistence passed; engine-processing pending classified as failed job",
+        "actual_corrected_scheduled_success": "pending",
+        "receipt": "outputs/sitemap-media-source-to-live-acceptance-20261016.json",
+        "public_files_verified": 231,
+        "source_exceptions": 0,
+        "pending_r2_changes": 0,
+        "new_google_bing_root_submissions": 2,
+        "new_indexnow_submissions": 0,
+        "engine_receipt": "outputs/sitemap-engine-acceptance-20261016.json"
+      },
+      "processing_status_review": {
+        "pr": 97,
+        "exact_head": "b8c57be61d4a306091cc9a490a4e522f24eb9741",
+        "status": "independently_accepted_pending_exact_CI_merge_and_actual_scheduled_execution",
+        "focused_tests_passed": 8,
+        "counter_rejection_cases": "positive warning; malformed/nonfinite/negative/fraction/absent counters; settled stale proof; authentication/source holds remain blocking",
+        "receipt": "work/url-reconciliation/native-deployed-recovery-20261016/pr97-review/amended-b8c57be/source-review-receipt.json",
+        "required_CI_gate": {
+          "run": 38858047098,
+          "job": 116833833467,
+          "result": "BVT_session_startup_timeout_before_any_page_assertion",
+          "providerSessionSeconds": 0,
+          "pageRuns": 0,
+          "source": "b8c57be61d4a306091cc9a490a4e522f24eb9741",
+          "artifact": 12028716521,
+          "artifact_sha256": "36e2b33323c8109479c90145de799af081bb6374f7d84f50f9d8552bc1e206c1",
+          "evidence": "work/url-reconciliation/native-deployed-recovery-20261016/pr97-review/bvt-failure-38858047098/report.json",
+          "next_action": "ExistingWindowsownerchecksactive/queuedproviderstateonce; resolve startupcause thenretryonlyfailedrequiredjobatexactsource. Do not infer pagefailure or bypassgate."
+        }
       }
     },
     {
@@ -721,7 +1021,8 @@
         "outputs/sitemap-selected-source-official-xsd-20261015.json",
         "outputs/sitemap-postrepair-native-acceptance-20261015.json",
         "outputs/sitemap-postrepair-independent-google-bing-20261015.json",
-        "outputs/sitemap-postrepair-independent-indexnow-20261015.json"
+        "outputs/sitemap-postrepair-independent-indexnow-20261015.json",
+        "tooling/sitemap-manager/acceptance/20261016/verified-live-sitemap-media-receipts-20261016.zip"
       ],
       "finding_counts": {
         "confirmed_redirect_aliases_in_live_managed_xml": 7,
@@ -836,25 +1137,23 @@
         "key_file_verified": true,
         "indexing_claimed": false
       },
-      "verified_at": "2026-10-15T16:13:39.799492+00:00"
+      "verified_at": "2026-10-15T16:13:39.799492+00:00",
+      "latest_regression_receipt": "outputs/sitemap-media-three-repair-regression-live-20261016.json"
     }
   ],
   "progress_method": "Open-task percentages are coarse milestone estimates from four stated checkpoints per task. Fully verified task counts are reported separately. Tasks differ in effort; no actual media-library coverage denominator is verified.",
   "current_commission": {
     "requested_three_complete": true,
     "completion_receipt": "outputs/sitemap-three-deliverables-completion-20261014.json",
-    "scope": "Commissioned three complete for the approved public baseline. Private/unassociated assets remain held. Optional PlanetScale row mirroring, unprovided publisher families and broader care attribution are separate follow-ups."
+    "scope": "Commissioned three complete for the approved public baseline. Private/unassociated assets remain held. Optional PlanetScale row mirroring, unprovided publisher families and broader care attribution are separate follow-ups.",
+    "historical_scope_notice": "The14Oct approved-baseline completion is historical;16Oct comprehensive media and corrected native daily publication are not complete."
   },
   "latest_active_focus": {
-    "requested_at": "2026-10-15T04:13:25.034353+00:00",
-    "scope": "Complete and verify three source repairs plus eligible public R2 media coverage",
-    "active_task": "SM03",
-    "media_tasks": [
-      "SM03",
-      "SM07"
-    ],
-    "completion_boundary": "Three live closures and durable daily-run exclusion; every authoritative eligible public media family reconciled with explicit covered/held/excluded dispositions.",
-    "three_repairs_status": "verified_live_and_repaired_baseline_cloud_upkeep_success",
-    "media_status": "1,067 qualified additions checked in and owner integration started; not yet deployed"
+    "at": "2026-10-16T06:31:37.556911+00:00",
+    "verified_live": "1067newimagepairs;71099parents;67604imagereferences;19289primaryvideoentries;3originalrepairs pass",
+    "prepared_not_live": "1899Abilityimageson47parents,14tests;7scopeR2extension,22tests;currenthelperb9f10b29",
+    "native_release_gate": "PR97acceptedb8c57be;requiredBVTsessionstartup timeout before0pageassertions;WebBuilddailyheartbeatstalled;MacunlockrequestedtoresumeownerUI",
+    "source_holds": "63Abilityimages+16missingroleslots;150Guruoriginalcandidates requireauthoritativegalleryassociation;347videos accounted25duplicatemetadata candidates+322unknownselection",
+    "next_action": "Resume existingWindowsreleaseowner; requiredCIandactualscheduledproof; Abilitybody+maps+sourceupdate; repairconfirmedTactileplaceholder schema withoutinventedR2association."
   }
 }

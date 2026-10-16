@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-16T06:33:10.056765+00:00",
+  "archive": "verified-live-sitemap-media-receipts-20261016.zip",
+  "bytes": 20229,
+  "sha256": "74f540c85aacffa6d070297b1f493c8710cb2f82f96c61d21fd6874dd301a62b",
+  "source_release": "a70c763dc48e5ad7cded6083855b488a86ca750a91f0f1f2703342c5048dd3d3",
+  "source_archive_sha256": "67eac4a72892f55c5ece01ce41fcba10d12598e2aaa698ea86cd904007f07a9b",
+  "serving_version": "d14474cb-29b9-4f90-b6f3-245bf5c69e31",
+  "deployment": "2297308f-7a86-49a4-bc8d-83aa98cadf7f",
+  "extra_parent_image_pairs_verified_live": 1067,
+  "primary_parents": 71099,
+  "image_references": 67604,
+  "distinct_image_URIs": 67472,
+  "primary_video_entries": 19289,
+  "public_XML_text_files_exact_source_bytes": 70,
+  "native_public_files_verified": 231,
+  "Google": "2changedroots204;subsequentfreshdownload0errors0warnings",
+  "Bing": "2changedroots200;processingPendingatdatedreadback",
+  "IndexNow_new_submissions_this_release": 0,
+  "limits": [
+    "Bingacknowledgmentisnotfreshcrawl/indexing",
+    "ZeroadditionalIndexNoweligiblebodychangesinthisimageeligibilityrelease",
+    "WholeR2coverageandnewAbilitypublicationremainopen;seealsooneworkorder",
+    "ActualpostfixscheduledrunandcurrentWindowstimerreadbackremainopen"
+  ],
+  "members": [
+    {
+      "path": "source-to-live-acceptance.json",
+      "sha256": "26b8e5b6e2786c555837fe6af131a7f58be24aea4e639c5b1fe594220d4c7610"
+    },
+    {
+      "path": "full-graph-live.json",
+      "sha256": "94c180f080e08b95a8ff05edc170ab639690a26d185f27aeb3a00f73d73d8449"
+    },
+    {
+      "path": "three-repairs-live.json",
+      "sha256": "ad96edde3cc20b2551fbbb176335c808721bcf15b28e678c9651bd0a81fb3e04"
+    },
+    {
+      "path": "engine-acceptance.json",
+      "sha256": "bf3287a7f1168a27b860c1038ddc2649d94b2d0f606de941ba80af17ba33d75d"
+    },
+    {
+      "path": "source-official-xsd.json",
+      "sha256": "78113be13cc205a243870c4b00b90515239a457c0148e0d0a5f5ded33eea3b78"
+    },
+    {
+      "path": "source-exact-pair-acceptance.json",
+      "sha256": "b19d662e80702a98a0db225163dcd87cdd3081334e48d294f380167e16db6e91"
+    }
+  ]
+}

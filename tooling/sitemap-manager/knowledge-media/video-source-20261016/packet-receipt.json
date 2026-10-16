@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-16T06:31:37.556911+00:00",
+  "file": "public-video-source-disposition-packet-20261016.zip",
+  "bytes": 50474,
+  "sha256": "7bdfa95470a1990fe9d993ec47b0ecda423fdba94e19ff03ea60f987e720cd18",
+  "members": [
+    {
+      "path": "video-source-report.json",
+      "sha256": "e3ed17b6ceb7dcc2a2edc3494251f642aedc862c21699e68ba2cd08dc8d0704e",
+      "bytes": 10137
+    },
+    {
+      "path": "video-source-dispositions.jsonl",
+      "sha256": "935ed557925dce9cd79ebc34e9527b48da3620fd93cc14a2ce4cfe0170e46158",
+      "bytes": 391032
+    },
+    {
+      "path": "materials-cached-metadata-matches.json",
+      "sha256": "543fbc3e62b0bdde75a3a68194bef9020efe319bce598805dc033009564842ef",
+      "bytes": 71596
+    },
+    {
+      "path": "current-tactile-readback/report.json",
+      "sha256": "d9a867acb950e77bb3a4df1a15d35c5ae9900154154e7c539d0d2b374a38377b",
+      "bytes": 58830
+    }
+  ],
+  "held_storage_objects": 347,
+  "cached_duplicate_candidates": 25,
+  "other_source_holds": 322,
+  "new_admitted_relationships": 0,
+  "new_page_defects_confirmed": 1,
+  "media_bodies_in_packet": 0,
+  "private_operational_rows_in_packet": 0
+}
