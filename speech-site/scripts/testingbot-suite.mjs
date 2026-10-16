@@ -63,7 +63,7 @@ for(const matrixId of matrixIds){
     const wrapped="const input=Array.from(arguments),done=input.pop();try{Promise.resolve((function(){\n"+script+"\n}).apply(null,input)).then(done,e=>done({__testingbotScriptError:String(e.message||e)}))}catch(e){done({__testingbotScriptError:String(e.message||e)})}";
     // Retry only observations. Never replay clicks, navigation, form submission,
     // storage writes or other script mutations after an uncertain response.
-    const readOnly=!/\b(?:fetch|XMLHttpRequest|setAttribute|removeAttribute|scrollIntoView|scrollTo|scrollBy)\b|\.(?:click|focus|blur|submit|requestSubmit|dispatchEvent|assign|replace|resizeTo|resizeBy|setItem|removeItem|clear|toggle|add|remove|push)\s*\(|(?:\.open|\.value|\.innerHTML|\.textContent|\.location|\.loading)\s*=(?!=)/.test(script);
+    const readOnly=!/\b(?:fetch|XMLHttpRequest|setAttribute|removeAttribute|scrollIntoView|scrollTo|scrollBy)\b|\.(?:click|focus|blur|submit|requestSubmit|dispatchEvent|assign|replace|resizeTo|resizeBy|setItem|removeItem|setProperty|removeProperty|clear|toggle|add|remove|push)\s*\(|(?:\.open|\.value|\.innerHTML|\.textContent|\.location|\.loading)\s*=(?!=)/.test(script);
     const result=await wd('/execute/async','POST',{script:wrapped,args},readOnly);
     if(result?.__testingbotScriptError)throw Error(result.__testingbotScriptError);
     return result;
