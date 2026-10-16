@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-16T06:33:10.056765+00:00",
+  "updated_at": "2026-10-16T09:27:27.597869+00:00",
   "accountable_owner": "This existing Pinnacle sitemap chat",
   "objective": "Deliver a repeatable, source-backed sitemap ecosystem for Pinnacle pages, images, videos and approved public companions, with safe publication, supported engine discovery and maintainable verification.",
   "completion_boundary": "Prepared files, local tests, native storage, production serving, engine processing and care outcomes are separately evidenced. Whole-estate completeness requires publisher and asset inventories.",
@@ -759,7 +759,7 @@
         "SM12",
         "SM13"
       ],
-      "next_action": "Resolve exactPR97BVT session-startup gate; merge acceptedb8c57be afterrequiredCI; verify realCloudflareScheduled→Linuxrun, retainedacceptedsource, freshR2normalmode, changedrootacknowledgments, explicitengineprocessing and disabledWindows timer. Abilitypublication/sourceautomationremainsSM03.",
+      "next_action": "Integrate the selected Ability and Guru galleries, preserve accepted publication state, start one fresh eight-scope observation cycle, then verify an actual Cloudflare Scheduled to hosted Linux execution, supported engine receipts, and current disabled Windows upkeep timer.",
       "evidence": [
         "tooling/sitemap-manager/run.py",
         "tooling/sitemap-manager/tests",
@@ -915,7 +915,7 @@
       "processing_status_review": {
         "pr": 97,
         "exact_head": "b8c57be61d4a306091cc9a490a4e522f24eb9741",
-        "status": "independently_accepted_pending_exact_CI_merge_and_actual_scheduled_execution",
+        "status": "exact-source CI passed and merged; actual corrected scheduled execution pending",
         "focused_tests_passed": 8,
         "counter_rejection_cases": "positive warning; malformed/nonfinite/negative/fraction/absent counters; settled stale proof; authentication/source holds remain blocking",
         "receipt": "work/url-reconciliation/native-deployed-recovery-20261016/pr97-review/amended-b8c57be/source-review-receipt.json",
@@ -929,7 +929,25 @@
           "artifact": 12028716521,
           "artifact_sha256": "36e2b33323c8109479c90145de799af081bb6374f7d84f50f9d8552bc1e206c1",
           "evidence": "work/url-reconciliation/native-deployed-recovery-20261016/pr97-review/bvt-failure-38858047098/report.json",
-          "next_action": "ExistingWindowsownerchecksactive/queuedproviderstateonce; resolve startupcause thenretryonlyfailedrequiredjobatexactsource. Do not infer pagefailure or bypassgate."
+          "next_action": "Finish selected-media integration and one fresh eight-scope actual Cloudflare scheduled acceptance",
+          "retry_attempt": 2,
+          "retry_result": "success"
+        },
+        "merged_at": "2026-10-16T09:23:39Z",
+        "merge_commit": "4b8de0df6ea636124777655cb35be6dbbebf3834"
+      },
+      "access_state": {
+        "at": "2026-10-16T09:18:53.415131+00:00",
+        "Mac_unlock_received": true,
+        "Windows_owner_responding": true,
+        "desktop_unlock_operating_dependency": false,
+        "runtime": "CloudflareScheduled trigger + hostedLinuxrunner + protectedR2state/publication",
+        "PR97_required_CI_retry": {
+          "run": 38858047098,
+          "attempt": 2,
+          "status": "completed",
+          "trigger_reason": "Dailyprovider sessionsclosed; priorBVTstartup timedout beforeanypageassertion",
+          "conclusion": "success"
         }
       }
     },
@@ -1149,11 +1167,10 @@
     "historical_scope_notice": "The14Oct approved-baseline completion is historical;16Oct comprehensive media and corrected native daily publication are not complete."
   },
   "latest_active_focus": {
-    "at": "2026-10-16T06:31:37.556911+00:00",
-    "verified_live": "1067newimagepairs;71099parents;67604imagereferences;19289primaryvideoentries;3originalrepairs pass",
-    "prepared_not_live": "1899Abilityimageson47parents,14tests;7scopeR2extension,22tests;currenthelperb9f10b29",
-    "native_release_gate": "PR97acceptedb8c57be;requiredBVTsessionstartup timeout before0pageassertions;WebBuilddailyheartbeatstalled;MacunlockrequestedtoresumeownerUI",
-    "source_holds": "63Abilityimages+16missingroleslots;150Guruoriginalcandidates requireauthoritativegalleryassociation;347videos accounted25duplicatemetadata candidates+322unknownselection",
-    "next_action": "Resume existingWindowsreleaseowner; requiredCIandactualscheduledproof; Abilitybody+maps+sourceupdate; repairconfirmedTactileplaceholder schema withoutinventedR2association."
+    "at": "2026-10-16T09:27:27.597869+00:00",
+    "current_gate": "PR97 exact-source CI passed and merged; selected media integration is next",
+    "selected_media": "Ability 1,899 image pairs on 47 parents prepared; new Guru selection of 150 images on 146 existing parents undergoing current preflight",
+    "automation": "Independently accepted eight-scope patch; one fresh selected-registry cycle and actual Cloudflare Scheduled proof; desktops are not runtime dependencies",
+    "remaining": "Deploy and verify actual media rendering plus sitemap pairs; current Windows upkeep timer-disabled readback; Tactile placeholder VideoObject repair; 322 video selections remain unsupported"
   }
 }

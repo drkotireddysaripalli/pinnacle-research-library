@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "prepared_at": "2026-10-16T09:22:14.226198+00:00",
+  "status": "OFFLINE_COMBINED_EIGHT_SCOPE_PACKET_READY_OWNER_TRANSITION_PENDING",
+  "repository": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+  "base_sha": "f64e18a0ad9e51899e20e9fe202922f3f2c0ba4f",
+  "supersedes": {
+    "seven_scope_packet": "/Users/dr.kotisreejasaripalli/Documents/Codex/2026-10-12/youa-re-the-group-of-sitemaps/work/url-reconciliation/ability-r2-scopes-20261016",
+    "patch_sha256": "dc4c830f261437749c5659112ffca3a1afabb15ca46a041a19a130a6a625be72",
+    "prior_packet_preserved": true
+  },
+  "changed_file_count": 8,
+  "changed_files": [
+    {
+      "path": "speech-site/scripts/r2-coverage-chain.mjs",
+      "base_sha256": "bb240d293ce909beab1b1408ba46870d4a167ea7a6cb6ea4527574623018e6cc",
+      "accepted_seven_scope_sha256": "d2cb660c2891d192d1cdf0172f2ec97a2190b51658af88ba0d313c040e36d2d9",
+      "patched_sha256": "170f4b95e3522cfebcbbabc1fa7022d36b52766e1d9d9c9be9ddb20fa25c2cea",
+      "patched_bytes": 3925
+    },
+    {
+      "path": "speech-site/scripts/r2-approved-rotation.mjs",
+      "base_sha256": "37e94b8abe4973133204d0bf58489e8e20b2a98382419ed997ed58e01919a2df",
+      "accepted_seven_scope_sha256": "6b0c4924f79996fbf4b194779078879f8c1ac79a2035561f6d0d74521c558f70",
+      "patched_sha256": "6b0c4924f79996fbf4b194779078879f8c1ac79a2035561f6d0d74521c558f70",
+      "patched_bytes": 6048
+    },
+    {
+      "path": "speech-site/scripts/verify-r2-progress.mjs",
+      "base_sha256": "ff208d9d35f74b1363fc2eaebe1550e52057788ed102b3f1e8719e2799e68a05",
+      "accepted_seven_scope_sha256": "e4ba2e42d5cef712ac822d67987869332b135b5fe01a090488a22aabd9d45236",
+      "patched_sha256": "e4ba2e42d5cef712ac822d67987869332b135b5fe01a090488a22aabd9d45236",
+      "patched_bytes": 928
+    },
+    {
+      "path": "speech-site/scripts/verified-r2-source.mjs",
+      "base_sha256": "b5d3d7cefa2cc5d928263d2778d6f8ca706c5ab3c30394d1925e70c0bb1495cc",
+      "accepted_seven_scope_sha256": "e8bb057f7ec649793d68358c3fb05a656c99bf0a1e2afab77c6fa698f927e53b",
+      "patched_sha256": "e8bb057f7ec649793d68358c3fb05a656c99bf0a1e2afab77c6fa698f927e53b",
+      "patched_bytes": 2212
+    },
+    {
+      "path": "speech-site/scripts/test-r2-coverage-chain.mjs",
+      "base_sha256": "2b42adea0f63584843f409295cc587c90666f597d38c1b806b38dbe6b2c9b2dd",
+      "accepted_seven_scope_sha256": "b0b836aa9d49e9af3adcd7fbcd9fb804d7644e2717cec74d7b11682dcb98be01",
+      "patched_sha256": "9fd7bf596a219ddff773caab0a04471a9a19174c50d67433b4a1f46d51607ee6",
+      "patched_bytes": 12997
+    },
+    {
+      "path": "speech-site/scripts/cloud-source-state.py",
+      "base_sha256": "4fec38f612a56917b2b2e568da6aef6c81906e0eb84b0f566064144ff77e9f63",
+      "accepted_seven_scope_sha256": "5e7539d4cf822e9ab53437ef2643bd2a42aee4b73c0e0bc2577ba34b86de04f0",
+      "patched_sha256": "5e7539d4cf822e9ab53437ef2643bd2a42aee4b73c0e0bc2577ba34b86de04f0",
+      "patched_bytes": 17121
+    },
+    {
+      "path": "speech-site/scripts/test-cloud-source-state.py",
+      "base_sha256": "5cf7cf9f482fa0f9e813d3637b0319d53fd83cc94d77976198018053c40e80a7",
+      "accepted_seven_scope_sha256": "03ebca8aa509433ff08e16a8494778dfabaee3b4435de478e1a220f921634426",
+      "patched_sha256": "03ebca8aa509433ff08e16a8494778dfabaee3b4435de478e1a220f921634426",
+      "patched_bytes": 8637
+    },
+    {
+      "path": "speech-site/scripts/test-verified-r2-source.mjs",
+      "base_sha256": "0d014c89a1a32fddba2d167bb46be577ecaedb8fccef61c319ff5715c5d5b6f9",
+      "accepted_seven_scope_sha256": "92f3a2385855d4a9eb5859a482a2c34013f24b653340c61ea8fb74eba2798d9b",
+      "patched_sha256": "92f3a2385855d4a9eb5859a482a2c34013f24b653340c61ea8fb74eba2798d9b",
+      "patched_bytes": 1848
+    }
+  ],
+  "incremental_seven_to_eight_changed_files": [
+    "speech-site/scripts/r2-coverage-chain.mjs",
+    "speech-site/scripts/test-r2-coverage-chain.mjs"
+  ],
+  "scope_identity": {
+    "scopeCount": 8,
+    "scopeSetSHA256": "d546e3563f80442e7e74e7b1da756ffd3ac791ab38c27c123307322b67528c21",
+    "scopes": [
+      [
+        "pbn-test",
+        "Assets/InterventionTechniques/"
+      ],
+      [
+        "pbn-test",
+        "Assets/InterventionTechniquePdf/"
+      ],
+      [
+        "pbn-test",
+        "Assets/Materials/"
+      ],
+      [
+        "pbn-test",
+        "Ability/Assessments/"
+      ],
+      [
+        "pinnacle-ask-og",
+        ""
+      ],
+      [
+        "pbn-test",
+        "Ability/Questions/"
+      ],
+      [
+        "pbn-test",
+        "Ability/Examples/"
+      ],
+      [
+        "pbn-test",
+        "Assets/IMAGEGALLERY/"
+      ]
+    ]
+  },
+  "synthetic_terminal_pages": 16,
+  "selected_gallery_manifest_scope": {
+    "objects": 150,
+    "existing_Guru_parents": 146,
+    "manifest_selection": "new owner-selected derived association; not legacy upload/render proof",
+    "actual_association_edits_in_this_packet": 0
+  },
+  "files": {
+    "README.md": {
+      "bytes": 5046,
+      "sha256": "861462b1d9ca06a2fec3defe037be4bc325cdd6ae25d46323b9a4e05b0f4cdf0"
+    },
+    "selected-media-r2-scopes.patch": {
+      "bytes": 41346,
+      "sha256": "344d32bde7523d67d0037a8f01eca4577acc90328d8e6bdda29941d0089285a3"
+    },
+    "seven-to-eight-scopes.patch": {
+      "bytes": 11463,
+      "sha256": "d30ad18095078cfbd41694ae65e2b435ebdb5ccfd855db8d258f8f894f33a7a4"
+    },
+    "seven-scope-base-receipt.json": {
+      "bytes": 5133,
+      "sha256": "dd43b24cd37e335bb1da1a6635dd47907e84a9909b01f3052031992e3440624c"
+    },
+    "chain-tests.log": {
+      "bytes": 1010,
+      "sha256": "a85f9eb146b30799f7c4516058c0d3d95cbf5ba43c19aaea861487bece3b0241"
+    },
+    "verified-source-tests.log": {
+      "bytes": 288,
+      "sha256": "38582165e11e700f16c43e27833a74283c36476091da46cfb0a53ed48f0a1a86"
+    },
+    "python-tests.log": {
+      "bytes": 110,
+      "sha256": "67c1880014375678bc3d0c53cd3a40a31957dfb3e8960fa9cb0e846769de6798"
+    },
+    "runtime-test-receipt.json": {
+      "bytes": 433,
+      "sha256": "3fe9b30777797e19014c99dad156a6b2cfdca58cb59cf9ff37fcb0e388432e06"
+    },
+    "patch-checks.json": {
+      "bytes": 176,
+      "sha256": "ce163fea06a4f5a58da5580cf03149552f2ebc384316e411804e04e17f7260a4"
+    },
+    "scope-identity.json": {
+      "bytes": 609,
+      "sha256": "2955abe1ae1ace6ed9b34310a853ce53dfb6b468ebb5f0dd5c3a1637d3b68c5d"
+    }
+  },
+  "tests": {
+    "logical_cases_passed": 22,
+    "chain_contracts_passed": 9,
+    "verified_source_contracts_passed": 2,
+    "checkpoint_contracts_passed": 11,
+    "failures": 0,
+    "primary_node_version": "v24.19.0",
+    "checkpoint_python_version": "3.12.14",
+    "initial_compatibility_node_version": "v26.2.0",
+    "initial_compatibility_python_version": "3.14.2",
+    "runtime_reverification_reason": "Shell Node differed from accepted seven-scope Node24 evidence; reran only impacted suites under bundled Node24",
+    "combined_git_apply_check_exit": 0,
+    "incremental_git_apply_check_exit": 0
+  },
+  "owner_transition": {
+    "protected_prior_pointer_archive_and_local_checkpoint_snapshot_required": true,
+    "fresh_eight_scope_observation_cycle_required": true,
+    "old_five_and_seven_scope_proof_rejected": true,
+    "reuse_old_absence_proof_cursors": false,
+    "accepted_publication_bootstrap_unchanged": true,
+    "automatic_private_state_reset_implemented": false
+  },
+  "cloud_R2_or_S3_calls": 0,
+  "database_queries": 0,
+  "media_bodies": 0,
+  "canonical_checkout_edits": 0,
+  "commits": 0,
+  "publication_actions": 0,
+  "independent_review": {
+    "reviewer": "/root/sitemap_review",
+    "scope": "Minimal accepted-seven to current-eight scope delta only",
+    "disposition": "accepted-by-source-inspection",
+    "patch_sha256": "344d32bde7523d67d0037a8f01eca4577acc90328d8e6bdda29941d0089285a3",
+    "incremental_patch_sha256": "d30ad18095078cfbd41694ae65e2b435ebdb5ccfd855db8d258f8f894f33a7a4",
+    "findings": [],
+    "additional_tests": 0,
+    "network_calls": 0
+  }
+}
