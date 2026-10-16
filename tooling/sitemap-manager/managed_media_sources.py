@@ -17,6 +17,9 @@ PERMISSION=HERE/'managed-media-permission.json'
 BOOTSTRAP=HERE/'knowledge-media/bootstrap/qualified-media-bootstrap-20261015.zip'
 def packed(v):return json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':'))
 def sha(b):return hashlib.sha256(b).hexdigest()
+def header_values(headers,name):
+ if hasattr(headers,'get_all'):return headers.get_all(name,[])
+ return [v for k,v in headers.items() if k.lower()==name.lower()]
 def load_module(name,file):
  spec=importlib.util.spec_from_file_location(name,file);mod=importlib.util.module_from_spec(spec);spec.loader.exec_module(mod);return mod
 def stamp(v):return dt.datetime.fromisoformat(v.replace('Z','+00:00')).astimezone(dt.timezone.utc)
@@ -71,9 +74,9 @@ def probe(url,now):
  try:
   req=urllib.request.Request(url,method='HEAD',headers={'User-Agent':'PinnaclePublisherRefresh/1.0'})
   with urllib.request.build_opener(NoRedirect()).open(req,timeout=25) as r:
-   result.update(status=r.status,content_type=r.headers.get('Content-Type',''),content_length=r.headers.get('Content-Length'),etag=r.headers.get('ETag'),x_robots=', '.join(r.headers.get_all('X-Robots-Tag',[])))
+   result.update(status=r.status,content_type=r.headers.get('Content-Type',''),content_length=r.headers.get('Content-Length'),etag=r.headers.get('ETag'),x_robots=', '.join(header_values(r.headers,'X-Robots-Tag')))
   result['direct_image_delivery_verified']=result['status']==200 and result['content_type'].lower().startswith('image/')
- except urllib.error.HTTPError as e:result.update(status=e.code,x_robots=', '.join(e.headers.get_all('X-Robots-Tag',[])),content_type=e.headers.get('Content-Type',''))
+ except urllib.error.HTTPError as e:result.update(status=e.code,x_robots=', '.join(header_values(e.headers,'X-Robots-Tag')),content_type=e.headers.get('Content-Type',''));e.close()
  except (OSError,ValueError):result.update(status=None,error='delivery-unavailable')
  return result
 def bootstrap_heads(now):

@@ -9,7 +9,7 @@ const pickCounts=(value,keys)=>Object.fromEntries(keys.map(k=>[k,count(value?.[k
 function safeCheckpoint(value){if(!value)return null;return{...pickCounts(value,['pass','scope','page']),startedAt:iso(value.startedAt),completedAt:iso(value.completedAt),complete:boolean(value.complete),cursorPresent:boolean(value.cursorPresent)};}
 function safeProof(value){
  if(!value)return null;
- const result=pickCounts(value,['approvedKeys','completePasses','matchedInFirstPass','matchedInSecondPass','confirmedAbsent','stableChanges','metadataInitializations','unstableHeld','metadataPages','queriesThisInvocation','mediaBytesDownloaded','unknownKeysPersisted']);
+ const result=pickCounts(value,['totalQueriesInCycle','approvedKeys','completePasses','matchedInFirstPass','matchedInSecondPass','confirmedAbsent','stableChanges','metadataInitializations','unstableHeld','metadataPages','queriesThisInvocation','mediaBytesDownloaded','unknownKeysPersisted']);
  if(/^[a-f0-9]{64}$/.test(value.registrySHA256||''))result.registrySHA256=value.registrySHA256;
  const f=value.coverageFreshness;if(f)result.coverageFreshness={oldestPageObservedAt:iso(f.oldestPageObservedAt),newestPageObservedAt:iso(f.newestPageObservedAt),fresh:boolean(f.fresh),observedMetadataPages:count(f.observedMetadataPages),passObservations:(Array.isArray(f.passObservations)?f.passObservations:[]).slice(0,2).map(p=>({pass:count(p.pass),pages:count(p.pages),firstObservedAt:iso(p.firstObservedAt),lastObservedAt:iso(p.lastObservedAt)}))};
  return result;

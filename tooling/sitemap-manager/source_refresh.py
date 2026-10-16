@@ -9,7 +9,7 @@ from html.parser import HTMLParser
 import manager as m
 from discovery_policy import apply_discovery_policy
 from public_media_snapshot import MediaHTML,MAX_BODY
-from managed_media_sources import protected_images
+from managed_media_sources import protected_images,header_values
 
 def packed(x):return json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(',',':'))
 def digest(x):return hashlib.sha256(packed(x).encode()).hexdigest()
@@ -53,7 +53,7 @@ def public_resource(url,prior=None):
  if prior and prior.get('etag'):headers['If-None-Match']=prior['etag']
  try:
   with open_public_source(urllib.request.Request(url,headers=headers),timeout=30) as r:
-   data=r.read(MAX_BODY+1);status=r.status;final=r.url;kind=r.headers.get('Content-Type','');robots=', '.join(r.headers.get_all('X-Robots-Tag',[]));etag=r.headers.get('ETag');response_headers=dict(r.headers)
+   data=r.read(MAX_BODY+1);status=r.status;final=r.url;kind=r.headers.get('Content-Type','');robots=', '.join(header_values(r.headers,'X-Robots-Tag'));etag=r.headers.get('ETag')
   if len(data)>MAX_BODY or not kind.lower().startswith('text/html'):raise ValueError('Bounded HTML source unavailable')
   parser=PublicHTML(url);parser.feed(data.decode('utf8','replace'));parser.close();row=parser.current(robots)
   row.update(status=status,final_url=final,body_sha256=hashlib.sha256(data).hexdigest(),etag=etag,observed_at=dt.datetime.now(dt.timezone.utc).isoformat(),conditional=False)
@@ -62,9 +62,14 @@ def public_resource(url,prior=None):
    row['catalogue_capture']={'body_hex':data.hex(),'proof':{**row,'method':'GET','body_bytes':len(data),'response_headers':{'Content-Type':kind,'X-Robots-Tag':robots},'credentials_sent':False,'redirects_followed':False,'media_bodies_downloaded':False}}
   return row
  except urllib.error.HTTPError as e:
+  e.close()
   if e.code==304 and prior:
+   if prior.get('noindex') or prior.get('noimageindex'):
+    # A 304 cannot distinguish an old body directive from a removed HTTP
+    # restriction. One unconditional GET rebuilds that truth without sticky holds.
+    return public_resource(url)
    row=dict(prior);row.update(conditional=True,observed_at=dt.datetime.now(dt.timezone.utc).isoformat())
-   directives=list(prior.get('robots',[]))+e.headers.get_all('X-Robots-Tag',[]);tokens=set(__import__('re').findall(r'[a-z_]+',' '.join(directives).lower()));row.update(robots=directives,noindex=bool(tokens&{'noindex','none'}),noimageindex='noimageindex' in tokens);row['publication_qualified']=prior.get('publication_qualified',False) and not row['noindex']
+   directives=list(prior.get('robots',[]))+header_values(e.headers,'X-Robots-Tag');tokens=set(__import__('re').findall(r'[a-z_]+',' '.join(directives).lower()));row.update(robots=directives,noindex=bool(tokens&{'noindex','none'}),noimageindex='noimageindex' in tokens);row['publication_qualified']=prior.get('publication_qualified',False) and not row['noindex']
    if row.get('catalogue_capture'):
     row['catalogue_capture']=json.loads(json.dumps(row['catalogue_capture']));proof=row['catalogue_capture']['proof'];proof.setdefault('original_capture_at',proof['observed_at']);proof.update(observed_at=row['observed_at'],conditional_revalidation_status=304,robots=directives,noindex=row['noindex'],noimageindex=row['noimageindex']);proof['response_headers']['X-Robots-Tag']=', '.join(directives)
    elif url=='https://materials.pinnacleblooms.org/':return public_resource(url)
