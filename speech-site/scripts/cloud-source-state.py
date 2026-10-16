@@ -25,7 +25,8 @@ def client():
  for name in ('SITEMAP_STATE_ACCESS_KEY_ID','SITEMAP_STATE_SECRET_ACCESS_KEY'):
   if not os.environ.get(name):raise RuntimeError('Required private state credential missing: '+name)
  return boto3.client('s3',endpoint_url=f'https://{ACCOUNT}.r2.cloudflarestorage.com',region_name='auto',aws_access_key_id=os.environ['SITEMAP_STATE_ACCESS_KEY_ID'],aws_secret_access_key=os.environ['SITEMAP_STATE_SECRET_ACCESS_KEY'])
-ROTATION_FILE=re.compile(r'(?:state|proof|qualified-changes|pass-[01]-scope-[0-4]-page-[0-9]+)\.json\Z')
+# Scope bounds come from verify-r2-progress and its exact current scope-set hash.
+ROTATION_FILE=re.compile(r'(?:state|proof|qualified-changes|pass-[01]-scope-[0-9]+-page-[0-9]+)\.json\Z')
 def verify_rotation(root):
  node=os.environ.get('NODE_EXECUTABLE','node')
  result=subprocess.run([node,str(pathlib.Path(__file__).with_name('verify-r2-progress.mjs').resolve()),str(root)],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
@@ -43,7 +44,7 @@ def rotation_store(repo,s3,bucket=BUCKET):
  blob=stream.getvalue()
  if not 0<len(members)<=2000 or len(blob)>30_000_000:raise ValueError('R2 progress bounds exceeded')
  key='rotation/'+sha(blob)+'.zip';s3.put_object(Bucket=bucket,Key=key,Body=blob,ContentType='application/zip')
- pointer={'schema':1,'key':key,'sha256':sha(blob),'bytes':len(blob),'files':members,'registrySHA256':state['registrySHA256'],'startedAt':state['startedAt']}
+ pointer={'schema':1,'key':key,'sha256':sha(blob),'bytes':len(blob),'files':members,'registrySHA256':state['registrySHA256'],'startedAt':state['startedAt'],'scopeSetSHA256':state['scopeSetSHA256'],'scopeCount':state['scopeCount']}
  s3.put_object(Bucket=bucket,Key='rotation/current.json',Body=json.dumps(pointer).encode(),ContentType='application/json')
  return {'rotationCheckpointPersisted':True,'complete':state['complete'],'pages':state['completedPages'],'sha256':pointer['sha256']}
 def rotation_hydrate(repo,s3,bucket=BUCKET):
@@ -64,7 +65,7 @@ def rotation_hydrate(repo,s3,bucket=BUCKET):
    if len(data)!=f['bytes'] or sha(data)!=f['sha256']:raise ValueError('R2 progress member checksum mismatch')
    json.loads(data)
   state=json.loads(z.read('state.json'))
-  if state['registrySHA256']!=p['registrySHA256'] or state['startedAt']!=p['startedAt']:raise ValueError('R2 progress identity mismatch')
+  if state['registrySHA256']!=p['registrySHA256'] or state['startedAt']!=p['startedAt'] or state.get('scopeSetSHA256')!=p.get('scopeSetSHA256') or state.get('scopeCount')!=p.get('scopeCount'):raise ValueError('R2 progress identity mismatch')
   with tempfile.TemporaryDirectory(prefix='pinnacle-r2-progress-') as td:
    for name in expected:(pathlib.Path(td)/name).write_bytes(z.read(name))
    verify_rotation(td)

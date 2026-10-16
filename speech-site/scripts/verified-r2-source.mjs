@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
+import {R2_SCOPES,R2_SCOPE_SHA256} from './r2-coverage-chain.mjs';
 export function verifiedR2Source(proof,delta,approved,registrySHA256,observedAt){
+ assert.equal(proof.scopeSetSHA256,R2_SCOPE_SHA256,'R2 proof scope set changed; fresh observation cycle required');assert.equal(proof.scopeCount,R2_SCOPES.length,'R2 proof scope count differs');
  assert.equal(proof.registrySHA256,registrySHA256);assert.equal(proof.approvedKeys,Object.keys(approved).length);assert.equal(proof.completePasses,2);assert(proof.matchedInFirstPass+proof.confirmedAbsent+proof.unstableHeld>=proof.approvedKeys);assert(proof.matchedInSecondPass+proof.confirmedAbsent+proof.unstableHeld>=proof.approvedKeys);
  const records=[],changes=[],holds=[],seen=new Set(),chunks=[];
  for(let offset=0;offset<delta.changes.length;offset+=128){let accepted=0;for(const x of delta.changes.slice(offset,offset+128)){

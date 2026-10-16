@@ -58,8 +58,10 @@ def public_resource(url,prior=None):
   parser=PublicHTML(url);parser.feed(data.decode('utf8','replace'));parser.close();row=parser.current(robots)
   row.update(status=status,final_url=final,body_sha256=hashlib.sha256(data).hexdigest(),etag=etag,observed_at=dt.datetime.now(dt.timezone.utc).isoformat(),conditional=False)
   row['publication_qualified']=status==200 and m.normal(final)==m.normal(url) and not row['canonical_conflict'] and not row['noindex']
-  if url=='https://materials.pinnacleblooms.org/':
-   row['catalogue_capture']={'body_hex':data.hex(),'proof':{**row,'method':'GET','body_bytes':len(data),'response_headers':{'Content-Type':kind,'X-Robots-Tag':robots},'credentials_sent':False,'redirects_followed':False,'media_bodies_downloaded':False}}
+  from selected_reference_sources import parents as reference_parents
+  capture_key='catalogue_capture' if url=='https://materials.pinnacleblooms.org/' else 'reference_capture' if url in reference_parents() else None
+  if capture_key:
+   row[capture_key]={'body_hex':data.hex(),'proof':{**row,'method':'GET','body_bytes':len(data),'body_complete':True,'content_type':kind,'response_headers':{'Content-Type':kind,'X-Robots-Tag':robots},'credentials_sent':False,'redirects_followed':False,'media_bodies_downloaded':False}}
   return row
  except urllib.error.HTTPError as e:
   e.close()
@@ -73,6 +75,8 @@ def public_resource(url,prior=None):
    if row.get('catalogue_capture'):
     row['catalogue_capture']=json.loads(json.dumps(row['catalogue_capture']));proof=row['catalogue_capture']['proof'];proof.setdefault('original_capture_at',proof['observed_at']);proof.update(observed_at=row['observed_at'],conditional_revalidation_status=304,robots=directives,noindex=row['noindex'],noimageindex=row['noimageindex']);proof['response_headers']['X-Robots-Tag']=', '.join(directives)
    elif url=='https://materials.pinnacleblooms.org/':return public_resource(url)
+   if row.get('reference_capture'):
+    row['reference_capture']=json.loads(json.dumps(row['reference_capture']));proof=row['reference_capture']['proof'];proof.setdefault('original_capture_at',proof['observed_at']);proof.update(observed_at=row['observed_at'],conditional_revalidation_status=304,robots=directives,noindex=row['noindex'],noimageindex=row['noimageindex']);proof['response_headers']['X-Robots-Tag']=', '.join(directives)
    return row
   return {'page_url':url,'status':e.code,'publication_qualified':False,'error':'public source HTTP '+str(e.code)}
  except (OSError,ValueError) as e:return {'page_url':url,'status':None,'publication_qualified':False,'error':str(e)}

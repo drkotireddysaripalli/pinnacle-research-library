@@ -1,0 +1,13 @@
+{
+  "bytes": 1746648,
+  "sha256": "12b11a7e79de7beb6b98764f2a0c1966016990bf1168f80543ccf9350c1d7eca",
+  "data_files": 65,
+  "image_asset_records": 1962,
+  "fresh_delivery_200": 1962,
+  "mapped_images": 1899,
+  "mapped_parents": 47,
+  "unmapped_assets": 63,
+  "actual_rendered_use": "pending_windows_integration",
+  "source": "PlanetScale reference projection + approved public object inventory; no private clinical records",
+  "archive": "bootstrap/ability-reference-publication-bootstrap-20261016.zip"
+}

@@ -6,6 +6,7 @@
     {
       "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
       "visualId": 20711,
+      "browserVersion": "153.0.8010.37",
       "reviewedAt": "2026-10-07T05:03:46.248Z",
       "reviewer": "Website implementation owner",
       "approvalBasis": "Owner-approved common-shell tag and exact authority fixture; actual CI Shop and Speech opening screenshots reviewed",
@@ -13,6 +14,66 @@
       "providerReference": "https://testingbot.com/members/visual/20711/runs/3562595",
       "scope": "Desktop common header only; no whole-page or physical baseline approval",
       "pixelDifferenceNote": "Speech/Enrolment/Suchitra returned 0; provisional first PinnacleAI capture reported 146 and is retained for comparison"
+    },
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900-browser-155",
+      "visualId": 21210,
+      "browserVersion": "155",
+      "reviewedAt": "2026-10-16T10:21:00Z",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Explicit review of Chrome155 Shop opening against the owner-approved common source, nine exact authority labels and the retained Chrome153 reference. Provider UI independently identifies21210 as Chrome155 and20711 as Chrome153. No production header design change or replacement of20711.",
+      "sourceCommit": "6f7f9082ad4d407114c7b762a1fb78f33bcd5b68",
+      "providerReference": "https://testingbot.com/members/visual/21210/runs/3607431",
+      "scope": "Neutral desktop common header on Chrome155/Windows11/1440x900 only",
+      "pixelDifferenceNote": "Original cross-version failures and20711 retained. A fresh comparison against21210 remains required; first capture and functional pass alone were not visual acceptance."
+    },
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900-browser-155-no-announcement",
+      "visualId": 21222,
+      "browserVersion": "155",
+      "reviewedAt": "2026-10-16T11:17:53.980057+00:00",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Actual Chrome155 neutral header after the ordinary announcement-dismiss action reviewed against the retained owner-approved common source and the no-announcement build capture. Separate state from public reference21210; neither older baseline is replaced.",
+      "sourceCommit": "5493522055b31acce3263d1ea36d02a05b1eee66",
+      "providerReference": "https://testingbot.com/members/visual/21222",
+      "scope": "Neutral Chrome155/Windows11/1440x900 common header without the announcement; first approved reference for this separate state",
+      "pixelDifferenceNote": "Review based on the actual reference-ready screenshot and provider identity. Exact-source build comparison still required."
+    },
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900-browser-155-no-announcement-no-preview-note",
+      "visualId": 21228,
+      "browserVersion": "155",
+      "reviewedAt": "2026-10-16T12:13:22.112286+00:00",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Actual header image visually reviewed against owner-approved source. Exact production-context screenshot is pixel-identical to the5f0e24e source-build capture; preview-only note absent. Provider UI independently confirms this ID/name/browser. Separate initial reference; no older baseline replaced.",
+      "sourceCommit": "5f0e24ea45ec9b3d9d3679f032ec3eaba786661a",
+      "providerReference": "https://testingbot.com/members/visual/21228",
+      "scope": "Chrome155/Windows11/1440x900 common header, no announcement, no preview-only note; current-page state encoded in name",
+      "pixelDifferenceNote": "Raw exact-build header comparison0 pixels. First provider capture is not the subsequent validation. Exact-source BVT still required."
+    },
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900-browser-155-no-announcement-no-preview-note-active-pinnacleai",
+      "visualId": 21231,
+      "browserVersion": "155",
+      "reviewedAt": "2026-10-16T12:13:22.112898+00:00",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Actual header image visually reviewed against owner-approved source. Exact production-context screenshot is pixel-identical to the5f0e24e source-build capture; preview-only note absent. Provider UI independently confirms this ID/name/browser. Separate initial reference; no older baseline replaced.",
+      "sourceCommit": "5f0e24ea45ec9b3d9d3679f032ec3eaba786661a",
+      "providerReference": "https://testingbot.com/members/visual/21231",
+      "scope": "Chrome155/Windows11/1440x900 common header, no announcement, no preview-only note; current-page state encoded in name",
+      "pixelDifferenceNote": "Raw exact-build header comparison0 pixels. First provider capture is not the subsequent validation. Exact-source BVT still required."
+    },
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900-browser-155-no-announcement-no-preview-note-active-top-speech-therap-e0e84194f6fc7ae1",
+      "visualId": 21234,
+      "browserVersion": "155",
+      "reviewedAt": "2026-10-16T12:13:22.113671+00:00",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Actual header image visually reviewed against owner-approved source. Exact production-context screenshot is pixel-identical to the5f0e24e source-build capture; preview-only note absent. Provider UI independently confirms this ID/name/browser. Separate initial reference; no older baseline replaced.",
+      "sourceCommit": "5f0e24ea45ec9b3d9d3679f032ec3eaba786661a",
+      "providerReference": "https://testingbot.com/members/visual/21234",
+      "scope": "Chrome155/Windows11/1440x900 common header, no announcement, no preview-only note; current-page state encoded in name",
+      "pixelDifferenceNote": "Raw exact-build header comparison0 pixels. First provider capture is not the subsequent validation. Exact-source BVT still required."
     }
   ]
 }

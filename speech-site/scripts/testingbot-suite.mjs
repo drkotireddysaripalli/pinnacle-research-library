@@ -116,26 +116,26 @@ for(const matrixId of matrixIds){
         await snap(t,'opening');
         const gated=await visible('#ask-reader-gate[open]');
         if(process.argv.includes('--visual')&&!p.shell){
+          if(process.argv.includes('--dismiss-announcement')&&await visible('#pinnacle-site-announcement')){await click('#pinnacle-site-announcement [data-announcement-dismiss]');t.visualAnnouncementDismissed=true;}
           const identity=[matrixId,config.kind==='physical'?device.name:config.platformName,t.document.width+'x'+t.document.height].join('-').replace(/[^a-zA-Z0-9-]/g,'-');
           const activePath=await evaluate("return [...new Set([...document.querySelectorAll('.portal-main-nav a[aria-current=page],.portal-therapy-nav a[aria-current=page]')].map(a=>new URL(a.href).pathname))].sort().join('--')");
-          const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath});
+          const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath,browserVersion:session.providerCapabilities.browserVersion||device.version,announcement:await visible('#pinnacle-site-announcement'),previewNote:await visible('.preview-note')});
           const reference=visualReferences.approved.find(r=>r.name===name);
           // The provider hides native scrollbars when capturing. Freeze that
           // layout explicitly so scrollbar removal cannot race the CSS crop.
           // Restore it before interaction/readability checks; never replace a baseline.
-          const visualLayout=config.kind==='desktop'?await evaluate("const e=document.documentElement,a=document.querySelector('#pinnacle-site-announcement');const old=e.getAttribute('style'),announcementOld=a?.getAttribute('style')??null;const before={innerWidth,clientWidth:e.clientWidth,headerY:document.querySelector('.portal-header')?.getBoundingClientRect().y};e.style.setProperty('overflow-y','hidden','important');if(a)a.style.setProperty('display','none','important');return {old,announcementOld,announcementPresent:!!a,before,snapshotClientWidth:e.clientWidth}"):null;
+          const visualLayout=config.kind==='desktop'?await evaluate("const e=document.documentElement;const old=e.getAttribute('style');const before={innerWidth,clientWidth:e.clientWidth};e.style.setProperty('overflow-y','hidden','important');return {old,before,snapshotClientWidth:e.clientWidth}"):null;
           if(visualLayout)t.visualLayout=visualLayout;
           try{
-            // The independently checked announcement is outside this header
-            // crop. Exclude its fractional-height offset during capture only;
-            // the actual opening screenshot and remaining checks retain it.
-            if(visualLayout)t.visualLayout.painted=await evaluate("return new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>{const h=document.querySelector('.portal-header'),c=h?.querySelector('.portal-container');resolve({clientWidth:document.documentElement.clientWidth,headerWidth:h?.getBoundingClientRect().width,containerX:c?.getBoundingClientRect().x,style:document.documentElement.getAttribute('style')})})))");
-            if(visualLayout)await snap(t,'visual-ready');
+            // The viewport change must reach a painted frame before the
+            // provider's CSS crop. The approved capture used this same step.
+            await evaluate('return document.fonts.ready.then(()=>true)');
+            await snap(t,'reference-ready');
             // Appium's native interception did not resolve CSS crops on the
             // physical web sessions. Use the documented viewport mode there.
             const result=await evaluate('tb:visual.snapshot='+JSON.stringify({name,options:{...(config.kind==='desktop'?{selector:'.portal-header'}:{}),threshold:0.1,antialiasing:true}}));
             const v=typeof result==='string'?JSON.parse(result):result;
-            if(visualLayout)t.visualLayout.afterCapture=await evaluate("return {clientWidth:document.documentElement.clientWidth,style:document.documentElement.getAttribute('style'),containerX:document.querySelector('.portal-header .portal-container')?.getBoundingClientRect().x}");
+            if(typeof v?.match!=='boolean'&&v?.visualId)t.visualProvisional={name,visualId:v.visualId,runId:v.runId,url:v.url};
             if(typeof v?.match!=='boolean'||!v.visualId)throw Error('Provider did not return a real visual-comparison result');
             t.visual={name,...v,approval:reference?'approved-reference':'provisional-first-capture',referenceScope:config.kind==='physical'?'Exact page opening on this physical device/viewport':'Shared header only; narrative/body/footer are separate checks and screenshots'};
             if(reference&&(String(reference.visualId)!==String(v.visualId)||!v.match))t.checks.push({name:'Approved visual reference matches',passed:false,error:'Visual ID changed or pixel regression detected',evidence:t.visual});
@@ -145,7 +145,7 @@ for(const matrixId of matrixIds){
             if(reference)t.checks.push({name:'Approved visual reference is verifiable',passed:false,error});
             else t.skipped.push(error);
           }finally{
-            if(visualLayout)await evaluate("const e=document.documentElement,a=document.querySelector('#pinnacle-site-announcement');if(arguments[0]===null)e.removeAttribute('style');else e.setAttribute('style',arguments[0]);if(a&&arguments[2]){if(arguments[1]===null)a.removeAttribute('style');else a.setAttribute('style',arguments[1]);}return true",visualLayout.old,visualLayout.announcementOld,visualLayout.announcementPresent);
+            if(visualLayout)await evaluate("const e=document.documentElement;if(arguments[0]===null)e.removeAttribute('style');else e.setAttribute('style',arguments[0]);return true",visualLayout.old);
           }
         }
         if(p.gate){await check('Anonymous reader gets branded Google sign-in gate',()=>evaluate("const d=document.querySelector('#ask-reader-gate');return !!d?.open&&!!d.querySelector('[name=returnTo]')&&!!d.querySelector('img')"));t.skipped.push('Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite');}

@@ -12,7 +12,7 @@ HERE=Path(__file__).resolve().parent
 CATALOGUE='https://materials.pinnacleblooms.org/'
 KNOWLEDGE='maintained_knowledge_images_v1'
 CAT_SOURCE='materials_catalogue_pb_card_v1'
-SOURCES={KNOWLEDGE,CAT_SOURCE}
+SOURCES={KNOWLEDGE,CAT_SOURCE,'ability_reference_illustrations_v1','guru_selected_reference_galleries_v1'}
 PERMISSION=HERE/'managed-media-permission.json'
 BOOTSTRAP=HERE/'knowledge-media/bootstrap/qualified-media-bootstrap-20261015.zip'
 def packed(v):return json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(',',':'))
@@ -150,7 +150,14 @@ def refresh(db,repo,approved_release,resources,output,now=None):
   eligible={r[0] for r in db.execute("SELECT url FROM pages WHERE decision='INCLUDE'")}
   desired={s:[r for r in items if m.normal(r['page_url']) in eligible] for s,items in desired.items()}
   changes,counts=reconcile(db,desired,blocked)
-  result={'schema':1,'sourceCounts':{s:len(r) for s,r in desired.items()},'headsQueried':len(pending),'headsReused':len(urls)-len(pending),'heldRelationships':len(held),'transientExistingPairsRetained':transient_retained,'counts':counts,'source_inputs_sha256':sha((kd/'source-inputs.json').read_bytes()),'permission_sha256':sha(PERMISSION.read_bytes()),'source_rows_modified':False,'media_bodies_downloaded':False}
+  from selected_reference_sources import refresh as refresh_references
+  selected,reference_proof,reference_holds=refresh_references(db,resources,cache,now,probe,head_ok,fresh)
+  if selected:
+   blocked|={u for u,r in cache.items() if fresh(r.get('checked_at') or r.get('observed_at'),now) and definitively_disqualified(r)}
+   selected_changes,selected_counts=reconcile(db,selected,blocked);changes+=selected_changes
+   counts['added']+=selected_counts['added'];counts['removed']+=selected_counts['removed'];counts['retained']=selected_counts['retained']
+  held+=reference_holds;urls=sorted(set(urls)|set(cache))
+  result={'schema':1,'sourceCounts':{s:len(r) for s,r in {**desired,**selected}.items()},'headsQueried':len(pending)+reference_proof.get('headsQueried',0),'headsReused':len(urls)-len(pending),'heldRelationships':len(held),'transientExistingPairsRetained':transient_retained,'counts':counts,'selectedReferences':reference_proof,'source_inputs_sha256':sha((kd/'source-inputs.json').read_bytes()),'permission_sha256':sha(PERMISSION.read_bytes()),'source_rows_modified':False,'media_bodies_downloaded':False}
   db.execute('INSERT OR REPLACE INTO receipts VALUES(?,?,?)',('managed-media-sources-v1','managed-media-sources',packed({'heads':{u:cache[u] for u in urls},'proof':result})))
   (output/'managed-media-proof.json').write_text(packed(result)+'\n',encoding='utf8');(output/'managed-media-holds.jsonl').write_text(''.join(packed(r)+'\n' for r in held),encoding='utf8')
  return changes,result

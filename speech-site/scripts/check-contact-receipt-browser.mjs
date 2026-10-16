@@ -3,9 +3,11 @@
 import fs from'node:fs/promises';import path from'node:path';import assert from'node:assert/strict';import{createHash}from'node:crypto';
 import{build}from'esbuild';import{Miniflare,convertV4MiniflareOptions}from'miniflare';import{chromium,firefox,webkit}from'@playwright/test';
 import{assets}from'../deployment/shared-assets-repair-assets.mjs';import{servePublicAdCall}from'../deployment/public-ad-call.mjs';import{CONTACT_PATH,CONTACT_TOPICS,isParentContact}from'../public/pinnacle-pages-scripts/contact-options.mjs';
-const styled=process.argv.includes('--styled'),origin='https://www.pinnacleblooms.org',out='outputs/contact-receipt-20261015'+(styled?'-styled':''),results=[];await fs.mkdir(out,{recursive:true});
-const fixture=await fs.readFile(styled?'ask-private/contact-receipt-20261015/public-before.html':'scripts/fixtures/contact-published-form-20261015.html','utf8'),legacy=assets['/pinnacle-pages-scripts/newmirracleportal-0b3284dc5de1efb1.js'];assert(legacy);assert.equal(createHash('sha256').update(legacy.body).digest('hex'),'0b3284dc5de1efb1c5ff12746295b41113d377aa32d7ee8a0936fb5902289214');
+const option=(name,fallback)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
+const styled=process.argv.includes('--styled'),origin='https://www.pinnacleblooms.org',out=option('out','outputs/contact-receipt-20261015'+(styled?'-styled':'')),results=[];await fs.mkdir(out,{recursive:true});
+const fixture=await fs.readFile(option('fixture',styled?'ask-private/contact-receipt-20261015/public-before.html':'scripts/fixtures/contact-published-form-20261015.html'),'utf8'),legacy=assets['/pinnacle-pages-scripts/newmirracleportal-0b3284dc5de1efb1.js'];assert(legacy);assert.equal(createHash('sha256').update(legacy.body).digest('hex'),'0b3284dc5de1efb1c5ff12746295b41113d377aa32d7ee8a0936fb5902289214');
 const styles=styled?JSON.parse(await fs.readFile('ask-private/contact-receipt-20261015/styles.json','utf8')):{};
+const scriptMap=option('script-map','')?JSON.parse(await fs.readFile(option('script-map'),'utf8')):{};
 const entry="import{createClearanceWrapper}from'./deployment/shared-clearance.mjs';export default createClearanceWrapper({async fetch(r,e){return e.ORIGIN.fetch(r)}});";
 const compiled=await build({stdin:{contents:entry,resolveDir:process.cwd()},bundle:true,format:'esm',write:false});
 const mf=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-03',script:compiled.outputFiles[0].text,serviceBindings:{ORIGIN:()=>new Response(fixture,{headers:{'content-type':'text/html'}})}}));
@@ -14,13 +16,14 @@ try{
  assert(!html.includes('GTM-W9ZHX459'));assert(!html.includes('class="cm-button-enroll contact-form-submit"'));assert(html.includes('action="/api/enrolment"'));assert(html.includes('data-contact-submit'));assert(html.includes('speech-measurement.js?v=contact-receipt-20261015'));
  for(const [engine,launcher]of Object.entries(process.platform==='win32'?{chromium}:{chromium,firefox,webkit})){
   const browser=await launcher.launch({headless:true});
-  try{for(const width of[390,1440]){
+  try{for(const width of(option('width','')?[Number(option('width'))]:[390,1440])){
    const cases=[...CONTACT_TOPICS.map(topic=>({name:'topic-'+CONTACT_TOPICS.indexOf(topic),topic,mode:'accepted'})),{name:'validation',mode:'validation'},{name:'rejected',mode:'rejected'},{name:'conflict',mode:'conflict'},{name:'mismatched-receipt',mode:'mismatch'},{name:'unknown-retry',mode:'unknown-retry'},{name:'accepted-reload',mode:'reload'},{name:'no-script',mode:'no-script'},{name:'consented-source',mode:'accepted',consent:'accepted'},{name:'refused',mode:'accepted',consent:'declined'},{name:'gpc',mode:'accepted',gpc:true}].filter(c=>!styled||['topic-1','validation','unknown-retry'].includes(c.name));
    for(const c of cases){
-    const context=await browser.newContext({viewport:{width,height:900}}),requests=[],errors=[],intakes=new Map();let legacyPosts=0;
+    const context=await browser.newContext({viewport:{width,height:900},...(option('ua','')?{userAgent:option('ua')}:{})}),requests=[],errors=[],intakes=new Map();let legacyPosts=0;
     await context.addInitScript(({consent,gpc})=>{window.__contactQa=[];window.__contactScriptErrors=[];window.addEventListener('error',e=>window.__contactScriptErrors.push({message:e.message,file:e.filename,line:e.lineno,column:e.colno}));for(const name of['pinnacle:contact-accepted','pinnacle:enquiry-accepted'])document.addEventListener(name,()=>window.__contactQa.push(name));if(gpc)Object.defineProperty(navigator,'globalPrivacyControl',{value:true});if(consent)localStorage.setItem('pinnacle-speech-analytics-v1',JSON.stringify({value:consent,at:Date.now()}));localStorage.setItem('pinnacle-enquiry-source-v1',JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'isolated_fixture'}}));},{consent:c.consent,gpc:c.gpc});
     await context.route('**/*',async route=>{
      const req=route.request(),u=new URL(req.url());
+     if(scriptMap[u.href]){const s=scriptMap[u.href],body=await fs.readFile(s.file,'utf8');assert.equal(createHash('sha256').update(body).digest('hex'),s.sha256);return route.fulfill({status:200,contentType:'text/javascript',body});}
      if(styles[u.href]){const s=styles[u.href],body=await fs.readFile(s.file,'utf8');assert.equal(createHash('sha256').update(body).digest('hex'),s.sha256);return route.fulfill({status:200,contentType:'text/css',body});}
      if(u.origin===origin&&u.pathname===CONTACT_PATH)return route.fulfill({status:200,contentType:'text/html',body:html});
      if(u.origin===origin&&u.pathname==='/api/enrolment'&&req.method()==='POST'){
