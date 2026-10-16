@@ -1,4 +1,5 @@
 import{sourceJobConclusion}from'./cloud-distribution-status.mjs';
+import {validateDistributionResume} from './cloud-distribution-resume.mjs';
 import {validateFrozenRecovery} from './frozen-publication-recovery.mjs';
 import {execFileSync} from 'node:child_process';
 import {runBoundedCoverage} from './source-coverage-execution.mjs';
@@ -26,6 +27,15 @@ try{
  const cfg=JSON.parse(await fs.readFile('ask-private/public-publisher-config.json','utf8')),baseline=JSON.parse(await fs.readFile(cfg.baseline_receipt,'utf8')),before=await state();liveBefore=before;
  assert.deepEqual(before.workers['pinnacle-verify-route'].versions,[{version_id:baseline.candidateVersion,percentage:100}],'Accepted live baseline changed; owner must update protected state');
  const current=await modules('pinnacle-verify-route'),hashes=Object.fromEntries(current.items.map(m=>[m.name,sha(Buffer.from(m.base64,'base64'))]));assert.deepEqual(hashes,baseline.candidateModuleHashes,'Unknown/unpublished module upload must be reconciled before publication');
+ if(id.startsWith('distribution-only-')){
+  const outboxFile='ask-private/sitemap-submission-outbox.json',plan=JSON.parse(await fs.readFile(outboxFile,'utf8')),manifestBytes=await fs.readFile(path.join(baseline.selectedRelease,'manifest.json')),manifest=JSON.parse(manifestBytes),{sitemapGraphs}=await import('./cloud-source-distribution.mjs');
+  report.distributionOnly=validateDistributionResume({id,receipt:baseline,manifestSHA256:sha(manifestBytes),plan,graphs:await sitemapGraphs(baseline.selectedRelease,manifest)});
+  const checkpoint=async value=>{await save(outboxFile,value);await step('persist-outbox-'+report.steps.length,['python3','scripts/cloud-source-state.py','outbox-store']);};
+  await drainDistribution(plan,cfg,{checkpoint});
+  report.version=baseline.candidateVersion;report.publicFilesVerified=baseline.publicFilesVerified;report.sourcePhase='verified_published';report.sourceExceptions=plan.publicationBinding.sourceExceptions||0;
+  report.distribution={indexnow:plan.indexnow.map(j=>({id:j.id,host:j.host,count:j.urls.length,status:j.status,httpStatus:j.httpStatus})),sitemaps:plan.sitemaps.map(j=>({id:j.id,root:j.root,status:j.status,google:j.google,bing:j.bing})),unchangedRoots:plan.unchangedRoots,held:plan.held.length};
+  const conclusion=sourceJobConclusion(!report.sourceExceptions,plan);Object.assign(report,{status:conclusion.status,submissionsAccepted:conclusion.submissionsAccepted,engineProcessingPending:conclusion.engineProcessingPending});report.finishedAt=new Date().toISOString();await jobCheckpoint();await save(out+'/report.json',report);process.exit(conclusion.exitCode);
+ }
  const git=(await import('./publisher-platform.mjs')).publisherGit;
  const recovery=priorJob?.ownerRecovery;
  if(recovery){
