@@ -3,6 +3,7 @@ import {build} from 'esbuild';import {Miniflare,convertV4MiniflareOptions} from 
 import data from '../deployment/selected-reference-data.json' with {type:'json'};
 import optimized from '../deployment/selected-reference-optimized.json' with {type:'json'};
 import {removePlaceholderVideo} from '../deployment/materials-placeholder-video.mjs';
+import fs from 'node:fs';import {gunzipSync} from 'node:zlib';import {createHash} from 'node:crypto';
 test('Selection binds193 existing parents and2049 exact ordinary gallery uses',()=>{
  assert.equal(Object.keys(data).length,193);assert.equal(Object.values(data).filter(r=>r.kind==='ability').length,47);assert.equal(Object.values(data).reduce((n,r)=>n+r.imageCount,0),2049);
  assert.equal(Object.keys(optimized).length,14);
@@ -23,4 +24,14 @@ test('Rendered section is scoped, canonical, idempotent and preserves exact prim
 test('Tactile placeholder removal retains valid video, article, player and malformed JSON boundaries',()=>{
  const valid={'@type':'VideoObject',embedUrl:'https://www.youtube.com/embed/verified-id'},article={'@type':'Article',headline:'Retain article'},placeholder={'@type':'VideoObject',embedUrl:'https://www.youtube.com/embed/VIDEO_ID'};
  assert.deepEqual(removePlaceholderVideo({'@context':'https://schema.org','@graph':[article,placeholder,valid]}),{'@context':'https://schema.org','@graph':[article,valid]});assert.equal(removePlaceholderVideo(placeholder),undefined);assert.deepEqual(removePlaceholderVideo(valid),valid);
+});
+
+test('actual legacy Ability and exceptional Guru containers receive their selected section without a main/article element',async()=>{
+ const folder=new URL('../tests/fixtures/selected-reference-legacy/',import.meta.url),manifest=JSON.parse(fs.readFileSync(new URL('manifest.json',folder)));
+ const fixtures=Object.fromEntries(manifest.map(r=>{const raw=gunzipSync(fs.readFileSync(new URL(r.name+'.html.gz',folder)));assert.equal(createHash('sha256').update(raw).digest('hex'),r.bodySHA256);return[r.url,raw.toString()];}));
+ const code=await build({stdin:{contents:`import{repairSelectedReferences}from'./deployment/selected-reference-gallery.mjs';const fixtures=${JSON.stringify(fixtures)};export default{fetch(r){return repairSelectedReferences(r,new Response(fixtures[new URL(r.url).origin+new URL(r.url).pathname],{headers:{'content-type':'text/html'}}));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',write:false});
+ const mf=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-03',script:code.outputFiles[0].text}));
+ try{for(const [u,original]of Object.entries(fixtures)){assert(!/<main\b|<article\b/i.test(original));const html=await(await mf.dispatchFetch(u)).text(),row=data[u];fs.mkdirSync('audits/selected-reference-legacy',{recursive:true});fs.writeFileSync('audits/selected-reference-legacy/'+row.kind+'.html',html);assert.equal(html.split(row.html).length-1,1,u+' exact selected section');assert.equal((html.match(/data-selected-reference-style/g)||[]).length,1,u+' selected stylesheet');assert(html.includes('9100181181'));
+  if(row.kind==='guru'){assert(!html.includes('src="'+row.replacement.visible_primary.observed_exact_urls[0]+'"'));assert(html.includes('src="'+row.replacement.sequence_zero_url+'"'));assert(html.includes(row.replacement.og_image.observed_exact_urls[0]));}
+ }}finally{await mf.dispose();}
 });

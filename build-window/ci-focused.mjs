@@ -12,7 +12,7 @@ export const focusedSuites = [
   ['deployment/mirracles-library-20261008/library.test.mjs','scripts/test-mirracles-corpus.mjs','deployment/guru-recovery-20261009/handler.test.mjs','scripts/test-server-error-routing.mjs','scripts/test-url-health-repair.mjs'],
   ['scripts/test-book-search-metadata.mjs','scripts/test-book-asset-inventory.mjs','scripts/test-vernacular-typography.mjs','scripts/test-book-cart-links.mjs'],
   ['scripts/test-staff-canonical.mjs','scripts/test-staff-health.mjs','scripts/test-staff-sitemap-completeness.mjs','scripts/test-legacy-social-metadata.mjs','scripts/test-legacy-schema.mjs','scripts/test-breadcrumb-page-identity.mjs','scripts/test-legacy-compact.mjs'],
-  ['scripts/test-public-mobile-recovery.mjs','scripts/test-materials-media.mjs','scripts/test-reading-cache-response.mjs','scripts/test-reading-paint.mjs'],
+  ['scripts/test-public-mobile-recovery.mjs','scripts/test-materials-media.mjs','scripts/test-interventions-index-root.mjs','scripts/test-selected-references.mjs','scripts/test-reading-cache-response.mjs','scripts/test-reading-paint.mjs'],
   ['scripts/test-merchant-policy.mjs'],
   ['scripts/test-paid-centre-entry.mjs','scripts/test-centre-measurement.mjs'],
   ['scripts/test-centre-google-feed.mjs','scripts/test-enrolment-receipt.mjs','scripts/test-helpline-acquisition.mjs','../helpline-site/phone-analytics-tests.mjs'],
