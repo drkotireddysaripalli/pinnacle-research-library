@@ -1,0 +1,75 @@
+{
+  "cached_replay": {
+    "accepted_parents": 47,
+    "actual_emitted_HTML_observations": 0,
+    "authorized_pairs": 1899,
+    "example_image_pairs": 948,
+    "feed_projection_is_fixture": true,
+    "file": "cached-packet-replay.json",
+    "held_pairs": 1899,
+    "qualified_pairs": 0,
+    "question_image_pairs": 951,
+    "scoped_cached_HEADs_passed_at_cached_clock": 1899,
+    "source_local_withdrawals": 0
+  },
+  "canonical_repo_edits": 0,
+  "database_writes": 0,
+  "files": {
+    "README.md": {
+      "bytes": 10183,
+      "sha256": "60a7d78f57a8b96781b4fcd553e06dfec53a40a1f77630a1ecc9a24688b33c36"
+    },
+    "cached-packet-replay.json": {
+      "bytes": 1462,
+      "sha256": "75a0cf85d9d0f861ce230bbdceca8829f6adb327d5ca0c572028a1c743b5f343"
+    },
+    "qualify_observed_ability_uses.py": {
+      "bytes": 26554,
+      "sha256": "02738364da22364573187c1a3e8dc4147d6cfed5c6e0338cd28efd9c315bb1da"
+    },
+    "test_qualify_observed_ability_uses.py": {
+      "bytes": 13474,
+      "sha256": "f016f13017c4fe02e7e16e47a06cdb78f177410855087bfec64e25bba3606bd0"
+    },
+    "tests.log": {
+      "bytes": 109,
+      "sha256": "fe2a4d391c48bdc7e95df1f7d0137c7a495cf650b3bbe4052b6f0cbe2cbe84fb"
+    }
+  },
+  "integration": {
+    "actual_render_capture_and_current_parent_delivery_qualification_pending": true,
+    "downstream_page_eligibility_still_required": true,
+    "fresh_parent_veto_blocks_stale_positive_feed": true,
+    "owner": "Windows existing publisher owner",
+    "register_only_new_managed_source": true,
+    "require_same_transaction_feed_fingerprint_check": true,
+    "use_result_field": "desired",
+    "withdraw_only_own_source_ownership_with_complete_observed_parent_set": true
+  },
+  "network_requests": 0,
+  "new_pages": 0,
+  "optional_parent_preflight": {
+    "not_repeated": true,
+    "passed": 47,
+    "path": "../ability-parent-preflight.json",
+    "producer": "../qualify_ability_parents.py",
+    "proves_rendered_illustration_use": false,
+    "recorded_at": "2026-10-16T04:58:33.578671+00:00",
+    "sha256": "459e614a88632f9b2aa705464806f2dfffef8298b14872626f4ceaa7c7479714",
+    "total": 47
+  },
+  "prepared_at": "2026-10-16T05:05:45.510278+00:00",
+  "private_respondent_or_clinical_fields": 0,
+  "publication_actions": 0,
+  "schema_version": 1,
+  "source": "ability_reference_illustrations_v1",
+  "source_packet_commit": "7a81a90869d3505383faddfadc877973b58cb532",
+  "status": "LOCAL_ADAPTER_COMPLETE_RENDER_INTEGRATION_PENDING",
+  "tests": {
+    "command": "python3 -B test_qualify_observed_ability_uses.py",
+    "exit_code": 0,
+    "failed": 0,
+    "log_file": "tests.log",
+    "passed": 10
+  }
+}

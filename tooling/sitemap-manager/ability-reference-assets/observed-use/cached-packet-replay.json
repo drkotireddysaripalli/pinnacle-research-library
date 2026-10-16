@@ -1,0 +1,37 @@
+{
+  "HEADs_outside_authorized_scope_ignored": 63,
+  "actual_current_HTML_observations": 0,
+  "cached_as_of": "2026-10-16T04:30:30.585769+00:00",
+  "cached_scope_HEADs_qualified": 1899,
+  "consent_sha256": "63be2d9baff41c2ca0fbfe60c8c20d9dfd510ac1a9656e7d1a0916359df2aaa0",
+  "current_feed_or_publication_proven": false,
+  "database_writes": 0,
+  "feed_projection_is_fixture": true,
+  "head_jsonl_sha256": "faeb007092d077d57ea69033f947dd114aca38bde09e7694dfedc057a68876eb",
+  "head_receipt_sha256": "79d26f692dfb570305bc3dbafac7cebb9a7bbaa46e19f75b7cdb47261425c255",
+  "network_requests": 0,
+  "packet_directory_equals_zip": true,
+  "packet_distinct_assets": 1899,
+  "packet_parents": 47,
+  "packet_zip_sha256": "12b11a7e79de7beb6b98764f2a0c1966016990bf1168f80543ccf9350c1d7eca",
+  "purpose": "Offline accepted-packet binding and HEAD-only admission rejection; not current production/feed acceptance",
+  "render_index_sha256": "c0e64be28c26572a55cf3ace3427dc6eb8e6ca2f02f63a9aca6bad5926e62654",
+  "result": {
+    "complete_safe_observed_parent_set": false,
+    "counts": {
+      "authorized_pairs": 1899,
+      "carried_forward_pairs": 0,
+      "held_pairs": 1899,
+      "observed_parents": 0,
+      "prior_owned_pairs": 0,
+      "qualified_pairs": 0,
+      "source_local_withdrawals": 0
+    },
+    "status": "source_qualification_held"
+  },
+  "roles": {
+    "example_image": 948,
+    "question_image": 951
+  },
+  "source": "ability_reference_illustrations_v1"
+}

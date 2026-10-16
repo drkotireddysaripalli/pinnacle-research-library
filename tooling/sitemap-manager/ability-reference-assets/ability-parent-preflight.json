@@ -1,0 +1,955 @@
+{
+  "at": "2026-10-16T04:58:33.578671+00:00",
+  "read_only": true,
+  "requests": 48,
+  "robots_sha256": "e720f9dffc34019c4e3574fee1fa29b20a1227904c02441696897c876f8c3bcc",
+  "parents": [
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-abas-3-adaptive-behavior-assessment-system%E2%80%933",
+      "checked_at": "2026-10-16T04:57:45.688434+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 421714,
+      "sha256": "66aed26e7956672f987e7c844d286b8adcb773a54d6ceb3b1ad92545ff4ca06e",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-abas-3-adaptive-behavior-assessment-system–3"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-abas-adaptive-behavior-assessment-system",
+      "checked_at": "2026-10-16T04:57:45.688512+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445063,
+      "sha256": "b2a0bd3761066e5de3412eb6b50dc44870fc2d4a2847f6b1c97109a820d9b3db",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-abas-adaptive-behavior-assessment-system"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-adhd-attention-deficit-hyperactivity-disorder-scale",
+      "checked_at": "2026-10-16T04:57:45.688583+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445422,
+      "sha256": "873fec8f4146c631ffbbf801df9bddf2f940e8e4455de69d9cf0006fc0e3f4c7",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-adhd-attention-deficit-hyperactivity-disorder-scale"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-adi-r-autism-diagnostic-interview%E2%80%93revised",
+      "checked_at": "2026-10-16T04:57:45.688986+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 423911,
+      "sha256": "233ab62ca2cf4d7a9b08fe4194b998134e685dd2315f7c3308e5d5a9e35a7261",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-adi-r-autism-diagnostic-interview–revised"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-ados-2-autism-diagnostic-observation-schedule-2",
+      "checked_at": "2026-10-16T04:57:50.024895+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 446718,
+      "sha256": "e0b51805563eba4913e1e7812a303b09c3fad44aef7d656c1fb95496dae0eb31",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-ados-2-autism-diagnostic-observation-schedule-2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-ados-t-autism-diagnostic-observation-schedule-toddler",
+      "checked_at": "2026-10-16T04:57:50.047846+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445235,
+      "sha256": "2cdb8e61a16b5a8a0de2e30919433944c7c5947c0514639715dbc674f89465fc",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-ados-t-autism-diagnostic-observation-schedule-toddler"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-asq-3-ages-and-stages-questionnaire-third-edition",
+      "checked_at": "2026-10-16T04:57:50.082953+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 443661,
+      "sha256": "d3508889fa90a1d60c2c04127670c647530f171f9a6b14c1537815a2bdca1a4d",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-asq-3-ages-and-stages-questionnaire-third-edition"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-basc-3-behavior-assessment-system-for-children%E2%80%933",
+      "checked_at": "2026-10-16T04:57:50.084562+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 423935,
+      "sha256": "a6ca859118a5af21728b78ddd1667ec6c728b709036a256637d0382f43e7c4a3",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-basc-3-behavior-assessment-system-for-children–3"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-basc-behavior-assessment-system-for-children",
+      "checked_at": "2026-10-16T04:57:54.157049+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444459,
+      "sha256": "fc4bc17e0862d1ce3552418fc2dd547f7d47059f2df653cb27c4ea52929c6548",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-basc-behavior-assessment-system-for-children"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-bayley-4-bayley-scales-of-infant-and-toddler-development-2",
+      "checked_at": "2026-10-16T04:57:54.180118+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 446790,
+      "sha256": "404b6ad17a1b59b3887273760cb32dd086c51ef8759e7e7aca8a2a5c8b1be61b",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-bayley-4-bayley-scales-of-infant-and-toddler-development-2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-bayley-bayley-scales-of-infant-and-toddler-development",
+      "checked_at": "2026-10-16T04:57:54.207176+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 447229,
+      "sha256": "ebf538834fca255e6bf3718c3fbe9249c039734917595b0e59c0d849b60c4f06",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-bayley-bayley-scales-of-infant-and-toddler-development"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-bot-2-bruininks-oseretsky-test-of-motor-proficiency-2",
+      "checked_at": "2026-10-16T04:57:54.217164+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445463,
+      "sha256": "c14751d7d6e955bbb79660fca2d0df331465cb906be97158f31ecbfb787fac9f",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-bot-2-bruininks-oseretsky-test-of-motor-proficiency-2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-brief-2-behavior-rating-inventory-of-executive-function%E2%80%932",
+      "checked_at": "2026-10-16T04:57:58.044846+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 421955,
+      "sha256": "a09012827a0983b81a73c6ade8ca03508ad9b6f2750c6999078f2e849b7ab4e5",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-brief-2-behavior-rating-inventory-of-executive-function–2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-brief-behavior-rating-inventory-of-executive-function-2nd-edition",
+      "checked_at": "2026-10-16T04:57:58.067580+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 447579,
+      "sha256": "eacba20cf94ee4eda1a46fb752b8c4d92e70c18e643e5e9eae73adef6be93b10",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-brief-behavior-rating-inventory-of-executive-function-2nd-edition"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-cars-2-childhood-autism-rating-scale-second-edition",
+      "checked_at": "2026-10-16T04:57:58.093833+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444154,
+      "sha256": "4eabc050698f8b9eaad25c052f6515b643526ca799bcabab7751f82b5d04722c",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-cars-2-childhood-autism-rating-scale-second-edition"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-cars-2-pinnacle-childhood-autism-rating-scale",
+      "checked_at": "2026-10-16T04:57:58.103821+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444625,
+      "sha256": "59b88f60550c5a18cfd6b47305aac3d8cbeb31e56243ed6741bc2d7559b899ce",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-cars-2-pinnacle-childhood-autism-rating-scale"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-cdi-communicative-development-inventories",
+      "checked_at": "2026-10-16T04:58:01.871565+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444342,
+      "sha256": "628e4c93c1a1a58072a15efa6701d203a729bbb4c1f313bdd1e0cfa4ea478dad",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-cdi-communicative-development-inventories"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-cdi-macarthur-bates-communicative-development-inventories",
+      "checked_at": "2026-10-16T04:58:02.039925+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444734,
+      "sha256": "ef7043361045ce2413289e3399da5fbd4c2fa43499c20f3cdc524556b5d63fbb",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-cdi-macarthur-bates-communicative-development-inventories"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-celf-clinical-evaluation-of-language-fundamentals",
+      "checked_at": "2026-10-16T04:58:02.076469+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445531,
+      "sha256": "ed2fa69a0aa917a4898ce8dc321d1ed5919f2d471d86f8e6fb6f85ea1450750e",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-celf-clinical-evaluation-of-language-fundamentals"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-celf-p2-clinical-evaluation-of-language-fundamentals%E2%80%93preschool-2",
+      "checked_at": "2026-10-16T04:58:02.081104+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 421490,
+      "sha256": "ea25877a6ca7d31774b6750feba1c37ee177742eb571b89b3b37c354a20a168e",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-celf-p2-clinical-evaluation-of-language-fundamentals–preschool-2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-conners-3-conners-3rd-edition",
+      "checked_at": "2026-10-16T04:58:05.322717+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445918,
+      "sha256": "c8996f5744da6cb4390ba5ca7cba302774a7ee81cb5d7162dc2f087bc59085c1",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-conners-3-conners-3rd-edition"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-dp-4-developmental-profile-4",
+      "checked_at": "2026-10-16T04:58:06.049365+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 442905,
+      "sha256": "851c574fd841c89cdcf1cadabad3ae56ad5a51815dcfc66560419c4634fda2d4",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-dp-4-developmental-profile-4"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-dunns-2-dunn%E2%80%99s-sensory-profile%E2%80%932",
+      "checked_at": "2026-10-16T04:58:06.078058+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 420762,
+      "sha256": "a8f30262b117d65bfa4d61656a66ceb9f1bd8c07d3aeea937b39a9dcd3843c0f",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-dunns-2-dunn’s-sensory-profile–2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-dunns-developmental-understanding-of-the-needs-of-sensory-and-social",
+      "checked_at": "2026-10-16T04:58:06.091649+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 447001,
+      "sha256": "c42c00ba6054208cdd4ce89f98673c79635642ea93a30d6d33d91015e21336d0",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-dunns-developmental-understanding-of-the-needs-of-sensory-and-social"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-fes-family-environment-scale",
+      "checked_at": "2026-10-16T04:58:08.708199+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444211,
+      "sha256": "24aa471e513233680465b023be51e3ae088b2c6ea45856992b7806d5becc7f9a",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-fes-family-environment-scale"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-fes-family-environment-scale-1",
+      "checked_at": "2026-10-16T04:58:10.292279+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444725,
+      "sha256": "830490690bfb7fc74853e12e1c5e30823bbdc0b9068dc70fcf0666cbdd29de92",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-fes-family-environment-scale-1"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-gars-3-gilliam-autism-rating-scale%E2%80%933",
+      "checked_at": "2026-10-16T04:58:10.328285+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 418354,
+      "sha256": "bd8a50e38d509dc8cda3702d96bc0e2d33918a55460a02575e65ad4d9e4d7620",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-gars-3-gilliam-autism-rating-scale–3"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-gars-3-gilliam-autism-rating-scale-third-edition",
+      "checked_at": "2026-10-16T04:58:10.334860+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 447762,
+      "sha256": "6755d0cc2b39d744f910567438af01e98cebd95b48e825771d8f46f54ba9a076",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-gars-3-gilliam-autism-rating-scale-third-edition"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-gmfm-pinnacle-gross-motor-function-measure",
+      "checked_at": "2026-10-16T04:58:12.632621+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444505,
+      "sha256": "5e81a30f566e38e3468b8b91a2967bf5ce7e43c8ec43f4fa0a21537a065b69a3",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-gmfm-pinnacle-gross-motor-function-measure"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-iprs-pinnacle-preschool-language-scale",
+      "checked_at": "2026-10-16T04:58:14.710946+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444540,
+      "sha256": "e18d647c9917a12a638700efab4932be0d372abf3217f9555aed899420a5053c",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-iprs-pinnacle-preschool-language-scale"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-isaa-indian-scale-for-assessment-of-autism",
+      "checked_at": "2026-10-16T04:58:14.726874+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 448582,
+      "sha256": "deb79cc744e206ae0b5d9e162172bbb388f7e8f647116ee7eea437dc9b2bd189",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-isaa-indian-scale-for-assessment-of-autism"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-m-chat-r-modified-checklist-for-autism-in-toddlers-revised",
+      "checked_at": "2026-10-16T04:58:14.746029+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444938,
+      "sha256": "c03c4071fe69ef8e50438719e774194261cb46ba3d4f54f523810e74918751b0",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-m-chat-r-modified-checklist-for-autism-in-toddlers-revised"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-msel-mullen-scales-of-early-learning",
+      "checked_at": "2026-10-16T04:58:16.581078+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 443417,
+      "sha256": "ed48e4475a9e8ac58ac666a3d1ac642242d82ae60d46e7c4b4c4a970780c939e",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-msel-mullen-scales-of-early-learning"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-nepsy-neuropsychological-evaluation-of-kids",
+      "checked_at": "2026-10-16T04:58:19.316096+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444207,
+      "sha256": "b5cf16d741549546304aba291f409b4c781caa9443607d41a51d8af8998459e5",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-nepsy-neuropsychological-evaluation-of-kids"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-pdms-2-peabody-developmental-motor-scales-second-edition",
+      "checked_at": "2026-10-16T04:58:19.340820+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444661,
+      "sha256": "16df00bf79f7203b7ba02bc03827eb2492bf794f4a9e4bf372e28d129ba09a97",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-pdms-2-peabody-developmental-motor-scales-second-edition"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-pedi-pediatric-evaluation-of-disability-inventory-1",
+      "checked_at": "2026-10-16T04:58:19.767361+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 446991,
+      "sha256": "672a050b0e72ba6fb0f4f57408ab978506d1a5054ded9b624bae8f4c3f8d8a9d",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-pedi-pediatric-evaluation-of-disability-inventory-1"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-pedi-pediatric-evaluation-of-disability-inventory-2",
+      "checked_at": "2026-10-16T04:58:20.389734+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445427,
+      "sha256": "ff46e9252efc57d985bf928d1bbc5b1a6a106ee808d5f157c824800007cf59cc",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-pedi-pediatric-evaluation-of-disability-inventory-2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-pls-5-preschool-language-scale%E2%80%935",
+      "checked_at": "2026-10-16T04:58:22.294815+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 421449,
+      "sha256": "8e8401d7bb330416c71e5606578108610e3f38c9c643f1f7dbed85f8368ab9a4",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-pls-5-preschool-language-scale–5"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-psi-parenting-stress-index",
+      "checked_at": "2026-10-16T04:58:22.303642+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444502,
+      "sha256": "dff3a47e402d14edb5435c8edaf7ed4742dd3a70b061ce1f9ffadd9487f1ee51",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-psi-parenting-stress-index"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-psi-parenting-stress-index-1",
+      "checked_at": "2026-10-16T04:58:23.539833+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445050,
+      "sha256": "33c0724062dc387de1404cd6a8525043ab1a3d9d0e28770b2a7382f59954c704",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-psi-parenting-stress-index-1"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-sbis-stanford-binet-intelligence-scales",
+      "checked_at": "2026-10-16T04:58:25.708024+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 446537,
+      "sha256": "4398c789f06f34c6f02bb056c8036f7a981b5ca68b585f1278b9d80aedc5d6f8",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-sbis-stanford-binet-intelligence-scales"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-srs-2-social-responsiveness-scale%E2%80%932",
+      "checked_at": "2026-10-16T04:58:26.409192+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 418617,
+      "sha256": "5a47839d56aadf25dfa360c351dba8243914957425c0a1ba1118ad297e332a0c",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-srs-2-social-responsiveness-scale–2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-ssis-social-skills-improvement-system-1",
+      "checked_at": "2026-10-16T04:58:26.441945+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 445288,
+      "sha256": "6c6af51829a47d6afb0a13bed1adc6607cd53a549646351370f3dd9df2474e5f",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-ssis-social-skills-improvement-system-1"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-ssis-social-skills-improvement-system-2",
+      "checked_at": "2026-10-16T04:58:27.465316+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 446878,
+      "sha256": "3d330ffdcd6a0280d74b13d50f5bea21d66ef9e3839f653c2f156cd413bee1e2",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-ssis-social-skills-improvement-system-2"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-vabs-3-vineland-adaptive-behavior-scales%E2%80%933",
+      "checked_at": "2026-10-16T04:58:29.583110+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 423591,
+      "sha256": "9765f1723018b0500da86c75bf7c20dc28f31610bdc693ba8166d15b15919942",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-vabs-3-vineland-adaptive-behavior-scales–3"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-vabs-vineland-adaptive-behavior-scales",
+      "checked_at": "2026-10-16T04:58:30.360027+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 444004,
+      "sha256": "730deed1298971ccbc3a9069b01fd9bb1336f6238afaf5194275ade6c290f76e",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-vabs-vineland-adaptive-behavior-scales"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-wppsi-iv-wechsler-preschool-and-primary-scale-of-intelligence%E2%80%93iv",
+      "checked_at": "2026-10-16T04:58:30.383514+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 423042,
+      "sha256": "00a655edcf7c79064330d4734208598cb44e26dbddc1d9bc254bbbc29729e7b6",
+      "x_robots": [],
+      "canonicals": [
+        "https://www.pinnacleblooms.org/abs/pinnacle-i-wppsi-iv-wechsler-preschool-and-primary-scale-of-intelligence–iv"
+      ],
+      "meta_robots": [],
+      "crawl_allowed": {
+        "Googlebot": true,
+        "Bingbot": true,
+        "Googlebot-Image": true
+      },
+      "canonical_consistent": true,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "passed_count": 47,
+  "count": 47,
+  "limits": [
+    "Existing-parent delivery preflight only; no illustration rendered or sitemap admission established",
+    "Absent canonical is recorded, not invented"
+  ]
+}

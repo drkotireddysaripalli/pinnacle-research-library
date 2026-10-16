@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-16T05:00:48.349793+00:00",
+  "checks": [
+    {
+      "url": "https://images.pinnacleblooms.org/robots.txt",
+      "status": 404,
+      "sha256": "6263abbf04441e5ff81a9c25bfa49f5f58a973420685afe6822ff5ee946f298a",
+      "body_excerpt": null,
+      "assets": 1962,
+      "denied_assets": [],
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "limits": [
+    "Raw robots gate only; actual rendered use, parent qualification and publication remain separate."
+  ]
+}
