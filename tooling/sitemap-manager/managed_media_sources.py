@@ -36,13 +36,21 @@ def preserve_transient(db,desired,observed,heads):
   for parent,image in pairs:
    if (parent,image) in selected:continue
    head=heads[image]
-   if head.get('status') in (404,410) or {'noindex','none','noimageindex'}&set(__import__('re').findall(r'[a-z_]+',head.get('x_robots','').lower())):continue
+   status=head.get('status')
+   if definitively_disqualified(head) or not (status is None or status==429 or isinstance(status,int) and 500<=status<=599):continue
    row=db.execute('SELECT metadata_json FROM pages WHERE url=?',(m.normal(parent),)).fetchone()
    owned=json.loads(row[0]).get('managed_image_ownership',{}).get(image,{}) if row else {}
    if source in owned.get('owners',[]):desired[source].append({'page_url':parent,'image_url':image,'source_sha256':owned['source_sha256'][source]});retained+=1
  return retained
+def robots_restricted(row):
+ values=[row.get('x_robots') or ''];values += [v or '' for k,v in row.items() if k.lower()=='x-robots-tag']
+ for key in ('headers','response_headers'):values += [v or '' for k,v in (row.get(key) or {}).items() if k.lower()=='x-robots-tag']
+ return bool({'noindex','none','noimageindex'}&set(__import__('re').findall(r'[a-z_]+',' '.join(values).lower())))
 def head_ok(row):
- return row.get('method')=='HEAD' and row.get('status')==200 and row.get('direct_image_delivery_verified') is True and row.get('content_type','').lower().startswith('image/') and not {'noindex','none','noimageindex'}&set(__import__('re').findall(r'[a-z_]+',row.get('x_robots','').lower()))
+ return row.get('method')=='HEAD' and row.get('status')==200 and row.get('direct_image_delivery_verified') is True and row.get('content_type','').lower().startswith('image/') and not row.get('location') and row.get('final_url',row.get('url'))==row.get('url') and not robots_restricted(row)
+def definitively_disqualified(row):
+ status=row.get('status')
+ return robots_restricted(row) or isinstance(status,int) and 200<=status<=499 and status!=429 and not head_ok(row)
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args):return None
 def probe(url,now):
@@ -50,9 +58,9 @@ def probe(url,now):
  try:
   req=urllib.request.Request(url,method='HEAD',headers={'User-Agent':'PinnaclePublisherRefresh/1.0'})
   with urllib.request.build_opener(NoRedirect()).open(req,timeout=25) as r:
-   result.update(status=r.status,content_type=r.headers.get('Content-Type',''),content_length=r.headers.get('Content-Length'),etag=r.headers.get('ETag'),x_robots=r.headers.get('X-Robots-Tag',''))
+   result.update(status=r.status,content_type=r.headers.get('Content-Type',''),content_length=r.headers.get('Content-Length'),etag=r.headers.get('ETag'),x_robots=', '.join(r.headers.get_all('X-Robots-Tag',[])))
   result['direct_image_delivery_verified']=result['status']==200 and result['content_type'].lower().startswith('image/')
- except urllib.error.HTTPError as e:result.update(status=e.code,x_robots=e.headers.get('X-Robots-Tag',''),content_type=e.headers.get('Content-Type',''))
+ except urllib.error.HTTPError as e:result.update(status=e.code,x_robots=', '.join(e.headers.get_all('X-Robots-Tag',[])),content_type=e.headers.get('Content-Type',''))
  except (OSError,ValueError):result.update(status=None,error='delivery-unavailable')
  return result
 def bootstrap_heads(now):
@@ -76,7 +84,7 @@ def reconcile(db,desired,blocked=None):
    by_parent.setdefault(url,{}).setdefault(image,{})[source]=r['source_sha256']
  for url,row in existing.items():
   meta=json.loads(row['metadata_json']);prior=meta.get('managed_image_ownership',{});wanted=by_parent.get(url,{})
-  if not prior and not wanted:continue
+  if not prior and not wanted and url not in blocked and not any(i['loc'] in blocked for i in json.loads(row['images_json'])):continue
   images={i['loc']:i for i in json.loads(row['images_json'])};old_images=dict(images);next_owned={}
   for image in sorted(set(prior)|set(wanted)):
    old=prior.get(image,{});other=set(old.get('owners',[]))-set(desired);owners=other|set(wanted.get(image,{}));retain=old.get('retain_unmanaged',image in images and not old)
@@ -85,6 +93,7 @@ def reconcile(db,desired,blocked=None):
    if image in blocked or url in blocked:images.pop(image,None)
    elif owners:images.setdefault(image,{'loc':image})
    elif not retain:images.pop(image,None)
+  images={u:i for u,i in images.items() if u not in blocked and url not in blocked}
   if len(images)>1000:raise ValueError('Per-parent 1000-image limit exceeded; no truncation')
   if images!=old_images:
    added=len(set(images)-set(old_images));removed=len(set(old_images)-set(images));counts['added']+=added;counts['removed']+=removed
@@ -121,6 +130,7 @@ def refresh(db,repo,approved_release,resources,output,now=None):
    held += [json.loads(l) for l in (co/'held-relationships.jsonl').read_text(encoding='utf8').splitlines() if l]
   transient_retained=preserve_transient(db,desired,{KNOWLEDGE:{(r['canonical_parent'],r['image_url']) for r in rows},CAT_SOURCE:{(CATALOGUE,u) for u in catalogue_urls}},cache)
   blocked={u for u,r in resources.items() if r.get('noimageindex') or r.get('noindex') or r.get('canonical_conflict')}
+  blocked|={u for u in urls if definitively_disqualified(cache[u])}
   eligible={r[0] for r in db.execute("SELECT url FROM pages WHERE decision='INCLUDE'")}
   desired={s:[r for r in items if m.normal(r['page_url']) in eligible] for s,items in desired.items()}
   changes,counts=reconcile(db,desired,blocked)

@@ -32,6 +32,16 @@ class ManagedMedia(unittest.TestCase):
  def test_transient_failure_retains_only_exact_existing_source_use(self):
   s.reconcile(self.db,self.desired());desired={s.KNOWLEDGE:[]};pairs={s.KNOWLEDGE:{(self.url,self.image)}};self.assertEqual(s.preserve_transient(self.db,desired,pairs,{self.image:{'status':503}}),1);s.reconcile(self.db,desired);self.assertEqual(len(self.images()),1)
   desired={s.KNOWLEDGE:[]};self.assertEqual(s.preserve_transient(self.db,desired,pairs,{self.image:{'status':404}}),0);s.reconcile(self.db,desired);self.assertEqual(self.images(),[])
+ def test_redirect_nonimage_and_restriction_cannot_be_retained_as_transient(self):
+  s.reconcile(self.db,self.desired());pairs={s.KNOWLEDGE:{(self.url,self.image)}}
+  for head in [{'status':301},{'status':302},{'status':200,'content_type':'text/html'},{'status':200,'content_type':'image/jpeg','headers':{'X-Robots-Tag':'noimageindex'}}]:
+   desired={s.KNOWLEDGE:[]};self.assertEqual(s.preserve_transient(self.db,desired,pairs,{self.image:head}),0);self.assertTrue(s.definitively_disqualified(head))
+ def test_confirmed_image_veto_overrides_preexisting_unmanaged_use(self):
+  self.db.execute('update pages set images_json=?',(json.dumps([{'loc':self.image}]),));s.reconcile(self.db,self.desired());s.reconcile(self.db,{s.KNOWLEDGE:[]},{self.image});self.assertEqual(self.images(),[])
+ def test_confirmed_image_veto_applies_to_an_unowned_pair(self):
+  self.db.execute('update pages set images_json=?',(json.dumps([{'loc':self.image}]),));s.reconcile(self.db,{s.KNOWLEDGE:[]},{self.image});self.assertEqual(self.images(),[])
+ def test_multiple_raw_robots_headers_cannot_be_hidden_by_blank_normalized_field(self):
+  self.assertTrue(s.robots_restricted({'x_robots':'','headers':{'X-Robots-Tag':'noimageindex'}}));self.assertFalse(s.definitively_disqualified({'status':503}));self.assertFalse(s.definitively_disqualified({'status':429}))
  def test_1001_images_fail_without_truncating(self):
   desired={s.KNOWLEDGE:[{'page_url':self.url,'image_url':f'https://www.pinnacleblooms.org/images/{i}.jpg','source_sha256':'a'*64} for i in range(1001)]}
   with self.assertRaisesRegex(ValueError,'1000-image'):s.reconcile(self.db,desired)
