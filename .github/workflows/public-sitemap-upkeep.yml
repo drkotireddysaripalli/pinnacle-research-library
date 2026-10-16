@@ -56,7 +56,7 @@ jobs:
           python3 -m pip install boto3==1.43.113
       - name: Run isolated cloud contracts
         run: |
-          node --test scripts/test-cloud-source-contracts.mjs scripts/test-indexnow-host-keys.mjs scripts/test-cloud-failure-context.mjs scripts/test-r2-list-pagination.mjs scripts/test-r2-coverage-freshness.mjs scripts/test-source-coverage-execution.mjs scripts/test-r2-coverage-chain.mjs
+          node --test scripts/test-publisher-account-preflight.mjs scripts/test-frozen-publication-recovery.mjs scripts/test-cloud-source-contracts.mjs scripts/test-indexnow-host-keys.mjs scripts/test-cloud-failure-context.mjs scripts/test-r2-list-pagination.mjs scripts/test-r2-coverage-freshness.mjs scripts/test-source-coverage-execution.mjs scripts/test-r2-coverage-chain.mjs
           python3 scripts/test-cloud-source-state.py
           python3 -m unittest discover -s ../tooling/sitemap-manager/tests -p "test_*source*.py"
           python3 -m unittest discover -s ../tooling/sitemap-manager/knowledge-media -p "test_*.py"

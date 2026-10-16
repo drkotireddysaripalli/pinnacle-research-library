@@ -1,4 +1,7 @@
+import {validateFrozenRecovery} from './frozen-publication-recovery.mjs';
+import {execFileSync} from 'node:child_process';
 import {runBoundedCoverage} from './source-coverage-execution.mjs';
+import {publisherSettings} from './publisher-account-preflight.mjs';
 // Trusted Linux Actions entry point; no desktop/connector credential extraction.
 import {cloudFailureContext,privateSourceDiagnostics} from './cloud-failure-context.mjs';
 import fs from 'node:fs/promises';import assert from 'node:assert/strict';import path from 'node:path';import {spawn} from 'node:child_process';import {isDeepStrictEqual} from 'node:util';import {gh,state,modules,save,sha} from './release-managed-sitemaps.mjs';import {planDistribution,drainDistribution} from './cloud-source-distribution.mjs';
@@ -22,14 +25,30 @@ try{
  const cfg=JSON.parse(await fs.readFile('ask-private/public-publisher-config.json','utf8')),baseline=JSON.parse(await fs.readFile(cfg.baseline_receipt,'utf8')),before=await state();liveBefore=before;
  assert.deepEqual(before.workers['pinnacle-verify-route'].versions,[{version_id:baseline.candidateVersion,percentage:100}],'Accepted live baseline changed; owner must update protected state');
  const current=await modules('pinnacle-verify-route'),hashes=Object.fromEntries(current.items.map(m=>[m.name,sha(Buffer.from(m.base64,'base64'))]));assert.deepEqual(hashes,baseline.candidateModuleHashes,'Unknown/unpublished module upload must be reconciled before publication');
- const git=(await import('./publisher-platform.mjs')).publisherGit;await step('source-branch',[git,'switch','-c','codex/cloud-source-'+id]);
+ const git=(await import('./publisher-platform.mjs')).publisherGit;
+ const recovery=priorJob?.ownerRecovery;
+ if(recovery){
+  const g=args=>execFileSync(git,args,{encoding:'utf8'}).trim();
+  const selection=JSON.parse(g(['show',recovery.source+':tooling/sitemap-manager/publication-selection.json']));
+  assert(/^baseline\/[a-z0-9-]+\.zip$/.test(selection.archive),'Reviewed archive path required');
+  const archive=execFileSync(git,['show',recovery.source+':tooling/sitemap-manager/'+selection.archive],{maxBuffer:30*1024*1024});
+  validateFrozenRecovery(recovery,{id,baseline,selection,archiveSHA:sha(archive),source:g(['ls-remote','origin','refs/heads/'+recovery.branch]).split(/\s/)[0],sourceTree:g(['rev-parse',recovery.source+'^{tree}']),trustedTree:g(['rev-parse','HEAD^{tree}']),pr:await gh('/pulls/'+recovery.pr)});
+  await step('accepted-source-branch',[git,'switch','-C',recovery.branch,recovery.source]);
+  const releaseId='cloud-'+id+'-frozen-release';
+  await step('resume-accepted-publication',[process.execPath,'scripts/publish-managed-event.mjs','--id',releaseId,'--baseline-receipt',cfg.baseline_receipt],{PYTHON_EXECUTABLE:'python3',PINNACLE_PRESERVATION_PROOF:cfg.preservation_proof});
+  const recovered=JSON.parse(await fs.readFile('outputs/'+releaseId+'/release.json','utf8'));assert.equal(recovered.phase,'verified_complete');assert.equal(recovered.sourceRelease,recovery.releaseId);
+  cfg.baseline_receipt=path.resolve('outputs/'+releaseId+'/release.json');await save('ask-private/public-publisher-config.json',cfg);
+  report.frozenPublication={source:recovered.source,version:recovered.candidateVersion,deployment:recovered.deployment,publicFilesVerified:recovered.publicFilesVerified,acceptedSourceRun:recovery.acceptedSourceRun};
+  // Commit the actually verified new live baseline before resuming private-source upkeep.
+  await step('persist-recovered-publication',['python3','scripts/cloud-source-state.py','store']);await jobCheckpoint();
+ }else await step('source-branch',[git,'switch','-c','codex/cloud-source-'+id]);
  await jobCheckpoint();
  const maintenance=await runBoundedCoverage({run:pass=>step(pass?'source-coverage-continuation':'source-reconciliation',[process.execPath,'scripts/publisher-source-maintenance.mjs'],{PINNACLE_CLOUD_RUNNER:'1',PINNACLE_SOURCE_EVENT_ID:'cloud-'+id,PINNACLE_SOURCE_MAINTENANCE_LOCK:'ask-private/cloud-maintenance-checkpoint.lock',PYTHON_EXECUTABLE:'python3',PINNACLE_PRESERVATION_PROOF:cfg.preservation_proof},true),readMaintenance:()=>fs.readFile('outputs/cloud-'+id+'/report.json','utf8').then(JSON.parse),checkpoint:async observations=>{report.r2Continuations=observations;await save(out+'/report.json',report);}});const sourceCoverageHealthy=maintenance.status==='verified';
  const source=JSON.parse(await fs.readFile(maintenance.sourceReceipt,'utf8'));assert(['verified_unchanged_publication','verified_published'].includes(source.phase));const next=JSON.parse(await fs.readFile('ask-private/public-publisher-config.json','utf8'));const accepted=JSON.parse(await fs.readFile(next.baseline_receipt,'utf8'));const after=await state();
- assert(isDeepStrictEqual(after.routes,before.routes),'Source upkeep cannot narrow routes');for(const n of Object.keys(before.workers)){assert(isDeepStrictEqual(after.workers[n].settings,before.workers[n].settings),'Worker settings changed '+n);if(n!=='pinnacle-verify-route')assert(isDeepStrictEqual(after.workers[n].versions,before.workers[n].versions),'Protected Worker changed '+n);}
+ assert(isDeepStrictEqual(after.routes,before.routes),'Source upkeep cannot narrow routes');for(const n of Object.keys(before.workers)){assert(isDeepStrictEqual(publisherSettings(after.workers[n].settings,{root:n==='pinnacle-verify-route'}),publisherSettings(before.workers[n].settings,{root:n==='pinnacle-verify-route'})),'Worker settings changed '+n);if(n!=='pinnacle-verify-route')assert(isDeepStrictEqual(after.workers[n].versions,before.workers[n].versions),'Protected Worker changed '+n);}
  const selected=JSON.parse(await fs.readFile(path.join(accepted.selectedRelease,'manifest.json'),'utf8'));let verified=0;
  for(const f of servedPublicationFiles(selected)){const r=await fetch(f.public_url,{redirect:'manual',signal:AbortSignal.timeout(30000)});assert.equal(r.status,200);let b=Buffer.from(await r.arrayBuffer());if(f.kind==='html'){const pattern=/<script[^>]*src=["']https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js[^>]*>[\s\S]*?<\/script>/gi;const matches=b.toString().match(pattern)||[];assert(matches.length<=1,'Unexpected multiple Cloudflare beacon injections');if(matches.length===1)b=Buffer.from(b.toString().replace(pattern,''));}assert.equal(sha(b),f.sha256,'Public bytes differ '+f.public_url);verified++;}
- Object.assign(report,{sourcePhase:source.phase,sourceHash:JSON.parse(await fs.readFile(source.snapshot,'utf8')).sourceSHA256,outputHash:accepted.releaseId,version:accepted.candidateVersion,publicFilesVerified:verified,r2Proof:maintenance.r2Proof,sourceExceptions:source.sourceExceptions||0,pendingR2Changes:maintenance.pendingR2Changes});
+ Object.assign(report,{sourcePhase:source.phase,sourceHash:JSON.parse(await fs.readFile(source.snapshot,'utf8')).sourceSHA256,outputHash:accepted.releaseId,version:accepted.candidateVersion,publicFilesVerified:verified,r2Proof:maintenance.r2Proof,r2ReusedVerifiedObservation:maintenance.r2ReusedVerifiedObservation||null,r2QueriesThisMaintenance:maintenance.r2QueriesThisMaintenance,publisherAccountPreflight:accepted.accountPreflight||null,sourceExceptions:source.sourceExceptions||0,pendingR2Changes:maintenance.pendingR2Changes});
  const outboxFile='ask-private/sitemap-submission-outbox.json',previousOutbox=await fs.readFile(outboxFile,'utf8').then(JSON.parse).catch(e=>{if(e.code==='ENOENT')return{};throw e;});const plan=await planDistribution({source,beforeReceipt:baseline,afterReceipt:accepted,config:next,oldState:previousOutbox});
  const checkpoint=async value=>{await save(outboxFile,value);await step('persist-outbox-'+report.steps.length,['python3','scripts/cloud-source-state.py','outbox-store']);};await checkpoint(plan);await drainDistribution(plan,next,{checkpoint});
  report.distribution={indexnow:plan.indexnow.map(j=>({id:j.id,host:j.host,count:j.urls.length,status:j.status,httpStatus:j.httpStatus})),sitemaps:plan.sitemaps.map(j=>({id:j.id,root:j.root,status:j.status,google:j.google,bing:j.bing})),unchangedRoots:plan.unchangedRoots,held:plan.held.length};

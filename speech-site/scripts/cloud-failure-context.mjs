@@ -29,6 +29,15 @@ export async function cloudFailureContext(id,cwd=process.cwd()){
  if(!/^[a-z0-9-]{8,80}$/.test(id))throw Error('Invalid diagnostics identity');
  const job='cloud-'+id,maintenance=await read(path.join(cwd,'outputs',job,'report.json')),source=await read(path.join(cwd,'outputs',job+'-source','source-release.json'));
  const result={maintenanceReceipt:maintenance?'present':'unavailable',sourceReceipt:source?'present':'unavailable',maintenanceStatus:phases.has(maintenance?.status)?maintenance.status:'unknown',sourcePhase:phases.has(source?.phase)?source.phase:'unknown',maintenanceSteps:summaries(maintenance),sourceSteps:summaries(source),publicationJournal:{archiveRecorded:!!source?.archive,pushRecorded:!!source?.pushed,versionRecorded:!!source?.version,deploymentRecorded:!!source?.deployment,pendingMutation:!!source?.pending}};
+ const nested=await read(path.join(cwd,'outputs',job+'-source-release','publisher-event.json'))||await read(path.join(cwd,'outputs',job+'-frozen-release','publisher-event.json'));
+ const release=await read(path.join(cwd,'outputs',job+'-source-release','release.json'))||await read(path.join(cwd,'outputs',job+'-frozen-release','release.json'));
+ const publishStages=new Set(['capture','regenerate-publication','prepare','source','ci','upload','deploy','verify']);
+ result.publicationSteps=(nested?.steps||[]).filter(s=>publishStages.has(s.label)).map(s=>({stage:s.label,exit:count(s.exitCode)}));
+ const releasePhases=new Set(['captured','prepared','uploaded','deployed-awaiting-verification','verified_complete','rolled-back-verified']);
+ result.publicationPhase=releasePhases.has(release?.phase)?release.phase:'unavailable';
+ result.publicationJournal.versionRecorded ||= !!release?.candidateVersion;
+ result.publicationJournal.deploymentRecorded ||= !!release?.deployment;
+ result.publicationJournal.pendingMutation ||= !!release?.pending;
  result.coverage={r2Complete:boolean(maintenance?.r2Complete),metadataPages:count(maintenance?.r2MetadataPages),pendingR2Changes:count(maintenance?.pendingR2Changes),unstableR2Holds:count(maintenance?.unstableR2Holds),sourceExceptions:count(source?.sourceExceptions),r2Proof:safeProof(maintenance?.r2Proof),r2Checkpoint:safeCheckpoint(maintenance?.r2Checkpoint)};
  const deltaPath=source?.delta?path.resolve(cwd,source.delta):null,deltaFence=path.resolve(cwd,'ask-private',job+'-source')+path.sep;
  const delta=deltaPath?.startsWith(deltaFence)&&deltaPath.endsWith('.json')?await read(deltaPath):null;
