@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';import path from 'node:path';
-const stages=new Set(['auth','r2-segment-0','r2-segment-1','r2-segment-2','source-publisher','source-publisher-read-retry','source-snapshot','source-delta','r2-source','qualify-r2','generate','resource-label-equivalence','publish']);
+const stages=new Set(['auth','r2-cache-validation','r2-cache-rederive','r2-segment-0','r2-segment-1','r2-segment-2','source-publisher','source-publisher-read-retry','source-snapshot','source-delta','r2-source','qualify-r2','generate','resource-label-equivalence','publish']);
 const summaries=r=>(r?.steps||[]).filter(s=>stages.has(s.label)).map(s=>({stage:s.label,exit:Number.isInteger(s.exitCode)?s.exitCode:null}));
 const phases=new Set(['started','verified_unchanged_publication','verified_published','failed-last-good-preserved','verified','running','source-verified-pending-source-holds-or-R2-coverage','coverage-pending-last-good-preserved']);
 const count=v=>Number.isSafeInteger(v)&&v>=0?v:null;

@@ -3,3 +3,22 @@ function fixture(){const state={schemaVersion:2,registrySHA256:'a'.repeat(64),st
 test('two complete scope chains establish actual coverage, not just a pass counter',()=>{const f=fixture();assert.equal(validateCoverageChain(f.state,f.files).completePasses,2);});
 test('restored valid-hash incomplete scope archive cannot infer deletion',()=>{const f=fixture();for(const name of Object.keys(f.files))if(!name.includes('scope-0-')){delete f.files[name];delete f.state.pageHashes[name];}assert.throws(()=>validateCoverageChain(f.state,f.files),/Noncontiguous|frontier|count/);});
 test('missing terminal, cursor mismatch, identity mismatch and altered page hash all reject',()=>{for(const change of [p=>p.nextCursor='invented',p=>p.inputCursor='unexpected',p=>p.scope=4,p=>p.truncated=true]){const f=fixture(),name=Object.keys(f.files)[0],p=JSON.parse(f.files[name]);change(p);f.files[name]=Buffer.from(JSON.stringify(p));f.state.pageHashes[name]=pageHash(f.files[name]);assert.throws(()=>validateCoverageChain(f.state,f.files));}const f=fixture();f.files[Object.keys(f.files)[0]]=Buffer.from('{}');assert.throws(()=>validateCoverageChain(f.state,f.files),/hash/);});
+
+import fs from'node:fs/promises';import os from'node:os';import path from'node:path';import{execFileSync}from'node:child_process';import{fileURLToPath,pathToFileURL}from'node:url';import{verifiedR2Source}from'./verified-r2-source.mjs';
+test('fresh cached complete coverage rederives stale absent/delete outputs without any network',async()=>{
+ const root=await fs.mkdtemp(path.join(os.tmpdir(),'pinnacle-cache-fixture-'));
+ try{
+  const privateRoot=path.join(root,'ask-private'),cache=path.join(privateRoot,'fixture');await fs.mkdir(cache,{recursive:true});
+  const[bucket,prefix]=R2_SCOPES[0],id=bucket+'/'+prefix+'present.jpg',approved={[id]:{etag:'present-etag',rights_status:'owned',public_uses:[{parent:'https://materials.pinnacleblooms.org/aac',selected:'https://images.pinnacleblooms.org/present.jpg',kind:'image'}]}};
+  const bytes=Buffer.from(JSON.stringify(approved)),registrySHA=pageHash(bytes),now=new Date().toISOString(),f=fixture();Object.assign(f.state,{registrySHA256:registrySHA,startedAt:now,completedAt:now,totalQueries:10});
+  for(const[name,raw]of Object.entries(f.files)){const page=JSON.parse(raw);page.registrySHA256=registrySHA;page.observedAt=now;if(page.scope===0){page.known=[{id,etag:'present-etag',size:20}];page.rowsExamined=1;}const encoded=Buffer.from(JSON.stringify(page));f.state.pageHashes[name]=pageHash(encoded);await fs.writeFile(path.join(cache,name),encoded);}
+  const approvedFile=path.join(privateRoot,'approved.json');await fs.writeFile(approvedFile,bytes);await fs.writeFile(path.join(privateRoot,'public-publisher-config.json'),JSON.stringify({r2_associations:approvedFile}));await fs.writeFile(path.join(cache,'state.json'),JSON.stringify(f.state));
+  const staleProof={registrySHA256:registrySHA,approvedKeys:1,completePasses:2,matchedInFirstPass:0,matchedInSecondPass:0,confirmedAbsent:1,unstableHeld:0},staleDelta={changes:[{id,operation:'delete',confirmedAbsentInTwoCompletePasses:true}],holds:[]};
+  await fs.writeFile(path.join(cache,'proof.json'),JSON.stringify(staleProof));await fs.writeFile(path.join(cache,'qualified-changes.json'),JSON.stringify(staleDelta));
+  assert.equal(verifiedR2Source(staleProof,staleDelta,approved,registrySHA,now).changes[0].operation,'delete','Counterexample reproduces stale derived-output risk');
+  const guard=path.join(root,'deny-network.mjs');await fs.writeFile(guard,"globalThis.fetch=()=>{throw Error('Unexpected network in cached completion')};");
+  execFileSync(process.execPath,['--import',pathToFileURL(guard).href,fileURLToPath(new URL('./r2-approved-rotation.mjs',import.meta.url)),'--root','ask-private/fixture'],{cwd:root,encoding:'utf8'});
+  const proof=JSON.parse(await fs.readFile(path.join(cache,'proof.json'))),delta=JSON.parse(await fs.readFile(path.join(cache,'qualified-changes.json'))),state=JSON.parse(await fs.readFile(path.join(cache,'state.json')));
+  assert.equal(proof.queriesThisInvocation,0);assert.equal(proof.confirmedAbsent,0);assert.deepEqual(delta.changes,[]);assert.equal(state.completedAt,now);assert.equal(verifiedR2Source(proof,delta,approved,registrySHA,now).changes.length,0);
+ }finally{assert.equal(path.dirname(path.resolve(root)),path.resolve(os.tmpdir()));assert(path.basename(root).startsWith('pinnacle-cache-fixture-'));await fs.rm(root,{recursive:true,force:true});}
+});
