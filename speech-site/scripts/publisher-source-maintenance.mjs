@@ -12,12 +12,12 @@ try{
  const cfg=await read(configPath),approved=await read(cfg.r2_associations),registrySHA=hash(await fs.readFile(cfg.r2_associations));let r2root='ask-private/r2-approved-current';
  // The first invocation can reuse the just-verified full estate observation;
  // the receipt exposes its original time. Daily runs start a fresh cycle.
- const initial='ask-private/r2-approved-coverage-20261014',seed=await read(initial+'/state.json').catch(()=>null);
- if(seed?.complete&&seed.registrySHA256===registrySHA&&Date.now()-Date.parse(seed.completedAt)<3600000){r2root=initial;receipt.r2ReusedVerifiedObservation=seed.completedAt;}
+ const recent=await read(r2root+'/state.json').catch(()=>null);
+ if(recent?.complete&&recent.schemaVersion===2&&recent.registrySHA256===registrySHA&&Date.now()-Date.parse(recent.completedAt)<3600000){assert.equal(await run('r2-cache-validation',['scripts/verify-r2-progress.mjs',r2root,'--require-fresh-complete']),0);assert.equal(await run('r2-cache-rederive',['scripts/r2-approved-rotation.mjs','--root',r2root]),0);const freshProof=await read(r2root+'/proof.json');assert.equal(freshProof.queriesThisInvocation,0);assert.equal(freshProof.registrySHA256,registrySHA);receipt.r2ReusedVerifiedObservation=recent.completedAt;receipt.r2QueriesThisMaintenance=0;}
  else{
-  const state=await read(r2root+'/state.json').catch(()=>null);
-  if(state&&(state.complete||state.schemaVersion!==2||state.registrySHA256!==registrySHA||Date.now()-Date.parse(state.startedAt)>23*3600000))await fs.rename(r2root,root+'/previous-r2-cycle');
-  for(let segment=0;segment<3;segment++){assert.equal(await run('r2-segment-'+segment,['scripts/r2-approved-rotation.mjs','--root',r2root]),0);if((await read(r2root+'/state.json')).complete)break;}
+  const state=await read(r2root+'/state.json').catch(()=>null);const reset=state&&(state.complete||state.schemaVersion!==2||state.registrySHA256!==registrySHA||Date.now()-Date.parse(state.startedAt)>23*3600000);const priorQueries=reset?0:state?.totalQueries||0;
+  if(reset)await fs.rename(r2root,root+'/previous-r2-cycle');
+  for(let segment=0;segment<3;segment++){assert.equal(await run('r2-segment-'+segment,['scripts/r2-approved-rotation.mjs','--root',r2root]),0);if((await read(r2root+'/state.json')).complete)break;}receipt.r2QueriesThisMaintenance=(await read(r2root+'/state.json')).totalQueries-priorQueries;
  }
  const r2state=await read(r2root+'/state.json');receipt.r2Complete=r2state.complete;receipt.r2MetadataPages=r2state.completedPages;receipt.r2Checkpoint={startedAt:r2state.startedAt,completedAt:r2state.completedAt||null,pass:r2state.pass,scope:r2state.scope,page:r2state.page,cursorPresent:!!r2state.cursor,complete:r2state.complete};await save(report,receipt);
  if(process.env.PINNACLE_CLOUD_RUNNER==='1'){const c=spawn(process.env.PYTHON_EXECUTABLE||'python3',['scripts/cloud-source-state.py','rotation-store'],{windowsHide:true,stdio:'inherit'});assert.equal(await new Promise((resolve,reject)=>{c.once('error',reject);c.once('close',resolve)}),0,'R2 checkpoint must persist separately from accepted publication');}let qualifiedR2;

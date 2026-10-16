@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "archive": "baseline/sitemap-durable-repairs-20261015.zip",
-  "archive_sha256": "80e22844e27d7ca3f772f18c4f201fa403383423e32a9cbcfaab8337e9ae7033",
-  "release_id": "dd490ce231ea2715924d5d99bf20674a350ec766ebb51035646ce58b7c11ed7e",
+  "archive": "baseline/publisher-refresh-cloud-media-repair-20261016-ec1825c-source.zip",
+  "archive_sha256": "67eac4a72892f55c5ece01ce41fcba10d12598e2aaa698ea86cd904007f07a9b",
+  "release_id": "a70c763dc48e5ad7cded6083855b488a86ca750a91f0f1f2703342c5048dd3d3",
   "expected_page_urls": 71099,
-  "reviewed_source": "Approved native source, seven confirmed permanent-redirect exclusions, sixty maintained public enquiry centre pages with corrected production indexability, two explicit location-status holds, unchanged media rights/parent evidence; legacy video XML preserves exact parent/video membership using the approved formatter."
+  "reviewed_source": "Bounded owner-authorized public publisher refresh; complete stable Ask content fingerprints, current public resource DOM and existing reviewed media rights/parent associations. Source receipt cloud-media-repair-20261016-ec1825c-source"
 }
