@@ -1,0 +1,12 @@
+{
+  "reviewed_at": "2026-10-16T05:50:52.904034+00:00",
+  "status": "ACCEPTED_PURE_FORMATTER_PENDING_OWNER_INTEGRATION_AND_LIVE_READBACK",
+  "parent_count": 47,
+  "reference_items": 957,
+  "image_relationships": 1899,
+  "fragment_hashes_checked": 47,
+  "reviewed_boundary": "Pinned reference-only metadata and exact pair formatter; escaped text/attributes; single approved CTA; no new pages or response/scoring data; no source writes/network/publication. Two agent-run focused tests and synthetic qualifier replay accepted.",
+  "current_live_rendered_use_proven": false,
+  "generated_html_checked_in": false,
+  "existing_adapter_commit": "4bdc2fb513b7c27c59e7c09f779d0b63e91d884b"
+}

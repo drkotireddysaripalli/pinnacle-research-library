@@ -186,3 +186,43 @@ and an explicitly synthetic feed projection, the result is **0 qualified,
 it is not current production acceptance. Integration and actual rendered-page
 readback remain Windows owner work. No new URL, live DB write or publication
 was performed by this helper task.
+
+## Deterministic reference-section formatter
+
+`format_reference_sections.py` reuses `load_packet` with the same external trusted
+pins, then rechecks each manifest's bytes/hash before formatting. It emits only
+the exact authorized section: literal source question, keyword and available
+E1/E2/E3 examples; exact figure markers and image URL/purpose alt; source context
+and suggested captions; lazy/async images; one Pinnacle/9100181181 CTA. Every source
+text and attribute is escaped. There are no forms, scores, result claims, scripts,
+styles, hidden details or new page URLs.
+
+```sh
+python3 -B format_reference_sections.py \
+  --packet bootstrap.zip --out fresh-reference-fragments
+python3 -B test_format_reference_sections.py
+```
+
+The output directory must be new and outside the input packet directory. Nothing
+is overwritten. `parents/<parent-url-sha256>.html` contains each semantic fragment;
+`fragments-index.json` records exact parent, file hash/bytes, manifest hash and
+counts. It is written last and contains no generation clock, so identical input
+produces identical bytes. Owner-policy hash overrides have the same trust boundary
+as the observed-use adapter.
+
+The Windows owner can read the index, verify fragment hashes, and insert exactly
+one corresponding fragment into each existing parent's public body. The owner
+retains surrounding layout/CSS, publication and integration. After injection,
+capture the actual public HTML and qualify it with current feed/HEAD/parent
+evidence through the existing adapter; generated fragments alone do not admit
+sitemap relationships.
+
+Two formatter tests pass for escaping/literal E1–E3 content, deterministic bytes,
+the exact qualifier interface, changed-hash/unknown-pair rejection and prevention
+of input/output overwrite. `formatted-reference-sections/` contains the local
+47-parent output (957 reference items; 1,899 exact image pairs).
+`formatter-cached-replay.json` records a complete **offline synthetic** wrapper
+replay through the existing qualifier: **1,899 qualified, 0 held, 0 withdrawals**
+at the cached HEAD clock. It uses fixture HTTP/robots/feed flags and the cached
+canonical spellings, including the 11 IRI differences. It proves formatter/interface
+compatibility, not live rendered use, current delivery or deployment.

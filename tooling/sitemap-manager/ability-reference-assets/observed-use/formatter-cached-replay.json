@@ -1,0 +1,39 @@
+{
+  "HTTP_and_robots_flags_are_fixture": true,
+  "actual_live_rendered_use_proven": false,
+  "cached_as_of": "2026-10-16T04:30:30.585769+00:00",
+  "cached_literal_canonical_spellings_reused": true,
+  "consent_sha256": "63be2d9baff41c2ca0fbfe60c8c20d9dfd510ac1a9656e7d1a0916359df2aaa0",
+  "current_publication_or_current_delivery_proven": false,
+  "database_writes": 0,
+  "deterministic_reformat_bytes_match": true,
+  "feed_projection_is_fixture": true,
+  "fragment_bytes": 1494775,
+  "fragment_parents": 47,
+  "fragments_index_sha256": "71ae0c2e33c74e3e21bb5772d4db54507b9d9b55cba5af06f5f4da68c073b955",
+  "head_jsonl_sha256": "faeb007092d077d57ea69033f947dd114aca38bde09e7694dfedc057a68876eb",
+  "head_receipt_sha256": "79d26f692dfb570305bc3dbafac7cebb9a7bbaa46e19f75b7cdb47261425c255",
+  "network_requests": 0,
+  "new_pages": 0,
+  "packet_sha256": "12b11a7e79de7beb6b98764f2a0c1966016990bf1168f80543ccf9350c1d7eca",
+  "reference_items": 957,
+  "render_index_sha256": "c0e64be28c26572a55cf3ace3427dc6eb8e6ca2f02f63a9aca6bad5926e62654",
+  "result": {
+    "can_reconcile": true,
+    "complete_safe_observed_parent_set": true,
+    "counts": {
+      "authorized_pairs": 1899,
+      "carried_forward_pairs": 0,
+      "held_pairs": 0,
+      "observed_parents": 47,
+      "prior_owned_pairs": 0,
+      "qualified_pairs": 1899,
+      "source_local_withdrawals": 0
+    },
+    "status": "qualified_complete"
+  },
+  "schema_version": 1,
+  "source": "ability_reference_illustrations_v1",
+  "status": "OFFLINE_SYNTHETIC_RENDER_REPLAY_PASSED_NOT_LIVE_PROOF",
+  "synthetic_parent_wrappers": true
+}
