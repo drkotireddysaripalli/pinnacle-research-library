@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "base_source": "5493522055b31acce3263d1ea36d02a05b1eee66",
+  "prepared_at": "2026-10-16T11:32:02.130659+00:00",
+  "disposition": "ORIGINAL_SOURCE_CHANGES_REQUIRED_TESTED_THREE_FILE_FIX_READY",
+  "eight_scope_review": {
+    "scope_count": 8,
+    "producer_chain_progress_proof_and_three_contract_files": "Git blob identity equals accepted8scope packet",
+    "cloud_state": "Exact accepted8scope behavior plus already accepted status booleans in later main; no R2 guard change",
+    "unchanged_suites_rerun": false
+  },
+  "original_findings": [
+    {
+      "priority": 1,
+      "title": "Prior Guru ownership can reintroduce currently vetoed media",
+      "files": [
+        "tooling/sitemap-manager/selected_reference_sources.py",
+        "tooling/sitemap-manager/managed_media_sources.py"
+      ],
+      "proof": "baseline-counterexample.log and baseline-blocked-set.log"
+    },
+    {
+      "priority": 2,
+      "title": "Missing Ability capture falsely declares a complete observed set",
+      "file": "tooling/sitemap-manager/selected_reference_sources.py",
+      "proof": "baseline-missing-ability-capture.log"
+    }
+  ],
+  "fix": {
+    "patch": "guru-source-withdrawal.patch",
+    "patch_sha256": "98dffd73c165daaec7cb7389eceaa13a56f138d46c1884ea43b0470d2b7b0d17",
+    "files": [
+      {
+        "path": "tooling/sitemap-manager/selected_reference_sources.py",
+        "base_sha256": "0a65d28faa6ff9e4650e7fdd7b9df9386a4869f0726740bd9930e6b160be57ed",
+        "patched_sha256": "59875f3640e74b5f1f4ffb567e20bb1d70035057369d606179a78d8927c90902"
+      },
+      {
+        "path": "tooling/sitemap-manager/managed_media_sources.py",
+        "base_sha256": "29078547a8ccad71fe37e9e7fe107a2e02eec1a8263d0a1d90ff5f576dae984e",
+        "patched_sha256": "22e8de17a85e0ea54a30e9f89982b86c1430f395db5867b4447836670e4ad4bf"
+      },
+      {
+        "path": "tooling/sitemap-manager/tests/test_selected_reference_sources.py",
+        "base_sha256": "b3f560d5c6ba8f3e893765502bf6e6fa400318ff3712aedb8c00a6bebe22119b",
+        "patched_sha256": "037e794842d2417f6316c55eda33eba1a5670e9428e3fc531ca4b790de04f19f"
+      }
+    ],
+    "apply_check_exit": 0,
+    "focused_tests_passed": 9,
+    "focused_tests_failed": 0,
+    "test_log": "patched-tests.log",
+    "current_fragment_and_packet_hashes_changed": false,
+    "current_Guru_completeness_flag_present": false,
+    "absence_withdrawal_requires": "Fresh bound anonymous complete parent capture plus exact intact source section with explicit data-observed-set-complete=true; current positive pairs do not require this absence flag",
+    "unknowns": "Missing/partial/malformed/stale/ambiguous captures and transient failures carry prior source ownership with hold",
+    "confirmed_vetoes": "Fresh current parent/image disqualification withdraws source ownership; current blocked set prevents re-addition",
+    "ownership": "Other sources and unmanaged media remain preserved on source-local withdrawal"
+  },
+  "source_review_limits": "No root renderer/security/backend/measurement/visual review duplicated; root owns live pair and engine acceptance",
+  "execution": {
+    "canonical_edits": 0,
+    "DB_service_calls": 0,
+    "R2_calls": 0,
+    "cloud_account_calls": 0,
+    "media_downloads": 0,
+    "public_crawls": 0,
+    "publication_actions": 0
+  }
+}
