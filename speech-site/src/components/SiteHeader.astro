@@ -146,3 +146,48 @@ const compactAdditionalGroups=navigation.footerColumns.flat().filter(group=>prio
     syncMenuState();
   }
 </script>
+
+<!-- Preserve known service/locality context on existing enquiry links, including header and footer. -->
+<script>
+(()=>{
+// In-memory page preferences only. No storage, consent changes or event delivery.
+function pbnPaidJourneyContext(params, serviceIds, centreIds, defaultService='', defaultCentre='') {
+  const one=key=>params.getAll(key).length===1?params.get(key):null;
+  const native=one('utm_source')==='google'&&one('utm_medium')==='cpc'&&one('utm_campaign')==='pbn_network_hyderabad';
+  // Exact native labels matched to the published centre registry. Other labels stay unselected.
+  const entries={
+    'khajaguda-mehdipatnam-hyderabad-telangana_speech':{service:'speech',centre:'khajaguda'},
+    'lbnagar-hyderabad-telangana_aba':{service:'aba',centre:'lbnagar'},
+    'nallagandla-hyderabad-telangana_ot':{service:'occupational',centre:'nallagandla'},
+    'suchitra2-hyderabad-telangana_ot':{service:'occupational',centre:'suchitraii'}
+  };
+  const paid=native?entries[one('utm_content')]:null;
+  const explicit=one('service'),entrySpeech=one('entry')==='speech-assessment';
+  const service=serviceIds.has(explicit)?explicit:entrySpeech?'speech':serviceIds.has(defaultService)&&defaultService!=='help'?defaultService:paid?.service||'help';
+  const raw=params.has('centre')?one('centre'):defaultCentre||paid?.centre||'';
+  const alias=raw==='suchitra2'?'suchitraii':raw;
+  return {service,centre:centreIds.has(alias)?alias:'',entrySpeech,explicitService:serviceIds.has(explicit)};
+}
+  const pathServices={
+    '/top-speech-therapy-center-india-proven-improvement-rate':'speech',
+    '/speech-therapy/service-information':'speech',
+    '/best-occupational-therapy-center-india-proven-improvement-rate':'occupational',
+    '/best-aba-therapy-center-india-proven-improvement-rate':'aba',
+    '/best-special-education-center-call-9100181181':'education',
+    '/autism-therapy':'autism'
+  };
+  const pageService=pathServices[location.pathname];
+  if(!pageService)return;
+  const services=new Set(['help','speech','occupational','aba','education','autism','other']);
+  // Exact published form-choice IDs from the inspected 17 October registry.
+  const centres=new Set(["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","gajuwaka","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jagadamba","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","usa","uppal","vanasthalipuram","vidyanagar","vikrampuri"]);
+  const params=new URLSearchParams(location.search),context=pbnPaidJourneyContext(params,services,centres,pageService);
+  for(const link of document.querySelectorAll<HTMLAnchorElement>('a[href]')){
+    let target;try{target=new URL(link.href,location.href);}catch{continue;}
+    if(target.origin!==location.origin||target.pathname!=='/enroll-autism-speech-aba-therapies-india')continue;
+    if(!target.searchParams.has('service'))target.searchParams.set('service',context.service);
+    if(!target.searchParams.has('centre')&&context.centre)target.searchParams.set('centre',context.centre);
+    link.href=target.href;
+  }
+})();
+</script>

@@ -1,4 +1,22 @@
 import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=navratri-20261011';
+// In-memory page preferences only. No storage, consent changes or event delivery.
+function pbnPaidJourneyContext(params, serviceIds, centreIds, defaultService='', defaultCentre='') {
+  const one=key=>params.getAll(key).length===1?params.get(key):null;
+  const native=one('utm_source')==='google'&&one('utm_medium')==='cpc'&&one('utm_campaign')==='pbn_network_hyderabad';
+  // Exact native labels matched to the published centre registry. Other labels stay unselected.
+  const entries={
+    'khajaguda-mehdipatnam-hyderabad-telangana_speech':{service:'speech',centre:'khajaguda'},
+    'lbnagar-hyderabad-telangana_aba':{service:'aba',centre:'lbnagar'},
+    'nallagandla-hyderabad-telangana_ot':{service:'occupational',centre:'nallagandla'},
+    'suchitra2-hyderabad-telangana_ot':{service:'occupational',centre:'suchitraii'}
+  };
+  const paid=native?entries[one('utm_content')]:null;
+  const explicit=one('service'),entrySpeech=one('entry')==='speech-assessment';
+  const service=serviceIds.has(explicit)?explicit:entrySpeech?'speech':serviceIds.has(defaultService)&&defaultService!=='help'?defaultService:paid?.service||'help';
+  const raw=params.has('centre')?one('centre'):defaultCentre||paid?.centre||'';
+  const alias=raw==='suchitra2'?'suchitraii':raw;
+  return {service,centre:centreIds.has(alias)?alias:'',entrySpeech,explicitService:serviceIds.has(explicit)};
+}
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
@@ -104,11 +122,11 @@ if(form){
  if(preview||approvedEndpoint(endpoint,location.origin)){
   restoreAttempt();setBusy(false);
   document.getElementById('enrol-unavailable').hidden=true;
-  const params=new URLSearchParams(location.search),explicit=params.get('service'),entrySpeech=params.get('entry')==='speech-assessment',explicitService=services.has(explicit);
-  const selected=explicitService?explicit:entrySpeech?'speech':services.has(form.dataset.defaultService)?form.dataset.defaultService:'help';
+  const params=new URLSearchParams(location.search),context=pbnPaidJourneyContext(params,services,centreIds,form.dataset.defaultService,form.dataset.defaultCentre);
+  const {entrySpeech,explicitService}=context,selected=context.service;
   const option=form.querySelector('input[name="service"][value="'+selected+'"]');if(option)option.checked=true;
-  const preferred=params.has('centre')?params.get('centre'):form.dataset.defaultCentre;if(centreIds.has(preferred))centre.value=preferred;
-  if(preferences&&(explicitService||entrySpeech||params.has('centre')))preferences.open=true;
+  if(centreIds.has(context.centre))centre.value=context.centre;
+  if(preferences&&(explicitService||entrySpeech||params.has('centre')||context.centre))preferences.open=true;
   const offer=document.getElementById('enrol-speech-offer'),heading=document.getElementById('request-title'),intro=document.querySelector('.enrol-form-intro');
   const defaultHeading=heading?.innerHTML,defaultIntro=intro?.textContent,defaultAction=button.textContent;
   function renderOffer(){
