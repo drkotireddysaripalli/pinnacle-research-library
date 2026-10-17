@@ -1,4 +1,5 @@
 import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=navratri-20261011';
+import {nativePaidCentre,PAID_LOCALITY_CONTRACT} from './enrolment-routing.mjs?v=paid-locality-20261016';
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
@@ -107,8 +108,10 @@ if(form){
   const params=new URLSearchParams(location.search),explicit=params.get('service'),entrySpeech=params.get('entry')==='speech-assessment',explicitService=services.has(explicit);
   const selected=explicitService?explicit:entrySpeech?'speech':services.has(form.dataset.defaultService)?form.dataset.defaultService:'help';
   const option=form.querySelector('input[name="service"][value="'+selected+'"]');if(option)option.checked=true;
-  const preferred=params.has('centre')?params.get('centre'):form.dataset.defaultCentre;if(centreIds.has(preferred))centre.value=preferred;
-  if(preferences&&(explicitService||entrySpeech||params.has('centre')))preferences.open=true;
+  const paidCentre=nativePaidCentre(params,{service:selected,centres:centreIds});
+  const preferred=params.has('centre')?params.get('centre'):form.dataset.defaultCentre||centre.value||paidCentre?.centre;if(centreIds.has(preferred))centre.value=preferred;
+  if(paidCentre&&centre.value===paidCentre.centre)form.dataset.paidLocality=PAID_LOCALITY_CONTRACT;
+  if(preferences&&(explicitService||entrySpeech||params.has('centre')||paidCentre))preferences.open=true;
   const offer=document.getElementById('enrol-speech-offer'),heading=document.getElementById('request-title'),intro=document.querySelector('.enrol-form-intro');
   const defaultHeading=heading?.innerHTML,defaultIntro=intro?.textContent,defaultAction=button.textContent;
   function renderOffer(){

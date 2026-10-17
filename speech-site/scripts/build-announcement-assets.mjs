@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import {transform} from 'esbuild';
-const files={script:'public/pinnacle-pages-scripts/site-announcement.js',style:'public/pinnacle-pages-styles/site-announcement.css',enrolment:'public/pinnacle-pages-scripts/enrolment.js'};
+const files={script:'public/pinnacle-pages-scripts/site-announcement.js',style:'public/pinnacle-pages-styles/site-announcement.css',enrolment:'public/pinnacle-pages-scripts/enrolment.js',routing:'public/pinnacle-pages-scripts/enrolment-routing.mjs'};
 const assets={};for(const [key,file]of Object.entries(files))assets[key]=(await transform(await fs.readFile(file,'utf8'),{loader:key==='style'?'css':'js',minify:true,charset:'utf8',target:'es2022'})).code;
 const centres=JSON.parse(await fs.readFile('src/data/centre-directory.json')),releases=JSON.parse(await fs.readFile('src/data/centre-page-releases.json'));
 const centrePaths=Object.fromEntries(centres.map(c=>[new URL(c.profileUrl).pathname,c.id]));
