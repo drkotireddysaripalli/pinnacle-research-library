@@ -1,0 +1,13 @@
+import test from'node:test';import assert from'node:assert/strict';
+import {normaliseAcquisition}from'../public/pinnacle-pages-scripts/enrolment-source.mjs';
+import {makePayload}from'../public/pinnacle-pages-scripts/enrolment-api.mjs';
+import {makeContactPayload}from'../public/pinnacle-pages-scripts/contact-api.mjs';
+import {CONTACT_FACILITIES}from'../public/pinnacle-pages-scripts/contact-options.mjs';
+import {toLegacyEnrolment}from'../deployment/enrolment-handler.mjs';
+import {toLegacyContact,toReceiptContact}from'../deployment/contact-handler.mjs';
+import {parseReceiptContact}from'../deployment/contact-receipt-contract.mjs';
+import {toReceiptEnrolment,parseReceiptEnrolment}from'../deployment/enrolment-receipt.mjs';
+const acquisition=()=>({schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'qa_homepage_source'}});
+test('homepage source stays optional and retains the fixed receiving Enrolment identity',()=>{const a=acquisition(),p=makePayload({name:'ISOLATED FIXTURE',phone:'0000000000',email:'',service:'speech',centre:'',message:''},'qa-home-enrolment',a),body=toReceiptEnrolment(toLegacyEnrolment(p),p.requestId,p.source);assert(normaliseAcquisition(a));assert(parseReceiptEnrolment(body,p.requestId));assert.equal(body.WebsiteReceipt.source.page,'/enroll-autism-speech-aba-therapies-india');assert.deepEqual(body.WebsiteReceipt.source.acquisition,a);});
+test('homepage source reaches the existing Contact receipt without becoming form fields',()=>{const a=acquisition(),p=makeContactPayload({name:'ISOLATED FIXTURE',title:'Mx',phone:'0000000000',email:'fixture@example.invalid',facilityId:CONTACT_FACILITIES[0],subject:'Therapy Services',message:'Offline fixture only.'},'qa-home-contact',a),body=toReceiptContact(toLegacyContact(p),p.requestId,p.source);assert.equal(body.WebsiteReceipt.source.page,'/contact-national-autism-helpline-24-7');assert.deepEqual(body.WebsiteReceipt.source.acquisition,a);assert(parseReceiptContact(body,p.requestId,normaliseAcquisition,CONTACT_FACILITIES));assert.equal(body.Message,'Offline fixture only.');assert(!JSON.stringify(body.WebsiteReceipt.source).includes('fixture@example.invalid'));});
+test('invalid/expired homepage attribution drops from valid public payloads',()=>{for(const a of [{...acquisition(),landingPath:'//account'},{...acquisition(),capturedAt:Date.now()-31*86400000},{...acquisition(),fields:{utm_source:'customer@example.invalid'}}]){assert.equal(normaliseAcquisition(a),null);const p=makePayload({name:'ISOLATED FIXTURE',phone:'0000000000',email:'',service:'help',centre:'',message:''},'qa-source-unavailable',a);assert(!p.source.acquisition);}});

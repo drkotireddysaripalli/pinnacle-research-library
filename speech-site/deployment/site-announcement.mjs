@@ -1,7 +1,7 @@
 import {assets,centrePaths,excludedCentres} from './site-announcement-assets.mjs';
 export const ANNOUNCEMENT_KEY='active';
 export const ANNOUNCEMENT_CONFIG_PATH='/pinnacle-pages-data/site-announcement.json';
-const scriptPath='/pinnacle-pages-scripts/site-announcement.js',stylePath='/pinnacle-pages-styles/site-announcement.css',enrolmentScriptPath='/pinnacle-pages-scripts/enrolment.js';
+const scriptPath='/pinnacle-pages-scripts/site-announcement.js',stylePath='/pinnacle-pages-styles/site-announcement.css',enrolmentScriptPath='/pinnacle-pages-scripts/enrolment.js',routingPath='/pinnacle-pages-scripts/enrolment-routing.mjs';
 const origin='https://www.pinnacleblooms.org';
 const servicePaths={ '/top-speech-therapy-center-india-proven-improvement-rate':'speech','/speech-therapy/service-information':'speech','/best-occupational-therapy-center-india-proven-improvement-rate':'occupational','/best-aba-therapy-center-india-proven-improvement-rate':'aba','/best-special-education-center-call-9100181181':'education' };
 const escaped=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -30,10 +30,10 @@ export function announcementEligible(request,response){
  return true;
 }
 export async function serveAnnouncement(request,env,now=Date.now()){
- const path=new URL(request.url).pathname;if(![scriptPath,stylePath,ANNOUNCEMENT_CONFIG_PATH,enrolmentScriptPath].includes(path))return null;
+ const path=new URL(request.url).pathname;if(![scriptPath,stylePath,ANNOUNCEMENT_CONFIG_PATH,enrolmentScriptPath,routingPath].includes(path))return null;
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{allow:'GET, HEAD'}});
  if(path===ANNOUNCEMENT_CONFIG_PATH){const state=await readAnnouncement(env,now),headers={'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff','vary':'Origin'};if(request.headers.get('origin')==='https://pinnacleblooms.org')headers['access-control-allow-origin']='https://pinnacleblooms.org';return new Response(request.method==='HEAD'?null:JSON.stringify(state.active?state:{active:false,config:null,serverNow:now}),{headers});}
- return new Response(request.method==='HEAD'?null:assets[path===scriptPath?'script':path===enrolmentScriptPath?'enrolment':'style'],{headers:{'content-type':path===stylePath?'text/css; charset=utf-8':'text/javascript; charset=utf-8','cache-control':'public, max-age=300','x-content-type-options':'nosniff'}});
+ return new Response(request.method==='HEAD'?null:assets[path===scriptPath?'script':path===enrolmentScriptPath?'enrolment':path===routingPath?'routing':'style'],{headers:{'content-type':path===stylePath?'text/css; charset=utf-8':'text/javascript; charset=utf-8','cache-control':'public, max-age=300','x-content-type-options':'nosniff',...([routingPath,enrolmentScriptPath].includes(path)?{'x-pinnacle-paid-locality':'native-paid-locality-20261016'}:{})}});
 }
 function markup(config,path){
  const x=Object.fromEntries(Object.entries(config).map(([k,v])=>[k,escaped(v)])),centre=centrePaths[path]||'',service=servicePaths[path]||'';
