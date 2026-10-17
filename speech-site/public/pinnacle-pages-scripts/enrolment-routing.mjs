@@ -6,7 +6,7 @@ export function nativePaidCentre(search,{service='help',centres}={}){
  const params=new URLSearchParams(search);
  if(params.has('centre'))return null; // Explicit family choice, including help-me-choose.
  for(const key of ['utm_source','utm_medium','utm_campaign','utm_content'])if(params.getAll(key).length!==1)return null;
- if(params.get('utm_source')!=='google'||params.get('utm_medium')!=='cpc'||!/^pbn_network_[a-z0-9_]{1,48}$/.test(params.get('utm_campaign')))return null;
+ if(params.get('utm_source')!=='google'||params.get('utm_medium')!=='cpc'||params.get('utm_campaign')!=='pbn_network_hyderabad')return null;
  const match=/^([a-z0-9]+(?:-[a-z0-9]+)*)_(speech|ot|aba)$/.exec(params.get('utm_content'));
  if(!match||/^paradise(?:-|$)/.test(match[1])||service!=='help'&&services[match[2]]!==service)return null;
  if(!Object.hasOwn(paidCentreAliases,match[1]))return null;
@@ -15,14 +15,19 @@ export function nativePaidCentre(search,{service='help',centres}={}){
  return {centre,service:services[match[2]]};
 }
 export function applyPaidEnquiryLinks(document,currentURL,options){
- const current=new URL(currentURL),hint=nativePaidCentre(current.search,options);if(!hint)return 0;
+ const current=new URL(currentURL),hint=nativePaidCentre(current.search,options),one=key=>current.searchParams.getAll(key).length===1?current.searchParams.get(key):null;
+ const explicitService=one('service'),knownServices=new Set(['help','speech','occupational','aba','autism','education','other']);
+ const service=knownServices.has(explicitService)?explicitService:options?.service;
+ const raw=one('centre'),alias=raw==='suchitra2'?'suchitraii':raw;
+ const centre=current.searchParams.has('centre')?options?.centres?.has(alias)?alias:null:hint?.centre;
+ if(!knownServices.has(service)&&!centre)return 0;
  let updated=0;
  for(const link of document.querySelectorAll('a[href]')){
   let target;try{target=new URL(link.getAttribute('href'),current.origin);}catch{continue;}
   if(target.origin!==current.origin||!['/enroll-autism-speech-aba-therapies-india','/speech-therapy/service-information'].includes(target.pathname)||target.searchParams.has('centre'))continue;
-  const existingService=target.searchParams.get('service');if(existingService&&existingService!==hint.service)continue;
-  target.searchParams.set('centre',hint.centre);
-  if(target.pathname==='/enroll-autism-speech-aba-therapies-india'&&!target.searchParams.has('service')&&!target.searchParams.has('entry'))target.searchParams.set('service',hint.service);
+  const existingService=target.searchParams.get('service');if(existingService&&existingService!==service)continue;
+  if(centre)target.searchParams.set('centre',centre);
+  if(target.pathname==='/enroll-autism-speech-aba-therapies-india'&&!target.searchParams.has('service')&&!target.searchParams.has('entry'))target.searchParams.set('service',service);
   link.href=target.href;link.dataset.paidLocality=PAID_LOCALITY_CONTRACT;updated++;
  }
  if(document.body)document.body.dataset.paidLocality=PAID_LOCALITY_CONTRACT;

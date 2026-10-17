@@ -149,8 +149,7 @@
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
   // Functional preference handoff is independent of optional analytics storage.
-  const paidLocalityParams=new URL(location.href).searchParams;
-  if(['speech','occupational','aba'].includes(pageConfig?.service)&&paidLocalityParams.get('utm_source')==='google'&&paidLocalityParams.get('utm_medium')==='cpc'){
+  if(['speech','occupational','aba','autism','education'].includes(pageConfig?.service)){
     import('/pinnacle-pages-scripts/enrolment-routing.mjs?v=paid-locality-20261016').then(({applyPaidEnquiryLinks})=>applyPaidEnquiryLinks(document,location.href,{service:pageConfig?.service||'help',centres:new Set(centreIds)})).catch(()=>{});
   }
   let enabled = false, loaded = false, tagStarted = false, preference = 'unset';
