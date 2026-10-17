@@ -31,4 +31,6 @@ Tests/fixtures and unit registry are included. The local browser script takes an
 
 Production completion requires exact integrated source/CI, guarded owner release ID and public served-helper/import-marker readback, plus representative regional form/header/footer routing and explicit-choice/held fallback checks. Use navigation only; no paid ad click, test call, enquiry POST or synthetic conversion. Local passing tests are not public deployment, receiving acceptance, walk-ins or enrolments.
 
+Integration found and repaired a real service-page caller gap: the old analytics centre filter excluded Gajuwaka and Jagadamba from header/footer preference handoff although their forms support both choices. Functional navigation now uses the existing published alias IDs; analytics categories and all measurement logic remain unchanged. Four bounded local browser regressions (two centres at 320/1440 px) are retained in Portal quality. Five successful public-document candidate checks were reused; only the two real caller failures and two closed-preference test mismatches were repeated, all four passed.
+
 No budgets, bidding/CPC ceilings, campaign/ad-group/ad statuses, goals, audiences, geographies, call/WhatsApp assets, consent, intake endpoints, source envelopes, storage or analytics events are changed. No new campaign or scheduler.
