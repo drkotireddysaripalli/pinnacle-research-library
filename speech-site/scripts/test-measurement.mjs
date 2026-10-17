@@ -30,9 +30,9 @@ function harness({contact=false,callback=false,origin='https://www.pinnaclebloom
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={__qaProgress:detail=>listeners['pinnacle:enquiry-progress']?.({detail}),addEventListener:(event,fn)=>{const previous=listeners['window:'+event];listeners['window:'+event]=data=>{previous?.(data);fn(data);};}};
  class FakePerformanceObserver{constructor(callback){this.callback=callback;}observe(options){this.callback({getEntries:()=>performanceEntries?.[options.type]||[]});}disconnect(){}}
- const testMath=Object.create(Math);testMath.random=()=>0;
- vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
- return {dispatch:(name,detail)=>listeners[name]?.({detail}),win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ const testMath=Object.create(Math);testMath.random=()=>0;const privacy={globalPrivacyControl:gpc};
+ vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:privacy,localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
+ return {privacy,dispatch:(name,detail)=>listeners[name]?.({detail}),win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 
 test('homepage uses the shared stream with populated reporting dimensions',()=>{
@@ -41,7 +41,7 @@ test('homepage uses the shared stream with populated reporting dimensions',()=>{
  assert.equal(pageView[2].page_group,'home');assert.equal(pageView[2].measurement_mode,'consented');
  h.click('hero-call','tel:+919100181181');
  const phone=h.events().find(event=>event[1]==='phone_link_click');
- assert.equal(phone[2].link_placement,'hero-call');assert.equal(phone[2].destination,'national_helpline_9100181181');assert.equal(phone[2].measurement_mode,'consented');
+ assert.equal(phone[2].link_placement,'hero-call');assert.equal(phone[2].destination,'national_helpline');assert.equal(phone[2].measurement_mode,'consented');
 });
 
 test('consented service, centre and enrolment pages share a root cookie scope',()=>{
@@ -173,7 +173,7 @@ test('central WhatsApp contact taps on managed journeys use one exact event afte
   h.choose('accepted');
   for(const href of links)h.click('footer-whatsapp',href);
   assert.deepEqual(h.events().map(e=>e[1]),['page_view','whatsapp_link_click','whatsapp_link_click','whatsapp_link_click']);
-  assert(h.events().slice(1).every(e=>e[2].link_placement==='footer-whatsapp'&&e[2].destination==='national_helpline_9100181181'));
+  assert(h.events().slice(1).every(e=>e[2].link_placement==='footer-whatsapp'&&e[2].destination==='national_helpline'));
   h.click('INVENTED_PRIVATE_PLACEMENT','https://wa.me/919100181181');
   assert.equal(h.events().at(-1)[2].link_placement,'central-whatsapp');
   const before=h.events().length;
@@ -285,8 +285,8 @@ test('new life and PinnacleAI placements record only the national call destinati
   const h=harness({path});h.choose('accepted');h.click(placement,'tel:+919100181181');assert.equal(h.events()[1][1],'phone_link_click');
  }
 });
-test('unknown destinations and placements are ignored without blocking navigation',()=>{
- const h=harness();h.choose('accepted');h.click('hero-call','tel:+911234');h.click('not-approved','tel:+919100181181');h.click('hero-assessment','https://evil.example/enroll');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll?name=private');assert.equal(h.events().length,1);
+test('unknown destinations are ignored and an unlabelled central call uses the fixed safe category',()=>{
+ const h=harness();h.choose('accepted');h.click('hero-call','tel:+911234');h.click('not-approved','tel:+919100181181');h.click('hero-assessment','https://evil.example/enroll');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll?name=private');assert.equal(h.events().length,2);assert.equal(h.events().at(-1)[1],'phone_link_click');assert.equal(h.events().at(-1)[2].link_placement,'central-phone');assert(!JSON.stringify(h.events()).includes('not-approved'));
 });
 test('all verified centre links are measured after consent without exporting centre or query values',()=>{
  const centres=JSON.parse(fs.readFileSync('src/data/centre-directory.json','utf8')).filter(c=>c.facilityId);
@@ -393,7 +393,7 @@ test('rendered Autism first-call actions emit only coarse consented events',()=>
  for(const [placement,href] of links)h.click(placement,href);
  assert.equal(h.events().length,0);
  h.choose('accepted');for(const [placement,href] of links)h.click(placement,href);
- assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click']);
+ assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click','phone_link_click']);
  const serialized=JSON.stringify(h.events());for(const privateValue of ['centre=','service=','text=','private-child-detail'])assert(!serialized.includes(privateValue));
  const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
  const blocked=harness({path:'/autism-therapy',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
@@ -621,7 +621,7 @@ test('Google Ads contact intent is once per page and event while native contact 
  assert.equal(h.click(undefined,whatsapp).href,whatsapp);
  const api='https://api.whatsapp.com/send?phone=919100181181&text=INVENTED_PRIVATE_MESSAGE';assert.equal(h.click('footer-whatsapp',api).href,api);
  assert.deepEqual(adsEvents(h).map(e=>e[1]),googleAdsEventNames);
- assert(adsEvents(h).slice(1).every(e=>e[2].interaction_kind==='contact_tap'&&e[2].destination==='national_helpline_9100181181'));
+ assert(adsEvents(h).slice(1).every(e=>e[2].interaction_kind==='contact_tap'&&e[2].destination==='national_helpline'));
  const text=JSON.stringify(h.events());for(const excluded of ['INVENTED_CHILD','INVENTED_PRIVATE_MESSAGE','8001234567','call_connected'])assert(!text.includes(excluded));
 });
 test('Google Ads contact events reject arbitrary phones, WhatsApp sharing and spoofed central destinations',()=>{
@@ -744,4 +744,15 @@ test('private document/account paths cannot start the shared collector even with
  for(const path of ['/documents/private-record','/account','/payroll/report','/internal/report']){
   const h=harness({path,variant:'legacy_knowledge',search:''});assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);
  }
+});
+
+test('homepage campaign source survives consented navigation to the existing receiving page',()=>{
+ const home=harness({path:'/',search:'?utm_source=google&utm_medium=cpc&utm_campaign=qa_homepage_fixture'});home.choose('accepted');const first=home.win.pinnacleEnquirySource();assert(first);assert.equal(first.landingPath,'/');assert.equal(first.fields.utm_campaign,'qa_homepage_fixture');
+ const enrol=harness({path:canonicalEnrolment,search:'',sharedStore:home.store});enrol.choose('accepted');const retained=enrol.win.pinnacleEnquirySource();assert.equal(retained.landingPath,'/');assert.equal(retained.capturedAt,first.capturedAt);assert.equal(retained.fields.utm_campaign,'qa_homepage_fixture');
+});
+test('a current GPC change suppresses both ordinary and Google-labelled contact taps',()=>{
+ const h=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=qa_privacy_fixture'});h.choose('accepted');const before=h.events().length;h.privacy.globalPrivacyControl=true;h.click(undefined,'tel:+919100181181');h.click(undefined,'https://wa.me/919100181181');assert.equal(h.events().length,before);
+});
+test('announcement and unlabelled central calls emit once per tap with fixed safe placement',()=>{
+ const h=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=qa_contact_fixture'});h.choose('accepted');for(const placement of [undefined,'UNRECOGNIZED_FREE_TEXT','hero-call'])h.click(placement,'tel:+919100181181');const events=h.events().filter(e=>e[1]==='phone_link_click');assert.equal(events.length,3);assert.deepEqual(events.map(e=>e[2].link_placement),['central-phone','central-phone','hero-call']);assert(events.every(e=>e[2].destination==='national_helpline'));assert(!JSON.stringify(events).includes('UNRECOGNIZED_FREE_TEXT'));
 });

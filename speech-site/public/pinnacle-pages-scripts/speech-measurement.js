@@ -149,14 +149,14 @@
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
   // Functional preference handoff is independent of optional analytics storage.
-  const paidLocalityParams=new URLSearchParams(location.search);
+  const paidLocalityParams=new URL(location.href).searchParams;
   if(['speech','occupational','aba'].includes(pageConfig?.service)&&paidLocalityParams.get('utm_source')==='google'&&paidLocalityParams.get('utm_medium')==='cpc'){
     import('/pinnacle-pages-scripts/enrolment-routing.mjs?v=paid-locality-20261016').then(({applyPaidEnquiryLinks})=>applyPaidEnquiryLinks(document,location.href,{service:pageConfig?.service||'help',centres:new Set(centreIds)})).catch(()=>{});
   }
   let enabled = false, loaded = false, tagStarted = false, preference = 'unset';
   const sourceKey='pinnacle-enquiry-source-v1',sourceLifetime=30*86400000;
   const acquisitionPath=location.pathname==='/speech-therapy/service-information'?'/top-speech-therapy-center-india-proven-improvement-rate':new URL(canonical).pathname;
-  const acquisitionPaths=new Set(['/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
+  const acquisitionPaths=new Set(['/','/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
   acquisitionPaths.add(helplinePath);
   if(disclosure&&!isBookshop)disclosure.textContent+=' With permission, a validated campaign record can stay on this device for up to 30 days and accompany your enquiry into our protected receiving system. Turning analytics off removes this optional device record.';
   const handedOffLinks=new Map();
@@ -258,7 +258,7 @@
       ...Object.fromEntries(Object.entries(campaignFields).filter(([field])=>fields[field]).map(([field,name])=>[name,fields[field]]))};
   };
   const sendGoogleAds = (name, parameters, allowJourney = true) => {
-    if (!production || blocked || knowledgeSearch || validationTraffic || preference==='declined' || googleAdsEvents.has(name)) return;
+    if (!production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || preference==='declined' || googleAdsEvents.has(name)) return;
     const attribution = googleAdsSource(allowJourney);
     if (!attribution) return;
     try {
@@ -469,7 +469,9 @@
     const contactHref = contactLink?.getAttribute('href');
     if (contactHref === 'tel:+919100181181' || (contactHref?.startsWith('tel:') && contactLink.dataset?.pinnacleAdCallTarget === 'central')) {
       const placement = contactLink.dataset?.cta;
-      sendGoogleAds('google_ads_phone_click',{interaction_kind:'contact_tap',link_placement:callPlacements.has(placement)?placement:'central-phone',destination:'national_helpline_9100181181'});
+      sendGoogleAds('google_ads_phone_click',{interaction_kind:'contact_tap',link_placement:callPlacements.has(placement)?placement:'central-phone',destination:'national_helpline'});
+      send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:callPlacements.has(placement)?placement:isBookshop?'bookshop-contact':'central-phone',destination:'national_helpline'});
+      return; // One canonical central-phone event; keep native navigation unchanged.
     }
     try {
       const target = new URL(contactHref,origin);
@@ -481,19 +483,14 @@
       if (centralWhatsApp) {
         const placement = contactLink.dataset?.cta;
         const placements = new Set(['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp']);
-        sendGoogleAds('google_ads_whatsapp_click',{interaction_kind:'contact_tap',link_placement:placements.has(placement)?placement:'central-whatsapp',destination:'national_helpline_9100181181'});
-        send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline_9100181181'});
+        sendGoogleAds('google_ads_whatsapp_click',{interaction_kind:'contact_tap',link_placement:placements.has(placement)?placement:'central-whatsapp',destination:'national_helpline'});
+        send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline'});
         return; // One event per contact tap; sharing text never enters the event.
       }
     } catch {}
     if (pageGroup === 'bookshop') {
       const href = contactHref;
       if (href) {
-        if (href === 'tel:+919100181181' || (href.startsWith('tel:') && contactLink.dataset?.pinnacleAdCallTarget === 'central')) {
-          const placement = contactLink.dataset?.cta;
-          send('phone_link_click', {schema_version:2,page_group:'bookshop',link_placement:callPlacements.has(placement)?placement:'bookshop-contact',destination:'national_helpline_9100181181'});
-          return;
-        }
         try {
           const target = new URL(href, origin);
           const destination = target.href;
@@ -508,7 +505,6 @@
     const placement=link.dataset.cta,href=link.getAttribute('href');
     if (directoryPlacements.has(placement)) send('centre_directory_action',{schema_version:2,page_group:pageGroup,action:placement.replace('centre-',''),link_placement:placement,destination:'published_centre_directory'});
     if (!href) return;
-    if (callPlacements.has(placement) && (href==='tel:+919100181181' || (href.startsWith('tel:') && link.dataset.pinnacleAdCallTarget==='central'))) send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'national_helpline_9100181181'});
     if (pageGroup==='occupational_therapy' && (occupationalNavigation.has(placement)||placement==='mobile-assessment') && href==='#centres') send('centre_section_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'published_centre_directory'});
     if (pageGroup==='aba_therapy' && abaNavigation.has(placement) && href==='#centres') send('centre_section_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'published_centre_directory'});
     if (pageGroup==='occupational_therapy' && placement==='ot-share-whatsapp' && href.startsWith('https://wa.me/?text=')) send('page_share_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'whatsapp_share'});
@@ -528,8 +524,8 @@
   if(legacyKnowledge&&window.__pinnacleLegacyCapture){
     const capture=window.__pinnacleLegacyCapture;capture.stop?.();
     for(const kind of Array.isArray(capture.queue)?capture.queue.splice(0,10):[]){
-      if(kind==='call')send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:'knowledge-call',destination:'national_helpline_9100181181'});
-      if(kind==='whatsapp')send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:'knowledge-whatsapp',destination:'national_helpline_9100181181'});
+      if(kind==='call')send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:'knowledge-call',destination:'national_helpline'});
+      if(kind==='whatsapp')send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:'knowledge-whatsapp',destination:'national_helpline'});
     }
   }
 })();
