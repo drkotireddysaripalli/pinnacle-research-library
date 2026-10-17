@@ -1,5 +1,5 @@
 import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=navratri-20261011';
-import {nativePaidCentre,PAID_LOCALITY_CONTRACT} from './enrolment-routing.mjs?v=paid-locality-20261016';
+import {nativePaidCentre,PAID_LOCALITY_CONTRACT} from './enrolment-routing.mjs?v=paid-locality-20261017-regional';
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
