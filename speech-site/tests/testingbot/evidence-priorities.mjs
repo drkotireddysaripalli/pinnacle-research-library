@@ -1,13 +1,25 @@
 // Offline selection only. It neither queries vendors nor creates a repair/send.
+function reviewedNamedResolution(record,key){
+  const r=record.namedCheckResolution,c=r?.current;
+  if(!record.unresolvedFailure||r?.schemaVersion!==1||r.key!==key||r.kind!=='equivalent-named-check-receipt'||r.failureAt!==record.unresolvedFailure.at||!Number.isFinite(Date.parse(r.at))||!Array.isArray(r.resolvedChecks)||!Array.isArray(r.remainingChecks))return null;
+  // This migration is deliberately limited to reviewed Chrome/P3 functional
+  // findings. All-suite observations cannot clear P2 or native visual findings.
+  if(record.matrix!=='chrome'||record.suite!=='p3'||c?.matrix!=='chrome'||c?.suite!=='all'||c.caseId!==record.case_id||c.casePassed!==true||c.closed!==true||c.resultRecorded!==true||c.providerClosed!==true||!c.sessionId||!c.providerId||!c.report||!c.checkNames?.length||!/^[a-f0-9]{64}$/.test(c.runnerSha256||''))return null;
+  const original=record.unresolvedFailure.checks||[],resolved=new Set(r.resolvedChecks),remaining=new Set(r.remainingChecks);
+  if(r.resolvedChecks.some(n=>/Approved visual reference/.test(n))||original.some(n=>resolved.has(n)===remaining.has(n))||[...resolved,...remaining].some(n=>!original.includes(n))||(!original.length&&r.completedCaseRecovery!==true))return null;
+  return r;
+}
 export function evidenceCases(profile={},state={}){
   const latest=new Map();
+  const time=r=>r.resolutionEvidenceAt||r.at;
   for(const record of profile.testingbot?.records||[]){
     if(record.candidate_build)continue;
     const key=[record.case_id,record.matrix,record.suite].join('|');
-    if(!latest.has(key)||record.at>latest.get(key).at)latest.set(key,record);
+    if(!latest.has(key)||time(record)>time(latest.get(key)))latest.set(key,record);
   }
   for(const [key,record] of Object.entries(state.coverageByProfile||{})){
-    if(!latest.has(key)||record.at>latest.get(key).at)latest.set(key,{...record,functional:record.status==='failed'?'fail':record.status==='passed'?'pass':'unconfirmed'});
+    const resolution=reviewedNamedResolution(record,key),observation={...record,functional:resolution&&!resolution.remainingChecks.length?'resolved':record.status==='failed'?'fail':record.status==='passed'?'pass':'unconfirmed',...(resolution?{resolutionEvidenceAt:resolution.at}:{} )};
+    if(!latest.has(key)||time(observation)>time(latest.get(key)))latest.set(key,observation);
   }
   return [...latest.values()];
 }

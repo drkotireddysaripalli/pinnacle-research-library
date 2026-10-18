@@ -5,6 +5,7 @@ import {spawn} from 'node:child_process';
 import {pageManifest} from '../tests/testingbot/page-manifest.mjs';
 import {dailyPlan} from '../tests/testingbot/daily-plan.mjs';
 import {writeJson} from './testingbot-client.mjs';
+import {canAllocateAfterReport} from './testingbot-provider-close.mjs';
 import {recordCoverage,evidencePriorities} from '../tests/testingbot/evidence-priorities.mjs';
 const root=path.resolve('audits/testingbot-daily'),lock=root+'/active.lock',stateFile=root+'/state.json';
 const read=async file=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(e){if(e.code==='ENOENT')return {};throw e;}};
@@ -18,6 +19,7 @@ try{await fs.mkdir(lock);}catch(e){if(e.code!=='EEXIST')throw e;console.log(JSON
 const report={schemaVersion:2,day,startedAt:now.toISOString(),pendingPages:manifest.filter(r=>!r.published),runs:[],coverage:{defined:manifest.length,published:manifest.filter(r=>r.published).length},overall:'running'};
 const dir=root+'/'+now.toISOString().replace(/[:.]/g,'-');await fs.mkdir(dir,{recursive:true});
 await writeJson(lock+'/owner.json',{pid:process.pid,startedAt:report.startedAt,report:dir+'/report.json'});
+let retainLock=false;
 try{
   const python=process.env.PYTHON_EXECUTABLE||(process.platform==='win32'?'C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe':'python3');
   const profileFile=root+'/evidence-profile.json';
@@ -39,7 +41,7 @@ try{
     recordCoverage(state,evidence);
     await writeJson(dir+'/report.json',report);
     // A rejected account/startup is a genuine dependency, not permission to queue more sessions.
-    if(!(evidence.sessions||[]).some(s=>s.sessionId)){report.stoppedReason='No remote session established; reconcile provider access before starting remaining jobs';break;}
+    if(!canAllocateAfterReport(evidence)){retainLock=true;report.stoppedReason='Remote allocation or cleanup unconfirmed; retain the lock and reconcile the exact provider outcome before another job';break;}
   }
   report.finishedAt=new Date().toISOString();report.overall=report.runs.length===plan.length&&report.runs.every(r=>r.exitCode===0&&r.overall==='functional-pass')?'functional-checks-pass':'failed-or-incomplete';
   report.visualAcceptance='Review individual approved/provisional/skipped comparisons; functional status is not visual approval';
@@ -47,4 +49,4 @@ try{
   state.lastDay=day;state.lastReport=dir+'/report.json';await writeJson(stateFile,state);await writeJson(dir+'/report.json',report);
   console.log(JSON.stringify({report:dir+'/report.json',overall:report.overall,coverage:{defined:report.coverage.defined,published:report.coverage.published,everExecuted:report.coverage.everExecuted,notYetExecuted:report.coverage.notYetExecuted.length}}));
   if(report.overall!=='functional-checks-pass')process.exitCode=1;
-}finally{await fs.rm(lock,{recursive:true,force:true});}
+}finally{if(!retainLock)await fs.rm(lock,{recursive:true,force:true});}

@@ -5,6 +5,10 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {assertPlaywrightScope,openTestingBotPlaywright} from './testingbot-playwright.mjs';
+import {nativeReaderBlacklist,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe,assertNativeProbeDocument} from './testingbot-native-policy.mjs';
+import {confirmProviderClosure} from './testingbot-provider-close.mjs';
+import {publicDocumentAllowed,heldCentreSnapshotAllowed} from '../tests/testingbot/centre-state.mjs';
+import {centreOperatingHold} from '../public/pinnacle-pages-scripts/centre-operating-holds.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
@@ -37,6 +41,11 @@ let source=process.env.GITHUB_SHA||process.env.TESTINGBOT_SOURCE_SHA;
 if(!source)try{const git=process.env.GIT_EXECUTABLE||(process.platform==='win32'?'C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe':'git');source=execFileSync(git,['rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim();}catch{source='unknown';}
 const report={schemaVersion:1,suite,startedAt:stamp,source,build,runnerSha256:await digest(new URL(import.meta.url)),manifestSha256:await digest(new URL('../tests/testingbot/page-manifest.mjs',import.meta.url)),account:{plan:account.plan,secondsBefore:account.seconds,desktopSlots:account.max_concurrent,physicalSlots:account.max_concurrent_mobile},selectedIds:selected.map(r=>r.id),requestedMatrix:matrixIds,sessions:[],pendingPages:manifest.filter(r=>!r.published),declaredLimits:['Public signed-out UI only; actual OAuth/OTP and upstream accepted leads/purchases are not exercised','TestingBot executes our assertions; it does not certify narrative quality or business outcomes','Screenshots require review against approved references; a capture is not visual acceptance','Browser lab timings are not field Core Web Vitals']};
 report.transport=transport;report.visualRequested=process.argv.includes('--visual');
+report.evidenceShellSha256=await digest(new URL('../tests/testingbot/evidence-shell.mjs',import.meta.url));
+report.providerClosureSha256=await digest(new URL('./testingbot-provider-close.mjs',import.meta.url));
+report.centreStateSha256=await digest(new URL('../tests/testingbot/centre-state.mjs',import.meta.url));
+report.operatingHoldsSha256=await digest(new URL('../public/pinnacle-pages-scripts/centre-operating-holds.mjs',import.meta.url));
+if(transport==='webdriver'){report.nativePolicySha256=await digest(new URL('./testingbot-native-policy.mjs',import.meta.url));report.declaredLimits.push('Native reader sessions request vendor hostname blocking and must pass non-event GET containment probes before opening production; no measurement receipt is inferred.');}
 if(transport==='playwright'){report.transportSha256=await digest(new URL('./testingbot-playwright.mjs',import.meta.url));report.declaredLimits.push('Playwright WebSocket: Chrome/Windows only; analytics vendors and non-GET writes blocked; no native visual/network/tunnel claim; CSS viewport resizing is not OS window resizing');}
 report.presentationStateSha256=await digest(new URL('../tests/testingbot/presentation-state.mjs',import.meta.url));
 await fs.mkdir(out,{recursive:true});
@@ -91,6 +100,7 @@ for(const matrixId of matrixIds){
     console.log('Starting '+matrixId+' '+device.name+' '+device.version);
     // Physical allocation/boot can outlast 150s. The provider evidence showed
     // successful Android creation immediately before the old client timed out.
+    if(transport==='webdriver')caps['tb:options'].blacklist=nativeReaderBlacklist;
     let created;
     if(transport==='playwright'){
       playwright=await openTestingBotPlaywright({client,config,device,options:caps['tb:options']});
@@ -100,6 +110,16 @@ for(const matrixId of matrixIds){
     sessionId=created.value?.sessionId||created.sessionId;if(!sessionId)throw Error('No session ID');
     session.sessionId=sessionId;session.providerCapabilities=created.value?.capabilities||{};session.dashboard='https://testingbot.com/members/tests/'+sessionId;
     await wd('/timeouts','POST',{pageLoad:60000,script:20000,implicit:1000});
+    if(transport==='webdriver'){
+      const control=await fetch(nativeProbeTargets[0].url,{redirect:'error',signal:AbortSignal.timeout(15000)});
+      if(control.status!==200||!/^text\/plain(?:;|$)/i.test(control.headers.get('content-type')||''))throw Error('Native probe text resource unavailable; no production page may be opened');
+      await control.body?.cancel();
+      await wd('/url','POST',{url:nativeProbeTargets[0].url});
+      session.nativeContainment={requestedBlacklist:nativeReaderBlacklist,document:await evaluate('return {url:location.href,contentType:document.contentType,scripts:document.scripts.length}')};
+      await save();assertNativeProbeDocument(session.nativeContainment.document);
+      session.nativeContainment.probes=await evaluate('return ('+nativeReaderProbe.toString()+')(arguments[0])',nativeProbeTargets);
+      await save();assertNativeReaderProbe(session.nativeContainment.probes);
+    }
     if(desktop)await wd('/window/rect','POST',{width:Math.max(config.width,500),height:config.height+180});
     for(const p of selected){
       const t={id:p.id,canonical:p.canonical,family:p.family,priority:p.priority,status:'running',checks:[],screenshots:[],warnings:p.knownGap?[p.knownGap]:[],skipped:[],startedAt:new Date().toISOString()};session.cases.push(t);await save();
@@ -108,7 +128,7 @@ for(const matrixId of matrixIds){
       try{
         const target=navigateUrl(p);t.testedUrl=target;
         const response=await fetch(target,{signal:AbortSignal.timeout(30000)});const html=await response.text();t.http={status:response.status,finalUrl:response.url,sha256:createHash('sha256').update(html).digest('hex'),xRobots:response.headers.get('x-robots-tag')};
-        await check('Correct public document loads',()=>response.status===200&&!/noindex/i.test(t.http.xRobots||''));
+        await check('Correct public document loads',()=>publicDocumentAllowed(p,t.http));
         if(response.status!==200)throw Error('Target document HTTP '+response.status);
         await wd('/url','POST',{url:target});
         if(desktop)await fitCssViewport(config,{viewport:()=>evaluate('return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r({width:innerWidth,height:innerHeight}))))'),rect:()=>wd('/window/rect'),resize:bounds=>wd('/window/rect','POST',bounds)});
@@ -121,7 +141,7 @@ for(const matrixId of matrixIds){
         await check('Canonical and one meaningful main heading',()=>t.document.canonical===p.canonical&&t.document.h1.length===1&&t.document.h1[0].length>8&&t.document.title.length>15&&t.document.description?.length>30);
         await check('Loaded intended route',()=>new URL(t.document.url).pathname===new URL(target).pathname);
         await check('No page overflow',()=>observation.noOverflow);
-        if(p.shell==='evidence')await check('Existing evidence header/footer remain present',()=>observation.evidenceShell);
+        if(p.shell==='evidence')await check('Existing evidence navigation and full footer remain present',()=>observation.evidenceShell);
         else if(p.shell==='helpline')await check('Existing helpline header/footer remain present',()=>observation.helplineShell);
         else await check('Shared header/footer and nine usable authority links',()=>observation.sharedShell);
         if(!p.shell)await check('Owner-approved authority wording and full evidence footer are preserved',()=>observation.authority);
@@ -192,7 +212,14 @@ for(const matrixId of matrixIds){
             await wd('/url','POST',{url:target});
             await check('Service labels do not split words into narrow columns',()=>evaluate("const labels=[...document.querySelectorAll('.enrol-service-choice span')];return labels.length>=4&&labels.every(n=>{const t=n.firstChild;if(t?.nodeType!==3)return false;return [...t.textContent.matchAll(/\\S+/g)].every(m=>{const r=document.createRange();r.setStart(t,m.index);r.setEnd(t,m.index+m[0].length);return new Set([...r.getClientRects()].map(x=>Math.round(x.top))).size<=1})})"));
           }
-          if(p.kind==='centre'&&(!p.status||p.status==='centre-enquiry'))await check('Centre assessment keeps actual selected centre',()=>evaluate("const expected=arguments[0],a=document.querySelector('.local-hero a[data-cta=\"hero-assessment\"]');if(!a)return false;const u=new URL(a.href);if(u.searchParams.get('centre')===expected)return true;if(u.hash!=='#callback')return false;const form=document.querySelector('#pinnacle-enrolment'),choice=form?.querySelector('#preferred-centre');return form?.dataset.defaultCentre===expected&&choice?.value===expected",p.centre));
+          if(p.kind==='centre'&&(!p.status||p.status==='centre-enquiry')){
+            const hold=centreOperatingHold(p.centre);
+            if(hold)await check('Held centre keeps central help and blocks held assignment',async()=>{
+              const snapshot=await evaluate("const hold=arguments[0],form=document.querySelector('#pinnacle-enrolment'),choice=form?.querySelector('#preferred-centre'),option=[...(choice?.options||[])].find(n=>n.value===hold.id),notice=[...document.querySelectorAll('[data-centre-operating-notice]')].find(n=>n.dataset.centreOperatingNotice===hold.id),hero=document.querySelector('.local-hero a[data-cta=\"hero-assessment\"]');let safeHero=false;if(hero){const u=new URL(hero.href);safeHero=u.origin===location.origin&&u.searchParams.get('centre')!==hold.id&&(u.hash==='#callback'||u.pathname==='/enroll-autism-speech-aba-therapies-india');}return {noticeId:notice?.dataset.centreOperatingNotice,closedNotice:/temporarily closed/i.test(notice?.textContent||''),centralCall:!!notice?.querySelector('a[href=\"tel:+919100181181\"]'),form:!!form,defaultCentre:form?.dataset.defaultCentre,selectedCentre:choice?.value,option:option?{value:option.value,disabled:option.disabled,selected:option.selected}:null,heldAssignmentLinks:[...document.querySelectorAll('a[href]')].filter(a=>{const u=new URL(a.href);return u.origin===location.origin&&['/enroll-autism-speech-aba-therapies-india','/speech-therapy/service-information'].includes(u.pathname)&&u.searchParams.get('centre')===hold.id;}).length,directBranchCall:[...document.querySelectorAll('a[href^=\"tel:\"]')].some(a=>a.getAttribute('href')==='tel:'+hold.directTelephone),safeHero}",hold);
+              t.operatingHold=snapshot;return heldCentreSnapshotAllowed(snapshot,hold.id);
+            });
+            else await check('Centre assessment keeps actual selected centre',()=>evaluate("const expected=arguments[0],a=document.querySelector('.local-hero a[data-cta=\"hero-assessment\"]');if(!a)return false;const u=new URL(a.href);if(u.searchParams.get('centre')===expected)return true;if(u.hash!=='#callback')return false;const form=document.querySelector('#pinnacle-enrolment'),choice=form?.querySelector('#preferred-centre');return form?.dataset.defaultCentre===expected&&choice?.value===expected",p.centre));
+          }
           // Exercise lazy loading without external video/map activation or submitting forms.
           await check('Current viewport images actually decode',async()=>{const evidence=await evaluate("return (async()=>{const images=[...document.querySelectorAll('main img')].filter("+imageInViewport.toString()+");await Promise.all(images.map(n=>Promise.race([n.decode().catch(()=>{}),new Promise(r=>setTimeout(r,4000))])));return {count:images.length,broken:images.filter(n=>!n.complete||!n.naturalWidth).map(n=>n.getAttribute('src'))}})()");t.viewportImages=evidence;if(evidence.broken.length)throw Error(JSON.stringify(evidence));return evidence;});
           const reading=await evaluate("const main=document.querySelector('main'),paras=[...main.querySelectorAll('p')].filter(n=>n.innerText.trim().length>30&&n.getBoundingClientRect().height>0),bad=paras.filter(n=>{const s=getComputedStyle(n);return parseFloat(s.fontSize)<12||n.getBoundingClientRect().width<120}).map(n=>({text:n.innerText.slice(0,120),fontSize:getComputedStyle(n).fontSize,width:n.getBoundingClientRect().width}));const broken=[...main.querySelectorAll('a[href^=\"#\"]')].filter(n=>n.hash.length>1&&!document.getElementById(decodeURIComponent(n.hash.slice(1)))).map(n=>n.hash);return {paragraphs:paras.length,smallText:bad,brokenAnchors:broken}");t.readability=reading;
@@ -239,10 +266,10 @@ for(const matrixId of matrixIds){
   }catch(e){session.status='failed';session.error=redact(e.message);}
   finally{
     if(sessionId){
-      try{await wd('','DELETE');session.closed=true;}catch(e){session.closeError=redact(e.message);try{const r=await api('/tests/'+sessionId+'/stop','PUT');session.closed=r.success===true;}catch{}}
-      if(!session.closed)session.status='cleanup-unconfirmed';
+      try{await wd('','DELETE');session.localClosed=true;}catch(e){session.closeError=redact(e.message);session.localClosed=false;}
       try{const r=await api('/tests/'+sessionId,'PUT',new URLSearchParams({'test[success]':session.status==='passed'?'1':'0','test[status_message]':suite+': '+session.cases.filter(t=>t.status==='passed').length+'/'+session.cases.length+' page cases passed'}));session.resultRecorded=r.success===true;}catch(e){session.resultError=redact(e.message);}
-      try{const r=await api('/tests/'+sessionId),p=r.test||r;session.provider={id:p.id,success:p.success,durationSeconds:p.duration,assetsAvailable:p.assets_available,deviceName:p.device_name,platformName:p.platform_name,os:p.os,browser:p.browser,browserVersion:p.browser_long_version||p.browser_version};if(p.assets_available){const a=await api('/tests/'+sessionId+'/assets');session.provider.artifacts={video:!!a.video,screenshots:a.screenshots?.length||0,logKinds:Object.keys(a.logs||{})};}}catch(e){session.providerReadbackError=redact(e.message);}
+      try{const closure=await confirmProviderClosure({api,sessionId,redact});session.closed=session.providerClosed=closure.closed;session.providerClosure=closure.trace;const p=closure.provider;if(p){session.provider={id:p.id,state:p.state,completedAt:p.completed_at,success:p.success,durationSeconds:p.duration,assetsAvailable:p.assets_available,deviceName:p.device_name,platformName:p.platform_name,os:p.os,browser:p.browser,browserVersion:p.browser_long_version||p.browser_version};if(p.assets_available){try{const a=await api('/tests/'+sessionId+'/assets');session.provider.artifacts={video:!!a.video,screenshots:a.screenshots?.length||0,logKinds:Object.keys(a.logs||{})};}catch(e){session.providerAssetsError=redact(e.message);}}}}catch(e){session.closed=false;session.providerClosed=false;session.providerReadbackError=redact(e.message);}
+      if(!session.closed){session.status='cleanup-unconfirmed';try{const r=await api('/tests/'+sessionId,'PUT',new URLSearchParams({'test[success]':'0','test[status_message]':'Remote provider cleanup unconfirmed; no further allocation permitted'}));session.resultRecorded=r.success===true;}catch(e){session.resultError=redact(e.message);}}
     }
     await save();
   }
