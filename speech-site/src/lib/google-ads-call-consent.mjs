@@ -26,7 +26,7 @@ export function installAdCallConsent() {
     !/^\/ask\/(?:te\/)?(?:account|auth|search|api)(?:\/|$)/.test(location.pathname);
   const publicCentre = /^\/centers\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/.test(location.pathname);
   const publicLegacy=document.body?.dataset?.pageVariant==='legacy_knowledge'&&(/^\/(?:ma|t|b|c)\/[a-z0-9-]+\/?$/.test(location.pathname)||location.pathname==='/contact-national-autism-helpline-24-7');
-  const reviewedPublicTemplate=document.body?.dataset?.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses'].includes(location.pathname);
+  const reviewedPublicTemplate=document.body?.dataset?.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses','/certified-courses/'].includes(location.pathname);
   if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
       !(paths.has(location.pathname) || publicAsk || publicCentre || publicLegacy || reviewedPublicTemplate)) return;
   const state = {enabled: false, started: false};
@@ -105,7 +105,7 @@ export function installAdCallConsent() {
     state.started = true;
     window.gtag('js', new Date());
     window.gtag('config', action, {
-      ...(publicLegacy||reviewedPublicTemplate?{page_location:'https://www.pinnacleblooms.org'+(reviewedPublicTemplate?(location.pathname==='/certified-courses'?'/certified-courses':'/speech-aba-autism-assessments'):'/legacy-knowledge'),page_title:reviewedPublicTemplate?'Pinnacle Public Information':'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),
+      ...(publicLegacy||reviewedPublicTemplate?{page_location:'https://www.pinnacleblooms.org'+(reviewedPublicTemplate?(['/certified-courses','/certified-courses/'].includes(location.pathname)?'/certified-courses':'/speech-aba-autism-assessments'):'/legacy-knowledge'),page_title:reviewedPublicTemplate?'Pinnacle Public Information':'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),
       phone_conversion_number: originalDisplay,
       phone_conversion_callback: callback,
       send_page_view: false,

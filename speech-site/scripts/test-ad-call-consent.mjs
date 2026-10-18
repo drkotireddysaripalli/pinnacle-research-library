@@ -31,7 +31,7 @@ test('private and unrelated paths and nonproduction hosts stay uninstrumented',(
  assert(!harness({host:'local.invalid'}).win.__pinnacleAdCallConsent);
 });
 test('reviewed legacy templates need their owner marker and retain coarse opt-in call identity',()=>{
- for(const [path,coarse]of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses']]){
+ for(const [path,coarse]of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses'],['/certified-courses/','/certified-courses']]){
   assert(!harness({path,host:'www.pinnacleblooms.org'}).win.__pinnacleAdCallConsent);
   const h=harness({path,host:'www.pinnacleblooms.org',variant:'legacy_public_template'});assert(h.win.__pinnacleAdCallConsent);assert.equal(h.scripts.length,0);
   h.choose('accepted');assert.equal(h.scripts.length,1);

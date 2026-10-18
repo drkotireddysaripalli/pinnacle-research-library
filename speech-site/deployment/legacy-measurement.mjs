@@ -7,7 +7,7 @@ const replacements=new Map(LEGACY_TAG_REPLACEMENTS.map(([old,next])=>[normal(old
 for(const old of replacements.keys())fingerprints.add(old);
 const tagPattern=/<script\b[^>]*>[\s\S]*?<\/script>/gi;
 const analyticsTag=tag=>/googletagmanager|googleadservices|G-2BYLRLFRDJ|AW-10810823199|GTM-W9ZHX459|_googWcm/.test(tag);
-const reviewedPublicTemplates=new Set(['/assessments/stuttering-assessment','/certified-courses']);
+const reviewedPublicTemplates=new Set(['/assessments/stuttering-assessment','/certified-courses','/certified-courses/']);
 const isKnownGtmLoader=tag=>normal(tag)===normal(LEGACY_TAGS[0]);
 export function legacyMeasurementScope(request){
  const u=new URL(request.url);
@@ -30,7 +30,9 @@ export function migrateLegacyPrefix(prefix,request,{preserveGtm=false}={}){
  if(!tags.length||tags.some(tag=>!fingerprints.has(normal(tag))))return null;
  if(scope!=='private'){
   const u=new URL(request.url),canonical=/\blink\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["']/i.exec(prefix)?.[1];
-  if(canonical!==u.origin+u.pathname||!tags.some(t=>t.includes('GTM-W9ZHX459'))||!tags.some(t=>t.includes("gtag('config', 'G-2BYLRLFRDJ')"))||!tags.some(t=>t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'")))return null;
+  // Keep either exact courses identity unchanged; no other alias is widened.
+  const canonicalMatches=canonical===u.origin+u.pathname||(u.pathname==='/certified-courses/'&&canonical===u.origin+'/certified-courses');
+  if(!canonicalMatches||!tags.some(t=>t.includes('GTM-W9ZHX459'))||!tags.some(t=>t.includes("gtag('config', 'G-2BYLRLFRDJ')"))||!tags.some(t=>t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'")))return null;
  }
  let result=prefix.replace(tagPattern,tag=>analyticsTag(tag)?(preserveGtm&&isKnownGtmLoader(tag)?tag:replacements.get(normal(tag))||''):tag);
  if(scope==='private')return {scope,html:result,removed:tags.length};

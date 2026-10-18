@@ -77,7 +77,7 @@ var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
     <\/script>`]];
 
 // deployment/public-ad-call.mjs
-var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-05b7e9ee1839deaf.mjs";
+var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-ce2939f4e8137e9f.mjs";
 var publicAdCallMarkup = '<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden style="box-sizing:border-box;max-width:100%;padding:16px;margin-bottom:88px;border:1px solid #d9bfd6;border-radius:8px;background:#fff;color:#302638;font-size:14px;line-height:1.65;font-family:inherit"><summary style="min-height:44px;color:#652579;font-weight:700;cursor:pointer">Optional advertising call measurement</summary><p style="color:#302638;max-width:850px">With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="accepted">Allow call measurement</button><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p style="color:#302638" data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>';
 var source = `// Shared advertising call measurement. No advertising helper runs before opt-in.
 export const preferencesMarkup = \`<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden style="box-sizing:border-box;max-width:100%;padding:16px;margin-bottom:88px;border:1px solid #d9bfd6;border-radius:8px;background:#fff;color:#302638;font-size:14px;line-height:1.65;font-family:inherit"><summary style="min-height:44px;color:#652579;font-weight:700;cursor:pointer">Optional advertising call measurement</summary><p style="color:#302638;max-width:850px">With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="accepted">Allow call measurement</button><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p style="color:#302638" data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>\`;
@@ -107,7 +107,7 @@ export function installAdCallConsent() {
     !/^\\/ask\\/(?:te\\/)?(?:account|auth|search|api)(?:\\/|$)/.test(location.pathname);
   const publicCentre = /^\\/centers\\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/.test(location.pathname);
   const publicLegacy=document.body?.dataset?.pageVariant==='legacy_knowledge'&&(/^\\/(?:ma|t|b|c)\\/[a-z0-9-]+\\/?$/.test(location.pathname)||location.pathname==='/contact-national-autism-helpline-24-7');
-  const reviewedPublicTemplate=document.body?.dataset?.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses'].includes(location.pathname);
+  const reviewedPublicTemplate=document.body?.dataset?.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses','/certified-courses/'].includes(location.pathname);
   if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
       !(paths.has(location.pathname) || publicAsk || publicCentre || publicLegacy || reviewedPublicTemplate)) return;
   const state = {enabled: false, started: false};
@@ -186,7 +186,7 @@ export function installAdCallConsent() {
     state.started = true;
     window.gtag('js', new Date());
     window.gtag('config', action, {
-      ...(publicLegacy||reviewedPublicTemplate?{page_location:'https://www.pinnacleblooms.org'+(reviewedPublicTemplate?(location.pathname==='/certified-courses'?'/certified-courses':'/speech-aba-autism-assessments'):'/legacy-knowledge'),page_title:reviewedPublicTemplate?'Pinnacle Public Information':'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),
+      ...(publicLegacy||reviewedPublicTemplate?{page_location:'https://www.pinnacleblooms.org'+(reviewedPublicTemplate?(['/certified-courses','/certified-courses/'].includes(location.pathname)?'/certified-courses':'/speech-aba-autism-assessments'):'/legacy-knowledge'),page_title:reviewedPublicTemplate?'Pinnacle Public Information':'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),
       phone_conversion_number: originalDisplay,
       phone_conversion_callback: callback,
       send_page_view: false,
@@ -300,7 +300,7 @@ var replacements = new Map(LEGACY_TAG_REPLACEMENTS.map(([old, next]) => [normal(
 for (const old of replacements.keys()) fingerprints.add(old);
 var tagPattern = /<script\b[^>]*>[\s\S]*?<\/script>/gi;
 var analyticsTag = (tag) => /googletagmanager|googleadservices|G-2BYLRLFRDJ|AW-10810823199|GTM-W9ZHX459|_googWcm/.test(tag);
-var reviewedPublicTemplates = /* @__PURE__ */ new Set(["/assessments/stuttering-assessment", "/certified-courses"]);
+var reviewedPublicTemplates = /* @__PURE__ */ new Set(["/assessments/stuttering-assessment", "/certified-courses", "/certified-courses/"]);
 var isKnownGtmLoader = (tag) => normal(tag) === normal(LEGACY_TAGS[0]);
 function legacyMeasurementScope(request) {
   const u = new URL(request.url);
@@ -322,7 +322,8 @@ function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   if (!tags.length || tags.some((tag) => !fingerprints.has(normal(tag)))) return null;
   if (scope !== "private") {
     const u = new URL(request.url), canonical = /\blink\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["']/i.exec(prefix)?.[1];
-    if (canonical !== u.origin + u.pathname || !tags.some((t) => t.includes("GTM-W9ZHX459")) || !tags.some((t) => t.includes("gtag('config', 'G-2BYLRLFRDJ')")) || !tags.some((t) => t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'"))) return null;
+    const canonicalMatches = canonical === u.origin + u.pathname || u.pathname === "/certified-courses/" && canonical === u.origin + "/certified-courses";
+    if (!canonicalMatches || !tags.some((t) => t.includes("GTM-W9ZHX459")) || !tags.some((t) => t.includes("gtag('config', 'G-2BYLRLFRDJ')")) || !tags.some((t) => t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'"))) return null;
   }
   let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? preserveGtm && isKnownGtmLoader(tag) ? tag : replacements.get(normal(tag)) || "" : tag);
   if (scope === "private") return { scope, html: result, removed: tags.length };
