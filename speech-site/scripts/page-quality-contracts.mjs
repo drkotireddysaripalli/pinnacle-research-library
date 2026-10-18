@@ -1,5 +1,6 @@
 // Local build locations and their unchanged public canonical paths.
 export const pageContracts = {
+  assessment:{path:'/speech-aba-autism-assessments',canonical:'/speech-aba-autism-assessments',static:'scripts/validate-assessment-build.mjs'},
   about:{path:'/about',canonical:'/about-pinnacle-proven-improvement-rate'},
   specialEducation:{path:'/best-special-education-center-call-9100181181',canonical:'/best-special-education-center-call-9100181181'},
   fusion:{path:'/fusion-module',canonical:'/fusion-module'},

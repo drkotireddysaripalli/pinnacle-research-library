@@ -2,7 +2,7 @@
 
 Use `node scripts/change-test-plan.mjs --base <accepted-source> --head HEAD --run` from `speech-site`. `--full` forces the existing broad gates. Plans, full logs, passed input fingerprints and reuse lineage are saved in `audits/change-testing/`.
 
-This command runs only its declared focused suites. Exit 2 means the plan requires the existing Ask/full-portal pipeline; it is not a test failure or a completed release. An unavailable/invalid comparison selects full coverage. Unknown code, dependency and workflow changes retain the full pipeline. No production account or page is changed by this command.
+This command runs only its declared focused suites. Exit 2 means the plan requires the existing Ask/full-portal pipeline; it is not a test failure or a completed release. An unavailable/invalid comparison selects full coverage. Unknown code, shared shell, dependency and unregistered workflow changes retain the full pipeline. No production account or page is changed by this command.
 
 | Change | Necessary acceptance | Reuse |
 |---|---|---|
@@ -16,7 +16,13 @@ This command runs only its declared focused suites. Exit 2 means the plan requir
 | Ask-owned source only | Ask auth/content tests and build; existing trusted BVT gate retained | No automatic BVT waiver |
 | Documents/test-selector only | Selector tests where changed; source review | Production build/browser/provider tests |
 
-The automated shortcuts are deliberately narrow: documentation/control, Ask-only, and response-policy-only. Measurement/receiver/template changes remain on existing full CI until their isolated browser/runtime profile is explicitly implemented and proven. This avoids silently claiming a partial check covers those surfaces.
+## Registered component gates
+
+`change-test-profiles.mjs` is an explicit registry. Known receiver and managed discovery-route policy changes run their receiving/route suites (including the actual managed-route ownership/ambiguity contracts) without rebuilding unchanged Astro or Ask output. Receiver and Contact changes retain the isolated form browser contract, durable receipt/idempotency/conflict/retry tests, held-centre checks and private module parity as release acceptance. A Contact presentation change also requires the fully styled document at 320, 390 and 1440 pixels; the compact functional fixture alone cannot pass layout.
+
+Known page-local and browser-measurement changes use one Astro build, affected static/unit contracts and affected browser journeys across all six existing projects: 320/390 phone, 768 tablet, 1440 desktop, Firefox and WebKit. Measurement changes retain consent, source, receipt, protection and relevant commerce-attribution regression checks. Every fresh trusted Astro build still runs the existing five-case TestingBot BVT. Unchanged unrelated page families and Ask builds are omitted. Mixed known components union their checks; any unknown input or deletion restores full coverage.
+
+Run `npm run check:page -- <page-id> --plan audits/change-testing/plan.json` for a component plan. The workflow executes the plan and retains its logs. Focused runtime CI does not replace actual serving-owner/module, route/binding, deployment and public-readback acceptance. It cannot claim a production enquiry or a physical-device pass.
 
 ## PR107 actual change and evidence
 
@@ -24,6 +30,6 @@ PR107 changed measurement/source compatibility, protection dispatch, receiver no
 
 ## Reuse rules
 
-A focused pass is reused only when its source/imported inputs, test code, package/toolchain files, Node runtime/platform, command and acceptance scope match, and its successful receipt and full log still exist. Failures and missing evidence rerun. Reused results retain the original tested source. Browser/device, private receipt, deployed version and genuine business evidence remain separate. The source/diff planner never authorizes deployment or fabricates a live enquiry/call.
+A focused pass is reused only when its source/imported inputs, test code, package/toolchain files, Node/runtime/platform, relevant configuration, command and acceptance scope match, and its successful receipt, complete log and output artifacts still match their hashes. Receiver reuse also checks Python/SQLite versions. Component browser receipts include a ten-minute freshness window; built-page unit reuse includes the generated build hash. A stage that changes its tracked inputs is not reusable. Failures and missing evidence rerun. Reused results retain the original tested source. Browser/device, private receipt, deployed version and genuine business evidence remain separate. The source/diff planner never authorizes deployment or fabricates a live enquiry/call.
 
 Daily regression stays separate from the blocking change gate. Unrelated page owners do not wait for a fresh full-site audit or unchanged provider suite for a response-only policy release.

@@ -20,6 +20,8 @@ jobs:
       portal: ${{ steps.plan.outputs.portal }}
       focused: ${{ steps.plan.outputs.focused }}
       scope: ${{ steps.plan.outputs.scope }}
+      selection: ${{ steps.plan.outputs.selection }}
+      needs_browser: ${{ steps.plan.outputs.needs_browser }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,33 +50,52 @@ jobs:
     needs: change-plan
     if: needs.change-plan.outputs.focused == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
     runs-on: ubuntu-latest
-    timeout-minutes: 3
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version-file: 'build-window/.node-version'
+      - name: Install dependencies for registered runtime fixtures
+        if: needs.change-plan.outputs.scope == 'runtime'
+        working-directory: speech-site
+        run: npm ci
+      - name: Install only requested fixture browser engines
+        if: needs.change-plan.outputs.needs_browser == 'true'
+        working-directory: speech-site
+        timeout-minutes: 6
+        run: |
+          if [ -f /etc/apt/apt-mirrors.txt ]; then
+            sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' /etc/apt/apt-mirrors.txt
+          fi
+          printf 'Acquire::http::Timeout "20";\nAcquire::https::Timeout "20";\nAcquire::Retries "1";\n' | sudo tee /etc/apt/apt.conf.d/80pinnacle-bounded-acquire >/dev/null
+          npx playwright install --with-deps chromium firefox webkit
       - name: Reuse only identical successful focused inputs
         uses: actions/cache@v4
         with:
-          path: speech-site/audits/change-testing
-          key: portal-focused-${{ runner.os }}-${{ hashFiles('build-window/.node-version', 'build-window/.npm-version', '.github/workflows/portal-quality.yml', 'speech-site/scripts/change-test-plan.mjs', 'speech-site/scripts/test-change-test-plan.mjs', 'speech-site/scripts/test-protection-csp.mjs', 'speech-site/deployment/protection-csp.mjs', 'speech-site/CHANGE-BASED-TESTING.md', 'speech-site/package*.json') }}
+          path: |
+            speech-site/audits/change-testing
+            speech-site/outputs/contact-receipt-20261015
+          key: portal-focused-${{ runner.os }}-${{ hashFiles('build-window/.node-version', 'build-window/.npm-version', '.github/workflows/portal-quality.yml', 'speech-site/deployment/**', 'speech-site/scripts/**', 'speech-site/tests/fixtures/**', 'speech-site/src/lib/**', 'speech-site/src/data/**', 'speech-site/public/pinnacle-pages-scripts/**', 'speech-site/public/pinnacle-pages-data/**', 'speech-site/CHANGE-BASED-TESTING.md', 'speech-site/package*.json') }}-${{ github.run_id }}
+          restore-keys: |
+            portal-focused-${{ runner.os }}-${{ hashFiles('build-window/.node-version', 'build-window/.npm-version', '.github/workflows/portal-quality.yml', 'speech-site/deployment/**', 'speech-site/scripts/**', 'speech-site/tests/fixtures/**', 'speech-site/src/lib/**', 'speech-site/src/data/**', 'speech-site/public/pinnacle-pages-scripts/**', 'speech-site/public/pinnacle-pages-data/**', 'speech-site/CHANGE-BASED-TESTING.md', 'speech-site/package*.json') }}-
       - name: Run selected scope without building unrelated pages
         env:
-          TEST_SCOPE: ${{ needs.change-plan.outputs.scope }}
+          CHANGE_PLAN_JSON: ${{ needs.change-plan.outputs.selection }}
         run: |
           node --input-type=module - <<'JS'
           import {runFocused} from './speech-site/scripts/change-test-plan.mjs';
-          const scope=process.env.TEST_SCOPE;
-          if(!['policy','control'].includes(scope))throw Error('Unrecognized focused scope');
-          const suites=scope==='policy'?['scripts/test-protection-csp.mjs']:['scripts/test-change-test-plan.mjs'];
-          console.log(JSON.stringify(runFocused({scope,suites,requiredReleaseEvidence:scope==='policy'?['Affected serving Worker and live policy readback remain required']:[]})));
+          const plan=JSON.parse(process.env.CHANGE_PLAN_JSON);
+          if(!plan.focused||!['policy','control','runtime'].includes(plan.scope))throw Error('Unrecognized focused scope');
+          console.log(JSON.stringify(runFocused(plan)));
           JS
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: changed-scope-evidence
-          path: speech-site/audits/change-testing/
+          path: |
+            speech-site/audits/change-testing/
+            speech-site/outputs/contact-receipt-20261015/
           retention-days: 14
   ask-build:
     needs: change-plan
@@ -101,6 +122,8 @@ jobs:
       - run: npm run build:ask
   checks:
     needs: change-plan
+    env:
+      CHANGE_PLAN_JSON: ${{ needs.change-plan.outputs.selection }}
     # Internal branches already run this exact source on push. Fork PRs retain
     # their untrusted checks; trusted push/dispatch remains the release gate.
     if: needs.change-plan.outputs.portal == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
@@ -138,14 +161,18 @@ jobs:
           node --input-type=module - <<'JS'
           import fs from 'node:fs';
           import {activeQualityPage,pageContracts} from './scripts/page-quality-contracts.mjs';
-          const page=pageContracts[activeQualityPage];
+          const plan=JSON.parse(process.env.CHANGE_PLAN_JSON),id=plan.pages?.[0]||activeQualityPage,page=pageContracts[id];
           if(!page)throw Error('Unknown page acceptance contract');
-          fs.appendFileSync(process.env.GITHUB_ENV,`PAGE_KIND=${activeQualityPage}\nPAGE_PATH=${page.path}\nCANONICAL_PATH=${page.canonical}\n`);
+          fs.mkdirSync('audits/change-testing',{recursive:true});fs.writeFileSync('audits/change-testing/plan.json',JSON.stringify(plan));
+          fs.appendFileSync(process.env.GITHUB_ENV,`PAGE_KIND=${id}\nPAGE_PATH=${page.path}\nCANONICAL_PATH=${page.canonical}\n`);
           JS
-      - run: npm run check:page -- "$PAGE_KIND"
+      - run: npm run check:page -- "$PAGE_KIND" --plan audits/change-testing/plan.json
       - run: node scripts/validate-centre-network.mjs
+        if: needs.change-plan.outputs.scope != 'component'
       - run: npx playwright test --project=firefox --project=webkit
+        if: needs.change-plan.outputs.scope != 'component'
       - name: Verify the shared announcement in the real Worker runtime
+        if: needs.change-plan.outputs.scope != 'component'
         run: node scripts/check-site-announcement.mjs
       - name: Save shared announcement runtime evidence
         if: always()
@@ -156,15 +183,19 @@ jobs:
           if-no-files-found: ignore
           retention-days: 14
       - name: Verify shared asset compatibility and call behavior
+        if: needs.change-plan.outputs.scope != 'component' || fromJSON(needs.change-plan.outputs.selection).extra.shared
         run: npm run test:shared-assets-repair
       - name: Verify original and minified enquiry/call behavior in browsers
+        if: needs.change-plan.outputs.scope != 'component' || fromJSON(needs.change-plan.outputs.selection).extra.shared
         run: node scripts/check-shared-assets-browser.mjs
       - name: Verify regional service header and footer enquiry preferences
+        if: needs.change-plan.outputs.scope != 'component' || fromJSON(needs.change-plan.outputs.selection).extra.regional
         run: node scripts/check-regional-paid-locality.mjs outputs/regional-paid-locality-20261017 --caller-only
       - name: Verify the durable contact browser journey without external intake
+        if: needs.change-plan.outputs.scope != 'component' || fromJSON(needs.change-plan.outputs.selection).extra.contact
         run: node scripts/check-contact-receipt-browser.mjs
       - name: Save isolated contact journey evidence
-        if: always()
+        if: always() && (needs.change-plan.outputs.scope != 'component' || fromJSON(needs.change-plan.outputs.selection).extra.contact)
         uses: actions/upload-artifact@v4
         with:
           name: contact-receipt-browser
@@ -193,7 +224,7 @@ jobs:
           done
           exit 1
       - name: Changed centre gallery and Google feed regressions
-        if: github.event_name != 'pull_request'
+        if: github.event_name != 'pull_request' && needs.change-plan.outputs.scope != 'component'
         env:
           CENTRE_TRUST_TEST_BASE: http://127.0.0.1:4340
           CENTRE_GOOGLE_TEST_BASE: http://127.0.0.1:4340
