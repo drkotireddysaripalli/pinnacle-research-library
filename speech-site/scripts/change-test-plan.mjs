@@ -1,22 +1,23 @@
 // Dependency-free selection. Unknown inputs retain the existing full gates.
 import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {execFileSync,spawnSync} from 'node:child_process';import {createHash} from 'node:crypto';import {fileURLToPath} from 'node:url';
-import {componentPlan} from './change-test-profiles.mjs';
+import {componentPlan,componentInputPrefixes} from './change-test-profiles.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));export const root=path.resolve(here,'../..');
 const portableGit=path.join(os.homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe');const git=process.env.PINNACLE_GIT||(process.platform==='win32'&&fs.existsSync(portableGit)?portableGit:'git');
 const control=new Set(['speech-site/scripts/change-test-plan.mjs','speech-site/scripts/change-test-profiles.mjs','speech-site/scripts/test-change-test-plan.mjs','speech-site/scripts/test-enrolment.mjs','speech-site/scripts/test-enrolment-contract.mjs','speech-site/scripts/check-page.mjs','speech-site/scripts/check-contact-receipt-browser.mjs','speech-site/scripts/page-quality-contracts.mjs','speech-site/CHANGE-BASED-TESTING.md','.github/workflows/portal-quality.yml']);
-const policy=new Set(['speech-site/deployment/protection-csp.mjs','speech-site/scripts/test-protection-csp.mjs']);
+const policy=new Set(['speech-site/deployment/protection-csp.mjs','speech-site/scripts/test-protection-csp.mjs','speech-site/src/lib/ad-call-csp.mjs','speech-site/scripts/test-public-ad-call.mjs']);
 const docs=f=>/^(?:[^/]+|speech-site\/[^/]+|(?:docs|speech-site\/(?:reviews|docs|team-kt-20261009))\/.+)\.md$/i.test(f);
 export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,forceFull=false,hasDeletions=false}={}){
  const changed=[...new Set(files)].sort();let scope='full',reason='Unmapped/runtime/configuration change: keep the existing full portal gates.';
  if(comparisonVerified&&!forceFull&&!hasDeletions){
   if(changed.length===0){scope='none';reason='Verified Git comparison has no changed files.';}
   else if(changed.every(f=>control.has(f)||docs(f))&&(!changed.includes('.github/workflows/portal-quality.yml')||changed.includes('speech-site/scripts/test-change-test-plan.mjs'))){scope=changed.some(f=>control.has(f))?'control':'none';reason='Test-selector or documentation change; production source unchanged.';}
-  else if(changed.every(f=>policy.has(f)||docs(f))&&!policyExecutionChanged){scope='policy';reason='Scoped public response-policy change; assets, page markup and browser logic unchanged.';}
+  else if(changed.some(f=>policy.has(f))&&changed.every(f=>policy.has(f)||control.has(f)||docs(f))&&!changed.includes('.github/workflows/portal-quality.yml')&&!policyExecutionChanged){scope='policy';reason='Scoped public response-policy change; assets, page markup and browser logic unchanged.';}
   else if(changed.every(f=>f.startsWith('speech-site/ask-runtime/')||f.startsWith('speech-site/ask-public/')||f.startsWith('speech-site/src/lib/ask/')||docs(f))){scope='ask';reason='Ask-owned source only; retain Ask auth/content/build gates.';}
  }
- const suites=scope==='policy'?['scripts/test-protection-csp.mjs']:scope==='control'?['scripts/test-change-test-plan.mjs']:[];
+ const suites=scope==='policy'?[...(changed.some(f=>/protection-csp\.mjs$/.test(f))?['scripts/test-protection-csp.mjs']:[]),...(changed.some(f=>/ad-call-csp\.mjs$|test-public-ad-call\.mjs$/.test(f))?['scripts/test-public-ad-call.mjs']:[]),...(changed.some(f=>control.has(f))?['scripts/test-change-test-plan.mjs']:[])]:scope==='control'?['scripts/test-change-test-plan.mjs']:[];
+ const callPolicy=scope==='policy'&&suites.includes('scripts/test-public-ad-call.mjs');
  const scoped=scope==='full'&&comparisonVerified&&!forceFull&&!hasDeletions?componentPlan(changed.filter(f=>!docs(f))):null;
- return {schemaVersion:2,scope,reason,changed,comparisonVerified,ask:scope==='ask'||scope==='full',portal:scope==='full'||scope==='ask',focused:suites.length>0,suites,requiredReleaseEvidence:scope==='policy'?['Affected actual serving Worker GET/HEAD and CSP composition','Version/module hashes, routes and bindings; public readback','Browser case if nonce/hash/directive or execution behavior changes']:['full','ask'].includes(scope)?['Existing trusted build/BVT; changed contact and durable receipt behavior','Actual serving-owner deployment and public readback']:[],skipped:scope==='policy'?['Astro/Ask rebuild','Unchanged full unit registry','Unchanged layout/device suites','Full site recrawl']:[],productionDeployment:false,...scoped};
+ return {schemaVersion:2,scope:callPolicy?'runtime':scope,reason,changed,comparisonVerified,ask:scope==='ask'||scope==='full',portal:scope==='full'||scope==='ask',focused:suites.length>0,suites,requiredReleaseEvidence:scope==='policy'?['Affected actual serving Worker GET/HEAD and CSP composition','Version/module hashes, routes and bindings; public readback','Browser case if nonce/hash/directive or execution behavior changes']:['full','ask'].includes(scope)?['Existing trusted build/BVT; changed contact and durable receipt behavior','Actual serving-owner deployment and public readback']:[],skipped:scope==='policy'?['Astro/Ask rebuild','Unchanged full unit registry','Unchanged layout/device suites','Full site recrawl']:[],productionDeployment:false,...(callPolicy?{inputPrefixes:componentInputPrefixes}:{}),...scoped};
 }
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function fingerprint({files,readFile,command,context}){return hash(JSON.stringify({files:[...new Set(files)].sort().map(f=>[f,hash(readFile(f))]),command,context}));}
@@ -48,6 +49,9 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};const base=arg('base'),head=arg('head')||'HEAD';let files=[],comparisonVerified=false,diagnostic=null,policyExecutionChanged=false,hasDeletions=false;
  try{if(!base)throw Error('An explicit verified base is required');g(['rev-parse','--verify',base+'^{commit}']);g(['rev-parse','--verify',head+'^{commit}']);files=g(['diff','--no-renames','--name-only',base,head]).split('\n').filter(Boolean);hasDeletions=!!g(['diff','--no-renames','--diff-filter=D','--name-only',base,head]);comparisonVerified=true;
   if(files.includes('speech-site/deployment/protection-csp.mjs')){const diff=g(['diff','--unified=0',base,head,'--','speech-site/deployment/protection-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x)).join('\n');policyExecutionChanged=/nonce|sha256|script-src|connect-src|unsafe-|default-src|new Response|\.fetch\(/.test(diff);}
+  // Only this exact, reviewed image-host addition may reuse unchanged page
+  // builds. Any other CSP implementation delta keeps full acceptance.
+  if(files.includes('speech-site/src/lib/ad-call-csp.mjs')){const delta=g(['diff','--unified=0',base,head,'--','speech-site/src/lib/ad-call-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x));policyExecutionChanged=policyExecutionChanged||delta.length!==1||delta[0]!=='+    "https://www.googletagmanager.com",';}
  }catch(e){diagnostic=e.message;}
  const plan={...selectPlan(files,{comparisonVerified,policyExecutionChanged,hasDeletions,forceFull:process.argv.includes('--full')}),base,head,diagnostic,tree:'committed comparison'};
  const out=arg('out')||path.join(root,'speech-site/audits/change-testing');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'plan.json'),JSON.stringify(plan,null,2)+'\n');

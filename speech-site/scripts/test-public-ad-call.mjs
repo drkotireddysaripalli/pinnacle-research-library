@@ -10,6 +10,9 @@ test('existing consent-gated call policy extends the necessary directives and re
  const headers=new Headers({'content-security-policy':"default-src 'self'; script-src 'self' https://www.googletagmanager.com; script-src-elem 'self'; connect-src 'self'; frame-src https://www.youtube-nocookie.com; object-src 'none'"});
  augmentCsp(headers);const csp=headers.get('content-security-policy');
  for(const directive of ['script-src','script-src-elem','connect-src'])assert(csp.split(';').find(x=>x.trim().startsWith(directive+' ')).includes('https://www.googleadservices.com'));
+ const images=csp.split(';').find(x=>x.trim().startsWith('img-src ')).trim().split(/\s+/).slice(1);
+ assert(images.includes('https://www.googletagmanager.com'));
+ assert(!images.some(x=>x.includes('*')));
  assert(csp.includes("object-src 'none'"));assert(csp.includes('https://www.youtube-nocookie.com'));assert(!csp.includes("default-src *"));assert(!csp.includes('unsafe-eval'));
  const before=csp;augmentCsp(headers);assert.equal(headers.get('content-security-policy'),before);
 });
