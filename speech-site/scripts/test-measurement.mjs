@@ -37,19 +37,19 @@ function harness({contact=false,callback=false,origin='https://www.pinnaclebloom
  return {privacy,dispatched,dispatch:(name,detail)=>listeners[name]?.({detail}),win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={},isTrusted=true)=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({isTrusted,target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 
-test('protection loader reuses the existing GTM container only after permitted public consent',()=>{
+test('protection consumer is external first-party code loaded only after permitted public consent',()=>{
  const h=harness({path:canonicalEnrolment,search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&utm_id='+KNOWN_GOOGLE_ADS_CAMPAIGN_IDS[0]});
- const count=()=>h.scripts.filter(s=>s.src?.includes('/gtm.js?id=GTM-W9ZHX459')).length;
+ const count=()=>h.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length;
  assert.equal(count(),0);h.choose('accepted');assert.equal(count(),1);
  assert.equal(h.win.pinnacleProtectionAllowed(),true);
- const script=h.scripts.find(s=>s.src?.includes('/gtm.js?id=GTM-W9ZHX459'));assert.equal(script.referrerPolicy,'origin');
+ const script=h.localScripts.find(s=>s.src?.includes('/protection-consumer.mjs'));assert.equal(script.referrerPolicy,'origin');assert.equal(script.type,'module');
  h.choose('accepted');assert.equal(count(),1);h.choose('declined');assert.equal(h.win.__pinnacleProtectionContainer.status,'cancelled');assert.equal(h.win.pinnacleProtectionAllowed(),false);h.choose('accepted');assert.equal(count(),1,'A cancelled page load is not replayed');
  assert.equal(h.win.CG,undefined);assert.equal(protectionSignals(h).length,0);
 });
 
 test('protection loading and bridge fail closed for raw unsafe URL/referrer contexts',()=>{
  const options=[...['?name=Private_Name','?q=child symptoms','?utm_source=google&utm_source=google','?utm_id=9100181181','?utm_campaign=my_child_diagnosis','?validation_test=1','?utm_campaign=qa_validation','?centre=unknown','?arbitrary=1','#private-child-report'].map(search=>({search})),...['https://www.pinnacleblooms.org/account','https://www.pinnacleblooms.org/ask/private-answer','https://www.google.com/search?q=private','https://private.example/','https://www.google.com:9443/'].map(referrer=>({referrer,search:''})),{gpc:true,search:''},{storageThrows:true,search:''},{saved:{value:'declined',at:Date.now()},search:''}];
- for(const o of options){const h=harness({path:canonicalEnrolment,...o});if(!o.saved)h.choose('accepted');assert.equal(h.win.pinnacleProtectionAllowed(),false,JSON.stringify(o));assert.equal(h.scripts.filter(s=>s.src?.includes('/gtm.js?id=GTM-W9ZHX459')).length,0,JSON.stringify(o));h.click('hero-call','tel:+919100181181');assert.equal(protectionSignals(h).length,0);}
+ for(const o of options){const h=harness({path:canonicalEnrolment,...o});if(!o.saved)h.choose('accepted');assert.equal(h.win.pinnacleProtectionAllowed(),false,JSON.stringify(o));assert.equal(h.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,0,JSON.stringify(o));h.click('hero-call','tel:+919100181181');assert.equal(protectionSignals(h).length,0);}
  const pageExit=harness({path:canonicalEnrolment,search:''});pageExit.choose('accepted');pageExit.hide();assert.equal(pageExit.win.__pinnacleProtectionContainer.status,'cancelled');
 });
 

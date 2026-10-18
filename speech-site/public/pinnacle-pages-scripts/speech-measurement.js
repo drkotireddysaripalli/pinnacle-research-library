@@ -2,6 +2,7 @@
 (() => {
   const id = 'G-2BYLRLFRDJ';
   const origin = 'https://www.pinnacleblooms.org';
+  const measurementNonce=document.currentScript?.nonce||'';
   const pages = {
     '/': {title:'Pinnacle Blooms Network',group:'home',service:'help'},
     '/top-speech-therapy-center-india-proven-improvement-rate': {title:'Pinnacle Speech Therapy',group:'speech_therapy',service:'speech'},
@@ -305,19 +306,18 @@
   const ensureProtectionContainer=()=>{
     if(!window.pinnacleProtectionAllowed()||window.__pinnacleProtectionContainer)return;
     window.dataLayer.push({pinnacle_protection_allowed:true});
-    // Reuse the existing container. Its legacy GA4 tags must have the matching
-    // ownership exception before this source is published. No new producer.
-    if([...document.querySelectorAll('script[src]')].some(s=>{try{const u=new URL(s.src,origin);return u.hostname==='www.googletagmanager.com'&&u.pathname==='/gtm.js'&&u.searchParams.get('id')==='GTM-W9ZHX459';}catch{return false;}}))return;
+    // External first-party module: no CustomHTML/CustomJS or extra GTM producer
+    // is needed on managed pages. Retained legacy GTM uses the ownership flag.
     const state=window.__pinnacleProtectionContainer={status:'pending'};
-    const script=document.createElement('script');script.async=true;script.referrerPolicy='origin';
-    script.id='pinnacle-protection-container';script.src='https://www.googletagmanager.com/gtm.js?id=GTM-W9ZHX459';
+    const script=document.createElement('script');script.type='module';script.referrerPolicy='origin';
+    script.id='pinnacle-protection-container';script.src='/pinnacle-pages-scripts/protection-consumer.mjs?v=protection-20261018';
+    if(measurementNonce)script.nonce=measurementNonce;
     const cancel=()=>{state.status='cancelled';script.remove?.();};
     document.addEventListener('pinnacle_protection_cancel',cancel,{once:true});
     window.addEventListener?.('pagehide',cancel,{once:true});
-    // The GTM loader tag must also recheck the boolean at dispatch: removing a
-    // pending script cannot certify cancellation in every browser/runtime.
+    // The consumer rechecks before SDK insertion and invocation. Removing a
+    // pending module alone is not a browser cancellation guarantee.
     if(!window.pinnacleProtectionAllowed()){cancel();return;}
-    window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});
     document.head.append(script);state.status='requested';
   };
   const queueProtectionEvent = (name, acceptedSource = null) => {
@@ -328,6 +328,8 @@
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({event:name});
       protectionEvents.add(name);
+      if(window.__pinnacleProtectionConsumer)window.__pinnacleProtectionConsumer.signal(name);
+      else{const pending=window.__pinnacleProtectionPending||(window.__pinnacleProtectionPending=new Set());pending.add(name);try{ensureProtectionContainer();}catch{}}
       return true;
     } catch { return false; } // Never interfere with contact navigation or receipt handling.
   };
