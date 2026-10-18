@@ -4,14 +4,20 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {testingBotClient,writeJson} from './testingbot-client.mjs';
+import {assertPlaywrightScope,openTestingBotPlaywright} from './testingbot-playwright.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
 import {evidenceShell} from '../tests/testingbot/evidence-shell.mjs';
 import {headerReferenceName,imageInViewport,desktopScreenResolution,fitCssViewport} from '../tests/testingbot/presentation-state.mjs';
 
+function initialObservation(document, expected, shell, pathname, evidenceShell) {
+  return document.fonts.ready.then(()=>({document:(()=>{return {url:location.href,title:document.title,canonical:document.querySelector('link[rel=canonical]')?.href,description:document.querySelector('meta[name=description]')?.content,h1:[...document.querySelectorAll('main h1')].map(n=>n.textContent.trim()),width:innerWidth,height:innerHeight,ua:navigator.userAgent,screen:{width:screen.width,height:screen.height},dpr:devicePixelRatio,ready:document.readyState}})(),noOverflow:document.documentElement.scrollWidth<=innerWidth+1,evidenceShell:shell==='evidence'?evidenceShell(document,pathname):null,helplineShell:!!document.querySelector('header.site-header')&&!!document.querySelector('footer.site-footer')&&!!document.querySelector('header a[href*="9100181181"]'),sharedShell:(()=>{const hs=document.querySelectorAll('.portal-site-header,.portal-header'),fs=document.querySelectorAll('.portal-site-footer'),a=[...document.querySelectorAll('.portal-main-list>a')];return hs.length>=1&&fs.length===1&&a.length===9&&a.every(n=>n.href&&n.textContent.trim().length>10)})(),authority:(()=>{const a=[...document.querySelectorAll('.portal-main-list>a')],normal=s=>s.replace(/\s+/g,' ').trim();return a.length===expected.main.length&&a.every((n,i)=>normal(n.querySelector('.portal-nav-label')?.textContent||'')===expected.main[i].label&&normal(n.querySelector('.portal-nav-detail')?.textContent||'')===expected.main[i].lines.join(' '))&&document.querySelectorAll('.verify-card').length===36&&document.querySelectorAll('nav.portal-locations li a').length===16&&document.querySelectorAll('nav.portal-community>a').length===8&&document.querySelectorAll('footer a[href$="/policies"]').length===1})(),structured:(()=>{const s=[...document.querySelectorAll('script[type="application/ld+json"]')];return s.length>0&&s.every(n=>{try{return !!JSON.parse(n.textContent)}catch{return false}})&&(document.querySelector('meta[property="og:image"]')?.content||'').startsWith('https://')})(),phone:(()=>{const a=[...document.querySelectorAll('a[href="tel:+919100181181"]')];return a.length>0&&a.some(n=>{const r=n.getBoundingClientRect();return r.width>0&&r.height>0})})()}));
+}
+
 const option=(name,fallback)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
-const suite=option('suite','bvt'),build=process.argv.includes('--build'),list=process.argv.includes('--list');
+const suite=option('suite','bvt'),build=process.argv.includes('--build'),list=process.argv.includes('--list'),transport=option('transport','webdriver');
+if(!['webdriver','playwright'].includes(transport))throw Error('Unknown TestingBot transport');
 const manifest=await pageManifest(),selected=selectCases(manifest,suite,{build,ids:option('cases','').split(',').filter(Boolean)});
 const approvedShell=JSON.parse(await fs.readFile(new URL('../tests/fixtures/shared-authority-owner-approved.json',import.meta.url)));
 const visualReferences=JSON.parse(await fs.readFile(new URL('../tests/testingbot/visual-references.json',import.meta.url)));
@@ -19,6 +25,7 @@ const visualReferences=JSON.parse(await fs.readFile(new URL('../tests/testingbot
 // shared templates; the daily plan rotates secondary browsers and devices.
 const matrixIds=option('matrix',suite==='p2'?'edge':'chrome').split(',');
 if(matrixIds.some(id=>!matrix[id]))throw Error('Unknown matrix entry');
+if(transport==='playwright')for(const matrixId of matrixIds)assertPlaywrightScope({matrixId,network:process.argv.includes('--network'),visual:process.argv.includes('--visual'),build,tunnel:process.env.TESTINGBOT_TUNNEL_ID});
 if(!selected.length)throw Error('Empty suite; refusing a vacuous pass');
 if(list){console.log(JSON.stringify({suite,build,matrix:matrixIds,cases:selected,pending:manifest.filter(r=>!r.published)},null,2));process.exit(0);}
 const client=testingBotClient(),{api,request,redact}=client;
@@ -29,6 +36,8 @@ const digest=file=>fs.readFile(file).then(b=>createHash('sha256').update(b).dige
 let source=process.env.GITHUB_SHA||process.env.TESTINGBOT_SOURCE_SHA;
 if(!source)try{const git=process.env.GIT_EXECUTABLE||(process.platform==='win32'?'C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe':'git');source=execFileSync(git,['rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim();}catch{source='unknown';}
 const report={schemaVersion:1,suite,startedAt:stamp,source,build,runnerSha256:await digest(new URL(import.meta.url)),manifestSha256:await digest(new URL('../tests/testingbot/page-manifest.mjs',import.meta.url)),account:{plan:account.plan,secondsBefore:account.seconds,desktopSlots:account.max_concurrent,physicalSlots:account.max_concurrent_mobile},selectedIds:selected.map(r=>r.id),requestedMatrix:matrixIds,sessions:[],pendingPages:manifest.filter(r=>!r.published),declaredLimits:['Public signed-out UI only; actual OAuth/OTP and upstream accepted leads/purchases are not exercised','TestingBot executes our assertions; it does not certify narrative quality or business outcomes','Screenshots require review against approved references; a capture is not visual acceptance','Browser lab timings are not field Core Web Vitals']};
+report.transport=transport;report.visualRequested=process.argv.includes('--visual');
+if(transport==='playwright'){report.transportSha256=await digest(new URL('./testingbot-playwright.mjs',import.meta.url));report.declaredLimits.push('Playwright WebSocket: Chrome/Windows only; analytics vendors and non-GET writes blocked; no native visual/network/tunnel claim; CSS viewport resizing is not OS window resizing');}
 report.presentationStateSha256=await digest(new URL('../tests/testingbot/presentation-state.mjs',import.meta.url));
 await fs.mkdir(out,{recursive:true});
 const save=()=>writeJson(out+'/report.json',report);
@@ -54,8 +63,8 @@ for(const matrixId of matrixIds){
     if(!device){report.sessions.push({matrix:matrixId,status:'unavailable',reason:'Requested desktop browser/OS absent from provider catalogue',cases:[]});await save();continue;}
   }
   const session={matrix:matrixId,kind:config.kind,requested:{...config,deviceName:device.name,version:device.version},status:'starting',cases:[],artifacts:[],skipped:[]};
-  report.sessions.push(session);await save();let sessionId;
-  const wd=async(suffix,method='GET',body,readOnly=method==='GET')=>{const d=await request(client.hub+'/session/'+sessionId+suffix,method,body,60000,readOnly);return d.value;};
+  report.sessions.push(session);await save();let sessionId,playwright;
+  const wd=async(suffix,method='GET',body,readOnly=method==='GET')=>{if(playwright)return playwright.wd(suffix,method,body);const d=await request(client.hub+'/session/'+sessionId+suffix,method,body,60000,readOnly);return d.value;};
   // Appium Safari does not wait for a Promise returned by execute/sync.
   // Use the standard async callback so physical devices return real evidence.
   const evaluate=async(script,...args)=>{
@@ -70,11 +79,9 @@ for(const matrixId of matrixIds){
   };
   const visible=selector=>evaluate("const e=document.querySelector(arguments[0]);if(!e)return false;const r=e.getBoundingClientRect(),s=getComputedStyle(e);return r.width>0&&r.height>0&&s.visibility!=='hidden'&&s.display!=='none'",selector);
   const click=async selector=>{
-    const info=await evaluate("const n=document.querySelector(arguments[0]);return n?{href:n.href||'',tag:n.tagName,type:n.type||''}:null",selector);
-    if(!info)throw Error('Missing interaction target '+selector);
-    if(/^(tel:|mailto:|https:\/\/wa\.me|https:\/\/.*checkout)/i.test(info.href))throw Error('Refusing a real contact/payment action');
-    await evaluate("document.querySelector(arguments[0]).scrollIntoView({block:'center',behavior:'instant'});return true",selector);
-    const element=await wd('/element','POST',{using:'css selector',value:selector});
+    // Inspect, guard and locate in one command; the interaction remains a native
+    // WebDriver click, with no mutation replay after an uncertain response.
+    const element=await evaluate("const n=document.querySelector(arguments[0]);if(!n)throw Error('Missing interaction target '+arguments[0]);if(/^(tel:|mailto:|https:\\/\\/wa\\.me|https:\\/\\/.*checkout)/i.test(n.href||''))throw Error('Refusing a real contact/payment action');n.scrollIntoView({block:'center',behavior:'instant'});return n",selector);
     await wd('/element/'+element['element-6066-11e4-a52e-4f735466cecf']+'/click','POST',{});
   };
   const snap=async(test,name)=>{await evaluate('return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r(true))))');const encoded=await wd('/screenshot');const file=matrixId+'-'+test.id+'-'+name+'.png';await fs.writeFile(out+'/'+file,Buffer.from(encoded,'base64'));test.screenshots.push(file);};
@@ -84,7 +91,12 @@ for(const matrixId of matrixIds){
     console.log('Starting '+matrixId+' '+device.name+' '+device.version);
     // Physical allocation/boot can outlast 150s. The provider evidence showed
     // successful Android creation immediately before the old client timed out.
-    const created=await request(client.hub+'/session','POST',{capabilities:{alwaysMatch:caps}},desktop?240000:300000);
+    let created;
+    if(transport==='playwright'){
+      playwright=await openTestingBotPlaywright({client,config,device,options:caps['tb:options']});
+      created={value:{sessionId:playwright.sessionId,capabilities:playwright.capabilities}};
+      session.transport='playwright-websocket';session.blockedRequests=playwright.blocked;session.providerBuild=playwright.uniqueBuild;
+    }else created=await request(client.hub+'/session','POST',{capabilities:{alwaysMatch:caps}},desktop?240000:300000);
     sessionId=created.value?.sessionId||created.sessionId;if(!sessionId)throw Error('No session ID');
     session.sessionId=sessionId;session.providerCapabilities=created.value?.capabilities||{};session.dashboard='https://testingbot.com/members/tests/'+sessionId;
     await wd('/timeouts','POST',{pageLoad:60000,script:20000,implicit:1000});
@@ -100,19 +112,21 @@ for(const matrixId of matrixIds){
         if(response.status!==200)throw Error('Target document HTTP '+response.status);
         await wd('/url','POST',{url:target});
         if(desktop)await fitCssViewport(config,{viewport:()=>evaluate('return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r({width:innerWidth,height:innerHeight}))))'),rect:()=>wd('/window/rect'),resize:bounds=>wd('/window/rect','POST',bounds)});
-        await evaluate('return document.fonts.ready.then(()=>true)');
-        t.document=await evaluate("return {url:location.href,title:document.title,canonical:document.querySelector('link[rel=canonical]')?.href,description:document.querySelector('meta[name=description]')?.content,h1:[...document.querySelectorAll('main h1')].map(n=>n.textContent.trim()),width:innerWidth,height:innerHeight,ua:navigator.userAgent,screen:{width:screen.width,height:screen.height},dpr:devicePixelRatio,ready:document.readyState}");
+        // Batch independent observations into one remote read. Keep the named
+        // assertions separate so a failed contract still has exact evidence.
+        const observation=await evaluate('return ('+initialObservation.toString()+')(document,arguments[0],arguments[1],arguments[2],('+evidenceShell.toString()+'))',approvedShell,p.shell||'',new URL(target).pathname);
+        t.document=observation.document;
         await check('Browser/OS identity is actual requested coverage',()=>{const c=session.providerCapabilities;const browser=String(c.browserName||'').toLowerCase().replace('microsoft','');const name=config.browserName.toLowerCase().replace('microsoft','');const ua=t.document.ua;return browser===name&&(desktop?(config.platformName==='WIN11'?/Windows/i.test(ua):/Mac/i.test(ua)):(config.platformName==='iOS'?/iPhone|iPad/i.test(ua):/Android/i.test(ua)));});
         if(desktop)await check('Requested CSS viewport is actually delivered',()=>Math.abs(t.document.width-config.width)<=1&&Math.abs(t.document.height-config.height)<=1);
         await check('Canonical and one meaningful main heading',()=>t.document.canonical===p.canonical&&t.document.h1.length===1&&t.document.h1[0].length>8&&t.document.title.length>15&&t.document.description?.length>30);
         await check('Loaded intended route',()=>new URL(t.document.url).pathname===new URL(target).pathname);
-        await check('No page overflow',()=>evaluate('return document.documentElement.scrollWidth<=innerWidth+1'));
-        if(p.shell==='evidence')await check('Existing evidence header/footer remain present',()=>evaluate('return ('+evidenceShell.toString()+')(document,arguments[0])',new URL(target).pathname));
-        else if(p.shell==='helpline')await check('Existing helpline header/footer remain present',()=>evaluate("return !!document.querySelector('header.site-header')&&!!document.querySelector('footer.site-footer')&&!!document.querySelector('header a[href*=\"9100181181\"]')"));
-        else await check('Shared header/footer and nine usable authority links',()=>evaluate("const hs=document.querySelectorAll('.portal-site-header,.portal-header'),fs=document.querySelectorAll('.portal-site-footer'),a=[...document.querySelectorAll('.portal-main-list>a')];return hs.length>=1&&fs.length===1&&a.length===9&&a.every(n=>n.href&&n.textContent.trim().length>10)"));
-        if(!p.shell)await check('Owner-approved authority wording and full evidence footer are preserved',()=>evaluate("const expected=arguments[0],a=[...document.querySelectorAll('.portal-main-list>a')],normal=s=>s.replace(/\\s+/g,' ').trim();return a.length===expected.main.length&&a.every((n,i)=>normal(n.querySelector('.portal-nav-label')?.textContent||'')===expected.main[i].label&&normal(n.querySelector('.portal-nav-detail')?.textContent||'')===expected.main[i].lines.join(' '))&&document.querySelectorAll('.verify-card').length===36&&document.querySelectorAll('nav.portal-locations li a').length===16&&document.querySelectorAll('nav.portal-community>a').length===8&&document.querySelectorAll('footer a[href$=\"/policies\"]').length===1",approvedShell));
-        await check('Structured data parses and social image exists',()=>evaluate("const s=[...document.querySelectorAll('script[type=\"application/ld+json\"]')];return s.length>0&&s.every(n=>{try{return !!JSON.parse(n.textContent)}catch{return false}})&&(document.querySelector('meta[property=\"og:image\"]')?.content||'').startsWith('https://')"));
-        await check('Usable helpline destination remains available',()=>evaluate("const a=[...document.querySelectorAll('a[href=\"tel:+919100181181\"]')];return a.length>0&&a.some(n=>{const r=n.getBoundingClientRect();return r.width>0&&r.height>0})"));
+        await check('No page overflow',()=>observation.noOverflow);
+        if(p.shell==='evidence')await check('Existing evidence header/footer remain present',()=>observation.evidenceShell);
+        else if(p.shell==='helpline')await check('Existing helpline header/footer remain present',()=>observation.helplineShell);
+        else await check('Shared header/footer and nine usable authority links',()=>observation.sharedShell);
+        if(!p.shell)await check('Owner-approved authority wording and full evidence footer are preserved',()=>observation.authority);
+        await check('Structured data parses and social image exists',()=>observation.structured);
+        await check('Usable helpline destination remains available',()=>observation.phone);
         await snap(t,'opening');
         const gated=await visible('#ask-reader-gate[open]');
         if(process.argv.includes('--visual')&&!p.shell){
