@@ -1,3 +1,7 @@
+## Current shared runtime — PR111/112 delivered,18October2026
+
+GTM8 is live and the paired exact /certified-courses/ repair is merged, deployed and publicly verified. Final sourceb01a6cb7de478291c834ebf2ee530ce2271a2cfe; Portal8e980d3e-082e-4e73-96ee-9e300b0750bc and legacyc3bed3fb-127d-4756-8d95-387417af3168;403routes/3972assets preserved, existing receiver unchanged. See RELEASE-COURSES-ALIAS-20261018.md and PENDING-DELIVERY-REGISTER-20261018.md. Original publisher guard and existing GA4/operations handoff are now delivered as verified private cross-machine artifacts; original-pipeline installation and genuine receiving/GA4 outcomes retain explicit acceptance conditions. Earlier dated entries below are history, not current deployment or pending labels.
+
 ## Current shared runtime — 18 October 2026
 
 PR106 is merged and live. Source969570cf9de529a9a482fe9f7a08eea43b2dbdb0; Portal b143e154-4f61-46fb-904c-6ec21912aa19;403 routes,3970 assets,66 modules. Four exact temporary centre closures now govern cards/nearby choices/forms/receiving validation/schema, preserving historical IDs and central9100 181 181. Regional header/footer handoff and mobile Enrol intrinsic width are corrected. API9748b5aa-d3ad-49bf-8657-8cb2cae0ebee is unchanged. Exact-source CI/TestingBot, public readback and the protected source baseline are verified. See RELEASE-CENTRE-HOLDS-20261018.md.
