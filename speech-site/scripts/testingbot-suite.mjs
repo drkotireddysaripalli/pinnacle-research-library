@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {assertPlaywrightScope,openTestingBotPlaywright} from './testingbot-playwright.mjs';
+import {nativeReaderBlacklist,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe} from './testingbot-native-policy.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
@@ -37,6 +38,7 @@ let source=process.env.GITHUB_SHA||process.env.TESTINGBOT_SOURCE_SHA;
 if(!source)try{const git=process.env.GIT_EXECUTABLE||(process.platform==='win32'?'C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe':'git');source=execFileSync(git,['rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim();}catch{source='unknown';}
 const report={schemaVersion:1,suite,startedAt:stamp,source,build,runnerSha256:await digest(new URL(import.meta.url)),manifestSha256:await digest(new URL('../tests/testingbot/page-manifest.mjs',import.meta.url)),account:{plan:account.plan,secondsBefore:account.seconds,desktopSlots:account.max_concurrent,physicalSlots:account.max_concurrent_mobile},selectedIds:selected.map(r=>r.id),requestedMatrix:matrixIds,sessions:[],pendingPages:manifest.filter(r=>!r.published),declaredLimits:['Public signed-out UI only; actual OAuth/OTP and upstream accepted leads/purchases are not exercised','TestingBot executes our assertions; it does not certify narrative quality or business outcomes','Screenshots require review against approved references; a capture is not visual acceptance','Browser lab timings are not field Core Web Vitals']};
 report.transport=transport;report.visualRequested=process.argv.includes('--visual');
+if(transport==='webdriver'){report.nativePolicySha256=await digest(new URL('./testingbot-native-policy.mjs',import.meta.url));report.declaredLimits.push('Native reader sessions request vendor hostname blocking and must pass non-event GET containment probes before opening production; no measurement receipt is inferred.');}
 if(transport==='playwright'){report.transportSha256=await digest(new URL('./testingbot-playwright.mjs',import.meta.url));report.declaredLimits.push('Playwright WebSocket: Chrome/Windows only; analytics vendors and non-GET writes blocked; no native visual/network/tunnel claim; CSS viewport resizing is not OS window resizing');}
 report.presentationStateSha256=await digest(new URL('../tests/testingbot/presentation-state.mjs',import.meta.url));
 await fs.mkdir(out,{recursive:true});
@@ -91,6 +93,7 @@ for(const matrixId of matrixIds){
     console.log('Starting '+matrixId+' '+device.name+' '+device.version);
     // Physical allocation/boot can outlast 150s. The provider evidence showed
     // successful Android creation immediately before the old client timed out.
+    if(transport==='webdriver')caps['tb:options'].blacklist=nativeReaderBlacklist;
     let created;
     if(transport==='playwright'){
       playwright=await openTestingBotPlaywright({client,config,device,options:caps['tb:options']});
@@ -100,6 +103,11 @@ for(const matrixId of matrixIds){
     sessionId=created.value?.sessionId||created.sessionId;if(!sessionId)throw Error('No session ID');
     session.sessionId=sessionId;session.providerCapabilities=created.value?.capabilities||{};session.dashboard='https://testingbot.com/members/tests/'+sessionId;
     await wd('/timeouts','POST',{pageLoad:60000,script:20000,implicit:1000});
+    if(transport==='webdriver'){
+      await wd('/url','POST',{url:'about:blank'});
+      session.nativeContainment={requestedBlacklist:nativeReaderBlacklist,probes:await evaluate('return ('+nativeReaderProbe.toString()+')(arguments[0])',nativeProbeTargets)};
+      await save();assertNativeReaderProbe(session.nativeContainment.probes);
+    }
     if(desktop)await wd('/window/rect','POST',{width:Math.max(config.width,500),height:config.height+180});
     for(const p of selected){
       const t={id:p.id,canonical:p.canonical,family:p.family,priority:p.priority,status:'running',checks:[],screenshots:[],warnings:p.knownGap?[p.knownGap]:[],skipped:[],startedAt:new Date().toISOString()};session.cases.push(t);await save();
