@@ -27,6 +27,18 @@ test('Daily coverage reserves bounded revisits while progressing through every p
   assert.equal(seen.size,m.filter(r=>r.priority==='p3'&&r.published).length);
 });
 test('Remote JavaScript assertions parse inside the async callback wrapper used by Appium',async()=>{const source=await fs.readFile(new URL('./testingbot-suite.mjs',import.meta.url),'utf8'),tree=ts.createSourceFile('runner.mjs',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.JS);let count=0;const visit=n=>{if(ts.isCallExpression(n)&&n.expression.getText(tree)==='evaluate'&&n.arguments[0]&&ts.isStringLiteral(n.arguments[0])&&!n.arguments[0].text.startsWith('tb:')){assert.doesNotThrow(()=>new Function('return (function(){\n'+n.arguments[0].text+'\n});'));count++;}ts.forEachChild(n,visit);};visit(tree);assert(count>20);});
+test('WebDriver tunnel capability uses the documented key for desktop and physical sessions',async()=>{
+ const source=await fs.readFile(new URL('./testingbot-suite.mjs',import.meta.url),'utf8'),tree=ts.createSourceFile('runner.mjs',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.JS);let expression;
+ const visit=n=>{if(ts.isVariableDeclaration(n)&&n.name.getText(tree)==='caps')expression=n.initializer.getText(tree);ts.forEachChild(n,visit);};visit(tree);assert(expression);
+ const make=new Function('desktop','config','device','process','source','suite','matrixId','stamp','desktopScreenResolution','return '+expression);
+ for(const desktop of [true,false])for(const identifier of [undefined,'exact-scoped-tunnel']){
+  const caps=make(desktop,{platformName:desktop?'WIN11':'iOS',browserName:desktop?'firefox':'safari'},{platform_name:'iOS',name:'iPhone fixture',version:desktop?'157':'18.5'},{env:{TESTINGBOT_TUNNEL_ID:identifier}},'a'.repeat(40),'bvt',desktop?'firefox':'ios','fixture',()=> '1920x1080');
+  assert.equal(caps['tb:options']['tunnel-identifier'],identifier);assert(!Object.hasOwn(caps['tb:options'],'tunnelIdentifier'));
+  assert.equal(Object.hasOwn(caps['tb:options'],'tunnel-identifier'),Boolean(identifier));
+  assert.equal(caps.platformName,desktop?'WIN11':'iOS');if(!desktop){assert.equal(caps['tb:options'].realDevice,true);assert.equal(caps['appium:deviceName'],'iPhone fixture');}
+ }
+});
+
 test('Centre selection assertion covers the embedded callback contract',async()=>{const source=await fs.readFile(new URL('./testingbot-suite.mjs',import.meta.url),'utf8');assert.match(source,/form\?\.dataset\.defaultCentre===expected/);assert.match(source,/choice\?\.value===expected/);});
 test('Full record coverage is bounded, complete, unique and keeps unpublished pages pending',async()=>{const m=await pageManifest(),p3=recordShards(selectCases(m,'p3'));assert.equal(p3.length,7);assert(p3.every(s=>s.length<=28));assert.equal(p3.flat().length,195);assert.equal(new Set(p3.flat()).size,195);assert(!recordShards(m).flat().includes('materials'));assert.throws(()=>recordShards(m,100));});
 test('Approved neutral header is not reused for current-page highlights or a reader backdrop',()=>{const id='chrome-WIN11-1440x900';assert.equal(headerReferenceName(id),'pinnacle-common-v159-'+id);assert.notEqual(headerReferenceName(id,{activePath:'/abilityscore'}),headerReferenceName(id));assert.notEqual(headerReferenceName(id,{gate:true}),headerReferenceName(id));assert.notEqual(headerReferenceName(id,{activePath:'/abilityscore'}),headerReferenceName(id,{activePath:'/pinnacleai'}));});

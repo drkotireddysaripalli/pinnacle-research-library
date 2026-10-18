@@ -33,7 +33,7 @@ try{
   const priorities=evidencePriorities(manifest,profile,state);
   report.evidence.selectedPriorities=Object.fromEntries(plan.flatMap(job=>job.ids||[]).map(id=>[id,priorities[id]]));
   for(const job of plan){
-    const out=dir+'/'+job.name,args=['scripts/testingbot-suite.mjs','--suite',job.suite,'--matrix',job.matrix,'--visual','--out',out,...(job.ids?['--cases',job.ids.join(',')]:[]),...(job.network?['--network']:[])];
+    const out=dir+'/'+job.name,args=[job.matrix==='android'?'scripts/testingbot-android-reader.mjs':'scripts/testingbot-suite.mjs','--suite',job.suite,'--matrix',job.matrix,'--visual','--out',out,...(job.ids?['--cases',job.ids.join(',')]:[]),...(job.network?['--network']:[])];
     await writeJson(lock+'/owner.json',{pid:process.pid,startedAt:report.startedAt,report:dir+'/report.json',activeReport:out+'/report.json'});
     const code=await new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{stdio:'inherit',windowsHide:true});child.once('error',reject);child.once('close',resolve);});
     const evidence=await read(out+'/report.json');
