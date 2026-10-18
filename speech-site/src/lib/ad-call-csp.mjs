@@ -31,6 +31,7 @@ export function augmentCsp(headers) {
     ]);
   }
   next = augmentDirective(next, "img-src", [
+    "https://www.googletagmanager.com",
     "https://googleads.g.doubleclick.net",
     "https://www.google.com",
     "https://www.google.co.in"
