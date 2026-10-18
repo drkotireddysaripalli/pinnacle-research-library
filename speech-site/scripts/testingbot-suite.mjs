@@ -130,7 +130,7 @@ for(const matrixId of matrixIds){
         await check('Canonical and one meaningful main heading',()=>t.document.canonical===p.canonical&&t.document.h1.length===1&&t.document.h1[0].length>8&&t.document.title.length>15&&t.document.description?.length>30);
         await check('Loaded intended route',()=>new URL(t.document.url).pathname===new URL(target).pathname);
         await check('No page overflow',()=>observation.noOverflow);
-        if(p.shell==='evidence')await check('Existing evidence header/footer remain present',()=>observation.evidenceShell);
+        if(p.shell==='evidence')await check('Existing evidence navigation and full footer remain present',()=>observation.evidenceShell);
         else if(p.shell==='helpline')await check('Existing helpline header/footer remain present',()=>observation.helplineShell);
         else await check('Shared header/footer and nine usable authority links',()=>observation.sharedShell);
         if(!p.shell)await check('Owner-approved authority wording and full evidence footer are preserved',()=>observation.authority);
