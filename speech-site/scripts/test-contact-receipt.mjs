@@ -1,3 +1,4 @@
+import {facilityOperatingHold} from '../public/pinnacle-pages-scripts/centre-operating-holds.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {makeContactPayload,validateContact,CONTACT_ATTEMPT_KEY} from '../public/pinnacle-pages-scripts/contact-api.mjs';
 import {CONTACT_PATH,CONTACT_TITLES,CONTACT_TOPICS,CONTACT_FACILITIES} from '../public/pinnacle-pages-scripts/contact-options.mjs';
@@ -33,7 +34,7 @@ test('contact map retains addresses and coordinates while escaping literal line 
 test('published contact options and exact legacy/private shapes agree across every topic, title and facility',()=>{
  assert.equal(CONTACT_FACILITIES.length,62);assert.equal(CONTACT_TITLES.length,8);assert.equal(CONTACT_TOPICS.length,9);
  for(const field of ['subject','title','facilityId'])for(const value of {subject:CONTACT_TOPICS,title:CONTACT_TITLES,facilityId:CONTACT_FACILITIES}[field]){
-  const v={...values,[field]:value},p=makeContactPayload(v,'qa-contact-request');assert.deepEqual(validateContact(v),{});assert(validatePublicContact(p));const legacy=toLegacyContact(p),privateBody=toReceiptContact(legacy,p.requestId,p.source),parsed=parseReceiptContact(privateBody,p.requestId,normaliseAcquisition,CONTACT_FACILITIES);assert(parsed);assert.deepEqual(parsed.lead,legacy);assert.equal(legacy.Name,v.title+'. '+v.name);assert.equal(legacy.FormType,'contact submit');assert(!('Services'in legacy));assert(!('Languages'in legacy));assert.equal(parsed.source.topic,v.subject);
+  const v={...values,[field]:value},p=makeContactPayload(v,'qa-contact-request');if(facilityOperatingHold(v.facilityId)){assert(validateContact(v).facilityId);assert.equal(validatePublicContact(p),false);assert.throws(()=>toLegacyContact(p),/temporarily closed/);continue;}assert.deepEqual(validateContact(v),{});assert(validatePublicContact(p));const legacy=toLegacyContact(p),privateBody=toReceiptContact(legacy,p.requestId,p.source),parsed=parseReceiptContact(privateBody,p.requestId,normaliseAcquisition,CONTACT_FACILITIES);assert(parsed);assert.deepEqual(parsed.lead,legacy);assert.equal(legacy.Name,v.title+'. '+v.name);assert.equal(legacy.FormType,'contact submit');assert(!('Services'in legacy));assert(!('Languages'in legacy));assert.equal(parsed.source.topic,v.subject);
  }
 });
 test('validation retains required fields, exact allowlists and bounded lengths; public private-envelope injection is rejected',()=>{

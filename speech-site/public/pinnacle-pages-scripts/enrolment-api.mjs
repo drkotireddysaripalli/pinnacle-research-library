@@ -1,6 +1,7 @@
 // Public form contract. Cloudflare translates this deliberately small envelope
 // to the existing PinnacleAI enrolment workflow without exposing that service.
 import {normaliseAcquisition} from './enrolment-source.mjs?v=navratri-20261011';
+import {centreOperatingHold} from './centre-operating-holds.mjs?v=centre-operating-holds-20261017';
 export const NAVRATRI_OFFER_REFERENCE='navratri-one-service-month-2026';
 export const services = new Set(['help','autism','speech','occupational','aba','education','other']);
 export function validateEnrolment(values, centreIds) {
@@ -12,6 +13,7 @@ export function validateEnrolment(values, centreIds) {
  if(email&&(email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)))errors.email='Enter a valid email address, or leave it blank.';
  if(!services.has(values.service))errors.service='Choose a service, or select “Help me choose”.';
  if(values.centre&&!centreIds.has(values.centre))errors.centre='Choose a listed centre, or select “Help me find a centre”.';
+ if(centreOperatingHold(values.centre))errors.centre='This centre is temporarily closed. Choose another centre or “Help me find a centre”, or call 9100 181 181.';
  if(typeof values.message!=='string'||values.message.length>500)errors.message='Keep your note to 500 characters or fewer.';
  return errors;
 }

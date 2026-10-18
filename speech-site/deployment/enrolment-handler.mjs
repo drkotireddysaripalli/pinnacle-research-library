@@ -2,6 +2,7 @@ import {centreFacilities} from './centre-facilities.mjs';
 import {toReceiptEnrolment,validReceiptEnvelope} from './enrolment-receipt.mjs';
 import {validPublicEnrolmentSource} from '../public/pinnacle-pages-scripts/enrolment-source.mjs';
 import {validatePublicContact,toLegacyContact,toReceiptContact} from './contact-handler.mjs';
+import {heldEnquiryAssignment} from '../public/pinnacle-pages-scripts/centre-operating-holds.mjs';
 
 export const ENROLMENT_API_PATH='/api/enrolment';
 export const ENROLMENT_UPSTREAM='https://mirracle.pinnacleblooms.org/api/gl/swfs';
@@ -42,6 +43,7 @@ function validEmail(email){return typeof email==='string'&&email.length<=254&&(!
 function validRequestId(value){return typeof value==='string'&&value.length>=8&&value.length<=100&&/^[A-Za-z0-9-]+$/.test(value);}
 
 export function validatePublicEnrolment(body){
+ if(heldEnquiryAssignment(body))return false;
  if(!body||body.schemaVersion!==1||!validRequestId(body.requestId))return false;
  const contact=body.contact,preferences=body.preferences;
  if(!contact||typeof contact.name!=='string'||!contact.name.trim()||contact.name.trim().length>100||!validPhone(contact.phone)||!validEmail(contact.email))return false;
@@ -52,6 +54,7 @@ export function validatePublicEnrolment(body){
 }
 
 export function toLegacyEnrolment(body){
+ if(heldEnquiryAssignment(body))throw new TypeError('Centre temporarily closed');
  const slug=body.preferences.centre;
  const facility=slug?centreFacilities[slug]:null;
  const centreName=facility?.name||CENTRE_WITHOUT_LEGACY_ID[slug]||'Help me find a centre';

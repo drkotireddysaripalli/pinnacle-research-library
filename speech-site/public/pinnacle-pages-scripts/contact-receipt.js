@@ -1,12 +1,14 @@
 import {validateContact,makeContactPayload,CONTACT_ATTEMPT_KEY} from './contact-api.mjs?v=contact-receipt-20261015';
 import {CONTACT_CONTRACT,isParentContact} from './contact-options.mjs?v=contact-receipt-20261015';
 import {submitEnrolment,createAttemptStore,validAcceptedReceipt} from './enrolment-api.mjs?v=contact-receipt-20261015';
+import {applyHeldCentreOptions} from './centre-operating-holds.mjs?v=centre-operating-holds-20261017';
 const form=document.querySelector('#pinnacle-contact[data-contact-contract="durable-contact-v1"]');
 if(form&&!form.dataset.contactClientReady){
  form.dataset.contactClientReady='true';
  const button=form.querySelector('[data-contact-submit]'),status=document.getElementById('pinnacle-contact-status'),summary=document.getElementById('pinnacle-contact-errors');
  const fields={name:'contact-form-name',title:'contact-form-title',phone:'contact-form-mobile',email:'contact-form-email',facilityId:'facility-for',subject:'contact-for',message:'contact-form-message'};
  const inputs=Object.fromEntries(Object.entries(fields).map(([key,id])=>[key,document.getElementById(id)]));
+ applyHeldCentreOptions(inputs.facilityId);
  let store,pending=false,finished=false,uncertain=false,frozen=null,attempt=null,storageReady=false;
  const lock='pbn-contact-request';
  const retry=document.createElement('button');retry.type='button';retry.dataset.contactSecondary='';retry.textContent='Retry the same request';retry.hidden=true;status.after(retry);
