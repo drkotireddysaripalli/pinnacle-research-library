@@ -7,6 +7,8 @@ import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {assertPlaywrightScope,openTestingBotPlaywright} from './testingbot-playwright.mjs';
 import {nativeReaderBlacklist,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe} from './testingbot-native-policy.mjs';
 import {confirmProviderClosure} from './testingbot-provider-close.mjs';
+import {publicDocumentAllowed,heldCentreSnapshotAllowed} from '../tests/testingbot/centre-state.mjs';
+import {centreOperatingHold} from '../public/pinnacle-pages-scripts/centre-operating-holds.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
@@ -41,6 +43,8 @@ const report={schemaVersion:1,suite,startedAt:stamp,source,build,runnerSha256:aw
 report.transport=transport;report.visualRequested=process.argv.includes('--visual');
 report.evidenceShellSha256=await digest(new URL('../tests/testingbot/evidence-shell.mjs',import.meta.url));
 report.providerClosureSha256=await digest(new URL('./testingbot-provider-close.mjs',import.meta.url));
+report.centreStateSha256=await digest(new URL('../tests/testingbot/centre-state.mjs',import.meta.url));
+report.operatingHoldsSha256=await digest(new URL('../public/pinnacle-pages-scripts/centre-operating-holds.mjs',import.meta.url));
 if(transport==='webdriver'){report.nativePolicySha256=await digest(new URL('./testingbot-native-policy.mjs',import.meta.url));report.declaredLimits.push('Native reader sessions request vendor hostname blocking and must pass non-event GET containment probes before opening production; no measurement receipt is inferred.');}
 if(transport==='playwright'){report.transportSha256=await digest(new URL('./testingbot-playwright.mjs',import.meta.url));report.declaredLimits.push('Playwright WebSocket: Chrome/Windows only; analytics vendors and non-GET writes blocked; no native visual/network/tunnel claim; CSS viewport resizing is not OS window resizing');}
 report.presentationStateSha256=await digest(new URL('../tests/testingbot/presentation-state.mjs',import.meta.url));
@@ -119,7 +123,7 @@ for(const matrixId of matrixIds){
       try{
         const target=navigateUrl(p);t.testedUrl=target;
         const response=await fetch(target,{signal:AbortSignal.timeout(30000)});const html=await response.text();t.http={status:response.status,finalUrl:response.url,sha256:createHash('sha256').update(html).digest('hex'),xRobots:response.headers.get('x-robots-tag')};
-        await check('Correct public document loads',()=>response.status===200&&!/noindex/i.test(t.http.xRobots||''));
+        await check('Correct public document loads',()=>publicDocumentAllowed(p,t.http));
         if(response.status!==200)throw Error('Target document HTTP '+response.status);
         await wd('/url','POST',{url:target});
         if(desktop)await fitCssViewport(config,{viewport:()=>evaluate('return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r({width:innerWidth,height:innerHeight}))))'),rect:()=>wd('/window/rect'),resize:bounds=>wd('/window/rect','POST',bounds)});
@@ -203,7 +207,14 @@ for(const matrixId of matrixIds){
             await wd('/url','POST',{url:target});
             await check('Service labels do not split words into narrow columns',()=>evaluate("const labels=[...document.querySelectorAll('.enrol-service-choice span')];return labels.length>=4&&labels.every(n=>{const t=n.firstChild;if(t?.nodeType!==3)return false;return [...t.textContent.matchAll(/\\S+/g)].every(m=>{const r=document.createRange();r.setStart(t,m.index);r.setEnd(t,m.index+m[0].length);return new Set([...r.getClientRects()].map(x=>Math.round(x.top))).size<=1})})"));
           }
-          if(p.kind==='centre'&&(!p.status||p.status==='centre-enquiry'))await check('Centre assessment keeps actual selected centre',()=>evaluate("const expected=arguments[0],a=document.querySelector('.local-hero a[data-cta=\"hero-assessment\"]');if(!a)return false;const u=new URL(a.href);if(u.searchParams.get('centre')===expected)return true;if(u.hash!=='#callback')return false;const form=document.querySelector('#pinnacle-enrolment'),choice=form?.querySelector('#preferred-centre');return form?.dataset.defaultCentre===expected&&choice?.value===expected",p.centre));
+          if(p.kind==='centre'&&(!p.status||p.status==='centre-enquiry')){
+            const hold=centreOperatingHold(p.centre);
+            if(hold)await check('Held centre keeps central help and blocks held assignment',async()=>{
+              const snapshot=await evaluate("const hold=arguments[0],form=document.querySelector('#pinnacle-enrolment'),choice=form?.querySelector('#preferred-centre'),option=[...(choice?.options||[])].find(n=>n.value===hold.id),notice=[...document.querySelectorAll('[data-centre-operating-notice]')].find(n=>n.dataset.centreOperatingNotice===hold.id),hero=document.querySelector('.local-hero a[data-cta=\"hero-assessment\"]');let safeHero=false;if(hero){const u=new URL(hero.href);safeHero=u.origin===location.origin&&u.searchParams.get('centre')!==hold.id&&(u.hash==='#callback'||u.pathname==='/enroll-autism-speech-aba-therapies-india');}return {noticeId:notice?.dataset.centreOperatingNotice,closedNotice:/temporarily closed/i.test(notice?.textContent||''),centralCall:!!notice?.querySelector('a[href=\"tel:+919100181181\"]'),form:!!form,defaultCentre:form?.dataset.defaultCentre,selectedCentre:choice?.value,option:option?{value:option.value,disabled:option.disabled,selected:option.selected}:null,heldAssignmentLinks:[...document.querySelectorAll('a[href]')].filter(a=>{const u=new URL(a.href);return u.origin===location.origin&&['/enroll-autism-speech-aba-therapies-india','/speech-therapy/service-information'].includes(u.pathname)&&u.searchParams.get('centre')===hold.id;}).length,directBranchCall:[...document.querySelectorAll('a[href^=\"tel:\"]')].some(a=>a.getAttribute('href')==='tel:'+hold.directTelephone),safeHero}",hold);
+              t.operatingHold=snapshot;return heldCentreSnapshotAllowed(snapshot,hold.id);
+            });
+            else await check('Centre assessment keeps actual selected centre',()=>evaluate("const expected=arguments[0],a=document.querySelector('.local-hero a[data-cta=\"hero-assessment\"]');if(!a)return false;const u=new URL(a.href);if(u.searchParams.get('centre')===expected)return true;if(u.hash!=='#callback')return false;const form=document.querySelector('#pinnacle-enrolment'),choice=form?.querySelector('#preferred-centre');return form?.dataset.defaultCentre===expected&&choice?.value===expected",p.centre));
+          }
           // Exercise lazy loading without external video/map activation or submitting forms.
           await check('Current viewport images actually decode',async()=>{const evidence=await evaluate("return (async()=>{const images=[...document.querySelectorAll('main img')].filter("+imageInViewport.toString()+");await Promise.all(images.map(n=>Promise.race([n.decode().catch(()=>{}),new Promise(r=>setTimeout(r,4000))])));return {count:images.length,broken:images.filter(n=>!n.complete||!n.naturalWidth).map(n=>n.getAttribute('src'))}})()");t.viewportImages=evidence;if(evidence.broken.length)throw Error(JSON.stringify(evidence));return evidence;});
           const reading=await evaluate("const main=document.querySelector('main'),paras=[...main.querySelectorAll('p')].filter(n=>n.innerText.trim().length>30&&n.getBoundingClientRect().height>0),bad=paras.filter(n=>{const s=getComputedStyle(n);return parseFloat(s.fontSize)<12||n.getBoundingClientRect().width<120}).map(n=>({text:n.innerText.slice(0,120),fontSize:getComputedStyle(n).fontSize,width:n.getBoundingClientRect().width}));const broken=[...main.querySelectorAll('a[href^=\"#\"]')].filter(n=>n.hash.length>1&&!document.getElementById(decodeURIComponent(n.hash.slice(1)))).map(n=>n.hash);return {paragraphs:paras.length,smallText:bad,brokenAnchors:broken}");t.readability=reading;
