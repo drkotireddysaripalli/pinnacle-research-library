@@ -1,3 +1,7 @@
+## Current shared runtime — original acquisition source preserved, 18 October 2026
+
+PR114 is live: source 015cfe2a82a73698f4d070792fb1ac8756a3946d, Portal 0e26b810-8ebc-452c-a012-1902f22fee97. Identical copied campaign fields retain their original landing/capture time. One shared asset changed; all 67 modules, 403 routes, 3972 assets and the existing receiver remain.90 unit tests,6 isolated TestingBot journeys/64 assertions and exact-source CI/5-of-5 BVT pass. Actual live source handoff is verified. The GA4 owner observed QA receipt, with a narrow containment discrepancy retained as NOT clean; no production enquiry submitted, further QA transport suspended. Accepted source checkpoint is readback-verified. See RELEASE-GA4-JOURNEY-20261018.md. Older deployment labels below are history.
+
 ## Current shared runtime — PR111/112 delivered,18October2026
 
 GTM8 is live and the paired exact /certified-courses/ repair is merged, deployed and publicly verified. Final sourceb01a6cb7de478291c834ebf2ee530ce2271a2cfe; Portal8e980d3e-082e-4e73-96ee-9e300b0750bc and legacyc3bed3fb-127d-4756-8d95-387417af3168;403routes/3972assets preserved, existing receiver unchanged. See RELEASE-COURSES-ALIAS-20261018.md and PENDING-DELIVERY-REGISTER-20261018.md. Original publisher guard and existing GA4/operations handoff are now delivered as verified private cross-machine artifacts; original-pipeline installation and genuine receiving/GA4 outcomes retain explicit acceptance conditions. Earlier dated entries below are history, not current deployment or pending labels.
