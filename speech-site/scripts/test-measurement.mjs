@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {KNOWN_GOOGLE_ADS_CAMPAIGN_IDS,normaliseAcquisition,safeAcquisitionValue} from '../public/pinnacle-pages-scripts/enrolment-source.mjs';
 const source = fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const key='pinnacle-speech-analytics-v1';
 test('consented public journeys retain only recognised referrer origins, never answer or search details',()=>{
@@ -22,18 +23,112 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
 function harness({contact=false,callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null}={}){
- const listeners={},buttons={},scripts=[],cookies=[],writes=[];
+ const listeners={},buttons={},scripts=[],cookies=[],writes=[],dispatched=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
  const doc={referrer,visibilityState:'visible',body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-contact[')?(contact?{dataset:{contactContract:'durable-contact-v1'}}:null):s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
+ doc.dispatchEvent=event=>{dispatched.push(event);listeners[event.type]?.(event);return true;};
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={__qaProgress:detail=>listeners['pinnacle:enquiry-progress']?.({detail}),addEventListener:(event,fn)=>{const previous=listeners['window:'+event];listeners['window:'+event]=data=>{previous?.(data);fn(data);};}};
  class FakePerformanceObserver{constructor(callback){this.callback=callback;}observe(options){this.callback({getEntries:()=>performanceEntries?.[options.type]||[]});}disconnect(){}}
  const testMath=Object.create(Math);testMath.random=()=>0;const privacy={globalPrivacyControl:gpc};
- vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:privacy,localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
- return {privacy,dispatch:(name,detail)=>listeners[name]?.({detail}),win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:privacy,localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Event,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
+ return {privacy,dispatched,dispatch:(name,detail)=>listeners[name]?.({detail}),win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={},isTrusted=true)=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({isTrusted,target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
+
+test('verified numeric campaign IDs have public, collector and receiver parity only under utm_id',()=>{
+ assert.equal(KNOWN_GOOGLE_ADS_CAMPAIGN_IDS.length,155);
+ assert.equal(new Set(KNOWN_GOOGLE_ADS_CAMPAIGN_IDS).size,155);
+ for(const id of KNOWN_GOOGLE_ADS_CAMPAIGN_IDS){
+  assert.equal(safeAcquisitionValue(id,'utm_id'),id);
+  const h=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&utm_id='+id});h.choose('accepted');
+  const acquisition=JSON.parse(JSON.stringify(h.win.pinnacleEnquirySource()));
+  assert.equal(acquisition.fields.utm_id,id);
+  assert.deepEqual(normaliseAcquisition(acquisition),acquisition);
+  assert.equal(h.events().find(e=>e[1]==='page_view')[2].campaign_id,id);
+ }
+ for(const value of ['9100181181','919100181181','9876543210','24332444157','24332444156.0','+24332444156','phone_24332444156','child_id_24332444156','name@example.test']){
+  assert.equal(safeAcquisitionValue(value,'utm_id'),null,value);
+  const h=harness({search:'?utm_id='+encodeURIComponent(value)+'&utm_source=google'});h.choose('accepted');
+  assert.equal(h.win.pinnacleEnquirySource()?.fields?.utm_id,undefined,value);
+ }
+ for(const field of ['utm_campaign','utm_term','utm_content','gclid'])assert.equal(safeAcquisitionValue('24332444156',field),null,field);
+});
+
+const protectionSignals=h=>Array.from(h.win.dataLayer||[]).filter(x=>x&&typeof x==='object'&&!Array.isArray(x)&&['pinnacle_contact_intent','pinnacle_enquiry_accepted'].includes(x.event));
+test('accepted protection signal queues once without a vendor, payload or synthetic conversion',()=>{
+ const h=harness({path:canonicalEnrolment,search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech'});h.choose('accepted');
+ h.dispatch('pinnacle:enquiry-progress',{stage:'attempt'});h.accepted({schemaVersion:1,requestId:'short',id:'invalid'});
+ assert.equal(protectionSignals(h).length,0);
+ h.accepted();h.accepted();h.accepted({schemaVersion:1,requestId:'another-request',id:'another-receipt'});
+ assert.equal(h.win.CG,undefined);
+ assert.equal(protectionSignals(h).length,1);
+ assert.deepEqual(JSON.parse(JSON.stringify(protectionSignals(h))),[{event:'pinnacle_enquiry_accepted'}]);
+ assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,2,'Existing receipt analytics stays distinct from one protection signal');
+});
+test('contact protection is trusted central intent only, rate limited and distinct from accepted enquiries',()=>{
+ const h=harness({path:canonicalEnrolment,search:''});h.choose('accepted');
+ for(const href of ['tel:+919999999999','https://wa.me/919999999999','https://wa.me.example.test/919100181181','https://api.whatsapp.com/send?phone=919100181181&phone=919999999999'])h.click('hero-call',href);
+ h.click('hero-call','tel:+919100181181',{},false);
+ assert.equal(protectionSignals(h).length,0);
+ for(let i=0;i<20;i++){h.click('hero-call','tel:+919100181181');h.click('hero-whatsapp','https://wa.me/919100181181?text=PRIVATE_FIXTURE');}
+ assert.deepEqual(JSON.parse(JSON.stringify(protectionSignals(h))),[{event:'pinnacle_contact_intent'}]);
+ assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,0,'Contact intent is never an accepted enquiry');
+ h.accepted();assert.deepEqual(JSON.parse(JSON.stringify(protectionSignals(h))),[{event:'pinnacle_contact_intent'},{event:'pinnacle_enquiry_accepted'}]);
+ assert(!JSON.stringify(protectionSignals(h)).includes('PRIVATE_FIXTURE'));
+});
+test('conversion-protection bridges stay silent for consent refusal, expiry, GPC, QA and private pages',()=>{
+ for(const options of [{},{gpc:true},{search:'?validation_test=1'},{search:'?utm_source=google&utm_medium=cpc&utm_campaign=PINNACLE_QA_ONLY'},{path:'/ask/account',origin:'https://pinnacleblooms.org',variant:'ask'},{path:'/patients/private-fixture'}]){
+  const h=harness({path:canonicalEnrolment,search:'',...options});
+  if(options.path?.includes('account')||options.path?.startsWith('/patients/')){assert.equal(protectionSignals(h).length,0);assert.equal(h.events().length,0);continue;}
+  if(Object.keys(options).length)h.choose('accepted');
+  h.click('hero-call','tel:+919100181181');h.accepted();assert.equal(protectionSignals(h).length,0,JSON.stringify(options));
+ }
+ for(const mode of ['declined','expired','withdrawn','unavailable-storage']){
+  const h=harness({path:canonicalEnrolment,search:'',storageThrows:mode==='unavailable-storage'});h.choose('accepted');
+  if(mode==='declined')h.choose('declined');
+  if(mode==='expired')h.store.set(key,JSON.stringify({value:'accepted',at:Date.now()-181*86400000}));
+  if(mode==='withdrawn')h.store.delete(key);
+  h.click('hero-call','tel:+919100181181');h.accepted();assert.equal(protectionSignals(h).length,0,mode);
+ }
+});
+test('a protection queue failure does not prevent the canonical contact or accepted analytics',()=>{
+ const h=harness({path:canonicalEnrolment,search:''});h.choose('accepted');
+ const original=h.win.dataLayer.push.bind(h.win.dataLayer);h.win.dataLayer.push=value=>{if(value?.event?.startsWith('pinnacle_'))throw Error('Simulated GTM queue failure');return original(value);};
+ assert.doesNotThrow(()=>h.click('hero-call','tel:+919100181181'));
+ assert.doesNotThrow(()=>h.accepted());
+ assert(h.events().some(e=>e[1]==='phone_link_click'));assert(h.events().some(e=>e[1]==='enquiry_accepted'));
+});
+test('late SDK consumers get a boolean permission recheck and payload-free refusal cancellation',()=>{
+ const h=harness({path:canonicalEnrolment,search:''});
+ assert.equal(h.win.pinnacleProtectionAllowed(),false);h.choose('accepted');assert.equal(h.win.pinnacleProtectionAllowed(),true);
+ h.click('hero-call','tel:+919100181181');assert.equal(protectionSignals(h).length,1);
+ h.choose('declined');assert.equal(h.win.pinnacleProtectionAllowed(),false);
+ assert.equal(h.dispatched.filter(e=>e.type==='pinnacle_protection_cancel').length,1);
+ assert.equal(h.dispatched[0].detail,undefined);
+ h.choose('accepted');h.click('hero-call','tel:+919100181181');assert.equal(protectionSignals(h).length,1,'Previously queued intent is not replayed');
+ h.store.set(key,JSON.stringify({value:'accepted',at:Date.now()-181*86400000}));assert.equal(h.win.pinnacleProtectionAllowed(),false);
+ h.store.set(key,JSON.stringify({value:'accepted',at:Date.now()}));assert.equal(h.win.pinnacleProtectionAllowed(),true);
+ h.privacy.globalPrivacyControl=true;assert.equal(h.win.pinnacleProtectionAllowed(),false);
+ const qa=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=PINNACLE_QA_ONLY'});qa.choose('accepted');assert.equal(qa.win.pinnacleProtectionAllowed(),false);
+ const gpc=harness({gpc:true});assert(gpc.dispatched.some(e=>e.type==='pinnacle_protection_cancel'));
+});
+test('reviewed legacy templates use one opt-in collector and a coarse assessment identity',()=>{
+ for(const [path,coarse]of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses']]){
+  const h=harness({path,variant:'legacy_public_template',search:'?utm_source=google&utm_medium=cpc&utm_id=24332444156&name=PRIVATE_FIXTURE'});
+  assert.equal(h.events().filter(e=>e[1]==='page_view').length,0);assert.equal(h.win.pinnacleProtectionAllowed(),false);
+  assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'),'Existing minimal denied-storage Ads semantics remain unchanged');
+  h.choose('accepted');h.click('footer-call','tel:+919100181181');
+  const view=h.events().find(e=>e[1]==='page_view');assert.equal(new URL(view[2].page_location).pathname,coarse);
+  const acquisition=JSON.parse(JSON.stringify(h.win.pinnacleEnquirySource()));assert.equal(acquisition.landingPath,coarse);assert.deepEqual(normaliseAcquisition(acquisition),acquisition);
+  assert(!JSON.stringify(h.win.dataLayer).includes('PRIVATE_FIXTURE'));
+  h.choose('declined');assert.equal(h.win.pinnacleProtectionAllowed(),false);
+  for(const options of [{gpc:true},{search:'?validation_test=1'},{search:'?q=PRIVATE_FIXTURE'}]){const blocked=harness({path,variant:'legacy_public_template',...options});blocked.choose('accepted');blocked.click('footer-call','tel:+919100181181');assert.equal(blocked.events().length,0);assert.equal(protectionSignals(blocked).length,0);}
+ }
+ assert.equal(normaliseAcquisition({schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/assessments/stuttering-assessment',fields:{utm_source:'google'}}),null,'Private topic path never enters receiver attribution');
+ const missingMarker=harness({path:'/certified-courses',search:''});missingMarker.choose('accepted');assert.equal(missingMarker.events().length,0);
+});
 
 test('homepage uses the shared stream with populated reporting dimensions',()=>{
  const h=harness({path:'/',search:''});h.choose('accepted');

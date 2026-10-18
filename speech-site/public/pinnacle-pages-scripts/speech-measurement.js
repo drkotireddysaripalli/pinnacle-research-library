@@ -51,6 +51,12 @@
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   pages['/books/resources/first-conversation'] = {title:'Free First Conversation Planning Sheet',group:'family_resource',service:'help'};
   const pagePath = location.pathname;
+  const legacyPublicTemplate=location.origin===origin&&document.body?.dataset.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses'].includes(pagePath);
+  if(legacyPublicTemplate){
+    pages[pagePath]=pagePath==='/certified-courses'
+      ?{title:'Pinnacle Professional Learning',group:'professional_learning',service:'help'}
+      :{title:'Pinnacle Assessment Information',group:'developmental_assessment',service:'help',measurementPath:'/speech-aba-autism-assessments'};
+  }
   const contactPage=pagePath==='/contact-national-autism-helpline-24-7'&&document.querySelector('#pinnacle-contact[data-contact-contract="durable-contact-v1"]')?.dataset?.contactContract==='durable-contact-v1';
   if(contactPage)pages[pagePath]={title:'Contact Pinnacle Blooms',group:'contact',service:'help'};
   if(/^\/(?:account|auth|admin|internal|private|customer|customers|patient|patients|payroll|reports|report|documents|document)(?:\/|$)/i.test(pagePath))return;
@@ -60,7 +66,7 @@
   // Knowledge families use fixed buckets: never send questions, story IDs or searches.
   const knowledgePath = legacyKnowledge?'legacy-knowledge':location.origin === origin && document.body?.dataset.pageVariant === 'knowledge'
     ? (/^\/mirracles\/\d+(?:\/|$)/.test(pagePath)?'allmirracles':pagePath.match(/^\/(faq|sunshine|allmirracles|materials|interventions)(?:\/|$)/)?.[1]) : null;
-  const knowledgeSearch = !!knowledgePath && new URL(location.href).searchParams.has('q');
+  const knowledgeSearch = (!!knowledgePath||legacyPublicTemplate) && new URL(location.href).searchParams.has('q');
   const canonical = isAsk ? 'https://pinnacleblooms.org/ask' : origin + (knowledgePath ? '/'+knowledgePath : pages[pagePath]?.measurementPath || pagePath);
   const pageConfig = pages[pagePath] || (knowledgePath ? {title:'Pinnacle Knowledge Library',group:'knowledge',service:'help'} : null) || (isAsk ? {title:'Ask Pinnacle',group:'ask',service:'help'} : null) || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
   const pageTitle = pageConfig?.title || document.title;
@@ -76,11 +82,15 @@
   const validHelplineFields=fields=>!!fields&&typeof fields==='object'&&!Array.isArray(fields)&&Object.keys(fields).length===3&&fields.utm_source==='chatgpt'&&fields.utm_medium==='paid'&&helplineCampaigns.has(fields.utm_campaign);
   const campaigns = Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
   const measurementURL = new URL(canonical);
-  const safeAttribution = (value, click) => {
+  // Keep this explicit public-ID set in parity with the shared receiver validator.
+  const knownGoogleAdsCampaignIds = new Set(["15340172547","15342772051","15345343142","15354492632","15410631276","15413188987","15416361515","15420705510","15422686714","15432947413","15454505906","16267659093","17430732638","17437197720","17714915698","18396274735","18590437867","20544678845","20544772051","20545400635","20548667278","20548688812","20588599080","20637879982","20726403779","20737568791","21097964139","21104736236","21106795656","21108028792","21108070054","21781203250","21814666781","21818529070","21822581429","21834560771","21834624209","21841955750","21842000123","21845614507","21845755342","21860786291","21873580048","21876816365","22297271692","22834256612","22838210062","23717098995","23722206176","23722246949","23722546298","23726650789","23726936563","23729053395","23729053632","23732018301","23732073522","23732073549","23732073552","23732073744","23732096874","23732098053","23732098203","23732111226","23732126781","23732188203","23732219493","23732280408","23732280432","23732280606","23732280645","23732335416","23732372055","23732372862","23732373063","23732466957","23732475522","23733005883","23733006126","23733029721","23733043878","23733044052","23734264760","23737227821","23737228001","23737239545","23737250090","23737250108","23737250849","23737280393","23737302131","23737312049","23737326926","23737327157","23737341104","23737341119","23737378787","23737386947","23737421507","23737421939","23737421987","23737421990","23737539791","23738212283","23738212460","23738212697","23738913244","23738913274","23741866921","23741867182","23741881591","23741940367","23741951650","23741951653","23741951887","23741967052","23741967058","23741979580","23741980078","23741980201","23742023941","23742023965","23742116110","23742170623","23742171022","23742171088","23742210124","23742210181","23742304498","23742304522","23742304534","23742817573","23742817582","23742818389","23742841894","23742854764","23742855046","23742855550","24295750691","24318442248","24318505173","24318506094","24323765198","24332444156","24334732992","24335035560","24335145489","24339607862","24340273595","24340279580","24346349935","24346359358","24346769519","24346889656","24352675399"]);
+  const safeAttribution = (value, key) => {
+    const click = clickKeys.includes(key);
     if (typeof value !== 'string') return null;
     value = value.trim();
     if (!value || value.length > (click ? 256 : 128) ||
         !(click ? /^[A-Za-z0-9._~-]+$/ : /^[A-Za-z0-9][A-Za-z0-9._~ -]*$/).test(value)) return null;
+    if (key === 'utm_id' && knownGoogleAdsCampaignIds.has(value)) return value;
     // Encoded/nested values, email addresses, phone-like strings, credentials
     // and private clinical/free-text labels are not campaign identifiers.
     const words = value.replace(/[._~-]/g,' ');
@@ -102,7 +112,7 @@
     for (const key of [...campaignKeys,...clickKeys]) {
       const values = parameters.getAll(key);
       if (values.length !== 1) continue;
-      const value = safeAttribution(values[0],clickKeys.includes(key));
+      const value = safeAttribution(values[0],key);
       if (value === null) continue;
       measurementURL.searchParams.set(key,value);
       if (Object.hasOwn(campaignFields,key)) campaigns[campaignFields[key]] = value;
@@ -157,6 +167,7 @@
   const acquisitionPath=location.pathname==='/speech-therapy/service-information'?'/top-speech-therapy-center-india-proven-improvement-rate':new URL(canonical).pathname;
   const acquisitionPaths=new Set(['/','/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
   acquisitionPaths.add(helplinePath);
+  acquisitionPaths.add('/certified-courses');
   if(disclosure&&!isBookshop)disclosure.textContent+=' With permission, a validated campaign record can stay on this device for up to 30 days and accompany your enquiry into our protected receiving system. Turning analytics off removes this optional device record.';
   const handedOffLinks=new Map();
   const forgetSource=()=>{for(const [link,href]of handedOffLinks)link.href=href;handedOffLinks.clear();try{localStorage.removeItem(sourceKey);}catch{}};
@@ -171,7 +182,7 @@
       const saved=snapshot===undefined?JSON.parse(localStorage.getItem(sourceKey)):snapshot;
       if(!saved||Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(key))||saved.schemaVersion!==1||saved.consent!=='analytics_accepted'||!Number.isSafeInteger(saved.capturedAt)||saved.capturedAt>Date.now()||Date.now()-saved.capturedAt>sourceLifetime||!acquisitionPaths.has(saved.landingPath)){if(saved&&snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
       if(saved.landingPath===helplinePath&&(!savedPermission(helplineChoiceKey)||!validHelplineFields(saved.fields))){if(snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
-      const fields={};for(const [field,value]of Object.entries(saved.fields||{})){if(![...campaignKeys,...clickKeys].includes(field)||safeAttribution(value,clickKeys.includes(field))!==value)return null;fields[field]=value;}
+      const fields={};for(const [field,value]of Object.entries(saved.fields||{})){if(![...campaignKeys,...clickKeys].includes(field)||safeAttribution(value,field)!==value)return null;fields[field]=value;}
       if(!Object.keys(fields).length)return null;
       return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields};
     }catch{return null;}
@@ -240,6 +251,36 @@
     };
     document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')emit();});
     window.addEventListener?.('pagehide',emit,{once:true});
+  };
+  // One fixed signal of each kind per document, with no vendor/user payload.
+  // A GTM consumer may use these for traffic protection; they are not Ads goals
+  // or qualified leads. Never replay after refusal, QA, or an unavailable vendor.
+  const protectionEvents = window.__pinnacleProtectionEvents || (window.__pinnacleProtectionEvents = new Set());
+  const labelledProtectionQA = value => typeof value === 'string' && /(?:^|[ _.-])(?:qa|fixture|validation)(?:$|[ _.-])/i.test(value);
+  // The deferred SDK consumer must recheck permission when it actually calls
+  // the vendor. This API exposes only a boolean, never attribution or identity.
+  window.pinnacleProtectionAllowed = () => {
+    try {
+      const currentURL = new URL(location.href);
+      return !!(production && enabled && preference === 'accepted' && savedPermission(key) &&
+        !blocked && !navigator.globalPrivacyControl && !knowledgeSearch && !validationTraffic &&
+        !currentURL.searchParams.has('validation_test') &&
+        !/^\/(?:account|auth|admin|internal|private|customer|customers|patient|patients|payroll|reports|report|documents|document)(?:\/|$)/i.test(location.pathname) &&
+        !/^\/ask\/(?:te\/)?(?:account|auth|api|search)(?:\/|$)/.test(location.pathname) &&
+        !labelledProtectionQA(currentURL.searchParams.get('utm_campaign')) &&
+        !labelledProtectionQA(readSource()?.fields?.utm_campaign));
+    } catch { return false; }
+  };
+  const queueProtectionEvent = (name, acceptedSource = null) => {
+    if (!['pinnacle_contact_intent','pinnacle_enquiry_accepted'].includes(name) ||
+        !window.pinnacleProtectionAllowed() || protectionEvents.has(name) ||
+        labelledProtectionQA(acceptedSource?.fields?.utm_campaign)) return false;
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({event:name});
+      protectionEvents.add(name);
+      return true;
+    } catch { return false; } // Never interfere with contact navigation or receipt handling.
   };
   // These identify tagged navigation/contact intent, never completed calls or
   // conversions. Use only the already sanitised current/permitted source fields.
@@ -386,6 +427,9 @@
       catch { enabled=false; tell('Analytics is unavailable. Your enquiry and call links still work.'); }
     } else {
       enabled=false;window['ga-disable-'+id]=true;
+      // Cancel an already queued SDK consumer on refusal/GPC. No payload,
+      // conversion or GA4 behaviour is added; its pending work must not replay.
+      try { document.dispatchEvent(new Event('pinnacle_protection_cancel')); } catch {}
       if(!isBookshop)forgetSource();
       if (tagStarted) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
       clearCookies();
@@ -450,6 +494,7 @@
         const acceptedCampaigns=Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
         for(const [field,name]of Object.entries(campaignFields))if(acceptedSource?.fields[field])acceptedCampaigns[name]=acceptedSource.fields[field];
         send('enquiry_accepted',{...parameters,...acceptedCampaigns});
+        queueProtectionEvent('pinnacle_enquiry_accepted',acceptedSource);
       }
       else window.gtag('event','enquiry_accepted',{...parameters,page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
       acceptedRequests.add(receipt.requestId);
@@ -470,6 +515,7 @@
       const placement = contactLink.dataset?.cta;
       sendGoogleAds('google_ads_phone_click',{interaction_kind:'contact_tap',link_placement:callPlacements.has(placement)?placement:'central-phone',destination:'national_helpline'});
       send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:callPlacements.has(placement)?placement:isBookshop?'bookshop-contact':'central-phone',destination:'national_helpline'});
+      if (event.isTrusted === true) queueProtectionEvent('pinnacle_contact_intent');
       return; // One canonical central-phone event; keep native navigation unchanged.
     }
     try {
@@ -484,6 +530,7 @@
         const placements = new Set(['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp']);
         sendGoogleAds('google_ads_whatsapp_click',{interaction_kind:'contact_tap',link_placement:placements.has(placement)?placement:'central-whatsapp',destination:'national_helpline'});
         send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline'});
+        if (event.isTrusted === true) queueProtectionEvent('pinnacle_contact_intent');
         return; // One event per contact tap; sharing text never enters the event.
       }
     } catch {}

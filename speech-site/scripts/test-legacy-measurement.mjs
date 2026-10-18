@@ -24,6 +24,33 @@ test('unknown mixed tag owners and different canonical identities cannot silentl
  const path='/t/bead-stringing-therapy';assert.equal(migrateLegacyPrefix(fixture(path).replace('</head>',"<script>gtag('event', 'other_owner'); // G-2BYLRLFRDJ</script></head>"),request(path)),null);
  assert.equal(migrateLegacyPrefix(fixture('/t/different'),request(path)),null);
 });
+test('two reviewed templates need explicit ownership activation and keep the ClickGUARD GTM container',()=>{
+ for(const path of ['/assessments/stuttering-assessment','/certified-courses']){
+  const original=fixture(path).replace('</body>',LEGACY_NOSCRIPT_TAGS[0]+'</body>');
+  assert.equal(legacyMeasurementScope(request(path)),'reviewed-public-template');
+  assert.equal(migrateLegacyPrefix(original,request(path)),null);
+  const result=migrateLegacyPrefix(original,request(path),{preserveGtm:true});assert(result);
+  assert.equal(result.preserveGtm,true);assert.equal(result.removed,LEGACY_TAGS.length-1);
+  assert(result.html.includes(LEGACY_TAGS[0]));assert(result.html.includes(LEGACY_NOSCRIPT_TAGS[0]));
+  assert(!result.html.includes("gtag('config', 'G-2BYLRLFRDJ')"));assert(!result.html.includes("gtag('config', 'AW-10810823199')"));
+  assert.equal(result.html.match(/defer src="\/pinnacle-pages-scripts\/speech-measurement\.js/g)?.length,1);
+  assert(result.html.includes('data-page-variant="legacy_public_template"'));
+  assert(result.controls.includes('data-speech-measurement'));assert(!result.html.includes('early-v3'));
+  assert.equal(migrateLegacyPrefix(original.replace('</head>',"<script>gtag('event','unknown');</script></head>"),request(path),{preserveGtm:true})?.removed,LEGACY_TAGS.length-1,'Unrelated script stays untouched');
+  assert.equal(migrateLegacyPrefix(original.replace('</head>',"<script>gtag('config','G-UNKNOWN'); // G-2BYLRLFRDJ</script></head>"),request(path),{preserveGtm:true}),null);
+ }
+ for(const path of ['/assessments/other','/certified-courses/private'])assert.equal(legacyMeasurementScope(request(path)),null);
+ const privateResult=migrateLegacyPrefix(fixture('/patients/private'),request('/patients/private'),{preserveGtm:true});assert(!privateResult.html.includes('GTM-W9ZHX459'));
+});
+test('reviewed template activation leaves private response, no-transform and CSP guards intact',async()=>{
+ const path='/assessments/stuttering-assessment';
+ const original=new Response(fixture(path),{headers:{'content-type':'text/html'}});
+ assert.equal(await repairLegacyExclusions(request(path),original),original,'Not active without the explicit paired release option');
+ for(const [req,headers]of [[request(path),{'content-security-policy':"default-src 'self'"}],[request(path),{'cache-control':'no-transform'}],[request(path),{'set-cookie':'fixture=1'}],[new Request('https://www.pinnacleblooms.org'+path,{headers:{authorization:'offline-fixture'}}),{}]]){
+  const r=new Response(fixture(path),{headers:{'content-type':'text/html',...headers}});
+  assert.equal(await repairLegacyExclusions(req,r,{reviewedPublicTemplates:true}),r);
+ }
+});
 test('reviewed mixed snippets preserve their icon and review-widget functionality',()=>{
  const path='/t/bead-stringing-therapy',result=migrateLegacyPrefix(fixture(path).replace('</head>',LEGACY_TAG_REPLACEMENTS[0][0]+'</head>'),request(path));
  assert(result);assert(result.html.includes(LEGACY_TAG_REPLACEMENTS[0][1]));assert(result.html.includes('fontawesome'));assert(result.html.includes('trustpilot'));assert(!result.html.includes('gtagScript.src'));
