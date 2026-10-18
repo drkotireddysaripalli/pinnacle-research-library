@@ -2,7 +2,7 @@
 // Only the exact session created by this runner may be stopped.
 const active=new Set(['START','RUNNING','WAITING','QUEUED','PENDING']);
 export function providerIsClosed(p){
- return typeof p?.completed_at==='string'&&Number.isFinite(Date.parse(p.completed_at))&&typeof p.state==='string'&&!active.has(p.state.toUpperCase());
+ return typeof p?.completed_at==='string'&&Number.isFinite(Date.parse(p.completed_at))&&typeof p.state==='string'&&p.state.trim().length>0&&!active.has(p.state.toUpperCase());
 }
 export function canAllocateAfterReport(report){
  return !!report?.finishedAt&&report.sessions?.length>0&&report.sessions.every(s=>!!s.sessionId&&s.closed===true);
