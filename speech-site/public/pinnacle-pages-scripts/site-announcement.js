@@ -14,8 +14,10 @@
   if(!config)return;
   const current=new URL(location.href),target=new URL(config.enquiryPath,'https://www.pinnacleblooms.org');
   for(const [name,value]of current.searchParams)if(name==='gclid'||name==='gbraid'||name==='wbraid'||name.startsWith('utm_'))target.searchParams.append(name,value);
-  if(bar.dataset.announcementCentre&&!current.searchParams.has('centre'))target.searchParams.set('centre',bar.dataset.announcementCentre);
-  else if(current.searchParams.getAll('centre').length===1)target.searchParams.set('centre',current.searchParams.get('centre'));
+  const activeCentres=new Set((bar.dataset.announcementCentres||'').split(',').filter(Boolean));
+  const selectedCentre=current.searchParams.has('centre')?(current.searchParams.getAll('centre').length===1?current.searchParams.get('centre'):null):bar.dataset.announcementCentre;
+  target.searchParams.delete('centre');
+  if(activeCentres.has(selectedCentre))target.searchParams.set('centre',selectedCentre);
   const services=['help','autism','speech','occupational','aba','education','other'];
   if(current.searchParams.getAll('service').length===1&&services.includes(current.searchParams.get('service')))target.searchParams.set('service',current.searchParams.get('service'));
   else if(bar.dataset.announcementService)target.searchParams.set('service',bar.dataset.announcementService);
