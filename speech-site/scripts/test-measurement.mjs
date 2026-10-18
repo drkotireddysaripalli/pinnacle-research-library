@@ -131,7 +131,7 @@ test('late SDK consumers get a boolean permission recheck and payload-free refus
  const gpc=harness({gpc:true});assert(gpc.dispatched.some(e=>e.type==='pinnacle_protection_cancel'));
 });
 test('reviewed legacy templates use one opt-in collector and a coarse assessment identity',()=>{
- for(const [path,coarse]of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses']]){
+ for(const [path,coarse]of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses'],['/certified-courses/','/certified-courses']]){
   const h=harness({path,variant:'legacy_public_template',search:'?utm_source=google&utm_medium=cpc&utm_id=24332444156&name=PRIVATE_FIXTURE'});
   assert.equal(h.events().filter(e=>e[1]==='page_view').length,0);assert.equal(h.win.pinnacleProtectionAllowed(),false);
   assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'),'Existing minimal denied-storage Ads semantics remain unchanged');
@@ -144,6 +144,22 @@ test('reviewed legacy templates use one opt-in collector and a coarse assessment
  }
  assert.equal(normaliseAcquisition({schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/assessments/stuttering-assessment',fields:{utm_source:'google'}}),null,'Private topic path never enters receiver attribution');
  const missingMarker=harness({path:'/certified-courses',search:''});missingMarker.choose('accepted');assert.equal(missingMarker.events().length,0);
+});
+
+test('only the reviewed courses slash alias gains consented collector and protection coverage',()=>{
+ const h=harness({path:'/certified-courses/',variant:'legacy_public_template',search:'?utm_source=google&utm_medium=cpc&utm_campaign=Courses_Public&utm_id=24332444156'});
+ assert.equal(h.win.pinnacleProtectionAllowed(),false);assert.equal(h.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,0);
+ h.choose('accepted');assert.equal(h.win.pinnacleProtectionAllowed(),true);
+ assert.equal(h.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,1);
+ assert.equal(h.win.pinnacleEnquirySource().landingPath,'/certified-courses');
+ const view=h.events().find(e=>e[1]==='page_view'),location=new URL(view[2].page_location);assert.equal(location.pathname,'/certified-courses');assert.equal(location.searchParams.get('utm_id'),'24332444156');
+ h.click('footer-call','tel:+919100181181');assert.deepEqual(JSON.parse(JSON.stringify(protectionSignals(h))),[{event:'pinnacle_contact_intent'}]);
+ h.choose('declined');assert.equal(h.win.pinnacleProtectionAllowed(),false);assert(h.dispatched.some(e=>e.type==='pinnacle_protection_cancel'));
+ for(const opts of [{gpc:true},{search:'?validation_test=1'},{search:'?utm_campaign=PINNACLE_QA_ONLY'},{search:'?name=PRIVATE_FIXTURE'},{saved:{value:'accepted',at:1}}]){
+  const blocked=harness({path:'/certified-courses/',variant:'legacy_public_template',search:'',...opts});if(!opts.saved)blocked.choose('accepted');assert.equal(blocked.win.pinnacleProtectionAllowed(),false);assert.equal(blocked.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,0);
+ }
+ for(const path of ['/certified-courses//','/certified-courses/private','/assessments/stuttering-assessment/']){const outside=harness({path,variant:'legacy_public_template',search:''});outside.choose('accepted');assert.equal(outside.events().length,0);assert.equal(outside.win.pinnacleProtectionAllowed?.()??false,false);}
+ const unmarked=harness({path:'/certified-courses/',search:''});unmarked.choose('accepted');assert.equal(unmarked.events().length,0);
 });
 
 test('homepage uses the shared stream with populated reporting dimensions',()=>{

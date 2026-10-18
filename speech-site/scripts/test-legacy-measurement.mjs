@@ -42,13 +42,26 @@ test('two reviewed templates need explicit ownership activation and keep the Cli
  for(const path of ['/assessments/other','/certified-courses/private'])assert.equal(legacyMeasurementScope(request(path)),null);
  const privateResult=migrateLegacyPrefix(fixture('/patients/private'),request('/patients/private'),{preserveGtm:true});assert(!privateResult.html.includes('GTM-W9ZHX459'));
 });
+test('the exact courses slash alias retains either existing courses canonical and fingerprint gates',()=>{
+ const path='/certified-courses/',canonical='/certified-courses',url=request(path+'?utm_source=google&utm_id=24332444156');
+ const original=fixture(canonical).replace('</body>',LEGACY_NOSCRIPT_TAGS[0]+'<a href="tel:+919100181181">Call</a></body>');
+ assert.equal(legacyMeasurementScope(url),'reviewed-public-template');
+ const result=migrateLegacyPrefix(original,url,{preserveGtm:true});assert(result);assert.equal(result.removed,LEGACY_TAGS.length-1);
+ assert(result.html.includes('href="https://www.pinnacleblooms.org/certified-courses"'));assert(result.html.includes('href="tel:+919100181181"'));assert(result.html.includes(LEGACY_TAGS[0]));assert(result.html.includes(LEGACY_NOSCRIPT_TAGS[0]));assert.equal(url.url,'https://www.pinnacleblooms.org'+path+'?utm_source=google&utm_id=24332444156');
+ const selfCanonical=migrateLegacyPrefix(fixture(path),url,{preserveGtm:true});assert(selfCanonical);assert(selfCanonical.html.includes('href="https://www.pinnacleblooms.org/certified-courses/"'),'Existing slash canonical is preserved, not rewritten');
+ assert.equal(migrateLegacyPrefix(fixture('/other'),url,{preserveGtm:true}),null);
+ assert.equal(migrateLegacyPrefix(original.replace('</head>',"<script>gtag('config','G-UNKNOWN'); // G-2BYLRLFRDJ</script></head>"),url,{preserveGtm:true}),null);
+ for(const outside of ['/certified-courses//','/certified-courses/private','/assessments/stuttering-assessment/'])assert.equal(legacyMeasurementScope(request(outside)),null);
+});
+
 test('reviewed template activation leaves private response, no-transform and CSP guards intact',async()=>{
- const path='/assessments/stuttering-assessment';
+ for(const path of ['/assessments/stuttering-assessment','/certified-courses/']){
  const original=new Response(fixture(path),{headers:{'content-type':'text/html'}});
  assert.equal(await repairLegacyExclusions(request(path),original,{reviewedPublicTemplates:false}),original,'Explicit rollback option preserves the original response');
  for(const [req,headers]of [[request(path),{'content-security-policy':"default-src 'self'"}],[request(path),{'cache-control':'no-transform'}],[request(path),{'set-cookie':'fixture=1'}],[new Request('https://www.pinnacleblooms.org'+path,{headers:{authorization:'offline-fixture'}}),{}]]){
   const r=new Response(fixture(path),{headers:{'content-type':'text/html',...headers}});
   assert.equal(await repairLegacyExclusions(req,r,{reviewedPublicTemplates:true}),r);
+ }
  }
 });
 test('reviewed mixed snippets preserve their icon and review-widget functionality',()=>{

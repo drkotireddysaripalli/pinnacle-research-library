@@ -52,10 +52,11 @@
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   pages['/books/resources/first-conversation'] = {title:'Free First Conversation Planning Sheet',group:'family_resource',service:'help'};
   const pagePath = location.pathname;
-  const legacyPublicTemplate=location.origin===origin&&document.body?.dataset.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses'].includes(pagePath);
+  const publicCourses=['/certified-courses','/certified-courses/'].includes(pagePath);
+  const legacyPublicTemplate=location.origin===origin&&document.body?.dataset.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses','/certified-courses/'].includes(pagePath);
   if(legacyPublicTemplate){
-    pages[pagePath]=pagePath==='/certified-courses'
-      ?{title:'Pinnacle Professional Learning',group:'professional_learning',service:'help'}
+    pages[pagePath]=publicCourses
+      ?{title:'Pinnacle Professional Learning',group:'professional_learning',service:'help',measurementPath:'/certified-courses'}
       :{title:'Pinnacle Assessment Information',group:'developmental_assessment',service:'help',measurementPath:'/speech-aba-autism-assessments'};
   }
   const contactPage=pagePath==='/contact-national-autism-helpline-24-7'&&document.querySelector('#pinnacle-contact[data-contact-contract="durable-contact-v1"]')?.dataset?.contactContract==='durable-contact-v1';
@@ -267,7 +268,7 @@
       const u=new URL(value);
       if(u.protocol!=='https:'||u.username||u.password||u.port)return false;
       if(u.origin!==origin)return referrer&&['www.google.com','www.google.co.in','www.bing.com','chatgpt.com'].includes(u.hostname)&&u.pathname==='/'&&!u.search&&!u.hash;
-      const config=pages[u.pathname],reviewed=['/assessments/stuttering-assessment','/certified-courses'].includes(u.pathname);
+      const config=pages[u.pathname],reviewed=['/assessments/stuttering-assessment','/certified-courses','/certified-courses/'].includes(u.pathname);
       if(!(config&&protectionGroups.has(config.group))&&!Object.hasOwn(documents,u.pathname)&&!reviewed)return false;
       if(u.hash&&!['#enrolment-form','#speech-assessment-enquiry','#navratri-one-service-month-offer'].includes(u.hash))return false;
       const seen=new Set();
