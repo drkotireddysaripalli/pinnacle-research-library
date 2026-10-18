@@ -1,5 +1,6 @@
 import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=navratri-20261011';
 import {nativePaidCentre,PAID_LOCALITY_CONTRACT} from './enrolment-routing.mjs?v=paid-locality-20261017-regional';
+import {centreOperatingHold,applyHeldCentreOptions} from './centre-operating-holds.mjs?v=centre-operating-holds-20261017';
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
@@ -9,7 +10,8 @@ if(form){
  const offerReference=form.dataset.offerReference||'';
  const offerValues=new URL(location.href).searchParams.getAll('offer');
  const activeOffer=()=>offerValues.length===1&&offerValues[0]===offerReference&&offerReference==='navratri-one-service-month-2026'&&form.dataset.offerReference===offerReference&&form.dataset.offerEnabled!=='false'&&Date.now()<Date.parse('2026-10-25T23:59:00+05:30')?offerReference:'';
- const centreIds=new Set([...centre.options].map(o=>o.value));
+ applyHeldCentreOptions(centre);
+ const centreIds=new Set([...centre.options].filter(o=>!o.disabled&&!centreOperatingHold(o.value)).map(o=>o.value));
  const centreCard=document.getElementById('enrol-centre-card'),centreAnnouncement=document.getElementById('enrol-centre-announcement');
  function renderCentre(announce=false){
   const selection=document.getElementById('callback-selection');

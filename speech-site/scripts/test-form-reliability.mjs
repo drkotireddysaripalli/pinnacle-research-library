@@ -3,6 +3,7 @@ import vm from 'node:vm';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {nativePaidCentre,PAID_LOCALITY_CONTRACT} from '../public/pinnacle-pages-scripts/enrolment-routing.mjs';
+import {centreOperatingHold,applyHeldCentreOptions} from '../public/pinnacle-pages-scripts/centre-operating-holds.mjs';
 const source=fs.readFileSync(new URL('../public/pinnacle-pages-scripts/enrolment.js',import.meta.url),'utf8').replace(/^import[^\n]+\n/gm,'');
 function harness({preview=false,invalid=false,result='accepted',writeFails=false,storageFails=false,saved=null,endpointAllowed=true}={}){
  const events=[],nodes=new Map();let receiverCalls=0,state=saved;
@@ -13,7 +14,7 @@ function harness({preview=false,invalid=false,result='accepted',writeFails=false
  const document={getElementById:node,createElement:()=>node('generated-'+nodes.size),querySelector:()=>null,querySelectorAll:()=>[],dispatchEvent:event=>events.push(event)};
  const store={read:()=>state,write:value=>{if(writeFails)throw Error('storage');state=value;},clear:()=>{state=null;}};
  const localStorage={setItem(){if(storageFails)throw Error('storage');},removeItem(){}};
- vm.runInNewContext(source,{document,window:{pinnacleEnquirySource:()=>null},location:{href:'https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india',origin:'https://www.pinnacleblooms.org',search:'',reload(){}},navigator:{},localStorage,crypto:{randomUUID:()=> 'private-request'},services:new Set(['help']),nativePaidCentre,PAID_LOCALITY_CONTRACT,approvedEndpoint:()=>endpointAllowed,validateEnrolment:()=>invalid?{name:'PRIVATE_ERROR_MESSAGE'}:{},makePayload:()=>({requestId:'private-request',source:{}}),createAttemptStore:()=>store,submitEnrolment:async()=>{receiverCalls++;return {state:result,receipt:{schemaVersion:1,requestId:'private-request',id:'private-receipt'},contractVersion:1};},CustomEvent:class{constructor(type,options){this.type=type;this.detail=options.detail;}},Date,URL,URLSearchParams,queueMicrotask});
+ vm.runInNewContext(source,{document,window:{pinnacleEnquirySource:()=>null},location:{href:'https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india',origin:'https://www.pinnacleblooms.org',search:'',reload(){}},navigator:{},localStorage,crypto:{randomUUID:()=> 'private-request'},services:new Set(['help']),nativePaidCentre,PAID_LOCALITY_CONTRACT,centreOperatingHold,applyHeldCentreOptions,approvedEndpoint:()=>endpointAllowed,validateEnrolment:()=>invalid?{name:'PRIVATE_ERROR_MESSAGE'}:{},makePayload:()=>({requestId:'private-request',source:{}}),createAttemptStore:()=>store,submitEnrolment:async()=>{receiverCalls++;return {state:result,receipt:{schemaVersion:1,requestId:'private-request',id:'private-receipt'},contractVersion:1};},CustomEvent:class{constructor(type,options){this.type=type;this.detail=options.detail;}},Date,URL,URLSearchParams,queueMicrotask});
  const progress=()=>events.filter(e=>e.type==='pinnacle:enquiry-progress').map(e=>JSON.parse(JSON.stringify(e.detail)));
  return{progress,events,get receiverCalls(){return receiverCalls;},focus:()=>form.listeners.focusin?.forEach(f=>f()),submit:async()=>{for(const f of form.listeners.submit||[])await f({preventDefault(){}});}};
 }

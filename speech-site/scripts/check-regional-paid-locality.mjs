@@ -14,7 +14,7 @@ try{
    if(!['local.pinnacle.test','www.pinnacleblooms.org'].includes(url.hostname)){blockedExternal++;return route.abort();}
    if(url.pathname==='/pinnacle-pages-scripts/enrolment-routing.mjs')return route.fulfill({contentType:'text/javascript',body:assets.routing});
    if(url.pathname==='/pinnacle-pages-scripts/enrolment.js')return route.fulfill({contentType:'text/javascript',body:assets.enrolment});
-   const relative=decodeURIComponent(url.pathname).replace(/^\//,'');
+   const relative=url.pathname==='/top-speech-therapy-center-india-proven-improvement-rate'?'index.html':decodeURIComponent(url.pathname).replace(/^\//,'');
    if(relative.includes('..'))return route.abort();
    const file=['dist/'+relative,'dist/'+relative+'.html','public/'+relative].find(f=>fs.existsSync(f)&&fs.statSync(f).isFile());
    if(!file)return route.abort();
@@ -33,7 +33,7 @@ try{
   // deliberately separate from the published functional enquiry choices.
   for(const [centre,service] of [['gajuwaka','occupational'],['jagadamba','speech']]){
    const row=rows.find(r=>r.centre===centre&&r.service===service),paid=new URL(row.url);
-   await page.goto('http://local.pinnacle.test'+paid.pathname+paid.search,{waitUntil:'domcontentloaded'});
+   await page.goto(paid.origin+paid.pathname+paid.search,{waitUntil:'domcontentloaded'});
    await page.waitForFunction(()=>document.body.dataset.paidLocality==='native-paid-locality-20261017-regional');
    const links=await page.evaluate(()=>['header','footer'].map(scope=>({scope,targets:[...document.querySelectorAll(scope+' a[data-paid-locality]')].map(a=>a.href).filter(h=>new URL(h).pathname==='/enroll-autism-speech-aba-therapies-india')})));
    for(const group of links){assert(group.targets.length>0,group.scope+' enquiry link exists');assert(group.targets.some(h=>{const u=new URL(h);return u.searchParams.get('centre')===centre&&u.searchParams.get('service')===service;}),group.scope+' retains '+centre);}

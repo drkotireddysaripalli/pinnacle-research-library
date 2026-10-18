@@ -1,4 +1,5 @@
 // Functional navigation only: no storage, event, source-envelope or intake mutation.
+import {centreOperatingHold} from './centre-operating-holds.mjs?v=centre-operating-holds-20261017';
 export const PAID_LOCALITY_CONTRACT='native-paid-locality-20261017-regional';
 const heldMarkets=new Set(['himayatnagar','kondapur','gachibowli']);
 const services={speech:'speech',ot:'occupational',aba:'aba'};
@@ -13,7 +14,7 @@ export function nativePaidCentre(search,{service='help',centres}={}){
  if(!match||/^paradise(?:-|$)/.test(match[1])||service!=='help'&&services[match[2]]!==service)return null;
  if(!Object.hasOwn(paidCentreAliases,match[1]))return null;
  const centre=paidCentreAliases[match[1]];
- if(!centre||heldMarkets.has(centre)||centres&&!centres.has(centre))return null;
+ if(!centre||heldMarkets.has(centre)||centreOperatingHold(centre)||centres&&!centres.has(centre))return null;
  return {centre,service:services[match[2]]};
 }
 export function applyPaidEnquiryLinks(document,currentURL,options){
@@ -22,7 +23,7 @@ export function applyPaidEnquiryLinks(document,currentURL,options){
  const service=knownServices.has(explicitService)?explicitService:options?.service;
  const hint=nativePaidCentre(current.search,{...options,service});
  const raw=one('centre'),alias=raw==='suchitra2'?'suchitraii':raw;
- const centre=current.searchParams.has('centre')?options?.centres?.has(alias)?alias:null:hint?.centre;
+ const centre=current.searchParams.has('centre')?options?.centres?.has(alias)&&!centreOperatingHold(alias)?alias:null:hint?.centre;
  if(!knownServices.has(service)&&!centre)return 0;
  let updated=0;
  for(const link of document.querySelectorAll('a[href]')){
