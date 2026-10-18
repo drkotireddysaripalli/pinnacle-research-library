@@ -13,9 +13,9 @@ const values={name:'ISOLATED FIXTURE',title:'Mx',phone:'0000000000',email:'fixtu
 const payload=()=>makeContactPayload(values,'qa-contact-request');
 const request=body=>new Request('https://www.pinnacleblooms.org/api/enrolment',{method:'POST',headers:{origin:'https://www.pinnacleblooms.org','content-type':'application/json','idempotency-key':body.requestId},body:JSON.stringify(body)});
 test('outer contact asset precedence serves the complete maintained dependency closure before old embedded assets',async()=>{
- const base='https://www.pinnacleblooms.org';assert.equal(contactReceiptAssets.size,6);
+ const base='https://www.pinnacleblooms.org';assert.equal(contactReceiptAssets.size,7);
  const env={ASSETS:{fetch:async r=>new Response(await fs.readFile(new URL('../public'+new URL(r.url).pathname,import.meta.url)))}};
- for(const name of ['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js']){
+ for(const name of ['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js','protection-consumer.mjs']){
   const p='/pinnacle-pages-scripts/'+name,r=await serveContactReceiptAsset(new Request(base+p+'?v=contact-receipt-20261015'),env);assert.equal(r.status,200,name);assert.equal(await r.text(),await fs.readFile(new URL('../public'+p,import.meta.url),'utf8'),name);
   assert.equal((await serveContactReceiptAsset(new Request(base+p,{method:'POST'}),env)).status,405);
   assert.equal(await (await serveContactReceiptAsset(new Request(base+p,{method:'HEAD'}),env)).text(),'');

@@ -30,6 +30,15 @@ test('private and unrelated paths and nonproduction hosts stay uninstrumented',(
  }
  assert(!harness({host:'local.invalid'}).win.__pinnacleAdCallConsent);
 });
+test('reviewed legacy templates need their owner marker and retain coarse opt-in call identity',()=>{
+ for(const [path,coarse]of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses']]){
+  assert(!harness({path,host:'www.pinnacleblooms.org'}).win.__pinnacleAdCallConsent);
+  const h=harness({path,host:'www.pinnacleblooms.org',variant:'legacy_public_template'});assert(h.win.__pinnacleAdCallConsent);assert.equal(h.scripts.length,0);
+  h.choose('accepted');assert.equal(h.scripts.length,1);
+  const config=h.commands().find(x=>x[0]==='config'&&x[1]===action)[2];assert.equal(config.page_location,'https://www.pinnacleblooms.org'+coarse);assert.equal(config.page_referrer,'');
+  h.choose('declined');assert.equal(h.central.getAttribute('href'),'tel:+919100181181');
+ }
+});
 test('public paid centre/service/assessment/enrolment paths expose consent, with default-off and local-number protection',()=>{
  const centres=JSON.parse(fs.readFileSync('src/data/centre-register.json','utf8')).centres;
  const paths=['/','/centers','/autism-therapy','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/speech-aba-autism-assessments','/enroll-autism-speech-aba-therapies-india',...centres.map(c=>new URL(c.profileUrl).pathname)];
