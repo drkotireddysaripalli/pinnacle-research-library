@@ -49,9 +49,9 @@ export function stripLegacyNoscript(body){
  const tokens=[...new Set(LEGACY_NOSCRIPT_TAGS.flatMap(t=>[t,t.replaceAll('\r\n','\n')]))],keep=Math.max(...tokens.map(t=>t.length))-1,decoder=new TextDecoder(),encoder=new TextEncoder();let pending='';
  return body.pipeThrough(new TransformStream({transform(bytes,c){pending+=decoder.decode(bytes,{stream:true});for(const token of tokens)pending=pending.replaceAll(token,'');if(pending.length>keep){c.enqueue(encoder.encode(pending.slice(0,-keep)));pending=pending.slice(-keep);}},flush(c){pending+=decoder.decode();for(const token of tokens)pending=pending.replaceAll(token,'');c.enqueue(encoder.encode(pending));}}));
 }
-// Public measurement stays staged: only the independently reviewed exclusion
-// is active. No public collector, preferences, call helper or links are added.
-export async function repairLegacyExclusions(request,response,{reviewedPublicTemplates=false}={}){
+// The two fingerprinted templates are enabled after published GTM v7 ownership
+// exclusions. Every other public family retains its previous exclusion policy.
+export async function repairLegacyExclusions(request,response,{reviewedPublicTemplates=true}={}){
  const scope=legacyMeasurementScope(request);
  if(scope==='reviewed-public-template')return reviewedPublicTemplates?repairLegacyMeasurement(request,response,{preserveGtm:true}):response;
  if(scope!=='private'&&(request.headers.has('authorization')||response.headers.has('set-cookie')))return response;

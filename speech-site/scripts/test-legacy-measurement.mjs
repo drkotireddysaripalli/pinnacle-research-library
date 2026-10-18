@@ -45,7 +45,7 @@ test('two reviewed templates need explicit ownership activation and keep the Cli
 test('reviewed template activation leaves private response, no-transform and CSP guards intact',async()=>{
  const path='/assessments/stuttering-assessment';
  const original=new Response(fixture(path),{headers:{'content-type':'text/html'}});
- assert.equal(await repairLegacyExclusions(request(path),original),original,'Not active without the explicit paired release option');
+ assert.equal(await repairLegacyExclusions(request(path),original,{reviewedPublicTemplates:false}),original,'Explicit rollback option preserves the original response');
  for(const [req,headers]of [[request(path),{'content-security-policy':"default-src 'self'"}],[request(path),{'cache-control':'no-transform'}],[request(path),{'set-cookie':'fixture=1'}],[new Request('https://www.pinnacleblooms.org'+path,{headers:{authorization:'offline-fixture'}}),{}]]){
   const r=new Response(fixture(path),{headers:{'content-type':'text/html',...headers}});
   assert.equal(await repairLegacyExclusions(req,r,{reviewedPublicTemplates:true}),r);

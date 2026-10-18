@@ -365,7 +365,7 @@ function stripLegacyNoscript(body) {
     c.enqueue(encoder.encode(pending));
   } }));
 }
-async function repairLegacyExclusions(request, response, { reviewedPublicTemplates: reviewedPublicTemplates2 = false } = {}) {
+async function repairLegacyExclusions(request, response, { reviewedPublicTemplates: reviewedPublicTemplates2 = true } = {}) {
   const scope = legacyMeasurementScope(request);
   if (scope === "reviewed-public-template") return reviewedPublicTemplates2 ? repairLegacyMeasurement(request, response, { preserveGtm: true }) : response;
   if (scope !== "private" && (request.headers.has("authorization") || response.headers.has("set-cookie"))) return response;

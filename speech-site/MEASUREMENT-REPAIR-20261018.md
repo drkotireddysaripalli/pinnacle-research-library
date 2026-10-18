@@ -1,5 +1,15 @@
 # Measurement source repair — 18 October 2026
 
+## Current paired activation
+
+GTM-W9ZHX459 version **7** is published and independently read back. Tags 3/6/7/9 have both the exact two-path exclusion and canonical-owner exclusion. The exported callback passed 14 offline behavior checks; the configuration passed 15 checks. Public configuration SHA-256: `159f6186b28cea174474ef7fcfd0ae006982fd230c0fa976583395d8f5da5111`. The verified publication clearance is recorded in PR107.
+
+The reviewed implementation at `92ae05741faa603f7ca8e397ca02286510a35af1` passed full trusted CI **39103977043**, including 5/5 TestingBot cases and 82 assertions. Following the publication clearance, both reviewed-template gates are enabled. This activation changes only those gates, their generated runtime and the explicit rollback fixture. Its affected checks and final source gate must be recorded before publication; the earlier CI is not relabelled as a new-source run.
+
+The first-party external consumer is the managed-page SDK owner. The native GTM tags are excluded there and on the exact two migrated legacy paths. No new GTM container is loaded by managed pages. The consumer reuses the existing SDK, checks current permission/GPC/QA/URL boundaries and makes one no-argument invocation at most per document. Genuine vendor receipt and family outcomes remain separate.
+
+The staged-preparation notes below document the original held state and are superseded by this activation section where they describe false activation flags or publication still pending.
+
 Prepared on `codex/measurement-coverage-20261018`, based on main `5ed3506fe07607dd6703a13427e6fa84392895fd`.
 
 ## Exact change
