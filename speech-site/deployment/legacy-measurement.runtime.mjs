@@ -322,7 +322,7 @@ function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   if (!tags.length || tags.some((tag) => !fingerprints.has(normal(tag)))) return null;
   if (scope !== "private") {
     const u = new URL(request.url), canonical = /\blink\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["']/i.exec(prefix)?.[1];
-    const canonicalMatches = canonical === u.origin + u.pathname || u.pathname === "/certified-courses/" && canonical === u.origin + "/certified-courses";
+    const canonicalMatches = canonical === u.origin + u.pathname || u.pathname === "/certified-courses/" && canonical === u.origin + "/certified-courses" || scope === "reviewed-public-template" && canonical?.replaceAll("&amp;", "&") === u.href;
     if (!canonicalMatches || !tags.some((t) => t.includes("GTM-W9ZHX459")) || !tags.some((t) => t.includes("gtag('config', 'G-2BYLRLFRDJ')")) || !tags.some((t) => t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'"))) return null;
   }
   let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? preserveGtm && isKnownGtmLoader(tag) ? tag : replacements.get(normal(tag)) || "" : tag);
