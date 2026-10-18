@@ -13,7 +13,72 @@ on:
 permissions:
   contents: read
 jobs:
+  change-plan:
+    runs-on: ubuntu-latest
+    outputs:
+      ask: ${{ steps.plan.outputs.ask }}
+      portal: ${{ steps.plan.outputs.portal }}
+      focused: ${{ steps.plan.outputs.focused }}
+      scope: ${{ steps.plan.outputs.scope }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'build-window/.node-version'
+      - id: plan
+        name: Select affected acceptance gates
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          if [ "$EVENT_NAME" = 'workflow_dispatch' ]; then
+            node speech-site/scripts/change-test-plan.mjs --full --base "$HEAD_SHA" --head "$HEAD_SHA"
+          elif [ "$EVENT_NAME" = 'push' ] && [ "$REF_NAME" != 'main' ]; then
+            # Use the complete branch delta, not only the last commit: a later
+            # narrow fix must not hide earlier unpassed runtime changes.
+            node speech-site/scripts/change-test-plan.mjs --base origin/main --head "$HEAD_SHA"
+          else
+            node speech-site/scripts/change-test-plan.mjs --base "$BASE_SHA" --head "$HEAD_SHA"
+          fi
+  focused:
+    needs: change-plan
+    if: needs.change-plan.outputs.focused == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'build-window/.node-version'
+      - name: Reuse only identical successful focused inputs
+        uses: actions/cache@v4
+        with:
+          path: speech-site/audits/change-testing
+          key: portal-focused-${{ runner.os }}-${{ hashFiles('build-window/.node-version', 'build-window/.npm-version', '.github/workflows/portal-quality.yml', 'speech-site/scripts/change-test-plan.mjs', 'speech-site/scripts/test-change-test-plan.mjs', 'speech-site/scripts/test-protection-csp.mjs', 'speech-site/deployment/protection-csp.mjs', 'speech-site/CHANGE-BASED-TESTING.md', 'speech-site/package*.json') }}
+      - name: Run selected scope without building unrelated pages
+        env:
+          TEST_SCOPE: ${{ needs.change-plan.outputs.scope }}
+        run: |
+          node --input-type=module - <<'JS'
+          import {runFocused} from './speech-site/scripts/change-test-plan.mjs';
+          const scope=process.env.TEST_SCOPE;
+          if(!['policy','control'].includes(scope))throw Error('Unrecognized focused scope');
+          const suites=scope==='policy'?['scripts/test-protection-csp.mjs']:['scripts/test-change-test-plan.mjs'];
+          console.log(JSON.stringify(runFocused({scope,suites,requiredReleaseEvidence:scope==='policy'?['Affected serving Worker and live policy readback remain required']:[]})));
+          JS
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: changed-scope-evidence
+          path: speech-site/audits/change-testing/
+          retention-days: 14
   ask-build:
+    needs: change-plan
+    if: needs.change-plan.outputs.ask == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 5
     defaults:
@@ -35,9 +100,10 @@ jobs:
         run: node ../build-window/ci-focused.mjs
       - run: npm run build:ask
   checks:
+    needs: change-plan
     # Internal branches already run this exact source on push. Fork PRs retain
     # their untrusted checks; trusted push/dispatch remains the release gate.
-    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
+    if: needs.change-plan.outputs.portal == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository)
     runs-on: ubuntu-latest
     concurrency:
       group: portal-testingbot-builds
