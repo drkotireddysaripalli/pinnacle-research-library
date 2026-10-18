@@ -6,7 +6,7 @@ export function evidenceShell(document, pathname) {
   if (!header || !footer) return false;
   const links = [...header.querySelectorAll('a')];
   if (links.length >= 4) return true; // Preserve the established full-header contract.
-  const compactRecords = /^\/verify\/evidence\/(?:records\/|publications\/|(?:recognition-register|research-library|scale-register|scale-and-mission)\.html$)/.test(pathname);
+  const compactRecords = /^\/verify\/evidence\/(?:records\/|publications\/|(?:recognition-register|research-library|scale-register|scale-and-mission|hfr-register|global-context|evidence-register)\.html$)/.test(pathname);
   const familyGuide = /^\/verify\/guides\/(?:te\/|hi\/)?(?:abilityscore|everyday-practice|licences-and-scope)\.html$/.test(pathname);
   const studyIndex = pathname === '/verify/evidence/study-index.html';
   if (!compactRecords && !familyGuide && !studyIndex) return false;
