@@ -11,15 +11,20 @@ export const nativeBlockedHosts=Object.freeze([
 ]);
 export const nativeReaderBlacklist=nativeBlockedHosts.join(',');
 export const nativeProbeTargets=Object.freeze([
- Object.freeze({name:'public-control',url:'https://www.pinnacleblooms.org/favicon.ico',expected:'reachable'}),
+ Object.freeze({name:'public-control',url:'https://www.pinnacleblooms.org/robots.txt',expected:'reachable'}),
  Object.freeze({name:'analytics-denied',url:'https://www.google-analytics.com/robots.txt',expected:'blocked'}),
  Object.freeze({name:'tag-loader-denied',url:'https://www.googletagmanager.com/robots.txt',expected:'blocked'})
 ]);
-// Initial blank document only. Non-event GETs with no identifiers or cookies.
+export function assertNativeProbeDocument(document){
+ if(document?.url!==nativeProbeTargets[0].url||!/^text\/plain(?:;|$)/i.test(document.contentType||'')||document.scripts!==0)throw Error('Native probe document is not the exact non-instrumented text resource; no production page may be opened');
+ return true;
+}
+// Existing non-instrumented first-party text document only. Non-event GETs
+// with no identifiers or cookies. Browsers require follow for no-cors mode.
 export async function nativeReaderProbe(targets){
  return Promise.all(targets.map(async({name,url,expected})=>{
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);let outcome;
-  try{await fetch(url,{method:'GET',mode:'no-cors',credentials:'omit',cache:'no-store',redirect:'error',signal:controller.signal});outcome='reachable';}
+  try{await fetch(url,{method:'GET',mode:'no-cors',credentials:'omit',cache:'no-store',redirect:'follow',signal:controller.signal});outcome='reachable';}
   catch(error){outcome=error?.name==='AbortError'?'timeout':'blocked';}
   finally{clearTimeout(timer);}
   return{name,expected,outcome,passed:outcome===expected};
