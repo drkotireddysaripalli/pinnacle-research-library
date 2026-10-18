@@ -1,6 +1,6 @@
 import {repairLegacyMeasurement,serveLegacyMeasurementCall} from './legacy-measurement.mjs';
 import {CONTACT_PATH} from '../public/pinnacle-pages-scripts/contact-options.mjs';
-export const contactReceiptAssets=new Set(['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js'].map(n=>'/pinnacle-pages-scripts/'+n));
+export const contactReceiptAssets=new Set(['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js','protection-consumer.mjs'].map(n=>'/pinnacle-pages-scripts/'+n));
 // The maintained legacy map emits address text directly into double-quoted
 // rows. Preserve every address/coordinate/link and escape only literal line
 // breaks in that exact data position, which otherwise invalidate the script.
