@@ -1,3 +1,9 @@
+## Current shared runtime — 18 October 2026
+
+PR106 is merged and live. Source969570cf9de529a9a482fe9f7a08eea43b2dbdb0; Portal b143e154-4f61-46fb-904c-6ec21912aa19;403 routes,3970 assets,66 modules. Four exact temporary centre closures now govern cards/nearby choices/forms/receiving validation/schema, preserving historical IDs and central9100 181 181. Regional header/footer handoff and mobile Enrol intrinsic width are corrected. API9748b5aa-d3ad-49bf-8657-8cb2cae0ebee is unchanged. Exact-source CI/TestingBot, public readback and the protected source baseline are verified. See RELEASE-CENTRE-HOLDS-20261018.md.
+
+Original API-pipeline guard remains pending repository access (Bharath-Innovation-Labs-P-LIMITED/PinnaclePlanetScale returns404 to both existing GitHub access paths). Keep that dependency accountable before its next deployment. Legacy Contact overflow and existing migration/device/outcome gaps remain documented; earlier page-queue decisions below are preserved.
+
 # Current page work — 7 October 2026
 
 ## Reassess completion — live, 15 October 2026
