@@ -1,6 +1,7 @@
 // Explicit full record run, sharded to avoid an oversized browser session.
 import fs from 'node:fs/promises';import path from 'node:path';import {spawn} from 'node:child_process';
 import {pageManifest,selectCases} from '../tests/testingbot/page-manifest.mjs';
+import {canAllocateAfterReport} from './testingbot-provider-close.mjs';
 import {recordShards} from '../tests/testingbot/record-shards.mjs';import {writeJson} from './testingbot-client.mjs';
 const option=(name,fallback)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
 const suite=option('suite','p3'),matrix=option('matrix','chrome'),transport=option('transport','webdriver'),manifest=await pageManifest(),records=selectCases(manifest,suite,{ids:option('cases','').split(',').filter(Boolean)}),shards=recordShards(records);
@@ -16,7 +17,7 @@ for(const [i,ids] of shards.entries()){
   const code=await new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{stdio:'inherit',windowsHide:true});child.once('error',reject);child.once('close',resolve);});
   let r;try{r=JSON.parse(await fs.readFile(dir+'/report.json','utf8'));}catch{r={overall:'missing-report',sessions:[]};}
   report.runs.push({index:i+1,ids,executedIds:[...new Set((r.sessions||[]).flatMap(s=>(s.cases||[]).filter(c=>['passed','failed'].includes(c.status)).map(c=>c.id)))],exitCode:code,report:dir+'/report.json',overall:r.overall,counts:r.counts});await writeJson(out+'/report.json',report);
-  if(!r.sessions?.some(s=>s.sessionId)){report.stoppedReason='Provider session unavailable; remaining shards did not execute';break;}
+  if(!canAllocateAfterReport(r)){report.stoppedReason='Provider session unavailable or remote cleanup unconfirmed; remaining shards did not execute';break;}
 }
 report.finishedAt=new Date().toISOString();report.overall=report.runs.length===shards.length&&report.runs.every(r=>r.exitCode===0&&r.overall==='functional-pass')&&!report.pending.length?'defined-records-pass':'failed-or-incomplete';
 report.notExecutedIds=report.selectedIds.filter(id=>!report.runs.some(r=>r.executedIds.includes(id)));await writeJson(out+'/report.json',report);

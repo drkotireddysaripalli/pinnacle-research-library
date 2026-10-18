@@ -6,6 +6,7 @@ import {execFileSync} from 'node:child_process';
 import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {assertPlaywrightScope,openTestingBotPlaywright} from './testingbot-playwright.mjs';
 import {nativeReaderBlacklist,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe} from './testingbot-native-policy.mjs';
+import {confirmProviderClosure} from './testingbot-provider-close.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
@@ -39,6 +40,7 @@ if(!source)try{const git=process.env.GIT_EXECUTABLE||(process.platform==='win32'
 const report={schemaVersion:1,suite,startedAt:stamp,source,build,runnerSha256:await digest(new URL(import.meta.url)),manifestSha256:await digest(new URL('../tests/testingbot/page-manifest.mjs',import.meta.url)),account:{plan:account.plan,secondsBefore:account.seconds,desktopSlots:account.max_concurrent,physicalSlots:account.max_concurrent_mobile},selectedIds:selected.map(r=>r.id),requestedMatrix:matrixIds,sessions:[],pendingPages:manifest.filter(r=>!r.published),declaredLimits:['Public signed-out UI only; actual OAuth/OTP and upstream accepted leads/purchases are not exercised','TestingBot executes our assertions; it does not certify narrative quality or business outcomes','Screenshots require review against approved references; a capture is not visual acceptance','Browser lab timings are not field Core Web Vitals']};
 report.transport=transport;report.visualRequested=process.argv.includes('--visual');
 report.evidenceShellSha256=await digest(new URL('../tests/testingbot/evidence-shell.mjs',import.meta.url));
+report.providerClosureSha256=await digest(new URL('./testingbot-provider-close.mjs',import.meta.url));
 if(transport==='webdriver'){report.nativePolicySha256=await digest(new URL('./testingbot-native-policy.mjs',import.meta.url));report.declaredLimits.push('Native reader sessions request vendor hostname blocking and must pass non-event GET containment probes before opening production; no measurement receipt is inferred.');}
 if(transport==='playwright'){report.transportSha256=await digest(new URL('./testingbot-playwright.mjs',import.meta.url));report.declaredLimits.push('Playwright WebSocket: Chrome/Windows only; analytics vendors and non-GET writes blocked; no native visual/network/tunnel claim; CSS viewport resizing is not OS window resizing');}
 report.presentationStateSha256=await digest(new URL('../tests/testingbot/presentation-state.mjs',import.meta.url));
@@ -248,10 +250,10 @@ for(const matrixId of matrixIds){
   }catch(e){session.status='failed';session.error=redact(e.message);}
   finally{
     if(sessionId){
-      try{await wd('','DELETE');session.closed=true;}catch(e){session.closeError=redact(e.message);try{const r=await api('/tests/'+sessionId+'/stop','PUT');session.closed=r.success===true;}catch{}}
-      if(!session.closed)session.status='cleanup-unconfirmed';
+      try{await wd('','DELETE');session.localClosed=true;}catch(e){session.closeError=redact(e.message);session.localClosed=false;}
       try{const r=await api('/tests/'+sessionId,'PUT',new URLSearchParams({'test[success]':session.status==='passed'?'1':'0','test[status_message]':suite+': '+session.cases.filter(t=>t.status==='passed').length+'/'+session.cases.length+' page cases passed'}));session.resultRecorded=r.success===true;}catch(e){session.resultError=redact(e.message);}
-      try{const r=await api('/tests/'+sessionId),p=r.test||r;session.provider={id:p.id,success:p.success,durationSeconds:p.duration,assetsAvailable:p.assets_available,deviceName:p.device_name,platformName:p.platform_name,os:p.os,browser:p.browser,browserVersion:p.browser_long_version||p.browser_version};if(p.assets_available){const a=await api('/tests/'+sessionId+'/assets');session.provider.artifacts={video:!!a.video,screenshots:a.screenshots?.length||0,logKinds:Object.keys(a.logs||{})};}}catch(e){session.providerReadbackError=redact(e.message);}
+      try{const closure=await confirmProviderClosure({api,sessionId,redact});session.closed=session.providerClosed=closure.closed;session.providerClosure=closure.trace;const p=closure.provider;if(p){session.provider={id:p.id,state:p.state,completedAt:p.completed_at,success:p.success,durationSeconds:p.duration,assetsAvailable:p.assets_available,deviceName:p.device_name,platformName:p.platform_name,os:p.os,browser:p.browser,browserVersion:p.browser_long_version||p.browser_version};if(p.assets_available){try{const a=await api('/tests/'+sessionId+'/assets');session.provider.artifacts={video:!!a.video,screenshots:a.screenshots?.length||0,logKinds:Object.keys(a.logs||{})};}catch(e){session.providerAssetsError=redact(e.message);}}}}catch(e){session.closed=false;session.providerClosed=false;session.providerReadbackError=redact(e.message);}
+      if(!session.closed){session.status='cleanup-unconfirmed';try{const r=await api('/tests/'+sessionId,'PUT',new URLSearchParams({'test[success]':'0','test[status_message]':'Remote provider cleanup unconfirmed; no further allocation permitted'}));session.resultRecorded=r.success===true;}catch(e){session.resultError=redact(e.message);}}
     }
     await save();
   }
