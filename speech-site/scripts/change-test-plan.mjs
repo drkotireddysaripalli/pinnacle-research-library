@@ -30,6 +30,12 @@ export function reusable(receipt,{key,logExists,logSHA256}){return receipt?.stat
 export function executionMismatch({head,current,dirty}){if(head!==current)return 'Check out the planned source before executing it';if(dirty)return 'Uncommitted inputs: a commit-only plan cannot certify this working tree; use a clean source lane or an explicitly scoped existing test command';return null;}
 function g(args){return execFileSync(git,args,{cwd:root,encoding:'utf8',windowsHide:true}).trim();}
 function relativeClosure(entries){const found=new Set();function visit(f){if(found.has(f))return;found.add(f);const text=fs.readFileSync(path.join(root,f),'utf8');for(const m of text.matchAll(/(?:from\s*|import\s*\()(['"])(\.[^'"]+)\1/g)){const next=path.posix.normalize(path.posix.join(path.posix.dirname(f),m[2]));if(!/\.(?:mjs|js|json)$/.test(next))throw Error('Unresolved test dependency: '+next);visit(next);}}for(const f of entries)visit(f);return [...found];}
+export function retainFixtureArtifacts(dir,out,key){
+ if(!/^[a-f0-9]{64}$/.test(key))throw Error('Invalid artifact evidence key');
+ const proof=JSON.parse(fs.readFileSync(path.join(dir,'browser-proof.json'),'utf8'));
+ if(!proof.executed||!Array.isArray(proof.results)||!proof.results.length||proof.results.some(x=>!x.passed)||proof.realIntakes!==0||proof.realCalls!==0||!proof.externalAnalyticsIntercepted)throw Error('Incomplete isolated browser receipt');
+ const saved=[];for(const f of fs.readdirSync(dir,{recursive:true,withFileTypes:true}))if(f.isFile()){const file=path.join(f.parentPath||f.path,f.name),relative=path.relative(dir,file),target=path.join(out,'artifacts',key,relative);fs.mkdirSync(path.dirname(target),{recursive:true});fs.copyFileSync(file,target);saved.push({path:target,sha256:hash(fs.readFileSync(target))});}return saved;
+}
 export function runFocused(plan,{out=path.join(root,'speech-site/audits/change-testing')}={}){
  fs.mkdirSync(out,{recursive:true});const source=g(['rev-parse','HEAD']),results=[];
  const commands=[...plan.suites.map(suite=>({label:suite,args:['--test',suite]})),...(plan.commands||[])];
@@ -43,7 +49,7 @@ export function runFocused(plan,{out=path.join(root,'speech-site/audits/change-t
   const artifactsValid=(previous?.artifacts||[]).every(x=>fs.existsSync(x.path)&&hash(fs.readFileSync(x.path))===x.sha256);
   if(artifactsValid&&reusable(previous,{key,logExists:fs.existsSync(log),logSHA256:fs.existsSync(log)?hash(fs.readFileSync(log)):null})){results.push({...previous,reused:true,reusedFromSource:previous.source,requestedSource:source});continue;}
   const fd=fs.openSync(log,'w'),started=Date.now();let result;try{result=spawnSync(process.execPath,command,{cwd:path.join(root,'speech-site'),stdio:['ignore',fd,fd],windowsHide:true,env:process.env});}finally{fs.closeSync(fd);}
-  const artifacts=[];let artifactError=null;if(result.status===0&&stage.artifactDir){const dir=path.join(root,'speech-site',stage.artifactDir);try{const proof=JSON.parse(fs.readFileSync(path.join(dir,'browser-proof.json'),'utf8'));if(!proof.executed||proof.results.some(x=>!x.passed)||proof.realIntakes!==0||proof.realCalls!==0||!proof.externalAnalyticsIntercepted)throw Error('Incomplete isolated browser receipt');for(const f of fs.readdirSync(dir,{recursive:true,withFileTypes:true}))if(f.isFile()){const file=path.join(f.parentPath||f.path,f.name);artifacts.push({path:file,sha256:hash(fs.readFileSync(file))});}}catch(e){artifactError=e.message;}}
+  let artifacts=[],artifactError=null;if(result.status===0&&stage.artifactDir){try{artifacts=retainFixtureArtifacts(path.join(root,'speech-site',stage.artifactDir),out,key);}catch(e){artifactError=e.message;}}
   const afterKey=fingerprint({files:inputs,readFile:f=>fs.readFileSync(path.join(root,f)),command,context});
   const record={key,source,command,inputs,context,cacheable:afterKey===key,exitCode:result.status,status:result.status===0&&!result.error&&!artifactError?'passed':'failed',durationMs:Date.now()-started,log,logSHA256:hash(fs.readFileSync(log)),artifacts,artifactError,at:new Date().toISOString(),reused:false};fs.writeFileSync(cache,JSON.stringify(record,null,2)+'\n');results.push(record);
   if(record.status!=='passed'){fs.writeFileSync(path.join(out,'result.json'),JSON.stringify({plan,results},null,2));throw Error('Affected check failed: '+stage.label+'; '+log);}
