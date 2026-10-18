@@ -257,6 +257,32 @@
   // or qualified leads. Never replay after refusal, QA, or an unavailable vendor.
   const protectionEvents = window.__pinnacleProtectionEvents || (window.__pinnacleProtectionEvents = new Set());
   const labelledProtectionQA = value => typeof value === 'string' && /(?:^|[ _.-])(?:qa|fixture|validation)(?:$|[ _.-])/i.test(value);
+  // The vendor can inspect the real document, not GA4's coarse page_location.
+  // Only reviewed public journeys with bounded URL/referrer fields may load it.
+  const protectionGroups=new Set(['home','speech_therapy','occupational_therapy','aba_therapy','special_education','autism_therapy','developmental_assessment','enrolment','centre_directory','centre_detail','public_courses']);
+  const protectionURLSafe=(value,referrer=false)=>{
+    try{
+      if(referrer&&!value)return true;
+      const u=new URL(value);
+      if(u.protocol!=='https:'||u.username||u.password||u.port)return false;
+      if(u.origin!==origin)return referrer&&['www.google.com','www.google.co.in','www.bing.com','chatgpt.com'].includes(u.hostname)&&u.pathname==='/'&&!u.search&&!u.hash;
+      const config=pages[u.pathname],reviewed=['/assessments/stuttering-assessment','/certified-courses'].includes(u.pathname);
+      if(!(config&&protectionGroups.has(config.group))&&!Object.hasOwn(documents,u.pathname)&&!reviewed)return false;
+      if(u.hash&&!['#enrolment-form','#speech-assessment-enquiry','#navratri-one-service-month-offer'].includes(u.hash))return false;
+      const seen=new Set();
+      for(const[k,v]of u.searchParams){
+        if(seen.has(k))return false;seen.add(k);
+        if([...campaignKeys,...clickKeys].includes(k)){if(safeAttribution(v,k)!==v||labelledProtectionQA(v))return false;continue;}
+        if(k==='service'&&['speech','occupational','aba','education','autism','help','assessment'].includes(v))continue;
+        if(k==='entry'&&v==='speech-assessment')continue;
+        if(k==='offer'&&v==='navratri-one-service-month-2026')continue;
+        // Unknown routing fields, fragments and free text do not go to a vendor.
+        // They never prevent the family's call, navigation or enquiry.
+        return false;
+      }
+      return true;
+    }catch{return false;}
+  };
   // The deferred SDK consumer must recheck permission when it actually calls
   // the vendor. This API exposes only a boolean, never attribution or identity.
   window.pinnacleProtectionAllowed = () => {
@@ -268,8 +294,31 @@
         !/^\/(?:account|auth|admin|internal|private|customer|customers|patient|patients|payroll|reports|report|documents|document)(?:\/|$)/i.test(location.pathname) &&
         !/^\/ask\/(?:te\/)?(?:account|auth|api|search)(?:\/|$)/.test(location.pathname) &&
         !labelledProtectionQA(currentURL.searchParams.get('utm_campaign')) &&
-        !labelledProtectionQA(readSource()?.fields?.utm_campaign));
+        !labelledProtectionQA(readSource()?.fields?.utm_campaign)&&
+        protectionURLSafe(location.href)&&protectionURLSafe(document.referrer||'',true));
     } catch { return false; }
+  };
+  // Native GTM Data Layer variables can read these booleans without Custom JS
+  // or unsafe-eval. The two source bridge events keep their exact event-only shape.
+  window.dataLayer=window.dataLayer||[];
+  window.dataLayer.push({pinnacle_canonical_measurement:true,pinnacle_protection_allowed:false});
+  const ensureProtectionContainer=()=>{
+    if(!window.pinnacleProtectionAllowed()||window.__pinnacleProtectionContainer)return;
+    window.dataLayer.push({pinnacle_protection_allowed:true});
+    // Reuse the existing container. Its legacy GA4 tags must have the matching
+    // ownership exception before this source is published. No new producer.
+    if([...document.querySelectorAll('script[src]')].some(s=>{try{const u=new URL(s.src,origin);return u.hostname==='www.googletagmanager.com'&&u.pathname==='/gtm.js'&&u.searchParams.get('id')==='GTM-W9ZHX459';}catch{return false;}}))return;
+    const state=window.__pinnacleProtectionContainer={status:'pending'};
+    const script=document.createElement('script');script.async=true;script.referrerPolicy='origin';
+    script.id='pinnacle-protection-container';script.src='https://www.googletagmanager.com/gtm.js?id=GTM-W9ZHX459';
+    const cancel=()=>{state.status='cancelled';script.remove?.();};
+    document.addEventListener('pinnacle_protection_cancel',cancel,{once:true});
+    window.addEventListener?.('pagehide',cancel,{once:true});
+    // The GTM loader tag must also recheck the boolean at dispatch: removing a
+    // pending script cannot certify cancellation in every browser/runtime.
+    if(!window.pinnacleProtectionAllowed()){cancel();return;}
+    window.dataLayer=window.dataLayer||[];window.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});
+    document.head.append(script);state.status='requested';
   };
   const queueProtectionEvent = (name, acceptedSource = null) => {
     if (!['pinnacle_contact_intent','pinnacle_enquiry_accepted'].includes(name) ||
@@ -408,6 +457,7 @@
     enabled = true;
     rememberSource();
     if(validationTraffic)return;
+    try { ensureProtectionContainer(); } catch {} // Optional protection never disables analytics/contact.
     if (loaded) { window.gtag('consent','update',{analytics_storage:'granted'}); return; }
     configureTag('granted',measurementLocation,permittedCampaigns());
     loaded = true;
@@ -427,6 +477,7 @@
       catch { enabled=false; tell('Analytics is unavailable. Your enquiry and call links still work.'); }
     } else {
       enabled=false;window['ga-disable-'+id]=true;
+      try { window.dataLayer?.push({pinnacle_protection_allowed:false}); } catch {}
       // Cancel an already queued SDK consumer on refusal/GPC. No payload,
       // conversion or GA4 behaviour is added; its pending work must not replay.
       try { document.dispatchEvent(new Event('pinnacle_protection_cancel')); } catch {}
