@@ -3,13 +3,15 @@ import fs from 'node:fs/promises';import path from 'node:path';import {spawn} fr
 import {pageManifest,selectCases} from '../tests/testingbot/page-manifest.mjs';
 import {recordShards} from '../tests/testingbot/record-shards.mjs';import {writeJson} from './testingbot-client.mjs';
 const option=(name,fallback)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
-const suite=option('suite','p3'),matrix=option('matrix','chrome'),manifest=await pageManifest(),records=selectCases(manifest,suite,{ids:option('cases','').split(',').filter(Boolean)}),shards=recordShards(records);
+const suite=option('suite','p3'),matrix=option('matrix','chrome'),transport=option('transport','webdriver'),manifest=await pageManifest(),records=selectCases(manifest,suite,{ids:option('cases','').split(',').filter(Boolean)}),shards=recordShards(records);
 if(process.argv.includes('--list')){console.log(JSON.stringify({suite,matrix,shards,pending:records.filter(r=>!r.published)},null,2));process.exit(0);}
 const out=path.resolve(option('out','audits/testingbot-records/'+new Date().toISOString().replace(/[:.]/g,'-')));
-const report={suite,matrix,startedAt:new Date().toISOString(),selectedIds:shards.flat(),pending:records.filter(r=>!r.published),runs:[],overall:'running'};
+if(!['webdriver','playwright'].includes(transport))throw Error('Unknown TestingBot transport');
+if(transport==='playwright'&&(matrix!=='chrome'||suite==='p2'))throw Error('Playwright records use Chrome functional coverage; use WebDriver for P2 network/visual coverage');
+const report={suite,matrix,transport,visualRequested:transport==='webdriver',startedAt:new Date().toISOString(),selectedIds:shards.flat(),pending:records.filter(r=>!r.published),runs:[],overall:'running'};
 await writeJson(out+'/report.json',report);
 for(const [i,ids] of shards.entries()){
-  const dir=out+'/shard-'+String(i+1).padStart(2,'0'),args=['scripts/testingbot-suite.mjs','--suite',suite,'--matrix',matrix,'--cases',ids.join(','),'--out',dir,'--visual'];
+  const dir=out+'/shard-'+String(i+1).padStart(2,'0'),args=['scripts/testingbot-suite.mjs','--suite',suite,'--matrix',matrix,'--cases',ids.join(','),'--out',dir,'--transport',transport,...(transport==='webdriver'?['--visual']:[])];
   if(suite==='p2'&&i===0)args.push('--network');
   const code=await new Promise((resolve,reject)=>{const child=spawn(process.execPath,args,{stdio:'inherit',windowsHide:true});child.once('error',reject);child.once('close',resolve);});
   let r;try{r=JSON.parse(await fs.readFile(dir+'/report.json','utf8'));}catch{r={overall:'missing-report',sessions:[]};}
