@@ -194,6 +194,11 @@
     const fields=Object.fromEntries(measurementURL.searchParams);
     // A direct return retains the last permitted campaign instead of erasing it.
     if(!Object.keys(fields).length)return;
+    // Internal links may carry the same validated campaign into Enrolment.
+    // Keep that journey's original landing and capture time; a different complete
+    // field set still starts a new source, without combining old and new fields.
+    const retained=readSource();
+    if(retained&&Object.keys(fields).length===Object.keys(retained.fields).length&&Object.entries(fields).every(([key,value])=>retained.fields[key]===value))return;
     // A declared GBP visit is weaker evidence than an already permitted paid
     // journey. Keep the complete prior envelope; never attach its click ID to
     // a different listing's UTMs or silently turn a paid source into organic.

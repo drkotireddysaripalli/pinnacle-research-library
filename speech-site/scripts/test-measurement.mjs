@@ -230,6 +230,34 @@ test('consented source survives an untagged centre/form/direct journey; withdraw
  const centre=harness({path:'/centers',search:'',sharedStore:first.store});assert.deepEqual(JSON.parse(JSON.stringify(centre.win.pinnacleEnquirySource())),JSON.parse(JSON.stringify(acquisition)));
  const form=harness({path:canonicalEnrolment,search:'',sharedStore:first.store});assert.equal(form.win.pinnacleEnquirySource().fields.gclid,'qaClickAbc123');form.choose('declined');assert.equal(form.win.pinnacleEnquirySource(),null);assert.equal(first.store.has('pinnacle-enquiry-source-v1'),false);
 });
+test('copied complete campaign fields preserve the original landing and capture time at Enrolment',()=>{
+ const search='?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&gclid=PublicClickOne';
+ const first=harness({search});first.choose('accepted');
+ const original=JSON.parse(JSON.stringify(first.win.pinnacleEnquirySource()));
+ original.capturedAt-=60000;first.store.set('pinnacle-enquiry-source-v1',JSON.stringify(original));
+ const form=harness({path:canonicalEnrolment,search,sharedStore:first.store});
+ assert.deepEqual(JSON.parse(JSON.stringify(form.win.pinnacleEnquirySource())),original);
+ const centre=harness({path:'/centers',search:'?gclid=PublicClickOne&utm_campaign=Regional_Speech&utm_medium=cpc&utm_source=google',sharedStore:first.store});
+ assert.deepEqual(JSON.parse(JSON.stringify(centre.win.pinnacleEnquirySource())),original);
+});
+test('new campaign or click fields replace the complete source rather than merge it',()=>{
+ for(const search of ['?utm_source=google&utm_medium=cpc&utm_campaign=Regional_New','?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&gclid=PublicClickTwo']){
+  const first=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&gclid=PublicClickOne'});first.choose('accepted');
+  const form=harness({path:canonicalEnrolment,search,sharedStore:first.store});
+  const source=JSON.parse(JSON.stringify(form.win.pinnacleEnquirySource()));
+  assert.equal(source.landingPath,canonicalEnrolment);
+  assert.deepEqual(source.fields,Object.fromEntries(new URLSearchParams(search)));
+ }
+});
+test('identical query fields do not revive expired source or bypass refusal and GPC',()=>{
+ const search='?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech';
+ const make=()=>{const first=harness({search});first.choose('accepted');return first;};
+ const first=make(),old=JSON.parse(first.store.get('pinnacle-enquiry-source-v1'));old.capturedAt=Date.now()-31*86400000;first.store.set('pinnacle-enquiry-source-v1',JSON.stringify(old));
+ const renewed=harness({path:canonicalEnrolment,search,sharedStore:first.store}).win.pinnacleEnquirySource();
+ assert.equal(renewed.landingPath,canonicalEnrolment);assert(Date.now()-renewed.capturedAt<1000);
+ const refused=make();refused.choose('declined');assert.equal(harness({path:canonicalEnrolment,search,sharedStore:refused.store}).win.pinnacleEnquirySource(),null);
+ const gpc=make();assert.equal(harness({path:canonicalEnrolment,search,gpc:true,sharedStore:gpc.store}).win.pinnacleEnquirySource(),null);
+});
 test('invalid, expired, GPC, unconsented and labelled validation sources cannot accompany an enquiry',()=>{
  const h=harness({search:'?gclid=qaValidClick'});h.choose('accepted');const saved=JSON.parse(h.store.get('pinnacle-enquiry-source-v1'));saved.capturedAt=Date.now()-31*86400000;h.store.set('pinnacle-enquiry-source-v1',JSON.stringify(saved));assert.equal(h.win.pinnacleEnquirySource(),null);
  for(const opts of [{gpc:true},{search:'?gclid=qaValidClick&validation_test=1'}]){const f=harness(opts);f.choose('accepted');assert.equal(f.win.pinnacleEnquirySource(),null);assert.equal(f.events().length,0);assert.equal(f.scripts.length,0);}
