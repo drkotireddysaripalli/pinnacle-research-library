@@ -82,3 +82,15 @@ test('bounded prefix streaming preserves a multibyte split and the unread body',
  const old=globalThis.HTMLRewriter;globalThis.HTMLRewriter=class{on(){return this;}transform(r){return r;}};
  try{const path='/t/bead-stringing-therapy',html=fixture(path).replace('Parent guidance','తెలుగు guidance'),bytes=new TextEncoder().encode(html),cut=bytes.indexOf(0xe0)+2;let i=0;const body=new ReadableStream({pull(c){if(i===0)c.enqueue(bytes.slice(0,cut));else if(i===1)c.enqueue(bytes.slice(cut));else c.close();i++;}}),result=await repairLegacyMeasurement(request(path),new Response(body,{headers:{'content-type':'text/html'}}));const text=await result.text();assert(text.includes('తెలుగు guidance'));assert(!text.includes('�'));assert.equal(result.headers.get('x-pinnacle-legacy-measurement'),'knowledge');}finally{globalThis.HTMLRewriter=old;}
 });
+
+test('reviewed tagged origin canonicals match the exact request without exposing query identity',()=>{
+ const query='?utm_source=google&utm_medium=cpc&utm_campaign=qa_alias_regression';
+ for(const path of ['/certified-courses/','/certified-courses','/assessments/stuttering-assessment']){
+  const req=request(path+query),raw='https://www.pinnacleblooms.org'+path+query,escaped=raw.replaceAll('&','&amp;');
+  const input=fixture(path).replace('href="https://www.pinnacleblooms.org'+path+'"','href="'+escaped+'"');
+  const result=migrateLegacyPrefix(input,req,{preserveGtm:true});assert(result);assert.equal(result.removed,LEGACY_TAGS.length-1);assert(result.html.includes('href="'+escaped+'"'));assert(result.html.includes('legacy_public_template'));assert(result.html.includes(LEGACY_TAGS[0]));
+  assert.equal(migrateLegacyPrefix(input.replace(escaped,escaped+'x'),req,{preserveGtm:true}),null,'Different query identity fails closed');
+  assert.equal(migrateLegacyPrefix(input.replace('https://www.pinnacleblooms.org'+path,'https://elsewhere.invalid'+path),req,{preserveGtm:true}),null);
+ }
+ const outside='/t/bead-stringing-therapy',input=fixture(outside).replace('href="https://www.pinnacleblooms.org'+outside+'"','href="https://www.pinnacleblooms.org'+outside+query.replaceAll('&','&amp;')+'"');assert.equal(migrateLegacyPrefix(input,request(outside+query)),null,'Other families are not expanded');
+});

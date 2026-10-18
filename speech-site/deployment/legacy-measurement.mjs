@@ -30,8 +30,9 @@ export function migrateLegacyPrefix(prefix,request,{preserveGtm=false}={}){
  if(!tags.length||tags.some(tag=>!fingerprints.has(normal(tag))))return null;
  if(scope!=='private'){
   const u=new URL(request.url),canonical=/\blink\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["']/i.exec(prefix)?.[1];
-  // Keep either exact courses identity unchanged; no other alias is widened.
-  const canonicalMatches=canonical===u.origin+u.pathname||(u.pathname==='/certified-courses/'&&canonical===u.origin+'/certified-courses');
+  // Preserve the exact self canonical, including the legacy origin’s escaped
+  // query. It must equal this request; no different route/host is accepted.
+  const canonicalMatches=canonical===u.origin+u.pathname||(u.pathname==='/certified-courses/'&&canonical===u.origin+'/certified-courses')||(scope==='reviewed-public-template'&&canonical?.replaceAll('&amp;','&')===u.href);
   if(!canonicalMatches||!tags.some(t=>t.includes('GTM-W9ZHX459'))||!tags.some(t=>t.includes("gtag('config', 'G-2BYLRLFRDJ')"))||!tags.some(t=>t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'")))return null;
  }
  let result=prefix.replace(tagPattern,tag=>analyticsTag(tag)?(preserveGtm&&isKnownGtmLoader(tag)?tag:replacements.get(normal(tag))||''):tag);
