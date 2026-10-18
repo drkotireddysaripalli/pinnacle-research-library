@@ -7,7 +7,7 @@ import fs from 'node:fs/promises';
 import ts from 'typescript';
 import {recordShards} from '../tests/testingbot/record-shards.mjs';
 import {headerReferenceName,imageInViewport,desktopScreenResolution,fitCssViewport} from '../tests/testingbot/presentation-state.mjs';
-import {evidencePriorities,recordCoverage} from '../tests/testingbot/evidence-priorities.mjs';
+import {evidencePriorities,recordCoverage,evidenceCases} from '../tests/testingbot/evidence-priorities.mjs';
 const good=()=>({requestedMatrix:['chrome'],selectedIds:['enrolment'],sessions:[{matrix:'chrome',status:'passed',closed:true,resultRecorded:true,provider:{success:true},cases:[{id:'enrolment',status:'passed',checks:[{passed:true}]}]}]});
 test('Missing, unavailable or unexecuted browser/page cannot be green',()=>{
   assert.equal(suiteVerdict(good()),true);
@@ -63,6 +63,21 @@ test('Unclosed or incomplete runs never advance coverage and last pass remains d
   report.sessions[0].closed=true;recordCoverage(state,report);
   report.sessions[0].cases[0]={id:'x',finishedAt:'2026-10-08',status:'failed',checks:[{name:'canonical',passed:false}]};recordCoverage(state,report);
   assert.equal(state.coverageByProfile['x|chrome|p3'].lastPassed,'2026-10-07');assert.deepEqual(state.coverageByProfile['x|chrome|p3'].unresolvedFailure.checks,['canonical']);
+});
+test('Reviewed equivalent functional receipts resolve selection without inventing a P3 execution or pass',()=>{
+ const key='centre-fixture|chrome|p3',record={case_id:'centre-fixture',matrix:'chrome',suite:'p3',at:'2026-10-10',status:'failed',lastPassed:'2026-10-09',unresolvedFailure:{at:'2026-10-10',checks:['centre selection']}};
+ const resolution={schemaVersion:1,key,kind:'equivalent-named-check-receipt',at:'2026-10-18',failureAt:'2026-10-10',resolvedChecks:['centre selection'],remainingChecks:[],current:{caseId:record.case_id,matrix:'chrome',suite:'all',casePassed:true,closed:true,resultRecorded:true,providerClosed:true,sessionId:'actual-owned-session',providerId:1,report:'actual-report.json',checkNames:['centre selection'],runnerSha256:'a'.repeat(64)}};
+ const state={coverageByProfile:{[key]:{...record,namedCheckResolution:resolution}}},before=JSON.stringify(state);
+ const result=evidenceCases({testingbot:{records:[{...record,functional:'fail'}]}},state)[0];
+ assert.equal(result.functional,'resolved');assert.equal(result.at,record.at);assert.equal(result.status,'failed');assert.equal(result.lastPassed,record.lastPassed);assert.equal(JSON.stringify(state),before);
+ for(const change of[{current:{...resolution.current,providerClosed:false}},{current:{...resolution.current,matrix:'safari'}},{current:{...resolution.current,suite:'p2'}},{failureAt:'different'}])assert.equal(evidenceCases({}, {coverageByProfile:{[key]:{...record,namedCheckResolution:{...resolution,...change}}}})[0].functional,'fail');
+});
+test('An equivalent functional resolution retains every native visual finding',()=>{
+ const key='centre-fixture|chrome|p3',record={case_id:'centre-fixture',matrix:'chrome',suite:'p3',at:'2026-10-10',status:'failed',unresolvedFailure:{at:'2026-10-10',checks:['centre selection','Approved visual reference remains unchanged']}};
+ const resolution={schemaVersion:1,key,kind:'equivalent-named-check-receipt',at:'2026-10-18',failureAt:'2026-10-10',resolvedChecks:['centre selection'],remainingChecks:['Approved visual reference remains unchanged'],current:{caseId:record.case_id,matrix:'chrome',suite:'all',casePassed:true,closed:true,resultRecorded:true,providerClosed:true,sessionId:'actual-owned-session',providerId:1,report:'actual-report.json',checkNames:['centre selection'],runnerSha256:'a'.repeat(64)}};
+ assert.equal(evidenceCases({}, {coverageByProfile:{[key]:{...record,namedCheckResolution:resolution}}})[0].functional,'fail');
+ resolution.resolvedChecks.push(...resolution.remainingChecks);resolution.remainingChecks=[];
+ assert.equal(evidenceCases({}, {coverageByProfile:{[key]:{...record,namedCheckResolution:resolution}}})[0].functional,'fail');
 });
 import {testingBotClient} from './testingbot-client.mjs';
 test('Empty provider 400 can retry an explicitly read-only observation; mutations and real failures never retry',async()=>{
