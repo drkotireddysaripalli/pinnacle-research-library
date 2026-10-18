@@ -16,3 +16,9 @@ Decode actual HTML ampersand forms before parsing existing intake links; reject 
 - Current root rollback before this release:2e5bd347-2fa9-4a5b-a023-c1e6ddd9ebb3. Advance the accepted publishing checkpoint after public/module verification so upkeep retains this repair.
 
 This is a branch-assignment safety repair. It does not prove receipt of a genuine enquiry in GA4 or receiving-team acknowledgement.
+
+## Live delivery receipt
+
+PR119 merged at810d1f6a88abc880f7d33762a318d3ea6ca09dcd, sourcec502ea3f1653cb86ae50feb4d30d69958ecb1206. Trusted CI39122109509 verifies53 contracts and60 isolated cases across Chromium, Firefox and WebKit. Root version24888e79-b583-470a-ad85-d48e8f978fbc/deploymentb5b973f3-b18c-44c8-8f23-535496b93a01. Public readback passed all four held branches and open Suchitra, plus four exact assets. Common collector SHA remains9fe8541a61be52fc46d4f607475b44fea1def6a4afab9e755ea3b626b785384b. All five affected TestingBot cases subsequently passed; provider53923005 closed.
+
+The R2 accepted runtime checkpoint is updated/readback-verified, preserving the existing operational job/outbox. All original failed attempts and the corrected private readback's mistaken universal-noindex assertion are retained on disk. The production repair changes no indexation rules.

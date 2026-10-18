@@ -12,13 +12,13 @@ No production test places a phone call, sends a WhatsApp message or OTP, signs i
 
 `tests/testingbot/page-manifest.mjs` is the canonical register. It reuses the current page contracts, 62 centre release records, policy/institutional data, book catalogue and language editions. `verify-paths.json` records the **84 URLs in the actual public Verify sitemap** captured on 7 October; it does not infer the live collection from an old export.
 
-The current register defines **271 cases: 269 published URLs and two explicitly pending libraries**. The 8 October content release adds five priority Ask answers and two native Hindi categories to P2. This is a managed-page/template register, not a claim to enumerate every dynamic Ask/FAQ/database record or legacy URL.
+The current register defines **272 cases: 270 published URLs and two explicitly pending libraries**, read from the maintained manifest on18October. The 8 October content release adds five priority Ask answers and two native Hindi categories to P2. This is a managed-page/template register, not a claim to enumerate every dynamic Ask/FAQ/database record or legacy URL.
 
 | Suite | Scope | Completion rule |
 | --- | --- | --- |
 | BVT | Seven public cases: Shop, PinnacleAI, Speech, Enrolment, Suchitra, one Ask answer, Verify root | All selected cases pass on each requested browser; no unavailable coverage counted as green |
 | Exact-build BVT | Five Astro candidate cases: Shop, PinnacleAI, Speech, Enrolment, Suchitra | Test the candidate through the official tunnel, with the same source commit and test hashes; public production smoke cannot substitute |
-| P1 | BVT plus 25 important page cases, including therapies, PinnacleAI modules, care outcomes, books index, knowledge templates and helpline | Critical content/navigation/contact and incoming service/centre preference survive |
+| P1 | Seven BVT plus 26 important page cases, including therapies, PinnacleAI modules, care outcomes, books index, knowledge templates and helpline: 33 published cases total | Critical content/navigation/contact and incoming service/centre preference survive |
 | P2 | BVT/P1 plus 44 presentation/support records, including two unpublished libraries | Actual image decode, readable paragraphs, serious/critical accessibility findings, native Anek fonts, anchors and network checks; pending libraries stay pending |
 | P3 | 195 further centre, offer, edition and Verify document records | Detect page-specific delivery, canonical, content, shell, asset and navigation regressions without duplicating every record across every browser |
 
@@ -97,14 +97,14 @@ Cloudflare promotion must use the exact green build/receipt. This workflow is th
 
 `npm run test:daily` runs one bounded plan in this workspace and keeps a local lock and coverage state under ignored `audits/testingbot-daily/`:
 
-- 32 BVT/P1 public cases on Chrome every day.
+- 33 BVT/P1 public cases on Chrome every day under the current manifest.
 - Eight P2 cases on tablet-size Edge: five critical page presentations plus three rotating support pages.
 - 28 P3 records on Chrome: six bounded slots for unresolved failures, saved search/reference demand or a reproducible varied sample, plus 22 oldest records. All 195 published P3 records receive execution in at most nine completed daily rotations when the manifest is unchanged; execution does not mean a pass.
 - Three critical cases on a rotating secondary desktop browser. An unresolved failure outside the other jobs replaces this slot with a three-case retry on its actual browser/suite; no additional session is added.
 - Three critical cases on a rotating physical iPhone, Android, iPad or small iPhone profile.
 - 3G checks on Tuesday/Friday. Explicit one-off runs can add a network check after a relevant release.
 
-This is **74 selected page runs across five sequential jobs** per normal completed daily plan. Counts of actual executed/passed/failed/unavailable cases are recorded separately. A queue wake is not a pass. The plan runs the full critical suite daily and broader records in rotation; it does not claim all 264 pages were tested in every device each day.
+This is **75 selected page runs across five sequential jobs** per normal completed daily plan under the current manifest. Counts of actual executed/passed/failed/unavailable cases are recorded separately. A queue wake is not a pass. The plan runs the full critical suite daily and broader records in rotation; it does not claim all 270 published pages were tested in every device each day. A `--suite all` functional run does not include the P2-only accessibility, full-image, readability and native-font assertions; use exact P2 IDs with `--suite p2` for that acceptance boundary.
 
 ### Existing-tool evidence feeds the daily selection
 
@@ -153,4 +153,35 @@ Manual P3/all-page runs use at most 28 cases per reused browser session and proc
 
 Subsequent acceptance supersedes the execution gaps in the historical paragraph below: complete corrected production P1 is **32/32 Chrome/Windows functional pass**; final Edge P2 at actual **768 × 1024** is four pass/Shop readability fail. The two earlier Edge viewport-setup attempts remain in the receipt. All four owned sessions are closed with provider result read-back. 13 Node and 11 Python guards pass. CI for `9b2f944357728a561df274d3315d53536ea9b9fe` is independently observed successful; the final integration/fitter commit requires its own CI. See `reviews/TESTINGBOT-INTEGRATION-20261007.md` and its compact JSON receipt. The full 74-case daily plan, remaining P2/P3/device/dynamic-record and visual acceptance are not claimed completed.
 
-After the owner's upgrade, `/user` reports **Automated Pro - 1 Sessions - Unlimited**, one desktop slot and one physical slot. A new actual Chrome session executed all 32 P1 cases. The initial 18/32 result contained reference-state/visibility/reader-contract mistakes described above; it is retained and is not rewritten as a clean P1 pass. Targeted corrected cases are recorded separately under `audits/testingbot-upgrade-20261007/`. Nine local contract guards pass. The wider P2/P3/other-platform and final candidate-build acceptance still need their own execution; the prior account-credit dependency no longer applies. Reuse sessions sequentially within the actual slot limits. The provider's raw seconds counter is not interpreted as purchased time, usage cost or physical-device plan entitlement.
+After the owner's upgrade, `/user` reports **Automated Pro - 1 Sessions - Unlimited**, with `max_concurrent=1` and `max_concurrent_mobile=1`. These are **one shared session pool**, not two independently usable slots. Browser and physical-device runs must be sequential, including manually launched jobs and CI. See [TestingBot's concurrency definition](https://testingbot.com/features/parallel-testing). A new actual Chrome session executed all 32 P1 cases. The initial 18/32 result contained reference-state/visibility/reader-contract mistakes described above; it is retained and is not rewritten as a clean P1 pass. Targeted corrected cases are recorded separately under `audits/testingbot-upgrade-20261007/`. Nine local contract guards pass. The wider P2/P3/other-platform and final candidate-build acceptance still need their own execution; the prior account-credit dependency no longer applies. The provider's raw seconds counter is not interpreted as purchased time, usage cost or physical-device plan entitlement.
+
+## Maintained execution route — 18 October 2026
+
+The maintained Windows source is `work/qualified-media-integration-20261015/speech-site`. The older saved daily entry under `work/ask-distribution-release-20261003/speech-site` forwards to that maintained command. Its original coverage/history directory remains the single state and lock location; the maintained checkout reaches it through a Windows directory junction. The reversible installation and original entry are recorded in `ask-private/testingbot-completion-20261018/local-entry-receipt.json`. This is a local execution correction, not a scheduler or cross-machine setting change. A plan-only read starts no provider session.
+
+PR117 adds an explicit faster public Chrome functional transport:
+
+```text
+node scripts/testingbot-records.mjs --suite all --matrix chrome --transport playwright --out audits/testingbot-all-functional
+```
+
+The official TestingBot WebSocket adapter retains the named functional assertions, isolated native interactions, analytics blocking, write interception and actual provider-session readback. It is not a native visual comparison, physical device, alternate engine, candidate tunnel or network-throttling result. Unsupported combinations fail before allocation. Existing WebDriver remains the default for those acceptance boundaries. Do not clear their failures with a functional-only WebSocket result.
+
+Independent page observations are batched to remove redundant remote command round trips. The candidate received 52 contract/selector checks, 29 actual local browser checks and 11 observation-parity checks; trusted CI39115701049 passed before merge. Initial interrupted and startup-failed attempts remain in their reports. Completed per-case observations may be reused only with matching relevant runner/adapter, manifest, public source and acceptance conditions.
+## Native containment and completion corrections — 18 October 2026
+
+PR118 requires every native reader session to prove containment before loading a production page. It first opens the verified same-origin `robots.txt` text document, confirms its exact URL/text MIME/zero scripts, then checks one reachable control and blocked GA/GTM robots probes. These probes carry no identifiers/cookies; they are not analytics events. A failed preflight prevents page execution. The initial failed probe attempt remains recorded; the corrected actual canary passed three pages/51 assertions and the three approved header states with zero pixel difference. Current approved IDs are21228neutral,21231PinnacleAI,21234Speech; no failed baseline was automatically replaced.
+
+Verify shell variants are matched to their actual documented navigation and full footer. Intentional `location-status` pages require noindex. A temporary operating hold is a separate state: it requires the closure notice, central phone, unselected/disabled branch choice and zero held intake assignments; it does not invent a new universal noindex rule. PR119 fixes escaped held-centre query strings and announcement reinsertion across those existing journeys.
+
+Native and WebSocket cleanup record local closure separately from exact provider terminal identity/timestamp. An unconfirmed provider remains a failure and blocks the next allocation; daily retains its lock for reconciliation. No unrelated provider session may be stopped.
+
+Equivalent reviewed named functional receipts may resolve the matching historical daily finding without relabelling an `all`/Chrome execution as P3, another engine or an approved visual. Original failure/time/history stays intact. P2-only findings and native visuals need their own actual executions. Fixture evidence is retained under the existing change-testing artifact, so its per-case proof survives ephemeral output removal.
+
+The full 18October outcome and explicit skipped/unavailable coverage are recorded in the completion receipt. Production GA4 receipt, a genuine accepted enquiry, receiving-owner acknowledgement and business outcomes remain separate from TestingBot passes.
+
+## Proven Android route and current essential gaps —18October
+
+The existing daily Android child uses `scripts/testingbot-android-reader.mjs`. It starts the official hash-pinned Tunnel5 runtime from protected local configuration, allows only the two public Pinnacle hosts and i.ytimg.com, retains denied-vendor rules/loopback/localhost-deny, and supplies the documented WebDriver `tunnel-identifier` key. The native suite must still pass actual positive-control and vendor-denial probes before production. Startup/readiness/owned marker shutdown is logged; uncertain provider closure keeps cleanup held. Stale output is refused. No credentials enter config/arguments/source or unredacted logs. The real Android route passed3/3; the maintained launcher separately passed actual provider-free Java startup/shutdown plus eight hardened local checks. Missing or changed runtime configuration is unavailable coverage, never a page pass. No scheduler was added.
+
+The current iPhone filtering failure, unexecuted iPad and known SE webview dependency remain in `audits/testingbot-completion-20261018/essential-coverage-gaps.json`. Desktop Safari and Firefox current passes do not clear those physical-device gaps. The81 prior failed page-profile entries have reviewed resolutions with original raw history retained; zero open page-assertion keys does not claim complete current device coverage. Full scoped receipt: `reviews/GA4-AND-TESTINGBOT-COMPLETION-20261018.md`.
