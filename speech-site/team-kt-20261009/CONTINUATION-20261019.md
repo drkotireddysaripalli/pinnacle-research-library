@@ -13,7 +13,7 @@ The founder authorised the existing Mac coordinator to continue building from cu
 - Reuse those owners. At most two bounded implementation streams under the coordinator. Reserve shared files before editing; no competing production deploys.
 - Mac returns source READY, exact source/test evidence and deployment inputs. Root integrates, releases and verifies public behavior. An exception requires an explicit single-owner transfer recorded before deployment.
 
-The native Windows bridge still reports the exact Mac thread unavailable despite the founder opening it. The direct handoff send failed; this shared repository is the durable delivery route. Publishing this document does not prove Mac acknowledgement or build start.
+After the founder restored Mac control, the native bridge successfully read **Mac Web Build** on host `remote-control:env_e_6a6d6d3366c0832888fee90c9230ce27`. The full work order was sent to that exact existing thread and acknowledged. Its active turn `01a15414-c9b1-7fb2-aee2-39d6ec55edd7` is reconciling the PR123 worktree/ownership. The first actual build command and exact source READY/CI receipt remain separate acceptance milestones.
 
 ## First Mac action and acknowledgement
 
@@ -25,7 +25,13 @@ The native Windows bridge still reports the exact Mac thread unavailable despite
 
 Historical Mac setup was Node24.21/npm11.13 and licensed Screaming Frog24.3; that is dated evidence, not a fresh environment check. Windows DPAPI credentials, local runtime caches and private evidence are not portable secrets. Use existing Mac credentials and approved access routes; never paste keys into issues/chat. If access is missing, state the exact denied operation and continue independent source work.
 
-## PR123 first — exact failed gate, not another full audit
+## PR123 first — verified diagnostic delta and current ownership
+
+Root subsequently tested the direct cloud `tb:intercept` route: same timeout; changing the relay alone is not a fix. Owned session53970384 closed after37seconds. A different standard ChromeDriver CDP route then passed on Chrome155/WIN11: POST `/session/<id>/goog/cdp/execute` with `Network.enable`, then `Network.setBlockedURLs` for HTTP/HTTPS patterns of all nativeBlockedHosts. Both commands installed before navigation. Existing exact plain-text document guard and3/3 public/GA/GTM probes passed;0productionpages, provider53970474 terminal/closed after5seconds. This is bounded diagnostic proof, not a passed build BVT.
+
+The existing Mac coordinator now owns the five PR123 source files for the smallest CDP amendment; root retains integration/production ownership. Preserve tunnelv5 rules, session blacklist, positive/vendor probes, named assertions and closure; unsupported command routes fail closed. Update relevant contracts, push existing PR123, run one trusted exact-build gate using the one shared provider slot and return exact head/report/closure. Do not run old `tb:intercept` diagnostics unchanged.
+
+### Original failed gate
 
 PR123: https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/123
 - Head reviewed: `48b3d35db4140c2ab363ea9595f63c6070a3f65b`.
