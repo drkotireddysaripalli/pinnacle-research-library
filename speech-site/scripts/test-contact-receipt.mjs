@@ -8,7 +8,7 @@ import {validatePublicContact,toLegacyContact,toReceiptContact} from '../deploym
 import {parseReceiptContact,contactPayloadDigest} from '../deployment/contact-receipt-contract.mjs';
 import {serveEnrolmentApi} from '../deployment/enrolment-handler.mjs';
 import {escapeContactMapRows,serveContactReceiptAsset,contactReceiptAssets} from '../deployment/contact-receipt.mjs';
-import fs from 'node:fs/promises';
+import fs from 'node:fs/promises';import {createHash} from 'node:crypto';
 const values={name:'ISOLATED FIXTURE',title:'Mx',phone:'0000000000',email:'fixture@example.invalid',facilityId:CONTACT_FACILITIES[0],subject:'Therapy Services',message:'Offline fixture only.'};
 const payload=()=>makeContactPayload(values,'qa-contact-request');
 const request=body=>new Request('https://www.pinnacleblooms.org/api/enrolment',{method:'POST',headers:{origin:'https://www.pinnacleblooms.org','content-type':'application/json','idempotency-key':body.requestId},body:JSON.stringify(body)});
@@ -16,7 +16,7 @@ test('outer contact asset precedence serves the complete maintained dependency c
  const base='https://www.pinnacleblooms.org';assert.equal(contactReceiptAssets.size,7);
  const env={ASSETS:{fetch:async r=>new Response(await fs.readFile(new URL('../public'+new URL(r.url).pathname,import.meta.url)))}};
  for(const name of ['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js','protection-consumer.mjs']){
-  const p='/pinnacle-pages-scripts/'+name,r=await serveContactReceiptAsset(new Request(base+p+'?v=contact-receipt-20261015'),env);assert.equal(r.status,200,name);assert.equal(await r.text(),await fs.readFile(new URL('../public'+p,import.meta.url),'utf8'),name);
+  const p='/pinnacle-pages-scripts/'+name,r=await serveContactReceiptAsset(new Request(base+p+'?v=contact-receipt-20261015'),env),expected=await fs.readFile(new URL('../public'+p,import.meta.url),'utf8');assert.equal(r.status,200,name);assert.equal(r.headers.get('x-pinnacle-contact-assets'),'contact-receipt-20261019');assert.equal(r.headers.get('x-pinnacle-contact-asset-sha256'),createHash('sha256').update(expected).digest('hex'));assert.equal(await r.text(),expected,name);
   assert.equal((await serveContactReceiptAsset(new Request(base+p,{method:'POST'}),env)).status,405);
   assert.equal(await (await serveContactReceiptAsset(new Request(base+p,{method:'HEAD'}),env)).text(),'');
  }

@@ -21,6 +21,7 @@ const files=[
  ...['src/components/SiteFooter.astro','src/components/PolicyPage.astro','src/lib/google-ads-call-consent.mjs',
    'public/pinnacle-pages-scripts/speech-measurement.js','public/pinnacle-pages-scripts/cheq-protection.js',
    'deployment/book-attribution-assets.mjs','deployment/public-ad-call.mjs','deployment/public-ad-call-handler.mjs',
+   'deployment/contact-receipt.mjs','deployment/contact-receipt-assets.mjs',
    'deployment/pinnacle-route-v12.mjs','deployment/shared-navigation.mjs'].map(name=>path.join(root,name))
 ];
 const violations=[];
@@ -33,6 +34,8 @@ for(const name of [
  'public/pinnacle-pages-scripts/protection-consumer.mjs',
  'public/pinnacle-pages-scripts/centre-operating-holds.mjs',
  'deployment/book-attribution-assets.mjs',
+ 'deployment/contact-receipt.mjs',
+ 'deployment/contact-receipt-assets.mjs',
  'deployment/legacy-measurement.runtime.mjs',
  'deployment/public-ad-call.mjs'
 ]){const bytes=await fs.readFile(path.join(root,name));hashes[name]=createHash('sha256').update(bytes).digest('hex');}
