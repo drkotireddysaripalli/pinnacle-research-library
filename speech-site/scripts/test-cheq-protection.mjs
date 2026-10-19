@@ -1,11 +1,11 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import vm from 'node:vm';
 const code=await fs.readFile(new URL('../public/pinnacle-pages-scripts/cheq-protection.js',import.meta.url),'utf8');
-function setup({path='/centers',query='',hash='',referrer='',gpc=false,saved,panelMissing=false}={}){
+function setup({path='/centers',query='',hash='',referrer='',gpc=false,saved,panelMissing=false,qaAt,sessionDenied=false}={}){
  const scripts=[],buttons=['accepted','declined'].map(value=>({dataset:{cheqChoice:value},addEventListener(n,f){this.click=f;}})),status={textContent:''},storage=new Map();if(saved)storage.set('pinnacle-cheq-consent-v1',JSON.stringify(saved));
  const panel={hidden:true,setAttribute(){},querySelector:()=>status,querySelectorAll:()=>buttons},anchor={insertAdjacentElement(){}};
  const location={protocol:'https:',hostname:'www.pinnacleblooms.org',pathname:path,hash,href:'https://www.pinnacleblooms.org'+path+query+hash,reload(){this.reloaded=true;}};
  const document={referrer,cookie:'',querySelector:s=>s==='[data-speech-measurement]'?anchor:s==='[data-cheq-preferences]'?(panelMissing?null:panel):null,createElement:()=>({dataset:{},setAttribute(k,v){this[k]=v;}}),head:{appendChild:e=>scripts.push(e)},addEventListener(){}};
- const window={addEventListener(){}};const context={window,document,location,navigator:{globalPrivacyControl:gpc},URL,Date,localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},sessionStorage:{removeItem(){}},console};vm.createContext(context);vm.runInContext(code,context);return{context,scripts,buttons,status,storage,location};
+ const window={addEventListener(){}};const context={window,document,location,navigator:{globalPrivacyControl:gpc},URL,Date,localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},sessionStorage:{getItem(){if(sessionDenied)throw Error('unavailable');return qaAt;},setItem(k,v){if(sessionDenied)throw Error('unavailable');qaAt=v;},removeItem(){}},console};vm.createContext(context);vm.runInContext(code,context);return{context,scripts,buttons,status,storage,location};
 }
 test('No vendor request without its own fresh choice; old analytics choices do not grant CHEQ',()=>{const x=setup();assert.equal(x.scripts.length,0);assert.equal(x.context.window.__pinnacleCheq.started,false);});
 test('Eligible initializer reveals the existing compact control; unsupported pages remain untouched',()=>{const x=setup();assert.equal(x.context.document.querySelector('[data-cheq-preferences]').hidden,false);const unsupported=setup({path:'/faq'});assert.equal(unsupported.context.window.__pinnacleCheq,undefined);});
@@ -15,3 +15,12 @@ test('GPC, fragments, private referrers and reserved filter names stay off',()=>
 test('Withdrawal saves refusal and reloads to unload vendor code',()=>{const x=setup();x.buttons[0].click();x.buttons[1].click();assert.equal(x.location.reloaded,true);assert.equal(JSON.parse(x.storage.get('pinnacle-cheq-consent-v1')).value,'declined');});
 test('Expired traffic grants do not restart the vendor',()=>assert.equal(setup({saved:{value:'accepted',at:Date.now()-91*86400000}}).scripts.length,0));
 test('A valid explicit traffic grant survives optional UI removal',()=>assert.equal(setup({panelMissing:true,saved:{value:'accepted',at:Date.now()-1000}}).scripts.length,1));
+
+test('QA query or fresh tab marker suppresses even an accepted CHEQ grant and a subsequent click',()=>{
+ for(const options of [{query:'?validation_test=measurement_20261019'},{query:'?validation_test=',sessionDenied:true},{qaAt:String(Date.now()-1000)}]){
+  const x=setup({...options,saved:{value:'accepted',at:Date.now()-1000}});x.buttons[0].click();assert.equal(x.scripts.length,0);assert.equal(x.context.window.__pinnacleCheq.started,false);
+ }
+});
+test('Expired, future and invalid QA markers do not suppress an eligible explicit grant',()=>{
+ for(const qaAt of [String(Date.now()-86401000),String(Date.now()+86400000),'invalid'])assert.equal(setup({qaAt,saved:{value:'accepted',at:Date.now()-1000}}).scripts.length,1);
+});

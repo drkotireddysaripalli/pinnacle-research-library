@@ -5,11 +5,15 @@ import {serveBookAttribution} from '../deployment/book-attribution-handler.mjs';
 import {serveSpeech} from '../deployment/speech-handler.mjs';
 const origin='https://www.pinnacleblooms.org';
 test('the released commerce script matches its source bytes, validators and methods',async()=>{
- for(const name of ['book-commerce.js']){
+ for(const name of ['book-commerce.js','protection-consumer.mjs','cheq-protection.js']){
   const url=origin+'/pinnacle-pages-scripts/'+name,response=serveBookAttribution(new Request(url));
   assert.equal(await response.text(),await fs.readFile('public/pinnacle-pages-scripts/'+name,'utf8'));
   assert.equal(response.headers.get('cache-control'),'public, max-age=60, must-revalidate');
+  assert.match(response.headers.get('content-type'),/^text\/javascript/);
   const etag=response.headers.get('etag');
+  const versioned=serveBookAttribution(new Request(url+'?v=diagnostic-20261019'));
+  assert.equal(versioned.status,200);assert.equal(versioned.headers.get('etag'),etag);assert.equal(await versioned.text(),await fs.readFile('public/pinnacle-pages-scripts/'+name,'utf8'));
+  assert.equal(etag,'\"'+(await import('node:crypto')).createHash('sha256').update(await fs.readFile('public/pinnacle-pages-scripts/'+name)).digest('hex')+'\"');
   assert.equal(serveBookAttribution(new Request(url,{headers:{'if-none-match':etag}})).status,304);
   const privateResult=serveBookAttribution(new Request(url,{headers:{cookie:'private=fixture','if-none-match':etag}}));
   assert.equal(privateResult.status,200);assert.equal(privateResult.headers.get('cache-control'),'private, no-store');

@@ -14,7 +14,17 @@
   if (document.querySelector('script.ct_clicktrue_102663')) return;
   const state = window.__pinnacleCheq = {started:false,enabled:false,responses:0};
   const key = 'pinnacle-cheq-consent-v1', lifetime = 90 * 86400000;
-  const blocked = () => navigator.globalPrivacyControl === true;
+  // Match the collector's query-labelled, tab-only QA isolation, including
+  // navigation after the query disappears. No URL or identifier is stored.
+  let validationTraffic = new URL(location.href).searchParams.has('validation_test');
+  try {
+    if (validationTraffic) sessionStorage.setItem('pinnacle-validation-v1', String(Date.now()));
+    else {
+      const at = Number(sessionStorage.getItem('pinnacle-validation-v1'));
+      validationTraffic = at > 0 && at <= Date.now() && Date.now() - at < 86400000;
+    }
+  } catch {}
+  const blocked = () => validationTraffic || navigator.globalPrivacyControl === true;
   const safeContext = () => {
     if (location.hash || new URL(location.href).searchParams.has('__pinnacle_no_query_parameter__')) return false;
     if (!document.referrer) return true;

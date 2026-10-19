@@ -6,7 +6,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 const scripts={};
-for(const name of ['speech-measurement.js','book-commerce.js']){
+for(const name of ['speech-measurement.js','book-commerce.js','protection-consumer.mjs','cheq-protection.js']){
  const text=await fs.readFile('public/pinnacle-pages-scripts/'+name,'utf8');
  scripts['/pinnacle-pages-scripts/'+name]={text,sha256:crypto.createHash('sha256').update(text).digest('hex')};
  if(name==='speech-measurement.js')scripts['/books/resources/measurement-v1.js']=scripts['/pinnacle-pages-scripts/'+name];
