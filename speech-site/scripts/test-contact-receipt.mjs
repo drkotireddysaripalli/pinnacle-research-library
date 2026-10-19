@@ -20,7 +20,7 @@ test('outer contact asset precedence serves the complete maintained dependency c
   assert.equal((await serveContactReceiptAsset(new Request(base+p,{method:'POST'}),env)).status,405);
   assert.equal(await (await serveContactReceiptAsset(new Request(base+p,{method:'HEAD'}),env)).text(),'');
  }
- const source=await (await serveContactReceiptAsset(new Request(base+'/pinnacle-pages-scripts/enrolment-source.mjs?v=navratri-20261011'),env)).text();assert(source.includes("HELPLINE_CONSENT_KEY='pinnacle-helpline-measurement-choice-v4'"));assert(source.includes('pinnacle_vizag_call_enquiries'));
+ const source=await (await serveContactReceiptAsset(new Request(base+'/pinnacle-pages-scripts/enrolment-source.mjs?v=navratri-20261011'),env)).text();assert(!source.includes('pinnacle-helpline-measurement-choice'));assert(source.includes('pinnacle_vizag_call_enquiries'));
  assert((await fs.readFile(new URL('../public/pinnacle-pages-scripts/contact-api.mjs',import.meta.url),'utf8')).includes("./enrolment-source.mjs?v=contact-receipt-20261015"),'Returning contact browsers must not reuse the prior immutable dependency URL');
 });
 test('contact map retains addresses and coordinates while escaping literal line breaks in row labels',()=>{

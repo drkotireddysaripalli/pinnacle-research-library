@@ -18,7 +18,7 @@ Your child’s self-sufficient, mainstream-included life. The purpose from the b
 
 [Call 9100 181 181](tel:+919100181181)
 
-[Start my child’s first conversation](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=autism)
+[Request a callback](https://www.pinnacleblooms.org/autism-therapy#callback)
 
 Free guidance, 24/7. You do not need to choose a therapy before you call.
 
@@ -27,6 +27,26 @@ Free guidance, 24/7. You do not need to choose a therapy before you call.
 [BIS scope](https://www.pinnacleblooms.org/verify/evidence/bis.pdf#page=2)
 
 [See how the connected pathway works ↓](https://www.pinnacleblooms.org/autism-therapy#pinnacle-difference)
+
+One useful first conversation
+
+## Let’s help you plan the next step.
+
+Leave your name and number. We’ll discuss suitable support at your preferred centre, the assessment, appointment and fees before you decide.
+
+[Call 9100 181 181](tel:+919100181181)
+
+Free telephone guidance, 24/7. An enquiry does not confirm an appointment.
+
+Before you book: the visit, plan and fees
+
+Begin with your child and family. Share what your child enjoys and the everyday change you hope for. Ask which ability measurement, assessment and professional pathway fits that starting point.
+
+Confirm the visit. Ask for the suitable professional, centre, available time, language and access arrangements before travelling. A callback request is an enquiry; it is not a reserved appointment.
+
+Understand the costs. Ask separately about assessment, any report or review, and continuing therapy. Confirm what the proposed fee includes and the recommended session plan before deciding. An offer shown for one service does not apply automatically to another.
+
+Decide with clarity. Discuss family practice, review arrangements and any relevant change or cancellation terms. [Payment information](https://www.pinnacleblooms.org/payment-and-billing) · [Refund policy](https://www.pinnacleblooms.org/refund-policy) · [Explore Pinnacle evidence](https://www.pinnacleblooms.org/verify).
 
 [First conversation](https://www.pinnacleblooms.org/autism-therapy#first-conversation)
 

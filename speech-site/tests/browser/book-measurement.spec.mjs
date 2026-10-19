@@ -1,7 +1,6 @@
 import {test,expect} from '@playwright/test';
-import fs from 'node:fs/promises';
 
-test('book funnel measures successful operations only after consent',async({page,request,baseURL},info)=>{
+test('book funnel measures successful operations automatically without choice controls',async({page,request,baseURL})=>{
  const origin='https://www.pinnacleblooms.org';
  const sku='PBN-SP-101-EN-PDF';
  const variant={id:'gid://shopify/ProductVariant/45295972646978',sku,title:'PDF ebook',availableForSale:true,requiresShipping:false,price:{amount:'799',currencyCode:'INR'},product:{title:'My Message Matters'}};
@@ -26,12 +25,10 @@ test('book funnel measures successful operations only after consent',async({page
  await page.goto(origin+'/shop?name=private-test');
  const events=()=>page.evaluate(()=>Array.from(window.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event'));
  await expect(page.locator('[data-book-sku="'+sku+'"]')).toBeEnabled();
- expect(tagRequests).toBe(0);expect(await events()).toHaveLength(0);
- await page.locator('#website-preferences>summary').click();
- await expect(page.locator('#website-preferences')).toContainText('book-bag changes');
- await fs.mkdir('audits/book-measurement-20261002',{recursive:true});
- await page.locator('#website-preferences').screenshot({path:'audits/book-measurement-20261002/'+info.project.name+'-consent.png'});
- await page.locator('[data-measurement-choice="accepted"]').click();
+ await expect.poll(()=>tagRequests).toBe(1);
+ await expect(page.locator('[data-measurement-choice],#website-preferences')).toHaveCount(0);
+ expect(await page.evaluate(()=>window.pinnacleBookAnalyticsAllowed?.())).toBe(true);
+ expect((await events()).filter(e=>e[1]==='page_view')).toHaveLength(1);
  await page.locator('[data-book-sku="'+sku+'"]').click();
  await expect(page.locator('.pbn-cart-item')).toHaveCount(1);
  await page.locator('[data-cart-close]').click();
@@ -44,6 +41,9 @@ test('book funnel measures successful operations only after consent',async({page
  await expect(page.locator('.pbn-cart-item')).toHaveCount(0);
  expect((await events()).filter(e=>e[1]==='remove_from_cart')).toHaveLength(1);
  const serialized=JSON.stringify(await events());expect(serialized).not.toContain('private-test');expect(serialized).not.toContain('fixture-cart');expect(serialized).not.toContain('purchase');
- await page.locator('[data-cart-close]').click();await page.locator('[data-measurement-choice="declined"]').click();
- const before=(await events()).length;await page.locator('[data-book-sku="'+sku+'"]').click();await expect(page.locator('.pbn-cart-item')).toHaveCount(1);expect(await events()).toHaveLength(before);
+ await page.locator('[data-cart-close]').click();
+ await page.evaluate(()=>localStorage.setItem('pinnacle-speech-analytics-v1',JSON.stringify({value:'declined',at:Date.now()})));
+ const before=(await events()).filter(e=>e[1]==='add_to_cart').length;
+ await page.locator('[data-book-sku="'+sku+'"]').click();await expect(page.locator('.pbn-cart-item')).toHaveCount(1);
+ expect((await events()).filter(e=>e[1]==='add_to_cart')).toHaveLength(before+1);
 });

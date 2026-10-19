@@ -2,12 +2,12 @@ import fs from 'node:fs/promises';import {createHash} from 'node:crypto';import 
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const inputs={
  restored:{file:'portal-ad-call-14e25cf9a633d670.mjs',sha:'14e25cf9a633d670',old:'/pinnacle-pages-scripts/portal-ad-call-14e25cf9a633d670.mjs'},
- call:{file:'google-ads-call-consent.FqeWzaS9.mjs',sha:'a2e131ede01e98c72f09ec5aab665ba4519967c769c72fa0511d51aeb2c796e3',old:'/pinnacle-pages-assets/google-ads-call-consent.FqeWzaS9.mjs'},
+ call:{file:'google-ads-call-consent.mjs',sha:null,old:'/pinnacle-pages-assets/google-ads-call-consent.FqeWzaS9.mjs'},
  legacy:{file:'newmirracleportal-v42.js',sha:'bf6fc446dd9840ab9b23518ca1ce94dd8b90af03851e161750cc9d2330dce0e8',old:'/bundles/newmirracleportal?v=42'}
 };
 const assets={},rewrites={},manifest={};
 for(const [key,input] of Object.entries(inputs)){
- const bytes=await fs.readFile(new URL('../deployment/shared-asset-sources/'+input.file,import.meta.url)),digest=hash(bytes);if(!digest.startsWith(input.sha))throw Error('Pinned input hash changed '+key);
+ const bytes=await fs.readFile(key==='call'?new URL('../src/lib/google-ads-call-consent.mjs',import.meta.url):new URL('../deployment/shared-asset-sources/'+input.file,import.meta.url)),digest=hash(bytes);if(input.sha&&!digest.startsWith(input.sha))throw Error('Pinned input hash changed '+key);
  const original=bytes.toString('utf8');let code=original,target=input.old;
  if(key!=='restored'){
   // Preserve the Microsoft/jQuery and other original licence notices, including

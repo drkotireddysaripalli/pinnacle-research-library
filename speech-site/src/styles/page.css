@@ -1686,56 +1686,6 @@ a,summary,button {
 }
 /* From review-refinements · consolidated visual story */
 /* Shared speech-page refinements following independent parent, sales and evidence review. */
-.measurement-settings {
-  border-bottom: 1px solid #fff4;
-  font-size: 13px;
-  padding-block: 18px;
-}
-.preference-centre {
-  border-top: 1px solid #fff4;
-  padding-block: 12px;
-  font-size: 13px;
-}
-.preference-centre>summary {
-  cursor: pointer;
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-}
-.preference-centre__body {
-  max-width: 900px;
-}
-.preference-centre .measurement-settings {
-  padding-block: 12px;
-}
-.measurement-settings summary {
-  cursor: pointer;
-  min-height: 40px;
-}
-.measurement-settings>p {
-  max-width: 850px;
-  margin-bottom: 15px;
-}
-.measurement-settings>div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 15px;
-}
-.measurement-settings button {
-  border: 1px solid white;
-  border-radius: 6px;
-  padding: 10px 16px;
-  min-height: 44px;
-  background: white;
-  color: var(--purple);
-  font-size: 13px;
-}
-.measurement-settings button:disabled {
-  opacity: .6;
-  cursor: not-allowed;
-}
 .hero-mechanism {
   list-style: none;
   display: flex;
@@ -3893,7 +3843,7 @@ a,summary,button {
 .centre-photo{margin:0 0 20px;overflow:hidden;border-radius:14px}.centre-photo img{width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;display:block}.centre-photo figcaption{font-size:12px;padding:9px 0;line-height:1.5;color:var(--muted)}
 .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.resource-grid>a{display:block;padding:28px;border:1px solid var(--line);border-top:4px solid var(--purple);border-radius:20px;background:white;color:var(--ink);text-decoration:none}.resource-grid>a:nth-child(2){border-top-color:var(--pink)}.resource-grid svg,.resource-grid strong{color:var(--purple)}.resource-grid h3{font-size:21px;line-height:1.4}.resource-grid p{font-size:15px;line-height:1.8}.resource-grid strong{text-decoration:underline;text-underline-offset:4px}.guide-list{line-height:1.9;padding-left:24px}.guide-list li{padding:8px 0}.observation-sheet{width:100%;border-collapse:collapse;margin:24px 0}.observation-sheet th,.observation-sheet td{text-align:left;vertical-align:top;border:1px solid var(--line);padding:16px;line-height:1.7}.observation-sheet th{width:32%;color:var(--purple)}.print-actions{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}.copy-status{font-size:14px;color:var(--purple)}
 @media(max-width:760px){.service-fit{padding-top:30px}.concern-grid{gap:12px}.concern-grid article{padding:16px}.concern-grid p{font-size:14px}.visit-infographic ol{grid-template-columns:1fr;gap:12px}.visit-infographic li{padding:18px}.visit-infographic h3{margin-top:8px}.decision-art figcaption{gap:12px;grid-template-columns:1fr}.decision-art figcaption span{padding-left:16px;border-left:3px solid var(--pink)}.decision-art figcaption strong{font-size:17px}.resource-grid{grid-template-columns:1fr;gap:16px}.resource-grid>a{padding:22px}.observation-sheet th{width:38%}.observation-sheet td,.observation-sheet th{padding:10px;font-size:14px}.centre-cards article{min-width:0}}
-@media print{.portal-header,.portal-footer,.mobile-cta,.preview-note,.print-actions,.assessment-route,.cookie-panel,[data-speech-measurement]{display:none!important}.section{padding-block:20px!important}.decision-art,.centre-photo{display:none}.service-record{max-width:none}.guide-list li{break-inside:avoid}.observation-sheet td{height:75px}.resource-grid{display:block}.resource-grid>a{margin-bottom:15px}.visit-infographic ol{grid-template-columns:repeat(3,1fr)}}
+@media print{.portal-header,.portal-footer,.mobile-cta,.preview-note,.print-actions,.assessment-route,.cookie-panel{display:none!important}.section{padding-block:20px!important}.decision-art,.centre-photo{display:none}.service-record{max-width:none}.guide-list li{break-inside:avoid}.observation-sheet td{height:75px}.resource-grid{display:block}.resource-grid>a{margin-bottom:15px}.visit-infographic ol{grid-template-columns:repeat(3,1fr)}}
 
 /* Live proof stays readable and linkable over the photographic narrative. */
 .hero-proof-panel{position:absolute;z-index:4;left:18px;right:18px;bottom:18px;padding:10px;border:1px solid #ffffffd9;border-radius:18px;background:#fffffff2;box-shadow:0 12px 32px #1b163140;backdrop-filter:blur(10px);color:#17254a}

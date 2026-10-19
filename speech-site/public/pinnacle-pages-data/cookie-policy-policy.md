@@ -1,41 +1,41 @@
 # Cookie & Website Technology Policy
 
 Canonical: https://www.pinnacleblooms.org/cookie-policy
-Effective: 1 October 2026
-Version: 2026-10-01.1
+Effective: 19 October 2026
+Version: 2026-10-19.1
 Operator: Bharath Healthcare Laboratories Private Limited
 
 ## Scope and purpose
 
 Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited (BHCL). In these policies, “we”, “us” and “our” mean BHCL in its operation of Pinnacle Blooms Network.
 
-This notice describes the managed Pinnacle pages that display “Optional analytics preferences” in their common footer. Legacy pages and separate account or billing applications may use additional technologies; this is not a claim that every application has an identical cookie inventory.
+This notice describes website technologies on eligible public Pinnacle pages. The site no longer displays analytics, invalid-traffic or advertising-call preference controls. Separate account, billing, clinical and private applications remain outside this public-page measurement scope.
 
-## Technologies on managed pages
+## Technologies on eligible public pages
 
-- Preference storage: pinnacle-speech-analytics-v1 records your optional service-page analytics choice; pinnacle-book-analytics-v1 separately records your bookshop analytics choice. Both store a timestamp in local storage with a 180-day choice lifetime.
+- Google Analytics: eligible public pages use a canonical or coarse public-page identity and a fixed event vocabulary for the permitted journey. Measurement excludes form values, contact details, clinical information, private answers, raw referrers and unrecognised URL fields. Analytics storage is enabled for eligible public measurement.
 
-- Limited Google measurement before a choice: on eligible managed public pages, a fresh visitor can produce one coarse canonical page-view request and fixed events only after an actual central call, WhatsApp or enquiry-link tap. Google receives the technical request information needed to deliver this cookieless measurement with analytics storage denied. For a fresh visitor with no separate advertising choice, advertising storage also defaults to denied; an existing advertising-call choice remains separate and is not overwritten by this analytics control. This mode does not use optional analytics cookies, raw page queries or referrers, campaign or click identifiers, form values, contact details or clinical information.
+- Campaign attribution: recognised UTM fields and Google click identifiers may be retained in a bounded campaign record for up to 30 days so an accepted enquiry can be connected to its source. Unrecognised query fields, raw referrers, form values, contact details and clinical information are excluded.
 
-- Optional Google Analytics: after permission, prefixed ps_ga cookies support the permitted public journey and validated campaign measurement. On bookshop pages, separate permission enables book views, sample clicks, book-bag changes and checkout starts; a checkout start is not a purchase. The configured lifetime is 180 days.
+- Google Ads call measurement: eligible public pages may replace the published central number with a temporary Google forwarding number to measure calls from advertising. The central number remains the destination. A telephone-link tap is not treated as a connected or qualified call.
 
-- Cloudflare performance and security: delivery and performance services support the website. Cloudflare Web Analytics uses a separate performance beacon; it is distinct from the Google measurement choice.
+- Invalid-traffic diagnostics: ClickGuard or CHEQ may use bounded browser, device and advertising signals on selected public commercial pages. These diagnostics do not decide whether a family may call, use WhatsApp or submit an enquiry.
 
-- Advertising and external services: some delivered pages include existing Google advertising infrastructure. Google Ads arrival diagnostics and advertising call measurement have their own limited purposes and controls. The footer analytics control is not a universal switch for every legacy advertising or application technology. External destinations apply their own controls.
+- Cloudflare delivery, performance and security services support the website. Bookshop journey events may measure book views, sample clicks, bag changes and checkout starts; a checkout start is not a purchase.
 
-## Your choices
+## Browser controls and exclusions
 
-Optional analytics cookies and journey measurement stay off until you choose “Allow analytics”. A fresh visitor to an eligible managed public page may receive the limited cookieless measurement described above. Choose “Keep analytics off” to save a refusal and stop future Google measurement events from this collector, or withdraw permission later. Global Privacy Control also suppresses these events. Call, WhatsApp and enquiry links remain usable when measurement is off.
+The website does not store an accepted or declined measurement preference and does not present an internal measurement choice panel. Browser, extension, network or device controls can still block or delete measurement technologies. Such blocking may reduce attribution but must not prevent the central phone number, WhatsApp link or enquiry journey from working.
 
-[Open this page’s analytics preferences](#website-preferences). You can also inspect, block or delete cookies and local storage in your browser. Browser controls may affect account or payment features.
+Private, authenticated, account, search, clinical and labelled QA contexts remain excluded from the managed public collector. Advertising personalisation remains disabled. External destinations apply their own controls and terms.
 
 ## Measurement and privacy
 
-A measured phone or WhatsApp link tap is not an answered call, booking or admission. An enquiry-link tap is not an accepted enquiry. Managed measurement uses a fixed event vocabulary and does not send child intake fields. A malformed, expired, future-dated or unreadable existing preference does not become permission or a fresh-visitor measurement state. Do not place child or clinical information in public URL parameters or social posts. See our [Privacy Policy](/privacy-policy) for personal-information requests.
+A measured phone, WhatsApp or enquiry-link tap is not an answered call, accepted enquiry, booking, visit or admission. An accepted enquiry is recorded only when the protected receiving system returns its receipt. Managed measurement uses fixed event names and does not send child intake fields. Do not place child or clinical information in public URL parameters or social posts. See our [Privacy Policy](/privacy-policy) for personal-information requests.
 
 ## Questions and updates
 
 Email [care@pinnacleblooms.org](mailto:care@pinnacleblooms.org) with the subject “Website privacy or cookie query”, a way to contact you and the information needed to understand your request. You can call [9100 181 181](tel:+919100181181) for guidance. Do not send passwords, OTPs, full card details or unnecessary child records.
 
-This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
+This measurement edition is effective from 19 October 2026. It replaces the former footer preference controls with automatic, bounded measurement on eligible public pages. Private, authenticated, search, clinical and labelled QA contexts remain excluded. Material changes will be dated here.
 

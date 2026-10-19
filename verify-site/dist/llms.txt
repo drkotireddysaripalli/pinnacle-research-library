@@ -91,9 +91,9 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [Claim ledger JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.json): source-linked values, report types and counting rules.
 - [Claim ledger CSV](https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.csv): the same six measures for reuse with their source links.
 
-## Citations and reader choices
+## Citations and website measurement
 - [Citation library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html): 44 reusable citations with original sources and scope.
-- [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
+- [Privacy and website measurement](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): automatic bounded public analytics, data exclusions and language translation.
 
 ## Organisation reference
 - [Organisation profile](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html): brand, legal identity, dated facts and original sources.

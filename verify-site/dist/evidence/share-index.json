@@ -7173,17 +7173,17 @@
           "id": "page",
           "url": "https://www.pinnacleblooms.org/verify/evidence/privacy.html",
           "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-privacy-3cb997a01925.jpg",
-          "text": "Explore Privacy & Analytics Choices. Read the source records, review dates and evidence scope.",
-          "whatsapp": "Explore Privacy & Analytics Choices. Read the source records, review dates and evidence scope.",
-          "xLength": 118
+          "text": "Explore Privacy & Website Measurement. Read the source records, review dates and evidence scope.",
+          "whatsapp": "Explore Privacy & Website Measurement. Read the source records, review dates and evidence scope.",
+          "xLength": 120
         },
         {
-          "id": "section-optional-google-analytics",
-          "url": "https://www.pinnacleblooms.org/verify/evidence/privacy.html#section-optional-google-analytics",
+          "id": "section-google-analytics-on-public-verify-pages",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/privacy.html#section-google-analytics-on-public-verify-pages",
           "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-privacy-3cb997a01925.jpg",
-          "text": "Explore Pinnacle's evidence on Optional Google Analytics. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Optional Google Analytics. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 148
+          "text": "Explore Pinnacle's evidence on Google Analytics on public Verify pages. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Google Analytics on public Verify pages. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
         },
         {
           "id": "section-reading-in-another-language",

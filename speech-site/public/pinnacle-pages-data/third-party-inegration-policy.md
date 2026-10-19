@@ -1,15 +1,15 @@
 # External Services & Third-Party Integration
 
 Canonical: https://www.pinnacleblooms.org/third-party-inegration
-Effective: 1 October 2026
-Version: 2026-10-01.1
+Effective: 19 October 2026
+Version: 2026-10-19.1
 Operator: Bharath Healthcare Laboratories Private Limited
 
 ## External services
 
 Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited (BHCL). In these policies, “we”, “us” and “our” mean BHCL in its operation of Pinnacle Blooms Network.
 
-Our pages may link to or use services for delivery, security, performance, optional measurement, communications, maps, publications, social sharing, accounts or payments. An external link is not a blanket endorsement, regulator approval or guarantee of the provider’s service.
+Our pages may link to or use services for delivery, security, performance, bounded public-page measurement, communications, maps, publications, social sharing, accounts or payments. An external link is not a blanket endorsement, regulator approval or guarantee of the provider’s service.
 
 ## Information and permission
 
@@ -17,7 +17,7 @@ Only information relevant to the authorised task should be shared with a provide
 
 ## Your choice of destination
 
-A map or WhatsApp link can open an external service. Check the destination and avoid putting sensitive clinical details into public shares. External platforms may set their own cookies, require their own account and apply their own terms. See [Cookie Policy](/cookie-policy) for the scope of our managed-page preferences.
+A map or WhatsApp link can open an external service. Check the destination and avoid putting sensitive clinical details into public shares. External platforms may set their own cookies, require their own account and apply their own terms. See [Cookie Policy](/cookie-policy) for the scope and exclusions of managed public-page measurement.
 
 ## Payments and private applications
 
@@ -29,5 +29,5 @@ Email [care@pinnacleblooms.org](mailto:care@pinnacleblooms.org) with the subject
 
 Include the exact page and destination, the time and a brief description. Do not send credentials.
 
-This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
+This measurement edition is effective from 19 October 2026. It replaces the former footer preference controls with automatic, bounded measurement on eligible public pages. Private, authenticated, search, clinical and labelled QA contexts remain excluded. Material changes will be dated here.
 

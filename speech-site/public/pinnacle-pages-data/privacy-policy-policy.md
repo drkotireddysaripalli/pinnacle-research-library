@@ -1,8 +1,8 @@
 # Privacy Policy
 
 Canonical: https://www.pinnacleblooms.org/privacy-policy
-Effective: 1 October 2026
-Version: 2026-10-01.1
+Effective: 19 October 2026
+Version: 2026-10-19.1
 Operator: Bharath Healthcare Laboratories Private Limited
 
 ## Who handles your information
@@ -19,7 +19,7 @@ This notice covers Pinnacle’s public website, enquiries and the information we
 
 - Billing and transaction records: invoice, payment reference, amount and status needed to administer a transaction, accounts or a billing query. Do not email full payment credentials.
 
-- Website information: technical, security and performance information; on eligible managed public pages, limited cookieless measurement of one coarse page visit and actual central contact-link actions; and, with your optional analytics choice, the permitted public journey and validated campaign measurement. See our Cookie Policy.
+- Website information: technical, security and performance information; on eligible public pages, automatic bounded analytics, validated campaign attribution, central call or contact-action measurement and invalid-traffic diagnostics. Private, authenticated, search, clinical and labelled QA contexts remain excluded. We do not enable advertising personalisation through this website measurement. See our Cookie Policy.
 
 - Publication and research information: any proposed identifiable story, image, recording or research use requires its own explanation and appropriate permission or other lawful basis; enrolment is not blanket permission to publish. A publicity choice cannot authorise publication prohibited by law; raw clinical records and sensitive health information must not be published.
 
@@ -59,9 +59,9 @@ The future children’s-data framework includes verifiable parental or lawful-gu
 
 ## Updates and related notices
 
-This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
+This measurement edition is effective from 19 October 2026. It replaces the former footer preference controls with automatic, bounded measurement on eligible public pages. Private, authenticated, search, clinical and labelled QA contexts remain excluded. Material changes will be dated here.
 
 Nothing in this policy removes a right, remedy, complaint route or protection that applicable law gives you. Booking-specific written terms must be disclosed before you agree; they cannot override mandatory law.
 
-[Cookies and controls](/cookie-policy) · [Children and guardians](/age-restriction-policy) · [Stories and publication](/endorsement-and-testimonial)
+[Website technologies](/cookie-policy) · [Children and guardians](/age-restriction-policy) · [Stories and publication](/endorsement-and-testimonial)
 

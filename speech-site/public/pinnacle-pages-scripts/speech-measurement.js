@@ -79,7 +79,7 @@
   const campaignFields = {utm_id:'campaign_id',utm_source:'campaign_source',utm_medium:'campaign_medium',utm_campaign:'campaign_name',utm_term:'campaign_term',utm_content:'campaign_content'};
   const campaignKeys = [...Object.keys(campaignFields),'utm_source_platform','utm_creative_format','utm_marketing_tactic'];
   const clickKeys = ['gclid','dclid','msclkid','fbclid','gbraid','wbraid'];
-  const helplinePath='/national-autism-helpline',helplineChoiceKey='pinnacle-helpline-measurement-choice-v4';
+  const helplinePath='/national-autism-helpline';
   const helplineCampaigns=new Set(['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries']);
   const validHelplineFields=fields=>!!fields&&typeof fields==='object'&&!Array.isArray(fields)&&Object.keys(fields).length===3&&fields.utm_source==='chatgpt'&&fields.utm_medium==='paid'&&helplineCampaigns.has(fields.utm_campaign);
   const campaigns = Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
@@ -126,28 +126,18 @@
   let safeReferrer = '';
   // Keep only a recognised public platform's origin. Never send its query,
   // private path or the medical topic being read. This also preserves source
-  // attribution for consented Ask, knowledge and therapy visits.
+  // attribution for eligible Ask, knowledge and therapy visits.
   try {
     const ref = new URL(document.referrer);
     const sources = new Set(['google.com','www.google.com','google.co.in','www.google.co.in','bing.com','www.bing.com','duckduckgo.com','www.duckduckgo.com','search.yahoo.com','chatgpt.com','www.perplexity.ai','perplexity.ai','gemini.google.com','claude.ai','www.facebook.com','m.facebook.com','l.facebook.com','www.instagram.com','l.instagram.com','www.linkedin.com','www.youtube.com','t.co']);
     if (ref.protocol === 'https:' && !ref.username && !ref.password && !ref.port && sources.has(ref.hostname)) safeReferrer = ref.origin + '/';
   } catch {}
   const routes = new Set([...Object.keys(pages), ...Object.keys(documents)]);
-  const key = pageGroup === 'bookshop' ? 'pinnacle-book-analytics-v1' : 'pinnacle-speech-analytics-v1';
   const variant = document.body?.dataset.pageVariant === 'focused' ? 'focused' : 'service';
   const lifetime = 180 * 86400000;
-  const panel = document.querySelector('[data-speech-measurement]');
-  const status = document.querySelector('[data-measurement-status]');
-  if (pageGroup === 'bookshop') {
-    const copy = panel?.querySelector?.('p');
-    if (copy) copy.textContent = 'With your permission, Google Analytics measures the book journey, including the referring search or social platform, book views, sample clicks, book-bag changes, checkout starts and contact-link clicks. It can connect that journey to our Shopify checkout. A checkout start is not a completed purchase. We exclude customer details, search terms and checkout links from our event data. Advertising personalisation is off.';
-  }
-  const disclosure = panel?.querySelector?.('p');
-  if (disclosure) disclosure.textContent = (pageGroup === 'bookshop' ? disclosure.textContent : 'On eligible public pages, Google may receive one coarse page visit and actual central call, WhatsApp or enquiry-link taps with analytics storage denied before you choose. This limited mode does not use optional analytics cookies and these taps are not completed calls or bookings. If you allow analytics, Google Analytics can also measure the permitted public journey. Advertising personalisation is off.') + ' Validated campaign labels and advertising click identifiers may accompany a coarse public page address only after permission, except for the separately labelled minimal Google Ads diagnostics described below. Form details, private answer paths, raw referrers and unrecognised URL fields stay excluded.';
   const production = isAsk || !!knowledgePath || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
   if (isAsk) routes.add('/ask');
   if (knowledgePath) routes.add('/'+knowledgePath);
-  const blocked = navigator.globalPrivacyControl === true;
   let validationTraffic = new URL(location.href).searchParams.has('validation_test');
   // Keep an explicitly labelled QA journey out of live totals after its query
   // disappears during navigation. This tab-only flag contains no URL or user ID.
@@ -159,37 +149,30 @@
   const directoryPlacements = new Set(['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation']);
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
-  // Functional preference handoff is independent of optional analytics storage.
+  // Functional service routing remains independent of measurement.
   if(['speech','occupational','aba','autism','education'].includes(pageConfig?.service)){
     import('/pinnacle-pages-scripts/enrolment-routing.mjs?v=paid-locality-20261017-regional').then(({applyPaidEnquiryLinks,paidCentreAliases})=>applyPaidEnquiryLinks(document,location.href,{service:pageConfig?.service||'help',centres:new Set(Object.values(paidCentreAliases))})).catch(()=>{});
   }
-  let enabled = false, loaded = false, tagStarted = false, pageViewSent = false, limitedAllowed = false, preference = 'unset';
+  let enabled = false, loaded = false, tagStarted = false, pageViewSent = false;
   const sourceKey='pinnacle-enquiry-source-v1',sourceLifetime=30*86400000;
   const acquisitionPath=location.pathname==='/speech-therapy/service-information'?'/top-speech-therapy-center-india-proven-improvement-rate':new URL(canonical).pathname;
   const acquisitionPaths=new Set(['/','/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
   acquisitionPaths.add(helplinePath);
   acquisitionPaths.add('/certified-courses');
-  if(disclosure&&!isBookshop)disclosure.textContent+=' With permission, a validated campaign record can stay on this device for up to 30 days and accompany your enquiry into our protected receiving system. Turning analytics off removes this optional device record.';
   const handedOffLinks=new Map();
-  const forgetSource=()=>{for(const [link,href]of handedOffLinks)link.href=href;handedOffLinks.clear();try{localStorage.removeItem(sourceKey);}catch{}};
-  const savedPermission=choiceKey=>{
-    try{const choice=JSON.parse(localStorage.getItem(choiceKey));return choice?.value==='accepted'&&Number.isFinite(choice.at)&&choice.at<=Date.now()&&Date.now()-choice.at<lifetime;}catch{return false;}
-  };
   const readSource=(snapshot)=>{
-    // Neither stream's choice grants permission to the other. Check at use time
-    // so expiry and withdrawal in another tab cannot revive optional attribution.
-    if(!enabled||navigator.globalPrivacyControl||!savedPermission(key))return null;
+    if(!enabled)return null;
     try{
       const saved=snapshot===undefined?JSON.parse(localStorage.getItem(sourceKey)):snapshot;
       if(!saved||Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(key))||saved.schemaVersion!==1||saved.consent!=='analytics_accepted'||!Number.isSafeInteger(saved.capturedAt)||saved.capturedAt>Date.now()||Date.now()-saved.capturedAt>sourceLifetime||!acquisitionPaths.has(saved.landingPath)){if(saved&&snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
-      if(saved.landingPath===helplinePath&&(!savedPermission(helplineChoiceKey)||!validHelplineFields(saved.fields))){if(snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
+      if(saved.landingPath===helplinePath&&!validHelplineFields(saved.fields)){if(snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
       const fields={};for(const [field,value]of Object.entries(saved.fields||{})){if(![...campaignKeys,...clickKeys].includes(field)||safeAttribution(value,field)!==value)return null;fields[field]=value;}
       if(!Object.keys(fields).length)return null;
       return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields};
     }catch{return null;}
   };
   const rememberSource=()=>{
-    if(!production||blocked||knowledgeSearch||isBookshop||validationTraffic||!acquisitionPaths.has(acquisitionPath))return;
+    if(!production||knowledgeSearch||isBookshop||validationTraffic||!acquisitionPaths.has(acquisitionPath))return;
     const fields=Object.fromEntries(measurementURL.searchParams);
     // A direct return retains the last permitted campaign instead of erasing it.
     if(!Object.keys(fields).length)return;
@@ -206,8 +189,8 @@
     if(isGbp&&!paidEvidence(fields)&&paidEvidence(readSource()?.fields))return;
     try{localStorage.setItem(sourceKey,JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:acquisitionPath,fields}));}catch{}
   };
-  // Form submission must still work when measurement is declined or unavailable.
-  window.pinnacleEnquirySource=()=>production&&enabled&&!blocked&&!knowledgeSearch&&!isBookshop&&!validationTraffic?readSource():null;
+  // Form submission must still work if measurement is unavailable.
+  window.pinnacleEnquirySource=()=>production&&enabled&&!knowledgeSearch&&!isBookshop&&!validationTraffic?readSource():null;
   const permittedCampaigns=()=>{
     const retained=window.pinnacleEnquirySource();
     if(!Object.keys(Object.fromEntries(measurementURL.searchParams)).length&&retained?.landingPath===helplinePath){
@@ -215,12 +198,11 @@
     }
     return campaigns;
   };
-  // The cart asks at navigation time, so withdrawal also stops a pending handoff.
-  if (isBookshop) window.pinnacleBookAnalyticsAllowed = () => production && enabled && !navigator.globalPrivacyControl;
-  const tell = text => { if(status) status.textContent = text; };
+  // The cart asks at navigation time and only accepts Google's bounded linker value.
+  if (isBookshop) window.pinnacleBookAnalyticsAllowed = () => production && enabled && !validationTraffic;
   const send = (name, parameters) => {
-    if (!production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic) return false;
-    try { window.gtag('event', name, {...permittedCampaigns(), page_group:pageGroup, measurement_mode:'consented', ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); return true; } catch { return false; }
+    if (!production || !enabled || knowledgeSearch || validationTraffic) return false;
+    try { window.gtag('event', name, {...permittedCampaigns(), page_group:pageGroup, measurement_mode:'automatic', ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); return true; } catch { return false; }
   };
   const vitalRelease = 'ga4-reliability-20261011';
   let vitalsStarted = false;
@@ -232,7 +214,7 @@
     return null;
   };
   const startWebVitals = () => {
-    if (vitalsStarted || !production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || typeof PerformanceObserver !== 'function' || Math.random() >= 0.1) return;
+    if (vitalsStarted || !production || !enabled || knowledgeSearch || validationTraffic || typeof PerformanceObserver !== 'function' || Math.random() >= 0.1) return;
     vitalsStarted = true;
     const values={LCP:null,INP:null,CLS:0},seen={CLS:false},sent=new Set(),observers=[],interactions=new Map();
     const watch=(type,receive,options={type,buffered:true})=>{try{const observer=new PerformanceObserver(list=>{for(const entry of list.getEntries())receive(entry);});observer.observe(options);observers.push(observer);}catch{}};
@@ -247,7 +229,7 @@
       clsLast=at;values.CLS=Math.max(values.CLS,clsWindow);seen.CLS=true;
     }});
     const emit=()=>{
-      if (!enabled || blocked || navigator.globalPrivacyControl || validationTraffic) return;
+      if (!enabled || validationTraffic) return;
       for(const name of ['LCP','INP','CLS']){
         if(sent.has(name)||(name==='CLS'?!seen.CLS:values[name]===null))continue;
         const shape=vitalShape(name,values[name]);if(!shape)continue;
@@ -260,7 +242,7 @@
   };
   // One fixed signal of each kind per document, with no vendor/user payload.
   // A GTM consumer may use these for traffic protection; they are not Ads goals
-  // or qualified leads. Never replay after refusal, QA, or an unavailable vendor.
+  // or qualified leads. Never replay during QA or after an unavailable vendor.
   const protectionEvents = window.__pinnacleProtectionEvents || (window.__pinnacleProtectionEvents = new Set());
   const labelledProtectionQA = value => typeof value === 'string' && /(?:^|[ _.-])(?:qa|fixture|validation)(?:$|[ _.-])/i.test(value);
   const protectionAccountId='adaEbXowXfmZM';
@@ -313,18 +295,17 @@
       return true;
     }catch{return false;}
   };
-  // The deferred SDK consumer must recheck permission when it actually calls
+  // The deferred SDK consumer rechecks route and payload eligibility when it calls
   // the vendor. This API exposes only a boolean, never attribution or identity.
   window.pinnacleProtectionAllowed = () => {
     try {
       const currentURL = new URL(location.href);
-      return !!(production && enabled && preference === 'accepted' && savedPermission(key) &&
-        !blocked && !navigator.globalPrivacyControl && !knowledgeSearch && !validationTraffic &&
+      return !!(production && enabled && !knowledgeSearch && !validationTraffic &&
         !currentURL.searchParams.has('validation_test') &&
         !/^\/(?:account|auth|admin|internal|private|customer|customers|patient|patients|payroll|reports|report|documents|document)(?:\/|$)/i.test(location.pathname) &&
         !/^\/ask\/(?:te\/)?(?:account|auth|api|search)(?:\/|$)/.test(location.pathname) &&
         !labelledProtectionQA(currentURL.searchParams.get('utm_campaign')) &&
-        !labelledProtectionQA(readSource()?.fields?.utm_campaign)&&
+        !labelledProtectionQA(readSource()?.fields?.utm_campaign) &&
         protectionURLSafe(location.href)&&protectionURLSafe(document.referrer||'',true));
     } catch { return false; }
   };
@@ -378,21 +359,17 @@
       ...Object.fromEntries(Object.entries(campaignFields).filter(([field])=>fields[field]).map(([field,name])=>[name,fields[field]]))};
   };
   const sendGoogleAds = (name, parameters, allowJourney = true) => {
-    if (!production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || (!enabled&&preference!=='unset') || googleAdsEvents.has(name)) return;
+    if (!production || !enabled || knowledgeSearch || validationTraffic || googleAdsEvents.has(name)) return;
     const attribution = googleAdsSource(allowJourney);
     if (!attribution) return;
     try {
-      const payload={schema_version:1,page_group:pageGroup,measurement_mode:enabled?'consented':'denied_storage',...(enabled?attribution:{traffic_source:'google_ads'}),...parameters};
-      if (enabled) send(name,payload);
-      else {
-        configureTag('denied',canonical);
-        window.gtag('event',name,{...payload,page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
-      }
+      const payload={schema_version:1,page_group:pageGroup,measurement_mode:'automatic',...attribution,...parameters};
+      send(name,payload);
       googleAdsEvents.add(name);
     } catch {} // Measurement failure must not stop native calling or WhatsApp.
   };
-  // A navigation handoff carries only already validated campaign fields, with
-  // permission. It carries no reader identity, question, history or child data.
+  // A navigation handoff carries only already validated campaign fields. It
+  // carries no reader identity, question, history or child data.
   document.addEventListener('click',event=>{
     const link=event.target?.closest?.('a[href]');if(!link||!(isAsk||knowledgePath))return;
     if(handedOffLinks.has(link)){link.href=handedOffLinks.get(link);handedOffLinks.delete(link);}
@@ -401,7 +378,7 @@
     if(action==='knowledge-enrol')send('enquiry_link_click',{schema_version:2,page_group:pageGroup,library,link_placement:action,destination:'existing_enrolment_form'});
     if(action==='knowledge-service')send('knowledge_service_click',{schema_version:1,page_group:'knowledge',library,link_placement:action,destination:'therapy_services'});
     if(action==='knowledge-centres')send('knowledge_centres_click',{schema_version:1,page_group:'knowledge',library,link_placement:action,destination:'published_centre_directory'});
-    if(!production||!enabled||blocked||knowledgeSearch||validationTraffic)return;
+    if(!production||!enabled||knowledgeSearch||validationTraffic)return;
     try{
       const target=new URL(link.href||link.getAttribute('href'),location.href);
       if(target.origin!==origin||!acquisitionPaths.has(target.pathname))return;
@@ -424,27 +401,13 @@
     send(name, {schema_version:3,page_group:'bookshop',currency:'INR',value,items,transport_type:'beacon'});
   };
   document.addEventListener('pinnacle:commerce', event => sendCommerce(event.detail?.name, event.detail?.items));
-  const clearCookies = () => {
-    for (const cookie of document.cookie.split(';')) {
-      const name = cookie.trim().split('=')[0];
-      const bookCookie = name.startsWith('pbn_books_ga');
-      if (bookCookie ? !isBookshop : !name.startsWith('ps_ga')) continue;
-      // Root-scoped book cookies use their own namespace. Retire visible old
-      // book-path cookies without deleting therapy/Ask measurement cookies.
-      const cookiePaths = bookCookie ? ['/'] : isBookshop ? [...routes].filter(route => pages[route]?.group === 'bookshop') : routes;
-      for (const route of cookiePaths) for (const domain of ['', 'www.pinnacleblooms.org', 'pinnacleblooms.org']) {
-        document.cookie = name + '=; Max-Age=0; path=' + route + ';' + (domain ? ' domain=' + domain + ';' : '') + ' SameSite=Lax; Secure';
-      }
-    }
-  };
-  // Actual receipt events do not wait for an optional browsing-analytics choice.
-  // An undecided visitor uses denied storage; an explicit refusal or GPC sends
-  // nothing. The protected receiver ledger remains the business authority.
-  const configureTag = (storage, measuredLocation, fields = {}) => {
+  // The protected receiver ledger remains the business authority. Analytics
+  // records only the fixed public event vocabulary and validated campaign fields.
+  const configureTag = (measuredLocation, fields = {}) => {
     // Visible legacy per-page cookies can otherwise shadow the shared root
     // identity on a returning browser. Expire only that page's old scope,
-    // after permission; leave root, book, Ask and knowledge cookies intact.
-    if(storage==='granted'&&!isBookshop&&!isAsk&&!knowledgePath&&pagePath!=='/'){
+    // after the shared root identity is established; leave root, book, Ask and knowledge cookies intact.
+    if(!isBookshop&&!isAsk&&!knowledgePath&&pagePath!=='/'){
       for(const cookie of document.cookie.split(';')){
         const name=cookie.trim().split('=')[0];
         if(!/^ps_ga(?:_[A-Za-z0-9_]+)?$/.test(name))continue;
@@ -458,22 +421,20 @@
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     if (!window.__pinnacleConsentDefaults) {
       window.__pinnacleConsentDefaults = true;
-      window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+      window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});
     }
-    // Advertising call measurement has its own explicit choice. Preserve its
-    // granted/denied state instead of overriding it from Analytics settings.
-    window.gtag('consent','update',{analytics_storage:storage,ad_personalization:'denied'});
-    window.gtag('set','ads_data_redaction',true);
+    window.gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});
+    window.gtag('set','ads_data_redaction',false);
     window.gtag('set','url_passthrough',false);
     if (!tagStarted) window.gtag('js',new Date());
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-      // One consented public-site visit must keep its GA4 identity when a
+      // One public-site visit must keep its GA4 identity when a
       // family moves from a service/centre page to Enrolment. Per-page cookie
       // paths create a new client/session at that handoff. Keep the existing
       // separate book namespace and Ask/knowledge scopes.
       cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:'/',cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
-      page_location:measuredLocation,page_title:pageTitle,page_referrer:storage==='granted'?safeReferrer:'',ignore_referrer:storage!=='granted'||!safeReferrer,
+      page_location:measuredLocation,page_title:pageTitle,page_referrer:safeReferrer,ignore_referrer:!safeReferrer,
       ...Object.fromEntries(Object.values(campaignFields).map(field=>[field,''])),...fields
     });
     if (!tagStarted && !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
@@ -483,40 +444,29 @@
     }
     tagStarted = true;
   };
-  const limitedGroups = new Set(['home','speech_therapy','occupational_therapy','aba_therapy','special_education','autism_therapy','developmental_assessment','centre_directory','centre_detail','enrolment','pinnacleai','life_participation','research_study','organisation','public_information','family_resource','professional_learning','contact']);
-  const limitedEligible = production && !isAsk && !knowledgePath && !isBookshop && !knowledgeSearch && !validationTraffic && limitedGroups.has(pageGroup);
   const limitedActionNames = new Set(['phone_link_click','whatsapp_link_click','enquiry_link_click']);
-  const sendLimited = (name, parameters) => {
-    if (!limitedAllowed || preference!=='unset' || !limitedEligible || blocked || navigator.globalPrivacyControl || !['page_view',...limitedActionNames].includes(name)) return false;
-    try {
-      if (!tagStarted) configureTag('denied',canonical);
-      window.gtag('event',name,{...parameters,page_group:pageGroup,measurement_mode:'denied_storage',page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
-      return true;
-    } catch { return false; }
-  };
   const sendPublicIntent = (name, parameters) => {
-    if (enabled) return send(name,parameters);
     if (!limitedActionNames.has(name) || !parameters || parameters.page_group!==pageGroup) return false;
     const placement=parameters.link_placement,destination=parameters.destination;
-    if (name==='phone_link_click' && parameters.schema_version===2 && destination==='national_helpline' && (callPlacements.has(placement)||placement==='central-phone')) return sendLimited(name,{schema_version:2,link_placement:placement,destination});
-    if (name==='whatsapp_link_click' && parameters.schema_version===4 && destination==='national_helpline' && (['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp','central-whatsapp'].includes(placement))) return sendLimited(name,{schema_version:4,link_placement:placement,destination});
-    if (name==='enquiry_link_click' && parameters.schema_version===2 && destination==='existing_enrolment_form' && enquiryPlacements.has(placement)) return sendLimited(name,{schema_version:2,link_placement:placement,destination});
+    if (name==='phone_link_click' && parameters.schema_version===2 && destination==='national_helpline' && (callPlacements.has(placement)||placement==='central-phone')) return send(name,{schema_version:2,link_placement:placement,destination});
+    if (name==='whatsapp_link_click' && parameters.schema_version===4 && destination==='national_helpline' && ['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp','central-whatsapp'].includes(placement)) return send(name,{schema_version:4,link_placement:placement,destination});
+    if (name==='enquiry_link_click' && parameters.schema_version===2 && destination==='existing_enrolment_form' && enquiryPlacements.has(placement)) return send(name,{schema_version:2,link_placement:placement,destination});
     return false;
   };
   const sendPageViewOnce = () => {
     if (pageViewSent) return false;
-    const sent=enabled?send('page_view',{page_group:pageGroup,schema_version:2}):sendLimited('page_view',{schema_version:3});
+    const sent=send('page_view',{page_group:pageGroup,schema_version:2});
     if(sent)pageViewSent=true;
     return sent;
   };
   const start = () => {
-    if (!production || blocked || knowledgeSearch) return;
+    if (!production || knowledgeSearch) return;
     enabled = true;
     rememberSource();
     if(validationTraffic)return;
     try { ensureProtectionContainer(); } catch {} // Optional protection never disables analytics/contact.
-    if (loaded) { window.gtag('consent','update',{analytics_storage:'granted'}); return; }
-    configureTag('granted',measurementLocation,permittedCampaigns());
+    if (loaded) return;
+    configureTag(measurementLocation,permittedCampaigns());
     loaded = true;
     sendPageViewOnce();
     startWebVitals();
@@ -524,57 +474,7 @@
     const viewed = Object.entries(commerceCatalogue).find(([, item]) => item.path === pagePath);
     if (viewed) sendCommerce('view_item', [{sku:viewed[0],quantity:1,price:viewed[1].price}]);
   };
-  const choose = (value, persist = true) => {
-    if (!['accepted','declined'].includes(value)) return;
-    if (!production) { tell('Preview: analytics is disabled. No analytics data is sent.'); return; }
-    preference = value;
-    limitedAllowed = false;
-    if (persist) { try { localStorage.setItem(key,JSON.stringify({value,at:Date.now()})); } catch {} }
-    if (value==='accepted' && !blocked && !knowledgeSearch) {
-      try { start(); tell('Optional analytics is on. Turn it off here at any time.'); }
-      catch { enabled=false; tell('Analytics is unavailable. Your enquiry and call links still work.'); }
-    } else {
-      enabled=false;window['ga-disable-'+id]=true;
-      try { window.dataLayer?.push({pinnacle_protection_allowed:false}); } catch {}
-      // Cancel an already queued SDK consumer on refusal/GPC. No payload,
-      // conversion or GA4 behaviour is added; its pending work must not replay.
-      try { document.dispatchEvent(new Event('pinnacle_protection_cancel')); } catch {}
-      if(!isBookshop)forgetSource();
-      if (tagStarted) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
-      clearCookies();
-      tell(knowledgeSearch ? 'Your choice is saved. Analytics is disabled on search result pages.' : blocked ? 'Analytics is off because Global Privacy Control is enabled.' : 'Optional analytics is off. Your enquiry and call links still work.');
-    }
-  };
-  if(panel)panel.hidden=false;
-  document.querySelectorAll('[data-measurement-choice]').forEach(button=>{
-    button.addEventListener('click',()=>choose(button.dataset.measurementChoice));
-    if (blocked && button.dataset.measurementChoice==='accepted') button.disabled=true;
-  });
-  if (!production) tell('Preview: analytics is disabled. No analytics data is sent.');
-  else if (blocked) choose('declined');
-  else {
-    let raw=null,readable=true;try { raw=localStorage.getItem(key); } catch { readable=false; }
-    if(raw===null&&readable){
-      limitedAllowed=true;
-      const limitedStarted=sendPageViewOnce();
-      if(limitedStarted)tell('Limited cookieless measurement is active. Optional analytics remains off until you choose.');
-      else{limitedAllowed=false;tell(limitedEligible?'Limited cookieless measurement is unavailable. Optional analytics remains off until you choose.':'Optional analytics is off until you choose.');}
-    }
-    else if(readable){
-      try{
-        const saved=JSON.parse(raw);
-        if(saved?.value==='declined'&&Number.isFinite(saved.at))choose('declined',false);
-        else if(saved?.value==='accepted'&&Number.isFinite(saved.at)&&saved.at<=Date.now()&&Date.now()-saved.at<lifetime)choose('accepted',false);
-        else preference='invalid';
-      }catch{preference='invalid';}
-    }else preference='invalid';
-  }
-  window.addEventListener?.('storage',event=>{
-    if(event.key===key||event.key===null){if(!savedPermission(key))choose('declined',false);}
-    if(event.key===helplineChoiceKey&&!savedPermission(helplineChoiceKey)){
-      try{if(JSON.parse(localStorage.getItem(sourceKey))?.landingPath===helplinePath)forgetSource();}catch{}
-    }
-  });
+  start();
   // Only a currently tagged landing is an arrival; a retained journey is not.
   sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
   // Fixed event vocabulary only; arbitrary query values and form data are excluded.
@@ -591,12 +491,12 @@
     if(detail.stage==='start'&&formStarted)return;
     const name={start:'form_start',attempt:'enquiry_submit_attempt',error:'form_error'}[detail.stage];
     send(name,{schema_version:1,link_placement:pageGroup==='enrolment'?'enrolment-form':'inline-callback-form',destination:'existing_enrolment_workflow',...(detail.stage==='error'?{error_category:detail.error_category}:{}),release_id:vitalRelease});
-    if(detail.stage==='start'&&production&&enabled&&!blocked&&!navigator.globalPrivacyControl&&!knowledgeSearch&&!validationTraffic)formStarted=true;
+    if(detail.stage==='start'&&production&&enabled&&!knowledgeSearch&&!validationTraffic)formStarted=true;
   });
   const contactRequests=new Set();
   document.addEventListener('pinnacle:contact-accepted',event=>{
     const receipt=event?.detail?.receipt;
-    if(!contactPage||event.detail.contract!=='website_contact_v1'||!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k))||contactRequests.has(receipt.requestId)||!enabled||preference==='declined'||!savedPermission(key))return;
+    if(!contactPage||event.detail.contract!=='website_contact_v1'||!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k))||contactRequests.has(receipt.requestId)||!enabled)return;
     send('contact_received',{schema_version:1,link_placement:'contact-form',destination:'existing_contact_workflow'});
     contactRequests.add(receipt.requestId);
   });
@@ -605,27 +505,18 @@
     if(!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k)))return;
     const callbackPage=(['centre_detail','centre_directory','occupational_therapy','aba_therapy','autism_therapy'].includes(pageGroup)||location.pathname==='/speech-therapy/service-information')&&document.querySelector('#pinnacle-enrolment[data-callback-contract="durable-enrolment-v1"][data-api-endpoint="/api/enrolment"]');
     const parentContact=contactPage&&event.detail?.contract==='website_contact_v1'&&['Therapy Services','Assessments'].includes(event.detail.topic);
-    if ((pageGroup !== 'enrolment'&&!callbackPage&&!parentContact) || acceptedRequests.has(receipt.requestId) || !production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || (!enabled&&preference!=='unset') || (enabled&&!savedPermission(key))) return;
+    if ((pageGroup !== 'enrolment'&&!callbackPage&&!parentContact) || acceptedRequests.has(receipt.requestId) || !production || !enabled || knowledgeSearch || validationTraffic) return;
     try {
-      if (!enabled) configureTag('denied',canonical);
-      const parameters={schema_version:4,page_group:parentContact?'contact':'enrolment',link_placement:parentContact?'contact-form':callbackPage?'inline-callback-form':'enrolment-form',destination:parentContact?'existing_contact_workflow':'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
-      if (enabled) {
-        // The receipt belongs to the submitted snapshot, not a later tab/URL.
-        // Revalidate its expiry and both applicable permissions at emission.
-        const acceptedSource=readSource(event.detail?.acquisition||null);
-        const acceptedCampaigns=Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
-        for(const [field,name]of Object.entries(campaignFields))if(acceptedSource?.fields[field])acceptedCampaigns[name]=acceptedSource.fields[field];
-        send('enquiry_accepted',{...parameters,...acceptedCampaigns});
-        queueProtectionEvent('pinnacle_enquiry_accepted',acceptedSource);
-      }
-      else window.gtag('event','enquiry_accepted',{...parameters,page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
+      const parameters={schema_version:4,page_group:parentContact?'contact':'enrolment',link_placement:parentContact?'contact-form':callbackPage?'inline-callback-form':'enrolment-form',destination:parentContact?'existing_contact_workflow':'existing_enrolment_workflow',measurement_mode:'automatic'};
+      // The receipt belongs to the submitted snapshot, not a later tab/URL.
+      const acceptedSource=readSource(event.detail?.acquisition||null);
+      const acceptedCampaigns=Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
+      for(const [field,name]of Object.entries(campaignFields))if(acceptedSource?.fields[field])acceptedCampaigns[name]=acceptedSource.fields[field];
+      send('enquiry_accepted',{...parameters,...acceptedCampaigns});
+      queueProtectionEvent('pinnacle_enquiry_accepted',acceptedSource);
       acceptedRequests.add(receipt.requestId);
     } catch {} // The receipt and parent confirmation survive a vendor failure.
   });
-  if(disclosure){
-    if(!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. For a fresh eligible visitor, a minimal accepted-enquiry event may be sent to Google with analytics storage denied.';
-    disclosure.textContent+=' Tagged Google Ads arrivals use a separate minimal diagnostic. Limited events carry no campaign identifiers until you choose. Advertising call measurement follows its separate choice. Saving “Keep analytics off”, withdrawing permission or using Global Privacy Control stops future Google measurement events.';
-  }
   document.addEventListener('click',event=>{
     if (pageGroup === 'family_resource') {
       const resourceLink=event.target?.closest?.('a[data-resource="first_conversation_v1"]');
@@ -698,10 +589,10 @@
   }
 })();
 
-// Reuse one first-party installer; its own page/consent guards keep it dormant.
+// Reuse one first-party installer; its own route, QA and payload guards keep it dormant where ineligible.
 if (location.origin === 'https://www.pinnacleblooms.org' && !document.querySelector('script[data-pinnacle-cheq-loader]')) {
   const protection = document.createElement('script');
-  protection.src = '/pinnacle-pages-scripts/cheq-protection.js';
+  protection.src = '/pinnacle-pages-scripts/cheq-protection.js?v=measurement-always-on-20261019';
   protection.defer = true;
   protection.setAttribute('data-pinnacle-cheq-loader','');
   document.head.append(protection);

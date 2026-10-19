@@ -17,7 +17,7 @@ export function repairSharedNavigation(request,response){
  return new HTMLRewriter().on('a[href]',{element(el){const before=el.getAttribute('href'),after=publicLinkTarget(before);if(after===null)el.remove();else if(after!==before)el.setAttribute('href',after);}})
   .on('script[src]',{element(el){
    const raw=el.getAttribute('src');
-   try{const u=new URL(raw,request.url);if(u.origin==='https://www.pinnacleblooms.org'&&u.pathname==='/pinnacle-pages-scripts/speech-measurement.js'){u.searchParams.set('v','paid-journey-20261008');el.setAttribute('src',raw.startsWith('/')?u.pathname+u.search:u.href);}}catch{}
+   try{const u=new URL(raw,request.url);if(u.origin==='https://www.pinnacleblooms.org'&&u.pathname==='/pinnacle-pages-scripts/speech-measurement.js'){u.searchParams.set('v','measurement-always-on-20261019');el.setAttribute('src',raw.startsWith('/')?u.pathname+u.search:u.href);}}catch{}
   }})
   .on('style[data-pinnacle-footer-art]',{element(el){el.remove();}})
   .on('style[data-pinnacle-callback-accessibility]',{element(el){el.remove();}})

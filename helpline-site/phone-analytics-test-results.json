@@ -1,71 +1,47 @@
 {
-  "checkedAt": "2026-10-10T00:48:14.334Z",
-  "passed": 16,
+  "checkedAt": "2026-10-19T17:16:09.150Z",
+  "passed": 10,
   "results": [
     {
-      "name": "Eight real call links have unique approved placements and the correct number",
+      "name": "Eight public helpline call placements remain unique and use the central number",
       "passed": true
     },
     {
-      "name": "Fresh and declined choices send nothing and never load Google",
+      "name": "No visitor measurement choice, refusal state or GPC gate remains",
       "passed": true
     },
     {
-      "name": "Acceptance loads one tag and one clean page view, with advertising consent denied and automatic GA page views off",
+      "name": "A production visit starts GA4, Ads and call measurement exactly once",
       "passed": true
     },
     {
-      "name": "One activation gives one event for every actual placement through one bubbling listener",
+      "name": "An existing Google tag is reused without losing configuration or events",
       "passed": true
     },
     {
-      "name": "Unknown placements and other telephone numbers cannot enter the payload",
+      "name": "Forwarding-number replacement changes only central links and tracked calls still fire",
       "passed": true
     },
     {
-      "name": "Collector failure never prevents or throws through dialing",
+      "name": "Every approved placement produces one bounded event without blocking dialling",
       "passed": true
     },
     {
-      "name": "GPC overrides saved acceptance and never starts Google",
+      "name": "Only the two reviewed ChatGPT tuples enter GA4 and the journey envelope",
       "passed": true
     },
     {
-      "name": "Preview, apex and unrelated paths cannot load analytics",
+      "name": "Google click IDs remain in the landing URL for the granted Google tag and never enter custom payloads",
       "passed": true
     },
     {
-      "name": "Storage unavailable, expired and future-dated consent all fail closed",
+      "name": "Unknown or private campaign values never enter analytics or storage",
       "passed": true
     },
     {
-      "name": "Withdrawal stops events and clears only helpline cookies; renewed choice does not duplicate the tag",
-      "passed": true
-    },
-    {
-      "name": "Exactly the two fixed ChatGPT campaign tuples accompany existing consented events",
-      "passed": true
-    },
-    {
-      "name": "Unknown, partial, duplicated and injected campaign tuples never enter analytics",
-      "passed": true
-    },
-    {
-      "name": "Other URL fields, advertising click identifiers and private fragments are not forwarded even on a valid tuple",
-      "passed": true
-    },
-    {
-      "name": "Tagged traffic without new consent, with old acceptance, refusal or GPC sends nothing",
-      "passed": true
-    },
-    {
-      "name": "Repeated and renewed consent does not duplicate attributed page views, and dialing remains untouched",
-      "passed": true
-    },
-    {
-      "name": "New disclosure describes limited fixed campaign labels and preserves refusal-safe calling",
+      "name": "Labelled QA, preview, apex and unrelated routes remain unmeasured",
       "passed": true
     }
   ],
-  "scope": "First-party code tests. Actual third-party request/ingestion is checked separately in the browser. Phone-link events do not establish connected calls."
+  "scope": "Automatic first-party helpline measurement tests. Third-party requests and receiving-platform ingestion require separate live verification; a phone-link event does not prove a connected call."
 }

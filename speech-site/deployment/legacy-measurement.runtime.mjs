@@ -1,4 +1,4 @@
-// speech-site/deployment/legacy-measurement-fingerprints.mjs
+// deployment/legacy-measurement-fingerprints.mjs
 var LEGACY_TAGS = ["<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-W9ZHX459');<\/script>", '<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"><\/script>', "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'AW-10810823199');\r\n    <\/script>", "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'G-2BYLRLFRDJ');\r\n\r\n        /**/<\/script>", "<script>\r\n  gtag('config', 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo', {\r\n    'phone_conversion_number': '9100181181'\r\n  });\r\n<\/script>", '<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ"><\/script>'];
 var LEGACY_NOSCRIPT_TAGS = ['<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9ZHX459"\r\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>'];
 var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
@@ -76,15 +76,14 @@ var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
         }, 4000);\r
     <\/script>`]];
 
-// speech-site/deployment/public-ad-call.mjs
-var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-74a0fdb3ea376af9.mjs";
-var publicAdCallMarkup = '<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden><summary>Optional advertising call measurement</summary><p>With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div><button type="button" data-ad-call-choice="accepted">Allow call measurement</button><button type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>';
-var source = `// Shared advertising call measurement. No advertising helper runs before opt-in.
-export const preferencesMarkup = \`<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden><summary>Optional advertising call measurement</summary><p>With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div><button type="button" data-ad-call-choice="accepted">Allow call measurement</button><button type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>\`;
+// deployment/public-ad-call.mjs
+var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-43028dcc9125d95c.mjs";
+var source = `// Shared advertising call measurement for eligible public Pinnacle pages.
+// There is no visitor choice gate: site-owner approved measurement starts once.
+export const preferencesMarkup = '';
 
-// Keep this function self-contained: the existing wrapper can serve its body too.
-export function installAdCallConsent() {
-  if (window.__pinnacleAdCallConsent) return;
+export function installAdCallMeasurement() {
+  if (window.__pinnacleAdCallMeasurement) return;
   const hosts = new Set(['www.pinnacleblooms.org', 'pinnacleblooms.org']);
   const paths = new Set([
     '/',
@@ -106,44 +105,44 @@ export function installAdCallConsent() {
   const publicAsk = /^\\/ask(?:\\/|$)/.test(location.pathname) &&
     !/^\\/ask\\/(?:te\\/)?(?:account|auth|search|api)(?:\\/|$)/.test(location.pathname);
   const publicCentre = /^\\/centers\\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/.test(location.pathname);
-  const publicLegacy=document.body?.dataset?.pageVariant==='legacy_knowledge'&&(/^\\/(?:ma|t|b|c)\\/[a-z0-9-]+\\/?$/.test(location.pathname)||location.pathname==='/contact-national-autism-helpline-24-7');
-  const reviewedPublicTemplate=document.body?.dataset?.pageVariant==='legacy_public_template'&&['/assessments/stuttering-assessment','/certified-courses','/certified-courses/'].includes(location.pathname);
+  const publicLegacy = document.body?.dataset?.pageVariant === 'legacy_knowledge' &&
+    (/^\\/(?:ma|t|b|c)\\/[a-z0-9-]+\\/?$/.test(location.pathname) || location.pathname === '/contact-national-autism-helpline-24-7');
+  const reviewedPublicTemplate = document.body?.dataset?.pageVariant === 'legacy_public_template' &&
+    ['/assessments/stuttering-assessment', '/certified-courses', '/certified-courses/'].includes(location.pathname);
   if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
       !(paths.has(location.pathname) || publicAsk || publicCentre || publicLegacy || reviewedPublicTemplate)) return;
-  const state = {enabled: false, started: false};
-  window.__pinnacleAdCallConsent = state;
+
+  const state = window.__pinnacleAdCallMeasurement = {enabled: true, started: false};
   const id = 'AW-10810823199';
   const action = id + '/VNUcCMSy3YobEJ-kgKMo';
-  const key = 'pinnacle-ad-call-consent-v1';
-  const withdrawnKey = key + '-withdrawn';
-  const lifetime = 180 * 86400000;
   const originalDisplay = '9100 181 181';
   const originals = new Map();
   let replacement = null;
-  const blocked = () => navigator.globalPrivacyControl === true;
+
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
   if (!window.__pinnacleConsentDefaults) {
     window.__pinnacleConsentDefaults = true;
-    window.gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+    window.gtag('consent', 'default', {
+      analytics_storage: 'granted',
+      ad_storage: 'granted',
+      ad_user_data: 'granted',
+      ad_personalization: 'denied'
+    });
   }
-  window.gtag('set', 'ads_data_redaction', true);
+  window.gtag('consent', 'update', {
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'denied'
+  });
+  window.gtag('set', 'ads_data_redaction', false);
+
   const numberPattern = /(?:\\+?91[\\s-]*)?9100[\\s-]*181[\\s-]*181/g;
-  const central = href => ['919100181181','9100181181','09100181181'].includes(String(href || '').replace(/^tel:/, '').replace(/[\\s+().-]/g, ''));
-  const restore = () => {
-    replacement = null;
-    for (const [link, before] of originals) {
-      link.setAttribute('href', before.href);
-      if (before.aria === null) link.removeAttribute('aria-label');
-      else link.setAttribute('aria-label', before.aria);
-      if (before.marker === null) link.removeAttribute('data-pinnacle-ad-call-target');
-      else link.setAttribute('data-pinnacle-ad-call-target', before.marker);
-      for (const [node, text] of before.text) node.nodeValue = text;
-    }
-    originals.clear();
-  };
+  const central = href => ['919100181181', '9100181181', '09100181181'].includes(
+    String(href || '').replace(/^tel:/, '').replace(/[\\s+().-]/g, '')
+  );
   const apply = () => {
-    if (!state.enabled || blocked() || !replacement) return;
+    if (!replacement) return;
     for (const link of document.querySelectorAll('a[href^="tel:"]')) {
       if (!originals.has(link)) {
         const href = link.getAttribute('href');
@@ -151,7 +150,12 @@ export function installAdCallConsent() {
         const text = [];
         const walk = document.createTreeWalker(link, 4);
         while (walk.nextNode()) text.push([walk.currentNode, walk.currentNode.nodeValue]);
-        originals.set(link, {href, aria: link.getAttribute('aria-label'), marker: link.getAttribute('data-pinnacle-ad-call-target'), text});
+        originals.set(link, {
+          href,
+          aria: link.getAttribute('aria-label'),
+          marker: link.getAttribute('data-pinnacle-ad-call-target'),
+          text
+        });
       }
       const before = originals.get(link);
       link.setAttribute('href', 'tel:' + replacement.mobile);
@@ -161,7 +165,6 @@ export function installAdCallConsent() {
     }
   };
   const callback = (formatted, mobile) => {
-    if (!state.enabled || blocked()) return;
     if (typeof formatted !== 'string' || !/^[+\\d\\s().-]{7,30}$/.test(formatted)) return;
     if (typeof mobile !== 'string' || !/^\\+?[\\d\\s().-]{7,25}$/.test(mobile)) return;
     const dial = mobile.replace(/[\\s().-]/g, '');
@@ -169,24 +172,19 @@ export function installAdCallConsent() {
     replacement = {formatted, mobile: dial};
     apply();
   };
-  const clearOwnedCookies = () => {
-    // Phone-conversion and this site's Google click-measurement cookies only.
-    for (const raw of document.cookie.split(';')) {
-      const name = raw.trim().split('=')[0];
-      if (!/^(?:gwcc|_gcl_(?:aw|au|dc|gf|gs))$/.test(name)) continue;
-      for (const domain of ['', location.hostname, 'pinnacleblooms.org']) {
-        document.cookie = name + '=; Max-Age=0; Path=/;' + (domain ? ' Domain=' + domain + ';' : '') + ' SameSite=Lax; Secure';
-      }
-    }
-  };
   const start = () => {
-    state.enabled = true;
-    window.gtag('consent', 'update', {ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'denied'});
     if (state.started) return;
     state.started = true;
     window.gtag('js', new Date());
     window.gtag('config', action, {
-      ...(publicLegacy||reviewedPublicTemplate?{page_location:'https://www.pinnacleblooms.org'+(reviewedPublicTemplate?(['/certified-courses','/certified-courses/'].includes(location.pathname)?'/certified-courses':'/speech-aba-autism-assessments'):'/legacy-knowledge'),page_title:reviewedPublicTemplate?'Pinnacle Public Information':'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),
+      ...(publicLegacy || reviewedPublicTemplate ? {
+        page_location: 'https://www.pinnacleblooms.org' + (reviewedPublicTemplate
+          ? (['/certified-courses', '/certified-courses/'].includes(location.pathname) ? '/certified-courses' : '/speech-aba-autism-assessments')
+          : '/legacy-knowledge'),
+        page_title: reviewedPublicTemplate ? 'Pinnacle Public Information' : 'Pinnacle Knowledge Library',
+        page_referrer: '',
+        ignore_referrer: true
+      } : {}),
       phone_conversion_number: originalDisplay,
       phone_conversion_callback: callback,
       send_page_view: false,
@@ -202,91 +200,14 @@ export function installAdCallConsent() {
       script.setAttribute('data-pinnacle-ad-call-loader', '');
       document.head.appendChild(script);
     }
-  };
-  const init = () => {
-    const panel = document.querySelector('[data-ad-call-preferences]');
-    const status = document.querySelector('[data-ad-call-status]');
-    // A missing optional presentation must not erase a previously explicit,
-    // current choice. Unknown/refused visitors still remain off below.
-    if (panel) panel.hidden = false;
-    const tell = text => { if (status) status.textContent = text; };
-    const choose = (value, persist = true) => {
-      if (!['accepted', 'declined'].includes(value)) return;
-      let accepted = value === 'accepted' && !blocked();
-      let savedChoice = false;
-      if (accepted) {
-        // Require readable/writable storage so withdrawal can survive the reload.
-        try {
-          const probe = key + '-probe';
-          sessionStorage.setItem(probe, '1');
-          if (sessionStorage.getItem(probe) !== '1') throw new Error('Storage unavailable');
-          sessionStorage.removeItem(probe);
-          if (!persist && sessionStorage.getItem(withdrawnKey) === '1') throw new Error('Withdrawn');
-          const choice = JSON.stringify({value: 'accepted', at: Date.now()});
-          if (persist) localStorage.setItem(key, choice);
-          // A cached grant also requires writable local storage, without extending expiry.
-          else localStorage.setItem(key, localStorage.getItem(key));
-          savedChoice = JSON.parse(localStorage.getItem(key))?.value === 'accepted';
-          if (!savedChoice) throw new Error('Choice not saved');
-          if (persist) sessionStorage.removeItem(withdrawnKey);
-        } catch { accepted = false; }
-      } else {
-        if (persist || state.started) {
-          try { sessionStorage.setItem(withdrawnKey, '1'); savedChoice = sessionStorage.getItem(withdrawnKey) === '1'; } catch {}
-        }
-        if (persist) {
-          try {
-            localStorage.removeItem(key);
-            localStorage.setItem(key, JSON.stringify({value: 'declined', at: Date.now()}));
-            savedChoice = savedChoice || JSON.parse(localStorage.getItem(key))?.value === 'declined';
-          } catch {}
-        }
-        // Keep the tab-local fallback only when persistent denial could not be saved.
-        // A later explicit choice in another tab must not be mistaken for a storage failure.
-        try {
-          if (JSON.parse(localStorage.getItem(key))?.value !== 'accepted') {
-            savedChoice = true;
-            sessionStorage.removeItem(withdrawnKey);
-          }
-        } catch {}
-      }
-      if (accepted) {
-        start();
-        tell('Advertising call measurement is on. You can turn it off here at any time.');
-      } else {
-        state.enabled = false;
-        window.gtag('consent', 'update', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
-        restore(); clearOwnedCookies();
-        tell(blocked() ? 'Call measurement is off because Global Privacy Control is enabled.' :
-          value === 'accepted' ? 'Call measurement stays off because this browser could not save your choice. Calling still works.' : 'Call measurement is off. Calling still works.');
-        // Phone Call Conversions does not support Consent Mode. Unload its code.
-        if (state.started && savedChoice) location.reload();
-        else if (state.started) tell('Close this page to finish stopping measurement; this browser could not save your withdrawal.');
-      }
-    };
-    for (const button of panel?.querySelectorAll('[data-ad-call-choice]') || []) {
-      button.addEventListener('click', () => choose(button.dataset.adCallChoice));
-      if (blocked() && button.dataset.adCallChoice === 'accepted') button.disabled = true;
-    }
-    let saved;
-    try { saved = JSON.parse(localStorage.getItem(key)); } catch {}
-    const valid = saved && Number.isFinite(saved.at) && saved.at <= Date.now() && Date.now() - saved.at < lifetime;
-    if (blocked()) choose('declined');
-    else if (valid) choose(saved.value, false);
-    else choose('declined', false);
     new MutationObserver(apply).observe(document.body, {childList: true, subtree: true});
-    document.addEventListener('visibilitychange', () => { if (blocked() && state.enabled) choose('declined'); });
-    window.addEventListener('storage', event => {
-      if (event.storageArea !== localStorage || (event.key !== key && event.key !== null) || !state.enabled) return;
-      let next; try { next = JSON.parse(event.newValue); } catch {}
-      if (!next || next.value !== 'accepted' || !Number.isFinite(next.at) || next.at > Date.now() || Date.now() - next.at >= lifetime) choose('declined', false);
-    });
   };
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, {once: true});
-  else init();
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, {once: true});
+  else start();
 }
 
-if (typeof window !== 'undefined' && typeof document !== 'undefined') installAdCallConsent();
+if (typeof window !== 'undefined' && typeof document !== 'undefined') installAdCallMeasurement();
 `;
 function servePublicAdCall(request) {
   const u = new URL(request.url);
@@ -294,7 +215,7 @@ function servePublicAdCall(request) {
   return new Response(["GET", "HEAD"].includes(request.method) && request.method !== "HEAD" ? source : null, { status: ["GET", "HEAD"].includes(request.method) ? 200 : 405, headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=31536000, immutable", "x-content-type-options": "nosniff", allow: "GET, HEAD" } });
 }
 
-// speech-site/deployment/legacy-measurement.mjs
+// deployment/legacy-measurement.mjs
 var serveLegacyMeasurementCall = servePublicAdCall;
 var normal = (text) => text.replaceAll("\r\n", "\n").trim();
 var fingerprints = new Set(LEGACY_TAGS.map(normal));
@@ -305,26 +226,22 @@ var analyticsTag = (tag) => /googletagmanager|googleadservices|G-2BYLRLFRDJ|AW-1
 var reviewedPublicTemplates = /* @__PURE__ */ new Set(["/assessments/stuttering-assessment", "/certified-courses", "/certified-courses/"]);
 var managedPreferenceRoutes = /* @__PURE__ */ new Set(["/", "/centers", "/autism-therapy", "/best-occupational-therapy-center-india-proven-improvement-rate", "/best-aba-therapy-center-india-proven-improvement-rate", "/best-special-education-center-call-9100181181", "/speech-aba-autism-assessments", "/about-us", "/contact", "/top-speech-therapy-center-india-proven-improvement-rate"]);
 var managedCentreRoute = /^\/centers\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/;
-var managedPreferenceCentre = '<details id="website-preferences" aria-label="Optional measurement preferences" class="measurement-preference-centre" data-pinnacle-managed-preferences style="box-sizing:border-box;background:#fff;color:#18233f;padding:8px 12px"><summary style="min-height:44px;cursor:pointer;font-weight:700">Privacy and optional measurement</summary><div><section class="measurement-settings portal-measurement" data-speech-measurement hidden aria-labelledby="analytics-preference-title"><h3 id="analytics-preference-title">Optional analytics</h3><p>On eligible public pages, Google may receive one coarse page visit and actual central call, WhatsApp or enquiry-link taps with analytics storage denied before you choose. This limited mode does not use optional analytics cookies or send form details, private answer paths, raw referrers or unrecognised URL fields. Allowing analytics adds the permitted public journey and validated campaign measurement. Advertising personalisation is off.</p><div><button type="button" data-measurement-choice="accepted">Allow analytics</button><button type="button" data-measurement-choice="declined">Keep analytics off</button></div><p data-measurement-status role="status">Limited cookieless measurement may run; optional analytics is off until you choose.</p></section><section class="measurement-settings portal-measurement" data-cheq-preferences hidden aria-labelledby="traffic-preference-title"><h3 id="traffic-preference-title">Optional invalid-traffic measurement</h3><p>With your permission, CHEQ uses limited browser and device signals, advertising identifiers and cookies to measure invalid visits on public landing pages. Private reading, sign-in, enquiry-form and checkout pages stay excluded.</p><div><button type="button" data-cheq-choice="accepted">Allow traffic measurement</button><button type="button" data-cheq-choice="declined">Keep traffic measurement off</button></div><p data-cheq-status role="status">Traffic measurement is off until you choose.</p></section>' + publicAdCallMarkup + '<p><a href="https://www.pinnacleblooms.org/privacy-policy">Privacy policy</a> \xB7 <a href="https://www.pinnacleblooms.org/cookie-policy">Cookie policy and choices</a></p></div></details>';
-var detailsElement = (attribute, html) => {
-  const pattern = new RegExp("<details\\b(?=[^>]*\\b" + attribute + "(?:\\s|=|>))[^>]*>[\\s\\S]*?<\\/details>", "gi"), matches = [...html.matchAll(pattern)];
-  return matches.length === 1 ? matches[0] : null;
-};
-var voidElement = /* @__PURE__ */ new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"]);
-var openElementsAt = (html, end) => {
-  const stack = [];
-  for (const match of html.slice(0, end).matchAll(/<\/?([a-z][\w:-]*)\b[^>]*>/gi)) {
-    const tag = match[1].toLowerCase(), closing = match[0][1] === "/";
-    if (closing) {
-      const index = stack.findLastIndex((node) => node.tag === tag);
-      if (index >= 0) stack.length = index;
-    } else if (!voidElement.has(tag) && !match[0].endsWith("/>")) stack.push({ tag, start: match.index, markup: match[0] });
+var removeBalanced = (html, tag, attribute) => {
+  const open = new RegExp("<" + tag + "\\b[^>]*" + attribute + "[^>]*>", "i").exec(html);
+  if (!open) return html;
+  const token = new RegExp("<\\/?" + tag + "\\b[^>]*>", "gi");
+  token.lastIndex = open.index;
+  let depth = 0, match;
+  while (match = token.exec(html)) {
+    if (match[0][1] === "/") depth--;
+    else depth++;
+    if (depth === 0) return html.slice(0, open.index) + html.slice(token.lastIndex);
   }
-  return stack;
+  return html;
 };
 function projectManagedPreferenceHtml(html, request) {
   const u = new URL(request.url);
-  if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || request.headers.has("authorization") || request.headers.has("range") || !managedPreferenceRoutes.has(u.pathname) && !managedCentreRoute.test(u.pathname) || html.includes("data-pinnacle-managed-preferences")) return null;
+  if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || request.headers.has("authorization") || request.headers.has("range") || !managedPreferenceRoutes.has(u.pathname) && !managedCentreRoute.test(u.pathname)) return null;
   const canonical = /<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["'][^>]*>/i.exec(html)?.[1];
   let canonicalMatches = canonical === u.origin + u.pathname;
   if (u.pathname === "/") try {
@@ -334,32 +251,26 @@ function projectManagedPreferenceHtml(html, request) {
     canonicalMatches = false;
   }
   if (!canonicalMatches) return null;
-  const analytics = detailsElement("data-speech-measurement", html), adCall = detailsElement("data-ad-call-preferences", html);
-  if (!analytics || !adCall || analytics.index >= adCall.index) return null;
-  if (u.pathname === "/") {
-    const gap = html.slice(analytics.index + analytics[0].length, adCall.index).trim(), bodyEnd = html.lastIndexOf("</body>"), tail = html.slice(adCall.index + adCall[0].length, bodyEnd).trim(), rootAnchor = html.slice(Math.max(0, analytics.index - 1600), analytics.index);
-    const speechLoader = /^<script\b(?=[^>]*\bsrc=["']\/pinnacle-pages-scripts\/speech-measurement\.js(?:\?[^"']*)?["'])[^>]*><\/script>$/i, adCallLoader = /^<script\b(?=[^>]*\btype=["']module["'])(?=[^>]*\bsrc=["']\/pinnacle-pages-scripts\/portal-ad-call-[a-f0-9]+\.mjs["'])(?=[^>]*\bdata-pinnacle-ad-call-module(?:\s|=|>))[^>]*><\/script>$/i;
-    if (!/\bid=["']website-preferences["']/i.test(analytics[0]) || !rootAnchor.includes("cm-mirracle-go-top") || bodyEnd < adCall.index || !speechLoader.test(gap) || !adCallLoader.test(tail)) return null;
-    return html.slice(0, analytics.index) + managedPreferenceCentre + html.slice(analytics.index + analytics[0].length, adCall.index) + html.slice(adCall.index + adCall[0].length);
+  let result = html;
+  for (const attribute of [`(?:id=["']website-preferences["']|data-pinnacle-managed-preferences)`, "data-speech-measurement", "data-cheq-preferences", "data-ad-call-preferences"]) {
+    let previous;
+    do {
+      previous = result;
+      result = removeBalanced(result, "details", attribute);
+    } while (result !== previous);
   }
-  const footer = /<footer\b[^>]*\bclass=["'][^"']*\bportal-site-footer\b[^"']*["'][^>]*>/i.exec(html), footerStart = footer?.index ?? -1, footerEnd = html.indexOf("</footer>", footerStart);
-  if (footerStart < 0 || footerEnd < 0 || analytics.index < footerStart || adCall.index < footerStart || analytics.index > footerEnd || adCall.index > footerEnd || html.slice(analytics.index + analytics[0].length, adCall.index).trim()) return null;
-  const footerHtml = html.slice(footerStart, footerEnd), analyticsParents = openElementsAt(footerHtml, analytics.index - footerStart), adCallParents = openElementsAt(footerHtml, adCall.index - footerStart);
-  if (!analyticsParents || !adCallParents || analyticsParents.length !== adCallParents.length || analyticsParents.some((parent2, index) => parent2.start !== adCallParents[index].start)) return null;
-  const parent = analyticsParents.at(-1);
-  if (parent?.tag !== "div" || !/\bclass=["'][^"']*\bportal-container\b[^"']*["']/i.test(parent.markup) || !analyticsParents.some((node) => node.tag === "footer" && /\bportal-site-footer\b/.test(node.markup))) return null;
-  const outside = html.slice(0, analytics.index) + managedPreferenceCentre + html.slice(analytics.index + analytics[0].length, adCall.index) + html.slice(adCall.index + adCall[0].length);
-  return outside;
+  result = result.replace(/<section\b[^>]*data-(?:speech-measurement|cheq-preferences)[^>]*>[\s\S]*?<\/section>/gi, "");
+  return result === html ? null : result;
 }
 async function projectManagedPreferences(request, response) {
   const u = new URL(request.url);
   if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || request.headers.has("authorization") || request.headers.has("range") || !managedPreferenceRoutes.has(u.pathname) && !managedCentreRoute.test(u.pathname)) return response;
-  if (response.status !== 200 || !response.body || response.headers.has("set-cookie") || !response.headers.get("content-type")?.includes("text/html") || /private|no-store|no-transform/i.test(response.headers.get("cache-control") || "")) return response;
+  if (response.status !== 200 || !response.body || response.headers.has("set-cookie") || !response.headers.get("content-type")?.includes("text/html") || /private|no-transform/i.test(response.headers.get("cache-control") || "")) return response;
   const html = await response.text(), projected = projectManagedPreferenceHtml(html, request);
   if (!projected) return new Response(html, { status: response.status, statusText: response.statusText, headers: response.headers });
   const headers = new Headers(response.headers);
   for (const k of ["content-length", "content-encoding", "etag", "last-modified", "content-md5", "digest", "content-digest", "repr-digest"]) headers.delete(k);
-  headers.set("x-pinnacle-preference-centre", "managed-20261019");
+  headers.set("x-pinnacle-measurement-ui", "removed-20261019");
   return new Response(projected, { status: response.status, statusText: response.statusText, headers });
 }
 var isKnownGtmLoader = (tag) => normal(tag) === normal(LEGACY_TAGS[0]);
@@ -372,8 +283,7 @@ function legacyMeasurementScope(request) {
   if (u.pathname === "/contact-national-autism-helpline-24-7") return "helpline";
   return null;
 }
-var panel = '<details class="measurement-settings" data-speech-measurement hidden style="box-sizing:border-box;flex:1;min-width:150px;padding:4px 12px;font-size:14px;color:#18233f"><summary style="min-height:44px;cursor:pointer">Optional analytics preferences</summary><p>With your permission, Google Analytics measures visits and contact clicks using a fixed knowledge-library identity. We exclude article paths, form details and link text. Calling works with analytics off.</p><button type="button" data-measurement-choice="accepted">Allow analytics</button><button type="button" data-measurement-choice="declined">Keep analytics off</button><p data-measurement-status role="status">Optional analytics is off until you choose.</p></details>';
-var earlyCapture = '(()=>{const queue=[];const listener=e=>{if(navigator.globalPrivacyControl===true)return;let permission;try{permission=JSON.parse(localStorage.getItem("pinnacle-speech-analytics-v1"));}catch{return;}if(permission?.value!=="accepted"||!Number.isFinite(permission.at)||permission.at>Date.now()||Date.now()-permission.at>=180*86400000)return;const a=e.target?.closest?.("a[href]");if(!a||queue.length>=10)return;const href=a.getAttribute("href");if(href==="tel:+919100181181")queue.push("call");else{try{const u=new URL(href,location.origin);if((u.hostname==="wa.me"&&u.pathname==="/919100181181")||(u.hostname==="api.whatsapp.com"&&u.pathname==="/send"&&u.searchParams.get("phone")==="919100181181"))queue.push("whatsapp");}catch{}}};document.addEventListener("click",listener);window.__pinnacleLegacyCapture={queue,stop(){document.removeEventListener("click",listener);}};})();';
+var earlyCapture = '(()=>{const queue=[];const validation=new URL(location.href).searchParams.has("validation_test");const listener=e=>{if(validation)return;const a=e.target?.closest?.("a[href]");if(!a||queue.length>=10)return;const href=a.getAttribute("href");if(href==="tel:+919100181181")queue.push("call");else{try{const u=new URL(href,location.origin);if((u.hostname==="wa.me"&&u.pathname==="/919100181181")||(u.hostname==="api.whatsapp.com"&&u.pathname==="/send"&&u.searchParams.get("phone")==="919100181181"))queue.push("whatsapp");}catch{}}};document.addEventListener("click",listener);window.__pinnacleLegacyCapture={queue,stop(){document.removeEventListener("click",listener);}};})();';
 function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   const scope = legacyMeasurementScope(request);
   if (!scope || prefix.includes("data-pinnacle-legacy-measurement")) return null;
@@ -388,8 +298,8 @@ function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   }
   let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? preserveGtm && isKnownGtmLoader(tag) ? tag : replacements.get(normal(tag)) || "" : tag);
   if (scope === "private") return { scope, html: result, removed: tags.length };
-  const controls = '<details aria-label="Optional measurement preferences" class="measurement-preference-centre" style="box-sizing:border-box;background:#fff;color:#18233f;padding:8px 12px"><summary style="min-height:44px;cursor:pointer;font-weight:700">Privacy and optional measurement</summary><div>' + (preserveGtm ? panel.replace("fixed knowledge-library identity", "fixed public-page identity") : panel) + publicAdCallMarkup + "</div></details>";
-  const inserted = (preserveGtm ? "" : '<script data-pinnacle-legacy-collector="early-v3">' + earlyCapture + "<\/script>") + '<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=legacy-cohorts-20261011-v3"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
+  const controls = "";
+  const inserted = (preserveGtm ? "" : '<script data-pinnacle-legacy-collector="early-v4">' + earlyCapture + "<\/script>") + '<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261019"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
   result = result.replace(/<body\b([^>]*)>/i, (_, attributes) => "<body" + attributes + ' data-page-variant="' + (preserveGtm ? "legacy_public_template" : "legacy_knowledge") + '" data-pinnacle-legacy-measurement="' + scope + '">' + inserted);
   return { scope, html: result, controls, preserveGtm, removed: tags.filter((tag) => !(preserveGtm && isKnownGtmLoader(tag))).length };
 }
