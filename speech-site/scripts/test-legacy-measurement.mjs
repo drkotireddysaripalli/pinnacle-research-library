@@ -113,3 +113,10 @@ test('known managed footers project one compact fail-closed preference centre',(
  assert.equal(projectManagedPreferenceHtml(before,request('/enroll-autism-speech-aba-therapies-india')),null);
  assert.equal(projectManagedPreferenceHtml(before,request('/unknown')),null);
 });
+test('the exact legacy homepage controls project one centre while retaining both approved loaders',()=>{
+ const analytics='<details id="website-preferences" class="measurement-settings portal-measurement" data-speech-measurement hidden><summary>Analytics</summary><p data-measurement-status>Off</p></details>',speech='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=paid-journey-20261008"></script>',adCall='<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden><summary>Calls</summary><p data-ad-call-status>Off</p></details>',loader='<script type="module" src="/pinnacle-pages-scripts/portal-ad-call-74a0fdb3ea376af9.mjs" data-pinnacle-ad-call-module></script>';
+ const html='<!doctype html><html><head><link rel="canonical" href="https://www.pinnacleblooms.org/"></head><body><div class="cm-mirracle-go-top"></div>'+analytics+speech+adCall+loader+'</body></html>',after=projectManagedPreferenceHtml(html,request('/'));
+ assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,1,marker);assert(after.includes(speech));assert(after.includes(loader));assert.equal(projectManagedPreferenceHtml(after,request('/')),null);
+ const tagged=html.replace('https://www.pinnacleblooms.org/','https://www.pinnacleblooms.org/?utm_source=google&amp;utm_medium=cpc');assert(projectManagedPreferenceHtml(tagged,request('/?utm_source=google&utm_medium=cpc')));
+ assert.equal(projectManagedPreferenceHtml(html.replace(speech,'<script src="/other.js"></script>'),request('/')),null);assert.equal(projectManagedPreferenceHtml(html.replace(loader,'<script type="module" src="/other.mjs" data-pinnacle-ad-call-module></script>'),request('/')),null);
+});
