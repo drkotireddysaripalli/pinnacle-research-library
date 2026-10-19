@@ -1,24 +1,31 @@
 import test from'node:test';import assert from'node:assert/strict';
 import fs from'node:fs/promises';
-import{nativeBlockedHosts,nativeReaderBlacklist,nativeTunnelVersion,nativeTunnelFastFailRegexps,nativeInterceptRules,nativeInterceptionSupported,installNativeInterceptions,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe,assertNativeProbeDocument}from'./testingbot-native-policy.mjs';
+import{nativeBlockedHosts,nativeBlockedUrls,nativeReaderBlacklist,nativeTunnelVersion,nativeTunnelFastFailRegexps,nativeCdpEndpoint,nativeCdpCommands,nativeInterceptionSupported,installNativeInterceptions,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe,assertNativeProbeDocument}from'./testingbot-native-policy.mjs';
 test('native policy denies installed vendors and retains public site and catalogue',()=>{
  for(const host of['www.google-analytics.com','region1.google-analytics.com','www.googletagmanager.com','protect.pinnacleblooms.org','ob.aseasky.link'])assert(nativeBlockedHosts.includes(host));
  for(const host of['www.pinnacleblooms.org','pinnacleblooms.org','pinnacleblooms.myshopify.com','api.testingbot.com'])assert(!nativeBlockedHosts.includes(host));
  assert.equal(new Set(nativeBlockedHosts).size,nativeBlockedHosts.length);assert.equal(nativeReaderBlacklist.split(',').length,nativeBlockedHosts.length);
 });
-test('tunnel covers every blocked host and bounded browser rules cover both native probes',async()=>{
+test('tunnel, session and CDP browser layers cover every blocked host',async()=>{
  assert.equal(nativeTunnelVersion,'5.0');assert.equal(nativeTunnelFastFailRegexps.split(',').length,nativeBlockedHosts.length);
  for(const [index,host]of nativeBlockedHosts.entries()){const expression=nativeTunnelFastFailRegexps.split(',')[index];assert(new RegExp(expression).test(host));assert(!new RegExp(expression).test('prefix-'+host));}
- assert.deepEqual(nativeInterceptRules,[{url:'https://www.google-analytics.com/*',error:'BlockedByClient'},{url:'https://www.googletagmanager.com/*',error:'BlockedByClient'}]);assert.equal(new Set(nativeInterceptRules.map(r=>r.url)).size,nativeInterceptRules.length);
+ assert.deepEqual(nativeBlockedUrls,nativeBlockedHosts.flatMap(host=>['http://'+host+'/*','https://'+host+'/*']));assert.equal(new Set(nativeBlockedUrls).size,nativeBlockedHosts.length*2);
+ for(const host of nativeBlockedHosts){assert(nativeBlockedUrls.includes('http://'+host+'/*'));assert(nativeBlockedUrls.includes('https://'+host+'/*'));}
+ assert.deepEqual(nativeCdpCommands,[{cmd:'Network.enable',params:{}},{cmd:'Network.setBlockedURLs',params:{urls:nativeBlockedUrls}}]);
+ assert.equal(nativeCdpEndpoint({kind:'desktop',browserName:'chrome'}),'/goog/cdp/execute');assert.equal(nativeCdpEndpoint({kind:'desktop',browserName:'MicrosoftEdge'}),'/ms/cdp/execute');assert.equal(nativeCdpEndpoint({kind:'desktop',browserName:'edge'}),'/ms/cdp/execute');assert.equal(nativeCdpEndpoint({kind:'desktop',browserName:'firefox'}),null);assert.equal(nativeCdpEndpoint({kind:'physical',browserName:'chrome'}),null);
  assert(nativeInterceptionSupported({kind:'desktop',browserName:'chrome'}));assert(nativeInterceptionSupported({kind:'desktop',browserName:'MicrosoftEdge'}));assert(!nativeInterceptionSupported({kind:'desktop',browserName:'firefox'}));assert(!nativeInterceptionSupported({kind:'physical',browserName:'chrome'}));
- const commands=[];assert.equal(await installNativeInterceptions(async(command,rule)=>commands.push({command,rule})),nativeInterceptRules.length);assert.equal(commands.length,nativeInterceptRules.length);assert(commands.every((entry,index)=>entry.command==='tb:intercept'&&entry.rule.url===nativeInterceptRules[index].url&&entry.rule.error==='BlockedByClient'));
- let attempted=0;await assert.rejects(()=>installNativeInterceptions(async()=>{if(++attempted===2)throw Error('provider rejection');}),/provider rejection/);assert.equal(attempted,2);
+ const calls=[],installed=await installNativeInterceptions({kind:'desktop',browserName:'chrome'},async(endpoint,payload)=>calls.push({endpoint,payload}));
+ assert.deepEqual(installed,{endpoint:'/goog/cdp/execute',commands:2,rules:nativeBlockedHosts.length*2});assert.deepEqual(calls,[{endpoint:'/goog/cdp/execute',payload:{cmd:'Network.enable',params:{}}},{endpoint:'/goog/cdp/execute',payload:{cmd:'Network.setBlockedURLs',params:{urls:nativeBlockedUrls}}}]);
+ const edge=[];assert.deepEqual(await installNativeInterceptions({kind:'desktop',browserName:'MicrosoftEdge'},async(endpoint,payload)=>edge.push({endpoint,payload})),{endpoint:'/ms/cdp/execute',commands:2,rules:nativeBlockedHosts.length*2});assert(edge.every(call=>call.endpoint==='/ms/cdp/execute'));
+ await assert.rejects(()=>installNativeInterceptions({kind:'desktop',browserName:'chrome'}),/command unavailable/);
+ let unsupportedCalls=0;await assert.rejects(()=>installNativeInterceptions({kind:'desktop',browserName:'firefox'},async()=>unsupportedCalls++),/unsupported/);assert.equal(unsupportedCalls,0);
+ for(const failureAt of[1,2]){let attempted=0;await assert.rejects(()=>installNativeInterceptions({kind:'desktop',browserName:'chrome'},async()=>{if(++attempted===failureAt)throw Error('provider rejection '+failureAt);}),new RegExp('provider rejection '+failureAt));assert.equal(attempted,failureAt);}
 });
 test('trusted exact-build workflow pins tunnel v5 fast-fail rules in parity with the native policy',async()=>{
  const workflow=await fs.readFile(new URL('../../.github/workflows/portal-quality.yml',import.meta.url),'utf8');
  assert(workflow.includes("tbVersion: '"+nativeTunnelVersion+"'"));assert(workflow.includes("fastFailRegexps: '"+nativeTunnelFastFailRegexps+"'"));
- const source=await fs.readFile(new URL('./testingbot-suite.mjs',import.meta.url),'utf8'),installAt=source.indexOf('installNativeInterceptions((command,rule)=>evaluate(command,rule))'),navigateAt=source.indexOf("await wd('/url','POST',{url:nativeProbeTargets[0].url})");
- assert(installAt>0&&navigateAt>installAt);assert(source.includes("caps['tb:options'].blacklist=nativeReaderBlacklist"));assert(source.indexOf('assertNativeReaderProbe(session.nativeContainment.probes)')>navigateAt);
+ const source=await fs.readFile(new URL('./testingbot-suite.mjs',import.meta.url),'utf8'),installAt=source.indexOf("installNativeInterceptions(config,(endpoint,payload)=>wd(endpoint,'POST',payload))"),navigateAt=source.indexOf("await wd('/url','POST',{url:nativeProbeTargets[0].url})");
+ assert(installAt>0&&navigateAt>installAt);assert(!source.includes('tb:intercept'));assert(source.includes("caps['tb:options'].blacklist=nativeReaderBlacklist"));assert(source.indexOf('assertNativeReaderProbe(session.nativeContainment.probes)')>navigateAt);
 });
 test('preflight uses only non-event GET resources without credentials or query strings',async()=>{
  const saved=globalThis.fetch,seen=[];globalThis.fetch=async(url,options)=>{seen.push({url,options});if(new URL(url).hostname!=='www.pinnacleblooms.org')throw new TypeError('fixture connection refused');return {};};
