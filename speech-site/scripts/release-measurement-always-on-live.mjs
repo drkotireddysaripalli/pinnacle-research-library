@@ -39,6 +39,10 @@ const git = args => execFileSync('git', args, {cwd: root, encoding: 'utf8', wind
 const gitBytes = args => execFileSync('git', args, {cwd: root, windowsHide: true});
 const gh = args => execFileSync('gh', args, {cwd: root, encoding: 'utf8', windowsHide: true}).trim();
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const treeOf = commit => {
+  try { return git(['rev-parse', `${commit}^{tree}`]); }
+  catch { return null; }
+};
 
 async function readToken() {
   const raw = await fs.readFile(process.env.HOME + '/Library/Preferences/.wrangler/config/default.toml', 'utf8');
@@ -159,20 +163,26 @@ async function assembleCandidates(commit) {
 }
 async function waitForCi(commit) {
   const deadline = Date.now() + 35 * 60 * 1000;
+  const releaseTree = treeOf(commit);
+  assert(releaseTree, `Release tree missing for ${commit}`);
   while (Date.now() < deadline) {
-    const runs = JSON.parse(gh(['run', 'list', '--workflow', 'portal-quality.yml', '--commit', commit, '--event', 'push', '--limit', '10', '--json', 'databaseId,headSha,status,conclusion,url']));
-    const run = runs.find(item => item.headSha === commit);
-    if (run?.status === 'completed') {
-      assert.equal(run.conclusion, 'success', `Portal quality failed: ${run.url}`);
+    const runs = JSON.parse(gh(['run', 'list', '--workflow', 'portal-quality.yml', '--event', 'push', '--limit', '50', '--json', 'databaseId,headSha,status,conclusion,url']));
+    const exact = runs.find(item => item.headSha === commit);
+    if (exact?.status === 'completed' && exact.conclusion !== 'success') throw Error(`Portal quality failed: ${exact.url}`);
+    const equivalent = runs.find(item => item.status === 'completed' && item.conclusion === 'success' && treeOf(item.headSha) === releaseTree);
+    const run = exact?.status === 'completed' && exact.conclusion === 'success' ? exact : equivalent;
+    if (run) {
+      const testedTree = treeOf(run.headSha);
+      assert.equal(testedTree, releaseTree, 'Trusted CI tree differs from release tree');
       const directory = path.join(releaseDir, 'ci');
       await fs.rm(directory, {recursive: true, force: true});
       await fs.mkdir(directory, {recursive: true});
       execFileSync('gh', ['run', 'download', String(run.databaseId), '--name', 'testingbot-build-verification', '--dir', directory], {cwd: root, stdio: 'inherit', windowsHide: true});
       const report = path.join(directory, 'report.json');
-      execFileSync(process.execPath, [path.join(site, 'scripts/assert-testingbot-release.mjs'), report], {cwd: site, stdio: 'inherit', windowsHide: true, env: {...process.env, GITHUB_SHA: commit}});
-      return {...run, reportSha256: sha(await fs.readFile(report))};
+      execFileSync(process.execPath, [path.join(site, 'scripts/assert-testingbot-release.mjs'), report], {cwd: site, stdio: 'inherit', windowsHide: true, env: {...process.env, GITHUB_SHA: run.headSha}});
+      return {...run, releaseCommit: commit, testedCommit: run.headSha, releaseTree, testedTree, identicalTreeReuse: run.headSha !== commit, reportSha256: sha(await fs.readFile(report))};
     }
-    console.log(JSON.stringify({waitingFor: 'Portal quality', commit, status: run?.status || 'not-started', at: new Date().toISOString()}));
+    console.log(JSON.stringify({waitingFor: 'Portal quality', commit, releaseTree, status: exact?.status || 'not-started', at: new Date().toISOString()}));
     await sleep(20000);
   }
   throw Error(`Timed out waiting for Portal quality on ${commit}`);
