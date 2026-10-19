@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {LEGACY_TAGS,LEGACY_NOSCRIPT_TAGS,LEGACY_TAG_REPLACEMENTS} from '../deployment/legacy-measurement-fingerprints.mjs';
-import {legacyMeasurementScope,migrateLegacyPrefix,repairLegacyMeasurement,repairLegacyExclusions,serveLegacyMeasurementCall,stripLegacyNoscript} from '../deployment/legacy-measurement.mjs';
+import {legacyMeasurementScope,migrateLegacyPrefix,projectManagedPreferenceHtml,repairLegacyMeasurement,repairLegacyExclusions,serveLegacyMeasurementCall,stripLegacyNoscript} from '../deployment/legacy-measurement.mjs';
 const request=path=>new Request('https://www.pinnacleblooms.org'+path);
 const fixture=path=>'<html><head><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'">'+LEGACY_TAGS.join('')+'<script src="/functional.js"></script></head><body><h1>Parent guidance</h1></body></html>';
 test('the activated split removes only exact public noscript without changing ordinary measurement or contact',async()=>{
@@ -94,4 +94,22 @@ test('reviewed tagged origin canonicals match the exact request without exposing
   assert.equal(migrateLegacyPrefix(input.replace('https://www.pinnacleblooms.org'+path,'https://elsewhere.invalid'+path),req,{preserveGtm:true}),null);
  }
  const outside='/t/bead-stringing-therapy',input=fixture(outside).replace('href="https://www.pinnacleblooms.org'+outside+'"','href="https://www.pinnacleblooms.org'+outside+query.replaceAll('&','&amp;')+'"');assert.equal(migrateLegacyPrefix(input,request(outside+query)),null,'Other families are not expanded');
+});
+test('known managed footers project one compact fail-closed preference centre',()=>{
+ const analytics='<details class="measurement-settings" data-speech-measurement hidden><summary>Analytics</summary><p data-measurement-status>Off</p></details>';
+ const adCall='<details class="measurement-settings" data-ad-call-preferences hidden><summary>Calls</summary><p data-ad-call-status>Off</p></details>';
+ const html=path=>'<!doctype html><html><head><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"></head><body><main><p id="outside">Keep every outside byte.</p></main><footer class="portal-site-footer"><div class="portal-container">'+analytics+adCall+'</div></footer></body></html>';
+ for(const path of ['/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/centers','/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india','/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india']){
+  const before=html(path),after=projectManagedPreferenceHtml(before,request(path));assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,1,marker);assert(!after.includes('data-pinnacle-cheq-module'));assert(after.includes('<p id="outside">Keep every outside byte.</p>'));assert.equal(projectManagedPreferenceHtml(after,request(path)),null);
+ }
+ const path='/top-speech-therapy-center-india-proven-improvement-rate',before=html(path);
+ assert.equal(projectManagedPreferenceHtml(before.replace(adCall,''),request(path)),null);
+ assert.equal(projectManagedPreferenceHtml(before.replace(analytics+adCall,analytics+'<i>not-adjacent</i>'+adCall),request(path)),null);
+ assert.equal(projectManagedPreferenceHtml(before.replace(analytics+adCall,'<div>'+analytics+'</div><div>'+adCall+'</div>'),request(path)),null);
+ assert.equal(projectManagedPreferenceHtml(before.replace('<footer class="portal-site-footer">','<footer>'),request(path)),null);
+ assert.equal(projectManagedPreferenceHtml(before.replace(analytics,'<details><summary>Nested</summary>'+analytics+'</details>'),request(path)),null);
+ assert.equal(projectManagedPreferenceHtml(before.replace(path,'/different-canonical'),request(path)),null);
+ assert.equal(projectManagedPreferenceHtml(before,new Request('https://www.pinnacleblooms.org'+path,{headers:{authorization:'private'}})),null);
+ assert.equal(projectManagedPreferenceHtml(before,request('/enroll-autism-speech-aba-therapies-india')),null);
+ assert.equal(projectManagedPreferenceHtml(before,request('/unknown')),null);
 });
