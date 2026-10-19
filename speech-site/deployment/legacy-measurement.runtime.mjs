@@ -303,6 +303,52 @@ for (const old of replacements.keys()) fingerprints.add(old);
 var tagPattern = /<script\b[^>]*>[\s\S]*?<\/script>/gi;
 var analyticsTag = (tag) => /googletagmanager|googleadservices|G-2BYLRLFRDJ|AW-10810823199|GTM-W9ZHX459|_googWcm/.test(tag);
 var reviewedPublicTemplates = /* @__PURE__ */ new Set(["/assessments/stuttering-assessment", "/certified-courses", "/certified-courses/"]);
+var managedPreferenceRoutes = /* @__PURE__ */ new Set(["/", "/centers", "/autism-therapy", "/best-occupational-therapy-center-india-proven-improvement-rate", "/best-aba-therapy-center-india-proven-improvement-rate", "/best-special-education-center-call-9100181181", "/speech-aba-autism-assessments", "/about-us", "/contact", "/top-speech-therapy-center-india-proven-improvement-rate"]);
+var managedCentreRoute = /^\/centers\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/;
+var managedPreferenceCentre = '<details id="website-preferences" aria-label="Optional measurement preferences" class="measurement-preference-centre" data-pinnacle-managed-preferences style="box-sizing:border-box;background:#fff;color:#18233f;padding:8px 12px"><summary style="min-height:44px;cursor:pointer;font-weight:700">Privacy and optional measurement</summary><div><section class="measurement-settings portal-measurement" data-speech-measurement hidden aria-labelledby="analytics-preference-title"><h3 id="analytics-preference-title">Optional analytics</h3><p>With your permission, Google Analytics measures page visits and call or enquiry-link clicks. These are not completed calls or bookings. We exclude form details, private answer paths and unrecognised URL fields. With permission, validated campaign labels and advertising click identifiers can measure how you reached us. Advertising personalisation is off.</p><div><button type="button" data-measurement-choice="accepted">Allow analytics</button><button type="button" data-measurement-choice="declined">Keep analytics off</button></div><p data-measurement-status role="status">Optional analytics is off until you choose.</p></section><section class="measurement-settings portal-measurement" data-cheq-preferences hidden aria-labelledby="traffic-preference-title"><h3 id="traffic-preference-title">Optional invalid-traffic measurement</h3><p>With your permission, CHEQ uses limited browser and device signals, advertising identifiers and cookies to measure invalid visits on public landing pages. Private reading, sign-in, enquiry-form and checkout pages stay excluded.</p><div><button type="button" data-cheq-choice="accepted">Allow traffic measurement</button><button type="button" data-cheq-choice="declined">Keep traffic measurement off</button></div><p data-cheq-status role="status">Traffic measurement is off until you choose.</p></section>' + publicAdCallMarkup + '<p><a href="https://www.pinnacleblooms.org/privacy-policy">Privacy policy</a> \xB7 <a href="https://www.pinnacleblooms.org/cookie-policy">Cookie policy and choices</a></p></div></details>';
+var detailsElement = (attribute, html) => {
+  const pattern = new RegExp("<details\\b(?=[^>]*\\b" + attribute + "(?:\\s|=|>))[^>]*>[\\s\\S]*?<\\/details>", "gi"), matches = [...html.matchAll(pattern)];
+  return matches.length === 1 ? matches[0] : null;
+};
+var voidElement = /* @__PURE__ */ new Set(["area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"]);
+var openElementsAt = (html, end) => {
+  const stack = [];
+  for (const match of html.slice(0, end).matchAll(/<\/?([a-z][\w:-]*)\b[^>]*>/gi)) {
+    const tag = match[1].toLowerCase(), closing = match[0][1] === "/";
+    if (closing) {
+      const index = stack.findLastIndex((node) => node.tag === tag);
+      if (index >= 0) stack.length = index;
+    } else if (!voidElement.has(tag) && !match[0].endsWith("/>")) stack.push({ tag, start: match.index, markup: match[0] });
+  }
+  return stack;
+};
+function projectManagedPreferenceHtml(html, request) {
+  const u = new URL(request.url);
+  if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || request.headers.has("authorization") || request.headers.has("range") || !managedPreferenceRoutes.has(u.pathname) && !managedCentreRoute.test(u.pathname) || html.includes("data-pinnacle-managed-preferences")) return null;
+  const canonical = /<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["'][^>]*>/i.exec(html)?.[1];
+  if (canonical !== u.origin + u.pathname) return null;
+  const footer = /<footer\b[^>]*\bclass=["'][^"']*\bportal-site-footer\b[^"']*["'][^>]*>/i.exec(html), footerStart = footer?.index ?? -1, footerEnd = html.indexOf("</footer>", footerStart);
+  if (footerStart < 0 || footerEnd < 0) return null;
+  const analytics = detailsElement("data-speech-measurement", html), adCall = detailsElement("data-ad-call-preferences", html);
+  if (!analytics || !adCall || analytics.index < footerStart || adCall.index < footerStart || analytics.index > footerEnd || adCall.index > footerEnd || analytics.index >= adCall.index || html.slice(analytics.index + analytics[0].length, adCall.index).trim()) return null;
+  const footerHtml = html.slice(footerStart, footerEnd), analyticsParents = openElementsAt(footerHtml, analytics.index - footerStart), adCallParents = openElementsAt(footerHtml, adCall.index - footerStart);
+  if (!analyticsParents || !adCallParents || analyticsParents.length !== adCallParents.length || analyticsParents.some((parent2, index) => parent2.start !== adCallParents[index].start)) return null;
+  const parent = analyticsParents.at(-1);
+  if (parent?.tag !== "div" || !/\bclass=["'][^"']*\bportal-container\b[^"']*["']/i.test(parent.markup) || !analyticsParents.some((node) => node.tag === "footer" && /\bportal-site-footer\b/.test(node.markup))) return null;
+  const outside = html.slice(0, analytics.index) + managedPreferenceCentre + html.slice(analytics.index + analytics[0].length, adCall.index) + html.slice(adCall.index + adCall[0].length);
+  return outside;
+}
+async function projectManagedPreferences(request, response) {
+  const u = new URL(request.url);
+  if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || request.headers.has("authorization") || request.headers.has("range") || !managedPreferenceRoutes.has(u.pathname) && !managedCentreRoute.test(u.pathname)) return response;
+  if (response.status !== 200 || !response.body || response.headers.has("set-cookie") || !response.headers.get("content-type")?.includes("text/html") || /private|no-store|no-transform/i.test(response.headers.get("cache-control") || "")) return response;
+  const html = await response.text(), projected = projectManagedPreferenceHtml(html, request);
+  if (!projected) return new Response(html, { status: response.status, statusText: response.statusText, headers: response.headers });
+  const headers = new Headers(response.headers);
+  for (const k of ["content-length", "content-encoding", "etag", "last-modified", "content-md5", "digest", "content-digest", "repr-digest"]) headers.delete(k);
+  headers.set("x-pinnacle-preference-centre", "managed-20261019");
+  return new Response(projected, { status: response.status, statusText: response.statusText, headers });
+}
 var isKnownGtmLoader = (tag) => normal(tag) === normal(LEGACY_TAGS[0]);
 function legacyMeasurementScope(request) {
   const u = new URL(request.url);
@@ -369,6 +415,7 @@ function stripLegacyNoscript(body) {
   } }));
 }
 async function repairLegacyExclusions(request, response, { reviewedPublicTemplates: reviewedPublicTemplates2 = true } = {}) {
+  response = await projectManagedPreferences(request, response);
   const scope = legacyMeasurementScope(request);
   if (scope === "reviewed-public-template") return reviewedPublicTemplates2 ? repairLegacyMeasurement(request, response, { preserveGtm: true }) : response;
   if (scope !== "private" && (request.headers.has("authorization") || response.headers.has("set-cookie"))) return response;
@@ -443,6 +490,7 @@ async function repairLegacyMeasurement(request, response, { preserveGtm = false 
 export {
   legacyMeasurementScope,
   migrateLegacyPrefix,
+  projectManagedPreferenceHtml,
   repairLegacyExclusions,
   repairLegacyMeasurement,
   serveLegacyMeasurementCall,
