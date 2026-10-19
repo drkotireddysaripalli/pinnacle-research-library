@@ -5,7 +5,7 @@
 The founder authorised the existing Mac coordinator to continue building from current main, finish PR123 first, then the remaining website releases. This is the current delta to the existing team KT, not a replacement project or a second release owner.
 
 - Repository: https://github.com/drkotireddysaripalli/pinnacle-research-library
-- Verified main at this handoff: `51f70f485234b996250b073d97b08020515ec416` (PR124).
+- Starting main: `51f70f485234b996250b073d97b08020515ec416` (PR124). PR123 is now merged at `491f9e951fc33bc70d572b8d83b5d6c24cc96e54`; continue from current main, retaining the validated tree below.
 - Website integration/production release owner: Windows website thread `01a0ef6b-507a-7630-828f-7ac81852a39c`.
 - Mac coordinator: existing thread `01a11e24-3e7f-7802-8384-a6bd83d7a7a9`.
 - Existing Mac Search thread: `01a11e66-9290-7160-a803-db161727035f`.
@@ -13,9 +13,24 @@ The founder authorised the existing Mac coordinator to continue building from cu
 - Reuse those owners. At most two bounded implementation streams under the coordinator. Reserve shared files before editing; no competing production deploys.
 - Mac returns source READY, exact source/test evidence and deployment inputs. Root integrates, releases and verifies public behavior. An exception requires an explicit single-owner transfer recorded before deployment.
 
-After the founder restored Mac control, the native bridge successfully read **Mac Web Build** on host `remote-control:env_e_6a6d6d3366c0832888fee90c9230ce27`. The full work order was sent to that exact existing thread and acknowledged. Its active turn `01a15414-c9b1-7fb2-aee2-39d6ec55edd7` is reconciling the PR123 worktree/ownership. The first actual build command and exact source READY/CI receipt remain separate acceptance milestones.
+After the founder restored Mac control, the native bridge successfully read **Mac Web Build** on host `remote-control:env_e_6a6d6d3366c0832888fee90c9230ce27`. The full work order was sent to that exact existing thread and acknowledged. Its active turn `01a15414-c9b1-7fb2-aee2-39d6ec55edd7` is reconciling the PR123 worktree/ownership. The actual Mac build and Git authentication are now verified: hostname `Drs-Mac-mini.local`, existing `.work/testingbot-tunnel-containment-20261019` worktree, Node24.21.0/npm11.13.0, Keychain-backed GitHub CLI authentication, repository ADMIN readback, successful dry-run and actual push. No token was copied into either chat.
 
-## First Mac action and acknowledgement
+## PR123 completed — accepted source and build receipt
+
+- Tested head: `309e8f3995d7c89c328924bd414e6798cc6938ae`; includes starting main51f70f4, with a five-file final diff.
+- Merge: `491f9e951fc33bc70d572b8d83b5d6c24cc96e54`. Root compared Git trees: tested and merged tree are both `f3c46683403db4282f49753036ebe9fc3e9883ff`.
+- Trusted push [39252748534](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/39252748534) passed. Mac local evidence:33/33TestingBotcontracts and15/15retained legacy measurement tests.
+- Actual build BVT:5/5cases,82namedassertions,3/3containmentprobes,64blockedHTTP/HTTPSpatterns, Chrome155.0.8059.40/WIN11. All five tested URLs were the exact localhost4340 build, not production-page executions.
+- Provider53971626 terminal/closed;100providerseconds. This is usage duration, not a cost claim.
+- BVT artifact12187170811 ZIP digest verified: `67ffeb313a2ca6231244e8b2bf8a2734685f949ff6c0bd2b2171013b5b44cf00`.
+- Preserved coverage: Chrome/Edge must install CDP; unsupported native platforms retain the existing document/blacklist/tunnel/probe gate. No platform may proceed after failed containment.
+- Obsolete pre-main run39251519694 was cancelled before its BVT began;0providerallocations.
+- Remaining BVT warnings:11pxShoptext and an unthrottled Suchitra lab LCP observation. Captures await visual review; no field CWV or physical-device pass is claimed by this run.
+- Two manifest-pending migrations (Materials/Interventions) remain explicit, outside the selected5. No fake customer, call, sale or analytics conversion was created. This merges testing infrastructure; the public website runtime was unchanged.
+- Root evidence: `speech-site/ask-private/mac-handoff-20261019/pr123-ci-accepted.json`, `pr123-merge-proof.json`, downloaded full CI job logs and `pr123-final-bvt/`. Mac protected auth/build logs remain in its matching private directory.
+- Root remains production release owner. Next: obtain the exact current narrowed measurement candidate/status from the existing Mac/Ads owners, then finish compatible website batches below. The frozen8c6a1a0 candidate remains excluded.
+
+## Mac setup record and continuation procedure
 
 1. Preserve local changes; inspect status. Fetch current main and use a separate feature branch/worktree. Do not reset, force push, copy the dirty Windows tree or deploy an old runtime archive.
 2. Read `speech-site/team-kt-20261009/README.md`, `TEAM-CONTRACTS.md`, `ACCESS-AND-RUNBOOK.md`, `DELIVERED-AND-OPEN.md`, `EVIDENCE-HANDOVER.md`, and root `build-window/README.md` / `PROCESS-CONTRACT.md`.
