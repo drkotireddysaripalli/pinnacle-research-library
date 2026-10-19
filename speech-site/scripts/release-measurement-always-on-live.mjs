@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
+import {patchReceiverContactAcquisition, assertReceiverContactAcquisitionPatch} from '../deployment/receiver-acquisition-patch.mjs';
 
 const phase = process.argv[2] || 'all';
 const phases = ['prepare', 'assemble', 'upload', 'promote', 'verify', 'rollback'];
@@ -12,20 +13,21 @@ assert(phase === 'all' || phases.includes(phase), `Use all or ${phases.join(', '
 const portalOnly = process.argv.includes('--portal-only');
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const root = path.resolve(site, '..');
-const id = portalOnly ? 'contact-packaging-live-20261019' : 'measurement-always-on-live-20261019';
+const id = portalOnly ? 'contact-packaging-live-20261020' : 'contact-source-live-20261020';
 const releaseDir = path.resolve(process.env.PINNACLE_RELEASE_DIR || path.join(root, `artifacts/${id}/release`));
 const receiptPath = path.join(releaseDir, 'receipt.json');
 const beforePath = path.join(releaseDir, 'before.json');
 const account = '862998def1cd610fdb86b8e5c1d6ed4d';
 const zone = '8b13f18e0589996b5d6512552372b434';
 const targets = {
+  receiver: {name: 'pbn-planetscale', main: 'index.js'},
   call: {name: 'pinnacle-google-ads-call-measurement', main: 'index.mjs'},
   portal: {name: 'pinnacle-verify-route', main: 'public-document-recovery-entry.mjs', keepAssets: true},
   helpline: {name: 'pinnacle-helpline', main: 'worker.mjs'}
 };
 const releaseTargets = portalOnly ? {portal: targets.portal} : targets;
-const protectedNames = ['pinnacle-legacy-social-metadata', 'pinnacle-ask', 'pinnacle-root-sitemap', 'materials-mobile-desktop-tracker', 'pbn-planetscale', 'pinnacle-ask-mcp', 'pinnacle-centre-search-repair',
-  ...(portalOnly ? [targets.call.name, targets.helpline.name] : [])];
+const protectedNames = ['pinnacle-legacy-social-metadata', 'pinnacle-ask', 'pinnacle-root-sitemap', 'materials-mobile-desktop-tracker', 'pinnacle-ask-mcp', 'pinnacle-centre-search-repair',
+  ...(portalOnly ? [targets.receiver.name, targets.call.name, targets.helpline.name] : [])];
 const portalLocalModules = [
   'aba-assets.mjs', 'abilityscore-assets.mjs', 'about-assets.mjs', 'autism-assets.mjs',
   'book-attribution-assets.mjs', 'enrolment-assets.mjs', 'everyday-assets.mjs', 'first-conversation-assets.mjs',
@@ -77,7 +79,7 @@ async function modules(name) {
   const out = [];
   for (const [key, value] of await response.formData()) if (typeof value !== 'string') {
     const moduleName = value.name || key;
-    assert(/^[\w.-]+\.mjs$/.test(moduleName), `Unsafe module name ${moduleName}`);
+    assert(/^[\w.-]+\.(?:mjs|js)$/.test(moduleName), `Unsafe module name ${moduleName}`);
     out.push({name: moduleName, bytes: Buffer.from(await value.arrayBuffer())});
   }
   return out.sort((a, b) => a.name.localeCompare(b.name));
@@ -105,7 +107,7 @@ async function saveCaptured(name, workerModules) {
 }
 async function captured(name) {
   const directory = path.join(releaseDir, 'captured', name);
-  return Promise.all((await fs.readdir(directory)).filter(file => file.endsWith('.mjs')).sort().map(async file => ({name: file, bytes: await fs.readFile(path.join(directory, file))})));
+  return Promise.all((await fs.readdir(directory)).filter(file => /\.(?:mjs|js)$/.test(file)).sort().map(async file => ({name: file, bytes: await fs.readFile(path.join(directory, file))})));
 }
 async function assertDrift(receipt, allowPromoted = true) {
   const before = await load(beforePath);
@@ -117,7 +119,7 @@ async function assertDrift(receipt, allowPromoted = true) {
   }
   for (const target of Object.values(releaseTargets)) {
     const promoted = receipt.promotions?.[target.name];
-    const expected = allowPromoted && promoted ? [{version_id: receipt.candidates[target.name].version, percentage: 100}] : before.workers[target.name].versions;
+    const expected = allowPromoted && promoted && !receipt.rollback?.[target.name] ? [{version_id: receipt.candidates[target.name].version, percentage: 100}] : before.workers[target.name].versions;
     assert.deepEqual(now.workers[target.name].versions, expected, `${target.name} version drift`);
     assert.deepEqual(stableSettings(now.workers[target.name].settings), stableSettings(before.workers[target.name].settings), `${target.name} settings drift`);
   }
@@ -160,6 +162,21 @@ async function assembleCandidates(commit) {
 
   const manifests = {[targets.portal.name]: portalManifest};
   if (!portalOnly) {
+    const receiverModules = await captured(targets.receiver.name);
+    const receiverByName = new Map(receiverModules.map(module => [module.name, module]));
+    for (const name of ['website-enrolment-receipt.mjs', 'website-enrolment-analytics.mjs']) {
+      const module = receiverByName.get(name);
+      assert(module, `Captured receiver module missing: ${name}`);
+      const before = module.bytes.toString('utf8');
+      const after = patchReceiverContactAcquisition(before);
+      assertReceiverContactAcquisitionPatch(before, after);
+      receiverByName.set(name, {name, bytes: Buffer.from(after)});
+    }
+    const receiverCandidate = [...receiverByName.values()].sort((a, b) => a.name.localeCompare(b.name));
+    const receiverManifest = await writeCandidate(targets.receiver.name, targets.receiver.main, receiverCandidate);
+    manifests[targets.receiver.name] = receiverManifest;
+    execFileSync(process.execPath, [path.join(site, 'scripts/verify-contact-source-receiver-candidate.mjs'), path.join(releaseDir, 'candidate', targets.receiver.name, 'website-enrolment-receipt.mjs')], {cwd: site, stdio: 'inherit', windowsHide: true});
+
     const callSource = path.join(site, 'workers/google-ads-call-measurement/index.mjs');
     assert.equal(sha(await fs.readFile(callSource)), sha(gitBytes(['show', `${commit}:speech-site/workers/google-ads-call-measurement/index.mjs`])), 'Uncommitted call worker');
     const callBuild = await build({entryPoints: [callSource], bundle: true, format: 'esm', platform: 'browser', write: false, logLevel: 'silent'});
@@ -258,8 +275,8 @@ async function verifyLive(receipt) {
       assert.equal(response.headers.get('x-pinnacle-legacy-measurement'), 'helpline');
       assert(text.includes('data-contact-contract="durable-contact-v1"'));
       assert(text.includes('action="/api/enrolment"'));
-      assert.equal((text.match(/contact-receipt\.js\?v=contact-receipt-20261015/g) || []).length, 1);
-      assert.equal((text.match(/speech-measurement\.js\?v=measurement-always-on-20261019/g) || []).length, 1);
+      assert.equal((text.match(/contact-receipt\.js\?v=contact-source-20261020/g) || []).length, 1);
+      assert.equal((text.match(/speech-measurement\.js\?v=measurement-always-on-20261020/g) || []).length, 1);
     }
     pages.push({pathname, variant: pathname === '/contact-national-autism-helpline-24-7' ? 'google-ads-tagged' : 'default', status: response.status, marker: response.headers.get('x-pinnacle-verify-measurement'), callMarker: response.headers.get('x-pinnacle-google-ads-call-measurement'), contactMarker: response.headers.get('x-pinnacle-contact-receipt'), sha256: sha(Buffer.from(text))});
   }
@@ -295,6 +312,7 @@ async function verifyLive(receipt) {
   const reader = await (await retryFetch(`https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js?module=verify-reader&v=4&release_readback=${nonce}`)).text();
   assert.equal(reader, await fs.readFile(path.join(root, 'verify-site/dist/reader-extras.js'), 'utf8'));
   execFileSync(process.execPath, [path.join(site, 'scripts/verify-measurement-always-on-live-browser.mjs'), path.join(releaseDir, 'live-browser.json')], {cwd: site, stdio: 'inherit', windowsHide: true});
+  execFileSync(process.execPath, [path.join(site, 'scripts/verify-google-click-wire.mjs'), path.join(releaseDir, 'google-click-wire.json')], {cwd: site, stdio: 'inherit', windowsHide: true});
 
   const moduleEvidence = {};
   for (const target of Object.values(releaseTargets)) {
@@ -350,6 +368,7 @@ async function upload() {
 async function promote() {
   const receipt = await load(receiptPath);
   assert(['uploaded', 'promoted'].includes(receipt.phase));
+  assert(!Object.keys(receipt.rollback || {}).length, 'Cannot promote a partially rolled-back release');
   await assertDrift(receipt, true);
   for (const key of Object.keys(releaseTargets)) {
     const target = targets[key];
@@ -372,10 +391,12 @@ async function verify() {
 }
 async function rollback() {
   const receipt = await load(receiptPath);
-  assert(['promoted', 'verified-live'].includes(receipt.phase), `Cannot roll back ${receipt.phase}`);
+  assert(['uploaded', 'promoted', 'verified-live'].includes(receipt.phase) && Object.keys(receipt.promotions || {}).length, `Cannot roll back ${receipt.phase}`);
   await assertDrift(receipt, true);
-  for (const target of Object.values(releaseTargets)) {
-    if (!receipt.promotions[target.name]) continue;
+  // Restore the public producer before its private receiver so there is no
+  // rollback interval where the newer public envelope reaches the older guard.
+  for (const target of Object.values(releaseTargets).reverse()) {
+    if (!receipt.promotions[target.name] || receipt.rollback?.[target.name]) continue;
     const versions = receipt.beforeVersions[target.name];
     assert(Array.isArray(versions) && versions.length, `Missing rollback versions for ${target.name}`);
     const result = await api(base(target.name) + '/deployments', 'POST', {strategy: 'percentage', versions});

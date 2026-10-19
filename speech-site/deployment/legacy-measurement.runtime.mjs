@@ -311,7 +311,7 @@ function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? preserveGtm && isKnownGtmLoader(tag) ? tag : replacements.get(normal(tag)) || "" : tag);
   if (scope === "private") return { scope, html: result, removed: tags.length };
   const controls = "";
-  const inserted = (preserveGtm ? "" : '<script data-pinnacle-legacy-collector="early-v4">' + earlyCapture + "<\/script>") + '<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261019"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
+  const inserted = (preserveGtm ? "" : '<script data-pinnacle-legacy-collector="early-v4">' + earlyCapture + "<\/script>") + '<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
   result = result.replace(/<body\b([^>]*)>/i, (_, attributes) => "<body" + attributes + ' data-page-variant="' + (preserveGtm ? "legacy_public_template" : "legacy_knowledge") + '" data-pinnacle-legacy-measurement="' + scope + '">' + inserted);
   return { scope, html: result, controls, preserveGtm, removed: tags.filter((tag) => !(preserveGtm && isKnownGtmLoader(tag))).length };
 }

@@ -156,7 +156,7 @@
   let enabled = false, loaded = false, tagStarted = false, pageViewSent = false;
   const sourceKey='pinnacle-enquiry-source-v1',sourceLifetime=30*86400000;
   const acquisitionPath=location.pathname==='/speech-therapy/service-information'?'/top-speech-therapy-center-india-proven-improvement-rate':new URL(canonical).pathname;
-  const acquisitionPaths=new Set(['/','/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
+  const acquisitionPaths=new Set(['/','/contact-national-autism-helpline-24-7','/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
   acquisitionPaths.add(helplinePath);
   acquisitionPaths.add('/certified-courses');
   const handedOffLinks=new Map();
@@ -592,7 +592,7 @@
 // Reuse one first-party installer; its own route, QA and payload guards keep it dormant where ineligible.
 if (location.origin === 'https://www.pinnacleblooms.org' && !document.querySelector('script[data-pinnacle-cheq-loader]')) {
   const protection = document.createElement('script');
-  protection.src = '/pinnacle-pages-scripts/cheq-protection.js?v=measurement-always-on-20261019';
+  protection.src = '/pinnacle-pages-scripts/cheq-protection.js?v=measurement-always-on-20261020';
   protection.defer = true;
   protection.setAttribute('data-pinnacle-cheq-loader','');
   document.head.append(protection);

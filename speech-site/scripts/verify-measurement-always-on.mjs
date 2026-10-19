@@ -3,7 +3,7 @@ import path from 'node:path';
 import {spawn} from 'node:child_process';
 
 const root=process.cwd(),parent=path.dirname(root);
-const evidenceDir=path.resolve(process.env.MEASUREMENT_ALWAYS_ON_EVIDENCE_DIR||path.join(parent,'artifacts/measurement-always-on-20261019/final'));
+const evidenceDir=path.resolve(process.env.MEASUREMENT_ALWAYS_ON_EVIDENCE_DIR||path.join(parent,'artifacts/measurement-always-on-20261020/final'));
 const skipBuild=process.argv.includes('--no-build');
 const resume=process.argv.includes('--resume');
 await fs.mkdir(evidenceDir,{recursive:true});

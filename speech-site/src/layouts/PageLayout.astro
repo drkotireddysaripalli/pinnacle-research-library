@@ -54,5 +54,5 @@ const schema = {'@context':'https://schema.org','@graph':[
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
   <nav class="mobile-cta" aria-label={nativeContact?.label || "Contact Pinnacle"}><a href={phone.href} data-cta="mobile-call">{nativeContact?.call || "Call"} {nativeContact ? phone.display.replaceAll(' ', '\u00a0') : phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
   <script is:inline type="module" src={adCallUrl} data-pinnacle-ad-call-module></script>
-  <script is:inline src={Astro.props.measurementScript || '/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261019'} defer></script>
+  <script is:inline src={Astro.props.measurementScript || '/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020'} defer></script>
 </body></html>
