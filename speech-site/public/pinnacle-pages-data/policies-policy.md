@@ -1,12 +1,12 @@
 # Policies and your rights
 
 Canonical: https://www.pinnacleblooms.org/policies
-Effective: 1 October 2026
+Effective: 19 October 2026
 Operator: Bharath Healthcare Laboratories Private Limited
 
 ## [Privacy Policy](https://www.pinnacleblooms.org/privacy-policy)
 Understand what information is used, why it is needed and how to contact our privacy grievance officer.
-Version: 2026-10-01.1
+Version: 2026-10-19.1
 
 ## [Website Terms of Use](https://www.pinnacleblooms.org/terms-of-use)
 The terms for reading, sharing and using our public website, distinct from booking or paying for care.
@@ -17,8 +17,8 @@ Understand enquiries, informed choices, service arrangements and the terms to co
 Version: 2026-10-01.1
 
 ## [Cookie & Website Technology Policy](https://www.pinnacleblooms.org/cookie-policy)
-How managed pages use limited cookieless measurement, optional analytics preferences, technical services and browser storage.
-Version: 2026-10-01.1
+How eligible public pages use bounded analytics, campaign, call and invalid-traffic measurement while excluding private contexts.
+Version: 2026-10-19.1
 
 ## [Copyright & Intellectual Property](https://www.pinnacleblooms.org/copyright-and-intellectual)
 Use sources accurately, respect ownership and licences, and report an intellectual-property concern.
@@ -46,7 +46,7 @@ Version: 2026-10-01.1
 
 ## [External Services & Third-Party Integration](https://www.pinnacleblooms.org/third-party-inegration)
 Understand external maps, platforms, hosting, measurement and payment or account destinations.
-Version: 2026-10-01.1
+Version: 2026-10-19.1
 
 ## [Refund & Cancellation Policy](https://www.pinnacleblooms.org/refund-policy)
 Check the booking conditions before payment and request review of a cancellation, unused service or billing error.

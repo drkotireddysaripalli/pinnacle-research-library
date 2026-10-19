@@ -25,13 +25,14 @@ for(const [url,source] of [
  const html=await transformed.text();
  assert(!html.includes('gtag/js?id=G-2BYLRLFRDJ'));
  assert(!html.includes("gtag('config', 'G-2BYLRLFRDJ')"));
- assert.equal((html.match(/data-speech-measurement/g)||[]).length,1);
+ assert.equal((html.match(/data-speech-measurement/g)||[]).length,0);
  assert.equal((html.match(/speech-measurement\.js/g)||[]).length,1);
  assert(html.includes('GTM-W9ZHX459'));
  assert(html.includes("gtag('config', 'AW-10810823199')"));
  assert(!html.includes('data-ad-call-preferences'));
  assert.equal((html.match(/pinnacle-measurement-privacy-bootstrap/g)||[]).length,1);
  assert(html.indexOf('pinnacle-measurement-privacy-bootstrap')<html.indexOf('GTM-W9ZHX459'));
+ assert(html.includes('analytics_storage:"granted"'));assert(html.includes('ad_storage:"granted"'));assert(html.includes('ad_user_data:"granted"'));assert(html.includes('ad_personalization:"denied"'));assert(html.includes('ads_data_redaction",false'));
  assert.equal(transformed.headers.get('etag'),null);
 }
 
@@ -47,8 +48,8 @@ const changedFixture=fixture.replace('GTM-W9ZHX459','GTM-CHANGED');
 const changed=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/'),new Response(changedFixture,{headers:{'content-type':'text/html'}}));
 assert.equal(await changed.text(),changedFixture);
 
-const alreadyShared=fixture.replace('</body>','<details data-speech-measurement></details></body>');
-const idempotent=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/'),new Response(alreadyShared,{headers:{'content-type':'text/html'}}));
-assert.equal(await idempotent.text(),alreadyShared);
+const alreadyShared=fixture.replace('</body>','<details data-speech-measurement></details><script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=old"></script><script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=duplicate"></script></body>');
+const migratedShared=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/'),new Response(alreadyShared,{headers:{'content-type':'text/html'}}));
+const migratedHtml=await migratedShared.text();assert.equal((migratedHtml.match(/speech-measurement\.js/g)||[]).length,1);assert(migratedHtml.includes('v=measurement-always-on-20261019'));assert(migratedHtml.includes('data-speech-measurement'));
 
 console.log(JSON.stringify({passed:41,failed:0,scope:'guarded homepage GA4 migration'}));

@@ -1,26 +1,59 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import vm from 'node:vm';
-const code=await fs.readFile(new URL('../public/pinnacle-pages-scripts/cheq-protection.js',import.meta.url),'utf8');
-function setup({path='/centers',query='',hash='',referrer='',gpc=false,saved,panelMissing=false,qaAt,sessionDenied=false}={}){
- const scripts=[],buttons=['accepted','declined'].map(value=>({dataset:{cheqChoice:value},addEventListener(n,f){this.click=f;}})),status={textContent:''},storage=new Map();if(saved)storage.set('pinnacle-cheq-consent-v1',JSON.stringify(saved));
- const panel={hidden:true,setAttribute(){},querySelector:()=>status,querySelectorAll:()=>buttons},anchor={insertAdjacentElement(){}};
- const location={protocol:'https:',hostname:'www.pinnacleblooms.org',pathname:path,hash,href:'https://www.pinnacleblooms.org'+path+query+hash,reload(){this.reloaded=true;}};
- const document={referrer,cookie:'',querySelector:s=>s==='[data-speech-measurement]'?anchor:s==='[data-cheq-preferences]'?(panelMissing?null:panel):null,createElement:()=>({dataset:{},setAttribute(k,v){this[k]=v;}}),head:{appendChild:e=>scripts.push(e)},addEventListener(){}};
- const window={addEventListener(){}};const context={window,document,location,navigator:{globalPrivacyControl:gpc},URL,Date,localStorage:{getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)},sessionStorage:{getItem(){if(sessionDenied)throw Error('unavailable');return qaAt;},setItem(k,v){if(sessionDenied)throw Error('unavailable');qaAt=v;},removeItem(){}},console};vm.createContext(context);vm.runInContext(code,context);return{context,scripts,buttons,status,storage,location};
-}
-test('No vendor request without its own fresh choice; old analytics choices do not grant CHEQ',()=>{const x=setup();assert.equal(x.scripts.length,0);assert.equal(x.context.window.__pinnacleCheq.started,false);});
-test('Eligible initializer reveals the existing compact control; unsupported pages remain untouched',()=>{const x=setup();assert.equal(x.context.document.querySelector('[data-cheq-preferences]').hidden,false);const unsupported=setup({path:'/faq'});assert.equal(unsupported.context.window.__pinnacleCheq,undefined);});
-test('One approved tag with URL-query filtering and callback; no raw response retained',()=>{const x=setup({query:'?q=private-text'});x.buttons[0].click();x.buttons[0].click();assert.equal(x.scripts.length,1);const s=x.scripts[0];assert.equal(s.className,'ct_clicktrue_102663');assert.equal(s.dataset.jsonp,'onCheqResponse');assert.equal(s['data-include-qs'],'__pinnacle_no_query_parameter__');x.context.window.onCheqResponse({private:'ignored'},'request-id','visitor-id');assert.equal(x.context.window.__pinnacleCheq.responses,1);assert.equal(JSON.stringify(x.context.window.__pinnacleCheq).includes('visitor-id'),false);});
-test('Private reading, forms, authentication and checkout never install',()=>{for(const path of ['/ask','/ask/account','/ask/auth/callback','/faq','/sunshine','/enroll-autism-speech-aba-therapies-india','/shop/cart'])assert.equal(setup({path}).context.window.__pinnacleCheq,undefined,path);});
-test('GPC, fragments, private referrers and reserved filter names stay off',()=>{for(const options of [{gpc:true},{hash:'#private'},{referrer:'https://www.pinnacleblooms.org/faq/child-topic'},{query:'?__pinnacle_no_query_parameter__=private'}]){const x=setup(options);x.buttons[0].click();assert.equal(x.scripts.length,0);}});
-test('Withdrawal saves refusal and reloads to unload vendor code',()=>{const x=setup();x.buttons[0].click();x.buttons[1].click();assert.equal(x.location.reloaded,true);assert.equal(JSON.parse(x.storage.get('pinnacle-cheq-consent-v1')).value,'declined');});
-test('Expired traffic grants do not restart the vendor',()=>assert.equal(setup({saved:{value:'accepted',at:Date.now()-91*86400000}}).scripts.length,0));
-test('A valid explicit traffic grant survives optional UI removal',()=>assert.equal(setup({panelMissing:true,saved:{value:'accepted',at:Date.now()-1000}}).scripts.length,1));
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import vm from 'node:vm';
 
-test('QA query or fresh tab marker suppresses even an accepted CHEQ grant and a subsequent click',()=>{
- for(const options of [{query:'?validation_test=measurement_20261019'},{query:'?validation_test=',sessionDenied:true},{qaAt:String(Date.now()-1000)}]){
-  const x=setup({...options,saved:{value:'accepted',at:Date.now()-1000}});x.buttons[0].click();assert.equal(x.scripts.length,0);assert.equal(x.context.window.__pinnacleCheq.started,false);
- }
+const code=await fs.readFile(new URL('../public/pinnacle-pages-scripts/cheq-protection.js',import.meta.url),'utf8');
+function setup({path='/centers',query='',hash='',referrer='',host='www.pinnacleblooms.org',qaAt,existing=false}={}){
+ const scripts=[];
+ const location={protocol:'https:',hostname:host,pathname:path,hash,href:'https://'+host+path+query+hash};
+ const document={
+  referrer,
+  querySelector:s=>s==='script.ct_clicktrue_102663'&&existing?{}:null,
+  createElement:()=>({dataset:{},setAttribute(k,v){this[k]=v;}}),
+  head:{appendChild:e=>scripts.push(e)}
+ };
+ const window={};
+ const sessionStorage={getItem:()=>qaAt||null,setItem:(key,value)=>{qaAt=value;}};
+ const neverStore=new Proxy({}, {get(){throw Error('visitor choice storage must not be accessed');}});
+ const context={window,document,location,navigator:{globalPrivacyControl:true},localStorage:neverStore,sessionStorage,URL,Date,console};
+ vm.createContext(context);vm.runInContext(code,context);
+ return {context,scripts};
+}
+
+test('CHEQ has no visitor choice UI, storage or GPC gate',()=>{
+ for(const token of ['data-cheq-choice','data-cheq-preferences','pinnacle-cheq-consent','globalPrivacyControl','localStorage','Allow traffic protection','Keep traffic protection off'])assert.equal(code.includes(token),false,token);
 });
-test('Expired, future and invalid QA markers do not suppress an eligible explicit grant',()=>{
- for(const qaAt of [String(Date.now()-86401000),String(Date.now()+86400000),'invalid'])assert.equal(setup({qaAt,saved:{value:'accepted',at:Date.now()-1000}}).scripts.length,1);
+
+test('eligible commercial routes install exactly one automatic vendor tag',()=>{
+ for(const path of ['/centers','/best-aba-therapy-center-india-proven-improvement-rate','/top-speech-therapy-center-india-proven-improvement-rate','/autism-therapy']){
+  const x=setup({path,query:'?q=private-text'});assert.equal(x.scripts.length,1,path);
+  const script=x.scripts[0];assert.equal(script.className,'ct_clicktrue_102663');assert.equal(script.dataset.ch,'www.pinnacleblooms.org');assert.equal(script.dataset.jsonp,'onCheqResponse');assert.equal(script['data-include-qs'],'__pinnacle_no_query_parameter__');assert.equal(script.referrerPolicy,'no-referrer');
+  assert.deepEqual(JSON.parse(JSON.stringify(x.context.window.__pinnacleCheq)),{started:true,enabled:true,responses:0});
+ }
+ assert.equal(setup({existing:true}).scripts.length,0);
+});
+
+test('callback retains only a response count and an SDK error cannot block the page',()=>{
+ const x=setup();x.context.window.onCheqResponse({private:'ignored'},'request-id','visitor-id');assert.equal(x.context.window.__pinnacleCheq.responses,1);assert.equal(JSON.stringify(x.context.window.__pinnacleCheq).includes('visitor-id'),false);x.scripts[0].onerror();assert.equal(x.context.window.__pinnacleCheq.enabled,false);
+});
+
+test('private, form, authentication, checkout and unrelated routes never install',()=>{
+ for(const path of ['/ask','/ask/account','/ask/auth/callback','/faq','/sunshine','/enroll-autism-speech-aba-therapies-india','/shop/cart']){const x=setup({path});assert.equal(x.context.window.__pinnacleCheq,undefined,path);assert.equal(x.scripts.length,0,path);}
+ assert.equal(setup({host:'pinnacleblooms.org'}).scripts.length,0);
+});
+
+test('labelled QA, fragments, unsafe referrers and reserved query fields stay excluded',()=>{
+ for(const options of [
+  {query:'?validation_test=measurement_20261019'},
+  {qaAt:String(Date.now()-1000)},
+  {hash:'#private'},
+  {referrer:'https://www.pinnacleblooms.org/faq/child-topic'},
+  {referrer:'https://untrusted.example/search?q=private'},
+  {query:'?__pinnacle_no_query_parameter__=private'}
+ ])assert.equal(setup(options).scripts.length,0,JSON.stringify(options));
+});
+
+test('expired and invalid QA markers do not suppress an otherwise eligible public route',()=>{
+ for(const qaAt of [String(Date.now()-86401000),String(Date.now()+86400000),'invalid'])assert.equal(setup({qaAt}).scripts.length,1,qaAt);
 });

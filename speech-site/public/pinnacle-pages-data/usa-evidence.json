@@ -122,6 +122,29 @@
     "premises": [],
     "campaign": "Generated fictional family/professional campaign scene; not an actual branch room, named practitioner or patient outcome."
   },
+  "openingHours": {
+    "opens": "09:00",
+    "closes": "19:00",
+    "display": "9:00 am–7:00 pm",
+    "confirmedOn": "2026-10-07",
+    "exclusions": "Closed Sundays, the second Saturday of each month, national holidays and dates in the published holiday calendar.",
+    "calendarYear": 2026,
+    "calendarUrl": "https://www.pinnacleblooms.org/assets/Pinnacle-Holiday-Calendar-2026.pdf",
+    "note": "Confirm your appointment and any branch-specific change before travelling."
+  },
+  "staffingCommitment": {
+    "source": "Owner-confirmed network staffing commitment",
+    "confirmedOn": "2026-10-07",
+    "headline": "Qualified. Appropriately certified. Full-time. Permanent.",
+    "text": "Pinnacle’s network staffing commitment is qualified, appropriately certified, full-time and permanent therapy staff, with no freelance or part-time therapy staffing.",
+    "reasons": [
+      "Continuity of care",
+      "Clear accountability",
+      "Child safety",
+      "Growing independence"
+    ],
+    "sourceUrl": "/staff-declaration"
+  },
   "googleBusinessUrl": "https://goo.gl/maps/YNYNcqtGKtNdb2CV7",
   "reviewSnapshot": {
     "rating": 5,

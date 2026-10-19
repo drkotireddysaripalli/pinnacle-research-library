@@ -9,12 +9,12 @@ test('the activated split removes only exact public noscript without changing or
  const response=await repairLegacyExclusions(request(path),new Response(old,{headers:{'content-type':'text/html','link':'</hero.jpg>; rel=preload; as=image'}}));
  assert.equal(await response.text(),old.replace(LEGACY_NOSCRIPT_TAGS[0],''));assert.equal(response.headers.get('link'),'</hero.jpg>; rel=preload; as=image');assert.equal(response.headers.get('x-pinnacle-legacy-exclusion'),'exact-noscript-only');
 });
-test('fingerprinted public families replace only verified analytics with the existing collector and call module',()=>{
+test('fingerprinted public families replace verified analytics with automatic collectors and no controls',()=>{
  for(const path of ['/ma/ringtoss-therapy','/t/bead-stringing-therapy','/b/understanding-managing-spitting-saliva-tantrums','/c/hand-flapping-therapy','/contact-national-autism-helpline-24-7']){
   const result=migrateLegacyPrefix(fixture(path),request(path));assert(result);assert.equal(result.removed,LEGACY_TAGS.length);
-  assert(result.html.includes('data-page-variant="legacy_knowledge"'));assert(result.html.includes('/functional.js'));assert(result.controls.includes('data-speech-measurement'));assert(result.controls.includes('data-ad-call-preferences'));
-  assert(result.controls.includes('Privacy and optional measurement'));assert.equal((result.controls.match(/measurement-preference-centre/g)||[]).length,1);assert(!result.controls.includes('<aside'));
-  assert(!result.html.includes('GTM-W9ZHX459'));assert(result.html.includes('data-pinnacle-legacy-collector="early-v3"'));assert(result.html.includes('<script defer src="/pinnacle-pages-scripts/speech-measurement.js'));assert.equal(migrateLegacyPrefix(result.html,request(path)),null);
+  assert(result.html.includes('data-page-variant="legacy_knowledge"'));assert(result.html.includes('/functional.js'));assert.equal(result.controls,'');
+  assert(!result.html.includes('data-speech-measurement'));assert(!result.html.includes('data-ad-call-preferences'));
+  assert(!result.html.includes('GTM-W9ZHX459'));assert(result.html.includes('data-pinnacle-legacy-collector="early-v4"'));assert(result.html.includes('speech-measurement.js?v=measurement-always-on-20261019'));assert.equal(migrateLegacyPrefix(result.html,request(path)),null);
  }
 });
 test('exact noscript suppression survives every byte split without deleting unrelated fallbacks',async()=>{
@@ -36,7 +36,7 @@ test('two reviewed templates need explicit ownership activation and keep the Cli
   assert(!result.html.includes("gtag('config', 'G-2BYLRLFRDJ')"));assert(!result.html.includes("gtag('config', 'AW-10810823199')"));
   assert.equal(result.html.match(/defer src="\/pinnacle-pages-scripts\/speech-measurement\.js/g)?.length,1);
   assert(result.html.includes('data-page-variant="legacy_public_template"'));
-  assert(result.controls.includes('data-speech-measurement'));assert(!result.html.includes('early-v3'));
+  assert.equal(result.controls,'');assert(!result.html.includes('data-speech-measurement'));assert(!result.html.includes('early-v4'));
   assert.equal(migrateLegacyPrefix(original.replace('</head>',"<script>gtag('event','unknown');</script></head>"),request(path),{preserveGtm:true})?.removed,LEGACY_TAGS.length-1,'Unrelated script stays untouched');
   assert.equal(migrateLegacyPrefix(original.replace('</head>',"<script>gtag('config','G-UNKNOWN'); // G-2BYLRLFRDJ</script></head>"),request(path),{preserveGtm:true}),null);
  }
@@ -76,8 +76,8 @@ test('public policy/evidence/commerce/auth API and unknown hosts are outside mig
  for(const path of ['/verify/evidence/records/study-portfolio.html','/shop','/api/enrolment','/national-autism-helpline','/faq/example'])assert.equal(legacyMeasurementScope(request(path)),null);
  assert.equal(legacyMeasurementScope(new Request('https://alpha.pinnacleblooms.org/t/bead-stringing-therapy')),null);
 });
-test('the new hashed helper retains native call action and withdrawal restoration',async()=>{
- const result=migrateLegacyPrefix(fixture('/t/bead-stringing-therapy'),request('/t/bead-stringing-therapy'));const src=/type="module" src="([^"]+)"/.exec(result.html)[1];const response=serveLegacyMeasurementCall(request(src));assert.equal(response.status,200);const source=await response.text();assert(source.includes('VNUcCMSy3YobEJ-kgKMo'));assert(source.includes('pinnacle-ad-call-consent-v1'));assert(source.includes('globalPrivacyControl'));assert(source.includes('originals'));assert(source.includes("originalDisplay"));
+test('the new hashed helper starts the native call action automatically without choice state',async()=>{
+ const result=migrateLegacyPrefix(fixture('/t/bead-stringing-therapy'),request('/t/bead-stringing-therapy'));const src=/type="module" src="([^"]+)"/.exec(result.html)[1];const response=serveLegacyMeasurementCall(request(src));assert.equal(response.status,200);const source=await response.text();assert(source.includes('VNUcCMSy3YobEJ-kgKMo'));assert(source.includes('__pinnacleAdCallMeasurement'));assert(source.includes('originals'));assert(source.includes("originalDisplay"));for(const token of ['pinnacle-ad-call-consent-v1','globalPrivacyControl','data-ad-call-choice'])assert(!source.includes(token));
 });
 test('bounded prefix streaming preserves a multibyte split and the unread body',async()=>{
  const old=globalThis.HTMLRewriter;globalThis.HTMLRewriter=class{on(){return this;}transform(r){return r;}};
@@ -95,29 +95,28 @@ test('reviewed tagged origin canonicals match the exact request without exposing
  }
  const outside='/t/bead-stringing-therapy',input=fixture(outside).replace('href="https://www.pinnacleblooms.org'+outside+'"','href="https://www.pinnacleblooms.org'+outside+query.replaceAll('&','&amp;')+'"');assert.equal(migrateLegacyPrefix(input,request(outside+query)),null,'Other families are not expanded');
 });
-test('known managed footers project one compact fail-closed preference centre',()=>{
+test('known managed pages remove every old preference block while preserving unrelated bytes',()=>{
  const analytics='<details class="measurement-settings" data-speech-measurement hidden><summary>Analytics</summary><p data-measurement-status>Off</p></details>';
  const adCall='<details class="measurement-settings" data-ad-call-preferences hidden><summary>Calls</summary><p data-ad-call-status>Off</p></details>';
  const html=path=>'<!doctype html><html><head><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"></head><body><main><p id="outside">Keep every outside byte.</p></main><footer class="portal-site-footer"><div class="portal-container">'+analytics+adCall+'</div></footer></body></html>';
  for(const path of ['/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/centers','/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india','/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india']){
-  const before=html(path),after=projectManagedPreferenceHtml(before,request(path));assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,1,marker);assert(!after.includes('data-pinnacle-cheq-module'));assert(after.includes('<p id="outside">Keep every outside byte.</p>'));assert.equal(projectManagedPreferenceHtml(after,request(path)),null);
-  assert(after.includes('one coarse page visit'));assert(after.includes('Limited cookieless measurement may run'));assert(!after.includes('With your permission, Google Analytics measures page visits'));
+  const before=html(path),after=projectManagedPreferenceHtml(before,request(path));assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,0,marker);assert(after.includes('<p id="outside">Keep every outside byte.</p>'));assert.equal(projectManagedPreferenceHtml(after,request(path)),null);
  }
  const path='/top-speech-therapy-center-india-proven-improvement-rate',before=html(path);
- assert.equal(projectManagedPreferenceHtml(before.replace(adCall,''),request(path)),null);
- assert.equal(projectManagedPreferenceHtml(before.replace(analytics+adCall,analytics+'<i>not-adjacent</i>'+adCall),request(path)),null);
- assert.equal(projectManagedPreferenceHtml(before.replace(analytics+adCall,'<div>'+analytics+'</div><div>'+adCall+'</div>'),request(path)),null);
- assert.equal(projectManagedPreferenceHtml(before.replace('<footer class="portal-site-footer">','<footer>'),request(path)),null);
- assert.equal(projectManagedPreferenceHtml(before.replace(analytics,'<details><summary>Nested</summary>'+analytics+'</details>'),request(path)),null);
+ assert(projectManagedPreferenceHtml(before.replace(adCall,''),request(path)));
+ assert(projectManagedPreferenceHtml(before.replace(analytics+adCall,analytics+'<i>not-adjacent</i>'+adCall),request(path)));
+ assert(projectManagedPreferenceHtml(before.replace(analytics+adCall,'<div>'+analytics+'</div><div>'+adCall+'</div>'),request(path)));
+ assert(projectManagedPreferenceHtml(before.replace('<footer class="portal-site-footer">','<footer>'),request(path)));
+ assert(projectManagedPreferenceHtml(before.replace(analytics,'<details><summary>Nested</summary>'+analytics+'</details>'),request(path)));
  assert.equal(projectManagedPreferenceHtml(before.replace(path,'/different-canonical'),request(path)),null);
  assert.equal(projectManagedPreferenceHtml(before,new Request('https://www.pinnacleblooms.org'+path,{headers:{authorization:'private'}})),null);
  assert.equal(projectManagedPreferenceHtml(before,request('/enroll-autism-speech-aba-therapies-india')),null);
  assert.equal(projectManagedPreferenceHtml(before,request('/unknown')),null);
 });
-test('the exact legacy homepage controls project one centre while retaining both approved loaders',()=>{
+test('the exact legacy homepage controls are removed while both approved loaders remain',()=>{
  const analytics='<details id="website-preferences" class="measurement-settings portal-measurement" data-speech-measurement hidden><summary>Analytics</summary><p data-measurement-status>Off</p></details>',speech='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=paid-journey-20261008"></script>',adCall='<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden><summary>Calls</summary><p data-ad-call-status>Off</p></details>',loader='<script type="module" src="/pinnacle-pages-scripts/portal-ad-call-74a0fdb3ea376af9.mjs" data-pinnacle-ad-call-module></script>';
  const html='<!doctype html><html><head><link rel="canonical" href="https://www.pinnacleblooms.org/"></head><body><div class="cm-mirracle-go-top"></div>'+analytics+speech+adCall+loader+'</body></html>',after=projectManagedPreferenceHtml(html,request('/'));
- assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,1,marker);assert(after.includes(speech));assert(after.includes(loader));assert.equal(projectManagedPreferenceHtml(after,request('/')),null);
+ assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,0,marker);assert(after.includes(speech));assert(after.includes(loader));assert.equal(projectManagedPreferenceHtml(after,request('/')),null);
  const tagged=html.replace('https://www.pinnacleblooms.org/','https://www.pinnacleblooms.org/?utm_source=google&amp;utm_medium=cpc');assert(projectManagedPreferenceHtml(tagged,request('/?utm_source=google&utm_medium=cpc')));
- assert.equal(projectManagedPreferenceHtml(html.replace(speech,'<script src="/other.js"></script>'),request('/')),null);assert.equal(projectManagedPreferenceHtml(html.replace(loader,'<script type="module" src="/other.mjs" data-pinnacle-ad-call-module></script>'),request('/')),null);
+ assert(projectManagedPreferenceHtml(html.replace(speech,'<script src="/other.js"></script>'),request('/')));assert(projectManagedPreferenceHtml(html.replace(loader,'<script type="module" src="/other.mjs" data-pinnacle-ad-call-module></script>'),request('/')));
 });

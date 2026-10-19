@@ -1,7 +1,7 @@
 {
   "url": "https://www.pinnacleblooms.org/policies",
   "title": "Policies and your rights",
-  "effectiveOn": "2026-10-01",
+  "effectiveOn": "2026-10-19",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "policies": [
     {
@@ -9,7 +9,7 @@
       "url": "https://www.pinnacleblooms.org/privacy-policy",
       "group": "Your information",
       "summary": "Understand what information is used, why it is needed and how to contact our privacy grievance officer.",
-      "version": "2026-10-01.1"
+      "version": "2026-10-19.1"
     },
     {
       "name": "Website Terms of Use",
@@ -29,8 +29,8 @@
       "name": "Cookie & Website Technology Policy",
       "url": "https://www.pinnacleblooms.org/cookie-policy",
       "group": "Your information",
-      "summary": "How managed pages use limited cookieless measurement, optional analytics preferences, technical services and browser storage.",
-      "version": "2026-10-01.1"
+      "summary": "How eligible public pages use bounded analytics, campaign, call and invalid-traffic measurement while excluding private contexts.",
+      "version": "2026-10-19.1"
     },
     {
       "name": "Copyright & Intellectual Property",
@@ -79,7 +79,7 @@
       "url": "https://www.pinnacleblooms.org/third-party-inegration",
       "group": "Using our website",
       "summary": "Understand external maps, platforms, hosting, measurement and payment or account destinations.",
-      "version": "2026-10-01.1"
+      "version": "2026-10-19.1"
     },
     {
       "name": "Refund & Cancellation Policy",

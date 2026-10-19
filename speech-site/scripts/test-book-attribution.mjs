@@ -4,8 +4,8 @@ import fs from 'node:fs/promises';
 import {serveBookAttribution} from '../deployment/book-attribution-handler.mjs';
 import {serveSpeech} from '../deployment/speech-handler.mjs';
 const origin='https://www.pinnacleblooms.org';
-test('the released commerce script matches its source bytes, validators and methods',async()=>{
- for(const name of ['book-commerce.js','protection-consumer.mjs','cheq-protection.js']){
+test('the released shared script matches its source bytes, validators and methods',async()=>{
+ for(const name of ['book-commerce.js','protection-consumer.mjs','cheq-protection.js','centre-operating-holds.mjs']){
   const url=origin+'/pinnacle-pages-scripts/'+name,response=serveBookAttribution(new Request(url));
   assert.equal(await response.text(),await fs.readFile('public/pinnacle-pages-scripts/'+name,'utf8'));
   assert.equal(response.headers.get('cache-control'),'public, max-age=60, must-revalidate');
@@ -20,6 +20,14 @@ test('the released commerce script matches its source bytes, validators and meth
   assert.equal(await serveBookAttribution(new Request(url,{method:'HEAD'})).text(),'');
   assert.equal(serveBookAttribution(new Request(url,{method:'POST'})).status,405);
  }
+});
+test('the managed public response permits the exact first-party protection origin',async()=>{
+ const body='<html><head></head><body>managed</body></html>',env={ASSETS:{fetch:async()=>new Response(body,{headers:{'content-type':'text/html'}})}};
+ const response=await serveSpeech(new Request(origin+'/autism-therapy'),env,{}),policy=response.headers.get('content-security-policy');
+ assert.equal(response.status,200);assert.equal(response.headers.get('x-pinnacle-protection-csp'),'existing-protect-origin-v1');
+ for(const directive of ['script-src','connect-src'])assert.match(policy,new RegExp(directive+"[^;]*https://protect\\.pinnacleblooms\\.org"));
+ const privateResponse=await serveSpeech(new Request(origin+'/autism-therapy',{headers:{authorization:'Bearer fixture'}}),env,{});
+ assert.equal(privateResponse.headers.get('x-pinnacle-protection-csp'),null);
 });
 test('shared measurement is served from the exact guarded overlay',async()=>{
  const path='/pinnacle-pages-scripts/speech-measurement.js',request=new Request(origin+path);

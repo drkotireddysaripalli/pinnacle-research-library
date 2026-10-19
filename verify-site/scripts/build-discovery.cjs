@@ -7,5 +7,5 @@ const manifest=Object.fromEntries(files.map(p=>['/'+p.replaceAll('\\','/'),crypt
 const worker=path.join(root,'pinnacle-route-v11.mjs');
 const logic=fs.readFileSync(worker,'utf8').replace(/const (HTML_PATHS|STATIC_FILES|RELEASE) = [^\n]+;/g,'');
 const release=crypto.createHash('sha256').update(JSON.stringify(manifest)+logic.replace(/\r\n/g,'\n')).digest('hex').slice(0,16);
-let source=fs.readFileSync(worker,'utf8').replace(/const HTML_PATHS = [^\n]+;/,'const HTML_PATHS = '+JSON.stringify(paths)+';').replace(/const STATIC_FILES = [^\n]+;/,'const STATIC_FILES = '+JSON.stringify(manifest)+';').replace(/const RELEASE = [^\n]+;/,'const RELEASE = '+JSON.stringify(release)+';');
+let source=fs.readFileSync(worker,'utf8').replace(/\r\n?/g,'\n').replace(/const HTML_PATHS = [^\n]+;/,'const HTML_PATHS = '+JSON.stringify(paths)+';').replace(/const STATIC_FILES = [^\n]+;/,'const STATIC_FILES = '+JSON.stringify(manifest)+';').replace(/const RELEASE = [^\n]+;/,'const RELEASE = '+JSON.stringify(release)+';');
 fs.writeFileSync(worker,source);console.log(JSON.stringify({htmlRoutes:paths.length,staticFiles:files.length,release}));

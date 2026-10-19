@@ -18,8 +18,8 @@ Current release: 25 September 2026, Worker version 11. Measurement repair, priva
 - `service-facts.json`: owner-confirmed service facts; questions/resources are synchronized by the builder.
 - `resources.json`: separately operated helplines, their numbers, scope and official sources.
 - `handler-source.mjs`: route, asset, canonical, sitemap, method and security handling. Do not restore the old hardcoded SERVICE_EXPORTS copy here.
-- `phone-analytics.js`: voluntary Google Analytics consent and fixed, privacy-conscious call-placement events through the existing evidence stream; no call interception.
-- `phone-analytics-tests.mjs`: consent, privacy, one-event-per-activation and collection-failure regression checks.
+- `phone-analytics.js`: automatic bounded GA4, Google Ads call measurement and fixed call-placement events on the production helpline; labelled QA traffic remains excluded and dialing is never intercepted.
+- `phone-analytics-tests.mjs`: automatic-start, privacy, call-number replacement, one-event-per-activation and collection-failure regression checks.
 - `worker.mjs`, `preview.html`, `schema.json`: generated release outputs.
 - `assets/`: nine existing branded WebP images, one dedicated JPEG share card and the unchanged full Telugu font.
 - `share-card.svg` and `render-share-card.cjs`: editable native share-card layout; render with the installed Sharp package available to Node.js.

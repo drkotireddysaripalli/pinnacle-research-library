@@ -2,7 +2,6 @@
 // belongs in the protected acquisition envelope.
 export const ACQUISITION_LIFETIME_MS=30*86400000;
 export const HELPLINE_PATH='/national-autism-helpline';
-export const HELPLINE_CONSENT_KEY='pinnacle-helpline-measurement-choice-v4';
 export const CHATGPT_CAMPAIGNS=['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries'];
 export function validHelplineCampaign(fields){
  return !!fields&&typeof fields==='object'&&!Array.isArray(fields)&&Object.keys(fields).length===3&&fields.utm_source==='chatgpt'&&fields.utm_medium==='paid'&&CHATGPT_CAMPAIGNS.includes(fields.utm_campaign);

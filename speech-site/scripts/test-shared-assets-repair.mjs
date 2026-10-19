@@ -16,10 +16,11 @@ test('Exact script/preload references change once; CSP, cookies, native contact,
  for(const path of ['/api/enrolment','/account','/t/example?json'])assert.equal(await(await mf.dispatchFetch(origin+path)).text(),html);assert.equal(await(await mf.dispatchFetch(origin+'/t/example',{headers:{authorization:'Bearer fixture'}})).text(),html);
  }finally{await mf.dispose();}
 });
-test('Original and minified call module preserve default, refusal, GPC, storage failure, opt-in and forwarding behavior',async()=>{
- const old=await fs.readFile('deployment/shared-asset-sources/google-ads-call-consent.FqeWzaS9.mjs','utf8'),min=assets[rewrites['/pinnacle-pages-assets/google-ads-call-consent.FqeWzaS9.mjs']].body;
+test('Current source and repaired legacy asset preserve identical automatic call measurement',async()=>{
+ const original=await fs.readFile('src/lib/google-ads-call-consent.mjs','utf8'),min=assets[rewrites['/pinnacle-pages-assets/google-ads-call-consent.FqeWzaS9.mjs']].body;
  const harnessFile=await fs.readFile('scripts/test-ad-call-consent.mjs','utf8'),start=harnessFile.indexOf('function harness('),end=harnessFile.indexOf('\ntest(',start),harness=harnessFile.slice(start,end);
- const scripts=await Promise.all([old,min].map(s=>transform(s,{format:'iife',globalName:'FixtureExports'}).then(r=>r.code)));
- function run(source,options,choice){const context={vm,source,key:'pinnacle-ad-call-consent-v1',action:'AW-10810823199/VNUcCMSy3YobEJ-kgKMo',options};vm.runInNewContext(harness+'; result=harness(options);',context);const h=context.result;if(choice)h.choose(choice);if(choice==='accepted'&&h.callback())h.callback()('9912345678','+919912345678');return JSON.stringify({commands:h.commands().map(c=>c[0]==='js'?[c[0],'<runtime-date>']:c),scripts:h.scripts.length,phone:h.central.attrs.get('href'),branch:h.localLink.attrs.get('href'),status:h.status.textContent,panel:h.panel.hidden,cookies:h.cookies});}
- for(const [opts,choice]of [[{},null],[{},'declined'],[{gpc:true},'accepted'],[{storage:true},'accepted'],[{},'accepted']])assert.equal(run(scripts[0],opts,choice),run(scripts[1],opts,choice));
+ const scripts=await Promise.all([original,min].map(s=>transform(s,{format:'iife',globalName:'FixtureExports'}).then(r=>r.code)));
+ function run(source,options){const context={vm,source,action:'AW-10810823199/VNUcCMSy3YobEJ-kgKMo',options};vm.runInNewContext(harness+'; result=harness(options);',context);const h=context.result;if(h.callback())h.callback()('+1 202 555 0142','+12025550142');return JSON.stringify({commands:h.commands().map(c=>c[0]==='js'?[c[0],'<runtime-date>']:c),scripts:h.scripts.length,phone:h.central.attrs.get('href'),branch:h.local.attrs.get('href'),state:h.window.__pinnacleAdCallMeasurement});}
+ for(const options of [{},{loader:true},{host:'www.pinnacleblooms.org',path:'/best-aba-therapy-center-india-proven-improvement-rate'},{path:'/ask/account'}])assert.equal(run(scripts[0],options),run(scripts[1],options));
+ for(const token of ['data-ad-call-choice','pinnacle-ad-call-consent-v1','globalPrivacyControl'])assert(!min.includes(token),token);
 });
