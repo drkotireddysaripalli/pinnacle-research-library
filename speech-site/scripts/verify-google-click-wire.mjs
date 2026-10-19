@@ -15,8 +15,11 @@ const browser=await chromium.launch({headless:true});
 const waitFor=async predicate=>{const deadline=Date.now()+20000;while(Date.now()<deadline){if(predicate())return;await new Promise(resolve=>setTimeout(resolve,100));}throw Error('Timed out waiting for Google collect payload');};
 try{
  for(const pathname of pages){
-  const context=await browser.newContext({viewport:{width:390,height:844}}),collect=[],blocked=[],errors=[];
-  const entry={pathname,passed:false,collect,blocked,errors};evidence.pages.push(entry);
+  // The legacy homepage/contact header exposes WhatsApp at desktop width;
+  // the managed ABA page exposes both controls on mobile.
+  const width=pathname==='/best-aba-therapy-center-india-proven-improvement-rate'?390:1440;
+  const context=await browser.newContext({viewport:{width,height:844}}),collect=[],blocked=[],errors=[];
+  const entry={pathname,viewport:{width,height:844},passed:false,collect,blocked,errors};evidence.pages.push(entry);
   await context.route('**/*',async route=>{
    const request=route.request(),url=new URL(request.url());
    if(/\/collect$/.test(url.pathname)){
