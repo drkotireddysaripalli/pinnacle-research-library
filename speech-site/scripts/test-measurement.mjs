@@ -7,6 +7,7 @@ import {KNOWN_GOOGLE_ADS_CAMPAIGN_IDS,normaliseAcquisition} from '../public/pinn
 const source=fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const origin='https://www.pinnacleblooms.org';
 const enrolment='/enroll-autism-speech-aba-therapies-india';
+const contact='/contact-national-autism-helpline-24-7';
 const sourceKey='pinnacle-enquiry-source-v1';
 
 function harness({
@@ -144,6 +145,19 @@ test('safe Google Ads UTMs and click IDs survive in the source envelope and coar
   const arrival=h.events().find(entry=>entry[1]==='google_ads_arrival');
   assert(arrival);assert.equal(arrival[2].traffic_source,'google_ads');assert.equal(arrival[2].attribution_method,'click_id');
   assert.equal(arrival[2].gclid,undefined);
+});
+
+test('the durable contact route retains its exact Google Ads source through browser and receiver validation',()=>{
+  const gclid='EAIaIQobChMIContactCase123';
+  const h=harness({contact:true,url:origin+contact+'?utm_source=Google&utm_medium=CPC&utm_campaign=contact_receipt_live&utm_content=contact_form&gclid='+gclid});
+  const sourceEnvelope=JSON.parse(JSON.stringify(h.window.pinnacleEnquirySource()));
+  assert.equal(sourceEnvelope.landingPath,contact);
+  assert.equal(sourceEnvelope.fields.utm_source,'Google');
+  assert.equal(sourceEnvelope.fields.utm_medium,'CPC');
+  assert.equal(sourceEnvelope.fields.gclid,gclid);
+  assert.deepEqual(normaliseAcquisition(sourceEnvelope),sourceEnvelope);
+  assert.equal(h.events().filter(entry=>entry[1]==='page_view').length,1);
+  assert.equal(h.events().filter(entry=>entry[1]==='google_ads_arrival').length,1);
 });
 
 test('duplicate, private and malformed campaign values never enter source or analytics payloads',()=>{

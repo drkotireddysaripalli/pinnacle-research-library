@@ -50,6 +50,6 @@ assert.equal(await changed.text(),changedFixture);
 
 const alreadyShared=fixture.replace('</body>','<details data-speech-measurement></details><script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=old"></script><script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=duplicate"></script></body>');
 const migratedShared=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/'),new Response(alreadyShared,{headers:{'content-type':'text/html'}}));
-const migratedHtml=await migratedShared.text();assert.equal((migratedHtml.match(/speech-measurement\.js/g)||[]).length,1);assert(migratedHtml.includes('v=measurement-always-on-20261019'));assert(migratedHtml.includes('data-speech-measurement'));
+const migratedHtml=await migratedShared.text();assert.equal((migratedHtml.match(/speech-measurement\.js/g)||[]).length,1);assert(migratedHtml.includes('v=measurement-always-on-20261020'));assert(migratedHtml.includes('data-speech-measurement'));
 
 console.log(JSON.stringify({passed:41,failed:0,scope:'guarded homepage GA4 migration'}));

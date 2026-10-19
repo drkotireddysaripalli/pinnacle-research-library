@@ -8,6 +8,7 @@ import {validatePublicContact,toLegacyContact,toReceiptContact} from '../deploym
 import {parseReceiptContact,contactPayloadDigest} from '../deployment/contact-receipt-contract.mjs';
 import {serveEnrolmentApi} from '../deployment/enrolment-handler.mjs';
 import {escapeContactMapRows,serveContactReceiptAsset,contactReceiptAssets} from '../deployment/contact-receipt.mjs';
+import {patchReceiverContactAcquisition,assertReceiverContactAcquisitionPatch} from '../deployment/receiver-acquisition-patch.mjs';
 import fs from 'node:fs/promises';import {createHash} from 'node:crypto';
 const values={name:'ISOLATED FIXTURE',title:'Mx',phone:'0000000000',email:'fixture@example.invalid',facilityId:CONTACT_FACILITIES[0],subject:'Therapy Services',message:'Offline fixture only.'};
 const payload=()=>makeContactPayload(values,'qa-contact-request');
@@ -21,7 +22,7 @@ test('outer contact asset precedence serves the complete maintained dependency c
   assert.equal(await (await serveContactReceiptAsset(new Request(base+p,{method:'HEAD'}),env)).text(),'');
  }
  const source=await (await serveContactReceiptAsset(new Request(base+'/pinnacle-pages-scripts/enrolment-source.mjs?v=navratri-20261011'),env)).text();assert(!source.includes('pinnacle-helpline-measurement-choice'));assert(source.includes('pinnacle_vizag_call_enquiries'));
- assert((await fs.readFile(new URL('../public/pinnacle-pages-scripts/contact-api.mjs',import.meta.url),'utf8')).includes("./enrolment-source.mjs?v=contact-receipt-20261015"),'Returning contact browsers must not reuse the prior immutable dependency URL');
+ assert((await fs.readFile(new URL('../public/pinnacle-pages-scripts/contact-api.mjs',import.meta.url),'utf8')).includes("./enrolment-source.mjs?v=contact-source-20261020"),'Returning contact browsers must not reuse the prior immutable dependency URL');
 });
 test('contact map retains addresses and coordinates while escaping literal line breaks in row labels',()=>{
  const source='myArray.push(["Branch\\\" name\r\nRoad\nCity",17.42,78.45]);\nconst other="unchanged";';
@@ -42,16 +43,26 @@ test('validation retains required fields, exact allowlists and bounded lengths; 
  for(const patch of [{WebsiteReceipt:{}},{Services:[]},{formType:'other'},{source:{page:CONTACT_PATH,contract:'website_contact_v1'}},{source:{page:'/careers'}}])assert(!validatePublicContact({...payload(),...patch}));
  assert(validatePublicContact(makeContactPayload({...values,name:'x'.repeat(100),message:'x'.repeat(1000)},'qa-contact-request')));
 });
-test('invalid optional acquisition is dropped, original approved source is retained, Subject changes the private digest',async()=>{
- const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'fixture'}};
+test('invalid optional acquisition is dropped, original contact source is retained, Subject changes the private digest',async()=>{
+ const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:CONTACT_PATH,fields:{utm_source:'Google',utm_medium:'CPC',utm_campaign:'contact_receipt_live',gclid:'EAIaIQobChMIContactCase123'}};
  const p=makeContactPayload(values,'qa-contact-request',acquisition),l=toLegacyContact(p),b=toReceiptContact(l,p.requestId,p.source);assert.deepEqual(b.WebsiteReceipt.source.acquisition,acquisition);
+ const parsed=parseReceiptContact(b,p.requestId,normaliseAcquisition,CONTACT_FACILITIES);assert(parsed);assert.equal(parsed.source.page,CONTACT_PATH);assert.deepEqual(parsed.source.acquisition,acquisition);
  assert.equal(makeContactPayload(values,'qa-contact-request',{bad:true}).source.acquisition,undefined);
  assert.equal(toReceiptContact(l,p.requestId,{page:CONTACT_PATH,acquisition:{bad:true}}).WebsiteReceipt.source.acquisition,undefined);
  assert.notEqual(await contactPayloadDigest(l),await contactPayloadDigest({...l,Subject:'Assessments'}));
 });
+test('the deployed receiver module patch changes only the missing contact acquisition route and is idempotent',()=>{
+ const before='function normaliseAcquisition(value){return /^\\/(?:national-autism-helpline|centers|autism-therapy)?$/.test(value.landingPath)}';
+ const after=patchReceiverContactAcquisition(before);
+ assert(after.includes('national-autism-helpline|contact-national-autism-helpline-24-7|centers'));
+ assert.equal(patchReceiverContactAcquisition(after),after);
+ assert.equal(assertReceiverContactAcquisitionPatch(before,after),true);
+ assert.throws(()=>patchReceiverContactAcquisition(before+'\n'+before),/validator changed/);
+});
 test('existing API uses one private receiver, strips its protected join key, and never falls back to legacy contact AJAX',async()=>{
- let calls=0,sent;const p=payload(),env={ENROLMENT_RECEIPT_VERSION:'1',PINNACLE_ENROLMENT_RECEIPTS:{receive:async(body,key)=>{calls++;sent=body;return {httpStatus:202,status:'accepted',receipt:{schemaVersion:1,requestId:key,id:'qa-contact-receipt',leadReference:'private-fixture-intake'}};}}};
- const r=await serveEnrolmentApi(request(p),env,{fetchImpl:()=>{throw Error('Legacy fallback forbidden');}});assert.equal(r.status,202);const b=await r.json();assert.equal(calls,1);assert.equal(sent.WebsiteReceipt.source.contract,'website_contact_v1');assert(!JSON.stringify(b).includes('private-fixture'));assert.equal(b.receipt.requestId,p.requestId);
+ const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:CONTACT_PATH,fields:{utm_source:'Google',utm_medium:'CPC',utm_campaign:'contact_receipt_live',gclid:'EAIaIQobChMIContactCase123'}};
+ let calls=0,sent;const p=makeContactPayload(values,'qa-contact-request',acquisition),env={ENROLMENT_RECEIPT_VERSION:'1',PINNACLE_ENROLMENT_RECEIPTS:{receive:async(body,key)=>{calls++;sent=body;return {httpStatus:202,status:'accepted',receipt:{schemaVersion:1,requestId:key,id:'qa-contact-receipt',leadReference:'private-fixture-intake'}};}}};
+ const r=await serveEnrolmentApi(request(p),env,{fetchImpl:()=>{throw Error('Legacy fallback forbidden');}});assert.equal(r.status,202);const b=await r.json();assert.equal(calls,1);assert.equal(sent.WebsiteReceipt.source.contract,'website_contact_v1');assert.equal(sent.WebsiteReceipt.source.page,CONTACT_PATH);assert.deepEqual(sent.WebsiteReceipt.source.acquisition,acquisition);assert(!JSON.stringify(b).includes('private-fixture'));assert.equal(b.receipt.requestId,p.requestId);
  const disabled=await serveEnrolmentApi(request(p),{}, {fetchImpl:()=>{throw Error('Legacy fallback forbidden');}});assert.equal(disabled.status,503);
  for(const result of [{httpStatus:409,status:'rejected'},{httpStatus:503,status:'unknown'},true,{httpStatus:202,status:'accepted',receipt:{schemaVersion:1,requestId:'different-key',id:'qa-contact-receipt',leadReference:'private'}}]){const x=await serveEnrolmentApi(request(p),{...env,PINNACLE_ENROLMENT_RECEIPTS:{receive:async()=>result}});assert.notEqual((await x.json()).status,'accepted');}
  const timeout=await serveEnrolmentApi(request(p),{...env,PINNACLE_ENROLMENT_RECEIPTS:{receive:()=>new Promise(()=>{})}},{timeoutMs:5});assert.equal((await timeout.json()).status,'unknown');

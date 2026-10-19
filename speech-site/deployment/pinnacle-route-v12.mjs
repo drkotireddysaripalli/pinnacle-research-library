@@ -427,7 +427,7 @@ const HOME_GA4_CONFIG=`<script>
         gtag('config', 'G-2BYLRLFRDJ');
 
         /**/</script>`;
-const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261019"></script>';
+const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020"></script>';
 const HOME_GTM_MARKER='<!-- Google Tag Manager -->';
 const HOME_PRIVACY_BOOTSTRAP='<script id="pinnacle-measurement-privacy-bootstrap">(()=>{const keep=new Set(["utm_id","utm_source","utm_medium","utm_campaign","utm_term","utm_content","utm_source_platform","utm_creative_format","utm_marketing_tactic","gclid","dclid","msclkid","fbclid","gbraid","wbraid"]),u=new URL(location.href);for(const key of [...u.searchParams.keys()])if(!keep.has(key))u.searchParams.delete(key);history.replaceState(null,"",u.pathname+(u.search?u.search:"")+u.hash);window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments)};if(!window.__pinnacleConsentDefaults){window.__pinnacleConsentDefaults=true;window.gtag("consent","default",{analytics_storage:"granted",ad_storage:"granted",ad_user_data:"granted",ad_personalization:"denied"})}window.gtag("set","ads_data_redaction",false);window.gtag("set","url_passthrough",false)})();</script>';
 
@@ -449,7 +449,7 @@ export async function transformReviewedHomepageMeasurement(request,response){
  let result=html.replace(HOME_GA4_LOADER,'').replace(legacyConfig,'').replace(HOME_GTM_MARKER,HOME_PRIVACY_BOOTSTRAP+HOME_GTM_MARKER);
  const shared=/<script\b[^>]*\bsrc=["']\/pinnacle-pages-scripts\/speech-measurement\.js(?:\?[^"']*)?["'][^>]*>\s*<\/script>/gi;
  let retained=false;
- result=result.replace(shared,tag=>{if(retained)return '';retained=true;return tag.replace(/\bsrc=["'][^"']+["']/i,'src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261019"');});
+ result=result.replace(shared,tag=>{if(retained)return '';retained=true;return tag.replace(/\bsrc=["'][^"']+["']/i,'src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020"');});
  if(!retained)result=result.replace('</body>',HOME_MEASUREMENT_SCRIPT+'</body>');
  if(result.includes('gtag/js?id=G-2BYLRLFRDJ')||result.includes("gtag('config', 'G-2BYLRLFRDJ')")||!result.includes('pinnacle-measurement-privacy-bootstrap')||!result.includes('GTM-W9ZHX459')||!result.includes("gtag('config', 'AW-10810823199')")||(result.match(/speech-measurement\.js/g)||[]).length!==1)return response;
  const h=new Headers(response.headers);

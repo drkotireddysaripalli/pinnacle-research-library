@@ -1,6 +1,6 @@
 // Public form contract. Cloudflare translates this deliberately small envelope
 // to the existing PinnacleAI enrolment workflow without exposing that service.
-import {normaliseAcquisition} from './enrolment-source.mjs?v=navratri-20261011';
+import {normaliseAcquisition} from './enrolment-source.mjs?v=contact-source-20261020';
 import {centreOperatingHold} from './centre-operating-holds.mjs?v=centre-operating-holds-20261017';
 export const NAVRATRI_OFFER_REFERENCE='navratri-one-service-month-2026';
 export const services = new Set(['help','autism','speech','occupational','aba','education','other']);

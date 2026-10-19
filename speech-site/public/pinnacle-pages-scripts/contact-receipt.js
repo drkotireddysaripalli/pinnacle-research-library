@@ -1,6 +1,6 @@
-import {validateContact,makeContactPayload,CONTACT_ATTEMPT_KEY} from './contact-api.mjs?v=contact-receipt-20261015';
-import {CONTACT_CONTRACT,isParentContact} from './contact-options.mjs?v=contact-receipt-20261015';
-import {submitEnrolment,createAttemptStore,validAcceptedReceipt} from './enrolment-api.mjs?v=contact-receipt-20261015';
+import {validateContact,makeContactPayload,CONTACT_ATTEMPT_KEY} from './contact-api.mjs?v=contact-source-20261020';
+import {CONTACT_CONTRACT,isParentContact} from './contact-options.mjs?v=contact-source-20261020';
+import {submitEnrolment,createAttemptStore,validAcceptedReceipt} from './enrolment-api.mjs?v=contact-source-20261020';
 import {applyHeldCentreOptions} from './centre-operating-holds.mjs?v=centre-operating-holds-20261017';
 const form=document.querySelector('#pinnacle-contact[data-contact-contract="durable-contact-v1"]');
 if(form&&!form.dataset.contactClientReady){

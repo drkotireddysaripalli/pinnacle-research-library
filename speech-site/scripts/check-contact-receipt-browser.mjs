@@ -13,7 +13,7 @@ const compiled=await build({stdin:{contents:entry,resolveDir:process.cwd()},bund
 const mf=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-03',script:compiled.outputFiles[0].text,serviceBindings:{ORIGIN:()=>new Response(fixture,{headers:{'content-type':'text/html'}})}}));
 try{
  const r=await mf.dispatchFetch(origin+CONTACT_PATH);const publishedStyledFixture=styled&&fixture.includes('data-contact-contract="durable-contact-v1"');if(!publishedStyledFixture)assert.equal(r.headers.get('x-pinnacle-contact-receipt'),'durable-contact-v1');const html=await r.text();assert(html.includes('data-contact-contract="durable-contact-v1"'));await fs.writeFile(out+'/isolated-transformed.html',html);
- assert(!html.includes('GTM-W9ZHX459'));assert(!html.includes('class="cm-button-enroll contact-form-submit"'));assert(html.includes('action="/api/enrolment"'));assert(html.includes('data-contact-submit'));assert(html.includes('speech-measurement.js?v=measurement-always-on-20261019'));
+ assert(!html.includes('GTM-W9ZHX459'));assert(!html.includes('class="cm-button-enroll contact-form-submit"'));assert(html.includes('action="/api/enrolment"'));assert(html.includes('data-contact-submit'));assert(html.includes('speech-measurement.js?v=measurement-always-on-20261020'));
  for(const [engine,launcher]of Object.entries(process.platform==='win32'?{chromium}:{chromium,firefox,webkit})){
   const browser=await launcher.launch({headless:true});
   try{for(const width of(option('width','')?[Number(option('width'))]:[390,1440])){
