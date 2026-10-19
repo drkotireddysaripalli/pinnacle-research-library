@@ -284,6 +284,18 @@ function legacyMeasurementScope(request) {
   return null;
 }
 var earlyCapture = '(()=>{const queue=[];const validation=new URL(location.href).searchParams.has("validation_test");const listener=e=>{if(validation)return;const a=e.target?.closest?.("a[href]");if(!a||queue.length>=10)return;const href=a.getAttribute("href");if(href==="tel:+919100181181")queue.push("call");else{try{const u=new URL(href,location.origin);if((u.hostname==="wa.me"&&u.pathname==="/919100181181")||(u.hostname==="api.whatsapp.com"&&u.pathname==="/send"&&u.searchParams.get("phone")==="919100181181"))queue.push("whatsapp");}catch{}}};document.addEventListener("click",listener);window.__pinnacleLegacyCapture={queue,stop(){document.removeEventListener("click",listener);}};})();';
+function taggedContactCanonicalMatches(canonical, requestUrl) {
+  if (!canonical || !requestUrl.search) return false;
+  try {
+    const parsed = new URL(canonical.replaceAll("&amp;", "&"));
+    if (parsed.origin !== requestUrl.origin || parsed.pathname !== requestUrl.pathname || parsed.hash) return false;
+    const actual = [...requestUrl.searchParams].map(([key, value]) => [key.toLowerCase(), value.toLowerCase()]);
+    const published = [...parsed.searchParams].map(([key, value]) => [key.toLowerCase(), value.toLowerCase()]);
+    return actual.length === published.length && actual.every(([key, value], index) => published[index]?.[0] === key && published[index]?.[1] === value);
+  } catch {
+    return false;
+  }
+}
 function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   const scope = legacyMeasurementScope(request);
   if (!scope || prefix.includes("data-pinnacle-legacy-measurement")) return null;
@@ -293,7 +305,7 @@ function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   if (!tags.length || tags.some((tag) => !fingerprints.has(normal(tag)))) return null;
   if (scope !== "private") {
     const u = new URL(request.url), canonical = /\blink\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["']/i.exec(prefix)?.[1];
-    const canonicalMatches = canonical === u.origin + u.pathname || u.pathname === "/certified-courses/" && canonical === u.origin + "/certified-courses" || scope === "reviewed-public-template" && canonical?.replaceAll("&amp;", "&") === u.href;
+    const canonicalMatches = canonical === u.origin + u.pathname || u.pathname === "/certified-courses/" && canonical === u.origin + "/certified-courses" || scope === "reviewed-public-template" && canonical?.replaceAll("&amp;", "&") === u.href || scope === "helpline" && taggedContactCanonicalMatches(canonical, u);
     if (!canonicalMatches || !tags.some((t) => t.includes("GTM-W9ZHX459")) || !tags.some((t) => t.includes("gtag('config', 'G-2BYLRLFRDJ')")) || !tags.some((t) => t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'"))) return null;
   }
   let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? preserveGtm && isKnownGtmLoader(tag) ? tag : replacements.get(normal(tag)) || "" : tag);

@@ -214,14 +214,15 @@ async function uploadWorker(target, before, manifest) {
   for (const moduleName of Object.keys(manifest.hashes)) form.set(moduleName, new Blob([await fs.readFile(path.join(directory, moduleName))], {type: 'application/javascript+module'}), moduleName);
   return api(base(target.name) + '/versions?bindings_inherit=strict', 'POST', form);
 }
-async function retryFetch(url, options = {}) {
+async function retryFetch(url, options = {}, accept) {
   let last;
   for (let attempt = 0; attempt < 8; attempt++) {
     try {
       const response = await fetch(url, {...options, headers: {'cache-control': 'no-cache', pragma: 'no-cache', ...(options.headers || {})}, signal: AbortSignal.timeout(45000)});
-      if (response.ok) return response;
-      last = Error(`${response.status} ${url}`);
+      if (response.ok && (!accept || await accept(response.clone()))) return response;
+      last = Error(`${response.status} response did not meet live acceptance for ${new URL(url).pathname}`);
     } catch (error) { last = error; }
+    console.log(JSON.stringify({waitingFor: 'live acceptance', pathname: new URL(url).pathname, attempt: attempt + 1, at: new Date().toISOString()}));
     await sleep(1500 * (attempt + 1));
   }
   throw last;
@@ -237,7 +238,12 @@ async function verifyLive(receipt) {
   ];
   const pages = [];
   for (const pathname of htmlPaths) {
-    const response = await retryFetch(`https://www.pinnacleblooms.org${pathname}${pathname.includes('?') ? '&' : '?'}release_readback=${nonce}`);
+    const query = pathname === '/contact-national-autism-helpline-24-7'
+      ? `utm_source=google&utm_medium=cpc&utm_campaign=contact_release_acceptance&utm_content=release_${nonce}&gclid=EAIaIQobChMIrelease${nonce}`
+      : `release_readback=${nonce}`;
+    const response = await retryFetch(`https://www.pinnacleblooms.org${pathname}${pathname.includes('?') ? '&' : '?'}${query}`, {}, pathname === '/contact-national-autism-helpline-24-7'
+      ? candidate => candidate.headers.get('x-pinnacle-contact-receipt') === 'durable-contact-v1' && candidate.headers.get('x-pinnacle-legacy-measurement') === 'helpline'
+      : undefined);
     const text = await response.text();
     for (const token of ['data-analytics-choice', 'data-analytics-settings', 'data-ad-call-preferences', 'data-speech-measurement']) assert(!text.includes(token), `${token} remains on ${pathname}`);
     if (pathname.startsWith('/verify/')) {
@@ -255,8 +261,14 @@ async function verifyLive(receipt) {
       assert.equal((text.match(/contact-receipt\.js\?v=contact-receipt-20261015/g) || []).length, 1);
       assert.equal((text.match(/speech-measurement\.js\?v=measurement-always-on-20261019/g) || []).length, 1);
     }
-    pages.push({pathname, status: response.status, marker: response.headers.get('x-pinnacle-verify-measurement'), callMarker: response.headers.get('x-pinnacle-google-ads-call-measurement'), contactMarker: response.headers.get('x-pinnacle-contact-receipt'), sha256: sha(Buffer.from(text))});
+    pages.push({pathname, variant: pathname === '/contact-national-autism-helpline-24-7' ? 'google-ads-tagged' : 'default', status: response.status, marker: response.headers.get('x-pinnacle-verify-measurement'), callMarker: response.headers.get('x-pinnacle-google-ads-call-measurement'), contactMarker: response.headers.get('x-pinnacle-contact-receipt'), sha256: sha(Buffer.from(text))});
   }
+  const cleanContactPath = '/contact-national-autism-helpline-24-7';
+  const cleanContactResponse = await retryFetch(`https://www.pinnacleblooms.org${cleanContactPath}`, {}, candidate => candidate.headers.get('x-pinnacle-contact-receipt') === 'durable-contact-v1' && candidate.headers.get('x-pinnacle-legacy-measurement') === 'helpline');
+  const cleanContactText = await cleanContactResponse.text();
+  assert(cleanContactText.includes('data-contact-contract="durable-contact-v1"'));
+  assert(cleanContactText.includes('action="/api/enrolment"'));
+  pages.push({pathname: cleanContactPath, variant: 'untagged', status: cleanContactResponse.status, marker: cleanContactResponse.headers.get('x-pinnacle-verify-measurement'), callMarker: cleanContactResponse.headers.get('x-pinnacle-google-ads-call-measurement'), contactMarker: cleanContactResponse.headers.get('x-pinnacle-contact-receipt'), sha256: sha(Buffer.from(cleanContactText))});
   const expectedAssets = [
     ['/pinnacle-pages-scripts/contact-receipt.js', await fs.readFile(path.join(site, 'public/pinnacle-pages-scripts/contact-receipt.js'))],
     ['/pinnacle-pages-scripts/contact-api.mjs', await fs.readFile(path.join(site, 'public/pinnacle-pages-scripts/contact-api.mjs'))],

@@ -95,6 +95,15 @@ test('reviewed tagged origin canonicals match the exact request without exposing
  }
  const outside='/t/bead-stringing-therapy',input=fixture(outside).replace('href="https://www.pinnacleblooms.org'+outside+'"','href="https://www.pinnacleblooms.org'+outside+query.replaceAll('&','&amp;')+'"');assert.equal(migrateLegacyPrefix(input,request(outside+query)),null,'Other families are not expanded');
 });
+test('tagged contact canonicals tolerate origin case normalisation but retain exact query identity',()=>{
+ const path='/contact-national-autism-helpline-24-7',query='?utm_source=Google&utm_medium=CPC&utm_campaign=contact_receipt_live&utm_content=contact_form&gclid=EAIaIQobChMIContact123';
+ const req=request(path+query),published=('https://www.pinnacleblooms.org'+path+query.toLowerCase()).replaceAll('&','&amp;');
+ const input=fixture(path).replace('href="https://www.pinnacleblooms.org'+path+'"','href="'+published+'"');
+ const result=migrateLegacyPrefix(input,req);assert(result);assert.equal(result.scope,'helpline');assert.equal(result.removed,LEGACY_TAGS.length);assert(result.html.includes('data-pinnacle-legacy-measurement="helpline"'));
+ assert.equal(migrateLegacyPrefix(input.replace('contact_form','different_value'),req),null,'Different query identity fails closed');
+ assert.equal(migrateLegacyPrefix(input.replace('&amp;gclid=eaiaiqobchmicontact123',''),req),null,'Missing click identity fails closed');
+ assert.equal(migrateLegacyPrefix(input.replace('https://www.pinnacleblooms.org'+path,'https://elsewhere.invalid'+path),req),null,'Different origin fails closed');
+});
 test('known managed pages remove every old preference block while preserving unrelated bytes',()=>{
  const analytics='<details class="measurement-settings" data-speech-measurement hidden><summary>Analytics</summary><p data-measurement-status>Off</p></details>';
  const adCall='<details class="measurement-settings" data-ad-call-preferences hidden><summary>Calls</summary><p data-ad-call-status>Off</p></details>';
