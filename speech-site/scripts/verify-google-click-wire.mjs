@@ -15,8 +15,11 @@ const browser=await chromium.launch({headless:true});
 const waitFor=async predicate=>{const deadline=Date.now()+20000;while(Date.now()<deadline){if(predicate())return;await new Promise(resolve=>setTimeout(resolve,100));}throw Error('Timed out waiting for Google collect payload');};
 try{
  for(const pathname of pages){
-  const context=await browser.newContext({viewport:{width:390,height:844}}),collect=[],blocked=[],errors=[];
-  const entry={pathname,passed:false,collect,blocked,errors};evidence.pages.push(entry);
+  // The legacy homepage/contact header exposes WhatsApp at desktop width;
+  // the managed ABA page exposes both controls on mobile.
+  const width=pathname==='/best-aba-therapy-center-india-proven-improvement-rate'?390:1440;
+  const context=await browser.newContext({viewport:{width,height:844}}),collect=[],blocked=[],errors=[];
+  const entry={pathname,viewport:{width,height:844},passed:false,collect,blocked,errors};evidence.pages.push(entry);
   await context.route('**/*',async route=>{
    const request=route.request(),url=new URL(request.url());
    if(/\/collect$/.test(url.pathname)){
@@ -47,11 +50,11 @@ try{
    await waitFor(()=>collect.some(row=>row.tid===measurementId&&row.en==='page_view'));
    // Prevent native telephone/WhatsApp navigation, while retaining normal click listeners.
    await page.evaluate(()=>document.addEventListener('click',event=>{const a=event.target?.closest?.('a[href]');if(a&&/^(?:tel:|https:\/\/(?:wa\.me|api\.whatsapp\.com)\/)/.test(a.href))event.preventDefault();},true));
-   const phone=page.locator('a[href="tel:+919100181181"],a[data-pinnacle-ad-call-target="central"]').first();
-   await phone.click({force:true});
+   const phone=page.locator('a[href="tel:+919100181181"]:visible,a[data-pinnacle-ad-call-target="central"]:visible').first();
+   await phone.click();
    await waitFor(()=>collect.some(row=>row.tid===measurementId&&row.en==='phone_link_click'));
-   const whatsapp=page.locator('a[href^="https://wa.me/919100181181"],a[href^="https://api.whatsapp.com/send"][href*="919100181181"]').first();
-   await whatsapp.click({force:true});
+   const whatsapp=page.locator('a[href^="https://wa.me/919100181181"]:visible,a[href^="https://api.whatsapp.com/send"][href*="919100181181"]:visible').first();
+   await whatsapp.click();
    await waitFor(()=>collect.some(row=>row.tid===measurementId&&row.en==='whatsapp_link_click'));
    const events=collect.filter(row=>row.tid===measurementId&&['phone_link_click','whatsapp_link_click'].includes(row.en));
    for(const name of ['phone_link_click','whatsapp_link_click'])assert.equal(events.filter(row=>row.en===name).length,1,pathname+' '+name+' duplicate or absent');
