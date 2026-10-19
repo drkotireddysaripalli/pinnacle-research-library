@@ -13,6 +13,7 @@ const stages=[
   {name:'helpline-build',cwd:path.join(parent,'helpline-site'),command:process.execPath,args:['build.mjs']}]:[]),
  {name:'unit-tests',cwd:root,command:'npm',args:['run','test:unit']},
  {name:'measurement-integration',cwd:root,command:process.execPath,args:['--test','scripts/test-homepage-measurement-transform.mjs','scripts/test-book-attribution.mjs']},
+ {name:'helpline-acquisition',cwd:root,command:process.execPath,args:['--test','scripts/test-helpline-acquisition.mjs']},
  {name:'shared-assets',cwd:root,command:'npm',args:['run','test:shared-assets-repair']},
  {name:'helpline-tests',cwd:path.join(parent,'helpline-site'),command:process.execPath,args:['phone-analytics-tests.mjs']},
  {name:'types',cwd:root,command:'npm',args:['run','check:types']},
