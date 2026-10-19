@@ -112,14 +112,19 @@ for(const matrixId of matrixIds){
     await wd('/timeouts','POST',{pageLoad:60000,script:20000,implicit:1000});
     if(transport==='webdriver'){
       const interceptionSupported=nativeInterceptionSupported(config),endpoint=nativeCdpEndpoint(config);
-      session.nativeContainment={requestedBlacklist:nativeReaderBlacklist,browserInterception:{supported:interceptionSupported,endpoint,requestedCommands:nativeCdpCommands.length,requestedRules:nativeBlockedUrls.length,installedCommands:0,installedRules:0,status:'installing'}};
-      await save();
-      try{
-        const installed=await installNativeInterceptions(config,(endpoint,payload)=>wd(endpoint,'POST',payload));
-        session.nativeContainment.browserInterception.installedCommands=installed.commands;session.nativeContainment.browserInterception.installedRules=installed.rules;session.nativeContainment.browserInterception.status='installed';
+      session.nativeContainment={requestedBlacklist:nativeReaderBlacklist,browserInterception:{supported:interceptionSupported,endpoint,requestedCommands:interceptionSupported?nativeCdpCommands.length:0,requestedRules:interceptionSupported?nativeBlockedUrls.length:0,installedCommands:0,installedRules:0,status:interceptionSupported?'installing':'not-requested'}};
+      if(interceptionSupported){
         await save();
-      }catch(error){
-        session.nativeContainment.browserInterception.status='failed';session.nativeContainment.browserInterception.error=redact(error.message);await save();throw error;
+        try{
+          const installed=await installNativeInterceptions(config,(endpoint,payload)=>wd(endpoint,'POST',payload));
+          session.nativeContainment.browserInterception.installedCommands=installed.commands;session.nativeContainment.browserInterception.installedRules=installed.rules;session.nativeContainment.browserInterception.status='installed';
+          await save();
+        }catch(error){
+          session.nativeContainment.browserInterception.status='failed';session.nativeContainment.browserInterception.error=redact(error.message);await save();throw error;
+        }
+      }else{
+        session.nativeContainment.browserInterception.reason='No supported WebDriver CDP endpoint; tunnel, session blacklist and reader probes remain required';
+        await save();
       }
       const control=await fetch(nativeProbeTargets[0].url,{redirect:'error',signal:AbortSignal.timeout(15000)});
       if(control.status!==200||!/^text\/plain(?:;|$)/i.test(control.headers.get('content-type')||''))throw Error('Native probe text resource unavailable; no production page may be opened');
