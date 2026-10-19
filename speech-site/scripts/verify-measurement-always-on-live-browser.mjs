@@ -65,13 +65,60 @@ try {
     if (pathname.endsWith('/privacy.html')) assert.equal(result.policyAutomatic, true);
     verifyPages.push({pathname, ...result});
   }
-  const evidence = {at: new Date().toISOString(), aba, verifyPages, requests};
+  const contactContext = await browser.newContext({viewport: {width: 390, height: 844}});
+  const contactWrites = [], contactErrors = [];
+  await contactContext.route('**/*', async route => {
+    const request = route.request(), url = new URL(request.url());
+    if (!['GET', 'HEAD'].includes(request.method())) contactWrites.push({method: request.method(), url: url.href});
+    if (!blockedHosts.test(url.hostname)) return route.continue();
+    requests.push({url: url.href, resourceType: request.resourceType()});
+    const javascript = request.resourceType() === 'script';
+    return route.fulfill({status: javascript ? 200 : 204, contentType: javascript ? 'text/javascript' : 'text/plain', body: ''});
+  });
+  const contactPage = await contactContext.newPage();
+  contactPage.on('pageerror', error => contactErrors.push(error.message));
+  const contactUrl = `https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7?utm_source=google&utm_medium=cpc&utm_campaign=contact_receipt_live&utm_content=contact_form&gclid=EAIaIQobChMIcontactlive${nonce}`;
+  await contactPage.goto(contactUrl, {waitUntil: 'domcontentloaded', timeout: 45000});
+  await contactPage.waitForFunction(() => document.querySelector('#pinnacle-contact')?.dataset?.contactClientReady === 'true' && window.__pinnacleAdCallMeasurement?.started === true, null, {timeout: 15000});
+  await contactPage.waitForTimeout(500);
+  const contact = await contactPage.evaluate(() => ({
+    controls: document.querySelectorAll('[data-analytics-choice],[data-analytics-settings],[data-ad-call-preferences],[data-speech-measurement]').length,
+    contract: document.querySelector('#pinnacle-contact')?.dataset?.contactContract || null,
+    clientReady: document.querySelector('#pinnacle-contact')?.dataset?.contactClientReady || null,
+    action: document.querySelector('#pinnacle-contact')?.getAttribute('action') || null,
+    submitEnabled: document.querySelector('[data-contact-submit]')?.disabled === false,
+    receiptScript: document.querySelector('script[src*="contact-receipt.js"]')?.getAttribute('src') || null,
+    collectorScript: document.querySelector('script[src*="speech-measurement.js"]')?.getAttribute('src') || null,
+    source: window.pinnacleEnquirySource?.() || null,
+    callState: window.__pinnacleAdCallMeasurement || null,
+    dataLayer: (window.dataLayer || []).map(entry => Array.from(entry).slice(0, 3).map(value => typeof value === 'function' ? '[function]' : value))
+  }));
+  assert.equal(contact.controls, 0);
+  assert.equal(contact.contract, 'durable-contact-v1');
+  assert.equal(contact.clientReady, 'true');
+  assert.equal(contact.action, '/api/enrolment');
+  assert.equal(contact.submitEnabled, true);
+  assert.equal(contact.receiptScript, '/pinnacle-pages-scripts/contact-receipt.js?v=contact-receipt-20261015');
+  assert.equal(contact.collectorScript, '/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261019');
+  assert.equal(contact.source?.fields?.utm_source, 'google');
+  assert.equal(contact.source?.fields?.utm_medium, 'cpc');
+  assert.equal(contact.source?.fields?.utm_campaign, 'contact_receipt_live');
+  assert.match(contact.source?.fields?.gclid || '', /^EAIaIQobChMIcontactlive/);
+  assert.equal(contact.callState?.enabled, true);
+  assert.equal(contact.callState?.started, true);
+  assert(contact.dataLayer.some(entry => entry[0] === 'event' && entry[1] === 'page_view'));
+  assert(contact.dataLayer.some(entry => entry[0] === 'event' && entry[1] === 'google_ads_arrival'));
+  assert.deepEqual(contactWrites, []);
+  assert(!contactErrors.some(message => /invalid or unexpected token|syntaxerror/i.test(message)), contactErrors.join('\n'));
+  await contactContext.close();
+
+  const evidence = {at: new Date().toISOString(), aba, verifyPages, contact, contactWrites, contactErrors, requests};
   assert(requests.some(item => item.url.includes('googletagmanager.com')));
   assert(requests.some(item => item.url.includes('aseasky.link')));
   assert(requests.some(item => item.url.includes('protect.pinnacleblooms.org')));
   await fs.mkdir(path.dirname(output), {recursive: true});
   await fs.writeFile(output, JSON.stringify(evidence, null, 2) + '\n');
-  console.log(JSON.stringify({output, requests: requests.length, events: names}));
+  console.log(JSON.stringify({output, requests: requests.length, events: names, contactContract: contact.contract, contactWrites: contactWrites.length}));
 } finally {
   await browser.close();
 }

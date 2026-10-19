@@ -1,18 +1,16 @@
 import {repairLegacyMeasurement,serveLegacyMeasurementCall} from './legacy-measurement.mjs';
 import {CONTACT_PATH} from '../public/pinnacle-pages-scripts/contact-options.mjs';
-export const contactReceiptAssets=new Set(['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js','protection-consumer.mjs'].map(n=>'/pinnacle-pages-scripts/'+n));
+import {contactReceiptAssetSources} from './contact-receipt-assets.mjs';
+export const contactReceiptAssets=new Set(Object.keys(contactReceiptAssetSources));
 // The maintained legacy map emits address text directly into double-quoted
 // rows. Preserve every address/coordinate/link and escape only literal line
 // breaks in that exact data position, which otherwise invalidate the script.
 export function escapeContactMapRows(script){return script.replace(/(myArray\.push\(\s*\[\s*")((?:\\[\s\S]|[^"\\])*)("\s*,\s*-?\d)/g,(_,start,value,end)=>start+value.replace(/\r\n|\r|\n/g,'\\n')+end);}
 export async function serveContactReceiptAsset(request,env){
  const call=serveLegacyMeasurementCall(request);if(call)return call;
- const u=new URL(request.url);if(u.origin!=='https://www.pinnacleblooms.org'||!contactReceiptAssets.has(u.pathname))return null;
+ const u=new URL(request.url),source=contactReceiptAssetSources[u.pathname];if(u.origin!=='https://www.pinnacleblooms.org'||!source)return null;
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{allow:'GET, HEAD'}});
- const source=await env.ASSETS.fetch(new Request('https://assets.local'+u.pathname,{method:request.method}));
- if(source.status!==200)return new Response('Temporarily unavailable',{status:503,headers:{'cache-control':'no-store'}});
- const headers=new Headers(source.headers);for(const key of ['set-cookie','age','expires','content-encoding'])headers.delete(key);
- headers.set('content-type','text/javascript; charset=utf-8');headers.set('cache-control','public, max-age=0, must-revalidate');headers.set('x-content-type-options','nosniff');headers.set('x-pinnacle-contact-assets','contact-receipt-20261015');
+ const headers=new Headers({'content-type':'text/javascript; charset=utf-8','cache-control':'public, max-age=0, must-revalidate','x-content-type-options':'nosniff','x-pinnacle-contact-assets':'contact-receipt-20261019','x-pinnacle-contact-asset-sha256':source.sha256});
  return new Response(request.method==='HEAD'?null:source.body,{status:200,headers});
 }
 export async function repairContactReceipt(request,response){
