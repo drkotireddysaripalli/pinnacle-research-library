@@ -19,7 +19,7 @@ This notice covers Pinnacle’s public website, enquiries and the information we
 
 - Billing and transaction records: invoice, payment reference, amount and status needed to administer a transaction, accounts or a billing query. Do not email full payment credentials.
 
-- Website information: technical, security and performance information and, with your optional analytics choice on managed pages, coarse page and action events. See our Cookie Policy.
+- Website information: technical, security and performance information; on eligible managed public pages, limited cookieless measurement of one coarse page visit and actual central contact-link actions; and, with your optional analytics choice, the permitted public journey and validated campaign measurement. See our Cookie Policy.
 
 - Publication and research information: any proposed identifiable story, image, recording or research use requires its own explanation and appropriate permission or other lawful basis; enrolment is not blanket permission to publish. A publicity choice cannot authorise publication prohibited by law; raw clinical records and sensitive health information must not be published.
 

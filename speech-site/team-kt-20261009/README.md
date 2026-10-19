@@ -1,5 +1,7 @@
 # Pinnacle engineering transition — 9 October 2026
 
+> **Release-owner supersession, 19 October 2026:** Mac Web Build thread `01a11e24-3e7f-7802-8384-a6bd83d7a7a9` now owns integration, production release, live verification and rollback. See `../../PORTAL-OWNERSHIP.md`. This supersedes older Windows-only release and Mac-no-deployment wording in this dated package.
+
 ## Result and ownership
 
 Work toward one outcome: a parent finds useful, credible Pinnacle information, finds the appropriate service/centre, contacts **9100 181 181** or submits an enquiry, and the receiving systems can follow that genuine enquiry through to a visit and admission. Search visibility, signup, a phone tap, an accepted enquiry and admission are different measurements.

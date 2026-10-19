@@ -143,7 +143,7 @@
     if (copy) copy.textContent = 'With your permission, Google Analytics measures the book journey, including the referring search or social platform, book views, sample clicks, book-bag changes, checkout starts and contact-link clicks. It can connect that journey to our Shopify checkout. A checkout start is not a completed purchase. We exclude customer details, search terms and checkout links from our event data. Advertising personalisation is off.';
   }
   const disclosure = panel?.querySelector?.('p');
-  if (disclosure) disclosure.textContent = (pageGroup === 'bookshop' ? disclosure.textContent : 'With your permission, Google Analytics measures page visits and call, WhatsApp or enquiry-link clicks. These are not completed calls or bookings. Advertising personalisation is off.') + ' Validated campaign labels and advertising click identifiers may accompany a coarse public page address to measure how you reached us. Form details, private answer paths and unrecognised URL fields stay excluded.';
+  if (disclosure) disclosure.textContent = (pageGroup === 'bookshop' ? disclosure.textContent : 'On eligible public pages, Google may receive one coarse page visit and actual central call, WhatsApp or enquiry-link taps with analytics storage denied before you choose. This limited mode does not use optional analytics cookies and these taps are not completed calls or bookings. If you allow analytics, Google Analytics can also measure the permitted public journey. Advertising personalisation is off.') + ' Validated campaign labels and advertising click identifiers may accompany a coarse public page address only after permission, except for the separately labelled minimal Google Ads diagnostics described below. Form details, private answer paths, raw referrers and unrecognised URL fields stay excluded.';
   const production = isAsk || !!knowledgePath || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
   if (isAsk) routes.add('/ask');
   if (knowledgePath) routes.add('/'+knowledgePath);
@@ -163,7 +163,7 @@
   if(['speech','occupational','aba','autism','education'].includes(pageConfig?.service)){
     import('/pinnacle-pages-scripts/enrolment-routing.mjs?v=paid-locality-20261017-regional').then(({applyPaidEnquiryLinks,paidCentreAliases})=>applyPaidEnquiryLinks(document,location.href,{service:pageConfig?.service||'help',centres:new Set(Object.values(paidCentreAliases))})).catch(()=>{});
   }
-  let enabled = false, loaded = false, tagStarted = false, preference = 'unset';
+  let enabled = false, loaded = false, tagStarted = false, pageViewSent = false, limitedAllowed = false, preference = 'unset';
   const sourceKey='pinnacle-enquiry-source-v1',sourceLifetime=30*86400000;
   const acquisitionPath=location.pathname==='/speech-therapy/service-information'?'/top-speech-therapy-center-india-proven-improvement-rate':new URL(canonical).pathname;
   const acquisitionPaths=new Set(['/','/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
@@ -219,8 +219,8 @@
   if (isBookshop) window.pinnacleBookAnalyticsAllowed = () => production && enabled && !navigator.globalPrivacyControl;
   const tell = text => { if(status) status.textContent = text; };
   const send = (name, parameters) => {
-    if (!production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic) return;
-    try { window.gtag('event', name, {...permittedCampaigns(), page_group:pageGroup, measurement_mode:'consented', ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
+    if (!production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic) return false;
+    try { window.gtag('event', name, {...permittedCampaigns(), page_group:pageGroup, measurement_mode:'consented', ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); return true; } catch { return false; }
   };
   const vitalRelease = 'ga4-reliability-20261011';
   let vitalsStarted = false;
@@ -378,7 +378,7 @@
       ...Object.fromEntries(Object.entries(campaignFields).filter(([field])=>fields[field]).map(([field,name])=>[name,fields[field]]))};
   };
   const sendGoogleAds = (name, parameters, allowJourney = true) => {
-    if (!production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || preference==='declined' || googleAdsEvents.has(name)) return;
+    if (!production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || (!enabled&&preference!=='unset') || googleAdsEvents.has(name)) return;
     const attribution = googleAdsSource(allowJourney);
     if (!attribution) return;
     try {
@@ -483,6 +483,32 @@
     }
     tagStarted = true;
   };
+  const limitedGroups = new Set(['home','speech_therapy','occupational_therapy','aba_therapy','special_education','autism_therapy','developmental_assessment','centre_directory','centre_detail','enrolment','pinnacleai','life_participation','research_study','organisation','public_information','family_resource','professional_learning','contact']);
+  const limitedEligible = production && !isAsk && !knowledgePath && !isBookshop && !knowledgeSearch && !validationTraffic && limitedGroups.has(pageGroup);
+  const limitedActionNames = new Set(['phone_link_click','whatsapp_link_click','enquiry_link_click']);
+  const sendLimited = (name, parameters) => {
+    if (!limitedAllowed || preference!=='unset' || !limitedEligible || blocked || navigator.globalPrivacyControl || !['page_view',...limitedActionNames].includes(name)) return false;
+    try {
+      if (!tagStarted) configureTag('denied',canonical);
+      window.gtag('event',name,{...parameters,page_group:pageGroup,measurement_mode:'denied_storage',page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
+      return true;
+    } catch { return false; }
+  };
+  const sendPublicIntent = (name, parameters) => {
+    if (enabled) return send(name,parameters);
+    if (!limitedActionNames.has(name) || !parameters || parameters.page_group!==pageGroup) return false;
+    const placement=parameters.link_placement,destination=parameters.destination;
+    if (name==='phone_link_click' && parameters.schema_version===2 && destination==='national_helpline' && (callPlacements.has(placement)||placement==='central-phone')) return sendLimited(name,{schema_version:2,link_placement:placement,destination});
+    if (name==='whatsapp_link_click' && parameters.schema_version===4 && destination==='national_helpline' && (['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp','central-whatsapp'].includes(placement))) return sendLimited(name,{schema_version:4,link_placement:placement,destination});
+    if (name==='enquiry_link_click' && parameters.schema_version===2 && destination==='existing_enrolment_form' && enquiryPlacements.has(placement)) return sendLimited(name,{schema_version:2,link_placement:placement,destination});
+    return false;
+  };
+  const sendPageViewOnce = () => {
+    if (pageViewSent) return false;
+    const sent=enabled?send('page_view',{page_group:pageGroup,schema_version:2}):sendLimited('page_view',{schema_version:3});
+    if(sent)pageViewSent=true;
+    return sent;
+  };
   const start = () => {
     if (!production || blocked || knowledgeSearch) return;
     enabled = true;
@@ -492,7 +518,7 @@
     if (loaded) { window.gtag('consent','update',{analytics_storage:'granted'}); return; }
     configureTag('granted',measurementLocation,permittedCampaigns());
     loaded = true;
-    send('page_view',{page_group:pageGroup,schema_version:2});
+    sendPageViewOnce();
     startWebVitals();
     sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
     const viewed = Object.entries(commerceCatalogue).find(([, item]) => item.path === pagePath);
@@ -502,6 +528,7 @@
     if (!['accepted','declined'].includes(value)) return;
     if (!production) { tell('Preview: analytics is disabled. No analytics data is sent.'); return; }
     preference = value;
+    limitedAllowed = false;
     if (persist) { try { localStorage.setItem(key,JSON.stringify({value,at:Date.now()})); } catch {} }
     if (value==='accepted' && !blocked && !knowledgeSearch) {
       try { start(); tell('Optional analytics is on. Turn it off here at any time.'); }
@@ -526,8 +553,21 @@
   if (!production) tell('Preview: analytics is disabled. No analytics data is sent.');
   else if (blocked) choose('declined');
   else {
-    let saved;try { saved=JSON.parse(localStorage.getItem(key)); } catch {}
-    if (saved && Number.isFinite(saved.at) && saved.at<=Date.now() && Date.now()-saved.at<lifetime) choose(saved.value, false);
+    let raw=null,readable=true;try { raw=localStorage.getItem(key); } catch { readable=false; }
+    if(raw===null&&readable){
+      limitedAllowed=true;
+      const limitedStarted=sendPageViewOnce();
+      if(limitedStarted)tell('Limited cookieless measurement is active. Optional analytics remains off until you choose.');
+      else{limitedAllowed=false;tell(limitedEligible?'Limited cookieless measurement is unavailable. Optional analytics remains off until you choose.':'Optional analytics is off until you choose.');}
+    }
+    else if(readable){
+      try{
+        const saved=JSON.parse(raw);
+        if(saved?.value==='declined'&&Number.isFinite(saved.at))choose('declined',false);
+        else if(saved?.value==='accepted'&&Number.isFinite(saved.at)&&saved.at<=Date.now()&&Date.now()-saved.at<lifetime)choose('accepted',false);
+        else preference='invalid';
+      }catch{preference='invalid';}
+    }else preference='invalid';
   }
   window.addEventListener?.('storage',event=>{
     if(event.key===key||event.key===null){if(!savedPermission(key))choose('declined',false);}
@@ -565,7 +605,7 @@
     if(!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k)))return;
     const callbackPage=(['centre_detail','centre_directory','occupational_therapy','aba_therapy','autism_therapy'].includes(pageGroup)||location.pathname==='/speech-therapy/service-information')&&document.querySelector('#pinnacle-enrolment[data-callback-contract="durable-enrolment-v1"][data-api-endpoint="/api/enrolment"]');
     const parentContact=contactPage&&event.detail?.contract==='website_contact_v1'&&['Therapy Services','Assessments'].includes(event.detail.topic);
-    if ((pageGroup !== 'enrolment'&&!callbackPage&&!parentContact) || acceptedRequests.has(receipt.requestId) || !production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || preference==='declined' || (enabled&&!savedPermission(key))) return;
+    if ((pageGroup !== 'enrolment'&&!callbackPage&&!parentContact) || acceptedRequests.has(receipt.requestId) || !production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || (!enabled&&preference!=='unset') || (enabled&&!savedPermission(key))) return;
     try {
       if (!enabled) configureTag('denied',canonical);
       const parameters={schema_version:4,page_group:parentContact?'contact':'enrolment',link_placement:parentContact?'contact-form':callbackPage?'inline-callback-form':'enrolment-form',destination:parentContact?'existing_contact_workflow':'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
@@ -583,8 +623,8 @@
     } catch {} // The receipt and parent confirmation survive a vendor failure.
   });
   if(disclosure){
-    if(!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. With no analytics choice, a minimal accepted-enquiry event may be sent to Google with analytics storage denied.';
-    disclosure.textContent+=' Tagged Google Ads arrivals and central contact taps may also send minimal events with analytics storage denied and no campaign identifiers until you choose. Advertising call measurement follows its separate choice. Choosing to keep analytics off, or using Global Privacy Control, stops these Google events.';
+    if(!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. For a fresh eligible visitor, a minimal accepted-enquiry event may be sent to Google with analytics storage denied.';
+    disclosure.textContent+=' Tagged Google Ads arrivals use a separate minimal diagnostic. Limited events carry no campaign identifiers until you choose. Advertising call measurement follows its separate choice. Saving “Keep analytics off”, withdrawing permission or using Global Privacy Control stops future Google measurement events.';
   }
   document.addEventListener('click',event=>{
     if (pageGroup === 'family_resource') {
@@ -596,7 +636,7 @@
     if (contactHref === 'tel:+919100181181' || (contactHref?.startsWith('tel:') && contactLink.dataset?.pinnacleAdCallTarget === 'central')) {
       const placement = contactLink.dataset?.cta;
       sendGoogleAds('google_ads_phone_click',{interaction_kind:'contact_tap',link_placement:callPlacements.has(placement)?placement:'central-phone',destination:'national_helpline'});
-      send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:callPlacements.has(placement)?placement:isBookshop?'bookshop-contact':'central-phone',destination:'national_helpline'});
+      sendPublicIntent('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:callPlacements.has(placement)?placement:isBookshop?'bookshop-contact':'central-phone',destination:'national_helpline'});
       if (event.isTrusted === true) queueProtectionEvent('pinnacle_contact_intent');
       return; // One canonical central-phone event; keep native navigation unchanged.
     }
@@ -611,7 +651,7 @@
         const placement = contactLink.dataset?.cta;
         const placements = new Set(['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp']);
         sendGoogleAds('google_ads_whatsapp_click',{interaction_kind:'contact_tap',link_placement:placements.has(placement)?placement:'central-whatsapp',destination:'national_helpline'});
-        send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline'});
+        sendPublicIntent('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline'});
         if (event.isTrusted === true) queueProtectionEvent('pinnacle_contact_intent');
         return; // One event per contact tap; sharing text never enters the event.
       }
@@ -647,7 +687,7 @@
       const validEntry=!entry||(pageConfig?.service==='speech'&&entry==='speech-assessment');
       validEnquiry=destination.origin===origin&&destination.pathname==='/enroll-autism-speech-aba-therapies-india'&&knownKeys&&validCentre&&validService&&validEntry;
     } catch {}
-    if (enquiryPlacements.has(placement) && validEnquiry && !(placement==='knowledge-enrol'&&(isAsk||knowledgePath))) send('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
+    if (enquiryPlacements.has(placement) && validEnquiry && !(placement==='knowledge-enrol'&&(isAsk||knowledgePath))) sendPublicIntent('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
   });
   if(legacyKnowledge&&window.__pinnacleLegacyCapture){
     const capture=window.__pinnacleLegacyCapture;capture.stop?.();
