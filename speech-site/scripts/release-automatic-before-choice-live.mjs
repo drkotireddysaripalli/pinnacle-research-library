@@ -53,7 +53,9 @@ async function modules(){
 }
 async function candidateModules(commit){
  const mods=JSON.parse(await fs.readFile(path.join(priv,'modules.json'),'utf8')).map(module=>({name:module.name,bytes:Buffer.from(module.base64,'base64')}));
- for(const name of ['legacy-measurement.runtime.mjs','book-attribution-handler.mjs','book-attribution-assets.mjs','public-ad-call.mjs','legacy-measurement-fingerprints.mjs'])assert(mods.some(module=>module.name===name),'Required captured module absent: '+name);
+ for(const name of ['legacy-measurement.runtime.mjs','book-attribution-handler.mjs','book-attribution-assets.mjs','public-ad-call.mjs'])assert(mods.some(module=>module.name===name),'Required captured module absent: '+name);
+ const legacyRuntime=mods.find(module=>module.name==='legacy-measurement.runtime.mjs');
+ assert(mods.some(module=>module.name==='legacy-measurement-fingerprints.mjs')||legacyRuntime.bytes.includes(Buffer.from('speech-site/deployment/legacy-measurement-fingerprints.mjs')),'Captured legacy runtime contains neither bundled nor separate measurement fingerprints');
  for(const name of exactModules){
   const bytes=await fs.readFile(path.join(site,'deployment',name));
   assert.equal(sha(normalise(bytes)),sha(normalise(g(['show',commit+':speech-site/deployment/'+name]))),'Source changed after commit: '+name);
@@ -68,7 +70,8 @@ async function candidateModules(commit){
 }
 async function proveCandidate(commit,candidate){
  const fixture=path.join(priv,'candidate-fixture');await fs.rm(fixture,{recursive:true,force:true});await fs.mkdir(fixture,{recursive:true});
- for(const name of [...candidate.targets,'public-ad-call.mjs','legacy-measurement-fingerprints.mjs'])await fs.writeFile(path.join(fixture,name),candidate.mods.find(module=>module.name===name).bytes);
+ const fixtureNames=[...candidate.targets,'public-ad-call.mjs'];if(candidate.mods.some(module=>module.name==='legacy-measurement-fingerprints.mjs'))fixtureNames.push('legacy-measurement-fingerprints.mjs');
+ for(const name of fixtureNames)await fs.writeFile(path.join(fixture,name),candidate.mods.find(module=>module.name===name).bytes);
  const nonce='?v='+Date.now(),handler=await import(pathToFileURL(path.join(fixture,'book-attribution-handler.mjs'))+nonce),legacy=await import(pathToFileURL(path.join(fixture,'legacy-measurement.runtime.mjs'))+nonce),policy=await import(pathToFileURL(path.join(fixture,'public-policy-assets.mjs'))+nonce),runtime=await import(pathToFileURL(path.join(fixture,'public-policy-runtime-assets.mjs'))+nonce),scripts=await import(pathToFileURL(path.join(fixture,'book-attribution-assets.mjs'))+nonce);
  const collector=await fs.readFile(path.join(site,'public/pinnacle-pages-scripts/speech-measurement.js'),'utf8'),collectorResponse=handler.serveBookAttribution(new Request('https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js'));assert.equal(await collectorResponse.text(),collector);
  const served={};
