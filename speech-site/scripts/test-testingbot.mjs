@@ -289,7 +289,7 @@ for(const id of choices){
     else await evaluate("document.querySelector('.portal-footer-columns').scrollIntoView({block:'center'});return true");
     await screenshot('footer');
     if(footerToggleVisible)await click('.footer-group-toggle');
-    await check('Optional analytics decline control and cookies',async()=>{await click('#website-preferences>summary');await click('[data-measurement-choice=declined]');return evaluate("return JSON.parse(localStorage.getItem('pinnacle-speech-analytics-v1'))?.value==='declined' && !document.cookie.split(';').some(c=>/^\\s*(?:_ga|ps_ga|_gcl_)/.test(c))");});
+    await check('Automatic bounded analytics has no visitor choice controls',()=>evaluate("const commands=Array.from(window.dataLayer||[],x=>Array.from(x));const granted=commands.some(x=>x[0]==='consent'&&x[1]==='update'&&x[2]?.analytics_storage==='granted'&&x[2]?.ad_storage==='granted'&&x[2]?.ad_user_data==='granted'&&x[2]?.ad_personalization==='denied');return !document.querySelector('#website-preferences,[data-measurement-choice],[data-speech-measurement]')&&window['ga-disable-G-H9CLX1WJ7R']===false&&granted&&!!document.querySelector('script[src*=\"googletagmanager.com/gtag/js\"]')"));
     const enrol=await evaluate("return document.querySelector('.portal-enrol').href");
     await wd('/url','POST',{url:enrol});
     await check('Enrolment destination opens without submitting',()=>evaluate("return location.hostname==='www.pinnacleblooms.org' && !!document.querySelector('main form') && !!document.querySelector('h1')"));
