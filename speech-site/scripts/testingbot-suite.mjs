@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {assertPlaywrightScope,openTestingBotPlaywright} from './testingbot-playwright.mjs';
-import {nativeReaderBlacklist,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe,assertNativeProbeDocument} from './testingbot-native-policy.mjs';
+import {nativeReaderBlacklist,nativeInterceptRules,nativeInterceptionSupported,installNativeInterceptions,nativeProbeTargets,nativeReaderProbe,assertNativeReaderProbe,assertNativeProbeDocument} from './testingbot-native-policy.mjs';
 import {confirmProviderClosure} from './testingbot-provider-close.mjs';
 import {publicDocumentAllowed,heldCentreSnapshotAllowed} from '../tests/testingbot/centre-state.mjs';
 import {centreOperatingHold} from '../public/pinnacle-pages-scripts/centre-operating-holds.mjs';
@@ -111,11 +111,23 @@ for(const matrixId of matrixIds){
     session.sessionId=sessionId;session.providerCapabilities=created.value?.capabilities||{};session.dashboard='https://testingbot.com/members/tests/'+sessionId;
     await wd('/timeouts','POST',{pageLoad:60000,script:20000,implicit:1000});
     if(transport==='webdriver'){
+      const interceptionSupported=nativeInterceptionSupported(config);
+      session.nativeContainment={requestedBlacklist:nativeReaderBlacklist,browserInterception:{supported:interceptionSupported,requestedRules:interceptionSupported?nativeInterceptRules.length:0,installedRules:0,status:interceptionSupported?'installing':'unsupported'}};
+      await save();
+      if(interceptionSupported){
+        try{
+          session.nativeContainment.browserInterception.installedRules=await installNativeInterceptions((command,rule)=>evaluate(command,rule));
+          session.nativeContainment.browserInterception.status='installed';
+          await save();
+        }catch(error){
+          session.nativeContainment.browserInterception.status='failed';session.nativeContainment.browserInterception.error=redact(error.message);await save();throw error;
+        }
+      }
       const control=await fetch(nativeProbeTargets[0].url,{redirect:'error',signal:AbortSignal.timeout(15000)});
       if(control.status!==200||!/^text\/plain(?:;|$)/i.test(control.headers.get('content-type')||''))throw Error('Native probe text resource unavailable; no production page may be opened');
       await control.body?.cancel();
       await wd('/url','POST',{url:nativeProbeTargets[0].url});
-      session.nativeContainment={requestedBlacklist:nativeReaderBlacklist,document:await evaluate('return {url:location.href,contentType:document.contentType,scripts:document.scripts.length}')};
+      session.nativeContainment.document=await evaluate('return {url:location.href,contentType:document.contentType,scripts:document.scripts.length}');
       await save();assertNativeProbeDocument(session.nativeContainment.document);
       session.nativeContainment.probes=await evaluate('return ('+nativeReaderProbe.toString()+')(arguments[0])',nativeProbeTargets);
       await save();assertNativeReaderProbe(session.nativeContainment.probes);
