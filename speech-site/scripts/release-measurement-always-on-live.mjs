@@ -136,7 +136,10 @@ async function assembleCandidates(commit) {
     assert.equal(sha(bytes), sha(committed), `Uncommitted portal source ${name}`);
   }
   for (const name of ['shared-assets-repair.mjs', 'shared-navigation.mjs']) {
-    const bundled = await build({entryPoints: [path.join(site, 'deployment', name)], bundle: true, format: 'esm', platform: 'browser', write: false, logLevel: 'silent'});
+    const bundled = await build({
+      entryPoints: [path.join(site, 'deployment', name)], bundle: true, format: 'esm', platform: 'browser', write: false, logLevel: 'silent',
+      ...(name === 'shared-navigation.mjs' ? {external: ['./public-ad-call.mjs']} : {})
+    });
     byName.set(name, {name, bytes: Buffer.from(bundled.outputFiles[0].contents)});
   }
   const portalModules = [...byName.values()].sort((a, b) => a.name.localeCompare(b.name));
