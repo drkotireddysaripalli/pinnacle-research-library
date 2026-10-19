@@ -19,6 +19,8 @@ const stages=[
  {name:'types',cwd:root,command:'npm',args:['run','check:types']},
  {name:'runtime-scan',cwd:root,command:process.execPath,args:['scripts/check-measurement-always-on-runtime.mjs']},
  {name:'browser-contract',cwd:root,command:process.execPath,args:['scripts/test-measurement-always-on-browser.mjs']},
+ {name:'shared-asset-browser-contract',cwd:root,command:process.execPath,args:['scripts/check-shared-assets-browser.mjs']},
+ {name:'accepted-contact-receipt-browser-contract',cwd:root,command:process.execPath,args:['scripts/check-contact-receipt-browser.mjs']},
  {name:'diff-check',cwd:parent,command:'git',args:['diff','--check','--','.']}
 ];
 let receipt={schemaVersion:1,startedAt:new Date().toISOString(),root,evidenceDir,skipBuild,stages:[]};
