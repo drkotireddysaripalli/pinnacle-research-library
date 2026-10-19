@@ -8,6 +8,8 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
+import {build} from 'esbuild';
+import {Miniflare,convertV4MiniflareOptions} from 'miniflare';
 
 const [phase,id]=process.argv.slice(2);
 assert(/^[a-z0-9-]{6,80}$/.test(id||''),'Unique release ID required');
@@ -41,6 +43,10 @@ async function assertTrustedCi(ci,commit){
 async function api(resource,method='GET',body){
  const form=body instanceof FormData,response=await fetch('https://api.cloudflare.com/client/v4'+resource,{method,headers:{authorization:'Bearer '+session,...(!form?{'content-type':'application/json'}:{})},body:body?(form?body:JSON.stringify(body)):undefined,signal:AbortSignal.timeout(45000)}),json=await response.json();
  assert(response.ok&&json.success,JSON.stringify({status:response.status,resource,errors:json.errors}));return json.result;
+}
+async function apiBytes(resource){
+ const response=await fetch('https://api.cloudflare.com/client/v4'+resource,{headers:{authorization:'Bearer '+session},signal:AbortSignal.timeout(45000)});
+ assert(response.ok,JSON.stringify({status:response.status,resource}));return Buffer.from(await response.arrayBuffer());
 }
 const latest=async name=>(await api(base+name+'/deployments')).deployments.sort((a,b)=>b.created_on.localeCompare(a.created_on))[0].versions;
 async function state(){
@@ -82,14 +88,24 @@ async function proveCandidate(commit,candidate){
  assert(projected?.includes('one coarse page visit'));assert(projected.includes('Limited cookieless measurement may run'));assert.equal((projected.match(/id="website-preferences"/g)||[]).length,1);
  const proof={commit,moduleCount:candidate.mods.length,changedModules:candidate.targets,preservedScriptKeys:candidate.preservedScriptKeys,collectorSha256:sha(collector),scriptKeys:Object.keys(scripts.attributionScripts).sort(),policyAssets:Object.keys(policy.publicPolicyAssets).length,runtimeAssets:Object.keys(runtime.publicPolicyRuntimeAssets).length,served,moduleHashes:Object.fromEntries(candidate.mods.map(module=>[module.name,sha(module.bytes)]))};await save(path.join(priv,'candidate-proof.json'),proof);return proof;
 }
-async function proveLive(){
- const sourcePolicy=assignment(await fs.readFile(path.join(site,'deployment/public-policy-assets.mjs'),'utf8'),'publicPolicyAssets'),routes=assignment(await fs.readFile(path.join(site,'deployment/public-policy-assets.mjs'),'utf8'),'publicPolicyRoutes'),runtime=assignment(await fs.readFile(path.join(site,'deployment/public-policy-runtime-assets.mjs'),'utf8'),'publicPolicyRuntimeAssets'),checks=[];
- const get=async(pathname,headers={})=>{const response=await fetch('https://www.pinnacleblooms.org'+pathname+(pathname.includes('?')?'&':'?')+'release_readback='+encodeURIComponent(id),{headers:{'cache-control':'no-cache',...headers},redirect:'manual',signal:AbortSignal.timeout(30000)}),bytes=Buffer.from(await response.arrayBuffer());return {response,bytes};};
- for(const [route,keys] of Object.entries(routes))for(const [representation,key] of Object.entries(keys)){const out=await get(route,representation==='markdown'?{accept:'text/markdown'}:{}),expected=sourcePolicy[key];assert.equal(out.response.status,200,route);assert.equal(sha(out.bytes),expected.sha256,route+' '+representation);assert.equal(out.response.headers.get('x-pinnacle-policy-overlay'),'automatic-before-choice-20261019');checks.push({path:route,representation,status:200,sha256:expected.sha256});}
- for(const [key,expected] of [...Object.entries(sourcePolicy).filter(([key])=>key.endsWith('.json')),...Object.entries(runtime)]){const out=await get(key);assert.equal(out.response.status,200,key);assert.equal(sha(out.bytes),expected.sha256,key);checks.push({path:key,status:200,sha256:expected.sha256});}
- const collector=await get('/pinnacle-pages-scripts/speech-measurement.js'),expectedCollector=await fs.readFile(path.join(site,'public/pinnacle-pages-scripts/speech-measurement.js'));assert.equal(sha(collector.bytes),sha(expectedCollector));
- const managed=await get('/best-aba-therapy-center-india-proven-improvement-rate'),text=managed.bytes.toString();assert.equal(managed.response.status,200);assert.equal((text.match(/id="website-preferences"/g)||[]).length,1);assert(text.includes('one coarse page visit'));assert(text.includes('Limited cookieless measurement may run'));
- return {at:new Date().toISOString(),checks,collectorSha256:sha(expectedCollector),managedFooter:true};
+async function proveLive(candidate,before){
+ const policySource=await fs.readFile(path.join(site,'deployment/public-policy-assets.mjs'),'utf8'),sourcePolicy=assignment(policySource,'publicPolicyAssets'),routes=assignment(policySource,'publicPolicyRoutes'),runtime=assignment(await fs.readFile(path.join(site,'deployment/public-policy-runtime-assets.mjs'),'utf8'),'publicPolicyRuntimeAssets'),checks=[];
+ const fixture=path.join(priv,'live-runtime-fixture');await fs.rm(fixture,{recursive:true,force:true});await fs.mkdir(fixture,{recursive:true});for(const module of candidate.mods)await fs.writeFile(path.join(fixture,module.name),module.bytes);
+ const bundle=await build({stdin:{contents:"import worker from './pinnacle-route-v12.mjs'; export default worker;",resolveDir:fixture,sourcefile:'release-entry.mjs'},bundle:true,format:'esm',write:false,platform:'browser'});
+ const miniflare=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:before.settings.compatibility_date,compatibilityFlags:before.settings.compatibility_flags||[],script:bundle.outputFiles[0].text,kvNamespaces:['PINNACLE_ANNOUNCEMENTS']}));
+ const namespace=before.settings.bindings.find(binding=>binding.name==='PINNACLE_ANNOUNCEMENTS'&&binding.type==='kv_namespace')?.namespace_id;assert(namespace,'Announcement KV binding absent');
+ const announcement=await apiBytes('/accounts/862998def1cd610fdb86b8e5c1d6ed4d/storage/kv/namespaces/'+namespace+'/values/active');await (await miniflare.getKVNamespace('PINNACLE_ANNOUNCEMENTS')).put('active',announcement);
+ const nonce=id+'-'+Date.now(),url=pathname=>'https://www.pinnacleblooms.org'+pathname+(pathname.includes('?')?'&':'?')+'release_readback='+encodeURIComponent(nonce);
+ const local=async(pathname,headers={})=>{const response=await miniflare.dispatchFetch(url(pathname),{headers}),bytes=Buffer.from(await response.arrayBuffer());return {response,bytes};};
+ const live=async(pathname,headers={})=>{const response=await fetch(url(pathname),{headers:{'cache-control':'no-cache','pragma':'no-cache',...headers},redirect:'manual',signal:AbortSignal.timeout(30000)}),bytes=Buffer.from(await response.arrayBuffer());return {response,bytes};};
+ const compare=async(pathname,headers={},representation)=>{const [expected,out]=await Promise.all([local(pathname,headers),live(pathname,headers)]);assert.equal(out.response.status,expected.response.status,pathname);assert.equal(sha(out.bytes),sha(expected.bytes),pathname+(representation?' '+representation:''));checks.push({path:pathname,...(representation?{representation}:{}),status:out.response.status,sha256:sha(out.bytes)});return out;};
+ try{
+  for(const [route,keys] of Object.entries(routes))for(const representation of Object.keys(keys)){const out=await compare(route,representation==='markdown'?{accept:'text/markdown'}:{},representation);assert.equal(out.response.headers.get('x-pinnacle-policy-overlay'),'automatic-before-choice-20261019');}
+  for(const key of [...Object.keys(sourcePolicy).filter(key=>key.endsWith('.json')),...Object.keys(runtime)])await compare(key);
+  const collector=await compare('/pinnacle-pages-scripts/speech-measurement.js'),expectedCollector=await fs.readFile(path.join(site,'public/pinnacle-pages-scripts/speech-measurement.js'));assert.equal(sha(collector.bytes),sha(expectedCollector));
+  const managed=await live('/best-aba-therapy-center-india-proven-improvement-rate'),text=managed.bytes.toString();assert.equal(managed.response.status,200);assert.equal((text.match(/id="website-preferences"/g)||[]).length,1);assert(text.includes('one coarse page visit'));assert(text.includes('Limited cookieless measurement may run'));checks.push({path:'/best-aba-therapy-center-india-proven-improvement-rate',status:200,semantic:true});
+  return {at:new Date().toISOString(),announcementSha256:sha(announcement),checks,collectorSha256:sha(expectedCollector),managedFooter:true};
+ }finally{await miniflare.dispose();}
 }
 
 await fs.mkdir(priv,{recursive:true});
@@ -111,7 +127,7 @@ if(phase==='prepare'){
  }else if(phase==='promote'){
   assert.equal(receipt.phase,'uploaded');const result=await api(base+worker+'/deployments','POST',{strategy:'percentage',versions:[{version_id:receipt.candidate,percentage:100}]});receipt.deployment=result.id;receipt.phase='promoted';receipt.promotedAt=new Date().toISOString();
  }else if(phase==='verify'){
-  assert.equal(receipt.phase,'promoted');const liveModules=await modules();assert.equal(liveModules.length,Object.keys(receipt.hashes).length);for(const module of liveModules)assert.equal(sha(module.bytes),receipt.hashes[module.name],module.name+' differs');receipt.live=await proveLive();receipt.phase='verified-live';receipt.verifiedAt=now.at;receipt.protectedWorkersUnchanged=protectedNames;receipt.routesPreserved=now.routes.length;receipt.bindingsPreserved=true;
+  assert.equal(receipt.phase,'promoted');const liveModules=await modules();assert.equal(liveModules.length,Object.keys(receipt.hashes).length);for(const module of liveModules)assert.equal(sha(module.bytes),receipt.hashes[module.name],module.name+' differs');const candidate=await candidateModules(receipt.commit);receipt.live=await proveLive(candidate,before);receipt.phase='verified-live';receipt.verifiedAt=now.at;receipt.protectedWorkersUnchanged=protectedNames;receipt.routesPreserved=now.routes.length;receipt.bindingsPreserved=true;
  }else throw Error('Use prepare, assemble, upload, promote or verify');
  await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,commit:receipt.commit,version:receipt.candidate,deployment:receipt.deployment,routes:receipt.routesPreserved}));
 }

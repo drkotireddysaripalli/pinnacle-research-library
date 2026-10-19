@@ -1,0 +1,302 @@
+{
+  "id": "automatic-before-choice-live-20261019-mac",
+  "phase": "verified-live",
+  "at": "2026-10-19T13:24:48.127Z",
+  "baseCommit": "236e7edb75b98e2391723786723cf4e7f8c2c37f",
+  "rollback": [
+    {
+      "version_id": "24888e79-b583-470a-ad85-d48e8f978fbc",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 403,
+  "moduleCount": 67,
+  "retainedAssets": "preserved-current-live",
+  "uploadedAssets": 0,
+  "originalHashes": {
+    "book-attribution-assets.mjs": "2521484a065589be76f2394133a9732f3ef816cc73fe9db39638eff78ce82600",
+    "url-health-repair.mjs": "7ca2cd098e975f60eaf76d07e84fd0394172a04657118c05875f1ca148ce6fb7",
+    "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+    "book-store-choices.mjs": "1bbfeaddf4d53b10eaff6c291c38143fc50ef8adf79ce755930dc17bd30795e2",
+    "guru-source-assets.mjs": "5b4d318aed0033d63fd314f5e98425b6985ebe3a352eba9c34fada8a893e0026",
+    "managed-sitemap-config.mjs": "452fcca12b2a17d3cb6a342ca368184d7c7d217646c5956914600b8bd0fa8a56",
+    "shared-assets-entry.mjs": "083b5d3631815326a6bd6cb9484b35fa204a6c47deec8a837889f78e43567719",
+    "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+    "discovery-handler.mjs": "f85cd7b0f2270801b65d829511d2a1365691d2d3172d1557365fccbd4e05170f",
+    "guru-recovery.mjs": "74fe510f8b6bec55933ddadce75f29066263e6ffa135cf148e2a50a095fd17c4",
+    "legacy-measurement.runtime.mjs": "5b237ece6e7db21432cea18aae13f509aa159c6dda692e1bfc7af7dacac8a613",
+    "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+    "protection-csp.mjs": "b47a975ebd15fc635219326f9282d8f6b029ef76bcb38707eb3129bee68e83af",
+    "public-document-recovery.mjs": "e0794480c1b20f6187b0d8511dfde9528e9af8a72801d45c4cbcd8834278caca",
+    "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+    "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+    "canonical-navigation-20261012.mjs": "31d650c3e111bce7632801feb683c12280a9ead2e2c7aae900de3d8e7e5c6675",
+    "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+    "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+    "autism-assets.mjs": "fe1584c74a8bc22d4f09c8174f604c6fefa99ee55589e9d3af0886973e345f99",
+    "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+    "public-ad-call.mjs": "db8bd6990223b75270c8558a99f26e14ea7662b94acce2d9319d6345d06a70cc",
+    "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+    "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+    "mirracles-library.mjs": "d7af927fa9333186cb0b8b704d172d376ea780c73cdb3184f2ad6575beb70a8f",
+    "suchitra-assets.mjs": "faff80184d0c9c94c0065fb3cd1a29fbcc407202fcc60eb7d830cd3fd47680c9",
+    "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+    "aba-assets.mjs": "3da2424adba8768f6dc0be7420b0034d04fa77f0f0de096e50ddb6d59274c3d9",
+    "merchant-policy-handler.mjs": "8d97096de6a6d9b0e664ce857e46fa3edb362d4c18ed727da326e40751f74c1e",
+    "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+    "shared-navigation.mjs": "3a58ffce6522c4dbd93e18a258800a31fa9696ccdb1f8bca0413a6f5b21047fb",
+    "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+    "centre-routes.mjs": "219bc85da8df60341dfdc1b006b62b5622361b3939fef06ee8d83096ad12fc12",
+    "occupational-assets.mjs": "09ab03f805ad13a608c45db6302879e6ad85f1c58b07924afc86a86f2bff96a4",
+    "public-route-aliases.mjs": "4d85837e6f1fd34edde50855661352c55218aaeb7c99a34b9b244fa3612d9dba",
+    "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+    "public-document-recovery-entry.mjs": "e78483bb3b6dbee03bf927c62605323cc8aa7b4226ea207a6dfa5dcd161b97f7",
+    "public-mobile-recovery.mjs": "eb5feac2a9b2a9dd1833a49d2ba17bf601cc10ce44a7503d15fba10a34cac116",
+    "shared-clearance-runtime.mjs": "bb96ea319225a1d5a6b43b40ef33159c5b2f26a7847861aea5d09ea430933fb7",
+    "site-announcement.mjs": "09f5d105b5709a596546959633a54334f67c0d7baafd900df01810369ae68184",
+    "speech-handler.mjs": "563324d8b10f2db48918e44ac34f282d33b917ddfea19ab5af11e8d70d938ef3",
+    "centre-google-feed.mjs": "aa6b99dda921e555fb97a01132ac9915b0837a1c7671d40bb8338b51ff5b8ed4",
+    "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+    "public-document-recovery-config.mjs": "4a662574d77acd5920ef066a9ba987181d63796be96683be06000d6f83342066",
+    "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+    "centre-operating-holds.mjs": "1902b6f35d39a4912168c5afab0550dc84eb20ce22d2ea6896be77bd86179fc0",
+    "legacy-template-coverage.mjs": "3cf086f1479f5f6a864ada4f18e21d4457653fdbd639b45c865f5bb7f9577f98",
+    "enrolment-assets.mjs": "23fcf83821b579e74ca726f99eccce1711a8496bef1d66f241d209da4befb26c",
+    "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+    "managed-sitemap-runtime.mjs": "b5e495b6e80e83abcaaf7fd6a30f6b99d9857e7e23697bc914ce52f186d5bdd5",
+    "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+    "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+    "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+    "managed-sitemap-entry.mjs": "c9954a8ec8217c37beb9af1a21a00e603d81e87aaed74b5228d0ba4815a943ad",
+    "merchant-policy-content.mjs": "a4535c78321bfea28bdba9fe1793e3d0390fad64bb9296c1d448d86f424ad551",
+    "mirracles-library-assets.mjs": "5f45c2bc24d1a498f16ae822b241e6feccf42fbb3681b4da9cb48aa4b369d339",
+    "shared-assets-repair.mjs": "980d5bfb51067aa90fae981fe8f2be0d1dfceb24fcb71b3598828ffa31e920d4",
+    "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+    "enrolment-handler.mjs": "e860bf8ef0e143cf2343c24e64dd12531454d4d9c7d8bf499b867c2823ae7ecb",
+    "faq-navigation-entry.mjs": "f3721272d6e9251987a462b3b1620e665cec4175a848dcaccf3ef23e8c86f744",
+    "pinnacle-route-v12.mjs": "c5c542a5ca7fc1f67f794604c8e8587bc899f36e854fd18761b06cbfe1a4919b",
+    "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+    "book-attribution-handler.mjs": "cda7d8fdb9d531395928f30625158d4381d4a959c9142c5d9e7f8fc741e77ebc",
+    "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+    "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+    "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+    "shared-clearance-entry-20261012.mjs": "3f1dd78b80666e651c02deeeb8057eca92bff6a124ed8e750d2df5e22e6a03cc"
+  },
+  "commit": "7fc4372e04b812c541a59b594de924181321ee4e",
+  "changedModules": [
+    "legacy-measurement.runtime.mjs",
+    "book-attribution-handler.mjs",
+    "public-policy-assets.mjs",
+    "public-policy-runtime-assets.mjs",
+    "book-attribution-assets.mjs"
+  ],
+  "hashes": {
+    "book-attribution-assets.mjs": "841ae958ac4a8cd1cb6a8c89a57e6de2713f619c68882fdf1eaa8c9d369eb5cc",
+    "url-health-repair.mjs": "7ca2cd098e975f60eaf76d07e84fd0394172a04657118c05875f1ca148ce6fb7",
+    "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+    "book-store-choices.mjs": "1bbfeaddf4d53b10eaff6c291c38143fc50ef8adf79ce755930dc17bd30795e2",
+    "guru-source-assets.mjs": "5b4d318aed0033d63fd314f5e98425b6985ebe3a352eba9c34fada8a893e0026",
+    "managed-sitemap-config.mjs": "452fcca12b2a17d3cb6a342ca368184d7c7d217646c5956914600b8bd0fa8a56",
+    "shared-assets-entry.mjs": "083b5d3631815326a6bd6cb9484b35fa204a6c47deec8a837889f78e43567719",
+    "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+    "discovery-handler.mjs": "f85cd7b0f2270801b65d829511d2a1365691d2d3172d1557365fccbd4e05170f",
+    "guru-recovery.mjs": "74fe510f8b6bec55933ddadce75f29066263e6ffa135cf148e2a50a095fd17c4",
+    "legacy-measurement.runtime.mjs": "38765a1828ad7f29d4d7acb5cc86fb7e4a6e72b8448d7a136020aaeadeb21af2",
+    "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+    "protection-csp.mjs": "b47a975ebd15fc635219326f9282d8f6b029ef76bcb38707eb3129bee68e83af",
+    "public-document-recovery.mjs": "e0794480c1b20f6187b0d8511dfde9528e9af8a72801d45c4cbcd8834278caca",
+    "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+    "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+    "canonical-navigation-20261012.mjs": "31d650c3e111bce7632801feb683c12280a9ead2e2c7aae900de3d8e7e5c6675",
+    "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+    "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+    "autism-assets.mjs": "fe1584c74a8bc22d4f09c8174f604c6fefa99ee55589e9d3af0886973e345f99",
+    "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+    "public-ad-call.mjs": "db8bd6990223b75270c8558a99f26e14ea7662b94acce2d9319d6345d06a70cc",
+    "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+    "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+    "mirracles-library.mjs": "d7af927fa9333186cb0b8b704d172d376ea780c73cdb3184f2ad6575beb70a8f",
+    "suchitra-assets.mjs": "faff80184d0c9c94c0065fb3cd1a29fbcc407202fcc60eb7d830cd3fd47680c9",
+    "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+    "aba-assets.mjs": "3da2424adba8768f6dc0be7420b0034d04fa77f0f0de096e50ddb6d59274c3d9",
+    "merchant-policy-handler.mjs": "8d97096de6a6d9b0e664ce857e46fa3edb362d4c18ed727da326e40751f74c1e",
+    "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+    "shared-navigation.mjs": "3a58ffce6522c4dbd93e18a258800a31fa9696ccdb1f8bca0413a6f5b21047fb",
+    "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+    "centre-routes.mjs": "219bc85da8df60341dfdc1b006b62b5622361b3939fef06ee8d83096ad12fc12",
+    "occupational-assets.mjs": "09ab03f805ad13a608c45db6302879e6ad85f1c58b07924afc86a86f2bff96a4",
+    "public-route-aliases.mjs": "4d85837e6f1fd34edde50855661352c55218aaeb7c99a34b9b244fa3612d9dba",
+    "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+    "public-document-recovery-entry.mjs": "e78483bb3b6dbee03bf927c62605323cc8aa7b4226ea207a6dfa5dcd161b97f7",
+    "public-mobile-recovery.mjs": "eb5feac2a9b2a9dd1833a49d2ba17bf601cc10ce44a7503d15fba10a34cac116",
+    "shared-clearance-runtime.mjs": "bb96ea319225a1d5a6b43b40ef33159c5b2f26a7847861aea5d09ea430933fb7",
+    "site-announcement.mjs": "09f5d105b5709a596546959633a54334f67c0d7baafd900df01810369ae68184",
+    "speech-handler.mjs": "563324d8b10f2db48918e44ac34f282d33b917ddfea19ab5af11e8d70d938ef3",
+    "centre-google-feed.mjs": "aa6b99dda921e555fb97a01132ac9915b0837a1c7671d40bb8338b51ff5b8ed4",
+    "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+    "public-document-recovery-config.mjs": "4a662574d77acd5920ef066a9ba987181d63796be96683be06000d6f83342066",
+    "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+    "centre-operating-holds.mjs": "1902b6f35d39a4912168c5afab0550dc84eb20ce22d2ea6896be77bd86179fc0",
+    "legacy-template-coverage.mjs": "3cf086f1479f5f6a864ada4f18e21d4457653fdbd639b45c865f5bb7f9577f98",
+    "enrolment-assets.mjs": "23fcf83821b579e74ca726f99eccce1711a8496bef1d66f241d209da4befb26c",
+    "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+    "managed-sitemap-runtime.mjs": "b5e495b6e80e83abcaaf7fd6a30f6b99d9857e7e23697bc914ce52f186d5bdd5",
+    "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+    "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+    "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+    "managed-sitemap-entry.mjs": "c9954a8ec8217c37beb9af1a21a00e603d81e87aaed74b5228d0ba4815a943ad",
+    "merchant-policy-content.mjs": "a4535c78321bfea28bdba9fe1793e3d0390fad64bb9296c1d448d86f424ad551",
+    "mirracles-library-assets.mjs": "5f45c2bc24d1a498f16ae822b241e6feccf42fbb3681b4da9cb48aa4b369d339",
+    "shared-assets-repair.mjs": "980d5bfb51067aa90fae981fe8f2be0d1dfceb24fcb71b3598828ffa31e920d4",
+    "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+    "enrolment-handler.mjs": "e860bf8ef0e143cf2343c24e64dd12531454d4d9c7d8bf499b867c2823ae7ecb",
+    "faq-navigation-entry.mjs": "f3721272d6e9251987a462b3b1620e665cec4175a848dcaccf3ef23e8c86f744",
+    "pinnacle-route-v12.mjs": "c5c542a5ca7fc1f67f794604c8e8587bc899f36e854fd18761b06cbfe1a4919b",
+    "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+    "book-attribution-handler.mjs": "4350d5db69cdb4b11cb0a62e7c1c4eb9b6eb1602a73fc5e240b2cd7b6933348d",
+    "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+    "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+    "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+    "shared-clearance-entry-20261012.mjs": "3f1dd78b80666e651c02deeeb8057eca92bff6a124ed8e750d2df5e22e6a03cc",
+    "public-policy-assets.mjs": "2a514cba62ca72dca5a977ab205cf5db162454983c1a91ce6317e46cc6f83f69",
+    "public-policy-runtime-assets.mjs": "cc401ae2d3cdc9d3e4a6891a9484620432854eeebeefd405122dd28a50e6b1c4"
+  },
+  "ci": {
+    "runId": 39260884765,
+    "jobId": 118088072713,
+    "artifactId": 12191082980,
+    "reportSha256": "f6f7b2038e60d6fbeb12b1b2e2d2d6b7262beb8c6d2e89b42c20ef92c625aa7a"
+  },
+  "candidate": "170bfb75-1cf9-4f6f-b070-aa519161f7bf",
+  "deployment": "caf0f9f6-aed4-4a1b-bd98-d7a302e0e146",
+  "promotedAt": "2026-10-19T14:04:06.280Z",
+  "rolledBackAt": "2026-10-19T14:03:25.809Z",
+  "currentProduction": [
+    {
+      "version_id": "170bfb75-1cf9-4f6f-b070-aa519161f7bf",
+      "percentage": 100
+    }
+  ],
+  "releaseAttempts": [
+    {
+      "deployment": "7126b316-461a-4c05-921e-7777a8b51acd",
+      "outcome": "rolled-back",
+      "reason": "immediate-public-body-hash-mismatch"
+    },
+    {
+      "deployment": "a6913803-3a2d-434e-9286-b7b72270bde4",
+      "outcome": "rolled-back",
+      "reason": "stable-overlay-body-hash-mismatch",
+      "rollbackDeployment": "a1c4807e-9525-4964-abfc-a1d021aed1f5"
+    },
+    {
+      "deployment": "ba3cfa9e-e4d6-4bb5-b718-cd2889bfe6d4",
+      "outcome": "rolled-back",
+      "reason": "local-replay-missing-production-assets-binding",
+      "rollbackDeployment": "ed53428d-b0ed-484c-911a-5ae1dea5bb51"
+    },
+    {
+      "deployment": "caf0f9f6-aed4-4a1b-bd98-d7a302e0e146",
+      "outcome": "verified-live",
+      "reason": "full-runtime-composed-readback"
+    }
+  ],
+  "live": {
+    "at": "2026-10-19T14:04:18.083Z",
+    "announcementSha256": "7a58871c02e8146b60e7e231a2588b57660a492672de2bc11c137823fb89512c",
+    "checks": [
+      {
+        "path": "/privacy-policy",
+        "representation": "html",
+        "status": 200,
+        "sha256": "d6d335ceeb115bc212015aaece32496c293efc96a088d5645cc7b85eb96cd330"
+      },
+      {
+        "path": "/privacy-policy",
+        "representation": "markdown",
+        "status": 200,
+        "sha256": "e82e44a1faeabaac34965e18f79ea12d1ec6dd32f482ff304a616f9829304787"
+      },
+      {
+        "path": "/cookie-policy",
+        "representation": "html",
+        "status": 200,
+        "sha256": "07409c613eabb8412f7f7e88ccc01f6301e983ebd8b0c6b6c622875c7695e2de"
+      },
+      {
+        "path": "/cookie-policy",
+        "representation": "markdown",
+        "status": 200,
+        "sha256": "c77110b6822b0bb9c50d0f7c3779fa492a12a210993b852f79506427c797e498"
+      },
+      {
+        "path": "/policies",
+        "representation": "html",
+        "status": 200,
+        "sha256": "3f71945714f5d850528b802a4dfe9e9d71e010958eadcced55753f270b1e38bc"
+      },
+      {
+        "path": "/policies",
+        "representation": "markdown",
+        "status": 200,
+        "sha256": "ac7fa753907f66f1d0ee17772f25ea0c80942ecf8235fb1f37f20add2c662608"
+      },
+      {
+        "path": "/pinnacle-pages-data/privacy-policy-policy-source.json",
+        "status": 200,
+        "sha256": "ae4d842e56a00652a74089b127ec133c452f18df976d8800191be91d8d6f395e"
+      },
+      {
+        "path": "/pinnacle-pages-data/cookie-policy-policy-source.json",
+        "status": 200,
+        "sha256": "28d37f886bb7adb2cde874d6cbe34ff0a2129391b555dc65ee1dc7fc9dfcac2d"
+      },
+      {
+        "path": "/pinnacle-pages-data/policies-policy-source.json",
+        "status": 200,
+        "sha256": "1d8b8fa72dba5ae7d3062b9be4cb5c961c5c1b363c24194084527ddb06f0173c"
+      },
+      {
+        "path": "/pinnacle-pages-assets/_slug_.Cf05G1U4.css",
+        "status": 200,
+        "sha256": "85bc59fdf41d8219680e83a9e901f85d189d1c9d1b15bd5fbb615d17fcbbe79e"
+      },
+      {
+        "path": "/pinnacle-pages-assets/PageLayout.DJgJHZ3n.css",
+        "status": 200,
+        "sha256": "92bca132ac29a614053636f2b9a6f133f48f077e9a74f7acac1681d4eab01633"
+      },
+      {
+        "path": "/pinnacle-pages-assets/google-ads-call-consent.yVwYWEAb.mjs",
+        "status": 200,
+        "sha256": "74a0fdb3ea376af964b3147bcb6bb4f4830e6ee299bc100e0e3fec9419a7b8f1"
+      },
+      {
+        "path": "/pinnacle-pages-scripts/speech-measurement.js",
+        "status": 200,
+        "sha256": "d2aaf3473c29ddd6311f4f3ffc7d8ed37ff734ca3d3dbc1f376ada54e1508e9e"
+      },
+      {
+        "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+        "status": 200,
+        "semantic": true
+      }
+    ],
+    "collectorSha256": "d2aaf3473c29ddd6311f4f3ffc7d8ed37ff734ca3d3dbc1f376ada54e1508e9e",
+    "managedFooter": true
+  },
+  "verifiedAt": "2026-10-19T14:04:12.991Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-legacy-social-metadata",
+    "pinnacle-ask",
+    "pinnacle-root-sitemap",
+    "materials-mobile-desktop-tracker",
+    "pbn-planetscale",
+    "pinnacle-helpline",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-google-ads-call-measurement"
+  ],
+  "routesPreserved": 403,
+  "bindingsPreserved": true
+}
