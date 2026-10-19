@@ -5,7 +5,6 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
-import {assets as sharedAssets} from '../deployment/shared-assets-repair-assets.mjs';
 
 const phase = process.argv[2] || 'all';
 const phases = ['prepare', 'assemble', 'upload', 'promote', 'verify'];
@@ -36,7 +35,7 @@ const portalLocalModules = [
 ];
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const git = args => execFileSync('git', args, {cwd: root, encoding: 'utf8', windowsHide: true}).trim();
-const gitBytes = args => execFileSync('git', args, {cwd: root, windowsHide: true});
+const gitBytes = args => execFileSync('git', args, {cwd: root, windowsHide: true, maxBuffer: 64 * 1024 * 1024});
 const gh = args => execFileSync('gh', args, {cwd: root, encoding: 'utf8', windowsHide: true}).trim();
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const treeOf = commit => {
@@ -239,12 +238,11 @@ async function verifyLive(receipt) {
     if (pathname.includes('best-aba-therapy')) assert((response.headers.get('content-security-policy') || '').includes('https://protect.pinnacleblooms.org'));
     pages.push({pathname, status: response.status, marker: response.headers.get('x-pinnacle-verify-measurement'), callMarker: response.headers.get('x-pinnacle-google-ads-call-measurement'), sha256: sha(Buffer.from(text))});
   }
-  const assetKeys = Object.keys(sharedAssets);
   const expectedAssets = [
     ['/pinnacle-pages-scripts/speech-measurement.js', await fs.readFile(path.join(site, 'public/pinnacle-pages-scripts/speech-measurement.js'))],
     ['/pinnacle-pages-scripts/cheq-protection.js', await fs.readFile(path.join(site, 'public/pinnacle-pages-scripts/cheq-protection.js'))],
-    [assetKeys.find(key => key.includes('protection-consumer')), Buffer.from(sharedAssets[assetKeys.find(key => key.includes('protection-consumer'))].body)],
-    [assetKeys.find(key => key.includes('centre-operating-holds')), Buffer.from(sharedAssets[assetKeys.find(key => key.includes('centre-operating-holds'))].body)]
+    ['/pinnacle-pages-scripts/protection-consumer.mjs', await fs.readFile(path.join(site, 'public/pinnacle-pages-scripts/protection-consumer.mjs'))],
+    ['/pinnacle-pages-scripts/centre-operating-holds.mjs', await fs.readFile(path.join(site, 'public/pinnacle-pages-scripts/centre-operating-holds.mjs'))]
   ];
   const assets = [];
   for (const [pathname, expected] of expectedAssets) {
