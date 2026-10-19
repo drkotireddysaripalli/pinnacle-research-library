@@ -13,9 +13,14 @@ export const nativeReaderBlacklist=nativeBlockedHosts.join(',');
 const escapeHostRegex=host=>host.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 export const nativeTunnelVersion='5.0';
 export const nativeTunnelFastFailRegexps=nativeBlockedHosts.map(host=>'^'+escapeHostRegex(host)+'$').join(',');
-export const nativeInterceptRules=Object.freeze(nativeBlockedHosts.flatMap(host=>['http','https'].map(protocol=>Object.freeze({
- url:protocol+'://'+host+'/*',error:'BlockedByClient'
-}))));
+// The tunnel fast-fail rules and the session blacklist cover the complete
+// vendor set. Browser interception is a second, independently probed layer;
+// keep it to the two HTTPS probe destinations so setup is bounded instead of
+// issuing 64 sequential vendor commands before any page can run.
+export const nativeInterceptRules=Object.freeze([
+ Object.freeze({url:'https://www.google-analytics.com/*',error:'BlockedByClient'}),
+ Object.freeze({url:'https://www.googletagmanager.com/*',error:'BlockedByClient'})
+]);
 export const nativeInterceptionSupported=config=>config?.kind==='desktop'&&['chrome','microsoftedge'].includes(String(config.browserName||'').toLowerCase());
 export async function installNativeInterceptions(run){
  if(typeof run!=='function')throw Error('Native interception command unavailable; no production page may be opened');

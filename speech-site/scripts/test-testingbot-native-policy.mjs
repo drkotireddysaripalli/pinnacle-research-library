@@ -6,14 +6,13 @@ test('native policy denies installed vendors and retains public site and catalog
  for(const host of['www.pinnacleblooms.org','pinnacleblooms.org','pinnacleblooms.myshopify.com','api.testingbot.com'])assert(!nativeBlockedHosts.includes(host));
  assert.equal(new Set(nativeBlockedHosts).size,nativeBlockedHosts.length);assert.equal(nativeReaderBlacklist.split(',').length,nativeBlockedHosts.length);
 });
-test('tunnel and browser interception rules cover every blocked host without widening host matches',async()=>{
+test('tunnel covers every blocked host and bounded browser rules cover both native probes',async()=>{
  assert.equal(nativeTunnelVersion,'5.0');assert.equal(nativeTunnelFastFailRegexps.split(',').length,nativeBlockedHosts.length);
  for(const [index,host]of nativeBlockedHosts.entries()){const expression=nativeTunnelFastFailRegexps.split(',')[index];assert(new RegExp(expression).test(host));assert(!new RegExp(expression).test('prefix-'+host));}
- assert.equal(nativeInterceptRules.length,nativeBlockedHosts.length*2);assert.equal(new Set(nativeInterceptRules.map(r=>r.url)).size,nativeInterceptRules.length);
- for(const host of nativeBlockedHosts)for(const protocol of['http','https'])assert.deepEqual(nativeInterceptRules.find(r=>r.url===protocol+'://'+host+'/*'),{url:protocol+'://'+host+'/*',error:'BlockedByClient'});
+ assert.deepEqual(nativeInterceptRules,[{url:'https://www.google-analytics.com/*',error:'BlockedByClient'},{url:'https://www.googletagmanager.com/*',error:'BlockedByClient'}]);assert.equal(new Set(nativeInterceptRules.map(r=>r.url)).size,nativeInterceptRules.length);
  assert(nativeInterceptionSupported({kind:'desktop',browserName:'chrome'}));assert(nativeInterceptionSupported({kind:'desktop',browserName:'MicrosoftEdge'}));assert(!nativeInterceptionSupported({kind:'desktop',browserName:'firefox'}));assert(!nativeInterceptionSupported({kind:'physical',browserName:'chrome'}));
  const commands=[];assert.equal(await installNativeInterceptions(async(command,rule)=>commands.push({command,rule})),nativeInterceptRules.length);assert.equal(commands.length,nativeInterceptRules.length);assert(commands.every((entry,index)=>entry.command==='tb:intercept'&&entry.rule.url===nativeInterceptRules[index].url&&entry.rule.error==='BlockedByClient'));
- let attempted=0;await assert.rejects(()=>installNativeInterceptions(async()=>{if(++attempted===3)throw Error('provider rejection');}),/provider rejection/);assert.equal(attempted,3);
+ let attempted=0;await assert.rejects(()=>installNativeInterceptions(async()=>{if(++attempted===2)throw Error('provider rejection');}),/provider rejection/);assert.equal(attempted,2);
 });
 test('trusted exact-build workflow pins tunnel v5 fast-fail rules in parity with the native policy',async()=>{
  const workflow=await fs.readFile(new URL('../../.github/workflows/portal-quality.yml',import.meta.url),'utf8');
