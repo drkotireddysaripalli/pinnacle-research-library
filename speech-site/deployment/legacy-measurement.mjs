@@ -18,9 +18,16 @@ export function projectManagedPreferenceHtml(html,request){
  const u=new URL(request.url);
  if(request.method!=='GET'||u.origin!=='https://www.pinnacleblooms.org'||request.headers.has('authorization')||request.headers.has('range')||(!managedPreferenceRoutes.has(u.pathname)&&!managedCentreRoute.test(u.pathname))||html.includes('data-pinnacle-managed-preferences'))return null;
  const canonical=/<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["'][^>]*>/i.exec(html)?.[1];
- if(canonical!==u.origin+u.pathname)return null;
- const footer=/<footer\b[^>]*\bclass=["'][^"']*\bportal-site-footer\b[^"']*["'][^>]*>/i.exec(html),footerStart=footer?.index??-1,footerEnd=html.indexOf('</footer>',footerStart);if(footerStart<0||footerEnd<0)return null;
- const analytics=detailsElement('data-speech-measurement',html),adCall=detailsElement('data-ad-call-preferences',html);if(!analytics||!adCall||analytics.index<footerStart||adCall.index<footerStart||analytics.index>footerEnd||adCall.index>footerEnd||analytics.index>=adCall.index||html.slice(analytics.index+analytics[0].length,adCall.index).trim())return null;
+ let canonicalMatches=canonical===u.origin+u.pathname;if(u.pathname==='/')try{const parsed=new URL(canonical.replaceAll('&amp;','&'));canonicalMatches=parsed.origin===u.origin&&parsed.pathname===u.pathname&&parsed.search===u.search&&!parsed.hash;}catch{canonicalMatches=false;}if(!canonicalMatches)return null;
+ const analytics=detailsElement('data-speech-measurement',html),adCall=detailsElement('data-ad-call-preferences',html);
+ if(!analytics||!adCall||analytics.index>=adCall.index)return null;
+ if(u.pathname==='/'){
+  const gap=html.slice(analytics.index+analytics[0].length,adCall.index).trim(),bodyEnd=html.lastIndexOf('</body>'),tail=html.slice(adCall.index+adCall[0].length,bodyEnd).trim(),rootAnchor=html.slice(Math.max(0,analytics.index-1600),analytics.index);
+  const speechLoader=/^<script\b(?=[^>]*\bsrc=["']\/pinnacle-pages-scripts\/speech-measurement\.js(?:\?[^"']*)?["'])[^>]*><\/script>$/i,adCallLoader=/^<script\b(?=[^>]*\btype=["']module["'])(?=[^>]*\bsrc=["']\/pinnacle-pages-scripts\/portal-ad-call-[a-f0-9]+\.mjs["'])(?=[^>]*\bdata-pinnacle-ad-call-module(?:\s|=|>))[^>]*><\/script>$/i;
+  if(!/\bid=["']website-preferences["']/i.test(analytics[0])||!rootAnchor.includes('cm-mirracle-go-top')||bodyEnd<adCall.index||!speechLoader.test(gap)||!adCallLoader.test(tail))return null;
+  return html.slice(0,analytics.index)+managedPreferenceCentre+html.slice(analytics.index+analytics[0].length,adCall.index)+html.slice(adCall.index+adCall[0].length);
+ }
+ const footer=/<footer\b[^>]*\bclass=["'][^"']*\bportal-site-footer\b[^"']*["'][^>]*>/i.exec(html),footerStart=footer?.index??-1,footerEnd=html.indexOf('</footer>',footerStart);if(footerStart<0||footerEnd<0||analytics.index<footerStart||adCall.index<footerStart||analytics.index>footerEnd||adCall.index>footerEnd||html.slice(analytics.index+analytics[0].length,adCall.index).trim())return null;
  const footerHtml=html.slice(footerStart,footerEnd),analyticsParents=openElementsAt(footerHtml,analytics.index-footerStart),adCallParents=openElementsAt(footerHtml,adCall.index-footerStart);if(!analyticsParents||!adCallParents||analyticsParents.length!==adCallParents.length||analyticsParents.some((parent,index)=>parent.start!==adCallParents[index].start))return null;
  const parent=analyticsParents.at(-1);if(parent?.tag!=='div'||!/\bclass=["'][^"']*\bportal-container\b[^"']*["']/i.test(parent.markup)||!analyticsParents.some(node=>node.tag==='footer'&&/\bportal-site-footer\b/.test(node.markup)))return null;
  const outside=html.slice(0,analytics.index)+managedPreferenceCentre+html.slice(analytics.index+analytics[0].length,adCall.index)+html.slice(adCall.index+adCall[0].length);

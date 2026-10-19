@@ -1,4 +1,4 @@
-// deployment/legacy-measurement-fingerprints.mjs
+// speech-site/deployment/legacy-measurement-fingerprints.mjs
 var LEGACY_TAGS = ["<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-W9ZHX459');<\/script>", '<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"><\/script>', "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'AW-10810823199');\r\n    <\/script>", "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'G-2BYLRLFRDJ');\r\n\r\n        /**/<\/script>", "<script>\r\n  gtag('config', 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo', {\r\n    'phone_conversion_number': '9100181181'\r\n  });\r\n<\/script>", '<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ"><\/script>'];
 var LEGACY_NOSCRIPT_TAGS = ['<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9ZHX459"\r\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>'];
 var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
@@ -76,7 +76,7 @@ var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
         }, 4000);\r
     <\/script>`]];
 
-// deployment/public-ad-call.mjs
+// speech-site/deployment/public-ad-call.mjs
 var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-74a0fdb3ea376af9.mjs";
 var publicAdCallMarkup = '<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden><summary>Optional advertising call measurement</summary><p>With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div><button type="button" data-ad-call-choice="accepted">Allow call measurement</button><button type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>';
 var source = `// Shared advertising call measurement. No advertising helper runs before opt-in.
@@ -294,7 +294,7 @@ function servePublicAdCall(request) {
   return new Response(["GET", "HEAD"].includes(request.method) && request.method !== "HEAD" ? source : null, { status: ["GET", "HEAD"].includes(request.method) ? 200 : 405, headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=31536000, immutable", "x-content-type-options": "nosniff", allow: "GET, HEAD" } });
 }
 
-// deployment/legacy-measurement.mjs
+// speech-site/deployment/legacy-measurement.mjs
 var serveLegacyMeasurementCall = servePublicAdCall;
 var normal = (text) => text.replaceAll("\r\n", "\n").trim();
 var fingerprints = new Set(LEGACY_TAGS.map(normal));
@@ -326,11 +326,24 @@ function projectManagedPreferenceHtml(html, request) {
   const u = new URL(request.url);
   if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || request.headers.has("authorization") || request.headers.has("range") || !managedPreferenceRoutes.has(u.pathname) && !managedCentreRoute.test(u.pathname) || html.includes("data-pinnacle-managed-preferences")) return null;
   const canonical = /<link\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["'][^>]*>/i.exec(html)?.[1];
-  if (canonical !== u.origin + u.pathname) return null;
-  const footer = /<footer\b[^>]*\bclass=["'][^"']*\bportal-site-footer\b[^"']*["'][^>]*>/i.exec(html), footerStart = footer?.index ?? -1, footerEnd = html.indexOf("</footer>", footerStart);
-  if (footerStart < 0 || footerEnd < 0) return null;
+  let canonicalMatches = canonical === u.origin + u.pathname;
+  if (u.pathname === "/") try {
+    const parsed = new URL(canonical.replaceAll("&amp;", "&"));
+    canonicalMatches = parsed.origin === u.origin && parsed.pathname === u.pathname && parsed.search === u.search && !parsed.hash;
+  } catch {
+    canonicalMatches = false;
+  }
+  if (!canonicalMatches) return null;
   const analytics = detailsElement("data-speech-measurement", html), adCall = detailsElement("data-ad-call-preferences", html);
-  if (!analytics || !adCall || analytics.index < footerStart || adCall.index < footerStart || analytics.index > footerEnd || adCall.index > footerEnd || analytics.index >= adCall.index || html.slice(analytics.index + analytics[0].length, adCall.index).trim()) return null;
+  if (!analytics || !adCall || analytics.index >= adCall.index) return null;
+  if (u.pathname === "/") {
+    const gap = html.slice(analytics.index + analytics[0].length, adCall.index).trim(), bodyEnd = html.lastIndexOf("</body>"), tail = html.slice(adCall.index + adCall[0].length, bodyEnd).trim(), rootAnchor = html.slice(Math.max(0, analytics.index - 1600), analytics.index);
+    const speechLoader = /^<script\b(?=[^>]*\bsrc=["']\/pinnacle-pages-scripts\/speech-measurement\.js(?:\?[^"']*)?["'])[^>]*><\/script>$/i, adCallLoader = /^<script\b(?=[^>]*\btype=["']module["'])(?=[^>]*\bsrc=["']\/pinnacle-pages-scripts\/portal-ad-call-[a-f0-9]+\.mjs["'])(?=[^>]*\bdata-pinnacle-ad-call-module(?:\s|=|>))[^>]*><\/script>$/i;
+    if (!/\bid=["']website-preferences["']/i.test(analytics[0]) || !rootAnchor.includes("cm-mirracle-go-top") || bodyEnd < adCall.index || !speechLoader.test(gap) || !adCallLoader.test(tail)) return null;
+    return html.slice(0, analytics.index) + managedPreferenceCentre + html.slice(analytics.index + analytics[0].length, adCall.index) + html.slice(adCall.index + adCall[0].length);
+  }
+  const footer = /<footer\b[^>]*\bclass=["'][^"']*\bportal-site-footer\b[^"']*["'][^>]*>/i.exec(html), footerStart = footer?.index ?? -1, footerEnd = html.indexOf("</footer>", footerStart);
+  if (footerStart < 0 || footerEnd < 0 || analytics.index < footerStart || adCall.index < footerStart || analytics.index > footerEnd || adCall.index > footerEnd || html.slice(analytics.index + analytics[0].length, adCall.index).trim()) return null;
   const footerHtml = html.slice(footerStart, footerEnd), analyticsParents = openElementsAt(footerHtml, analytics.index - footerStart), adCallParents = openElementsAt(footerHtml, adCall.index - footerStart);
   if (!analyticsParents || !adCallParents || analyticsParents.length !== adCallParents.length || analyticsParents.some((parent2, index) => parent2.start !== adCallParents[index].start)) return null;
   const parent = analyticsParents.at(-1);
