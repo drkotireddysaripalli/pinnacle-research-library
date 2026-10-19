@@ -18,11 +18,14 @@ function harness({path='/ask/example',host='pinnacleblooms.org',gpc=false,saved,
  const commands=()=>Array.from(win.dataLayer||[],x=>Array.from(x));
  return {win,ctx,scripts,cookies,panel,status,central,localLink,buttons,links,local,session,listeners,commands,choose:v=>clicks[v](),callback:()=>commands().find(x=>x[0]==='config'&&x[1]===action)?.[2].phone_conversion_callback,reloads:()=>reloads,mutate:()=>mutate(),link};
 }
-test('default, refusal, GPC, blocked storage and missing controls never start the helper',()=>{
+test('default, refusal, GPC, blocked storage and missing controls without a grant never start the helper',()=>{
  for(const opts of [{},{gpc:true},{storage:true},{panelMissing:true}]){
   const h=harness(opts);if(!opts.panelMissing)h.choose(opts.gpc||opts.storage?'accepted':'declined');
   assert.equal(h.scripts.length,0);assert(!h.callback());assert.equal(h.central.getAttribute('href'),'tel:+919100181181');
  }
+});
+test('a valid explicit stored grant survives optional UI removal',()=>{
+ const h=harness({panelMissing:true,saved:{value:'accepted',at:Date.now()-1000}});assert.equal(h.scripts.length,1);assert.equal(h.win.__pinnacleAdCallConsent.enabled,true);
 });
 test('private and unrelated paths and nonproduction hosts stay uninstrumented',()=>{
  for(const path of ['/ask/account','/ask/auth/callback','/ask/te/search','/ask/api/item','/ask/te/account','/shop','/faq','/ask-other']){

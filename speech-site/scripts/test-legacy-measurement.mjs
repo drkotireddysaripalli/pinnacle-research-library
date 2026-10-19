@@ -13,6 +13,7 @@ test('fingerprinted public families replace only verified analytics with the exi
  for(const path of ['/ma/ringtoss-therapy','/t/bead-stringing-therapy','/b/understanding-managing-spitting-saliva-tantrums','/c/hand-flapping-therapy','/contact-national-autism-helpline-24-7']){
   const result=migrateLegacyPrefix(fixture(path),request(path));assert(result);assert.equal(result.removed,LEGACY_TAGS.length);
   assert(result.html.includes('data-page-variant="legacy_knowledge"'));assert(result.html.includes('/functional.js'));assert(result.controls.includes('data-speech-measurement'));assert(result.controls.includes('data-ad-call-preferences'));
+  assert(result.controls.includes('Privacy and optional measurement'));assert.equal((result.controls.match(/measurement-preference-centre/g)||[]).length,1);assert(!result.controls.includes('<aside'));
   assert(!result.html.includes('GTM-W9ZHX459'));assert(result.html.includes('data-pinnacle-legacy-collector="early-v3"'));assert(result.html.includes('<script defer src="/pinnacle-pages-scripts/speech-measurement.js'));assert.equal(migrateLegacyPrefix(result.html,request(path)),null);
  }
 });

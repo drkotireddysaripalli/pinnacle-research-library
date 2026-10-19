@@ -22,11 +22,11 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({contact=false,callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null}={}){
+function harness({contact=false,callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null,panelMissing=false,statusMissing=false}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[],dispatched=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={referrer,visibilityState:'visible',body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-contact[')?(contact?{dataset:{contactContract:'durable-contact-v1'}}:null):s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
+ const doc={referrer,visibilityState:'visible',body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-contact[')?(contact?{dataset:{contactContract:'durable-contact-v1'}}:null):s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?(panelMissing?null:panel):s==='[data-measurement-status]'?(statusMissing?null:status):s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:null,querySelectorAll:()=>panelMissing?[]:choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  doc.dispatchEvent=event=>{dispatched.push(event);listeners[event.type]?.(event);return true;};
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
@@ -45,6 +45,23 @@ test('protection consumer is external first-party code loaded only after permitt
  const script=h.localScripts.find(s=>s.src?.includes('/protection-consumer.mjs'));assert.equal(script.referrerPolicy,'origin');assert.equal(script.type,'module');
  h.choose('accepted');assert.equal(count(),1);h.choose('declined');assert.equal(h.win.__pinnacleProtectionContainer.status,'cancelled');assert.equal(h.win.pinnacleProtectionAllowed(),false);h.choose('accepted');assert.equal(count(),1,'A cancelled page load is not replayed');
  assert.equal(h.win.CG,undefined);assert.equal(protectionSignals(h).length,0);
+});
+
+test('collector state is independent of optional preference presentation',()=>{
+ for(const controls of [{panelMissing:true},{statusMissing:true}]){
+  const off=harness({...controls,search:''});assert.equal(off.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,0);assert.equal(off.win.pinnacleProtectionAllowed(),false);
+  const on=harness({...controls,saved:{value:'accepted',at:Date.now()-1000},search:''});assert.equal(on.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,1);assert.equal(on.win.pinnacleProtectionAllowed(),true);
+ }
+});
+
+test('protection admits only the reviewed typed Google Ads suffix contract',()=>{
+ const campaign='18590437867';
+ const allowed='?tm=tt&ap=gads&aaid=adaEbXowXfmZM&cid='+campaign+'&agid=145156222249&aid=627906623022&kid=kwd-12345&kw=autism%20treatment&nw=g&dv=m&mt=e&pl=&gad_source=1&gad_campaignid='+campaign;
+ const ok=harness({path:canonicalEnrolment,search:allowed});ok.choose('accepted');assert.equal(ok.win.pinnacleProtectionAllowed(),true);assert.equal(ok.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,1);
+ for(const device of ['m','c','t']){const h=harness({path:canonicalEnrolment,search:allowed.replace('dv=m','dv='+device)});h.choose('accepted');assert.equal(h.win.pinnacleProtectionAllowed(),true,device);}
+ for(const suffix of ['tm=bad','ap=display','aaid=wrong','cid=9100181181','agid=abc','agid=9100181181','agid=999999999999','aid=private','aid=9100181181','aid=999999999999','kid=kwd-private','kw=my%20child%20diagnosis','nw=s','dv=d','mt=x','pl=private-placement','gad_source=2','gad_campaignid=9100181181','tm=tt&tm=tt']){
+  const h=harness({path:canonicalEnrolment,search:'?'+suffix});h.choose('accepted');assert.equal(h.win.pinnacleProtectionAllowed(),false,suffix);assert.equal(h.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,0,suffix);
+ }
 });
 
 test('protection loading and bridge fail closed for raw unsafe URL/referrer contexts',()=>{
