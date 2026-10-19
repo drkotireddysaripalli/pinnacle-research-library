@@ -1691,6 +1691,24 @@ a,summary,button {
   font-size: 13px;
   padding-block: 18px;
 }
+.preference-centre {
+  border-top: 1px solid #fff4;
+  padding-block: 12px;
+  font-size: 13px;
+}
+.preference-centre>summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.preference-centre__body {
+  max-width: 900px;
+}
+.preference-centre .measurement-settings {
+  padding-block: 12px;
+}
 .measurement-settings summary {
   cursor: pointer;
   min-height: 40px;

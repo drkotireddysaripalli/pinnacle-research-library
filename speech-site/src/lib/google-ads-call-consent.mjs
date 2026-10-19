@@ -1,5 +1,5 @@
 // Shared advertising call measurement. No advertising helper runs before opt-in.
-export const preferencesMarkup = `<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden style="box-sizing:border-box;max-width:100%;padding:16px;margin-bottom:88px;border:1px solid #d9bfd6;border-radius:8px;background:#fff;color:#302638;font-size:14px;line-height:1.65;font-family:inherit"><summary style="min-height:44px;color:#652579;font-weight:700;cursor:pointer">Optional advertising call measurement</summary><p style="color:#302638;max-width:850px">With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="accepted">Allow call measurement</button><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p style="color:#302638" data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>`;
+export const preferencesMarkup = `<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden><summary>Optional advertising call measurement</summary><p>With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div><button type="button" data-ad-call-choice="accepted">Allow call measurement</button><button type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>`;
 
 // Keep this function self-contained: the existing wrapper can serve its body too.
 export function installAdCallConsent() {
@@ -125,8 +125,10 @@ export function installAdCallConsent() {
   const init = () => {
     const panel = document.querySelector('[data-ad-call-preferences]');
     const status = document.querySelector('[data-ad-call-status]');
-    if (!panel || !status) return; // No consent UI, no phone-helper configuration.
-    panel.hidden = false;
+    // A missing optional presentation must not erase a previously explicit,
+    // current choice. Unknown/refused visitors still remain off below.
+    if (panel) panel.hidden = false;
+    const tell = text => { if (status) status.textContent = text; };
     const choose = (value, persist = true) => {
       if (!['accepted', 'declined'].includes(value)) return;
       let accepted = value === 'accepted' && !blocked();
@@ -169,19 +171,19 @@ export function installAdCallConsent() {
       }
       if (accepted) {
         start();
-        status.textContent = 'Advertising call measurement is on. You can turn it off here at any time.';
+        tell('Advertising call measurement is on. You can turn it off here at any time.');
       } else {
         state.enabled = false;
         window.gtag('consent', 'update', {ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
         restore(); clearOwnedCookies();
-        status.textContent = blocked() ? 'Call measurement is off because Global Privacy Control is enabled.' :
-          value === 'accepted' ? 'Call measurement stays off because this browser could not save your choice. Calling still works.' : 'Call measurement is off. Calling still works.';
+        tell(blocked() ? 'Call measurement is off because Global Privacy Control is enabled.' :
+          value === 'accepted' ? 'Call measurement stays off because this browser could not save your choice. Calling still works.' : 'Call measurement is off. Calling still works.');
         // Phone Call Conversions does not support Consent Mode. Unload its code.
         if (state.started && savedChoice) location.reload();
-        else if (state.started) status.textContent = 'Close this page to finish stopping measurement; this browser could not save your withdrawal.';
+        else if (state.started) tell('Close this page to finish stopping measurement; this browser could not save your withdrawal.');
       }
     };
-    for (const button of panel.querySelectorAll('[data-ad-call-choice]')) {
+    for (const button of panel?.querySelectorAll('[data-ad-call-choice]') || []) {
       button.addEventListener('click', () => choose(button.dataset.adCallChoice));
       if (blocked() && button.dataset.adCallChoice === 'accepted') button.disabled = true;
     }

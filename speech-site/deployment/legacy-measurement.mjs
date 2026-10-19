@@ -40,7 +40,7 @@ export function migrateLegacyPrefix(prefix,request,{preserveGtm=false}={}){
  // A tiny, permission-checked fixed-event queue captures native early contact.
  // Both full installers are deferred until parsing, never window.load. Controls
  // remain reachable in the footer instead of displacing the parent journey.
- const controls='<aside aria-label="Optional measurement preferences" style="display:flex;flex-wrap:wrap;align-items:start;background:#fff">'+(preserveGtm?panel.replace('fixed knowledge-library identity','fixed public-page identity'):panel)+publicAdCallMarkup.replace('padding:16px','flex:1;min-width:150px;padding:4px 12px').replace('margin-bottom:88px','margin-bottom:0')+'</aside>';
+ const controls='<details aria-label="Optional measurement preferences" class="measurement-preference-centre" style="box-sizing:border-box;background:#fff;color:#18233f;padding:8px 12px"><summary style="min-height:44px;cursor:pointer;font-weight:700">Privacy and optional measurement</summary><div>'+(preserveGtm?panel.replace('fixed knowledge-library identity','fixed public-page identity'):panel)+publicAdCallMarkup+'</div></details>';
  const inserted=(preserveGtm?'':'<script data-pinnacle-legacy-collector="early-v3">'+earlyCapture+'</script>')+'<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=legacy-cohorts-20261011-v3"></script><script type="module" src="'+PUBLIC_AD_CALL_PATH+'"></script>';
  result=result.replace(/<body\b([^>]*)>/i,(_,attributes)=>'<body'+attributes+' data-page-variant="'+(preserveGtm?'legacy_public_template':'legacy_knowledge')+'" data-pinnacle-legacy-measurement="'+scope+'">'+inserted);
  return {scope,html:result,controls,preserveGtm,removed:tags.filter(tag=>!(preserveGtm&&isKnownGtmLoader(tag))).length};

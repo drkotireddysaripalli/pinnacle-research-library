@@ -11,7 +11,7 @@
   ].includes(path);
   if (location.protocol !== 'https:' || location.hostname !== 'www.pinnacleblooms.org' || !safePath(location.pathname)) return;
   const panelAnchor = document.querySelector('[data-speech-measurement]');
-  if (!panelAnchor || document.querySelector('script.ct_clicktrue_102663')) return;
+  if (document.querySelector('script.ct_clicktrue_102663')) return;
   const state = window.__pinnacleCheq = {started:false,enabled:false,responses:0};
   const key = 'pinnacle-cheq-consent-v1', lifetime = 90 * 86400000;
   const blocked = () => navigator.globalPrivacyControl === true;
@@ -25,12 +25,10 @@
       return ['google.com','www.google.com','google.co.in','www.google.co.in','bing.com','www.bing.com','duckduckgo.com','www.duckduckgo.com','www.facebook.com','m.facebook.com','l.facebook.com','www.instagram.com','l.instagram.com','www.linkedin.com','t.co'].includes(ref.hostname);
     } catch { return false; }
   };
-  const panel = document.createElement('details');
-  panel.className = 'measurement-settings portal-measurement';
-  panel.setAttribute('data-cheq-preferences','');
-  panel.innerHTML = '<summary>Optional invalid-traffic measurement</summary><p>With your permission, CHEQ uses browser and device signals, advertising identifiers and cookies to measure invalid visits on our public landing pages. It helps us review advertising traffic. We exclude URL queries and private reading, sign-in, enquiry-form and checkout pages. This does not verify a person or decide whether they can contact Pinnacle.</p><div><button type="button" data-cheq-choice="accepted">Allow traffic measurement</button><button type="button" data-cheq-choice="declined">Keep traffic measurement off</button></div><p data-cheq-status role="status">Traffic measurement is off until you choose.</p>';
-  panelAnchor.insertAdjacentElement('afterend',panel);
-  const status = panel.querySelector('[data-cheq-status]');
+  const panel = document.querySelector('[data-cheq-preferences]');
+  if(panel) panel.hidden=false;
+  const status = panel?.querySelector('[data-cheq-status]');
+  const tell = text => { if(status) status.textContent = text; };
   const clearCookies = () => {
     for (const item of document.cookie.split(';')) {
       const name = item.trim().split('=')[0];
@@ -45,9 +43,9 @@
     if (persist) try {localStorage.setItem(key,JSON.stringify({value,at:Date.now()}));saved = JSON.parse(localStorage.getItem(key))?.value === value;} catch {}
     if (value !== 'accepted' || blocked() || !saved || !safeContext()) {
       state.enabled = false; clearCookies();
-      status.textContent = blocked() ? 'Traffic measurement is off because Global Privacy Control is enabled.' : !safeContext() ? 'Traffic measurement stays off for this page context. Calling and enquiries still work.' : 'Traffic measurement is off. Calling and enquiries still work.';
+      tell(blocked() ? 'Traffic measurement is off because Global Privacy Control is enabled.' : !safeContext() ? 'Traffic measurement stays off for this page context. Calling and enquiries still work.' : 'Traffic measurement is off. Calling and enquiries still work.');
       if (state.started && saved) location.reload();
-      else if (state.started) status.textContent = 'Close this page to finish stopping traffic measurement; this browser could not save your withdrawal.';
+      else if (state.started) tell('Close this page to finish stopping traffic measurement; this browser could not save your withdrawal.');
       return;
     }
     state.enabled = true;
@@ -64,11 +62,11 @@
     // absent from both removes every query parameter; fragments are excluded above.
     script.setAttribute('data-include-qs','__pinnacle_no_query_parameter__');
     script.referrerPolicy = 'no-referrer';
-    script.onerror = () => {state.enabled=false;status.textContent='Traffic measurement is unavailable. Calling and enquiries still work.';};
+    script.onerror = () => {state.enabled=false;tell('Traffic measurement is unavailable. Calling and enquiries still work.');};
     document.head.appendChild(script);
-    status.textContent = 'Optional traffic measurement is on. You can turn it off here.';
+    tell('Optional traffic measurement is on. You can turn it off here.');
   };
-  panel.querySelectorAll('[data-cheq-choice]').forEach(button => {
+  (panel?.querySelectorAll('[data-cheq-choice]') || []).forEach(button => {
     button.addEventListener('click',() => choose(button.dataset.cheqChoice));
     if (blocked() && button.dataset.cheqChoice === 'accepted') button.disabled = true;
   });
