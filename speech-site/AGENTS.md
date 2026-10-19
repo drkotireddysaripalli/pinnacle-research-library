@@ -1,5 +1,9 @@
 # Therapy page development and independent review
 
+## Current release ownership — 19 October 2026
+
+The direct founder transfer recorded in `../PORTAL-OWNERSHIP.md` makes Mac Web Build thread `01a11e24-3e7f-7802-8384-a6bd83d7a7a9` the end-to-end integration and production release owner. It supersedes older Windows-only release and Mac-no-deployment instructions below and in dated handoffs. Windows supports implementation and read-only review. Keep one actor per live mutation and preserve every existing account, budget, security, protected-service, held-centre, privacy and evidence boundary.
+
 ## Authorized Mac implementation teams — 9 October 2026
 
 The owner now authorizes two scoped Mac implementation chats, coordinated by the existing Mac build chat. Read `team-kt-20261009/README.md` and `TEAM-CONTRACTS.md`. Search Engineering and Page Engineering may edit their assigned source on separate working branches/copies; they are not read-only reviewers. This bounded instruction supersedes older single-implementation wording below. The website owner retains integration and production deployment, shared route/auth/receiver/consent changes and founder-facing narrative/design decisions. Do not create a team per tool, duplicate paid test runs, recreate stopped growth schedules, or concurrently modify the same shared file. At most two independent implementation batches run; each must return a concrete tested patch and exact evidence. Existing independent reviewers remain read-only and bounded.

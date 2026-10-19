@@ -1,5 +1,9 @@
 # Integrated Pinnacle portal: one code and release owner
 
+## Current integration and production owner — 19 October 2026
+
+By direct founder instruction, the existing Mac Web Build thread `01a11e24-3e7f-7802-8384-a6bd83d7a7a9` now owns end-to-end website integration, routine production release, live verification and rollback. The Windows website thread `01a0ef6b-507a-7630-828f-7ac81852a39c` supports implementation and read-only review and must not publish a competing production version. This explicitly supersedes every older Windows-only release, Mac-no-deployment and source-READY-to-Windows rule in this repository. Use one release actor for each live mutation. Existing account, budget, security, protected-service, held-centre, privacy and evidence boundaries remain in force.
+
 ## Mac engineering execution — owner instruction, 9 October 2026
 
 The founder has authorized two Mac implementation teams plus the existing Mac build coordinator to work on this canonical codebase. Read the [portable KT and team contracts](speech-site/team-kt-20261009/README.md). Search Engineering owns scoped shared search repairs; Page Engineering begins the native homepage and later continues the existing PinnacleAI design. These are authorized source-editing teams, distinct from read-only reviewers. Each uses a separate working branch/copy and delivers reviewed commits to the same `main`; they do not concurrently write the same checkout. The existing website chat retains product/narrative decisions, integration and sole production-release authority until an explicit transfer with verified readiness. Older single-implementation wording below applies subject to this bounded exception. Shared routing, deployment, authentication, receiving API, consent and common-shell changes remain coordinated through the integration owner. No new scheduler or duplicate tool-specific teams are authorized by this setup.

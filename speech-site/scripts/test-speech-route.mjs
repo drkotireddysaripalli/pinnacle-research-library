@@ -98,8 +98,8 @@ test('book PDF previews serve PDF MIME for browser readers on GET and HEAD',asyn
  for(const method of ['GET','HEAD']){const response=await serveSpeech(request(path,{method}),sampleEnv,sampleInventory);assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'application/pdf');assert.equal(response.headers.get('x-content-type-options'),'nosniff');assert.equal(await response.text(),method==='HEAD'?'':'%PDF-fixture');}
 });
 
-test('common sitemap and analytics use the live union rather than bundled therapy snapshots',async()=>{
- const bodies={'/pinnacle-pages-data/speech-sitemap.xml':'<urlset><url><loc>https://www.pinnacleblooms.org/centers/current-centre</loc></url></urlset>','/pinnacle-pages-scripts/speech-measurement.js':'/* current common analytics */'};
+test('common sitemap uses the live union while analytics uses the exact guarded overlay',async()=>{
+ const bodies={'/pinnacle-pages-data/speech-sitemap.xml':'<urlset><url><loc>https://www.pinnacleblooms.org/centers/current-centre</loc></url></urlset>'};
  const current={ASSETS:{fetch:async r=>new Response(r.method==='HEAD'?null:bodies[new URL(r.url).pathname])}};
  for(const [key,body]of Object.entries(bodies)){
   const response=await serveSpeech(request(key),current,inventory);
@@ -110,6 +110,9 @@ test('common sitemap and analytics use the live union rather than bundled therap
  }
  const missing=await serveSpeech(request('/pinnacle-pages-data/speech-sitemap.xml'),{ASSETS:{fetch:async()=>new Response('missing',{status:404})}},inventory);
  assert.equal(missing.status,503,'Do not disguise a missing live sitemap with an old snapshot');
+ const measurement=await serveSpeech(request('/pinnacle-pages-scripts/speech-measurement.js'),current,inventory);
+ assert.equal(await measurement.text(),readFileSync(new URL('../public/pinnacle-pages-scripts/speech-measurement.js',import.meta.url),'utf8'));
+ assert.equal(measurement.headers.get('x-pinnacle-script-release'),'book-attribution-20261004');
 });
 test('the approved CHEQ diagnostic can create its browser worker without broad external worker access',async()=>{
  const response=await serveSpeech(request(canonical),env,inventory);

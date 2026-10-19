@@ -1,5 +1,7 @@
 # Mac continuation and release handoff — 19 October 2026
 
+> **Current owner:** by the later direct founder transfer on 19 October 2026, this Mac Web Build thread owns end-to-end integration, production release, live verification and rollback. `../../PORTAL-OWNERSHIP.md` is authoritative. All Windows-only release, Mac-no-deployment and source-READY-to-Windows wording below is superseded.
+
 ## Mandate, source and release ownership
 
 The founder authorised the existing Mac coordinator to continue building from current main, finish PR123 first, then the remaining website releases. This is the current delta to the existing team KT, not a replacement project or a second release owner.

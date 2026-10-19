@@ -56,7 +56,9 @@ for(const campaign of campaigns){
   const first=client({search:tagged(campaign)});first.choose('accepted');
   const captured=JSON.parse(first.store.get(sourceKey));first.advance(5000);first.choose('accepted');assert.deepEqual(JSON.parse(first.store.get(sourceKey)),captured);
   const form=client({path:enrol,store:first.store,now:Date.now()+6000});assert.equal(form.source(),null);form.choose('accepted');assert.deepEqual(form.source(),captured);
-  const config=form.commands().find(x=>x[0]==='config'&&x[1]==='G-2BYLRLFRDJ')[2];assert.equal(config.campaign_name,campaign);
+  const configs=form.commands().filter(x=>x[0]==='config'&&x[1]==='G-2BYLRLFRDJ').map(x=>x[2]);
+  assert.equal(configs[0].campaign_name,'','The fresh denied-storage configuration must not export optional campaign labels');
+  const config=configs.at(-1);assert.equal(config.campaign_name,campaign);
   // Enrolment joins the ordinary public-site session; the separate helpline
   // consent and stream still gate its optional campaign envelope above.
   assert.equal(config.cookie_prefix,'ps');assert.equal(config.cookie_path,'/');
