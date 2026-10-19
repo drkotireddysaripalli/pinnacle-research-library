@@ -238,6 +238,8 @@ jobs:
           key: ${{ secrets.TESTINGBOT_KEY }}
           secret: ${{ secrets.TESTINGBOT_SECRET }}
           tunnelIdentifier: portal-${{ github.run_id }}-${{ github.run_attempt }}
+          tbVersion: '5.0'
+          fastFailRegexps: '^google-analytics\.com$,^www\.google-analytics\.com$,^region1\.google-analytics\.com$,^region2\.google-analytics\.com$,^googletagmanager\.com$,^www\.googletagmanager\.com$,^analytics\.google\.com$,^googleadservices\.com$,^www\.googleadservices\.com$,^pagead2\.googlesyndication\.com$,^googleads\.g\.doubleclick\.net$,^stats\.g\.doubleclick\.net$,^ad\.doubleclick\.net$,^td\.doubleclick\.net$,^google\.com$,^www\.google\.com$,^google\.co\.in$,^www\.google\.co\.in$,^clickguard\.com$,^www\.clickguard\.com$,^cdn\.clickguard\.com$,^api\.clickguard\.com$,^scripts\.clickguard\.com$,^protect\.pinnacleblooms\.org$,^ob\.aseasky\.link$,^www\.clarity\.ms$,^c\.clarity\.ms$,^static\.hotjar\.com$,^script\.hotjar\.com$,^connect\.facebook\.net$,^www\.facebook\.com$,^api\.whatsapp\.com$'
           noCache: true
           retryTimeout: 2
           readyTimeout: 90

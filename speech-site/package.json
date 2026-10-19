@@ -22,7 +22,7 @@
     "test:p2": "node scripts/testingbot-suite.mjs --suite p2 --network",
     "test:p3": "node scripts/testingbot-records.mjs --suite p3",
     "test:all-pages": "node scripts/testingbot-records.mjs --suite all",
-    "test:testingbot-contract": "node --test scripts/test-testingbot-contract.mjs",
+    "test:testingbot-contract": "node --test scripts/test-testingbot-contract.mjs scripts/test-testingbot-native-policy.mjs",
     "test:daily": "node scripts/testingbot-daily.mjs",
     "verify:seo-shared": "node scripts/verify-seo-shared-repairs.mjs",
     "check:page": "node scripts/check-page.mjs",
