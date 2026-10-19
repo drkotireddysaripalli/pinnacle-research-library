@@ -17,7 +17,7 @@ Understand enquiries, informed choices, service arrangements and the terms to co
 Version: 2026-10-01.1
 
 ## [Cookie & Website Technology Policy](https://www.pinnacleblooms.org/cookie-policy)
-How managed pages use optional analytics preferences, technical services and browser storage.
+How managed pages use limited cookieless measurement, optional analytics preferences, technical services and browser storage.
 Version: 2026-10-01.1
 
 ## [Copyright & Intellectual Property](https://www.pinnacleblooms.org/copyright-and-intellectual)

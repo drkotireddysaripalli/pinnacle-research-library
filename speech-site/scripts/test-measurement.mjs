@@ -22,7 +22,7 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({contact=false,callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null,panelMissing=false,statusMissing=false}={}){
+function harness({contact=false,callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null,panelMissing=false,statusMissing=false,preConsent=null}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[],dispatched=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
@@ -31,6 +31,7 @@ function harness({contact=false,callback=false,origin='https://www.pinnaclebloom
  doc.dispatchEvent=event=>{dispatched.push(event);listeners[event.type]?.(event);return true;};
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={__qaProgress:detail=>listeners['pinnacle:enquiry-progress']?.({detail}),addEventListener:(event,fn)=>{const previous=listeners['window:'+event];listeners['window:'+event]=data=>{previous?.(data);fn(data);};}};
+ if(preConsent){win.dataLayer=[];win.gtag=function(){win.dataLayer.push(arguments);};win.__pinnacleConsentDefaults=true;win.gtag('consent','update',preConsent);}
  class FakePerformanceObserver{constructor(callback){this.callback=callback;}observe(options){this.callback({getEntries:()=>performanceEntries?.[options.type]||[]});}disconnect(){}}
  const testMath=Object.create(Math);testMath.random=()=>0;const privacy={globalPrivacyControl:gpc};
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:privacy,localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Event,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
@@ -79,7 +80,8 @@ test('verified numeric campaign IDs have public, collector and receiver parity o
   const acquisition=JSON.parse(JSON.stringify(h.win.pinnacleEnquirySource()));
   assert.equal(acquisition.fields.utm_id,id);
   assert.deepEqual(normaliseAcquisition(acquisition),acquisition);
-  assert.equal(h.events().find(e=>e[1]==='page_view')[2].campaign_id,id);
+  const view=h.events().find(e=>e[1]==='page_view');assert.equal(view[2].campaign_id,undefined);assert.equal(view[2].measurement_mode,'denied_storage');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).filter(x=>x[0]==='config').at(-1)[2];assert.equal(config.campaign_id,id);
  }
  for(const value of ['9100181181','919100181181','9876543210','24332444157','24332444156.0','+24332444156','phone_24332444156','child_id_24332444156','name@example.test']){
   assert.equal(safeAcquisitionValue(value,'utm_id'),null,value);
@@ -150,7 +152,7 @@ test('late SDK consumers get a boolean permission recheck and payload-free refus
 test('reviewed legacy templates use one opt-in collector and a coarse assessment identity',()=>{
  for(const [path,coarse]of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses'],['/certified-courses/','/certified-courses']]){
   const h=harness({path,variant:'legacy_public_template',search:'?utm_source=google&utm_medium=cpc&utm_id=24332444156&name=PRIVATE_FIXTURE'});
-  assert.equal(h.events().filter(e=>e[1]==='page_view').length,0);assert.equal(h.win.pinnacleProtectionAllowed(),false);
+  assert.equal(h.events().filter(e=>e[1]==='page_view').length,1);assert.equal(h.events()[0][2].measurement_mode,'denied_storage');assert.equal(h.win.pinnacleProtectionAllowed(),false);
   assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'),'Existing minimal denied-storage Ads semantics remain unchanged');
   h.choose('accepted');h.click('footer-call','tel:+919100181181');
   const view=h.events().find(e=>e[1]==='page_view');assert.equal(new URL(view[2].page_location).pathname,coarse);
@@ -169,7 +171,8 @@ test('only the reviewed courses slash alias gains consented collector and protec
  h.choose('accepted');assert.equal(h.win.pinnacleProtectionAllowed(),true);
  assert.equal(h.localScripts.filter(s=>s.src?.includes('/protection-consumer.mjs')).length,1);
  assert.equal(h.win.pinnacleEnquirySource().landingPath,'/certified-courses');
- const view=h.events().find(e=>e[1]==='page_view'),location=new URL(view[2].page_location);assert.equal(location.pathname,'/certified-courses');assert.equal(location.searchParams.get('utm_id'),'24332444156');
+ const view=h.events().find(e=>e[1]==='page_view'),location=new URL(view[2].page_location);assert.equal(location.pathname,'/certified-courses');assert.equal(location.search,'');
+ const config=Array.from(h.win.dataLayer,x=>Array.from(x)).filter(x=>x[0]==='config').at(-1)[2];assert.equal(new URL(config.page_location).searchParams.get('utm_id'),'24332444156');
  h.click('footer-call','tel:+919100181181');assert.deepEqual(JSON.parse(JSON.stringify(protectionSignals(h))),[{event:'pinnacle_contact_intent'}]);
  h.choose('declined');assert.equal(h.win.pinnacleProtectionAllowed(),false);assert(h.dispatched.some(e=>e.type==='pinnacle_protection_cancel'));
  for(const opts of [{gpc:true},{search:'?validation_test=1'},{search:'?utm_campaign=PINNACLE_QA_ONLY'},{search:'?name=PRIVATE_FIXTURE'},{saved:{value:'accepted',at:1}}]){
@@ -182,7 +185,7 @@ test('only the reviewed courses slash alias gains consented collector and protec
 test('homepage uses the shared stream with populated reporting dimensions',()=>{
  const h=harness({path:'/',search:''});h.choose('accepted');
  const pageView=h.events().find(event=>event[1]==='page_view');
- assert.equal(pageView[2].page_group,'home');assert.equal(pageView[2].measurement_mode,'consented');
+ assert.equal(pageView[2].page_group,'home');assert.equal(pageView[2].measurement_mode,'denied_storage');
  h.click('hero-call','tel:+919100181181');
  const phone=h.events().find(event=>event[1]==='phone_link_click');
  assert.equal(phone[2].link_placement,'hero-call');assert.equal(phone[2].destination,'national_helpline');assert.equal(phone[2].measurement_mode,'consented');
@@ -308,12 +311,13 @@ test('book acquisition sends a known origin, never referring paths, queries or a
   const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.ignore_referrer,!expected);
   assert(!JSON.stringify(h.win.dataLayer).includes('private'));assert.equal(config.campaign_term,'');
  }
- const therapy=harness({referrer:'https://www.google.com/search?q=private'});therapy.choose('accepted');assert.equal(therapy.events()[0][2].page_referrer,'https://www.google.com/');
+ const therapy=harness({referrer:'https://www.google.com/search?q=private'});therapy.choose('accepted');assert.equal(therapy.events()[0][2].page_referrer,'');
+ const therapyConfig=Array.from(therapy.win.dataLayer,x=>Array.from(x)).filter(x=>x[0]==='config').at(-1)[2];assert.equal(therapyConfig.page_referrer,'https://www.google.com/');
 });
 
 test('free resource downloads need consent and carry only the fixed resource identity',()=>{
  const h=harness({path:'/books/resources/first-conversation'}),pdf='/books/resources/Pinnacle-First-Conversation-v1.pdf';
- h.click('resource-download',pdf);assert.equal(h.events().length,0);
+ h.click('resource-download',pdf);assert.deepEqual(h.events().map(e=>e[1]),['page_view']);assert.equal(h.events()[0][2].measurement_mode,'denied_storage');
  h.choose('accepted');h.click('resource-download',pdf);h.click('final-call','tel:+919100181181');
  assert.deepEqual(h.events().map(e=>e[1]),['page_view','resource_download_click','phone_link_click']);
  assert.equal(h.events()[1][2].resource_id,'first_conversation_v1');assert(!JSON.stringify(h.events()).includes('private-child-detail'));
@@ -337,15 +341,19 @@ test('bookshop direct contact links count once after consent without exporting W
   const blocked=harness({path:'/shop',commerceCatalogue,...options});blocked.choose('accepted');blocked.click(undefined,whatsapp);blocked.click(undefined,'tel:+919100181181');assert.equal(blocked.events().length,0);
  }
 });
-test('central WhatsApp contact taps on managed journeys use one exact event after consent',()=>{
+test('central WhatsApp contact taps use denied storage when eligible, then consent without private text',()=>{
  const cases=[{}, {path:'/enroll-autism-speech-aba-therapies-india'}, {path:'/centers'}, {path:'/faq',variant:'knowledge'}, {origin:'https://pinnacleblooms.org',path:'/ask/a-private-question',variant:'ask'}];
  const links=['https://wa.me/919100181181?text=INVENTED_PRIVATE_CHILD&source=private-value','https://api.whatsapp.com/send?phone=919100181181&text=INVENTED_PRIVATE_CHILD','https://api.whatsapp.com/send?phone=%2B919100181181'];
  for(const options of cases) {
-  const h=harness(options);for(const href of links)h.click(undefined,href);assert.equal(h.events().length,0);
+  const h=harness(options);for(const href of links)h.click(undefined,href);
+  const limited=!options.variant;
+  assert.deepEqual(h.events().map(e=>e[1]),limited?['page_view','whatsapp_link_click','whatsapp_link_click','whatsapp_link_click']:[]);
+  if(limited)assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'));
   h.choose('accepted');
   for(const href of links)h.click('footer-whatsapp',href);
-  assert.deepEqual(h.events().map(e=>e[1]),['page_view','whatsapp_link_click','whatsapp_link_click','whatsapp_link_click']);
-  assert(h.events().slice(1).every(e=>e[2].link_placement==='footer-whatsapp'&&e[2].destination==='national_helpline'));
+  assert.equal(h.events().filter(e=>e[1]==='page_view').length,1);
+  assert.equal(h.events().filter(e=>e[1]==='whatsapp_link_click').length,limited?6:3);
+  assert(h.events().slice(-3).every(e=>e[2].link_placement==='footer-whatsapp'&&e[2].destination==='national_helpline'&&e[2].measurement_mode==='consented'));
   h.click('INVENTED_PRIVATE_PLACEMENT','https://wa.me/919100181181');
   assert.equal(h.events().at(-1)[2].link_placement,'central-whatsapp');
   const before=h.events().length;
@@ -361,7 +369,8 @@ test('central WhatsApp contact taps on managed journeys use one exact event afte
 test('consented campaign attribution retains safe allowlisted fields on coarse public identities',()=>{
  const search='?utm_source=google&utm_medium=cpc&utm_campaign=Hyderabad_Speech&utm_id=PBN-20261008&utm_term=speech%20therapy&utm_content=hero_A&utm_source_platform=google_ads&utm_creative_format=search&utm_marketing_tactic=assessment&gclid=test123&gbraid=GBRAID-fixture_A&wbraid=WBRAID-fixture_B&fbclid=FBCLID-fixture_C&msclkid=MSCLKID-fixture_D&dclid=DCLID-fixture_E&q=INVENTED_PRIVATE_SEARCH&child=INVENTED_CHILD&phone=%2B919999999999#INVENTED_FRAGMENT';
  for(const options of [{},{origin:'https://pinnacleblooms.org',path:'/ask/INVENTED_PRIVATE_TOPIC',variant:'ask'},{path:'/sunshine/INVENTED_PRIVATE_TOPIC',variant:'knowledge'}]) {
-  const h=harness({...options,search:options.variant==='knowledge'?search.replace('&q=INVENTED_PRIVATE_SEARCH',''):search});assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival']);assert.equal(h.events()[0][2].measurement_mode,'denied_storage');h.choose('accepted');
+  const h=harness({...options,search:options.variant==='knowledge'?search.replace('&q=INVENTED_PRIVATE_SEARCH',''):search});
+  assert.deepEqual(h.events().map(e=>e[1]),options.variant?['google_ads_arrival']:['page_view','google_ads_arrival']);assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'));h.choose('accepted');
   const config=Array.from(h.win.dataLayer,x=>Array.from(x)).filter(x=>x[0]==='config').at(-1)[2];
   const u=new URL(config.page_location);
   assert.equal(u.searchParams.get('gclid'),'test123');assert.equal(u.searchParams.get('utm_source'),'google');assert.equal(u.searchParams.get('utm_medium'),'cpc');
@@ -370,7 +379,9 @@ test('consented campaign attribution retains safe allowlisted fields on coarse p
   for(const name of ['q','child','phone'])assert(!u.searchParams.has(name));assert.equal(u.hash,'');
   assert.equal(config.campaign_source,'google');assert.equal(config.campaign_medium,'cpc');assert.equal(config.campaign_name,'Hyderabad_Speech');assert.equal(config.campaign_id,'PBN-20261008');assert.equal(config.campaign_term,'speech therapy');assert.equal(config.campaign_content,'hero_A');
   assert.equal(config.allow_google_signals,false);assert.equal(config.allow_ad_personalization_signals,false);
-  assert.equal(h.events().find(e=>e[1]==='page_view')[2].page_location,config.page_location);assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_'));
+  const view=h.events().find(e=>e[1]==='page_view');
+  if(options.variant)assert.equal(view[2].page_location,config.page_location);else{assert.equal(view[2].page_location,'https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate');assert.equal(view[2].campaign_source,undefined);}
+  assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_'));
   h.choose('declined');const before=h.events().length;h.click(undefined,'https://wa.me/919100181181');assert.equal(h.events().length,before);
  }
  // Search-result journeys remain uninstrumented even with valid attribution.
@@ -379,7 +390,7 @@ test('consented campaign attribution retains safe allowlisted fields on coarse p
  }
  // Public channel/device labels are valid values, not personal contact details.
  const publicLabels=harness({search:'?utm_source=email&utm_medium=mobile&utm_campaign=Public_Report&utm_content=mobile_hero'});publicLabels.choose('accepted');
- const labels=Array.from(publicLabels.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+ const labels=Array.from(publicLabels.win.dataLayer,x=>Array.from(x)).filter(x=>x[0]==='config').at(-1)[2];
  assert.equal(labels.campaign_source,'email');assert.equal(labels.campaign_medium,'mobile');assert.equal(labels.campaign_name,'Public_Report');assert.equal(labels.campaign_content,'mobile_hero');
 });
 test('unsafe, duplicate and oversized attribution is omitted without exporting private values',()=>{
@@ -423,12 +434,59 @@ test('knowledge consent works with only family buckets and no sensitive content'
   const h=harness({path:'/faq',variant:'knowledge',...opts});h.choose('accepted');assert.equal(h.events().length,0);assert.equal(h.writes.length,0);
  }
 });
-test('no analytics before consent; valid consent sends only fixed CTA fields',()=>{
- const h=harness();h.click('hero-call','tel:+919100181181');assert.equal(h.scripts.length,0);assert.equal(h.events().length,0);
- h.choose('accepted');assert.equal(h.scripts.length,1);h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry');h.click('header-enrol','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india');
- assert.deepEqual(h.events().map(x=>x[1]),['page_view','phone_link_click','enquiry_link_click','enquiry_link_click']);
+test('fresh public measurement is cookieless and fixed before consent; acceptance does not duplicate the page view',()=>{
+ const assessment='https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry';
+ const h=harness();assert.equal(h.scripts.length,1);assert.deepEqual(h.events().map(e=>e[1]),['page_view']);h.click('hero-call','tel:+919100181181');h.click('hero-whatsapp','https://wa.me/919100181181?text=PRIVATE_MESSAGE');h.click('hero-assessment',assessment);
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click','whatsapp_link_click','enquiry_link_click']);assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'));
+ h.choose('accepted');assert.equal(h.scripts.length,1);h.click('hero-call','tel:+919100181181');h.click('hero-assessment',assessment);h.click('header-enrol','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india');
+ assert.deepEqual(h.events().map(x=>x[1]),['page_view','phone_link_click','whatsapp_link_click','enquiry_link_click','phone_link_click','enquiry_link_click','enquiry_link_click']);
+ assert.equal(h.events().filter(e=>e[1]==='page_view').length,1);assert(h.events().slice(4).every(e=>e[2].measurement_mode==='consented'));
  const serialized=JSON.stringify(h.win.dataLayer);assert.ok(!serialized.includes('private-child-detail'));assert.ok(!serialized.includes('gclid'));assert.ok(!serialized.includes('secret'));
+ assert.ok(!serialized.includes('PRIVATE_MESSAGE'));
  assert.ok(h.events().every(x=>x[2].page_referrer===''&&!x[2].page_location.includes('?')));
+});
+
+test('limited-mode status is shown only when its automatic page view was queued',()=>{
+ const active=harness({search:''});assert.match(active.status.textContent,/Limited cookieless measurement is active/);assert.deepEqual(active.events().map(e=>e[1]),['page_view']);
+ const excluded=[
+  harness({origin:'https://pinnacleblooms.org',path:'/ask/private-topic',variant:'ask',search:''}),
+  harness({path:'/faq/private-topic',variant:'knowledge',search:''}),
+  harness({path:'/books',search:''}),
+  harness({search:'?validation_test=1'}),
+  harness({origin:'http://127.0.0.1:4340',search:''})
+ ];
+ for(const h of excluded){assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);assert.doesNotMatch(h.status.textContent,/Limited cookieless measurement is active/);}
+ const unavailable=harness({search:'',tagLoadThrows:true});assert.equal(unavailable.events().length,0);assert.equal(unavailable.scripts.length,0);assert.match(unavailable.status.textContent,/unavailable/);assert.doesNotMatch(unavailable.status.textContent,/ is active/);
+});
+
+test('fresh denied-storage payload is coarse and refusal or invalid prior state never becomes fresh permission',()=>{
+ const fresh=harness({search:'?utm_source=google&utm_medium=cpc&gclid=PRIVATE_CLICK&name=PRIVATE_CHILD',referrer:'https://www.google.com/search?q=PRIVATE_CONCERN'});
+ assert.deepEqual(fresh.events().map(e=>e[1]),['page_view','google_ads_arrival']);
+ const view=fresh.events()[0][2];assert.deepEqual(Object.keys(view).sort(),['measurement_mode','page_group','page_location','page_referrer','page_title','page_variant','schema_version','send_to','transport_type'].sort());
+ assert.equal(view.measurement_mode,'denied_storage');assert.equal(view.page_location,'https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate');assert.equal(view.page_referrer,'');
+ const defaults=Array.from(fresh.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='consent'&&x[1]==='default')[2];
+ assert.deepEqual(JSON.parse(JSON.stringify(defaults)),{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+ assert.equal(fresh.writes.length,0);assert.equal(fresh.cookies.length,0);assert(!JSON.stringify(fresh.win.dataLayer).includes('PRIVATE_'));
+ const staleDeclined={value:'declined',at:Date.now()-181*86400000},expiredAccepted={value:'accepted',at:Date.now()-181*86400000},futureAccepted={value:'accepted',at:Date.now()+86400000};
+ const cases=[
+  ['stale-refusal',{saved:staleDeclined}],['expired-acceptance',{saved:expiredAccepted}],['future-acceptance',{saved:futureAccepted}],
+  ['malformed',{sharedStore:new Map([[key,'{not-json']])}],['unknown-shape',{sharedStore:new Map([[key,JSON.stringify({value:'accepted'})]])}],['unavailable',{storageThrows:true}]
+ ];
+ for(const [label,options] of cases){
+  const h=harness({...options,search:'?gclid=PRIVATE_CLICK'});h.click('hero-call','tel:+919100181181');h.accepted();
+  assert.equal(h.events().length,0,label);assert.equal(h.scripts.length,0,label);assert.equal(h.win.pinnacleEnquirySource(),null,label);
+ }
+});
+
+test('analytics limited mode preserves an independently granted advertising-call purpose',()=>{
+ const aw={ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'};
+ const state=h=>{const value={};for(const command of h.win.dataLayer||[])if(command[0]==='consent')Object.assign(value,command[2]);return value;};
+ const fresh=harness({preConsent:aw,search:'?gclid=qaClick123&name=PRIVATE_CHILD'});
+ assert.deepEqual(fresh.events().map(e=>e[1]),['page_view','google_ads_arrival']);assert.equal(state(fresh).analytics_storage,'denied');assert.equal(state(fresh).ad_storage,'granted');assert.equal(state(fresh).ad_user_data,'granted');
+ assert(!JSON.stringify(fresh.events()[0]).includes('PRIVATE_'));assert(!JSON.stringify(fresh.events()[0]).includes('qaClick123'));assert.equal(new URL(fresh.events()[0][2].page_location).search,'');
+ fresh.choose('accepted');assert.equal(fresh.events().filter(e=>e[1]==='page_view').length,1);assert.equal(state(fresh).analytics_storage,'granted');assert.equal(state(fresh).ad_storage,'granted');assert.equal(state(fresh).ad_user_data,'granted');
+ fresh.choose('declined');const before=fresh.events().length;fresh.click('hero-call','tel:+919100181181');assert.equal(fresh.events().length,before);assert.equal(state(fresh).analytics_storage,'denied');assert.equal(state(fresh).ad_storage,'granted');assert.equal(state(fresh).ad_user_data,'granted');
+ const refused=harness({preConsent:aw,saved:{value:'declined',at:Date.now()},search:''});refused.click('hero-call','tel:+919100181181');assert.equal(refused.events().length,0);assert.equal(refused.scripts.length,0);assert.equal(state(refused).ad_storage,'granted');assert.equal(state(refused).ad_user_data,'granted');
 });
 
 test('accepted enquiries send one fixed consented event on the enrolment route only',()=>{
@@ -465,10 +523,10 @@ test('all verified centre links are measured after consent without exporting cen
  const ids=JSON.parse(source.match(/const centreIds = (\[[^\n]+\]);/)[1]);
  assert.deepEqual(ids,centres.map(c=>c.id));
  const h=harness();const href=id=>'https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment&centre='+id+'#speech-assessment-enquiry';
- h.click('centre-enquiry',href('annanagar'));assert.equal(h.events().length,0);
+ h.click('centre-enquiry',href('annanagar'));assert.deepEqual(h.events().map(e=>e[1]),['page_view','enquiry_link_click']);assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'));
  h.choose('accepted');for(const c of centres)h.click('centre-enquiry',href(c.id));
  for(const placement of ['directory-national-call','centre-national-call','centre-enquiry'])h.click(placement,'tel:+919100181181');
- assert.equal(h.events().filter(x=>x[1]==='enquiry_link_click').length,59);
+ assert.equal(h.events().filter(x=>x[1]==='enquiry_link_click').length,60);
  assert.equal(h.events().filter(x=>x[1]==='phone_link_click').length,3);
  const count=h.events().length;h.click('centre-enquiry',href('unverified'));h.click('centre-enquiry',href('annanagar').replace('#','&name=private#'));h.click('centre-enquiry',href('annanagar').replace('www.pinnacleblooms.org','evil.example'));
  assert.equal(h.events().length,count);assert(!JSON.stringify(h.events()).includes('centre='));assert(!JSON.stringify(h.events()).includes('annanagar'));
@@ -527,13 +585,15 @@ test('rendered occupational actions emit coarse consented events and no private 
  for(const expected of ['ot-hero-call','ot-first-call','ot-final-call','ot-final-enrol','ot-final-centres','ot-share-whatsapp'])assert(placements.has(expected),`OT action ${expected} is absent from rendered HTML`);
  const h=harness({path:'/best-occupational-therapy-center-india-proven-improvement-rate'});
  for(const [placement,href] of links)h.click(placement,href);
- assert.equal(h.events().length,0);
+ assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','phone_link_click','phone_link_click','enquiry_link_click']);
+ assert(h.events().every(event=>event[2].measurement_mode==='denied_storage'));
  h.choose('accepted');for(const [placement,href] of links)h.click(placement,href);
- const names=h.events().map(event=>event[1]);
+ const consented=h.events().filter(event=>event[2].measurement_mode==='consented'),names=consented.map(event=>event[1]);
  assert.equal(names.filter(name=>name==='phone_link_click').length,3);
  assert.equal(names.filter(name=>name==='enquiry_link_click').length,1);
  assert(names.includes('centre_section_click'));
  assert(names.includes('page_share_click'));
+ assert.equal(h.events().filter(event=>event[1]==='page_view').length,1);
  const serialized=JSON.stringify(h.events());for(const privateValue of ['centre=','service=','text=','private-child-detail'])assert(!serialized.includes(privateValue));
  const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
  const blocked=harness({path:'/best-occupational-therapy-center-india-proven-improvement-rate',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
@@ -545,13 +605,15 @@ test('rendered ABA actions emit only coarse consented events',()=>{
  for(const expected of ['aba-first-call','aba-first-centres','aba-final-call','aba-final-centres','aba-final-enrol','aba-share-whatsapp'])assert(placements.has(expected),`ABA action ${expected} is absent from rendered HTML`);
  const h=harness({path:'/best-aba-therapy-center-india-proven-improvement-rate'});
  for(const [placement,href] of links)h.click(placement,href);
- assert.equal(h.events().length,0);
+ assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','phone_link_click','enquiry_link_click']);
+ assert(h.events().every(event=>event[2].measurement_mode==='denied_storage'));
  h.choose('accepted');for(const [placement,href] of links)h.click(placement,href);
- const names=h.events().map(event=>event[1]);
+ const consented=h.events().filter(event=>event[2].measurement_mode==='consented'),names=consented.map(event=>event[1]);
  assert.equal(names.filter(name=>name==='phone_link_click').length,2);
  assert.equal(names.filter(name=>name==='enquiry_link_click').length,1);
  assert.equal(names.filter(name=>name==='centre_section_click').length,2);
  assert.equal(names.filter(name=>name==='page_share_click').length,1);
+ assert.equal(h.events().filter(event=>event[1]==='page_view').length,1);
  const serialized=JSON.stringify(h.events());for(const privateValue of ['centre=','service=','text=','private-child-detail'])assert(!serialized.includes(privateValue));
  const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
  const blocked=harness({path:'/best-aba-therapy-center-india-proven-improvement-rate',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
@@ -563,9 +625,11 @@ test('rendered Autism first-call actions emit only coarse consented events',()=>
  for(const expected of ['autism-first-call','autism-first-enquiry'])assert(placements.has(expected),`Autism action ${expected} is absent from rendered HTML`);
  const h=harness({path:'/autism-therapy'});
  for(const [placement,href] of links)h.click(placement,href);
- assert.equal(h.events().length,0);
- h.choose('accepted');for(const [placement,href] of links)h.click(placement,href);
  assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click','phone_link_click']);
+ assert(h.events().every(event=>event[2].measurement_mode==='denied_storage'));
+ h.choose('accepted');for(const [placement,href] of links)h.click(placement,href);
+ assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click','phone_link_click','phone_link_click','enquiry_link_click','phone_link_click']);
+ assert.equal(h.events().filter(event=>event[1]==='page_view').length,1);
  const serialized=JSON.stringify(h.events());for(const privateValue of ['centre=','service=','text=','private-child-detail'])assert(!serialized.includes(privateValue));
  const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
  const blocked=harness({path:'/autism-therapy',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
@@ -589,16 +653,16 @@ test('knowledge navigation events expose only useful fixed navigation dimensions
  assert(navigation.every(event=>event[2].page_group==='knowledge'&&event[2].measurement_mode==='consented'));
 });
 
-test('assessment calls and generic enquiries are consented fixed events',()=>{
+test('assessment calls and generic enquiries are fixed in limited and consented modes',()=>{
  const path='/speech-aba-autism-assessments',call='tel:+919100181181',enquiry='https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help';
- for(const opts of [{},{gpc:true}]){const h=harness({path,...opts});h.click('hero-call',call);assert.equal(h.events().length,0);h.choose('accepted');h.click('hero-call',call);h.click('hero-assessment',enquiry);if(opts.gpc){assert.equal(h.events().length,0);continue;}assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click']);const text=JSON.stringify(h.events());assert(!text.includes('private-child-detail')&&!text.includes('secret')&&!text.includes('service=help'));assert(h.events().every(event=>event[2].page_group==='developmental_assessment'));h.choose('declined');h.click('final-call',call);assert.equal(h.events().length,3);}
+ for(const opts of [{},{gpc:true}]){const h=harness({path,...opts});h.click('hero-call',call);if(opts.gpc){assert.equal(h.events().length,0);}else{assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click']);assert(h.events().every(event=>event[2].measurement_mode==='denied_storage'));}h.choose('accepted');h.click('hero-call',call);h.click('hero-assessment',enquiry);if(opts.gpc){assert.equal(h.events().length,0);continue;}assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','phone_link_click','enquiry_link_click']);const text=JSON.stringify(h.events());assert(!text.includes('private-child-detail')&&!text.includes('secret')&&!text.includes('service=help'));assert(h.events().every(event=>event[2].page_group==='developmental_assessment'));h.choose('declined');h.click('final-call',call);assert.equal(h.events().length,4);}
 });
 
 test('centre-detail events omit the branch identity and query values under consent and GPC',()=>{
  for(const [id,slug] of [['suchitra','suchitra-hyderabad-telangana-india'],['dilsukhnagar','dilsukhnagar-hyderabad-telangana-india'],['gurunanak','gurunanak-road-vijayawada-ap-india'],['delhi','south-extension-newdelhi-india'],['ananthapuram','anathapuram-ap-india']]){
  const path='/centers/best-autism-speech-aba-occupational-therapy-center-'+slug;
  for(const opts of [{},{gpc:true}]){
-  const h=harness({path,...opts});h.click('hero-call','tel:+919100181181');assert.equal(h.events().length,0);
+  const h=harness({path,...opts});h.click('hero-call','tel:+919100181181');assert.equal(h.events().length,opts.gpc?0:2);
   h.choose('accepted');h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre='+id);h.click('centre-share','https://www.pinnacleblooms.org'+path);
   if(opts.gpc){assert.equal(h.events().length,0);continue;}
   assert(h.events().length>=3);const body=JSON.stringify(h.events());for(const value of [id,slug,'centre=','service=','private-child-detail','secret'])assert(!body.includes(value));
@@ -733,14 +797,14 @@ test('expired paid evidence does not suppress a new permitted GBP source',()=>{
 test('undecided receipt uses denied storage immediately with no optional campaign or contact data',()=>{
  for(const path of [canonicalEnrolment,'/centers','/speech-therapy/service-information']){
   const h=harness({path,callback:true,search:'?utm_source=google&utm_medium=cpc&gclid=qaCampaign123&name=private-child'});
-   assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival']);assert.equal(h.scripts.length,1);h.accepted();h.accepted();
-   assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival','enquiry_accepted']);assert.equal(h.scripts.length,1);
+   assert.deepEqual(h.events().map(e=>e[1]),['page_view','google_ads_arrival']);assert.equal(h.scripts.length,1);h.accepted();h.accepted();
+   assert.deepEqual(h.events().map(e=>e[1]),['page_view','google_ads_arrival','enquiry_accepted']);assert.equal(h.scripts.length,1);
    assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'));
   const commands=Array.from(h.win.dataLayer,x=>Array.from(x));
   for(const c of commands.filter(c=>c[0]==='consent'))assert.equal(c[2].analytics_storage,'denied');
   const serialized=JSON.stringify(commands);for(const excluded of ['private-child','gclid','qaCampaign123','qa-event-request','qa-event-receipt','requestId','user_id','client_id'])assert(!serialized.includes(excluded));
   assert.equal(h.writes.length,0);assert.equal(h.cookies.length,0);assert.equal(h.win.pinnacleEnquirySource(),null);
-   h.choose('accepted');h.accepted();assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival','enquiry_accepted','page_view']);assert.equal(h.scripts.length,1);
+   h.choose('accepted');h.accepted();assert.deepEqual(h.events().map(e=>e[1]),['page_view','google_ads_arrival','enquiry_accepted']);assert.equal(h.scripts.length,1);
   h.accepted({schemaVersion:1,requestId:'qa-next-valid-request',id:'qa-next-valid-receipt'});assert.equal(h.events().at(-1)[2].measurement_mode,'consented');
  }
 });
@@ -755,11 +819,11 @@ test('automatic receipt and later Analytics choices preserve separate granted ca
 });
 test('automatic receipt transport does not override refusal or send invalid, QA, GPC or unapproved events',()=>{
  for(const opts of [{saved:{value:'declined',at:Date.now()}},{gpc:true},{search:'?validation_test=1'},{origin:'http://127.0.0.1:4340'},{path:'/autism-therapy'}]){
-  const h=harness({path:canonicalEnrolment,...opts});h.accepted();assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);
+  const h=harness({path:canonicalEnrolment,...opts});h.accepted();assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,0);if(opts.path==='/autism-therapy'){assert.deepEqual(h.events().map(e=>e[1]),['page_view']);assert.equal(h.scripts.length,1);}else{assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);}
  }
- const h=harness({path:canonicalEnrolment});h.choose('declined');h.accepted();assert.equal(h.events().length,0);
- const invalid=harness({path:canonicalEnrolment});for(const receipt of [null,{schemaVersion:1,requestId:'short',id:'short'},{schemaVersion:1,requestId:'qa-valid-request',id:'qa-valid-receipt',phone:'private'}])invalid.accepted(receipt);assert.equal(invalid.events().length,0);
- const withdrawal=harness({path:canonicalEnrolment});withdrawal.accepted();withdrawal.choose('declined');withdrawal.accepted({schemaVersion:1,requestId:'qa-another-request',id:'qa-another-receipt'});assert.equal(withdrawal.events().length,1);
+ const h=harness({path:canonicalEnrolment});h.choose('declined');h.accepted();assert.deepEqual(h.events().map(e=>e[1]),['page_view']);
+ const invalid=harness({path:canonicalEnrolment});for(const receipt of [null,{schemaVersion:1,requestId:'short',id:'short'},{schemaVersion:1,requestId:'qa-valid-request',id:'qa-valid-receipt',phone:'private'}])invalid.accepted(receipt);assert.deepEqual(invalid.events().map(e=>e[1]),['page_view']);
+ const withdrawal=harness({path:canonicalEnrolment});withdrawal.accepted();withdrawal.choose('declined');withdrawal.accepted({schemaVersion:1,requestId:'qa-another-request',id:'qa-another-receipt'});assert.deepEqual(withdrawal.events().map(e=>e[1]),['page_view','enquiry_accepted']);
 });
 test('fresh speech-info source uses the permitted speech family and exact call placements',()=>{
  const h=harness({path:'/speech-therapy/service-information',callback:true,search:'?utm_source=google&utm_medium=cpc&utm_campaign=QA-SPEECH-INFO&gclid=qaSpeechInfo123'});h.choose('accepted');
@@ -841,7 +905,7 @@ test('bookshop Ads contacts cannot borrow the separate therapy acquisition recor
 
 test('form reliability is fixed-vocabulary, consented and never an accepted lead',()=>{
  const h=harness({callback:true,path:canonicalEnrolment,search:''});
- h.win.__qaProgress({stage:'start'});assert.equal(h.events().length,0);
+ h.win.__qaProgress({stage:'start'});assert.deepEqual(h.events().map(e=>e[1]),['page_view']);
  h.choose('accepted');h.win.__qaProgress({stage:'start'});h.win.__qaProgress({stage:'start'});
  h.win.__qaProgress({stage:'attempt'});
  for(const error_category of ['validation','storage_unavailable','endpoint_unavailable','receiver_rejected','receiver_unconfirmed'])h.win.__qaProgress({stage:'error',error_category});
