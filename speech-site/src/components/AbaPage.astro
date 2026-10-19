@@ -53,8 +53,8 @@ const disciplines = [
   ['shield','Relevant health professionals','Examine medical or mental-health factors when indicated.']
 ];
 ---
-<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} serviceAreaServed={null} title={content.title} description={content.description} socialTitle="ABA Therapy for Children | Understand First | Pinnacle Blooms" socialDescription="Communication, choice and everyday participation guide respectful behavioural support. Call 9100 181 181." citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms Network ABA Therapy: a child makes a choice with family and professional support. Call 9100 181 181." imageCaption="ABA and behavioural support connected to communication, choice and everyday life at Pinnacle Blooms Network." shareImage={abaSocial} shareVersion="20260930-aba-life-first" publishedOn="2026-09-29" updatedOn="2026-10-10" enquiry={content.enquiry}>
-  <HeroSlider content={{...content,enquiry:{...content.enquiry,url:'#callback',label:'Request a callback'}}} />
+<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} serviceAreaServed={null} title={content.title} description={content.description} socialTitle="ABA Therapy for Children | Understand First | Pinnacle Blooms" socialDescription="Communication, choice and everyday participation guide respectful behavioural support. Call 9100 181 181." citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms Network ABA Therapy: a child makes a choice with family and professional support. Call 9100 181 181." imageCaption="ABA and behavioural support connected to communication, choice and everyday life at Pinnacle Blooms Network." shareImage={abaSocial} shareVersion="20260930-aba-life-first" publishedOn="2026-09-29" updatedOn="2026-10-19" enquiry={content.enquiry}>
+  <HeroSlider content={{...content,enquiry:{...content.enquiry,url:'#callback',label:'Request a first conversation',mobileLabel:'First conversation'}}} />
   <EnrolmentCallback service="aba"/>
   <ActionStrip focused firstLabel="First conversation" firstHref="#first-visit" evidenceHref="#evidence" enrolHref={abaEnquiry} />
 
@@ -162,4 +162,11 @@ const disciplines = [
 .aba-review-branches article{border-top:2px solid #8f2879;padding-top:18px;min-width:0}.aba-review-branches h4{font-size:1.08rem;line-height:1.5;margin:10px 0}.aba-review-branches p{font-size:.95rem;line-height:1.8;margin:0}
 .aba-stage-grid .text-link{font-size:.88rem;display:inline-flex;align-items:center;gap:7px;margin-top:14px;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:620px){.aba-review-branches{grid-template-columns:1fr;gap:22px}.aba-next-decision{padding:22px 18px}.aba-visit-expectation{gap:12px}}
+</style>
+<style is:inline>
+.hero-visual--complete-poster{min-height:0;align-self:center}
+.hero-visual--complete-poster .hero-slide{height:auto}
+.hero-visual--complete-poster .hero-slide img{height:auto;border-radius:26px}
+.hero-visual--complete-poster .life-badge{display:none}
+@media(max-width:760px){.hero-visual--complete-poster{padding-bottom:0;margin-bottom:18px}.hero-visual--complete-poster .hero-slide,.hero-visual--complete-poster .hero-slide img{height:auto}}
 </style>

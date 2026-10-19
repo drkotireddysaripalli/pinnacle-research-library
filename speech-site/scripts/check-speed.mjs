@@ -32,7 +32,9 @@ if (!['http:', 'https:'].includes(base.protocol) || base.username || base.passwo
 }
 const url = new URL(production ? contract.canonical : contract.path, base).href;
 const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-const output = path.resolve('audits/lighthouse', `${id}-${production ? 'production' : 'preview'}-${stamp}`);
+const outputArg = args.indexOf('--output');
+if (outputArg >= 0 && !args[outputArg + 1]) throw Error('--output requires a directory.');
+const output = outputArg >= 0 ? path.resolve(args[outputArg + 1]) : path.resolve('audits/lighthouse', `${id}-${production ? 'production' : 'preview'}-${stamp}`);
 await fs.mkdir(output, {recursive: true});
 const summary = {at: new Date().toISOString(), id, url, kind: 'simulated lab measurements, not field Core Web Vitals', reports: []};
 let server, serverError, browser;

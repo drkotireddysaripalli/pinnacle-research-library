@@ -2,13 +2,13 @@
 
 Canonical: https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
 
-Updated: 10 October 2026
+Updated: 19 October 2026
 
 Every Child Counts®
 
 # ABA Therapy for children Communication. Choices. Everyday skills. Help your child take part.
 
-Understand what is happening. A busy transition. A request for a break. A moment in play or class. Your child’s self-sufficient, mainstream-included life gives our work its direction. At Pinnacle, we connect behavioural support, communication, everyday practice and review around the abilities your child needs to take part.
+Support begins with understanding your child’s individual needs, strengths and communication. Pinnacle connects behavioural support with communication, useful everyday skills and participation at home, school and in the community. Your child’s self-sufficient, mainstream-included life gives the work its direction.
 
 - Be heard
 
@@ -18,9 +18,9 @@ Understand what is happening. A busy transition. A request for a break. A moment
 
 [Call 9100 181 181](tel:+919100181181)
 
-[Request a callback](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate#callback)
+[Request a first conversation](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate#callback)
 
-Free, staffed telephone guidance 24/7. We help check the suitable professional, centre, appointment and current fees before you visit; visits and therapy are priced separately.
+An individual first conversation and professional assessment guide whether ABA is appropriate. Our team confirms the suitable professional, centre, appointment and current fees before you visit; visits and therapy are priced separately.
 
 [MD-5 licence](https://www.pinnacleblooms.org/verify/evidence/records/md5.html)
 

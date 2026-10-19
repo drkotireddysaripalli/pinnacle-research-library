@@ -1,5 +1,5 @@
 import type { ServiceContent } from './service-content';
-import abaPoster from '../assets/aba-therapy-complete-poster-20261010.png';
+import abaPoster from '../assets/aba-social-life-first-20260930.png';
 import communicationJourney from '../assets/aba-transition-choice-20260930.png';
 import { abaPath, url } from './site';
 
@@ -10,8 +10,8 @@ export const abaContent: ServiceContent = {
   name:'ABA therapy and behavioural support for children', type:'ABA therapy and child behavioural support',
   title:'ABA Therapy for Children in India | Pinnacle Blooms Network',
   description:'ABA and behavioural support for communication, choice and participation in everyday life. See how Pinnacle begins, find a centre and call 9100 181 181.',
-  enquiry:{url:abaEnquiry,label:'Start a conversation',mobileLabel:'Start a conversation'},
-  guidanceNote:'Free, staffed telephone guidance 24/7. We help check the suitable professional, centre, appointment and current fees before you visit; visits and therapy are priced separately.',
+  enquiry:{url:abaEnquiry,label:'Request an assessment',mobileLabel:'Request assessment'},
+  guidanceNote:'An individual first conversation and professional assessment guide whether ABA is appropriate. Our team confirms the suitable professional, centre, appointment and current fees before you visit; visits and therapy are priced separately.',
   discover:{label:'Find a Pinnacle Centre',href:'#centres'},
   citations:[
     '/verify/','/verify/evidence/pinnacle-paradigm-shift.html','/verify/evidence/paradigm/04-one-shared-direction.html',
@@ -27,8 +27,8 @@ export const abaContent: ServiceContent = {
   hero:{
     heading:'Communication. Choices. Everyday skills.',
     emphasis:'Help your child take part.',
-    lead:'Understand what is happening. A busy transition. A request for a break. A moment in play or class.',
-    copy:'Your child’s self-sufficient, mainstream-included life gives our work its direction. At Pinnacle, we connect behavioural support, communication, everyday practice and review around the abilities your child needs to take part.',
+    lead:'Support begins with understanding your child’s individual needs, strengths and communication.',
+    copy:'Pinnacle connects behavioural support with communication, useful everyday skills and participation at home, school and in the community. Your child’s self-sufficient, mainstream-included life gives the work its direction.',
     moments:[{icon:'voice',label:'Be heard'},{icon:'home',label:'Make choices'},{icon:'people',label:'Take part'}]
   },
   pathway:{stages:[
