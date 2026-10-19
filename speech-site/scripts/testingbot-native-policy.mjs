@@ -10,6 +10,20 @@ export const nativeBlockedHosts=Object.freeze([
  'static.hotjar.com','script.hotjar.com','connect.facebook.net','www.facebook.com','api.whatsapp.com'
 ]);
 export const nativeReaderBlacklist=nativeBlockedHosts.join(',');
+const escapeHostRegex=host=>host.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+export const nativeTunnelVersion='5.0';
+export const nativeTunnelFastFailRegexps=nativeBlockedHosts.map(host=>'^'+escapeHostRegex(host)+'$').join(',');
+export const nativeInterceptRules=Object.freeze(nativeBlockedHosts.flatMap(host=>['http','https'].map(protocol=>Object.freeze({
+ url:protocol+'://'+host+'/*',error:'BlockedByClient'
+}))));
+export const nativeInterceptionSupported=config=>config?.kind==='desktop'&&['chrome','microsoftedge'].includes(String(config.browserName||'').toLowerCase());
+export async function installNativeInterceptions(run){
+ if(typeof run!=='function')throw Error('Native interception command unavailable; no production page may be opened');
+ let installed=0;
+ for(const rule of nativeInterceptRules){await run('tb:intercept',{...rule});installed++;}
+ if(installed!==nativeInterceptRules.length)throw Error('Native interception incomplete; no production page may be opened');
+ return installed;
+}
 export const nativeProbeTargets=Object.freeze([
  Object.freeze({name:'public-control',url:'https://www.pinnacleblooms.org/robots.txt',expected:'reachable'}),
  Object.freeze({name:'analytics-denied',url:'https://www.google-analytics.com/robots.txt',expected:'blocked'}),
