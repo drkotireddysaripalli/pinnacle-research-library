@@ -55,7 +55,8 @@ async function candidateModules(commit){
  const mods=JSON.parse(await fs.readFile(path.join(priv,'modules.json'),'utf8')).map(module=>({name:module.name,bytes:Buffer.from(module.base64,'base64')}));
  for(const name of ['legacy-measurement.runtime.mjs','book-attribution-handler.mjs','book-attribution-assets.mjs','public-ad-call.mjs'])assert(mods.some(module=>module.name===name),'Required captured module absent: '+name);
  const legacyRuntime=mods.find(module=>module.name==='legacy-measurement.runtime.mjs');
- assert(mods.some(module=>module.name==='legacy-measurement-fingerprints.mjs')||legacyRuntime.bytes.includes(Buffer.from('speech-site/deployment/legacy-measurement-fingerprints.mjs')),'Captured legacy runtime contains neither bundled nor separate measurement fingerprints');
+ const bundledFingerprints=['var LEGACY_TAGS','var LEGACY_NOSCRIPT_TAGS','var LEGACY_TAG_REPLACEMENTS'].every(marker=>legacyRuntime.bytes.includes(Buffer.from(marker)));
+ assert(mods.some(module=>module.name==='legacy-measurement-fingerprints.mjs')||bundledFingerprints,'Captured legacy runtime contains neither bundled nor separate measurement fingerprints');
  for(const name of exactModules){
   const bytes=await fs.readFile(path.join(site,'deployment',name));
   assert.equal(sha(normalise(bytes)),sha(normalise(g(['show',commit+':speech-site/deployment/'+name]))),'Source changed after commit: '+name);
