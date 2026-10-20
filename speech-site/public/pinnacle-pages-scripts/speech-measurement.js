@@ -114,16 +114,11 @@
     }
   } catch {}
   const measurementLocation = measurementURL.href;
-  // Send only a known referring platform's origin, never its paths, search
-  // terms or private referring domains.
-  let safeReferrer = '';
-  // Keep only a recognised public platform's origin. Never send its query,
-  // private path or the medical topic being read. This also preserves source
-  // attribution for eligible Ask, knowledge and therapy visits.
+  // Ordinary referrals retain their origin; paths, query and fragments are never copied.
+  let safeReferrer='';
   try {
-    const ref = new URL(document.referrer);
-    const sources = new Set(['google.com','www.google.com','google.co.in','www.google.co.in','bing.com','www.bing.com','duckduckgo.com','www.duckduckgo.com','search.yahoo.com','chatgpt.com','www.perplexity.ai','perplexity.ai','gemini.google.com','claude.ai','www.facebook.com','m.facebook.com','l.facebook.com','www.instagram.com','l.instagram.com','www.linkedin.com','www.youtube.com','t.co']);
-    if (ref.protocol === 'https:' && !ref.username && !ref.password && !ref.port && sources.has(ref.hostname)) safeReferrer = ref.origin + '/';
+    const ref=new URL(document.referrer);
+    if(['https:','http:'].includes(ref.protocol)&&!ref.username&&!ref.password)safeReferrer=ref.origin+'/';
   } catch {}
   const routes = new Set([...Object.keys(pages), ...Object.keys(documents)]);
   const variant = document.body?.dataset.pageVariant === 'focused' ? 'focused' : 'service';
@@ -507,13 +502,13 @@
     if (pageGroup==='aba_therapy' && placement==='aba-share-whatsapp' && href.startsWith('https://wa.me/?text=')) send('page_share_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'whatsapp_share'});
     let validEnquiry=false;
     try {
-      const destination=new URL(href,origin),keys=[...destination.searchParams.keys()];
-      const knownKeys=keys.every(key=>['entry','service','centre'].includes(key));
+      const destination=new URL(href,origin);
+      const routingUnambiguous=['entry','service','centre'].every(key=>destination.searchParams.getAll(key).length<=1);
       const validCentre=!destination.searchParams.has('centre')||centreIds.includes(destination.searchParams.get('centre'));
       const service=destination.searchParams.get('service'),entry=destination.searchParams.get('entry');
       const validService=!service||service===pageConfig?.service;
       const validEntry=!entry||(pageConfig?.service==='speech'&&entry==='speech-assessment');
-      validEnquiry=destination.origin===origin&&destination.pathname==='/enroll-autism-speech-aba-therapies-india'&&knownKeys&&validCentre&&validService&&validEntry;
+      validEnquiry=destination.origin===origin&&destination.pathname==='/enroll-autism-speech-aba-therapies-india'&&routingUnambiguous&&validCentre&&validService&&validEntry;
     } catch {}
     if (enquiryPlacements.has(placement) && validEnquiry && !(placement==='knowledge-enrol'&&(isAsk||knowledgePath))) sendPublicIntent('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
   });

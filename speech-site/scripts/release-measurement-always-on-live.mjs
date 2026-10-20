@@ -86,7 +86,7 @@ async function modules(name) {
   capturedMainModules[name]=response.headers.get('cf-entrypoint')||metadata?.main_module||null;
   for (const [key, value] of form) if (key!=='metadata'&&typeof value !== 'string') {
     const moduleName = value.name || key;
-    assert(/^[\w.-]+\.(?:mjs|js)$/.test(moduleName), `Unsafe module name ${moduleName}`);
+    assert(/^(?:[\w.-]+\/)*[\w.-]+\.(?:mjs|js)$/.test(moduleName)&&moduleName.split('/').every(part=>part!=='.'&&part!=='..'), `Unsafe module name ${moduleName}`);
     out.push({name: moduleName, bytes: Buffer.from(await value.arrayBuffer())});
   }
   return out.sort((a, b) => a.name.localeCompare(b.name));
@@ -109,12 +109,12 @@ async function load(file) { return JSON.parse(await fs.readFile(file, 'utf8')); 
 async function saveCaptured(name, workerModules) {
   const directory = path.join(releaseDir, 'captured', name);
   await fs.mkdir(directory, {recursive: true});
-  for (const module of workerModules) await fs.writeFile(path.join(directory, module.name), module.bytes);
+  for (const module of workerModules) {const target=path.join(directory,module.name);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,module.bytes);}
   return {sourceMain:capturedMainModules[name],moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
 }
 async function captured(name) {
-  const directory = path.join(releaseDir, 'captured', name);
-  return Promise.all((await fs.readdir(directory)).filter(file => /\.(?:mjs|js)$/.test(file)).sort().map(async file => ({name: file, bytes: await fs.readFile(path.join(directory, file))})));
+ const directory=path.join(releaseDir,'captured',name),receipt=await load(receiptPath),hashes=receipt.captures[name].hashes;
+ return Promise.all(Object.keys(hashes).sort().map(async name=>{const bytes=await fs.readFile(path.join(directory,name));assert.equal(sha(bytes),hashes[name],'Captured module changed: '+name);return {name,bytes};}));
 }
 async function assertDrift(receipt, allowPromoted = true) {
   const before = await load(beforePath);
@@ -136,7 +136,7 @@ async function writeCandidate(name, main, workerModules) {
   const directory = path.join(releaseDir, 'candidate', name);
   await fs.rm(directory, {recursive: true, force: true});
   await fs.mkdir(directory, {recursive: true});
-  for (const module of workerModules) await fs.writeFile(path.join(directory, module.name), module.bytes);
+  for (const module of workerModules) {const target=path.join(directory,module.name);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,module.bytes);}
   const manifest = {main, moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
   await save(path.join(directory, 'manifest.json'), manifest);
   return manifest;
