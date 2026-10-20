@@ -113,8 +113,8 @@ async function saveCaptured(name, workerModules) {
   return {sourceMain:capturedMainModules[name],contentTypes:Object.fromEntries(workerModules.map(module=>[module.name,module.contentType])),moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
 }
 async function captured(name) {
- const directory=path.join(releaseDir,'captured',name),receipt=await load(receiptPath),hashes=receipt.captures[name].hashes;
- return Promise.all(Object.keys(hashes).sort().map(async name=>{const bytes=await fs.readFile(path.join(directory,name));assert.equal(sha(bytes),hashes[name],'Captured module changed: '+name);return {name,bytes,contentType:receipt.captures[name].contentTypes?.[name]};}));
+ const directory=path.join(releaseDir,'captured',name),receipt=await load(receiptPath),capture=receipt.captures[name],hashes=capture.hashes;
+ return Promise.all(Object.keys(hashes).sort().map(async name=>{const bytes=await fs.readFile(path.join(directory,name));assert.equal(sha(bytes),hashes[name],'Captured module changed: '+name);return {name,bytes,contentType:capture.contentTypes?.[name]};}));
 }
 async function assertDrift(receipt, allowPromoted = true) {
   const before = await load(beforePath);
