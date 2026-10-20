@@ -17,7 +17,7 @@ export function serveSeva(request){
  headers.set('x-pinnacle-resource','seva_v1');
  if(isPage){headers.set('vary','Accept');headers.set('content-signal','search=yes, ai-input=yes');headers.set('x-robots-tag','index, follow, max-image-preview:large');}
  if(isPage||/\.pdf$|\.md$/.test(u.pathname))headers.set('link','<'+canonical+'>; rel="canonical"');
- if(entry.type.startsWith('text/html'))headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");
+ if(entry.type.startsWith('text/html'))headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");
  if(!privateResponse&&request.headers.get('if-none-match')===headers.get('etag'))return new Response(null,{status:304,headers});
  const bytes=Uint8Array.from(atob(entry.body),c=>c.charCodeAt(0));
  headers.set('content-length',String(bytes.byteLength));

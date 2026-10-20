@@ -15,6 +15,36 @@ test('automatic call measurement extends only the necessary CSP directives',()=>
  assert(!images.some(x=>x.includes('*')));
  assert(csp.includes("object-src 'none'"));assert(csp.includes('https://www.youtube-nocookie.com'));assert(!csp.includes("default-src *"));assert(!csp.includes('unsafe-eval'));
  const before=csp;augmentCsp(headers);assert.equal(headers.get('content-security-policy'),before);
+ const connections=csp.split(';').find(x=>x.trim().startsWith('connect-src ')).trim().split(/\s+/);
+ for(const host of ['https://analytics.google.com','https://stats.g.doubleclick.net'])assert(connections.includes(host));
+});
+
+test('browser policy blocks the old analytics apex and permits only the repaired contained collector probes',async()=>{
+ const {chromium}=await import('@playwright/test');const browser=await chromium.launch({headless:true});
+ const endpoints=['https://analytics.google.com/g/collect','https://stats.g.doubleclick.net/g/collect'];
+ try{for(const repaired of [false,true]){
+  const context=await browser.newContext(),received=[],violations=[],consoleErrors=[];
+  const headers=new Headers({'content-security-policy':"default-src 'none'; script-src 'unsafe-inline'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com"});if(repaired)augmentCsp(headers);
+  await context.exposeBinding('recordPolicyViolation',(_,value)=>violations.push(value));
+  await context.addInitScript(()=>document.addEventListener('securitypolicyviolation',e=>window.recordPolicyViolation({directive:e.effectiveDirective,blockedURI:e.blockedURI})));
+  await context.route('**/*',route=>{const req=route.request();if(endpoints.some(u=>req.url().startsWith(u))){received.push(new URL(req.url()).origin);return route.fulfill({status:204,body:''});}return route.fulfill({status:200,headers:Object.fromEntries(headers),contentType:'text/html',body:'<script>window.probes=Promise.allSettled('+JSON.stringify(endpoints)+'.map(url=>fetch(url,{method:"POST",body:"contained-csp-probe",mode:"no-cors"}))).then(()=>window.probesDone=true)</script>'});});
+  const page=await context.newPage();page.on('console',msg=>{if(msg.type()==='error')consoleErrors.push(msg.text());});
+  await page.goto('https://www.pinnacleblooms.org/autism-therapy');await page.waitForFunction(()=>window.probesDone);await page.evaluate(()=>new Promise(resolve=>setTimeout(resolve,0)));
+  if(repaired){assert.deepEqual(received.sort(),endpoints.map(u=>new URL(u).origin).sort());assert.equal(violations.length,0);assert.equal(consoleErrors.length,0);}
+  else{assert.equal(received.length,0);assert.equal(violations.filter(v=>v.directive==='connect-src').length,2);assert(consoleErrors.some(v=>v.includes('Content Security Policy')));}
+  await context.close();
+ }}finally{await browser.close();}
+});
+test('active CSP builders and generated helpline retain the exact supported collection destinations',async()=>{
+ for(const file of ['speech-handler.mjs','book-attribution-handler.mjs','first-conversation-handler.mjs','seva-handler.mjs']){
+  const source=await fs.readFile(new URL('../deployment/'+file,import.meta.url),'utf8');
+  for(const host of ['https://analytics.google.com','https://stats.g.doubleclick.net'])assert(source.includes(host),file+' missing '+host);
+ }
+ const source=await fs.readFile(new URL('../src/lib/ad-call-csp.mjs',import.meta.url),'utf8');assert.equal(await fs.readFile(new URL('../deployment/ad-call-csp.mjs',import.meta.url),'utf8'),'// Generated from src/lib/ad-call-csp.mjs.\n'+source);
+ const {default:helpline}=await import('../../helpline-site/worker.mjs');const response=await helpline.fetch(new Request('https://www.pinnacleblooms.org/national-autism-helpline'));
+ const csp=response.headers.get('content-security-policy'),connect=csp.split(';').find(p=>p.trim().startsWith('connect-src '));
+ for(const host of ['https://analytics.google.com/g/collect','https://stats.g.doubleclick.net/g/collect'])assert(connect.split(/\s+/).includes(host));
+ assert(csp.includes("default-src 'none'"));assert(!csp.includes('unsafe-eval'));assert(!connect.includes('*'));
 });
 
 test('current public centre register and paid templates share one current module; private endpoints stay excluded',async()=>{
