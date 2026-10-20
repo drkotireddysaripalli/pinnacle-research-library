@@ -125,7 +125,22 @@ test('known managed pages remove every old preference block while preserving unr
 test('the exact legacy homepage controls are removed while both approved loaders remain',()=>{
  const analytics='<details id="website-preferences" class="measurement-settings portal-measurement" data-speech-measurement hidden><summary>Analytics</summary><p data-measurement-status>Off</p></details>',speech='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=paid-journey-20261008"></script>',adCall='<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden><summary>Calls</summary><p data-ad-call-status>Off</p></details>',loader='<script type="module" src="/pinnacle-pages-scripts/portal-ad-call-74a0fdb3ea376af9.mjs" data-pinnacle-ad-call-module></script>';
  const html='<!doctype html><html><head><link rel="canonical" href="https://www.pinnacleblooms.org/"></head><body><div class="cm-mirracle-go-top"></div>'+analytics+speech+adCall+loader+'</body></html>',after=projectManagedPreferenceHtml(html,request('/'));
- assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,0,marker);assert(after.includes(speech));assert(after.includes(loader));assert.equal(projectManagedPreferenceHtml(after,request('/')),null);
+ assert(after);for(const marker of ['id="website-preferences"','data-pinnacle-managed-preferences','data-speech-measurement','data-cheq-preferences','data-ad-call-preferences'])assert.equal((after.match(new RegExp(marker,'g'))||[]).length,0,marker);assert(after.includes(speech.replace('paid-journey-20261008','measurement-completion-20261020')));assert(after.includes(loader));assert.equal(projectManagedPreferenceHtml(after,request('/')),null);
  const tagged=html.replace('https://www.pinnacleblooms.org/','https://www.pinnacleblooms.org/?utm_source=google&amp;utm_medium=cpc');assert(projectManagedPreferenceHtml(tagged,request('/?utm_source=google&utm_medium=cpc')));
  assert(projectManagedPreferenceHtml(html.replace(speech,'<script src="/other.js"></script>'),request('/')));assert(projectManagedPreferenceHtml(html.replace(loader,'<script type="module" src="/other.mjs" data-pinnacle-ad-call-module></script>'),request('/')));
+});
+test('returning visitors lose retired controls and stale collector URLs without changing public content or private caching',async()=>{
+ const path='/top-speech-therapy-center-india-proven-improvement-rate';
+ const keep='<main><h1>Speech Therapy for children</h1><a href="/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry">Arrange your FREE assessment</a></main>';
+ const before='<html><head><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"><script defer src="/pinnacle-pages-scripts/speech-measurement.js"></script><script src="https://example.org/pinnacle-pages-scripts/speech-measurement.js"></script></head><body>'+keep+'<footer><details id="website-preferences" data-speech-measurement hidden><summary>Optional analytics preferences</summary></details><details data-ad-call-preferences hidden><summary>Optional advertising call measurement</summary></details><p>Keep footer</p></footer></body></html>';
+ const req=new Request('https://www.pinnacleblooms.org'+path+'?centre=&service=speech',{headers:{cookie:'_ga=offline_fixture'}});
+ const headers={'content-type':'text/html','cache-control':'private, no-store','etag':'"old"'};
+ const response=await repairLegacyExclusions(req,new Response(before,{headers})),after=await response.text();
+ assert.equal(response.headers.get('cache-control'),'private, no-store');assert.equal(response.headers.get('etag'),null);
+ assert(!after.includes('data-speech-measurement'));assert(!after.includes('data-ad-call-preferences'));assert(after.includes(keep));assert(after.includes('<p>Keep footer</p>'));
+ assert.equal((after.match(/src="\/pinnacle-pages-scripts\/speech-measurement\.js\?v=measurement-completion-20261020"/g)||[]).length,1);
+ assert(after.includes('src="https://example.org/pinnacle-pages-scripts/speech-measurement.js"'));assert.equal(projectManagedPreferenceHtml(after,req),null);
+ for(const [guardRequest,guardHeaders]of [[new Request(req.url,{headers:{authorization:'offline'}}),headers],[req,{...headers,'set-cookie':'session=offline'}],[req,{...headers,'cache-control':'private, no-store, no-transform'}]]){
+  const guarded=new Response(before,{headers:guardHeaders});assert.equal(await repairLegacyExclusions(guardRequest,guarded),guarded);
+ }
 });

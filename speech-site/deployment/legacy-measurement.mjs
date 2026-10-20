@@ -26,11 +26,17 @@ export function projectManagedPreferenceHtml(html,request){
   let previous;do{previous=result;result=removeBalanced(result,'details',attribute);}while(result!==previous);
  }
  result=result.replace(/<section\b[^>]*data-(?:speech-measurement|cheq-preferences)[^>]*>[\s\S]*?<\/section>/gi,'');
+ // Returning visitors receive the same public document with private/no-store
+ // cache headers. Version its existing collector as well as removing retired
+ // controls, so a cached historical script cannot restore those controls.
+ result=result.replace(/(<script\b[^>]*\bsrc=)(["'])([^"']+)\2/gi,(tag,prefix,quote,raw)=>{
+  try{const src=new URL(raw.replaceAll('&amp;','&'),u);if(src.origin!==u.origin||src.pathname!=='/pinnacle-pages-scripts/speech-measurement.js')return tag;src.searchParams.set('v','measurement-completion-20261020');return prefix+quote+(raw.startsWith('/')?src.pathname+src.search:src.href).replaceAll('&','&amp;')+quote;}catch{return tag;}
+ });
  return result===html?null:result;
 }
 async function projectManagedPreferences(request,response){
  const u=new URL(request.url);if(request.method!=='GET'||u.origin!=='https://www.pinnacleblooms.org'||request.headers.has('authorization')||request.headers.has('range')||(!managedPreferenceRoutes.has(u.pathname)&&!managedCentreRoute.test(u.pathname)))return response;
- if(response.status!==200||!response.body||response.headers.has('set-cookie')||!response.headers.get('content-type')?.includes('text/html')||/private|no-transform/i.test(response.headers.get('cache-control')||''))return response;
+ if(response.status!==200||!response.body||response.headers.has('set-cookie')||!response.headers.get('content-type')?.includes('text/html')||/no-transform/i.test(response.headers.get('cache-control')||''))return response;
  const html=await response.text(),projected=projectManagedPreferenceHtml(html,request);if(!projected)return new Response(html,{status:response.status,statusText:response.statusText,headers:response.headers});
  const headers=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest'])headers.delete(k);headers.set('x-pinnacle-measurement-ui','removed-20261019');
  return new Response(projected,{status:response.status,statusText:response.statusText,headers});
