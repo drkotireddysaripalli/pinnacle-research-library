@@ -24,13 +24,14 @@ const centre='/centers/best-autism-speech-aba-occupational-therapy-center-suchit
 const contact='/contact-national-autism-helpline-24-7',enrolment='/enroll-autism-speech-aba-therapies-india';
 const templates=[
  {path:'/',family:'legacy-home',width:1440,gtm:true,taps:['phone','whatsapp']},
+ {path:'/',family:'legacy-home-mobile',width:390,homeMobile:true,gtm:true,taps:['phone']},
  {path:'/best-aba-therapy-center-india-proven-improvement-rate',family:'managed-service',width:390,taps:['phone','whatsapp']},
  {path:contact,family:'durable-contact',width:1440,taps:local?['phone']:['phone','whatsapp']},
  {path:'/centers',family:'centre-directory',width:1440,taps:['phone']},
  {path:centre,family:'centre-detail',width:1440,taps:['phone']},
  {path:enrolment,family:'enrolment',width:390,taps:['phone']},
- {path:'/ask',host:'pinnacleblooms.org',family:'ask-public',width:390,taps:['phone','whatsapp']},
- {path:'/faq',family:'knowledge-public',width:1440,taps:['phone','whatsapp']},
+ {path:'/ask',host:'pinnacleblooms.org',family:'ask-public',width:390,taps:['phone']},
+ {path:'/faq',family:'knowledge-public',width:1440,taps:['phone']},
  {path:'/books',family:'commerce-library',width:1440,taps:[]},
  {path:'/verify/evidence/privacy.html',family:'verify-reader',width:1440,id:helplineId,taps:[],automaticMode:false},
  {path:'/certified-courses',family:'retained-gtm-template',width:1440,gtm:true,taps:['phone']},
@@ -47,6 +48,9 @@ if(local){
  const head='<!-- Google Tag Manager -->'+LEGACY_TAGS.join('');
  const raw='<!doctype html><html><head>'+head+'</head><body>'+controls+'</body></html>';
  fixtures.set('/',await(await transformReviewedHomepageMeasurement(new Request(origin+'/'),new Response(raw,{headers:{'content-type':'text/html'}}))).text());
+ const mobileBlock=JSON.parse(await fs.readFile('scripts/fixtures/home-mobile-google-block-20261020.json','utf8'));
+ const mobileRaw='<!doctype html><html><head><!-- Google Tag Manager -->'+LEGACY_TAGS.find(t=>t.includes('GTM-W9ZHX459'))+'<script>setTimeout(function(){'+mobileBlock+'},4000);</script></head><body>'+controls+'</body></html>';
+ fixtures.set('home-mobile',await(await transformReviewedHomepageMeasurement(new Request(origin+'/'),new Response(mobileRaw,{headers:{'content-type':'text/html','cache-control':'no-store'}}))).text());
  const course='<!doctype html><html><head><link rel="canonical" href="'+origin+'/certified-courses">'+LEGACY_TAGS.join('')+'</head><body>'+controls+'</body></html>';
  const migrated=migrateLegacyPrefix(course,new Request(origin+'/certified-courses'),{preserveGtm:true});assert(migrated);fixtures.set('/certified-courses',migrated.html);
  const knowledge=await build({stdin:{contents:"import{createPublicMeasurementWrapper}from'./deployment/public-measurement-wrapper.mjs';export default createPublicMeasurementWrapper({fetch(r,e){return e.ORIGIN.fetch(r)}});",resolveDir:process.cwd()},bundle:true,format:'esm',write:false});
@@ -61,7 +65,7 @@ const browser=await chromium.launch({headless:true});
 try{
  for(const spec of templates){
   const pathname=spec.path,id=spec.id||measurementId;
-  const context=await browser.newContext({viewport:{width:spec.width,height:844}}),collect=[],blocked=[],errors=[];
+  const context=await browser.newContext({viewport:{width:spec.width,height:844},...(spec.homeMobile?{isMobile:true,userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 Version/18.5 Mobile/15E148 Safari/604.1'}:{})}),collect=[],blocked=[],errors=[];
   const entry={pathname,family:spec.family,viewport:{width:spec.width,height:844},source:local&&fixtures.has(pathname)?'declared transformed legacy fixture':local?'built distribution':'actual production HTML',declaredTaps:spec.taps,expectedOwner:spec.gtm?'direct_gtag_with_retained_GTM':'direct_gtag',passed:false,collect,blocked,errors};evidence.pages.push(entry);
   await context.route('**/*',async route=>{
    const request=route.request(),url=new URL(request.url());
@@ -76,7 +80,7 @@ try{
    }
    if(['www.pinnacleblooms.org','pinnacleblooms.org'].includes(url.hostname)&&['GET','HEAD'].includes(request.method())){
     if(!local)return route.continue();
-    if(fixtures.has(url.pathname))return route.fulfill({status:200,contentType:'text/html',body:fixtures.get(url.pathname)});
+    if(fixtures.has(url.pathname))return route.fulfill({status:200,contentType:'text/html',body:fixtures.get(spec.homeMobile&&url.pathname==='/'?'home-mobile':url.pathname)});
     if(url.pathname==='/pinnacle-pages-scripts/google-ads-call.js'){const r=await callWorker.fetch(new Request(url.href),{});return route.fulfill({status:r.status,contentType:'text/javascript',body:await r.text()});}
     const asset=await serveContactReceiptAsset(new Request(url.href));if(asset)return route.fulfill({status:asset.status,headers:Object.fromEntries(asset.headers),body:await asset.text()});
     const call=servePublicAdCall(new Request(url.href));if(call)return route.fulfill({status:call.status,headers:Object.fromEntries(call.headers),body:await call.text()});
@@ -101,7 +105,7 @@ try{
    await page.evaluate(()=>document.addEventListener('click',event=>{const a=event.target?.closest?.('a[href]');if(a&&/^(?:tel:|https:\/\/(?:wa\.me|api\.whatsapp\.com)\/)/.test(a.href))event.preventDefault();},true));
    for(const tap of spec.taps){
     const selector=tap==='phone'?'a[href="tel:+919100181181"]:visible,a[data-pinnacle-ad-call-target="central"]:visible':'a[href^="https://wa.me/919100181181"]:visible,a[href^="https://api.whatsapp.com/send"][href*="919100181181"]:visible';
-    await page.locator(selector).first().click();await waitFor(()=>collect.some(row=>row.tid===id&&row.en===(tap==='phone'?'phone_link_click':'whatsapp_link_click')));
+    const modal=page.locator('dialog[open]');const scoped=await modal.count()&&await modal.locator(selector).count()?modal.locator(selector):page.locator(selector);await scoped.first().click();await waitFor(()=>collect.some(row=>row.tid===id&&row.en===(tap==='phone'?'phone_link_click':'whatsapp_link_click')));
    }
    const rows=collect.filter(row=>row.tid===id),views=rows.filter(row=>row.en==='page_view');
    assert.equal(views.length,1,pathname+' duplicate/absent page_view');
