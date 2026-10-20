@@ -431,23 +431,29 @@ const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech
 const HOME_GTM_MARKER='<!-- Google Tag Manager -->';
 const HOME_PRIVACY_BOOTSTRAP='<script id="pinnacle-measurement-privacy-bootstrap">(()=>{const keep=new Set(["utm_id","utm_source","utm_medium","utm_campaign","utm_term","utm_content","utm_source_platform","utm_creative_format","utm_marketing_tactic","gclid","dclid","msclkid","fbclid","gbraid","wbraid"]),u=new URL(location.href);for(const key of [...u.searchParams.keys()])if(!keep.has(key))u.searchParams.delete(key);history.replaceState(null,"",u.pathname+(u.search?u.search:"")+u.hash);window.dataLayer=window.dataLayer||[];window.dataLayer.push({pinnacle_canonical_measurement:true,pinnacle_protection_allowed:false});window.gtag=window.gtag||function(){dataLayer.push(arguments)};if(!window.__pinnacleConsentDefaults){window.__pinnacleConsentDefaults=true;window.gtag("consent","default",{analytics_storage:"granted",ad_storage:"granted",ad_user_data:"granted",ad_personalization:"denied"})}window.gtag("set","ads_data_redaction",false);window.gtag("set","url_passthrough",false)})();</script>';
 
+const HOME_MOBILE_GOOGLE_BLOCK="                let gtagScript = document.createElement('script');\n                gtagScript.src = \"https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ\";\n                gtagScript.async = true;\n\t\t\t\tgtagScript.setAttribute(\"data-cfasync\", \"false\"); // ✅ important\n                document.head.appendChild(gtagScript);\n\n                gtagScript.onload = function () {\n                    window.dataLayer = window.dataLayer || [];\n                    function gtag() { dataLayer.push(arguments); }\n                    gtag('js', new Date());\n                    gtag('config', 'G-2BYLRLFRDJ');\n                    gtag('config', 'AW-10810823199');\n\t\t\t\t\tgtag('config', 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo', {\n    'phone_conversion_number': '9100181181'\n  });\n                };\n";
 // Migrates only the reviewed public homepage fingerprint. GTM, Ads and call measurement remain intact.
 export async function transformReviewedHomepageMeasurement(request,response){
  const url=new URL(request.url);
  if(request.method!=='GET'||url.origin!=='https://www.pinnacleblooms.org'||url.pathname!=='/')return response;
  if(['authorization','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(name=>request.headers.has(name))||/\bno-transform\b/i.test(request.headers.get('cache-control')||''))return response;
- const recoveredPublicHome=response.headers.get('x-pinnacle-public-render-recovery')==='mobile-origin-20261008';
- if(!canTransformContextResponse(response)&&!(recoveredPublicHome&&response.status===200&&/^text\/html(?:\s*;|$)/i.test(response.headers.get('content-type')||'')&&!response.headers.has('set-cookie')&&!/\bno-transform\b/i.test(response.headers.get('cache-control')||'')))return response;
+ // Cache privacy is not a public tracking gate. Actual auth, cookies set by
+ // the response, no-transform, robots and exact template fingerprints still apply.
+ const eligibility=new Headers(response.headers);
+ if(!/\bno-transform\b/i.test(eligibility.get('cache-control')||''))eligibility.delete('cache-control');
+ if(!canTransformContextResponse(new Response(null,{status:response.status,headers:eligibility})))return response;
  const declared=Number(response.headers.get('content-length'));
  if(Number.isFinite(declared)&&declared>CONTEXT_BODY_LIMIT)return response;
  const html=await readContextBodyBounded(response);
  if(html===null)return response;
  const legacyConfig=html.includes(HOME_GA4_CONFIG)?HOME_GA4_CONFIG:HOME_GA4_CONFIG.replace(/\n/g,'\r\n');
- // The outer shared-navigation layer adds automatic call measurement later.
- const required=[HOME_GA4_LOADER,legacyConfig,HOME_GTM_MARKER,'GTM-W9ZHX459','AW-10810823199','</body>'];
- if(required.some(marker=>!html.includes(marker)))return response;
- if(html.split(HOME_GA4_LOADER).length!==2||html.split(legacyConfig).length!==2||html.split('</body>').length!==2)return response;
- let result=html.replace(HOME_GA4_LOADER,'').replace(legacyConfig,'').replace(HOME_GTM_MARKER,HOME_PRIVACY_BOOTSTRAP+HOME_GTM_MARKER);
+ const mobileBlock=html.includes(HOME_MOBILE_GOOGLE_BLOCK)?HOME_MOBILE_GOOGLE_BLOCK:HOME_MOBILE_GOOGLE_BLOCK.replace(/\n/g,'\r\n');
+ const mobile=html.includes(mobileBlock);
+ const required=mobile?[mobileBlock,HOME_GTM_MARKER,'GTM-W9ZHX459','</body>']:[HOME_GA4_LOADER,legacyConfig,HOME_GTM_MARKER,'GTM-W9ZHX459','AW-10810823199','</body>'];
+ if(required.some(marker=>!html.includes(marker))||html.split('</body>').length!==2)return response;
+ if(mobile?html.split(mobileBlock).length!==2:html.split(HOME_GA4_LOADER).length!==2||html.split(legacyConfig).length!==2)return response;
+ let result=mobile?html.replace(mobileBlock,"window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};window.gtag('config', 'AW-10810823199');\n").replace(/^\s*\/\/[^\r\n]*G-2BYLRLFRDJ[^\r\n]*$/gm,''):html.replace(HOME_GA4_LOADER,'').replace(legacyConfig,'');
+ result=result.replace(HOME_GTM_MARKER,HOME_PRIVACY_BOOTSTRAP+HOME_GTM_MARKER);
  const shared=/<script\b[^>]*\bsrc=["']\/pinnacle-pages-scripts\/speech-measurement\.js(?:\?[^"']*)?["'][^>]*>\s*<\/script>/gi;
  let retained=false;
  result=result.replace(shared,tag=>{if(retained)return '';retained=true;return tag.replace(/\bsrc=["'][^"']+["']/i,'src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-completion-20261020"');});

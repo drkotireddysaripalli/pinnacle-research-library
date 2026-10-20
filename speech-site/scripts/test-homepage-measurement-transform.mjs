@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {transformReviewedHomepageMeasurement} from '../deployment/pinnacle-route-v12.mjs';
 
@@ -63,3 +64,10 @@ for(const recovery of [false,true]){
  assert(r.url.includes('centre=suchitra'));assert(r.headers.get('cookie').includes('_ga='));
 }
 console.log(JSON.stringify({passed:41,failed:0,scope:'guarded homepage GA4 migration'}));
+
+const mobileBlock=JSON.parse(fs.readFileSync('scripts/fixtures/home-mobile-google-block-20261020.json','utf8'));
+const mobileFixture=fixture.replace(loader,'').replace(config,'<script>setTimeout(function(){try{'+mobileBlock+"// gtag('config', 'G-2BYLRLFRDJ');\n}catch(e){}setTimeout(function(){loadjscssfile('https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js')},6000)},4000)</script>");
+for(const raw of [mobileFixture,mobileFixture.replaceAll('\n','\r\n')]){
+ const transformed=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/?centre=suchitra'),new Response(raw,{headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store'}}));const s=await transformed.text();
+ assert.equal((s.match(/speech-measurement\.js/g)||[]).length,1);assert(!s.includes('gtagScript'));assert(!s.includes('G-2BYLRLFRDJ'));assert(s.includes('AW-10810823199'));assert(s.includes('widget.trustpilot.com'));assert(s.indexOf('pinnacle_canonical_measurement:true')<s.indexOf('GTM-W9ZHX459'));assert.equal(transformed.headers.get('cache-control'),'no-store');
+}
