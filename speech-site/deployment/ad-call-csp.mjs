@@ -61,7 +61,9 @@ export function augmentCsp(headers) {
     "https://www.google.com",
     "https://www.google.co.in",
     "https://ad.doubleclick.net",
-    "https://*.google-analytics.com"
+    "https://*.google-analytics.com",
+    "https://analytics.google.com",
+    "https://stats.g.doubleclick.net"
   ]);
   next = augmentDirective(next, "frame-src", ["https://www.googletagmanager.com"]);
   headers.set("content-security-policy", next);

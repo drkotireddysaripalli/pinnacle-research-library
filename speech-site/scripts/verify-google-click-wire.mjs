@@ -37,6 +37,14 @@ const templates=[
  {path:'/certified-courses',family:'retained-gtm-template',width:1440,gtm:true,taps:['phone']},
  {path:'/national-autism-helpline',family:'helpline-separate-stream',width:390,id:helplineId,taps:['phone']}
 ];
+const cspProbe=process.argv.includes('--csp-probe');
+if(cspProbe)templates.splice(0,templates.length,
+ {path:'/autism-therapy',family:'managed-service-csp',width:390,taps:['phone','whatsapp']},
+ {path:'/ask',host:'pinnacleblooms.org',family:'ask-public-csp',width:390,taps:['phone']},
+ {path:'/verify/guides/abilityscore.html',family:'verify-reader-csp',width:1440,id:helplineId,taps:[],automaticMode:false},
+ {path:'/national-autism-helpline',family:'helpline-csp',width:390,id:helplineId,taps:['phone']});
+const primaryCollector=row=>row.transportHost==='analytics.google.com'||row.transportHost?.endsWith('.analytics.google.com')||row.transportHost==='google-analytics.com'||row.transportHost?.endsWith('.google-analytics.com');
+const collectorPolicyViolation=row=>/^(?:https?:\/\/)?(?:analytics\.google\.com|[^/]*\.analytics\.google\.com|(?:[^/]*\.)?google-analytics\.com|stats\.g\.doubleclick\.net)(?:\/|$)/.test(row.blockedURI||'');
 const manifest=await pageManifest(),scripts=new Map(),fixtures=new Map();
 const evidence={schemaVersion:2,at:new Date().toISOString(),mode:local?'built-dist-and-declared-legacy-fixtures':'production',googleSupportCase:'0-6004000041976',googleMeasurementRequestsSent:0,productionIntakes:0,pages:[],scripts:[],requirements:[],inventory:{records:manifest.length,published:manifest.filter(p=>p.published).length,families:[...new Set(manifest.map(p=>p.family))].sort(),representatives:templates.map(p=>({path:p.path,family:p.family})),scope:'Existing page manifest plus representative browser families; not a URL-by-device Cartesian crawl. Unvisited routes rely on named source/inventory assertions, not fresh rendered universal coverage.'}};
 const requirement=(id,assertion,pageFamilies,devices=['Chromium'])=>evidence.requirements.push({id,status:'Pass',assertion,pageFamilies,devices,evidencePaths:[output]});
@@ -67,6 +75,8 @@ try{
   const pathname=spec.path,id=spec.id||measurementId;
   const context=await browser.newContext({viewport:{width:spec.width,height:844},...(spec.homeMobile?{isMobile:true,userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 Version/18.5 Mobile/15E148 Safari/604.1'}:{})}),collect=[],blocked=[],errors=[];
   const entry={pathname,family:spec.family,viewport:{width:spec.width,height:844},source:local&&fixtures.has(pathname)?'declared transformed legacy fixture':local?'built distribution':'actual production HTML',declaredTaps:spec.taps,expectedOwner:spec.gtm?'direct_gtag_with_retained_GTM':'direct_gtag',passed:false,collect,blocked,errors};evidence.pages.push(entry);
+  entry.consoleErrors=[];entry.failedRequests=[];
+  await context.addInitScript(()=>{window.__pinnacleWirePolicyViolations=[];document.addEventListener('securitypolicyviolation',event=>window.__pinnacleWirePolicyViolations.push({directive:event.effectiveDirective,blockedURI:event.blockedURI,disposition:event.disposition}));});
   await context.route('**/*',async route=>{
    const request=route.request(),url=new URL(request.url());
    if(/\/collect$/.test(url.pathname)){
@@ -98,37 +108,46 @@ try{
    return route.fulfill({status:request.resourceType()==='script'?200:204,contentType:'text/javascript',body:''});
   });
   const page=await context.newPage();page.on('pageerror',error=>errors.push(error.message));
+  page.on('console',message=>{if(message.type()==='error')entry.consoleErrors.push(message.text().replace(/https?:\/\/[^\s'"<>]+/g,value=>{try{const u=new URL(value);return u.origin+u.pathname;}catch{return '[url]';}}));});
+  page.on('requestfailed',request=>{const u=new URL(request.url());entry.failedRequests.push({origin:u.origin,path:u.pathname,error:request.failure()?.errorText});});
+  page.on('response',response=>{if(response.request().isNavigationRequest()&&new URL(response.url()).pathname===pathname)entry.contentSecurityPolicy=response.headers()['content-security-policy']||null;});
   try{
    const query='?utm_source=google&utm_medium=cpc&utm_campaign=isolated_wire_check&unknown_field=discard_me';
    await page.goto('https://'+(spec.host||'www.pinnacleblooms.org')+pathname+query,{waitUntil:'domcontentloaded',timeout:45000});
-   await waitFor(()=>collect.some(row=>row.tid===id&&row.en==='page_view'));
+   await waitFor(()=>collect.some(row=>primaryCollector(row)&&row.tid===id&&row.en==='page_view'));
    await page.evaluate(()=>document.addEventListener('click',event=>{const a=event.target?.closest?.('a[href]');if(a&&/^(?:tel:|https:\/\/(?:wa\.me|api\.whatsapp\.com)\/)/.test(a.href))event.preventDefault();},true));
    for(const tap of spec.taps){
     const selector=tap==='phone'?'a[href="tel:+919100181181"]:visible,a[data-pinnacle-ad-call-target="central"]:visible':'a[href^="https://wa.me/919100181181"]:visible,a[href^="https://api.whatsapp.com/send"][href*="919100181181"]:visible';
-    const modal=page.locator('dialog[open]');const scoped=await modal.count()&&await modal.locator(selector).count()?modal.locator(selector):page.locator(selector);await scoped.first().click();await waitFor(()=>collect.some(row=>row.tid===id&&row.en===(tap==='phone'?'phone_link_click':'whatsapp_link_click')));
+    const modal=page.locator('dialog[open]');const scoped=await modal.count()&&await modal.locator(selector).count()?modal.locator(selector):page.locator(selector);await scoped.first().click();await waitFor(()=>collect.some(row=>primaryCollector(row)&&row.tid===id&&row.en===(tap==='phone'?'phone_link_click':'whatsapp_link_click')));
    }
-   const rows=collect.filter(row=>row.tid===id),views=rows.filter(row=>row.en==='page_view');
+   const allRows=collect.filter(row=>row.tid===id),rows=allRows.filter(primaryCollector),views=rows.filter(row=>row.en==='page_view');
+   entry.securityPolicyViolations=await page.evaluate(()=>window.__pinnacleWirePolicyViolations||[]);
+   assert.equal(entry.securityPolicyViolations.filter(collectorPolicyViolation).length,0,'Google collector blocked by browser CSP');
+   entry.primaryCollectorOrigins=[...new Set(rows.map(row=>'https://'+row.transportHost))];entry.secondaryCollectCount=allRows.length-rows.length;
+   if(cspProbe&&pathname==='/autism-therapy')assert(entry.primaryCollectorOrigins.includes('https://analytics.google.com'),'Actual primary analytics apex must reach interception');
    assert.equal(views.length,1,pathname+' duplicate/absent page_view');
    assert.equal(collect.filter(row=>row.tid===(id===helplineId?measurementId:helplineId)&&row.en==='page_view').length,0,'stream scope crossed');
    for(const tap of spec.taps)assert.equal(rows.filter(row=>row.en===(tap==='phone'?'phone_link_click':'whatsapp_link_click')).length,1,pathname+' duplicate/absent '+tap);
-   for(const row of rows.filter(r=>r.en))assert(!JSON.stringify(row).includes('discard_me'),'Unbounded URL value in event');
+   for(const row of allRows.filter(r=>r.en))assert(!JSON.stringify(row).includes('discard_me'),'Unbounded URL value in event');
    if(id===measurementId&&spec.automaticMode!==false)for(const row of rows.filter(r=>['page_view','phone_link_click','whatsapp_link_click'].includes(r.en)))assert.equal(row['ep.measurement_mode'],'automatic');
    entry.passed=true;entry.pageViews=views.length;entry.events=rows.filter(r=>r.en).map(row=>({name:row.en,measurementId:row.tid,page:row.dl,mode:row['ep.measurement_mode'],placement:row['ep.link_placement'],destination:row['ep.destination']}));
    await page.screenshot({path:output.replace(/\.json$/,'')+'-'+(pathname==='/'?'home':pathname.slice(1).replaceAll('/','-'))+'.png',fullPage:false});
-  }finally{entry.state=await page.evaluate(()=>({dataLayer:(window.dataLayer||[]).map(row=>row?.event?row:Array.from(row).slice(0,3)),tags:Object.keys(window.google_tag_manager||{}),choiceUI:document.querySelectorAll('[data-measurement-choice],[data-ad-call-choice],[data-speech-measurement]').length})).catch(()=>null);await context.close();}
+  }finally{entry.securityPolicyViolations=await page.evaluate(()=>window.__pinnacleWirePolicyViolations||[]).catch(()=>[]);entry.state=await page.evaluate(()=>({dataLayer:(window.dataLayer||[]).map(row=>row?.event?row:Array.from(row).slice(0,3)),tags:Object.keys(window.google_tag_manager||{}),choiceUI:document.querySelectorAll('[data-measurement-choice],[data-ad-call-choice],[data-speech-measurement]').length})).catch(()=>null);await context.close();}
  }
  requirement('public-template-inventory','Existing TestingBot manifest inventory and explicit maintained representative templates are recorded',evidence.inventory.families);
  requirement('ga4-page-view-once','Each declared eligible initial document emits exactly one decoded page_view to its own measurement ID',templates.map(p=>p.family));
  requirement('ga4-contact-clicks-once','Each declared visible central phone/WhatsApp activation emits its exact canonical event once',templates.filter(p=>p.taps.length).map(p=>p.family));
- requirement('gtm-direct-owner-once','Actual retained Google GTM library executes alongside canonical direct owner; initial page_view remains once',['legacy-home','retained-gtm-template']);
- const contactDir=output.replace(/\.json$/,'')+'-contact';
+ if(!cspProbe)requirement('gtm-direct-owner-once','Actual retained Google GTM library executes alongside canonical direct owner; initial page_view remains once',['legacy-home','retained-gtm-template']);
+ if(!cspProbe){const contactDir=output.replace(/\.json$/,'')+'-contact';
  execFileSync(process.execPath,['scripts/check-contact-receipt-browser.mjs','--google-wire','--out',contactDir],{cwd:process.cwd(),stdio:'inherit',env:process.env});
  const contract=JSON.parse(await fs.readFile(path.join(contactDir,'browser-proof.json'),'utf8'));assert.equal(contract.executed,7);assert(contract.results.every(r=>r.passed));
  evidence.receiptCases=contract;
  requirement('receipt-accepted-once','Actual Google SDK emits one accepted event only after matching durable-response fixture; duplicate submission remains one',['durable-contact']);
  requirement('receipt-failure-retry-refresh','Rejected/conflict/mismatched/validation responses emit zero; unknown retry preserves request; confirmation refresh adds zero accepted events',['durable-contact']);
+ }
+ requirement('ga4-primary-csp','Actual GA4 primary collectors reach contained interception, with zero Google-collection CSP violations; console and policy events are recorded',templates.map(p=>p.family));
  requirement('wire-no-pii','Wire assertions exclude canary form values and request/receipt identities; unknown URL values excluded',templates.map(p=>p.family));
  evidence.passed=true;
- console.log(JSON.stringify({passed:true,pages:evidence.pages.length,receiptCases:contract.executed,output}));
+ console.log(JSON.stringify({passed:true,pages:evidence.pages.length,receiptCases:evidence.receiptCases?.executed||0,output}));
 }catch(error){evidence.passed=false;evidence.error=error.stack;throw error;}
 finally{await browser.close();await fs.writeFile(output,JSON.stringify(evidence,null,2)+'\n');}

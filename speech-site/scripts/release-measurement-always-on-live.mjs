@@ -12,10 +12,11 @@ const phases = ['prepare', 'assemble', 'upload', 'promote', 'verify', 'rollback'
 assert(phase === 'all' || phases.includes(phase), `Use all or ${phases.join(', ')}`);
 const portalOnly = process.argv.includes('--portal-only');
 const portalAndReceiver = process.argv.includes('--portal-and-receiver');
-assert(!(portalOnly&&portalAndReceiver),'Choose one release scope');
+const cspOnly = process.argv.includes('--csp-only');
+assert([portalOnly,portalAndReceiver,cspOnly].filter(Boolean).length<=1,'Choose one release scope');
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const root = path.resolve(site, '..');
-const id = portalOnly ? 'contact-packaging-live-20261020' : 'contact-source-live-20261020';
+const id = cspOnly ? 'ga4-primary-csp-live-20261020' : portalOnly ? 'contact-packaging-live-20261020' : 'contact-source-live-20261020';
 const releaseDir = path.resolve(process.env.PINNACLE_RELEASE_DIR || path.join(root, `artifacts/${id}/release`));
 const receiptPath = path.join(releaseDir, 'receipt.json');
 const beforePath = path.join(releaseDir, 'before.json');
@@ -28,10 +29,11 @@ const targets = {
   portal: {name: 'pinnacle-verify-route', main: 'public-document-recovery-entry.mjs', keepAssets: true},
   helpline: {name: 'pinnacle-helpline', main: 'worker.mjs'}
 };
-const releaseTargets = portalOnly ? {portal: targets.portal} : portalAndReceiver ? {portal:targets.portal,receiver:targets.receiver} : targets;
+const releaseTargets = portalOnly ? {portal: targets.portal} : portalAndReceiver ? {portal:targets.portal,receiver:targets.receiver} : cspOnly ? {portal:targets.portal,ask:targets.ask,call:targets.call,helpline:targets.helpline} : targets;
 const protectedNames = ['pinnacle-legacy-social-metadata', 'pinnacle-root-sitemap', 'materials-mobile-desktop-tracker', 'pinnacle-ask-mcp', 'pinnacle-centre-search-repair',
   ...Object.entries(targets).filter(([key])=>!releaseTargets[key]).map(([,target])=>target.name)];
 const portalLocalModules = [
+  'book-attribution-handler.mjs', 'first-conversation-handler.mjs', 'seva-handler.mjs',
   'aba-assets.mjs', 'abilityscore-assets.mjs', 'about-assets.mjs', 'autism-assets.mjs',
   'book-attribution-assets.mjs', 'enrolment-assets.mjs', 'everyday-assets.mjs', 'first-conversation-assets.mjs',
   'fusion-assets.mjs', 'legacy-measurement.runtime.mjs', 'occupational-assets.mjs', 'pdk-assets.mjs',
@@ -169,6 +171,7 @@ async function assembleCandidates(commit) {
 
   const manifests = {[targets.portal.name]: portalManifest};
   if (!portalOnly) {
+    if(releaseTargets.receiver){
     const receiverModules = await captured(targets.receiver.name);
     const receiverByName = new Map(receiverModules.map(module => [module.name, module]));
     for (const name of ['website-enrolment-receipt.mjs', 'website-enrolment-analytics.mjs']) {
@@ -183,6 +186,7 @@ async function assembleCandidates(commit) {
     const receiverManifest = await writeCandidate(targets.receiver.name, targets.receiver.main, receiverCandidate);
     manifests[targets.receiver.name] = receiverManifest;
     execFileSync(process.execPath, [path.join(site, 'scripts/verify-contact-source-receiver-candidate.mjs'), path.join(releaseDir, 'candidate', targets.receiver.name, 'website-enrolment-receipt.mjs')], {cwd: site, stdio: 'inherit', windowsHide: true});
+    }
 
     if(releaseTargets.call){
     const callSource = path.join(site, 'workers/google-ads-call-measurement/index.mjs');
@@ -200,6 +204,11 @@ async function assembleCandidates(commit) {
   if(releaseTargets.ask){
     const originals=await captured(targets.ask.name);
     const info=await load(receiptPath);let originalMain=info.captures[targets.ask.name].sourceMain;
+    if(originalMain===targets.ask.main){
+      const current=originals.find(module=>module.name===originalMain)?.bytes.toString('utf8');
+      originalMain=/import original from ["']\.\/([^"']+)["']/.exec(current||'')?.[1];
+      assert(originalMain&&originalMain!==targets.ask.main,'Existing Ask wrapper original entry missing');
+    }
     if(!originalMain){
       const imported=new Set(originals.flatMap(m=>[...m.bytes.toString().matchAll(/(?:from\s*|import\s*)['"]\.\/([^'"]+)['"]/g)].map(v=>v[1])));
       const roots=originals.filter(m=>/\.(?:mjs|js)$/.test(m.name)&&!imported.has(m.name)&&/export\s*(?:default|\{[^}]*\bdefault\b)/s.test(m.bytes.toString()));
@@ -207,7 +216,7 @@ async function assembleCandidates(commit) {
     }
     assert(originals.some(m=>m.name===originalMain),'Captured Ask main missing');
     const wrapper=await build({stdin:{contents:`import original from './${originalMain}';import{createPublicMeasurementWrapper}from'./public-measurement-wrapper.mjs';export default createPublicMeasurementWrapper(original);`,resolveDir:path.join(site,'deployment')},bundle:true,format:'esm',platform:'browser',write:false,external:['./'+originalMain],logLevel:'silent'});
-    manifests[targets.ask.name]=await writeCandidate(targets.ask.name,targets.ask.main,[...originals,{name:targets.ask.main,bytes:wrapper.outputFiles[0].contents}]);
+    manifests[targets.ask.name]=await writeCandidate(targets.ask.name,targets.ask.main,[...originals.filter(module=>module.name!==targets.ask.main),{name:targets.ask.main,bytes:wrapper.outputFiles[0].contents}]);
   }
   return manifests;
 }
@@ -268,6 +277,7 @@ async function retryFetch(url, options = {}, accept) {
   throw last;
 }
 async function verifyLive(receipt) {
+  if(cspOnly)return verifyCspLive(receipt);
   const nonce = Date.now();
   const htmlPaths = [
     '/', '/best-aba-therapy-center-india-proven-improvement-rate', '/enroll-autism-speech-aba-therapies-india',
@@ -347,6 +357,27 @@ async function verifyLive(receipt) {
   }
   return {at: new Date().toISOString(), pages, assets, bootstrapSha256: sha(Buffer.from(bootstrap)), readerSha256: sha(Buffer.from(reader)), workers: moduleEvidence, browser: 'live-browser.json'};
 }
+async function verifyCspLive(receipt){
+ const pages=[];
+ for(const [host,pathname]of [['www.pinnacleblooms.org','/autism-therapy'],['pinnacleblooms.org','/ask'],['www.pinnacleblooms.org','/verify/guides/abilityscore.html'],['www.pinnacleblooms.org','/national-autism-helpline']]){
+  for(const method of ['GET','HEAD']){
+   const response=await retryFetch('https://'+host+pathname,{method}),policy=response.headers.get('content-security-policy')||'',connect=policy.split(';').find(part=>part.trim().startsWith('connect-src '))||'';
+   if(method==='GET')for(const origin of ['https://analytics.google.com','https://stats.g.doubleclick.net'])assert(connect.split(/\s+/).some(source=>source===origin||source===origin+'/g/collect'),origin+' absent from '+pathname);
+   pages.push({host,pathname,method,status:response.status,contentSecurityPolicy:policy});await response.body?.cancel();
+  }
+ }
+ const output=path.join(releaseDir,'csp-google-wire.json');
+ execFileSync(process.execPath,[path.join(site,'scripts/verify-google-click-wire.mjs'),output,'--csp-probe'],{cwd:site,stdio:'inherit',windowsHide:true});
+ const browser=await load(output);assert(browser.passed&&browser.pages.length===4,'Affected real Google CSP browser cases failed');
+ const workers={};
+ for(const target of Object.values(releaseTargets)){
+  const actual=await modules(target.name),expected=receipt.candidates[target.name].manifest;
+  assert.equal(actual.length,expected.moduleCount,target.name+' module count');
+  for(const module of actual)assert.equal(sha(module.bytes),expected.hashes[module.name],target.name+' module mismatch '+module.name);
+  workers[target.name]={version:receipt.candidates[target.name].version,moduleCount:actual.length,allModuleHashesMatch:true};
+ }
+ return {at:new Date().toISOString(),pages,workers,browser:{path:output,passed:true,cases:4},scope:'CSP collection only; unchanged UI/source/receipt suites retained from PR141 packets'};
+}
 
 async function prepare() {
   await fs.mkdir(releaseDir, {recursive: true});
@@ -357,7 +388,7 @@ async function prepare() {
   const captures = {};
   for (const target of Object.values(releaseTargets)) captures[target.name] = await saveCaptured(target.name, await modules(target.name));
   await save(beforePath, before);
-  const receipt = {id, phase: 'prepared', portalOnly, portalAndReceiver, preparedAt: new Date().toISOString(), commit, beforeVersions: Object.fromEntries(Object.values(releaseTargets).map(target => [target.name, before.workers[target.name].versions])), captures, candidates: {}, promotions: {}};
+  const receipt = {id, phase: 'prepared', portalOnly, portalAndReceiver, cspOnly, preparedAt: new Date().toISOString(), commit, beforeVersions: Object.fromEntries(Object.values(releaseTargets).map(target => [target.name, before.workers[target.name].versions])), captures, candidates: {}, promotions: {}};
   await save(receiptPath, receipt);
   console.log(JSON.stringify({phase: receipt.phase, commit, captures}));
 }
