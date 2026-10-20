@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
+import {validateCommonCspReuse} from './change-test-plan.mjs';
 import {patchReceiverContactAcquisition, assertReceiverContactAcquisitionPatch} from '../deployment/receiver-acquisition-patch.mjs';
 
 const phase = process.argv[2] || 'all';
@@ -220,6 +221,42 @@ async function assembleCandidates(commit) {
   }
   return manifests;
 }
+async function reuseCspCi(commit, run, directory, releaseTree, testedTree) {
+  const baselinePath=process.env.PINNACLE_CSP_BASELINE_RECEIPT;
+  assert(baselinePath,'Focused CSP CI requires PINNACLE_CSP_BASELINE_RECEIPT pointing to the existing verified-live release receipt; do not rerun unchanged builds');
+  const baseline=await load(path.resolve(baselinePath));
+  const report=path.join(path.dirname(path.resolve(baselinePath)),'ci/report.json');
+  const reportBytes=await fs.readFile(report);
+  const baselineBefore=await load(path.join(path.dirname(path.resolve(baselinePath)),'before.json'));
+  const currentBefore=await load(beforePath),current=await load(receiptPath);
+  assert.deepEqual(currentBefore.routes,baselineBefore.routes,'Routes changed since the verified baseline');
+  for(const [name,worker]of Object.entries(currentBefore.workers))assert.deepEqual(stableSettings(worker.settings),stableSettings(baselineBefore.workers[name]?.settings||{}),name+' configuration changed since the verified baseline');
+  for(const name of protectedNames)assert.deepEqual(currentBefore.workers[name].versions,baselineBefore.workers[name]?.versions,name+' protected version changed since baseline');
+  for(const target of Object.values(releaseTargets)){
+    const prior=baseline.candidates?.[target.name];assert(prior?.version,target.name+' missing from baseline');
+    assert.deepEqual(currentBefore.workers[target.name].versions,[{version_id:prior.version,percentage:100}],target.name+' production changed since baseline');
+    assert.deepEqual(current.captures[target.name].hashes,prior.manifest.hashes,target.name+' serving module hashes changed since baseline');
+  }
+
+  assert.equal(treeOf(baseline.commit),treeOf(baseline.ci?.testedCommit),'Baseline real BVT and release trees differ');
+  assert(treeOf(baseline.commit),'Baseline commit missing');
+  const baselineRun=JSON.parse(gh(['run','view',String(baseline.ci?.databaseId),'--json','headSha,event,status,conclusion']));
+  assert(baselineRun.event==='push'&&baselineRun.status==='completed'&&baselineRun.conclusion==='success'&&baselineRun.headSha===baseline.ci?.testedCommit,'Baseline is not a trusted successful source push');
+  execFileSync('gh',['run','download',String(run.databaseId),'--name','changed-scope-evidence','--dir',directory],{cwd:root,stdio:'inherit',windowsHide:true});
+  const candidates=[path.join(directory,'audits/change-testing/result.json'),path.join(directory,'result.json')];
+  const existing=[];for(const file of candidates)if(await fs.stat(file).catch(()=>null))existing.push(file);
+  assert.equal(existing.length,1,'Focused artifact result is missing or ambiguous');
+  const focused=await load(existing[0]),logs=path.dirname(existing[0]);
+  const files=git(['diff','--no-renames','--name-only',baseline.commit,commit]).split('\n').filter(Boolean);
+  const hasDeletions=!!git(['diff','--no-renames','--diff-filter=D','--name-only',baseline.commit,commit]);
+  const logBytes={};for(const record of focused.results||[])if(/^[a-f0-9]{64}$/.test(record.key))logBytes[record.key+'.log']=await fs.readFile(path.join(logs,record.key+'.log'));
+  const reuse=validateCommonCspReuse({files,hasDeletions,readBefore:file=>gitBytes(['show',baseline.commit+':'+file]),readAfter:file=>gitBytes(['show',commit+':'+file]),baseline,baselineReport:reportBytes,focused,testedCommit:run.headSha,readLog:name=>logBytes[name]});
+  // Retain the original real BVT report alongside the fresh focused evidence.
+  execFileSync(process.execPath,[path.join(site,'scripts/assert-testingbot-release.mjs'),report],{cwd:site,stdio:'inherit',windowsHide:true,env:{...process.env,GITHUB_SHA:baseline.ci.testedCommit}});
+  await fs.copyFile(report,path.join(directory,'reused-bvt-report.json'));
+  await save(path.join(directory,'reuse.json'),reuse);
+  return {...run,releaseCommit:commit,testedCommit:run.headSha,releaseTree,testedTree,identicalTreeReuse:run.headSha!==commit,focusedReportSha256:sha(await fs.readFile(existing[0])),reusedBvt:reuse};
+}
 async function waitForCi(commit) {
   const deadline = Date.now() + 35 * 60 * 1000;
   const releaseTree = treeOf(commit);
@@ -236,6 +273,10 @@ async function waitForCi(commit) {
       const directory = path.join(releaseDir, 'ci');
       await fs.rm(directory, {recursive: true, force: true});
       await fs.mkdir(directory, {recursive: true});
+      if(cspOnly){
+        const artifacts=JSON.parse(gh(['api',`repos/{owner}/{repo}/actions/runs/${run.databaseId}/artifacts`])).artifacts||[];
+        if(!artifacts.some(item=>item.name==='testingbot-build-verification'&&!item.expired))return reuseCspCi(commit,run,directory,releaseTree,testedTree);
+      }
       execFileSync('gh', ['run', 'download', String(run.databaseId), '--name', 'testingbot-build-verification', '--dir', directory], {cwd: root, stdio: 'inherit', windowsHide: true});
       const report = path.join(directory, 'report.json');
       execFileSync(process.execPath, [path.join(site, 'scripts/assert-testingbot-release.mjs'), report], {cwd: site, stdio: 'inherit', windowsHide: true, env: {...process.env, GITHUB_SHA: run.headSha}});
@@ -362,8 +403,8 @@ async function verifyCspLive(receipt){
  for(const [host,pathname]of [['www.pinnacleblooms.org','/autism-therapy'],['pinnacleblooms.org','/ask'],['www.pinnacleblooms.org','/verify/guides/abilityscore.html'],['www.pinnacleblooms.org','/national-autism-helpline']]){
   for(const method of ['GET','HEAD']){
    const response=await retryFetch('https://'+host+pathname,{method}),policy=response.headers.get('content-security-policy')||'',connect=policy.split(';').find(part=>part.trim().startsWith('connect-src '))||'';
-   if(method==='GET')for(const origin of ['https://analytics.google.com','https://stats.g.doubleclick.net'])assert(connect.split(/\s+/).some(source=>source===origin||source===origin+'/g/collect'),origin+' absent from '+pathname);
-   pages.push({host,pathname,method,status:response.status,contentSecurityPolicy:policy});await response.body?.cancel();
+   if(method==='GET'&&policy)for(const origin of ['https://analytics.google.com','https://stats.g.doubleclick.net'])assert(connect.split(/\s+/).some(source=>source===origin||source===origin+'/g/collect'),origin+' absent from '+pathname);
+   pages.push({host,pathname,method,status:response.status,contentSecurityPolicy:policy||null,policyAbsent:!policy});await response.body?.cancel();
   }
  }
  const output=path.join(releaseDir,'csp-google-wire.json');
