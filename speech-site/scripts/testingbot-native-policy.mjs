@@ -49,13 +49,15 @@ export function assertNativeProbeDocument(document){
 }
 // Existing non-instrumented first-party text document only. Non-event GETs
 // with no identifiers or cookies. Browsers require follow for no-cors mode.
+// Opaque fetch resolution does not establish vendor reachability or proxy denial.
+// Retain the stop before production; correlate tunnel decisions separately.
 export async function nativeReaderProbe(targets){
  return Promise.all(targets.map(async({name,url,expected})=>{
-  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);let outcome;
-  try{await fetch(url,{method:'GET',mode:'no-cors',credentials:'omit',cache:'no-store',redirect:'follow',signal:controller.signal});outcome='reachable';}
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);let outcome,responseEvidence;
+  try{const response=await fetch(url,{method:'GET',mode:'no-cors',credentials:'omit',cache:'no-store',redirect:'follow',signal:controller.signal});responseEvidence={type:response.type||'unknown',status:response.status??null};outcome=['opaque','opaqueredirect'].includes(response.type)||!Number.isInteger(response.status)||response.status===0?'unobservable':response.ok?'reachable':'http-error';}
   catch(error){outcome=error?.name==='AbortError'?'timeout':'blocked';}
   finally{clearTimeout(timer);}
-  return{name,expected,outcome,passed:outcome===expected};
+  return{name,expected,outcome,passed:outcome===expected,...(responseEvidence?{response:responseEvidence}:{})};
  }));
 }
 export function assertNativeReaderProbe(results){
