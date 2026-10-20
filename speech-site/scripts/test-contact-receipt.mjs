@@ -17,7 +17,7 @@ test('outer contact asset precedence serves the complete maintained dependency c
  const base='https://www.pinnacleblooms.org';assert.equal(contactReceiptAssets.size,7);
  const env={ASSETS:{fetch:async r=>new Response(await fs.readFile(new URL('../public'+new URL(r.url).pathname,import.meta.url)))}};
  for(const name of ['contact-receipt.js','contact-api.mjs','contact-options.mjs','enrolment-api.mjs','enrolment-source.mjs','speech-measurement.js','protection-consumer.mjs']){
-  const p='/pinnacle-pages-scripts/'+name,r=await serveContactReceiptAsset(new Request(base+p+'?v=contact-receipt-20261015'),env),expected=await fs.readFile(new URL('../public'+p,import.meta.url),'utf8');assert.equal(r.status,200,name);assert.equal(r.headers.get('x-pinnacle-contact-assets'),'contact-receipt-20261019');assert.equal(r.headers.get('x-pinnacle-contact-asset-sha256'),createHash('sha256').update(expected).digest('hex'));assert.equal(await r.text(),expected,name);
+  const p='/pinnacle-pages-scripts/'+name,r=await serveContactReceiptAsset(new Request(base+p+'?v=contact-receipt-20261015'),env),expected=await fs.readFile(new URL('../public'+p,import.meta.url),'utf8');assert.equal(r.status,200,name);assert.equal(r.headers.get('access-control-allow-origin'),'*');assert.equal(r.headers.get('x-pinnacle-contact-assets'),'contact-receipt-20261019');assert.equal(r.headers.get('x-pinnacle-contact-asset-sha256'),createHash('sha256').update(expected).digest('hex'));assert.equal(await r.text(),expected,name);
   assert.equal((await serveContactReceiptAsset(new Request(base+p,{method:'POST'}),env)).status,405);
   assert.equal(await (await serveContactReceiptAsset(new Request(base+p,{method:'HEAD'}),env)).text(),'');
  }
@@ -52,7 +52,7 @@ test('invalid optional acquisition is dropped, original contact source is retain
  assert.notEqual(await contactPayloadDigest(l),await contactPayloadDigest({...l,Subject:'Assessments'}));
 });
 test('the deployed receiver module patch changes only the missing contact acquisition route and is idempotent',()=>{
- const before='function normaliseAcquisition(value){return /^\\/(?:national-autism-helpline|centers|autism-therapy)?$/.test(value.landingPath)}';
+ const before='const safeCampaign=value=>knownGoogleAdsCampaignIds.has(value); function normaliseAcquisition(value){return /^\\/(?:national-autism-helpline|centers|autism-therapy)?$/.test(value.landingPath)}';
  const after=patchReceiverContactAcquisition(before);
  assert(after.includes('national-autism-helpline|contact-national-autism-helpline-24-7|centers'));
  assert.equal(patchReceiverContactAcquisition(after),after);

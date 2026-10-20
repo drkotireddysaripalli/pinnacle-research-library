@@ -11,6 +11,8 @@ const phase = process.argv[2] || 'all';
 const phases = ['prepare', 'assemble', 'upload', 'promote', 'verify', 'rollback'];
 assert(phase === 'all' || phases.includes(phase), `Use all or ${phases.join(', ')}`);
 const portalOnly = process.argv.includes('--portal-only');
+const portalAndReceiver = process.argv.includes('--portal-and-receiver');
+assert(!(portalOnly&&portalAndReceiver),'Choose one release scope');
 const site = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const root = path.resolve(site, '..');
 const id = portalOnly ? 'contact-packaging-live-20261020' : 'contact-source-live-20261020';
@@ -21,13 +23,14 @@ const account = '862998def1cd610fdb86b8e5c1d6ed4d';
 const zone = '8b13f18e0589996b5d6512552372b434';
 const targets = {
   receiver: {name: 'pbn-planetscale', main: 'index.js'},
+  ask: {name:'pinnacle-ask',main:'public-measurement-entry.mjs',keepAssets:true},
   call: {name: 'pinnacle-google-ads-call-measurement', main: 'index.mjs'},
   portal: {name: 'pinnacle-verify-route', main: 'public-document-recovery-entry.mjs', keepAssets: true},
   helpline: {name: 'pinnacle-helpline', main: 'worker.mjs'}
 };
-const releaseTargets = portalOnly ? {portal: targets.portal} : targets;
-const protectedNames = ['pinnacle-legacy-social-metadata', 'pinnacle-ask', 'pinnacle-root-sitemap', 'materials-mobile-desktop-tracker', 'pinnacle-ask-mcp', 'pinnacle-centre-search-repair',
-  ...(portalOnly ? [targets.receiver.name, targets.call.name, targets.helpline.name] : [])];
+const releaseTargets = portalOnly ? {portal: targets.portal} : portalAndReceiver ? {portal:targets.portal,receiver:targets.receiver} : targets;
+const protectedNames = ['pinnacle-legacy-social-metadata', 'pinnacle-root-sitemap', 'materials-mobile-desktop-tracker', 'pinnacle-ask-mcp', 'pinnacle-centre-search-repair',
+  ...Object.entries(targets).filter(([key])=>!releaseTargets[key]).map(([,target])=>target.name)];
 const portalLocalModules = [
   'aba-assets.mjs', 'abilityscore-assets.mjs', 'about-assets.mjs', 'autism-assets.mjs',
   'book-attribution-assets.mjs', 'enrolment-assets.mjs', 'everyday-assets.mjs', 'first-conversation-assets.mjs',
@@ -55,6 +58,7 @@ async function readToken() {
   return token;
 }
 const token = await readToken();
+const capturedMainModules={};
 async function api(resource, method = 'GET', body) {
   const form = body instanceof FormData;
   const response = await fetch('https://api.cloudflare.com/client/v4' + resource, {
@@ -77,7 +81,10 @@ async function modules(name) {
   const response = await fetch('https://api.cloudflare.com/client/v4' + base(name) + '/content/v2', {headers: {authorization: 'Bearer ' + token}, signal: AbortSignal.timeout(60000)});
   assert(response.ok, `${name} content ${response.status}`);
   const out = [];
-  for (const [key, value] of await response.formData()) if (typeof value !== 'string') {
+  const form=await response.formData();
+  let metadata;try{const raw=form.get('metadata');metadata=typeof raw==='string'?JSON.parse(raw):raw?JSON.parse(await raw.text()):null;}catch{}
+  capturedMainModules[name]=response.headers.get('cf-entrypoint')||metadata?.main_module||null;
+  for (const [key, value] of form) if (key!=='metadata'&&typeof value !== 'string') {
     const moduleName = value.name || key;
     assert(/^[\w.-]+\.(?:mjs|js)$/.test(moduleName), `Unsafe module name ${moduleName}`);
     out.push({name: moduleName, bytes: Buffer.from(await value.arrayBuffer())});
@@ -103,7 +110,7 @@ async function saveCaptured(name, workerModules) {
   const directory = path.join(releaseDir, 'captured', name);
   await fs.mkdir(directory, {recursive: true});
   for (const module of workerModules) await fs.writeFile(path.join(directory, module.name), module.bytes);
-  return {moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
+  return {sourceMain:capturedMainModules[name],moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
 }
 async function captured(name) {
   const directory = path.join(releaseDir, 'captured', name);
@@ -177,14 +184,30 @@ async function assembleCandidates(commit) {
     manifests[targets.receiver.name] = receiverManifest;
     execFileSync(process.execPath, [path.join(site, 'scripts/verify-contact-source-receiver-candidate.mjs'), path.join(releaseDir, 'candidate', targets.receiver.name, 'website-enrolment-receipt.mjs')], {cwd: site, stdio: 'inherit', windowsHide: true});
 
+    if(releaseTargets.call){
     const callSource = path.join(site, 'workers/google-ads-call-measurement/index.mjs');
     assert.equal(sha(await fs.readFile(callSource)), sha(gitBytes(['show', `${commit}:speech-site/workers/google-ads-call-measurement/index.mjs`])), 'Uncommitted call worker');
     const callBuild = await build({entryPoints: [callSource], bundle: true, format: 'esm', platform: 'browser', write: false, logLevel: 'silent'});
     manifests[targets.call.name] = await writeCandidate(targets.call.name, targets.call.main, [{name: targets.call.main, bytes: callBuild.outputFiles[0].contents}]);
 
+    }
+    if(releaseTargets.helpline){
     const helplineSource = path.join(root, 'helpline-site/worker.mjs');
     assert.equal(sha(await fs.readFile(helplineSource)), sha(gitBytes(['show', `${commit}:helpline-site/worker.mjs`])), 'Uncommitted helpline worker');
     manifests[targets.helpline.name] = await writeCandidate(targets.helpline.name, targets.helpline.main, [{name: targets.helpline.main, bytes: await fs.readFile(helplineSource)}]);
+    }
+  }
+  if(releaseTargets.ask){
+    const originals=await captured(targets.ask.name);
+    const info=await load(receiptPath);let originalMain=info.captures[targets.ask.name].sourceMain;
+    if(!originalMain){
+      const imported=new Set(originals.flatMap(m=>[...m.bytes.toString().matchAll(/(?:from\s*|import\s*)['"]\.\/([^'"]+)['"]/g)].map(v=>v[1])));
+      const roots=originals.filter(m=>!imported.has(m.name)&&/export\s*(?:default|\{[^}]*\bdefault\b)/s.test(m.bytes.toString()));
+      assert.equal(roots.length,1,'Ask original main module is ambiguous');originalMain=roots[0].name;
+    }
+    assert(originals.some(m=>m.name===originalMain),'Captured Ask main missing');
+    const wrapper=await build({stdin:{contents:`import original from './${originalMain}';import{createPublicMeasurementWrapper}from'./public-measurement-wrapper.mjs';export default createPublicMeasurementWrapper(original);`,resolveDir:path.join(site,'deployment')},bundle:true,format:'esm',platform:'browser',write:false,external:['./'+originalMain],logLevel:'silent'});
+    manifests[targets.ask.name]=await writeCandidate(targets.ask.name,targets.ask.main,[...originals,{name:targets.ask.main,bytes:wrapper.outputFiles[0].contents}]);
   }
   return manifests;
 }
@@ -276,7 +299,7 @@ async function verifyLive(receipt) {
       assert(text.includes('data-contact-contract="durable-contact-v1"'));
       assert(text.includes('action="/api/enrolment"'));
       assert.equal((text.match(/contact-receipt\.js\?v=contact-source-20261020/g) || []).length, 1);
-      assert.equal((text.match(/speech-measurement\.js\?v=measurement-always-on-20261020/g) || []).length, 1);
+      assert.equal((text.match(/speech-measurement\.js\?v=measurement-completion-20261020/g) || []).length, 1);
     }
     pages.push({pathname, variant: pathname === '/contact-national-autism-helpline-24-7' ? 'google-ads-tagged' : 'default', status: response.status, marker: response.headers.get('x-pinnacle-verify-measurement'), callMarker: response.headers.get('x-pinnacle-google-ads-call-measurement'), contactMarker: response.headers.get('x-pinnacle-contact-receipt'), sha256: sha(Buffer.from(text))});
   }
@@ -334,7 +357,7 @@ async function prepare() {
   const captures = {};
   for (const target of Object.values(releaseTargets)) captures[target.name] = await saveCaptured(target.name, await modules(target.name));
   await save(beforePath, before);
-  const receipt = {id, phase: 'prepared', portalOnly, preparedAt: new Date().toISOString(), commit, beforeVersions: Object.fromEntries(Object.values(releaseTargets).map(target => [target.name, before.workers[target.name].versions])), captures, candidates: {}, promotions: {}};
+  const receipt = {id, phase: 'prepared', portalOnly, portalAndReceiver, preparedAt: new Date().toISOString(), commit, beforeVersions: Object.fromEntries(Object.values(releaseTargets).map(target => [target.name, before.workers[target.name].versions])), captures, candidates: {}, promotions: {}};
   await save(receiptPath, receipt);
   console.log(JSON.stringify({phase: receipt.phase, commit, captures}));
 }

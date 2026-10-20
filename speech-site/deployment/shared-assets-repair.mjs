@@ -3,7 +3,7 @@ const origin='https://www.pinnacleblooms.org';
 export function serveSharedAssetRepair(request){
  const u=new URL(request.url);if(u.origin!==origin)return null;const asset=assets[u.pathname];if(!asset)return null;
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{allow:'GET, HEAD'}});
- const headers={'content-type':'text/javascript; charset=utf-8','cache-control':'public, max-age=31536000, immutable','x-content-type-options':'nosniff','etag':'"'+asset.sha256+'"','x-pinnacle-shared-asset':asset.sha256};
+ const headers={'access-control-allow-origin':'*','content-type':'text/javascript; charset=utf-8','cache-control':'public, max-age=31536000, immutable','x-content-type-options':'nosniff','etag':'"'+asset.sha256+'"','x-pinnacle-shared-asset':asset.sha256};
  if(request.headers.get('if-none-match')===headers.etag)return new Response(null,{status:304,headers});
  return new Response(request.method==='HEAD'?null:asset.body,{headers});
 }

@@ -12,7 +12,7 @@ test('paid journey script refreshes managed public pages without changing privat
  const mf=new Miniflare(convertV4MiniflareOptions({modules:true,script:out.outputFiles[0].text,compatibilityDate:'2026-10-08'}));
  try{
   const html=await(await mf.dispatchFetch('https://www.pinnacleblooms.org/centers')).text();
-  assert(html.includes('src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020"'));
+  assert(html.includes('src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-completion-20261020"'));
   assert(html.includes('src="https://elsewhere.example/pinnacle-pages-scripts/speech-measurement.js"'));
   const privateHtml=await(await mf.dispatchFetch('https://www.pinnacleblooms.org/private')).text();
   assert.equal(privateHtml,markup);

@@ -77,7 +77,7 @@ var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
     <\/script>`]];
 
 // deployment/public-ad-call.mjs
-var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-43028dcc9125d95c.mjs";
+var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-7f1663ac50806f5c.mjs";
 var source = `// Shared advertising call measurement for eligible public Pinnacle pages.
 // There is no visitor choice gate: site-owner approved measurement starts once.
 export const preferencesMarkup = '';
@@ -109,8 +109,14 @@ export function installAdCallMeasurement() {
     (/^\\/(?:ma|t|b|c)\\/[a-z0-9-]+\\/?$/.test(location.pathname) || location.pathname === '/contact-national-autism-helpline-24-7');
   const reviewedPublicTemplate = document.body?.dataset?.pageVariant === 'legacy_public_template' &&
     ['/assessments/stuttering-assessment', '/certified-courses', '/certified-courses/'].includes(location.pathname);
-  if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
-      !(paths.has(location.pathname) || publicAsk || publicCentre || publicLegacy || reviewedPublicTemplate)) return;
+  const privatePath=/^\\/(?:account|auth|admin|api|internal|private|customer|customers|patient|patients|payroll|reports?|documents?|cart|checkout)(?:\\/|$)|^\\/(?:ask\\/(?:te\\/)?(?:account|auth|api|search)|shop\\/(?:cart|checkout)|books\\/download)(?:\\/|$)/i;
+  if(location.protocol!=='https:'||!hosts.has(location.hostname)||privatePath.test(location.pathname))return;
+  let qa=false;try{qa=new URL(location.href).searchParams.has('validation_test');if(qa)sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));else{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));qa=at>0&&at<=Date.now()&&Date.now()-at<86400000;}}catch{}
+  if(qa)return;
+  if(!window.__pinnacleProtectionContainer){
+   window.__pinnacleProtectionContainer={status:'pending'};
+   const script=document.createElement('script');script.type='module';script.id='pinnacle-protection-container';script.src='https://www.pinnacleblooms.org/pinnacle-pages-scripts/protection-consumer.mjs?v=protection-default-20261020';document.head.appendChild(script);
+  }
 
   const state = window.__pinnacleAdCallMeasurement = {enabled: true, started: false};
   const id = 'AW-10810823199';
@@ -212,7 +218,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') installAdC
 function servePublicAdCall(request) {
   const u = new URL(request.url);
   if (u.hostname !== "www.pinnacleblooms.org" || u.pathname !== PUBLIC_AD_CALL_PATH) return null;
-  return new Response(["GET", "HEAD"].includes(request.method) && request.method !== "HEAD" ? source : null, { status: ["GET", "HEAD"].includes(request.method) ? 200 : 405, headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=31536000, immutable", "x-content-type-options": "nosniff", allow: "GET, HEAD" } });
+  return new Response(["GET", "HEAD"].includes(request.method) && request.method !== "HEAD" ? source : null, { status: ["GET", "HEAD"].includes(request.method) ? 200 : 405, headers: { "access-control-allow-origin": "*", "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=31536000, immutable", "x-content-type-options": "nosniff", allow: "GET, HEAD" } });
 }
 
 // deployment/legacy-measurement.mjs
@@ -311,7 +317,7 @@ function migrateLegacyPrefix(prefix, request, { preserveGtm = false } = {}) {
   let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? preserveGtm && isKnownGtmLoader(tag) ? tag : replacements.get(normal(tag)) || "" : tag);
   if (scope === "private") return { scope, html: result, removed: tags.length };
   const controls = "";
-  const inserted = (preserveGtm ? "" : '<script data-pinnacle-legacy-collector="early-v4">' + earlyCapture + "<\/script>") + '<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
+  const inserted = (preserveGtm ? "" : '<script data-pinnacle-legacy-collector="early-v4">' + earlyCapture + "<\/script>") + '<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-completion-20261020"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
   result = result.replace(/<body\b([^>]*)>/i, (_, attributes) => "<body" + attributes + ' data-page-variant="' + (preserveGtm ? "legacy_public_template" : "legacy_knowledge") + '" data-pinnacle-legacy-measurement="' + scope + '">' + inserted);
   return { scope, html: result, controls, preserveGtm, removed: tags.filter((tag) => !(preserveGtm && isKnownGtmLoader(tag))).length };
 }

@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-19T17:16:09.150Z",
-  "passed": 10,
+  "checkedAt": "2026-10-20T03:30:15.892Z",
+  "passed": 14,
   "results": [
     {
       "name": "Eight public helpline call placements remain unique and use the central number",
@@ -27,7 +27,7 @@
       "passed": true
     },
     {
-      "name": "Only the two reviewed ChatGPT tuples enter GA4 and the journey envelope",
+      "name": "Existing and new ordinary campaign tuples enter the bounded journey envelope",
       "passed": true
     },
     {
@@ -35,7 +35,23 @@
       "passed": true
     },
     {
-      "name": "Unknown or private campaign values never enter analytics or storage",
+      "name": "Private campaign values and unknown optional fields never enter analytics or storage",
+      "passed": true
+    },
+    {
+      "name": "Standard UTMs, new numeric campaign IDs, click IDs and original case are preserved without exporting click IDs",
+      "passed": true
+    },
+    {
+      "name": "Duplicate optional identifiers are ignored individually and cannot poison an ordinary visit",
+      "passed": true
+    },
+    {
+      "name": "Same source keeps its original landing/capture; expiry and storage failure remain bounded",
+      "passed": true
+    },
+    {
+      "name": "Protection module and canonical collector initialize once without invoking a vendor",
       "passed": true
     },
     {

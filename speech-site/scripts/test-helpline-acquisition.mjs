@@ -120,18 +120,20 @@ test('automatic measurement remains active when a browser exposes GPC',()=>{
  const form=client({path:enrol,store:h.store,gpc:true});assert.equal(form.source().fields.utm_campaign,campaigns[0]);form.accepted(receipt);assert.equal(eventRows(form)[0][2].measurement_mode,'automatic');
 });
 
-test('helpline rejects partial, duplicate, wrong, additional and malformed campaign fields',()=>{
- for(const search of ['?utm_source=chatgpt','?utm_source=google&utm_medium=paid&utm_campaign='+campaigns[0],tagged('unapproved'),tagged(campaigns[0])+'&utm_source=chatgpt',tagged(campaigns[0])+'&utm_medium=paid',tagged(campaigns[0])+'&utm_campaign='+campaigns[1],tagged(campaigns[0])+'&gclid=excluded',tagged(campaigns[0])+'&oppref=excluded',tagged(campaigns[0])+'&utm_term=excluded',tagged(campaigns[0])+'&utm_unknown=excluded',tagged(campaigns[0]).replace('chatgpt','%20chatgpt')]){
-  const h=client({search});assert(!h.store.has(sourceKey),search);assert(!JSON.stringify(h.events()).includes('excluded'),search);
- }
- const h=client({search:tagged(campaigns[0])+'&child_name=DO_NOT_EXPORT'});assert(!JSON.stringify([...h.store]).includes('DO_NOT_EXPORT'));
+test('helpline accepts new ordinary source fields and ignores unknown, private or duplicate optional metadata',()=>{
+ const h=client({search:'?utm_source=google&utm_medium=cpc&utm_campaign=New_ABA_2027&utm_id=99999668887&gclid=OrdinaryClick_A&utm_unknown=PRIVATE_CANARY'});
+ const captured=JSON.parse(h.store.get(sourceKey));assert.equal(captured.fields.utm_campaign,'New_ABA_2027');assert.equal(captured.fields.utm_id,'99999668887');assert.equal(captured.fields.gclid,'OrdinaryClick_A');assert.deepEqual(normaliseAcquisition(captured),captured);
+ assert(!JSON.stringify(h.events()).includes('OrdinaryClick_A'));assert(!JSON.stringify([...h.store]).includes('PRIVATE_CANARY'));
+ const duplicated=client({search:'?utm_source=google&utm_campaign=ordinary&gclid=First&gclid=Second'});assert(!Object.hasOwn(JSON.parse(duplicated.store.get(sourceKey)).fields,'gclid'));
+ const privateValue=client({search:'?utm_source=google&utm_campaign=PRIVATE_CANARY&child_name=PRIVATE_CANARY'});assert(!JSON.stringify([...privateValue.store]).includes('PRIVATE_CANARY'));assert(!JSON.stringify(privateValue.events()).includes('PRIVATE_CANARY'));
+ const form=client({path:enrol,store:h.store});assert.deepEqual(form.source(),captured);
 });
 
 test('shared validator drops invalid optional sources without blocking valid intake',async()=>{
  const f=fixtureLedger();let handoffs=0;
  const source={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:helpline,fields:{utm_source:'chatgpt',utm_medium:'paid',utm_campaign:campaigns[0]}};
  try{
-  for(const invalid of [{...source,landingPath:helpline+'/private'},{...source,fields:{...source.fields,gclid:'no'}},{...source,fields:{...source.fields,utm_campaign:'no'}},{...source,fields:{utm_source:'chatgpt'}},{...source,capturedAt:Date.now()-31*86400000}]){
+  for(const invalid of [{...source,landingPath:helpline+'/private'},{...source,fields:{...source.fields,gclid:'PRIVATE_CANARY'}},{...source,fields:{...source.fields,utm_campaign:'PRIVATE_CANARY'}},{...source,fields:{unknown_field:'not_allowed'}},{...source,capturedAt:Date.now()-31*86400000}]){
    assert.equal(normaliseAcquisition(invalid),null);const payload=makePayload(values,'qa-invalid-'+randomUUID(),null);payload.source.acquisition=invalid;
    const result=await serveEnrolmentApi(new Request(origin+'/api/enrolment',{method:'POST',headers:{origin,'content-type':'application/json','idempotency-key':payload.requestId},body:JSON.stringify(payload)}),{ENROLMENT_RECEIPT_VERSION:'1',PINNACLE_ENROLMENT_RECEIPTS:{receive:(data,key)=>receiveReceiptEnrolment(data,{idempotencyKey:key,ledger:f.ledger,handoff:async()=>{handoffs++;return 'qa_fixture_v1:source-unknown';}})}});
    assert.equal(result.status,202);const row=f.db.prepare('SELECT source_json FROM website_enrolment_receipts WHERE request_key=?').get(payload.requestId);assert(!JSON.parse(row.source_json).acquisition);

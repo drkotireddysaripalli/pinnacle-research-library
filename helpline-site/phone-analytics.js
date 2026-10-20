@@ -15,32 +15,73 @@
       validationTraffic = at > 0 && at <= Date.now() && Date.now() - at < 86400000;
     }
   } catch {}
-  if (!production || validationTraffic) return;
+  if (!production || validationTraffic || window.__pinnacleHelplineMeasurement) return;
+  window.__pinnacleHelplineMeasurement = true;
 
-  // Only the two reviewed ChatGPT campaign tuples can enter this helpline's
-  // retained source record. Never forward the full URL, unknown fields, click
-  // identifiers, fragments or visitor input.
-  const allowedCampaigns = new Set(['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries']);
+  // Build refreshes this exact shared validator; no ESM is placed in the inline script.
+  /* PINNACLE_SHARED_ACQUISITION_START */
+const ACQUISITION_KEYS=['utm_id','utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_source_platform','utm_creative_format','utm_marketing_tactic','gclid','dclid','msclkid','fbclid','gbraid','wbraid'];
+const CLICK_KEYS=new Set(['gclid','dclid','msclkid','fbclid','gbraid','wbraid']);
+function safeAcquisitionValue(value,key){
+ if(typeof value!=='string'||!ACQUISITION_KEYS.includes(key))return null;
+ value=value.trim();const click=CLICK_KEYS.has(key);
+ if(!value||value.length>(click?256:128)||!(click?/^[A-Za-z0-9._~-]+$/:/^[A-Za-z0-9][A-Za-z0-9._~ -]*$/).test(value))return null;
+ if(key==='utm_id'&&/^[1-9][0-9]{0,19}$/.test(value))return value;
+ const words=value.replace(/[._~-]/g,' '),parts=value.match(/(?:^|[^A-Za-z0-9])\+?\d[\d ().-]*\d(?=$|[^A-Za-z0-9])/g)||[];
+ if(/@|%[0-9a-f]{2}/i.test(value)||parts.some(p=>p.replace(/\D/g,'').length>=10)||(/^[\d ().+-]+$/.test(value)&&value.replace(/\D/g,'').length>=7)||/\b(?:private|secret|password|token)\b/i.test(words)||/\b(?:my|our)\b.*\b(?:child|son|daughter|patient)\b/i.test(words)||/\b(?:child|patient)\s+(?:name|id|details?|records?)\b/i.test(words)||/\b(?:email|phone|mobile|diagnosis|symptoms|report)\s+(?:address|number|name|id|details?|records?|result|value)\b/i.test(words))return null;
+ return value;
+}
+  /* PINNACLE_SHARED_ACQUISITION_END */
   const params = new URL(location.href).searchParams;
-  const campaign = (() => {
-    try {
-      const source = params.getAll('utm_source'), medium = params.getAll('utm_medium'), name = params.getAll('utm_campaign');
-      if (source.length !== 1 || medium.length !== 1 || name.length !== 1 || source[0] !== 'chatgpt' || medium[0] !== 'paid' || !allowedCampaigns.has(name[0])) return {};
-      return {campaign_source:'chatgpt',campaign_medium:'paid',campaign_name:name[0]};
-    } catch { return {}; }
-  })();
-  const sourceCampaignAllowed = ![...params.keys()].some(key => (/^utm_/i.test(key) || /^(?:gclid|dclid|msclkid|fbclid|gbraid|wbraid|oppref)$/i.test(key)) && !['utm_source','utm_medium','utm_campaign'].includes(key));
-  if (campaign.campaign_name && sourceCampaignAllowed) {
-    const fields = {utm_source:'chatgpt',utm_medium:'paid',utm_campaign:campaign.campaign_name};
-    try {
-      const prior = JSON.parse(localStorage.getItem(sourceKey));
-      const current = prior?.schemaVersion === 1 && prior.consent === 'analytics_accepted' && prior.landingPath === landingPath && Number.isSafeInteger(prior.capturedAt) && prior.capturedAt <= Date.now() && Date.now() - prior.capturedAt <= sourceLifetime && Object.keys(prior.fields || {}).length === 3 && Object.entries(fields).every(([key,value]) => prior.fields[key] === value);
-      if (!current) localStorage.setItem(sourceKey, JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields}));
-    } catch {} // Attribution storage must never obstruct calling or callback.
+  const fields = {};
+  for (const key of ACQUISITION_KEYS) {
+    const values = params.getAll(key);
+    if (values.length !== 1) continue; // Duplicate optional identifiers are ambiguous, not a reason to block the visit.
+    const safe = safeAcquisitionValue(values[0],key);
+    if (safe !== null) fields[key] = safe;
   }
+  const acquisitionPath = /^\/(?:national-autism-helpline|contact-national-autism-helpline-24-7|centers|autism-therapy|speech-aba-autism-assessments|top-speech-therapy-center-india-proven-improvement-rate|best-occupational-therapy-center-india-proven-improvement-rate|best-aba-therapy-center-india-proven-improvement-rate|best-special-education-center-call-9100181181|enroll-autism-speech-aba-therapies-india|certified-courses|pinnacleai|abilityscore|seven-readiness-indexes|personal-development-kernel|prognose|therapeuticai|everyday-therapy|fusion-module|reassess-review-repeat|self-sufficient|mainstream|faq|sunshine|allmirracles)?$/;
+  const readSource = () => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(sourceKey));
+      if (!saved || Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(key)) || saved.schemaVersion !== 1 || saved.consent !== 'analytics_accepted' || !Number.isSafeInteger(saved.capturedAt) || saved.capturedAt > Date.now() || Date.now()-saved.capturedAt > sourceLifetime || typeof saved.landingPath !== 'string' || !acquisitionPath.test(saved.landingPath)) return null;
+      const entries = Object.entries(saved.fields || {});
+      if (!entries.length || entries.length > ACQUISITION_KEYS.length || entries.some(([key,value])=>safeAcquisitionValue(value,key)!==value)) return null;
+      return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields:{...saved.fields}};
+    } catch { return null; }
+  };
+  const paidEvidence = value => !!value && (['gclid','gbraid','wbraid','dclid','msclkid'].some(key=>!!value[key]) || ['cpc','ppc','paid','paid_search','paidsearch','paid-search','paid search','cpm','cpv','display','paid_social','paid_video'].includes(value.utm_medium?.toLowerCase()));
+  if (Object.keys(fields).length) {
+    try {
+      const prior = readSource();
+      const same = prior && Object.keys(prior.fields).length === Object.keys(fields).length && Object.entries(fields).every(([key,value])=>prior.fields[key]===value);
+      const gbp = fields.utm_source?.toLowerCase()==='google' && fields.utm_medium?.toLowerCase()==='organic' && fields.utm_campaign?.toLowerCase()==='gbp';
+      if (!same && !(gbp && paidEvidence(prior?.fields))) localStorage.setItem(sourceKey,JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields}));
+    } catch {} // Optional source storage must never obstruct calling.
+  }
+  window.pinnacleEnquirySource = readSource;
+  const campaignFields = {utm_id:'campaign_id',utm_source:'campaign_source',utm_medium:'campaign_medium',utm_campaign:'campaign_name',utm_term:'campaign_term',utm_content:'campaign_content'};
+  const campaignSource = readSource()?.fields || fields;
+  const campaign = Object.fromEntries(Object.entries(campaignFields).filter(([key])=>campaignSource[key]).map(([key,name])=>[name,campaignSource[key]]));
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+  window.pinnacleProtectionAllowed = () => {
+    try {
+      const url = new URL(location.href);
+      const at = Number(sessionStorage.getItem('pinnacle-validation-v1'));
+      return url.origin === 'https://www.pinnacleblooms.org' && url.pathname === landingPath && !url.searchParams.has('validation_test') && !(at>0 && at<=Date.now() && Date.now()-at<86400000);
+    } catch { return false; }
+  };
+  window.dataLayer.push({pinnacle_canonical_measurement:true,pinnacle_protection_allowed:true});
+  if (!window.__pinnacleProtectionContainer && !document.querySelector('script[src*="/pinnacle-pages-scripts/protection-consumer.mjs"]')) {
+    const module = document.createElement('script');
+    module.type='module';module.referrerPolicy='origin';module.id='pinnacle-protection-container';
+    module.src='/pinnacle-pages-scripts/protection-consumer.mjs?v=protection-default-20261020';
+    if(document.currentScript?.nonce)module.nonce=document.currentScript.nonce;
+    window.__pinnacleProtectionContainer={status:'requested'};
+    document.head.append(module);
+  }
   if (!window.__pinnacleConsentDefaults) {
     window.__pinnacleConsentDefaults = true;
     window.gtag('consent', 'default', {analytics_storage:'granted', ad_storage:'granted', ad_user_data:'granted', ad_personalization:'denied'});
@@ -111,7 +152,7 @@
     document.head.append(script);
   }
   const send = (name,parameters) => {
-    try { window.gtag('event', name, {...parameters,...campaign,page_location:canonical,page_title:'Pinnacle National Autism Helpline',page_referrer:'',send_to:id}); }
+    try { window.gtag('event', name, {...parameters,...campaign,measurement_mode:'automatic',page_location:canonical,page_title:'Pinnacle National Autism Helpline',page_referrer:'',send_to:id}); }
     catch {} // Measurement must never interrupt calling.
   };
   send('page_view', {content_group:'national_helpline'});

@@ -12,7 +12,7 @@ const {receiveReceiptEnrolment}=await import(pathToFileURL(candidate).href+'?can
 assert.equal(typeof receiveReceiptEnrolment,'function');
 
 const values={name:'ISOLATED FIXTURE',title:'Mx',phone:'0000000000',email:'fixture@example.invalid',facilityId:CONTACT_FACILITIES[0],subject:'Therapy Services',message:'Offline fixture only.'};
-const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:CONTACT_PATH,fields:{utm_source:'Google',utm_medium:'CPC',utm_campaign:'contact_receipt_live',utm_content:'contact_form',gclid:'EAIaIQobChMIContactCase123'}};
+const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:CONTACT_PATH,fields:{utm_source:'Google',utm_medium:'CPC',utm_campaign:'contact_receipt_live',utm_content:'contact_form',utm_id:'31415926535',gclid:'EAIaIQobChMIContactCase123'}};
 const privateBody=(requestId,source=acquisition,message=values.message)=>{
  const publicBody=makeContactPayload({...values,message},requestId,source);
  return toReceiptContact(toLegacyContact(publicBody),publicBody.requestId,publicBody.source);
