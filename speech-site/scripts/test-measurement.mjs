@@ -173,11 +173,11 @@ test('duplicate, private and malformed campaign values never enter source or ana
   }
 });
 
-test('recognised referrers are reduced to their origin and private referrers are blank',()=>{
+test('ordinary referrers retain their origin without paths, query or frozen membership',()=>{
   const google=harness({referrer:'https://www.google.com/search?q=private-child'});
   const ga=command(google,'config','G-2BYLRLFRDJ')[2];assert.equal(ga.page_referrer,'https://www.google.com/');assert(!JSON.stringify(google.commands()).includes('private-child'));
   const privateRef=harness({referrer:'https://private.example/child'});
-  const privateConfig=command(privateRef,'config','G-2BYLRLFRDJ')[2];assert.equal(privateConfig.page_referrer,'');assert.equal(privateConfig.ignore_referrer,true);
+  const privateConfig=command(privateRef,'config','G-2BYLRLFRDJ')[2];assert.equal(privateConfig.page_referrer,'https://private.example/');assert.equal(privateConfig.ignore_referrer,false);
 });
 
 test('automatic protection is independent of optional public URL metadata',()=>{
@@ -311,4 +311,10 @@ test('source reuse keeps capture time and replaces, rather than merges, a new ca
   const next=harness({sharedStore:store,url:origin+'/best-aba-therapy-center-india-proven-improvement-rate?utm_source=google&utm_medium=cpc&utm_campaign=Second'});
   const replaced=JSON.parse(store.get(sourceKey));assert.equal(replaced.fields.utm_campaign,'Second');assert.equal(replaced.fields.gclid,undefined);
   assert(next.events().some(entry=>entry[1]==='google_ads_arrival'));assert(same.events().some(entry=>entry[1]==='google_ads_arrival'));
+});
+
+test('paid enquiry navigation ignores optional metadata while retaining functional route validation',()=>{
+ const h=harness();h.click('hero-assessment',origin+enrolment+'?service=speech&centre=suchitra&utm_source=google&gclid=NEW_CLICK&optional=value');
+ assert.equal(h.events().filter(e=>e[1]==='enquiry_link_click').length,1);
+ const ambiguous=harness();ambiguous.click('hero-assessment',origin+enrolment+'?centre=suchitra&centre=other&utm_source=google');assert.equal(ambiguous.events().filter(e=>e[1]==='enquiry_link_click').length,0);
 });
