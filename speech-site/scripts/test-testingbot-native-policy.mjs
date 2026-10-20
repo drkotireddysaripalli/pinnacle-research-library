@@ -30,7 +30,7 @@ test('trusted exact-build workflow pins tunnel v5 fast-fail rules in parity with
  assert(failureAt>installAt&&failureAt<navigateAt);assert(unsupportedProbePath>failureAt&&unsupportedProbePath<navigateAt);
 });
 test('preflight uses only non-event GET resources without credentials or query strings',async()=>{
- const saved=globalThis.fetch,seen=[];globalThis.fetch=async(url,options)=>{seen.push({url,options});if(new URL(url).hostname!=='www.pinnacleblooms.org')throw new TypeError('fixture connection refused');return {};};
+ const saved=globalThis.fetch,seen=[];globalThis.fetch=async(url,options)=>{seen.push({url,options});if(new URL(url).hostname!=='www.pinnacleblooms.org')throw new TypeError('fixture connection refused');return {type:'basic',status:200,ok:true};};
  try{assertNativeReaderProbe(await nativeReaderProbe(nativeProbeTargets));assert.equal(seen.length,3);for(const r of seen){assert.equal(r.options.method,'GET');assert.equal(r.options.credentials,'omit');assert.equal(r.options.mode,'no-cors');assert.equal(r.options.redirect,'follow');assert.equal(new URL(r.url).search,'');assert(!/collect|conversion/.test(new URL(r.url).pathname));}}finally{globalThis.fetch=saved;}
 });
 test('unblocked vendor or failed public control stops before production',()=>{
@@ -41,4 +41,14 @@ test('unblocked vendor or failed public control stops before production',()=>{
 test('only the exact non-instrumented plain text probe document establishes first-party context',()=>{
  const good={url:nativeProbeTargets[0].url,contentType:'text/plain',scripts:0};assert(assertNativeProbeDocument(good));
  for(const change of[{url:'https://www.pinnacleblooms.org/'},{url:good.url+'?other=1'},{contentType:'text/html'},{scripts:1}])assert.throws(()=>assertNativeProbeDocument({...good,...change}),/no production page/);
+});
+
+test('opaque and HTTP error probes never claim vendor reachability or containment',async()=>{
+ const saved=globalThis.fetch;
+ try{
+  for(const response of [{type:'opaque',status:0,ok:false},{type:'opaqueredirect',status:0,ok:false},{type:'basic',status:403,ok:false}]){
+   globalThis.fetch=async()=>response;const rows=await nativeReaderProbe(nativeProbeTargets);
+   assert(rows.every(r=>r.passed===false));assert(rows.every(r=>r.outcome===(response.status===403?'http-error':'unobservable')));assert(rows.every(r=>r.response.type===response.type&&r.response.status===response.status));assert.throws(()=>assertNativeReaderProbe(rows),/no production page/);
+  }
+ }finally{globalThis.fetch=saved;}
 });
