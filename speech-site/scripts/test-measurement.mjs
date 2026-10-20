@@ -293,7 +293,7 @@ test('public knowledge queries retain coarse identities without disabling collec
   assert.equal(new URL(ask.events().find(entry=>entry[1]==='page_view')[2].page_location).pathname,'/ask');
   assert(!JSON.stringify(ask.commands()).includes('private-question'));
   const searched=harness({url:origin+'/faq/private-topic?q=child-secret',variant:'knowledge'});
-  assert.equal(searched.events().filter(e=>e[1]==='page_view').length,1);assert(!JSON.stringify(searched.commands()).includes('child-secret')); 
+  assert.equal(searched.events().filter(e=>e[1]==='page_view').length,1);assert(!JSON.stringify(searched.commands()).includes('child-secret'));
 });
 
 test('functional click handling remains native even if analytics throws',()=>{

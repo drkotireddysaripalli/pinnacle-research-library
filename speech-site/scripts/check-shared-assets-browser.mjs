@@ -30,7 +30,7 @@ for (const [engine, launcher] of Object.entries(process.platform === 'win32' ? {
         const html = `<!doctype html><html><head><title>Isolated shared asset journey fixture</title><script>var newsId=null;</script></head><body><main><h1>Isolated enquiry fixture</h1><a id="central" href="tel:+919100181181">Call 9100 181 181</a><a id="branch" href="tel:+914012345678">Branch alternative</a><a id="enquiry" href="/enroll-autism-speech-aba-therapies-india?centre=suchitra&service=speech">Request a callback</a></main><script src="${classic}" defer></script><script src="${script}" type="module"></script></body></html>`;
 
         // The pinned legacy list consumer explicitly JSON.parse()s a text response.
-        await context.route('**/*', route => {
+        await context.route('**/*', async route => {
           const url = new URL(route.request().url());
           if (url.origin !== origin || url.pathname.startsWith('/api/')) {
             const type = route.request().resourceType();
@@ -40,6 +40,7 @@ for (const [engine, launcher] of Object.entries(process.platform === 'win32' ? {
             return route.fulfill({status: 200, contentType: legacyList ? 'text/plain' : json ? 'application/json' : type === 'script' ? 'text/javascript' : 'text/plain', body: legacyList ? '[]' : json ? '{}' : ''});
           }
           if (url.pathname.startsWith('/top-speech-therapy-center-india-proven-improvement-rate') || url.pathname.startsWith('/enroll-autism-')) return route.fulfill({status: 200, contentType: 'text/html', body: html});
+          if (['/pinnacle-pages-scripts/protection-consumer.mjs','/pinnacle-pages-scripts/cheq-protection.js'].includes(url.pathname)) return route.fulfill({status:200,contentType:'text/javascript',body:await fs.readFile('public'+url.pathname)});
           if (assets[url.pathname]) return route.fulfill({status: 200, contentType: 'text/javascript', body: assets[url.pathname].body});
           if (url.pathname === callPath) return route.fulfill({status: 200, contentType: 'text/javascript', body: call});
           if (url.pathname + url.search === legacyPath) return route.fulfill({status: 200, contentType: 'text/javascript', body: legacy});
