@@ -86,8 +86,8 @@ async function modules(name) {
   capturedMainModules[name]=response.headers.get('cf-entrypoint')||metadata?.main_module||null;
   for (const [key, value] of form) if (key!=='metadata'&&typeof value !== 'string') {
     const moduleName = value.name || key;
-    assert(/^(?:[\w.-]+\/)*[\w.-]+\.(?:mjs|js)$/.test(moduleName)&&moduleName.split('/').every(part=>part!=='.'&&part!=='..'), `Unsafe module name ${moduleName}`);
-    out.push({name: moduleName, bytes: Buffer.from(await value.arrayBuffer())});
+    assert(/^(?:[\w.@-]+\/)*[\w.@-]+$/.test(moduleName)&&moduleName.split('/').every(part=>part!=='.'&&part!=='..'), `Unsafe module name ${moduleName}`);
+    out.push({name: moduleName, contentType:value.type||(/\.wasm$/.test(moduleName)?'application/wasm':'application/javascript+module'), bytes: Buffer.from(await value.arrayBuffer())});
   }
   return out.sort((a, b) => a.name.localeCompare(b.name));
 }
@@ -110,11 +110,11 @@ async function saveCaptured(name, workerModules) {
   const directory = path.join(releaseDir, 'captured', name);
   await fs.mkdir(directory, {recursive: true});
   for (const module of workerModules) {const target=path.join(directory,module.name);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,module.bytes);}
-  return {sourceMain:capturedMainModules[name],moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
+  return {sourceMain:capturedMainModules[name],contentTypes:Object.fromEntries(workerModules.map(module=>[module.name,module.contentType])),moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
 }
 async function captured(name) {
  const directory=path.join(releaseDir,'captured',name),receipt=await load(receiptPath),hashes=receipt.captures[name].hashes;
- return Promise.all(Object.keys(hashes).sort().map(async name=>{const bytes=await fs.readFile(path.join(directory,name));assert.equal(sha(bytes),hashes[name],'Captured module changed: '+name);return {name,bytes};}));
+ return Promise.all(Object.keys(hashes).sort().map(async name=>{const bytes=await fs.readFile(path.join(directory,name));assert.equal(sha(bytes),hashes[name],'Captured module changed: '+name);return {name,bytes,contentType:receipt.captures[name].contentTypes?.[name]};}));
 }
 async function assertDrift(receipt, allowPromoted = true) {
   const before = await load(beforePath);
@@ -137,7 +137,7 @@ async function writeCandidate(name, main, workerModules) {
   await fs.rm(directory, {recursive: true, force: true});
   await fs.mkdir(directory, {recursive: true});
   for (const module of workerModules) {const target=path.join(directory,module.name);await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,module.bytes);}
-  const manifest = {main, moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
+  const manifest = {main, contentTypes:Object.fromEntries(workerModules.map(module=>[module.name,module.contentType||'application/javascript+module'])), moduleCount: workerModules.length, hashes: Object.fromEntries(workerModules.map(module => [module.name, sha(module.bytes)]))};
   await save(path.join(directory, 'manifest.json'), manifest);
   return manifest;
 }
@@ -202,7 +202,7 @@ async function assembleCandidates(commit) {
     const info=await load(receiptPath);let originalMain=info.captures[targets.ask.name].sourceMain;
     if(!originalMain){
       const imported=new Set(originals.flatMap(m=>[...m.bytes.toString().matchAll(/(?:from\s*|import\s*)['"]\.\/([^'"]+)['"]/g)].map(v=>v[1])));
-      const roots=originals.filter(m=>!imported.has(m.name)&&/export\s*(?:default|\{[^}]*\bdefault\b)/s.test(m.bytes.toString()));
+      const roots=originals.filter(m=>/\.(?:mjs|js)$/.test(m.name)&&!imported.has(m.name)&&/export\s*(?:default|\{[^}]*\bdefault\b)/s.test(m.bytes.toString()));
       assert.equal(roots.length,1,'Ask original main module is ambiguous');originalMain=roots[0].name;
     }
     assert(originals.some(m=>m.name===originalMain),'Captured Ask main missing');
@@ -251,7 +251,7 @@ async function uploadWorker(target, before, manifest) {
   for (const key of ['placement', 'tail_consumers', 'logpush', 'observability', 'limits', 'usage_model']) if (workerSettings[key] !== undefined) metadata[key] = workerSettings[key];
   const form = new FormData();
   form.set('metadata', JSON.stringify(metadata));
-  for (const moduleName of Object.keys(manifest.hashes)) form.set(moduleName, new Blob([await fs.readFile(path.join(directory, moduleName))], {type: 'application/javascript+module'}), moduleName);
+  for (const moduleName of Object.keys(manifest.hashes)) form.set(moduleName, new Blob([await fs.readFile(path.join(directory, moduleName))], {type:manifest.contentTypes?.[moduleName]||'application/javascript+module'}), moduleName);
   return api(base(target.name) + '/versions?bindings_inherit=strict', 'POST', form);
 }
 async function retryFetch(url, options = {}, accept) {
