@@ -14,7 +14,7 @@ test('fingerprinted public families replace verified analytics with automatic co
   const result=migrateLegacyPrefix(fixture(path),request(path));assert(result);assert.equal(result.removed,LEGACY_TAGS.length);
   assert(result.html.includes('data-page-variant="legacy_knowledge"'));assert(result.html.includes('/functional.js'));assert.equal(result.controls,'');
   assert(!result.html.includes('data-speech-measurement'));assert(!result.html.includes('data-ad-call-preferences'));
-  assert(!result.html.includes('GTM-W9ZHX459'));assert(result.html.includes('data-pinnacle-legacy-collector="early-v4"'));assert(result.html.includes('speech-measurement.js?v=measurement-always-on-20261020'));assert.equal(migrateLegacyPrefix(result.html,request(path)),null);
+  assert(!result.html.includes('GTM-W9ZHX459'));assert(result.html.includes('data-pinnacle-legacy-collector="early-v4"'));assert(result.html.includes('speech-measurement.js?v=measurement-completion-20261020'));assert.equal(migrateLegacyPrefix(result.html,request(path)),null);
  }
 });
 test('exact noscript suppression survives every byte split without deleting unrelated fallbacks',async()=>{

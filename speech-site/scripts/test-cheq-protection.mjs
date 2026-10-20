@@ -28,7 +28,7 @@ test('CHEQ has no visitor choice UI, storage or GPC gate',()=>{
 test('eligible commercial routes install exactly one automatic vendor tag',()=>{
  for(const path of ['/centers','/best-aba-therapy-center-india-proven-improvement-rate','/top-speech-therapy-center-india-proven-improvement-rate','/autism-therapy']){
   const x=setup({path,query:'?q=private-text'});assert.equal(x.scripts.length,1,path);
-  const script=x.scripts[0];assert.equal(script.className,'ct_clicktrue_102663');assert.equal(script.dataset.ch,'www.pinnacleblooms.org');assert.equal(script.dataset.jsonp,'onCheqResponse');assert.equal(script['data-include-qs'],'__pinnacle_no_query_parameter__');assert.equal(script.referrerPolicy,'no-referrer');
+  const script=x.scripts[0];assert.equal(script.className,'ct_clicktrue_102663');assert.equal(script.dataset.ch,'www.pinnacleblooms.org');assert.equal(script.dataset.jsonp,'onCheqResponse');assert.equal(script['data-include-qs'],undefined);assert.equal(script.referrerPolicy,undefined);
   assert.deepEqual(JSON.parse(JSON.stringify(x.context.window.__pinnacleCheq)),{started:true,enabled:true,responses:0});
  }
  assert.equal(setup({existing:true}).scripts.length,0);
@@ -38,20 +38,15 @@ test('callback retains only a response count and an SDK error cannot block the p
  const x=setup();x.context.window.onCheqResponse({private:'ignored'},'request-id','visitor-id');assert.equal(x.context.window.__pinnacleCheq.responses,1);assert.equal(JSON.stringify(x.context.window.__pinnacleCheq).includes('visitor-id'),false);x.scripts[0].onerror();assert.equal(x.context.window.__pinnacleCheq.enabled,false);
 });
 
-test('private, form, authentication, checkout and unrelated routes never install',()=>{
- for(const path of ['/ask','/ask/account','/ask/auth/callback','/faq','/sunshine','/enroll-autism-speech-aba-therapies-india','/shop/cart']){const x=setup({path});assert.equal(x.context.window.__pinnacleCheq,undefined,path);assert.equal(x.scripts.length,0,path);}
- assert.equal(setup({host:'pinnacleblooms.org'}).scripts.length,0);
+test('actual private/authentication/API/cart routes never install',()=>{
+ for(const path of ['/ask/account','/ask/auth/callback','/ask/api/item','/api/enrolment','/shop/cart','/patients/record']){const x=setup({path});assert.equal(x.context.window.__pinnacleCheq,undefined,path);assert.equal(x.scripts.length,0,path);}
+ assert.equal(setup({host:'pinnacleblooms.org'}).scripts.length,1);
+ for(const path of ['/ask','/faq','/sunshine','/allmirracles','/materials','/interventions','/shop','/books','/enroll-autism-speech-aba-therapies-india'])assert.equal(setup({path}).scripts.length,1,path);
 });
 
-test('labelled QA, fragments, unsafe referrers and reserved query fields stay excluded',()=>{
- for(const options of [
-  {query:'?validation_test=measurement_20261019'},
-  {qaAt:String(Date.now()-1000)},
-  {hash:'#private'},
-  {referrer:'https://www.pinnacleblooms.org/faq/child-topic'},
-  {referrer:'https://untrusted.example/search?q=private'},
-  {query:'?__pinnacle_no_query_parameter__=private'}
- ])assert.equal(setup(options).scripts.length,0,JSON.stringify(options));
+test('explicit labelled/tab QA stays isolated while URL shape never gates normal public CHEQ',()=>{
+ for(const options of [{query:'?validation_test=measurement_20261019'},{qaAt:String(Date.now()-1000)}])assert.equal(setup(options).scripts.length,0,JSON.stringify(options));
+ for(const options of [{hash:'#details'},{referrer:'https://www.pinnacleblooms.org/faq/topic'},{referrer:'https://untrusted.example/search?q=example'},{query:'?__pinnacle_no_query_parameter__=ordinary'},{query:'?new_optional=value&new_optional=other'}])assert.equal(setup(options).scripts.length,1,JSON.stringify(options));
 });
 
 test('expired and invalid QA markers do not suppress an otherwise eligible public route',()=>{

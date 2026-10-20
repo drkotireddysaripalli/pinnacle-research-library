@@ -2,14 +2,8 @@
 // The vendor response is observed, never used to reject or delay a family's enquiry.
 (() => {
   if (window.__pinnacleCheq) return;
-  const safePath = path => path === '/centers' || /^\/centers\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/.test(path) || [
-    '/pinnacleai', '/top-speech-therapy-center-india-proven-improvement-rate',
-    '/best-occupational-therapy-center-india-proven-improvement-rate',
-    '/best-aba-therapy-center-india-proven-improvement-rate',
-    '/autism-therapy',
-    '/best-special-education-center-call-9100181181'
-  ].includes(path);
-  if (location.protocol !== 'https:' || location.hostname !== 'www.pinnacleblooms.org' || !safePath(location.pathname)) return;
+  const privatePath=/^\/(?:account|auth|admin|api|internal|private|customer|customers|patient|patients|payroll|reports?|documents?|cart|checkout)(?:\/|$)|^\/(?:ask\/(?:te\/)?(?:account|auth|api|search)|shop\/(?:cart|checkout)|books\/download)(?:\/|$)/i;
+  if(location.protocol!=='https:'||!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(location.hostname)||privatePath.test(location.pathname))return;
   if (document.querySelector('script.ct_clicktrue_102663')) return;
 
   const state = window.__pinnacleCheq = {started:false, enabled:false, responses:0};
@@ -21,17 +15,7 @@
       validationTraffic = at > 0 && at <= Date.now() && Date.now() - at < 86400000;
     }
   } catch {}
-  const safeContext = () => {
-    if (validationTraffic || location.hash || new URL(location.href).searchParams.has('__pinnacle_no_query_parameter__')) return false;
-    if (!document.referrer) return true;
-    try {
-      const ref = new URL(document.referrer);
-      if (ref.hash || ref.username || ref.password || ref.protocol !== 'https:' || ref.searchParams.has('__pinnacle_no_query_parameter__')) return false;
-      if (ref.hostname === location.hostname) return safePath(ref.pathname);
-      return ['google.com','www.google.com','google.co.in','www.google.co.in','bing.com','www.bing.com','duckduckgo.com','www.duckduckgo.com','www.facebook.com','m.facebook.com','l.facebook.com','www.instagram.com','l.instagram.com','www.linkedin.com','t.co'].includes(ref.hostname);
-    } catch { return false; }
-  };
-  if (!safeContext()) return;
+  if (validationTraffic) return;
 
   state.enabled = true;
   state.started = true;
@@ -44,10 +28,6 @@
   script.className = 'ct_clicktrue_102663';
   script.dataset.ch = 'www.pinnacleblooms.org';
   script.dataset.jsonp = 'onCheqResponse';
-  // The supplied tag's incQs allowlist applies to URL and referrer. A name
-  // absent from both removes every query parameter; fragments are excluded above.
-  script.setAttribute('data-include-qs', '__pinnacle_no_query_parameter__');
-  script.referrerPolicy = 'no-referrer';
   script.onerror = () => { state.enabled = false; };
   document.head.appendChild(script);
 })();

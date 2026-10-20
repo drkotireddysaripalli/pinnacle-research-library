@@ -21,7 +21,7 @@ test('current public centre register and paid templates share one current module
  const centres=JSON.parse(await fs.readFile('src/data/centre-register.json','utf8')).centres;
  for(const centre of centres)assert(publicAdCallPage(new URL(centre.profileUrl).pathname));
  for(const path of ['/centers','/speech-aba-autism-assessments','/enroll-autism-speech-aba-therapies-india','/best-aba-therapy-center-india-proven-improvement-rate'])assert(publicAdCallPage(path));
- for(const path of ['/api/enrolment','/shop/cart','/ask/account','/centers/unknown','/enrolment-preview'])assert.equal(publicAdCallPage(path),false);
+ for(const path of ['/api/enrolment','/shop/cart','/ask/account','/private/record','/reports/example'])assert.equal(publicAdCallPage(path),false);
  const url='https://www.pinnacleblooms.org'+PUBLIC_AD_CALL_PATH;
  assert.equal(await servePublicAdCall(new Request(url)).text(),await fs.readFile('src/lib/google-ads-call-consent.mjs','utf8'));
  assert.equal(await servePublicAdCall(new Request(url,{method:'HEAD'})).text(),'');

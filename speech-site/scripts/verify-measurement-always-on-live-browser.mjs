@@ -99,7 +99,7 @@ try {
   assert.equal(contact.action, '/api/enrolment');
   assert.equal(contact.submitEnabled, true);
   assert.equal(contact.receiptScript, '/pinnacle-pages-scripts/contact-receipt.js?v=contact-source-20261020');
-  assert.equal(contact.collectorScript, '/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020');
+  assert.equal(contact.collectorScript, '/pinnacle-pages-scripts/speech-measurement.js?v=measurement-completion-20261020');
   assert.equal(contact.source?.fields?.utm_source, 'google');
   assert.equal(contact.source?.fields?.utm_medium, 'cpc');
   assert.equal(contact.source?.fields?.utm_campaign, 'contact_receipt_live');

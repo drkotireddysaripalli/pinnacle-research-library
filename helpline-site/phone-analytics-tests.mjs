@@ -11,7 +11,9 @@ const realLinks=[...html.matchAll(/<a\b([^>]+data-call-placement="([^"]+)"[^>]*)
 }));
 
 function browser(options={}){
-  const scripts=[],listeners={},storage=new Map(),session=new Map(),storageWrites=[];
+  const scripts=[],listeners={},storage=options.store||new Map(),session=options.session||new Map(),storageWrites=[];
+  let now=options.now??Date.now();
+  class Clock extends Date { static now(){return now;} }
   if(options.qaAt!==undefined)session.set('pinnacle-validation-v1',String(options.qaAt));
   const link=(href,text,placement)=>{
     const attrs=new Map([['href',href],['aria-label','Call '+text]]),node={nodeValue:text};
@@ -33,13 +35,13 @@ function browser(options={}){
   };
   const location=new URL(options.url||'https://www.pinnacleblooms.org/national-autism-helpline');
   const localStorage={
-    getItem:key=>storage.get(key)??null,
-    setItem(key,value){storage.set(key,value);storageWrites.push([key,value]);},
+    getItem:key=>{if(options.storageFailure&&key===sourceKey)throw Error('storage unavailable');return storage.get(key)??null;},
+    setItem(key,value){if(options.storageFailure&&key===sourceKey)throw Error('storage unavailable');storage.set(key,value);storageWrites.push([key,value]);},
     removeItem:key=>storage.delete(key)
   };
   const sessionStorage={getItem:key=>session.get(key)??null,setItem:(key,value)=>session.set(key,value)};
   const window={};
-  const context={window,document,location,localStorage,sessionStorage,URL,Date,Map,Set,Number,
+  const context={window,document,location,localStorage,sessionStorage,URL,Date:Clock,Map,Set,Number,
     MutationObserver:class{constructor(fn){mutation=fn;}observe(){}},console};
   vm.runInNewContext(source,context);
   const commands=()=>Array.from(window.dataLayer||[],entry=>Array.from(entry));
@@ -49,7 +51,7 @@ function browser(options={}){
     for(const fn of listeners.click||[])fn(event);
   };
   const callback=()=>commands().find(entry=>entry[0]==='config'&&entry[1]===callAction)?.[2].phone_conversion_callback;
-  return {window,document,location,links,scripts,listeners,storage,storageWrites,commands,events,click,callback,createLink:link,mutate:()=>mutation?.()};
+  return {window,document,location,links,scripts,listeners,storage,storageWrites,commands,events,click,callback,createLink:link,mutate:()=>mutation?.(),advance:ms=>now+=ms,rerun:()=>vm.runInNewContext(source,context)};
 }
 
 const results=[];
@@ -68,7 +70,7 @@ check('No visitor measurement choice, refusal state or GPC gate remains',()=>{
 
 check('A production visit starts GA4, Ads and call measurement exactly once',()=>{
   const b=browser();
-  assert.equal(b.scripts.length,1);assert.equal(b.scripts[0].src,'https://www.googletagmanager.com/gtag/js?id='+analyticsId);
+  assert.equal(b.scripts.length,2);assert.equal(b.scripts.find(script=>script.src.includes('googletagmanager')).src,'https://www.googletagmanager.com/gtag/js?id='+analyticsId);
   assert.deepEqual(b.events().map(entry=>entry[1]),['page_view']);
   for(const target of [analyticsId,adsId,callAction])assert.equal(b.commands().filter(entry=>entry[0]==='config'&&entry[1]===target).length,1,target);
   const consent=b.commands().filter(entry=>entry[0]==='consent');
@@ -82,7 +84,7 @@ check('A production visit starts GA4, Ads and call measurement exactly once',()=
 });
 
 check('An existing Google tag is reused without losing configuration or events',()=>{
-  const b=browser({existingTag:true});assert.equal(b.scripts.length,0);
+  const b=browser({existingTag:true});assert.equal(b.scripts.length,1);assert.equal(b.scripts[0].type,'module');
   assert.equal(b.commands().filter(entry=>entry[0]==='config').length,3);assert.deepEqual(b.events().map(entry=>entry[1]),['page_view']);
 });
 
@@ -103,13 +105,13 @@ check('Every approved placement produces one bounded event without blocking dial
   for(const link of b.links.slice(0,8)){
     const before=b.events().length;assert.doesNotThrow(()=>b.click(link));assert.equal(b.events().length,before+1);
     const event=b.events().at(-1);assert.equal(event[1],'phone_link_click');
-    assert.deepEqual(Object.keys(event[2]).sort(),['schema_version','page_group','link_placement','destination','page_location','page_title','page_referrer','send_to'].sort());
+    assert.deepEqual(Object.keys(event[2]).sort(),['schema_version','page_group','link_placement','destination','measurement_mode','page_location','page_title','page_referrer','send_to'].sort());
   }
   const before=b.events().length;b.click(b.links.at(-1));assert.equal(b.events().length,before);
 });
 
-check('Only the two reviewed ChatGPT tuples enter GA4 and the journey envelope',()=>{
-  for(const name of ['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries']){
+check('Existing and new ordinary campaign tuples enter the bounded journey envelope',()=>{
+  for(const name of ['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries','New_Ordinary_Campaign_2027']){
     const b=browser({url:'https://www.pinnacleblooms.org/national-autism-helpline?utm_source=chatgpt&utm_medium=paid&utm_campaign='+name});
     const page=b.events()[0][2];assert.equal(page.campaign_source,'chatgpt');assert.equal(page.campaign_medium,'paid');assert.equal(page.campaign_name,name);
     const saved=JSON.parse(b.storage.get(sourceKey));assert.equal(saved.fields.utm_campaign,name);assert.equal(saved.landingPath,'/national-autism-helpline');
@@ -118,15 +120,45 @@ check('Only the two reviewed ChatGPT tuples enter GA4 and the journey envelope',
 
 check('Google click IDs remain in the landing URL for the granted Google tag and never enter custom payloads',()=>{
   const b=browser({url:'https://www.pinnacleblooms.org/national-autism-helpline?gclid=TEST_CLICK_ID&utm_source=google&utm_medium=cpc&utm_campaign=aba'});
-  assert.equal(b.location.searchParams.get('gclid'),'TEST_CLICK_ID');assert.equal(b.scripts.length,1);
-  assert(!JSON.stringify(b.commands()).includes('TEST_CLICK_ID'));assert.equal(b.storage.has(sourceKey),false);
+  assert.equal(b.location.searchParams.get('gclid'),'TEST_CLICK_ID');assert.equal(b.scripts.length,2);
+  assert(!JSON.stringify(b.commands()).includes('TEST_CLICK_ID'));const saved=JSON.parse(b.storage.get(sourceKey));assert.equal(saved.fields.gclid,'TEST_CLICK_ID');assert.equal(saved.fields.utm_source,'google');assert.equal(saved.fields.utm_campaign,'aba');
 });
 
-check('Unknown or private campaign values never enter analytics or storage',()=>{
+check('Private campaign values and unknown optional fields never enter analytics or storage',()=>{
   for(const query of ['utm_source=chatgpt&utm_medium=paid&utm_campaign=PRIVATE_CANARY','utm_source=chatgpt&utm_medium=paid&utm_campaign=pinnacle_vizag_call_enquiries&utm_term=PRIVATE_CANARY','email=PRIVATE_CANARY#PRIVATE_CANARY']){
     const b=browser({url:'https://www.pinnacleblooms.org/national-autism-helpline?'+query});
-    assert(!JSON.stringify(b.commands()).includes('PRIVATE_CANARY'));assert.equal(b.storage.has(sourceKey),false);
+    assert(!JSON.stringify(b.commands()).includes('PRIVATE_CANARY'));assert(!JSON.stringify([...b.storage]).includes('PRIVATE_CANARY'));
   }
+});
+
+
+check('Standard UTMs, new numeric campaign IDs, click IDs and original case are preserved without exporting click IDs',()=>{
+  const b=browser({url:'https://www.pinnacleblooms.org/national-autism-helpline?utm_source=Google&utm_medium=cpc&utm_campaign=New_ABA_2027&utm_id=99999668887&utm_content=Hero_A&utm_source_platform=GoogleAds&gclid=OrdinaryClick_A&unrecognised=PRIVATE_CANARY'});
+  const saved=JSON.parse(b.storage.get(sourceKey));
+  assert.equal(saved.fields.utm_id,'99999668887');assert.equal(saved.fields.utm_source,'Google');assert.equal(saved.fields.utm_content,'Hero_A');assert.equal(saved.fields.utm_source_platform,'GoogleAds');assert.equal(saved.fields.gclid,'OrdinaryClick_A');
+  assert.equal(b.events()[0][2].campaign_name,'New_ABA_2027');assert.equal(b.events()[0][2].campaign_id,'99999668887');
+  assert(!JSON.stringify(b.commands()).includes('OrdinaryClick_A'));assert(!JSON.stringify([...b.storage]).includes('PRIVATE_CANARY'));
+});
+
+check('Duplicate optional identifiers are ignored individually and cannot poison an ordinary visit',()=>{
+  const b=browser({url:'https://www.pinnacleblooms.org/national-autism-helpline?utm_source=google&utm_medium=cpc&utm_campaign=ordinary&gclid=First&gclid=Second&utm_id=123&utm_id=456'});
+  const saved=JSON.parse(b.storage.get(sourceKey));assert.equal(saved.fields.utm_campaign,'ordinary');assert(!Object.hasOwn(saved.fields,'gclid'));assert(!Object.hasOwn(saved.fields,'utm_id'));
+  assert.equal(b.events()[0][1],'page_view');assert.equal(b.scripts.length,2);
+});
+
+check('Same source keeps its original landing/capture; expiry and storage failure remain bounded',()=>{
+  const now=Date.now(),prior={schemaVersion:1,consent:'analytics_accepted',capturedAt:now-5000,landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'Same_Case'}};
+  const store=new Map([[sourceKey,JSON.stringify(prior)]]),url='https://www.pinnacleblooms.org/national-autism-helpline?utm_source=google&utm_medium=cpc&utm_campaign=Same_Case';
+  const b=browser({store,url,now});assert.equal(JSON.stringify(b.window.pinnacleEnquirySource()),JSON.stringify(prior));assert.equal(b.storageWrites.length,0);
+  b.advance(31*86400000);assert.equal(b.window.pinnacleEnquirySource(),null);
+  const unavailable=browser({url,storageFailure:true});assert.equal(unavailable.window.pinnacleEnquirySource(),null);assert.equal(unavailable.events()[0][1],'page_view');
+  const direct=browser({store:new Map([[sourceKey,JSON.stringify({...prior,capturedAt:now-31*86400000})]]),now});assert.equal(direct.window.pinnacleEnquirySource(),null);
+});
+
+check('Protection module and canonical collector initialize once without invoking a vendor',()=>{
+  const b=browser();b.rerun();const modules=b.scripts.filter(script=>script.type==='module');assert.equal(modules.length,1);assert.equal(modules[0].src,'/pinnacle-pages-scripts/protection-consumer.mjs?v=protection-default-20261020');
+  assert.equal(b.events().filter(row=>row[1]==='page_view').length,1);assert.equal(b.window.pinnacleProtectionAllowed(),true);
+  assert.equal(typeof b.window.CG,'undefined');
 });
 
 check('Labelled QA, preview, apex and unrelated routes remain unmeasured',()=>{

@@ -17,30 +17,46 @@ export function augmentCsp(headers) {
   if (!csp) return;
   let next = augmentDirective(csp, "script-src", [
     "https://www.googletagmanager.com",
+    "https://www.pinnacleblooms.org",
     "https://www.googleadservices.com",
     "https://www.google.com",
     "https://www.gstatic.com",
-    "https://googleads.g.doubleclick.net"
+    "https://googleads.g.doubleclick.net",
+    "https://protect.pinnacleblooms.org",
+    "https://ob.aseasky.link",
+    "https://obs.aseasky.link"
   ]);
   if (/(?:^|;)\s*script-src-elem(?:\s|;)/i.test(next)) {
     next = augmentDirective(next, "script-src-elem", [
       "https://www.googletagmanager.com",
+    "https://www.pinnacleblooms.org",
       "https://www.googleadservices.com",
       "https://www.google.com",
       "https://www.gstatic.com",
-      "https://googleads.g.doubleclick.net"
+      "https://googleads.g.doubleclick.net",
+    "https://protect.pinnacleblooms.org",
+    "https://ob.aseasky.link",
+    "https://obs.aseasky.link"
     ]);
   }
   next = augmentDirective(next, "img-src", [
     "https://www.googletagmanager.com",
+    "https://www.pinnacleblooms.org",
     "https://googleads.g.doubleclick.net",
+    "https://protect.pinnacleblooms.org",
+    "https://ob.aseasky.link",
+    "https://obs.aseasky.link",
     "https://www.google.com",
     "https://www.google.co.in"
   ]);
   next = augmentDirective(next, "connect-src", [
     "https://www.googletagmanager.com",
+    "https://www.pinnacleblooms.org",
     "https://www.googleadservices.com",
     "https://googleads.g.doubleclick.net",
+    "https://protect.pinnacleblooms.org",
+    "https://ob.aseasky.link",
+    "https://obs.aseasky.link",
     "https://pagead2.googlesyndication.com",
     "https://www.google.com",
     "https://www.google.co.in",

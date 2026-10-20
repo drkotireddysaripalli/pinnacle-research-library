@@ -29,8 +29,14 @@ export function installAdCallMeasurement() {
     (/^\/(?:ma|t|b|c)\/[a-z0-9-]+\/?$/.test(location.pathname) || location.pathname === '/contact-national-autism-helpline-24-7');
   const reviewedPublicTemplate = document.body?.dataset?.pageVariant === 'legacy_public_template' &&
     ['/assessments/stuttering-assessment', '/certified-courses', '/certified-courses/'].includes(location.pathname);
-  if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
-      !(paths.has(location.pathname) || publicAsk || publicCentre || publicLegacy || reviewedPublicTemplate)) return;
+  const privatePath=/^\/(?:account|auth|admin|api|internal|private|customer|customers|patient|patients|payroll|reports?|documents?|cart|checkout)(?:\/|$)|^\/(?:ask\/(?:te\/)?(?:account|auth|api|search)|shop\/(?:cart|checkout)|books\/download)(?:\/|$)/i;
+  if(location.protocol!=='https:'||!hosts.has(location.hostname)||privatePath.test(location.pathname))return;
+  let qa=false;try{qa=new URL(location.href).searchParams.has('validation_test');if(qa)sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));else{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));qa=at>0&&at<=Date.now()&&Date.now()-at<86400000;}}catch{}
+  if(qa)return;
+  if(!window.__pinnacleProtectionContainer){
+   window.__pinnacleProtectionContainer={status:'pending'};
+   const script=document.createElement('script');script.type='module';script.id='pinnacle-protection-container';script.src='https://www.pinnacleblooms.org/pinnacle-pages-scripts/protection-consumer.mjs?v=protection-default-20261020';document.head.appendChild(script);
+  }
 
   const state = window.__pinnacleAdCallMeasurement = {enabled: true, started: false};
   const id = 'AW-10810823199';

@@ -32,12 +32,14 @@ for(const [url,source] of [
  assert(!html.includes('data-ad-call-preferences'));
  assert.equal((html.match(/pinnacle-measurement-privacy-bootstrap/g)||[]).length,1);
  assert(html.indexOf('pinnacle-measurement-privacy-bootstrap')<html.indexOf('GTM-W9ZHX459'));
+ assert(html.indexOf('pinnacle_canonical_measurement:true')<html.indexOf('GTM-W9ZHX459'),'canonical ownership must precede GTM initialization');
+ assert(html.includes('pinnacle_protection_allowed:false'),'vendor protection stays guarded until canonical scope is checked');
  assert(html.includes('analytics_storage:"granted"'));assert(html.includes('ad_storage:"granted"'));assert(html.includes('ad_user_data:"granted"'));assert(html.includes('ad_personalization:"denied"'));assert(html.includes('ads_data_redaction",false'));
  assert.equal(transformed.headers.get('etag'),null);
 }
 
 for(const request of [
- new Request('https://www.pinnacleblooms.org/',{headers:{cookie:'private=1'}}),
+ new Request('https://www.pinnacleblooms.org/',{headers:{authorization:'Bearer private'}}),
  new Request('https://www.pinnacleblooms.org/',{method:'HEAD'})
 ]){
  const untouched=await transformReviewedHomepageMeasurement(request,response());
@@ -50,6 +52,14 @@ assert.equal(await changed.text(),changedFixture);
 
 const alreadyShared=fixture.replace('</body>','<details data-speech-measurement></details><script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=old"></script><script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=duplicate"></script></body>');
 const migratedShared=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/'),new Response(alreadyShared,{headers:{'content-type':'text/html'}}));
-const migratedHtml=await migratedShared.text();assert.equal((migratedHtml.match(/speech-measurement\.js/g)||[]).length,1);assert(migratedHtml.includes('v=measurement-always-on-20261020'));assert(migratedHtml.includes('data-speech-measurement'));
+const migratedHtml=await migratedShared.text();assert.equal((migratedHtml.match(/speech-measurement\.js/g)||[]).length,1);assert(migratedHtml.includes('v=measurement-completion-20261020'));assert(migratedHtml.includes('data-speech-measurement'));
 
+for(const recovery of [false,true]){
+ const r=new Request('https://www.pinnacleblooms.org/?utm_source=google&centre=suchitra',{headers:{cookie:'_ga=GA1.1.123.456; _gcl_au=abc'}});
+ const headers={'content-type':'text/html',...(recovery?{'cache-control':'private, no-store','x-pinnacle-public-render-recovery':'mobile-origin-20261008'}:{})};
+ const result=await transformReviewedHomepageMeasurement(r,new Response(fixture,{headers}));
+ const html=await result.text();assert.equal((html.match(/speech-measurement\.js/g)||[]).length,1);assert(html.indexOf('pinnacle_canonical_measurement:true')<html.indexOf('GTM-W9ZHX459'));
+ if(recovery)assert.equal(result.headers.get('cache-control'),'private, no-store');
+ assert(r.url.includes('centre=suchitra'));assert(r.headers.get('cookie').includes('_ga='));
+}
 console.log(JSON.stringify({passed:41,failed:0,scope:'guarded homepage GA4 migration'}));

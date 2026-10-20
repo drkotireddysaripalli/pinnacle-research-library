@@ -24,12 +24,12 @@ test('receipt source is fixed; version/header/source conflicts never hand off',a
  }
  assert.equal(parseReceiptEnrolment(body,'different-key'),null);
 });
-test('typed campaign ID survives the same public/private adapter while phone-like optional attribution is dropped',()=>{
- const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'Regional_Speech',utm_id:'24332444156'}};
+test('new typed campaign ID survives without inventory membership; unsafe optional attribution is dropped',()=>{
+ const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'Regional_Speech',utm_id:'31415926535'}};
  const legacy=toLegacyEnrolment(publicPayload);
  const valid=toReceiptEnrolment(legacy,publicPayload.requestId,{...publicPayload.source,acquisition});
  assert.deepEqual(parseReceiptEnrolment(valid,publicPayload.requestId).source.acquisition,acquisition);
- for(const fields of [{...acquisition.fields,utm_id:'9100181181'},{...acquisition.fields,utm_id:'24332444157'},{...acquisition.fields,utm_campaign:'my child name'},{...acquisition.fields,phone:'9100181181'}]){
+ for(const fields of [{...acquisition.fields,utm_id:'not/an/id'},{...acquisition.fields,utm_campaign:'my child name'},{...acquisition.fields,phone:'9100181181'}]){
   const invalid=toReceiptEnrolment(legacy,publicPayload.requestId,{...publicPayload.source,acquisition:{...acquisition,fields}});
   assert(parseReceiptEnrolment(invalid,publicPayload.requestId),'Bad optional source never rejects valid enquiry');
   assert.equal(invalid.WebsiteReceipt.source.acquisition,undefined);

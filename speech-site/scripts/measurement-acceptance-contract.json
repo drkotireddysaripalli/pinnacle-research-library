@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "acceptanceVersion": "measurement-completion-20261020",
+  "statuses": ["Pass", "Fail", "Blocked", "Not tested"],
+  "wireRequirements": [
+    {"id": "public-template-inventory", "assertion": "The maintained public template inventory is represented by explicit contained cases.", "layer": "template-coverage"},
+    {"id": "ga4-page-view-once", "assertion": "Each defined public navigation emits exactly one page_view to its intended stream.", "layer": "contained-dispatch"},
+    {"id": "ga4-contact-clicks-once", "assertion": "Visible phone and WhatsApp controls emit their exact canonical event once per interaction.", "layer": "contained-dispatch"},
+    {"id": "gtm-direct-owner-once", "assertion": "GTM and direct measurement ownership do not double-dispatch canonical events; exact exclusions remain enforced.", "layer": "contained-dispatch"},
+    {"id": "source-campaign-centre-continuity", "stage": "browser-contract", "assertion": "Typed standard campaign and click identifiers survive the defined service, centre and enquiry journey.", "layer": "contained-navigation"},
+    {"id": "receipt-accepted-once", "assertion": "One matching durable accepted receipt permits one enquiry_accepted payload and no premature event.", "layer": "contained-private-acceptance"},
+    {"id": "receipt-failure-retry-refresh", "assertion": "Rejected, unknown, mismatched, retried and refreshed attempts do not manufacture or duplicate accepted events.", "layer": "contained-private-acceptance"},
+    {"id": "wire-no-pii", "assertion": "Serialized measurement excludes personal/clinical fields and unapproved URL values in every defined case.", "layer": "contained-dispatch"},
+    {"id": "cheq-independent-loader", "stage": "browser-contract", "assertion": "CHEQ starts only in its approved public scope and remains independent of the ClickGuard result.", "layer": "contained-loader"},
+    {"id": "clickguard-centre-bridge", "stage": "browser-contract", "assertion": "ClickGuard supports the published centre-selected journey and the defined bridge exactly once on ordinary public query URLs without inventory gates.", "layer": "contained-loader-and-bridge"}
+  ],
+  "externalRequirements": [
+    {"id": "native-cheq-receipt", "layer": "provider-receipt", "owner": "CHEQ account owner", "defaultStatus": "Blocked", "assertion": "A dated native CHEQ receipt is correlated with an authorized genuine eligible visit."},
+    {"id": "native-clickguard-receipt", "layer": "provider-receipt", "owner": "ClickGuard account owner", "defaultStatus": "Blocked", "assertion": "A dated native ClickGuard receipt/application acknowledgement is correlated with the authorized visit."},
+    {"id": "native-ga4-receipt", "layer": "native-analytics-receiving", "owner": "GA4 measurement owner", "defaultStatus": "Blocked", "assertion": "The intended GA4 property/stream receives the authorized genuine interaction or accepted enquiry."},
+    {"id": "native-googleads-import", "layer": "native-ads-import", "owner": "Google Ads owner", "defaultStatus": "Blocked", "assertion": "The exact enabled imported conversion is reconciled with its accepted genuine event and attribution scope."},
+    {"id": "real-enquiry-reconciliation", "layer": "real-receiving", "owner": "Receiving-system owner", "defaultStatus": "Blocked", "assertion": "A genuine committed enquiry, its durable receipt and source evidence are reconciled in the protected receiving system."},
+    {"id": "staff-acknowledgement", "layer": "care-receiving", "owner": "Care operations owner", "defaultStatus": "Blocked", "assertion": "An authorized staff owner can open the protected lead link and acknowledges the real receiving result."},
+    {"id": "physical-ios-device", "layer": "physical-device", "owner": "Release owner", "defaultStatus": "Not tested", "assertion": "The explicitly required physical iPhone/iPad/SE session is identified and has actual device evidence; desktop WebKit is not substituted."}
+  ]
+}

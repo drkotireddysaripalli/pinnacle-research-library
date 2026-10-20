@@ -427,16 +427,17 @@ const HOME_GA4_CONFIG=`<script>
         gtag('config', 'G-2BYLRLFRDJ');
 
         /**/</script>`;
-const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020"></script>';
+const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-completion-20261020"></script>';
 const HOME_GTM_MARKER='<!-- Google Tag Manager -->';
-const HOME_PRIVACY_BOOTSTRAP='<script id="pinnacle-measurement-privacy-bootstrap">(()=>{const keep=new Set(["utm_id","utm_source","utm_medium","utm_campaign","utm_term","utm_content","utm_source_platform","utm_creative_format","utm_marketing_tactic","gclid","dclid","msclkid","fbclid","gbraid","wbraid"]),u=new URL(location.href);for(const key of [...u.searchParams.keys()])if(!keep.has(key))u.searchParams.delete(key);history.replaceState(null,"",u.pathname+(u.search?u.search:"")+u.hash);window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){dataLayer.push(arguments)};if(!window.__pinnacleConsentDefaults){window.__pinnacleConsentDefaults=true;window.gtag("consent","default",{analytics_storage:"granted",ad_storage:"granted",ad_user_data:"granted",ad_personalization:"denied"})}window.gtag("set","ads_data_redaction",false);window.gtag("set","url_passthrough",false)})();</script>';
+const HOME_PRIVACY_BOOTSTRAP='<script id="pinnacle-measurement-privacy-bootstrap">(()=>{const keep=new Set(["utm_id","utm_source","utm_medium","utm_campaign","utm_term","utm_content","utm_source_platform","utm_creative_format","utm_marketing_tactic","gclid","dclid","msclkid","fbclid","gbraid","wbraid"]),u=new URL(location.href);for(const key of [...u.searchParams.keys()])if(!keep.has(key))u.searchParams.delete(key);history.replaceState(null,"",u.pathname+(u.search?u.search:"")+u.hash);window.dataLayer=window.dataLayer||[];window.dataLayer.push({pinnacle_canonical_measurement:true,pinnacle_protection_allowed:false});window.gtag=window.gtag||function(){dataLayer.push(arguments)};if(!window.__pinnacleConsentDefaults){window.__pinnacleConsentDefaults=true;window.gtag("consent","default",{analytics_storage:"granted",ad_storage:"granted",ad_user_data:"granted",ad_personalization:"denied"})}window.gtag("set","ads_data_redaction",false);window.gtag("set","url_passthrough",false)})();</script>';
 
 // Migrates only the reviewed public homepage fingerprint. GTM, Ads and call measurement remain intact.
 export async function transformReviewedHomepageMeasurement(request,response){
  const url=new URL(request.url);
  if(request.method!=='GET'||url.origin!=='https://www.pinnacleblooms.org'||url.pathname!=='/')return response;
- if(['authorization','cookie','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(name=>request.headers.has(name))||/\bno-transform\b/i.test(request.headers.get('cache-control')||''))return response;
- if(!canTransformContextResponse(response))return response;
+ if(['authorization','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(name=>request.headers.has(name))||/\bno-transform\b/i.test(request.headers.get('cache-control')||''))return response;
+ const recoveredPublicHome=response.headers.get('x-pinnacle-public-render-recovery')==='mobile-origin-20261008';
+ if(!canTransformContextResponse(response)&&!(recoveredPublicHome&&response.status===200&&/^text\/html(?:\s*;|$)/i.test(response.headers.get('content-type')||'')&&!response.headers.has('set-cookie')&&!/\bno-transform\b/i.test(response.headers.get('cache-control')||'')))return response;
  const declared=Number(response.headers.get('content-length'));
  if(Number.isFinite(declared)&&declared>CONTEXT_BODY_LIMIT)return response;
  const html=await readContextBodyBounded(response);
@@ -449,7 +450,7 @@ export async function transformReviewedHomepageMeasurement(request,response){
  let result=html.replace(HOME_GA4_LOADER,'').replace(legacyConfig,'').replace(HOME_GTM_MARKER,HOME_PRIVACY_BOOTSTRAP+HOME_GTM_MARKER);
  const shared=/<script\b[^>]*\bsrc=["']\/pinnacle-pages-scripts\/speech-measurement\.js(?:\?[^"']*)?["'][^>]*>\s*<\/script>/gi;
  let retained=false;
- result=result.replace(shared,tag=>{if(retained)return '';retained=true;return tag.replace(/\bsrc=["'][^"']+["']/i,'src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-always-on-20261020"');});
+ result=result.replace(shared,tag=>{if(retained)return '';retained=true;return tag.replace(/\bsrc=["'][^"']+["']/i,'src="/pinnacle-pages-scripts/speech-measurement.js?v=measurement-completion-20261020"');});
  if(!retained)result=result.replace('</body>',HOME_MEASUREMENT_SCRIPT+'</body>');
  if(result.includes('gtag/js?id=G-2BYLRLFRDJ')||result.includes("gtag('config', 'G-2BYLRLFRDJ')")||!result.includes('pinnacle-measurement-privacy-bootstrap')||!result.includes('GTM-W9ZHX459')||!result.includes("gtag('config', 'AW-10810823199')")||(result.match(/speech-measurement\.js/g)||[]).length!==1)return response;
  const h=new Headers(response.headers);

@@ -81,7 +81,7 @@ function harness({
     contactAccepted:(receipt={schemaVersion:1,requestId:'qa-contact-0001',id:'qa-contact-receipt-0001'},extra={})=>dispatch('pinnacle:contact-accepted',{contract:'website_contact_v1',receipt,...extra}),
     commerce:(name,items)=>dispatch('pinnacle:commerce',{name,items}),
     googleScripts:()=>scripts.filter(item=>item.src?.startsWith('https://www.googletagmanager.com/')),
-    localScripts:()=>scripts.filter(item=>item.src?.startsWith('/'))
+    localScripts:()=>scripts.filter(item=>item.src?.startsWith('/')||item.src?.startsWith(origin+'/pinnacle-pages-scripts/'))
   };
 }
 
@@ -113,10 +113,10 @@ test('an existing Google tag is reused while configuration and the page view sti
   assert.equal(h.googleScripts().length,0);assert(command(h,'config','G-2BYLRLFRDJ'));assert.equal(h.events().filter(entry=>entry[1]==='page_view').length,1);
 });
 
-test('private, authenticated-style and unsupported paths stay uninstrumented',()=>{
+test('private and authenticated paths stay uninstrumented',()=>{
   for(const url of [
     origin+'/account',origin+'/auth/session',origin+'/patients/private-record',
-    origin+'/documents/private-record',origin+'/api/enrolment',origin+'/unknown'
+    origin+'/documents/private-record',origin+'/api/enrolment',origin+'/shop/checkout'
   ]){
     const h=harness({url});assert.equal(h.googleScripts().length,0,url);assert.equal(h.events().length,0,url);assert.equal(typeof h.window.pinnacleEnquirySource==='function'?h.window.pinnacleEnquirySource():null,null,url);
   }
@@ -180,15 +180,46 @@ test('recognised referrers are reduced to their origin and private referrers are
   const privateConfig=command(privateRef,'config','G-2BYLRLFRDJ')[2];assert.equal(privateConfig.page_referrer,'');assert.equal(privateConfig.ignore_referrer,true);
 });
 
-test('automatic protection loads only for a safe eligible commercial context',()=>{
+test('automatic protection is independent of optional public URL metadata',()=>{
   const safe=harness({url:origin+'/best-aba-therapy-center-india-proven-improvement-rate?utm_source=google&utm_medium=cpc&utm_campaign=Regional_ABA'});
   assert.equal(safe.window.pinnacleProtectionAllowed(),true);
   assert.equal(safe.localScripts().filter(item=>item.src?.includes('protection-consumer.mjs')).length,1);
   assert.equal(safe.localScripts().filter(item=>item.src?.includes('cheq-protection.js')).length,1);
   const unsafe=harness({url:origin+'/best-aba-therapy-center-india-proven-improvement-rate?name=private-child'});
-  assert.equal(unsafe.window.pinnacleProtectionAllowed(),false);
-  assert.equal(unsafe.localScripts().filter(item=>item.src?.includes('protection-consumer.mjs')).length,0);
+  assert.equal(unsafe.window.pinnacleProtectionAllowed(),true);
+  assert.equal(unsafe.localScripts().filter(item=>item.src?.includes('protection-consumer.mjs')).length,1);
   assert.equal(unsafe.events().filter(entry=>entry[1]==='page_view').length,1,'invalid-traffic protection cannot disable GA4');
+});
+
+test('published operating-centre source permits one CG loader without changing source or page-view counts',()=>{
+  const q='?service=help&centre=suchitra&utm_source=google&utm_medium=cpc&utm_campaign=Regional_ABA&utm_content=aba_service';
+  const h=harness({url:origin+enrolment+q});
+  assert.equal(h.window.pinnacleProtectionAllowed(),true);
+  assert.equal(h.localScripts().filter(s=>s.src?.includes('protection-consumer.mjs')).length,1);
+  assert.equal(h.events().filter(e=>e[1]==='page_view').length,1);
+  assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,0);
+  assert.equal(h.window.pinnacleEnquirySource().fields.utm_content,'aba_service');
+  for(const query of ['centre=not-a-verified-centre','centre=suchitra&centre=suchitra','centre=suchitra&unknown=canary','centre=nizamabad','centre=vanasthalipuram','centre=annanagar','centre=bnreddynagar','centre=gachibowli']){
+    const unsafe=harness({url:origin+enrolment+'?service=help&'+query});
+    assert.equal(unsafe.window.pinnacleProtectionAllowed(),true,query);
+    assert.equal(unsafe.localScripts().filter(s=>s.src?.includes('protection-consumer.mjs')).length,1,query);
+    assert.equal(unsafe.events().filter(e=>e[1]==='page_view').length,1);
+  }
+  const unsafeRef=harness({url:origin+enrolment+q,referrer:origin+enrolment+'?centre=not-a-verified-centre'});
+  assert.equal(unsafeRef.window.pinnacleProtectionAllowed(),true,'CG does not export the previous internal referrer');
+});
+
+test('new typed Ads IDs and keywords need no deployment or inventory membership',()=>{
+ const suffix='utm_source=google&utm_medium=cpc&utm_id=31415926535&cid=31415926535&agid=271828182845&aid=161803398874&kid=kwd-123456789&kw=early%20communication%20therapy&nw=s';
+ for(const query of [suffix,suffix.split('&').reverse().join('&')]){
+  const h=harness({url:origin+enrolment+'?service=help&centre=suchitra&'+query});
+  assert.equal(h.window.pinnacleProtectionAllowed(),true);assert.equal(h.window.pinnacleEnquirySource().fields.utm_id,'31415926535');
+  assert.deepEqual(normaliseAcquisition(JSON.parse(JSON.stringify(h.window.pinnacleEnquirySource()))).fields.utm_id,'31415926535');
+ }
+ const duplicate=harness({url:origin+enrolment+'?utm_id=31415926535&utm_id=31415926536&utm_source=google'});
+ assert.equal(duplicate.window.pinnacleProtectionAllowed(),true,'duplicate optional attribution never disables the vendor');
+ assert.equal(duplicate.window.pinnacleEnquirySource().fields.utm_id,undefined,'ambiguous attribution ignored');
+ assert.equal(duplicate.events().filter(e=>e[1]==='page_view').length,1,'attribution ambiguity never disables ordinary GA4');
 });
 
 test('central call and WhatsApp taps emit bounded events once and never block navigation',()=>{
@@ -246,23 +277,23 @@ test('all registered centre pages and core commercial pages have automatic measu
   }
 });
 
-test('legacy public templates require their owner marker and use a coarse identity',()=>{
+test('legacy public templates use their declared identity and unmarked public documents still measure coarsely',()=>{
   for(const [path,expected] of [
     ['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],
     ['/certified-courses','/certified-courses'],['/certified-courses/','/certified-courses']
   ]){
     const measured=harness({url:origin+path,variant:'legacy_public_template'});
     const view=measured.events().find(entry=>entry[1]==='page_view');assert(view,path);assert.equal(new URL(view[2].page_location).pathname,expected);
-    const unmarked=harness({url:origin+path});assert.equal(unmarked.events().length,0,path);
+    const unmarked=harness({url:origin+path});assert.equal(unmarked.events().filter(e=>e[1]==='page_view').length,1,path);assert.equal(new URL(unmarked.events()[0][2].page_location).pathname,'/public-information');
   }
 });
 
-test('knowledge and Ask paths retain coarse identities and exclude searches',()=>{
+test('public knowledge queries retain coarse identities without disabling collection',()=>{
   const ask=harness({url:'https://pinnacleblooms.org/ask/private-question',variant:'ask'});
   assert.equal(new URL(ask.events().find(entry=>entry[1]==='page_view')[2].page_location).pathname,'/ask');
   assert(!JSON.stringify(ask.commands()).includes('private-question'));
   const searched=harness({url:origin+'/faq/private-topic?q=child-secret',variant:'knowledge'});
-  assert.equal(searched.events().length,0);
+  assert.equal(searched.events().filter(e=>e[1]==='page_view').length,1);assert(!JSON.stringify(searched.commands()).includes('child-secret'));
 });
 
 test('functional click handling remains native even if analytics throws',()=>{

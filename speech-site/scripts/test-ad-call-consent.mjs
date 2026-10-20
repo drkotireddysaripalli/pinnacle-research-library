@@ -13,7 +13,7 @@ function harness({path='/ask/example',host='pinnacleblooms.org',loader=false,var
  const central=link('tel:+919100181181','Call 9100\u00a0181\u00a0181'),local=link('tel:+914012345678','040 1234 5678'),links=[central,local];
  const document={
   readyState:ready,body:{dataset:{pageVariant:variant}},
-  querySelector:s=>s.startsWith('script[')&&(loader||scripts.length)?{}:null,
+  querySelector:s=>s.startsWith('script[')&&(loader||scripts.some(s=>s.src?.includes('googletagmanager.com')))?{}:null,
   querySelectorAll:s=>s==='a[href^="tel:"]'?links:[],
   createTreeWalker:target=>{let moved=false;return {currentNode:target.node,nextNode:()=>moved?false:(moved=true)};},
   createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{appendChild:s=>scripts.push(s)},
@@ -24,30 +24,31 @@ function harness({path='/ask/example',host='pinnacleblooms.org',loader=false,var
  const context={window,document,location:{protocol:'https:',hostname:host,pathname:path},navigator:{globalPrivacyControl:true},localStorage:neverStore,sessionStorage:neverStore,MutationObserver:class{constructor(fn){mutate=fn;}observe(){}},Date,Set,Map,JSON};
  vm.runInNewContext(source,context);
  if(ready==='loading')listeners.DOMContentLoaded?.();
+ const googleScripts=()=>scripts.filter(s=>s.src?.includes('googletagmanager.com'));
  const commands=()=>Array.from(window.dataLayer||[],entry=>Array.from(entry));
- return {window,scripts,central,local,links,commands,callback:()=>commands().find(x=>x[0]==='config'&&x[1]===action)?.[2].phone_conversion_callback,mutate:()=>mutate?.(),link};
+ return {window,scripts,googleScripts,central,local,links,commands,callback:()=>commands().find(x=>x[0]==='config'&&x[1]===action)?.[2].phone_conversion_callback,mutate:()=>mutate?.(),link};
 }
 
 test('visitor choice UI, choice storage and GPC gates are absent',()=>{
  assert.equal(preferencesMarkup,'');
- for(const token of ['data-ad-call-choice','data-ad-call-preferences','pinnacle-ad-call-consent','globalPrivacyControl','localStorage','sessionStorage','Allow call measurement','Keep call measurement off'])assert.equal(source.includes(token),false,token);
+ for(const token of ['data-ad-call-choice','data-ad-call-preferences','pinnacle-ad-call-consent','globalPrivacyControl','localStorage','Allow call measurement','Keep call measurement off'])assert.equal(source.includes(token),false,token);
 });
 
 test('eligible public pages start one Ads call configuration automatically',()=>{
  const h=harness();
  assert.equal(h.window.__pinnacleAdCallMeasurement.enabled,true);
  assert.equal(h.window.__pinnacleAdCallMeasurement.started,true);
- assert.equal(h.scripts.length,1);
- assert.equal(h.scripts[0].src,'https://www.googletagmanager.com/gtag/js?id=AW-10810823199');
+ assert.equal(h.googleScripts().length,1);
+ assert.equal(h.googleScripts()[0].src,'https://www.googletagmanager.com/gtag/js?id=AW-10810823199');
  assert.equal(h.commands().filter(x=>x[0]==='config'&&x[1]===action).length,1);
  const state={};for(const command of h.commands().filter(x=>x[0]==='consent'))Object.assign(state,command[2]);
  assert.deepEqual(state,{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});
  assert(h.commands().some(x=>x[0]==='set'&&x[1]==='ads_data_redaction'&&x[2]===false));
 });
 
-test('private, unrelated and non-production pages stay uninstrumented',()=>{
- for(const path of ['/ask/account','/ask/auth/callback','/ask/te/search','/ask/api/item','/shop','/faq','/ask-other']){
-  const h=harness({path});assert.equal(h.window.__pinnacleAdCallMeasurement,undefined,path);assert.equal(h.scripts.length,0,path);
+test('private and non-production pages stay uninstrumented',()=>{
+ for(const path of ['/ask/account','/ask/auth/callback','/ask/te/search','/ask/api/item','/api/enrolment','/shop/cart','/patients/record']){
+  const h=harness({path});assert.equal(h.window.__pinnacleAdCallMeasurement,undefined,path);assert.equal(h.googleScripts().length,0,path);
  }
  assert.equal(harness({host:'local.invalid'}).window.__pinnacleAdCallMeasurement,undefined);
 });
@@ -55,12 +56,12 @@ test('private, unrelated and non-production pages stay uninstrumented',()=>{
 test('every current paid service and centre route starts without a UI',()=>{
  const centres=JSON.parse(fs.readFileSync('src/data/centre-register.json','utf8')).centres;
  const paths=['/','/centers','/autism-therapy','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/speech-aba-autism-assessments','/enroll-autism-speech-aba-therapies-india',...centres.map(c=>new URL(c.profileUrl).pathname)];
- for(const path of paths){const h=harness({path,host:'www.pinnacleblooms.org'});assert.equal(h.window.__pinnacleAdCallMeasurement?.started,true,path);assert.equal(h.scripts.length,1,path);}
+ for(const path of paths){const h=harness({path,host:'www.pinnacleblooms.org'});assert.equal(h.window.__pinnacleAdCallMeasurement?.started,true,path);assert.equal(h.googleScripts().length,1,path);}
 });
 
-test('reviewed legacy templates require their owner marker and use a coarse identity',()=>{
+test('reviewed legacy marker preserves its coarse identity without gating public defaults',()=>{
  for(const [path,coarse] of [['/assessments/stuttering-assessment','/speech-aba-autism-assessments'],['/certified-courses','/certified-courses'],['/certified-courses/','/certified-courses']]){
-  assert.equal(harness({path,host:'www.pinnacleblooms.org'}).window.__pinnacleAdCallMeasurement,undefined);
+  assert.equal(harness({path,host:'www.pinnacleblooms.org'}).window.__pinnacleAdCallMeasurement.started,true);
   const h=harness({path,host:'www.pinnacleblooms.org',variant:'legacy_public_template'});
   const config=h.commands().find(x=>x[0]==='config'&&x[1]===action)[2];
   assert.equal(config.page_location,'https://www.pinnacleblooms.org'+coarse);assert.equal(config.page_referrer,'');
@@ -79,9 +80,9 @@ test('forwarding callback replaces only the national number, including later lin
 });
 
 test('invalid forwarding values are ignored and an existing tag loader is reused',()=>{
- const h=harness({loader:true});assert.equal(h.scripts.length,0);h.callback()('malicious html','tel:bad');assert.equal(h.central.getAttribute('href'),'tel:+919100181181');
+ const h=harness({loader:true});assert.equal(h.googleScripts().length,0);h.callback()('malicious html','tel:bad');assert.equal(h.central.getAttribute('href'),'tel:+919100181181');
 });
 
 test('DOMContentLoaded start is automatic and idempotent',()=>{
- const h=harness({ready:'loading'});assert.equal(h.scripts.length,1);assert.equal(h.commands().filter(x=>x[0]==='config'&&x[1]===action).length,1);
+ const h=harness({ready:'loading'});assert.equal(h.googleScripts().length,1);assert.equal(h.commands().filter(x=>x[0]==='config'&&x[1]===action).length,1);
 });

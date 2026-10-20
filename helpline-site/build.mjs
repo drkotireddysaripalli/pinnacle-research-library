@@ -90,7 +90,17 @@ const license = await readFile(path.join(directory, 'anek-telugu-OFL.txt'), 'utf
 html = html.replace('@@SCHEMA@@', JSON.stringify(schema).replaceAll('<', '\\u003c'))
   .replace('@@FONT_LICENSE@@', license.replaceAll('--', '—'));
 // HTML parsers normalise CRLF before checking an inline-script CSP hash.
-const phoneAnalytics = (await readFile(path.join(directory, 'phone-analytics.js'), 'utf8')).replaceAll('\r\n','\n').replaceAll('\r','\n');
+const sharedAcquisition = await readFile(path.join(directory,'../speech-site/public/pinnacle-pages-scripts/enrolment-source.mjs'),'utf8');
+const sharedKeys = sharedAcquisition.match(/export const ACQUISITION_KEYS=.*?;\nconst CLICK_KEYS=.*?;/)?.[0];
+const helperStart = sharedAcquisition.indexOf('export function safeAcquisitionValue');
+const helperEnd = sharedAcquisition.indexOf('export function normaliseAcquisition',helperStart);
+if(!sharedKeys || helperStart<0 || helperEnd<0)throw new Error('Shared acquisition validator shape changed');
+const sharedHelper = sharedKeys.replace('export ','')+'\n'+sharedAcquisition.slice(helperStart,helperEnd).replace('export function ','function ').trim();
+let phoneAnalytics = (await readFile(path.join(directory,'phone-analytics.js'),'utf8')).replaceAll('\r\n','\n').replaceAll('\r','\n');
+const sharedMarker = /(?:  )?\/\* PINNACLE_SHARED_ACQUISITION_START \*\/[\s\S]*?\/\* PINNACLE_SHARED_ACQUISITION_END \*\//g;
+if((phoneAnalytics.match(sharedMarker)||[]).length!==1)throw new Error('Expected one inline acquisition helper block');
+phoneAnalytics=phoneAnalytics.replace(sharedMarker,'  /* PINNACLE_SHARED_ACQUISITION_START */\n'+sharedHelper+'\n  /* PINNACLE_SHARED_ACQUISITION_END */');
+await writeFile(path.join(directory,'phone-analytics.js'),phoneAnalytics);
 html = html.replace('@@PHONE_ANALYTICS@@', phoneAnalytics);
 const analyticsHash = createHash('sha256').update(phoneAnalytics).digest('base64');
 if (html.includes('@@')) throw new Error('Unfilled template placeholder');
