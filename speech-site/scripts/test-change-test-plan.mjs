@@ -118,5 +118,6 @@ test('contact packaged measurement shortcut preserves all other asset records an
  const module=value=>'// generated\nexport const contactReceiptAssetSources='+JSON.stringify({'/pinnacle-pages-scripts/speech-measurement.js':{body:value,sha256:createHash('sha256').update(value).digest('hex')},'/other.js':{body:'keep'}})+';\n';
  const readBefore=file=>file===source?body:module(original),readAfter=file=>file===source?body:module(body);
  assert(nativeAdSettingsDiffIsSafe([asset],{readBefore,readAfter}));
+ assert(!nativeAdSettingsDiffIsSafe([asset,source,'speech-site/deployment/book-attribution-assets.mjs'],{readBefore,readAfter}));
  for(const mutated of [module(body)+'evil();',module(body).replace('keep','change')])assert(!nativeAdSettingsDiffIsSafe([asset],{readBefore,readAfter:file=>file===asset?mutated:body}));
 });

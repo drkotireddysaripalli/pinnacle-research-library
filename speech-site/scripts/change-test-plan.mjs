@@ -46,6 +46,7 @@ export function publicProtectionDiffIsSafe(files,{readBefore,readAfter}){
 export function nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}){
  const source='speech-site/public/pinnacle-pages-scripts/speech-measurement.js',asset='speech-site/deployment/book-attribution-assets.mjs';
  const contact='speech-site/deployment/contact-receipt-assets.mjs';
+ if(files.includes(contact)&&(files.includes(source)||files.includes(asset)))return false;
  if(files.includes(contact)&&!files.includes(source)&&!files.includes(asset))try{
   const before=String(readBefore(contact)),after=String(readAfter(contact)),pattern=/export const contactReceiptAssetSources=(\{[^\n]+\});/;
   const old=JSON.parse(before.match(pattern)?.[1]||'null'),next=JSON.parse(after.match(pattern)?.[1]||'null'),key='/pinnacle-pages-scripts/speech-measurement.js';
