@@ -11,6 +11,12 @@ for(const name of ['speech-measurement.js','book-commerce.js','protection-consum
  scripts['/pinnacle-pages-scripts/'+name]={text,sha256:crypto.createHash('sha256').update(text).digest('hex')};
  if(name==='speech-measurement.js')scripts['/books/resources/measurement-v1.js']=scripts['/pinnacle-pages-scripts/'+name];
 }
+const attributionCode='// Generated from public/pinnacle-pages-scripts by scripts/build-book-attribution.mjs.\nexport const attributionScripts='+JSON.stringify(scripts)+';\n';
+if(process.argv.includes('--scripts-only')){
+ await fs.writeFile('deployment/book-attribution-assets.mjs',attributionCode);
+ console.log(JSON.stringify({generated:['book-attribution-assets.mjs'],scripts:Object.keys(scripts).length}));
+ process.exit(0);
+}
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const mime=file=>({'.html':'text/html; charset=utf-8','.json':'application/json; charset=utf-8','.md':'text/markdown; charset=utf-8','.css':'text/css; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.js':'text/javascript; charset=utf-8','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.woff2':'font/woff2'}[path.extname(file)]||'application/octet-stream');
 const policyAssets={};
@@ -37,7 +43,6 @@ for(const match of html.matchAll(/\/pinnacle-pages-(?:assets|fonts|scripts)\/[A-
  await add(policyRuntimeAssets,key,file,{kind:'immutable'});
 }
 const policyRoutes=Object.fromEntries(pages.map(page=>[page.path,{html:'/pinnacle-pages-html/'+page.id+'.html',markdown:'/pinnacle-pages-data/'+page.id+'-policy.md'}]));
-const attributionCode='// Generated from public/pinnacle-pages-scripts by scripts/build-book-attribution.mjs.\nexport const attributionScripts='+JSON.stringify(scripts)+';\n';
 const policyCode='// Generated from exact production policy output by scripts/build-book-attribution.mjs.\nexport const publicPolicyAssets='+JSON.stringify(policyAssets)+';\nexport const publicPolicyRoutes='+JSON.stringify(policyRoutes)+';\n';
 const runtimeCode='// Generated from policy runtime dependencies absent from the retained live asset union.\nexport const publicPolicyRuntimeAssets='+JSON.stringify(policyRuntimeAssets)+';\n';
 await Promise.all([fs.writeFile('deployment/book-attribution-assets.mjs',attributionCode),fs.writeFile('deployment/public-policy-assets.mjs',policyCode),fs.writeFile('deployment/public-policy-runtime-assets.mjs',runtimeCode)]);

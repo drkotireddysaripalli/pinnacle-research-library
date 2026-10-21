@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {selectPlan,fingerprint,reusable,executionMismatch,runFocused,retainFixtureArtifacts,root,commonCspRuntime,commonCspDiffIsSafe,validateCommonCspReuse,publicProtectionDiffIsSafe} from './change-test-plan.mjs';
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {selectPlan,fingerprint,reusable,executionMismatch,runFocused,retainFixtureArtifacts,root,commonCspRuntime,commonCspDiffIsSafe,validateCommonCspReuse,publicProtectionDiffIsSafe,nativeAdSettingsDiffIsSafe} from './change-test-plan.mjs';
 const cspFixture=file=>file.endsWith('/ad-call-csp.mjs')?'const keep=1; next = augmentDirective(next, "connect-src", ["https://*.google-analytics.com"]); const end=2;':`const csp="default-src 'self'; connect-src 'self' https://*.google-analytics.com; script-src 'self'"; const route='/unchanged';`;
 const cspAdded=(file,before)=>{const suffix=file.startsWith('helpline-site/')?'/g/collect':'';return file.endsWith('/ad-call-csp.mjs')?before.replace('["https://*.google-analytics.com"]','["https://*.google-analytics.com","https://analytics.google.com","https://stats.g.doubleclick.net"]'):before.replace('https://*.google-analytics.com;','https://*.google-analytics.com https://analytics.google.com'+suffix+' https://stats.g.doubleclick.net'+suffix+';');};
 test('common CSP proof accepts exact registered connect additions across all eight source/output surfaces',()=>{
@@ -94,4 +94,18 @@ test('protection coverage shortcut requires an exact unchanged legacy analytics 
  assert.equal(selectPlan(files).scope,'full');
  const narrow=selectPlan(files,{publicProtectionVerified:true});assert.deepEqual(narrow.components,['protection-coverage']);assert(!narrow.portal&&!narrow.ask);
  assert.equal(selectPlan([...files,'speech-site/public/pinnacle-pages-scripts/speech-measurement.js'],{publicProtectionVerified:true}).scope,'full');
+});
+
+test('native advertising shortcut accepts only the exact source and generated aliases',()=>{
+ const source='speech-site/public/pinnacle-pages-scripts/speech-measurement.js',asset='speech-site/deployment/book-attribution-assets.mjs';
+ const before="default:{analytics_storage:'granted',ad_personalization:'denied'};update:{ad_storage:'granted',ad_personalization:'denied'};config:{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false}";
+ const after=before.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false','');
+ const module=text=>'export const attributionScripts='+JSON.stringify(Object.fromEntries(['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js'].map(key=>[key,{text,sha256:createHash('sha256').update(text).digest('hex')}])) )+';';
+ const files=[source,asset],readBefore=file=>file===source?before:module(before),readAfter=file=>file===source?after:module(after);
+ assert(nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}));
+ assert(!nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter:file=>readAfter(file).replace('send_page_view:false','send_page_view:true')}));
+ assert(!nativeAdSettingsDiffIsSafe([source],{readBefore,readAfter}));
+ assert.equal(selectPlan(files).scope,'full');
+ assert.deepEqual(selectPlan(files,{nativeAdSettingsVerified:true}).components,['native-ad-settings']);
+ assert.equal(selectPlan([...files,'speech-site/package-lock.json'],{nativeAdSettingsVerified:true}).scope,'full');
 });

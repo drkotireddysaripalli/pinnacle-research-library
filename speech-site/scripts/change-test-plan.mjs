@@ -42,8 +42,31 @@ export function publicProtectionDiffIsSafe(files,{readBefore,readAfter}){
   return after.replace(/export function publicProtectionTemplateRequest\(request\)\{[\s\S]*?\n\}\n/,'').replace(' const template=publicProtectionTemplateRequest(request);\n','').replace('||(template&&/no-transform/i.test(cache))','').replace('||template))', '))')===before;
  });}catch{return false;}
 }
-export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,publicProtectionVerified=false,forceFull=false,hasDeletions=false}={}){
+// This exception accepts only the founder-authorized three-property removal.
+export function nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}){
+ const source='speech-site/public/pinnacle-pages-scripts/speech-measurement.js',asset='speech-site/deployment/book-attribution-assets.mjs';
+ if(!files.includes(source)||!files.includes(asset))return false;
+ try{
+  const before=String(readBefore(source)),after=String(readAfter(source));
+  if(before.split(",ad_personalization:'denied'").length!==3||before.split(',allow_google_signals:false,allow_ad_personalization_signals:false').length!==2)return false;
+  if(after!==before.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''))return false;
+  const parse=value=>JSON.parse(String(value).match(/export const attributionScripts=(\{[^\n]+\});/)?.[1]||'null');
+  const old=parse(readBefore(asset)),next=parse(readAfter(asset));if(!old||!next)return false;
+  for(const key of ['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js']){
+   if(old[key]?.text!==before)return false;old[key]={...old[key],text:after,sha256:hash(after)};
+  }
+  return JSON.stringify(old)===JSON.stringify(next);
+ }catch{return false;}
+}
+export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false,forceFull=false,hasDeletions=false}={}){
  const changed=[...new Set(files)].sort();let scope='full',reason='Unmapped/runtime/configuration change: keep the existing full portal gates.';
+ const nativeFiles=new Set(['speech-site/public/pinnacle-pages-scripts/speech-measurement.js','speech-site/deployment/book-attribution-assets.mjs','speech-site/scripts/build-book-attribution.mjs','speech-site/scripts/test-measurement.mjs','speech-site/scripts/release-public-template-protection.mjs','speech-site/scripts/change-test-plan.mjs','speech-site/scripts/test-change-test-plan.mjs']);
+ if(comparisonVerified&&!forceFull&&!hasDeletions&&nativeAdSettingsVerified&&changed.every(file=>nativeFiles.has(file)))return {
+  schemaVersion:2,scope:'runtime',reason:'Exact three-property advertising override removal; all other shared measurement source and assets unchanged.',changed,comparisonVerified,components:['native-ad-settings'],ask:false,portal:false,focused:true,productionDeployment:false,needsBrowser:false,timeIndependent:true,
+  suites:['scripts/test-change-test-plan.mjs'],commands:[{label:'native-ad-initialization',args:['--test','--test-name-pattern=eligible public pages|existing Google tag','scripts/test-measurement.mjs']},{label:'shared-release-syntax',args:['--check','scripts/release-public-template-protection.mjs']}],inputPrefixes:componentInputPrefixes,
+  requiredReleaseEvidence:['Published shared script aliases match committed source; only generated shared script module replaced','Contained initialization of published bytes preserves storage flags, one page view and existing tag reuse; no external event sent'],
+  skipped:['Unchanged Astro/Ask build','Unchanged receiving and attribution suites','Unchanged device/BVT allocation','Full site crawl']
+ };
  const runtimeCsp=changed.filter(file=>commonCspRuntime.has(file));
  const cspOnly=changed.length&&changed.every(file=>commonCspRuntime.has(file)||commonCspTools.has(file)||commonCspControls.has(file)||docs(file));
  const cspTooling=!runtimeCsp.length&&changed.some(file=>commonCspTools.has(file));
@@ -121,17 +144,18 @@ export function runFocused(plan,{out=path.join(root,'speech-site/audits/change-t
  const result={plan,results,executed:results.filter(x=>!x.reused).length,reused:results.filter(x=>x.reused).length,remainingGates:plan.requiredReleaseEvidence};fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(result,null,2)+'\n');return result;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
- const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};const base=arg('base'),head=arg('head')||'HEAD';let files=[],comparisonVerified=false,diagnostic=null,policyExecutionChanged=false,hasDeletions=false,commonCspVerified=false,publicProtectionVerified=false;
+ const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};const base=arg('base'),head=arg('head')||'HEAD';let files=[],comparisonVerified=false,diagnostic=null,policyExecutionChanged=false,hasDeletions=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false;
  try{if(!base)throw Error('An explicit verified base is required');g(['rev-parse','--verify',base+'^{commit}']);g(['rev-parse','--verify',head+'^{commit}']);files=g(['diff','--no-renames','--name-only',base,head]).split('\n').filter(Boolean);hasDeletions=!!g(['diff','--no-renames','--diff-filter=D','--name-only',base,head]);comparisonVerified=true;
   const committed=(ref,file)=>execFileSync(git,['show',ref+':'+file],{cwd:root,encoding:'utf8',windowsHide:true,maxBuffer:64*1024*1024});
   commonCspVerified=commonCspDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
   publicProtectionVerified=publicProtectionDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
+  nativeAdSettingsVerified=nativeAdSettingsDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
   if(files.includes('speech-site/deployment/protection-csp.mjs')){const diff=g(['diff','--unified=0',base,head,'--','speech-site/deployment/protection-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x)).join('\n');policyExecutionChanged=/nonce|sha256|script-src|connect-src|unsafe-|default-src|new Response|\.fetch\(/.test(diff);}
   // Only this exact, reviewed image-host addition may reuse unchanged page
   // builds. Any other CSP implementation delta keeps full acceptance.
   if(files.includes('speech-site/src/lib/ad-call-csp.mjs')){const delta=g(['diff','--unified=0',base,head,'--','speech-site/src/lib/ad-call-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x));policyExecutionChanged=policyExecutionChanged||delta.length!==1||delta[0]!=='+    "https://www.googletagmanager.com",';}
  }catch(e){diagnostic=e.message;}
- const plan={...selectPlan(files,{comparisonVerified,policyExecutionChanged,commonCspVerified,publicProtectionVerified,hasDeletions,forceFull:process.argv.includes('--full')}),base,head,diagnostic,tree:'committed comparison'};
+ const plan={...selectPlan(files,{comparisonVerified,policyExecutionChanged,commonCspVerified,publicProtectionVerified,nativeAdSettingsVerified,hasDeletions,forceFull:process.argv.includes('--full')}),base,head,diagnostic,tree:'committed comparison'};
  const out=arg('out')||path.join(root,'speech-site/audits/change-testing');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'plan.json'),JSON.stringify(plan,null,2)+'\n');
  if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,Object.entries({ask:plan.ask,portal:plan.portal,focused:plan.focused,scope:plan.scope,needs_browser:!!plan.needsBrowser,selection:JSON.stringify(plan)}).map(([k,v])=>k+'='+v+'\n').join(''));
  if(process.argv.includes('--run')&&plan.focused){const mismatch=executionMismatch({head:g(['rev-parse',head+'^{tree}']),current:g(['rev-parse','HEAD^{tree}']),dirty:!!g(['status','--porcelain','--untracked-files=normal'])});if(mismatch)throw Error(mismatch);}
