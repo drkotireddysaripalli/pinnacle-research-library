@@ -353,14 +353,14 @@
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     if (!window.__pinnacleConsentDefaults) {
       window.__pinnacleConsentDefaults = true;
-      window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});
+      window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted'});
     }
-    window.gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});
+    window.gtag('consent','update',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted'});
     window.gtag('set','ads_data_redaction',false);
     window.gtag('set','url_passthrough',false);
     if (!tagStarted) window.gtag('js',new Date());
     window.gtag('config',id,{
-      send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
+      send_page_view:false,
       // One public-site visit must keep its GA4 identity when a
       // family moves from a service/centre page to Enrolment. Per-page cookie
       // paths create a new client/session at that handoff. Keep the existing

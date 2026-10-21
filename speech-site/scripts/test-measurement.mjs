@@ -93,7 +93,7 @@ test('visitor choice UI, choice state and GPC gates are absent',()=>{
   }
 });
 
-test('eligible public pages start automatic GA4 with granted storage and denied personalisation',()=>{
+test('eligible public pages start automatic GA4 with granted storage and native advertising settings',()=>{
   for(const gpc of [false,true]){
     const h=harness({gpc});
     assert.equal(h.googleScripts().length,1);
@@ -101,7 +101,11 @@ test('eligible public pages start automatic GA4 with granted storage and denied 
     const consent=h.commands().filter(entry=>entry[0]==='consent');
     assert.equal(consent.length,2);
     for(const entry of consent)for(const key of ['analytics_storage','ad_storage','ad_user_data'])assert.equal(entry[2][key],'granted');
-    assert(consent.every(entry=>entry[2].ad_personalization==='denied'));
+    assert(consent.every(entry=>!Object.hasOwn(entry[2],'ad_personalization')));
+    const config=command(h,'config','G-2BYLRLFRDJ')[2];
+    assert(!Object.hasOwn(config,'allow_google_signals'));
+    assert(!Object.hasOwn(config,'allow_ad_personalization_signals'));
+    assert.equal(config.send_page_view,false);
     assert(h.commands().some(entry=>entry[0]==='set'&&entry[1]==='ads_data_redaction'&&entry[2]===false));
     assert.equal(h.events().filter(entry=>entry[1]==='page_view').length,1);
     assert.equal(h.events().find(entry=>entry[1]==='page_view')[2].measurement_mode,'automatic');
