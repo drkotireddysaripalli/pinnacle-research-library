@@ -35,7 +35,14 @@ export function commonCspDiffIsSafe(files,{readBefore,readAfter}){
   return added&&restored===before;
  })&&changedRuntime;}catch{return false;}
 }
-export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,forceFull=false,hasDeletions=false}={}){
+export function publicProtectionDiffIsSafe(files,{readBefore,readAfter}){
+ try{return files.filter(file=>['speech-site/deployment/legacy-measurement.mjs','speech-site/deployment/protection-csp.mjs'].includes(file)).every(file=>{
+  const before=readBefore(file).toString(),after=readAfter(file).toString();
+  if(file.endsWith('/legacy-measurement.mjs'))return after.replace("import {repairPublicTemplateProtection} from './public-template-protection.mjs';\n",'').replace(' response=repairPublicTemplateProtection(request,response);\n','')===before;
+  return after.replace(/export function publicProtectionTemplateRequest\(request\)\{[\s\S]*?\n\}\n/,'').replace(' const template=publicProtectionTemplateRequest(request);\n','').replace('||(template&&/no-transform/i.test(cache))','').replace('||template))', '))')===before;
+ });}catch{return false;}
+}
+export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,publicProtectionVerified=false,forceFull=false,hasDeletions=false}={}){
  const changed=[...new Set(files)].sort();let scope='full',reason='Unmapped/runtime/configuration change: keep the existing full portal gates.';
  const runtimeCsp=changed.filter(file=>commonCspRuntime.has(file));
  const cspOnly=changed.length&&changed.every(file=>commonCspRuntime.has(file)||commonCspTools.has(file)||commonCspControls.has(file)||docs(file));
@@ -58,7 +65,7 @@ export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged
  const callPolicy=scope==='policy'&&suites.includes('scripts/test-public-ad-call.mjs');
  if(scope==='test-tooling')suites.push('scripts/test-testingbot-android-reader.mjs','scripts/test-testingbot-native-policy.mjs','scripts/test-testingbot-provider-close.mjs','scripts/test-testingbot-centre-state.mjs');
  const componentControls=new Set(['speech-site/scripts/change-test-plan.mjs','speech-site/scripts/change-test-profiles.mjs','speech-site/scripts/test-change-test-plan.mjs']);
- const scoped=scope==='full'&&comparisonVerified&&!forceFull&&!hasDeletions?componentPlan(changed.filter(f=>!docs(f)&&!componentControls.has(f))):null;
+ const scoped=scope==='full'&&comparisonVerified&&!forceFull&&!hasDeletions?componentPlan(changed.filter(f=>!docs(f)&&!componentControls.has(f)),{publicProtectionVerified}):null;
  if(scoped&&changed.some(f=>componentControls.has(f)))scoped.suites=[...new Set([...scoped.suites,'scripts/test-change-test-plan.mjs'])];
  return {schemaVersion:2,scope:callPolicy||scope==='test-tooling'?'runtime':scope,reason,changed,comparisonVerified,ask:scope==='ask'||scope==='full',portal:scope==='full'||scope==='ask',focused:suites.length>0,suites,requiredReleaseEvidence:scope==='test-tooling'?['Actual provider canary preserves named assertions, native interaction and cleanup','Affected case execution; physical/visual/network coverage remains explicit']:scope==='policy'?['Affected actual serving Worker GET/HEAD and CSP composition','Version/module hashes, routes and bindings; public readback','Browser case if nonce/hash/directive or execution behavior changes']:['full','ask'].includes(scope)?['Existing trusted build/BVT; changed contact and durable receipt behavior','Actual serving-owner deployment and public readback']:[],skipped:scope==='policy'||scope==='test-tooling'?['Astro/Ask rebuild','Unchanged full unit registry','Unchanged layout/device suites','Full site recrawl']:[],productionDeployment:false,...(callPolicy||scope==='test-tooling'?{inputPrefixes:callPolicy?[...componentInputPrefixes,'helpline-site/']:componentInputPrefixes,...(callPolicy?{needsBrowser:true}:{})}:{}),...scoped};
 }
@@ -114,16 +121,17 @@ export function runFocused(plan,{out=path.join(root,'speech-site/audits/change-t
  const result={plan,results,executed:results.filter(x=>!x.reused).length,reused:results.filter(x=>x.reused).length,remainingGates:plan.requiredReleaseEvidence};fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(result,null,2)+'\n');return result;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
- const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};const base=arg('base'),head=arg('head')||'HEAD';let files=[],comparisonVerified=false,diagnostic=null,policyExecutionChanged=false,hasDeletions=false,commonCspVerified=false;
+ const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};const base=arg('base'),head=arg('head')||'HEAD';let files=[],comparisonVerified=false,diagnostic=null,policyExecutionChanged=false,hasDeletions=false,commonCspVerified=false,publicProtectionVerified=false;
  try{if(!base)throw Error('An explicit verified base is required');g(['rev-parse','--verify',base+'^{commit}']);g(['rev-parse','--verify',head+'^{commit}']);files=g(['diff','--no-renames','--name-only',base,head]).split('\n').filter(Boolean);hasDeletions=!!g(['diff','--no-renames','--diff-filter=D','--name-only',base,head]);comparisonVerified=true;
   const committed=(ref,file)=>execFileSync(git,['show',ref+':'+file],{cwd:root,encoding:'utf8',windowsHide:true,maxBuffer:64*1024*1024});
   commonCspVerified=commonCspDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
+  publicProtectionVerified=publicProtectionDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
   if(files.includes('speech-site/deployment/protection-csp.mjs')){const diff=g(['diff','--unified=0',base,head,'--','speech-site/deployment/protection-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x)).join('\n');policyExecutionChanged=/nonce|sha256|script-src|connect-src|unsafe-|default-src|new Response|\.fetch\(/.test(diff);}
   // Only this exact, reviewed image-host addition may reuse unchanged page
   // builds. Any other CSP implementation delta keeps full acceptance.
   if(files.includes('speech-site/src/lib/ad-call-csp.mjs')){const delta=g(['diff','--unified=0',base,head,'--','speech-site/src/lib/ad-call-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x));policyExecutionChanged=policyExecutionChanged||delta.length!==1||delta[0]!=='+    "https://www.googletagmanager.com",';}
  }catch(e){diagnostic=e.message;}
- const plan={...selectPlan(files,{comparisonVerified,policyExecutionChanged,commonCspVerified,hasDeletions,forceFull:process.argv.includes('--full')}),base,head,diagnostic,tree:'committed comparison'};
+ const plan={...selectPlan(files,{comparisonVerified,policyExecutionChanged,commonCspVerified,publicProtectionVerified,hasDeletions,forceFull:process.argv.includes('--full')}),base,head,diagnostic,tree:'committed comparison'};
  const out=arg('out')||path.join(root,'speech-site/audits/change-testing');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'plan.json'),JSON.stringify(plan,null,2)+'\n');
  if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,Object.entries({ask:plan.ask,portal:plan.portal,focused:plan.focused,scope:plan.scope,needs_browser:!!plan.needsBrowser,selection:JSON.stringify(plan)}).map(([k,v])=>k+'='+v+'\n').join(''));
  if(process.argv.includes('--run')&&plan.focused){const mismatch=executionMismatch({head:g(['rev-parse',head+'^{tree}']),current:g(['rev-parse','HEAD^{tree}']),dirty:!!g(['status','--porcelain','--untracked-files=normal'])});if(mismatch)throw Error(mismatch);}

@@ -1,5 +1,6 @@
 import {LEGACY_TAGS,LEGACY_NOSCRIPT_TAGS,LEGACY_TAG_REPLACEMENTS} from './legacy-measurement-fingerprints.mjs';
 import {PUBLIC_AD_CALL_PATH,servePublicAdCall} from './public-ad-call.mjs';
+import {repairPublicTemplateProtection} from './public-template-protection.mjs';
 export const serveLegacyMeasurementCall=servePublicAdCall;
 const normal=text=>text.replaceAll('\r\n','\n').trim();
 const fingerprints=new Set(LEGACY_TAGS.map(normal));
@@ -96,6 +97,7 @@ export function stripLegacyNoscript(body){
 // The two fingerprinted templates are enabled after published GTM v7 ownership
 // exclusions. Every other public family retains its previous exclusion policy.
 export async function repairLegacyExclusions(request,response,{reviewedPublicTemplates=true}={}){
+ response=repairPublicTemplateProtection(request,response);
  response=await projectManagedPreferences(request,response);
  const scope=legacyMeasurementScope(request);
  if(scope==='reviewed-public-template')return reviewedPublicTemplates?repairLegacyMeasurement(request,response,{preserveGtm:true}):response;

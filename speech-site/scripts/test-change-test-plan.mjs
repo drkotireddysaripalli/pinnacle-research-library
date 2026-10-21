@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {selectPlan,fingerprint,reusable,executionMismatch,runFocused,retainFixtureArtifacts,root,commonCspRuntime,commonCspDiffIsSafe,validateCommonCspReuse} from './change-test-plan.mjs';
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {selectPlan,fingerprint,reusable,executionMismatch,runFocused,retainFixtureArtifacts,root,commonCspRuntime,commonCspDiffIsSafe,validateCommonCspReuse,publicProtectionDiffIsSafe} from './change-test-plan.mjs';
 const cspFixture=file=>file.endsWith('/ad-call-csp.mjs')?'const keep=1; next = augmentDirective(next, "connect-src", ["https://*.google-analytics.com"]); const end=2;':`const csp="default-src 'self'; connect-src 'self' https://*.google-analytics.com; script-src 'self'"; const route='/unchanged';`;
 const cspAdded=(file,before)=>{const suffix=file.startsWith('helpline-site/')?'/g/collect':'';return file.endsWith('/ad-call-csp.mjs')?before.replace('["https://*.google-analytics.com"]','["https://*.google-analytics.com","https://analytics.google.com","https://stats.g.doubleclick.net"]'):before.replace('https://*.google-analytics.com;','https://*.google-analytics.com https://analytics.google.com'+suffix+' https://stats.g.doubleclick.net'+suffix+';');};
 test('common CSP proof accepts exact registered connect additions across all eight source/output surfaces',()=>{
@@ -84,4 +84,14 @@ test('release reuse requires intact baseline, current-source focused commands an
  for(const changed of negatives)assert.throws(()=>validateCommonCspReuse({...args,...changed}));
  const reused=results.map(record=>({...record,reused:true,source:'earlier',requestedSource:'current'}));assert.equal(validateCommonCspReuse({...args,focused:{plan,results:reused}}).freshBvt,false);
  const tooling=['speech-site/scripts/release-measurement-always-on-live.mjs','speech-site/scripts/change-test-plan.mjs'];assert.equal(validateCommonCspReuse({...args,files:tooling}).semanticDeltaVerified,true);
+});
+
+test('protection coverage shortcut requires an exact unchanged legacy analytics seam',()=>{
+ const file='speech-site/deployment/legacy-measurement.mjs',before="const analyticsScope='unchanged';\n",after="import {repairPublicTemplateProtection} from './public-template-protection.mjs';\n"+before+' response=repairPublicTemplateProtection(request,response);\n';
+ assert(publicProtectionDiffIsSafe([file],{readBefore:()=>before,readAfter:()=>after}));
+ assert(!publicProtectionDiffIsSafe([file],{readBefore:()=>before,readAfter:()=>after.replace('unchanged','changed')}));
+ const files=[file,'speech-site/deployment/public-template-protection.mjs'];
+ assert.equal(selectPlan(files).scope,'full');
+ const narrow=selectPlan(files,{publicProtectionVerified:true});assert.deepEqual(narrow.components,['protection-coverage']);assert(!narrow.portal&&!narrow.ask);
+ assert.equal(selectPlan([...files,'speech-site/public/pinnacle-pages-scripts/speech-measurement.js'],{publicProtectionVerified:true}).scope,'full');
 });
