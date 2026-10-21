@@ -74,6 +74,7 @@ if(phase==='prepare'){
    for(const key of Object.keys(previous))if(['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js'].includes(key)){
     assert.equal(next[key].text,previous[key].text.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''));assert.equal(next[key].sha256,sha(next[key].text));
    }else assert.deepEqual(next[key],previous[key],'Unrelated shared asset changed: '+key);
+   assert.equal(candidate.toString(),current.bytes.toString().replace(/export const attributionScripts=(\{[^\n]+\});/,'export const attributionScripts='+JSON.stringify(next)+';'),'Unrelated generated module code changed');
    current.bytes=candidate;
   }else{
    const entry=Buffer.from("import original from './"+receipt.entry+"';export * from './"+receipt.entry+"';import {withPublicTemplateProtection} from './"+moduleName+"';export default withPublicTemplateProtection(original);\n");

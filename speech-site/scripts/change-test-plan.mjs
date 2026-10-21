@@ -55,7 +55,8 @@ export function nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}){
   for(const key of ['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js']){
    if(old[key]?.text!==before)return false;old[key]={...old[key],text:after,sha256:hash(after)};
   }
-  return JSON.stringify(old)===JSON.stringify(next);
+  const oldModule=String(readBefore(asset)),nextModule=String(readAfter(asset));
+  return JSON.stringify(old)===JSON.stringify(next)&&oldModule.replace(/export const attributionScripts=(\{[^\n]+\});/,'export const attributionScripts='+JSON.stringify(old)+';')===nextModule;
  }catch{return false;}
 }
 export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false,forceFull=false,hasDeletions=false}={}){

@@ -104,6 +104,7 @@ test('native advertising shortcut accepts only the exact source and generated al
  const files=[source,asset],readBefore=file=>file===source?before:module(before),readAfter=file=>file===source?after:module(after);
  assert(nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}));
  assert(!nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter:file=>readAfter(file).replace('send_page_view:false','send_page_view:true')}));
+ for(const mutated of ['before();\n'+readAfter(asset),readAfter(asset)+'\nafter();'])assert(!nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter:file=>file===asset?mutated:readAfter(file)}));
  assert(!nativeAdSettingsDiffIsSafe([source],{readBefore,readAfter}));
  assert.equal(selectPlan(files).scope,'full');
  assert.deepEqual(selectPlan(files,{nativeAdSettingsVerified:true}).components,['native-ad-settings']);
