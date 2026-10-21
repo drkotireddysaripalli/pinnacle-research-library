@@ -34,3 +34,11 @@ export function repairPublicTemplateProtection(request, response) {
   .transform(new Response(response.body, {status: response.status, statusText: response.statusText, headers}));
  return protectionCsp(request, rewritten);
 }
+
+// The live legacy Worker has an independently retained module composition.
+// Wrap its actual entry rather than replacing its unrelated analytics modules.
+export function withPublicTemplateProtection(original) {
+ return {...original, async fetch(request, env, ctx) {
+  return repairPublicTemplateProtection(request, await original.fetch(request, env, ctx));
+ }};
+}

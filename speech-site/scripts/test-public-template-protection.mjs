@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import {build} from 'esbuild';
 import {Miniflare, convertV4MiniflareOptions} from 'miniflare';
 import {legacyMeasurementScope} from '../deployment/legacy-measurement.mjs';
+import {withPublicTemplateProtection} from '../deployment/public-template-protection.mjs';
 
 const origin='https://www.pinnacleblooms.org';
 const script='<script>window.dataLayer=window.dataLayer||[];/* GTM-W9ZHX459 */ gtag("config","G-2BYLRLFRDJ");</script>';
@@ -62,4 +63,11 @@ test('private, QA, nested, non-HTML and non-public responses retain their origin
 test('checked-in legacy runtime is generated from the maintained source',async()=>{
  const output=await build({entryPoints:['deployment/legacy-measurement.mjs'],bundle:true,format:'esm',write:false,logLevel:'silent'});
  assert.equal(await fs.readFile('deployment/legacy-measurement.runtime.mjs','utf8'),output.outputFiles[0].text);
+});
+test('additive wrapper retains every existing export and untouched private response',async()=>{
+ const response=new Response('private original'),Original=class{},original={Original,fetch:async()=>response};
+ const wrapped=withPublicTemplateProtection(original);assert.equal(wrapped.Original,Original);
+ assert.equal(await wrapped.fetch(new Request(origin+'/account'),{},{}),response);
+ const output=await build({entryPoints:['deployment/public-template-protection.mjs'],bundle:true,format:'esm',write:false,logLevel:'silent'});
+ assert.equal(await fs.readFile('deployment/public-template-protection.runtime.mjs','utf8'),output.outputFiles[0].text);
 });
