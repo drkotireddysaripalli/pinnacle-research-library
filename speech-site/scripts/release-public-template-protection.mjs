@@ -56,7 +56,7 @@ if(phase==='prepare'){
 }else{
  const receipt=await read('release.json'),before=await read('before.json');
  if(phase==='rollback'){
-  assert(receipt.deployment,'Nothing has been promoted');const result=await api(base(worker)+'/deployments','POST',{strategy:'percentage',versions:receipt.rollback});receipt.rollbackDeployment=result.id;receipt.phase='rolled-back';await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,deployment:result.id}));
+  assert(receipt.deployment,'Nothing has been promoted');unchanged(await snapshot(),before,[{version_id:receipt.version,percentage:100}]);const result=await api(base(worker)+'/deployments','POST',{strategy:'percentage',versions:receipt.rollback});receipt.rollbackDeployment=result.id;receipt.phase='rolled-back';await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,deployment:result.id}));
  }else if(phase==='upload'){
   assert.equal(receipt.phase,'prepared');unchanged(await snapshot(),before);
   const commit=g(['rev-parse','HEAD']);assert.equal(g(['ls-remote','origin','refs/heads/main']).split(/\s/)[0],commit,'Merge the exact source to canonical main before upload');
