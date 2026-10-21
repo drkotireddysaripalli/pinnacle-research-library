@@ -9,9 +9,9 @@ import {execFileSync} from 'node:child_process';
 const [phase, directory, baseline='origin/main']=process.argv.slice(2);
 assert(['prepare','upload','promote','verify','rollback'].includes(phase)&&directory,'Pass phase and evidence directory');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),out=path.resolve(directory);
-const worker='pinnacle-verify-route',moduleName='legacy-measurement.runtime.mjs';
+const worker='pinnacle-legacy-social-metadata',moduleName='legacy-measurement.runtime.mjs';
 const account='862998def1cd610fdb86b8e5c1d6ed4d',zone='8b13f18e0589996b5d6512552372b434';
-const protectedNames=['pinnacle-legacy-social-metadata','pinnacle-root-sitemap','materials-mobile-desktop-tracker','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-ask','pinnacle-google-ads-call-measurement','pinnacle-helpline','pbn-planetscale'];
+const protectedNames=['pinnacle-verify-route','pinnacle-root-sitemap','materials-mobile-desktop-tracker','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-ask','pinnacle-google-ads-call-measurement','pinnacle-helpline','pbn-planetscale'];
 const g=args=>execFileSync('git',args,{cwd:repo,encoding:'utf8'}).trim();
 const gitBytes=args=>execFileSync('git',args,{cwd:repo,maxBuffer:64*1024*1024});
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -42,12 +42,13 @@ async function modules(){
 }
 function unchanged(now,before,expected=before.workers[worker]){
  assert.deepEqual(now.routes,before.routes,'Route drift');assert.deepEqual(stable(now.settings),stable(before.settings),'Settings or binding drift');assert.deepEqual(now.assets,before.assets,'Asset runtime drift');
- assert.deepEqual(now.workers[worker],expected,'Portal version drift');for(const name of protectedNames)assert.deepEqual(now.workers[name],before.workers[name],name+' version drift');
+ assert.deepEqual(now.workers[worker],expected,'Serving Worker version drift');for(const name of protectedNames)assert.deepEqual(now.workers[name],before.workers[name],name+' version drift');
 }
 await fs.mkdir(out,{recursive:true});
 if(phase==='prepare'){
  assert(!(await fs.stat(path.join(out,'release.json')).catch(()=>null)),'Resume the existing release receipt');
  const before=await snapshot(),captured=await modules(),source=gitBytes(['show',baseline+':speech-site/deployment/'+moduleName]);
+ for(const pattern of ['www.pinnacleblooms.org/m/*','www.pinnacleblooms.org/skills/*'])assert(before.routes.some(r=>r.pattern===pattern&&r.script===worker),'Affected route belongs to another Worker: '+pattern);
  assert.equal(sha(captured.entries.find(m=>m.name===moduleName)?.bytes||''),sha(source),'Current live module differs from the canonical baseline');
  await save('before.json',before);await fs.mkdir(path.join(out,'captured'),{recursive:true});
  for(const m of captured.entries){const file=path.join(out,'captured',m.name);await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file,m.bytes,{mode:0o600});}
