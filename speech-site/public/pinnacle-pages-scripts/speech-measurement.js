@@ -87,7 +87,7 @@
     if (typeof value !== 'string') return null;
     value = value.trim();
     if (!value || value.length > (click ? 256 : 128) ||
-        !(click ? /^[A-Za-z0-9._~-]+$/ : /^[A-Za-z0-9][A-Za-z0-9._~ -]*$/).test(value)) return null;
+        !(click ? /^[A-Za-z0-9._~-]+$/ : key==='utm_id'?/^[A-Za-z0-9][A-Za-z0-9._~ -]*$/:/^(?![A-Za-z][A-Za-z0-9+.-]*:\/\/)(?![Ww][Ww][Ww]\.)(?![A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+\/)[\p{L}\p{N}][\p{L}\p{M}\p{N} ._~:()&,+\/'’–—-]*$/u).test(value)) return null;
     if (key === 'utm_id' && /^[1-9][0-9]{0,19}$/.test(value)) return value;
     // Encoded/nested values, email addresses, phone-like strings, credentials
     // and private clinical/free-text labels are not campaign identifiers.

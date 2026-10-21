@@ -1,4 +1,5 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {selectPlan,fingerprint,reusable,executionMismatch,runFocused,retainFixtureArtifacts,root,commonCspRuntime,commonCspDiffIsSafe,validateCommonCspReuse,publicProtectionDiffIsSafe,nativeAdSettingsDiffIsSafe} from './change-test-plan.mjs';
+import {labelPattern} from './campaign-label-patch.mjs';
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {createHash} from 'node:crypto';import {selectPlan,fingerprint,reusable,executionMismatch,runFocused,retainFixtureArtifacts,root,commonCspRuntime,commonCspDiffIsSafe,validateCommonCspReuse,publicProtectionDiffIsSafe,nativeAdSettingsDiffIsSafe,campaignLabelsDiffIsSafe} from './change-test-plan.mjs';
 const cspFixture=file=>file.endsWith('/ad-call-csp.mjs')?'const keep=1; next = augmentDirective(next, "connect-src", ["https://*.google-analytics.com"]); const end=2;':`const csp="default-src 'self'; connect-src 'self' https://*.google-analytics.com; script-src 'self'"; const route='/unchanged';`;
 const cspAdded=(file,before)=>{const suffix=file.startsWith('helpline-site/')?'/g/collect':'';return file.endsWith('/ad-call-csp.mjs')?before.replace('["https://*.google-analytics.com"]','["https://*.google-analytics.com","https://analytics.google.com","https://stats.g.doubleclick.net"]'):before.replace('https://*.google-analytics.com;','https://*.google-analytics.com https://analytics.google.com'+suffix+' https://stats.g.doubleclick.net'+suffix+';');};
 test('common CSP proof accepts exact registered connect additions across all eight source/output surfaces',()=>{
@@ -120,4 +121,14 @@ test('contact packaged measurement shortcut preserves all other asset records an
  assert(nativeAdSettingsDiffIsSafe([asset],{readBefore,readAfter}));
  assert(!nativeAdSettingsDiffIsSafe([asset,source,'speech-site/deployment/book-attribution-assets.mjs'],{readBefore,readAfter}));
  for(const mutated of [module(body)+'evil();',module(body).replace('keep','change')])assert(!nativeAdSettingsDiffIsSafe([asset],{readBefore,readAfter:file=>file===asset?mutated:body}));
+});
+
+test('campaign label scope requires exact browser, private and generated-source parity',()=>{
+ const a='speech-site/public/pinnacle-pages-scripts/speech-measurement.js',b='speech-site/public/pinnacle-pages-scripts/enrolment-source.mjs',book='speech-site/deployment/book-attribution-assets.mjs',contact='speech-site/deployment/contact-receipt-assets.mjs';
+ const before='const accept=/^[A-Za-z0-9][A-Za-z0-9._~ -]*$/;',after=before.replace('/^[A-Za-z0-9][A-Za-z0-9._~ -]*$/',"key==='utm_id'?/^[A-Za-z0-9][A-Za-z0-9._~ -]*$/:"+labelPattern);
+ const build=(text,name,keys,field)=>'export const '+name+'='+JSON.stringify(Object.fromEntries(keys.map(key=>[key,{[field]:text,sha256:createHash('sha256').update(text).digest('hex')}])))+';';
+ const read=(text,file)=>[a,b].includes(file)?text:file===book?build(text,'attributionScripts',['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js'],'text'):build(text,'contactReceiptAssetSources',['/pinnacle-pages-scripts/speech-measurement.js','/pinnacle-pages-scripts/enrolment-source.mjs'],'body');
+ const files=[a,b,book,contact],readBefore=file=>read(before,file),readAfter=file=>read(after,file);
+ assert(campaignLabelsDiffIsSafe(files,{readBefore,readAfter}));assert(!campaignLabelsDiffIsSafe(files,{readBefore,readAfter:file=>readAfter(file)+'extra'}));
+ assert.deepEqual(selectPlan(files,{campaignLabelsVerified:true}).components,['campaign-labels']);assert.equal(selectPlan([...files,'speech-site/src/pages/index.astro'],{campaignLabelsVerified:true}).scope,'full');
 });

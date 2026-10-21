@@ -1,6 +1,7 @@
 // Dependency-free selection. Unknown inputs retain the existing full gates.
 import fs from 'node:fs';import path from 'node:path';import os from 'node:os';import {execFileSync,spawnSync} from 'node:child_process';import {createHash} from 'node:crypto';import {fileURLToPath} from 'node:url';
 import {componentPlan,componentInputPrefixes} from './change-test-profiles.mjs';
+import {assertLabelSourceDelta,assertGeneratedLabels} from './campaign-label-patch.mjs';
 const here=path.dirname(fileURLToPath(import.meta.url));export const root=path.resolve(here,'../..');
 const portableGit=path.join(os.homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe');const git=process.env.PINNACLE_GIT||(process.platform==='win32'&&fs.existsSync(portableGit)?portableGit:'git');
 const control=new Set(['speech-site/scripts/change-test-plan.mjs','speech-site/scripts/change-test-profiles.mjs','speech-site/scripts/test-change-test-plan.mjs','speech-site/scripts/test-enrolment.mjs','speech-site/scripts/test-enrolment-contract.mjs','speech-site/scripts/check-page.mjs','speech-site/scripts/check-contact-receipt-browser.mjs','speech-site/scripts/page-quality-contracts.mjs','speech-site/CHANGE-BASED-TESTING.md','.github/workflows/portal-quality.yml']);
@@ -70,8 +71,31 @@ export function nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}){
   return JSON.stringify(old)===JSON.stringify(next)&&oldModule.replace(/export const attributionScripts=(\{[^\n]+\});/,'export const attributionScripts='+JSON.stringify(old)+';')===nextModule;
  }catch{return false;}
 }
-export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false,forceFull=false,hasDeletions=false}={}){
+export function campaignLabelsDiffIsSafe(files,{readBefore,readAfter}){
+ const sourcePrefix='speech-site/public/pinnacle-pages-scripts/';
+ try{
+  const pairs=['speech-measurement.js','enrolment-source.mjs'].map(name=>[name,String(readBefore(sourcePrefix+name)),String(readAfter(sourcePrefix+name))]);
+  if(!pairs.every(([name])=>files.includes(sourcePrefix+name)))return false;
+  for(const [,before,after]of pairs)assertLabelSourceDelta(before,after);
+  const book='speech-site/deployment/book-attribution-assets.mjs',contact='speech-site/deployment/contact-receipt-assets.mjs';
+  if(!files.includes(book)||!files.includes(contact))return false;
+  assertGeneratedLabels(readBefore(book),readAfter(book),'attributionScripts',['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js'].map(key=>[key,pairs[0][1],pairs[0][2],'text']));
+  assertGeneratedLabels(readBefore(contact),readAfter(contact),'contactReceiptAssetSources',pairs.map(([name,before,after])=>['/pinnacle-pages-scripts/'+name,before,after,'body']));
+  return true;
+ }catch{return false;}
+}
+export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false,campaignLabelsVerified=false,forceFull=false,hasDeletions=false}={}){
  const changed=[...new Set(files)].sort();let scope='full',reason='Unmapped/runtime/configuration change: keep the existing full portal gates.';
+ const labelFiles=new Set(['speech-site/scripts/additive-receipt-recovery.mjs','speech-site/scripts/test-additive-receipt-recovery.mjs','speech-site/public/pinnacle-pages-scripts/speech-measurement.js','speech-site/public/pinnacle-pages-scripts/enrolment-source.mjs','speech-site/deployment/book-attribution-assets.mjs','speech-site/deployment/contact-receipt-assets.mjs','speech-site/scripts/campaign-label-patch.mjs','speech-site/scripts/test-campaign-label-patch.mjs','speech-site/scripts/release-public-template-protection.mjs','speech-site/scripts/change-test-plan.mjs','speech-site/scripts/test-change-test-plan.mjs','speech-site/scripts/test-measurement.mjs','speech-site/scripts/test-enrolment-receipt.mjs']);
+ if(comparisonVerified&&!forceFull&&!hasDeletions&&campaignLabelsVerified&&changed.every(file=>labelFiles.has(file)))return {
+  schemaVersion:2,scope:'runtime',reason:'Exact Unicode campaign metadata validation correction; click IDs and other receipt behavior preserved.',changed,comparisonVerified,components:['campaign-labels'],ask:false,portal:false,focused:true,productionDeployment:false,needsBrowser:false,timeIndependent:true,
+  suites:['scripts/test-campaign-label-patch.mjs','scripts/test-additive-receipt-recovery.mjs','scripts/test-change-test-plan.mjs'],commands:[
+   {label:'measurement-acceptance',args:['--test','--test-name-pattern=eligible public pages|existing Google tag|safe Google Ads UTMs|new typed Ads IDs|central call and WhatsApp|accepted enquiry|automatic protection|ordinary Unicode|campaign punctuation','scripts/test-measurement.mjs']},
+   {label:'protection-acceptance',args:['--test','--test-name-pattern=first-party consumer installs|late SDK|eligible commercial routes','scripts/test-protection-consumer.mjs','scripts/test-cheq-protection.mjs']},
+   {label:'receipt-labels',args:['--test','--test-name-pattern=receipt metadata retains|new typed campaign ID|receipt source is fixed','scripts/test-enrolment-receipt.mjs']},
+   {label:'release-syntax',args:['--check','scripts/release-public-template-protection.mjs']}
+  ],inputPrefixes:componentInputPrefixes,requiredReleaseEvidence:['Published collector and source-module bytes match; three captured portal modules changed only by exact metadata patches','Contained label/UTM/contact/protection checks; current private receiver deployment reconciled separately before claiming accepted production intake'],skipped:['Unchanged page build and device suites','Unchanged full receipt and return suites','Native account reconfiguration']
+ };
  const nativeFiles=new Set(['speech-site/deployment/contact-receipt-assets.mjs','speech-site/public/pinnacle-pages-scripts/speech-measurement.js','speech-site/deployment/book-attribution-assets.mjs','speech-site/scripts/build-book-attribution.mjs','speech-site/scripts/test-measurement.mjs','speech-site/scripts/release-public-template-protection.mjs','speech-site/scripts/change-test-plan.mjs','speech-site/scripts/test-change-test-plan.mjs']);
  if(comparisonVerified&&!forceFull&&!hasDeletions&&nativeAdSettingsVerified&&changed.every(file=>nativeFiles.has(file)))return {
   schemaVersion:2,scope:'runtime',reason:'Exact three-property advertising override removal; all other shared measurement source and assets unchanged.',changed,comparisonVerified,components:['native-ad-settings'],ask:false,portal:false,focused:true,productionDeployment:false,needsBrowser:false,timeIndependent:true,
@@ -156,18 +180,19 @@ export function runFocused(plan,{out=path.join(root,'speech-site/audits/change-t
  const result={plan,results,executed:results.filter(x=>!x.reused).length,reused:results.filter(x=>x.reused).length,remainingGates:plan.requiredReleaseEvidence};fs.writeFileSync(path.join(out,'result.json'),JSON.stringify(result,null,2)+'\n');return result;
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
- const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};const base=arg('base'),head=arg('head')||'HEAD';let files=[],comparisonVerified=false,diagnostic=null,policyExecutionChanged=false,hasDeletions=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false;
+ const arg=name=>{const i=process.argv.indexOf('--'+name);return i<0?null:process.argv[i+1];};const base=arg('base'),head=arg('head')||'HEAD';let files=[],comparisonVerified=false,diagnostic=null,policyExecutionChanged=false,hasDeletions=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false,campaignLabelsVerified=false;
  try{if(!base)throw Error('An explicit verified base is required');g(['rev-parse','--verify',base+'^{commit}']);g(['rev-parse','--verify',head+'^{commit}']);files=g(['diff','--no-renames','--name-only',base,head]).split('\n').filter(Boolean);hasDeletions=!!g(['diff','--no-renames','--diff-filter=D','--name-only',base,head]);comparisonVerified=true;
   const committed=(ref,file)=>execFileSync(git,['show',ref+':'+file],{cwd:root,encoding:'utf8',windowsHide:true,maxBuffer:64*1024*1024});
   commonCspVerified=commonCspDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
   publicProtectionVerified=publicProtectionDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
   nativeAdSettingsVerified=nativeAdSettingsDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
+  campaignLabelsVerified=campaignLabelsDiffIsSafe(files,{readBefore:file=>committed(base,file),readAfter:file=>committed(head,file)});
   if(files.includes('speech-site/deployment/protection-csp.mjs')){const diff=g(['diff','--unified=0',base,head,'--','speech-site/deployment/protection-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x)).join('\n');policyExecutionChanged=/nonce|sha256|script-src|connect-src|unsafe-|default-src|new Response|\.fetch\(/.test(diff);}
   // Only this exact, reviewed image-host addition may reuse unchanged page
   // builds. Any other CSP implementation delta keeps full acceptance.
   if(files.includes('speech-site/src/lib/ad-call-csp.mjs')){const delta=g(['diff','--unified=0',base,head,'--','speech-site/src/lib/ad-call-csp.mjs']).split('\n').filter(x=>/^[+-](?![+-])/.test(x));policyExecutionChanged=policyExecutionChanged||delta.length!==1||delta[0]!=='+    "https://www.googletagmanager.com",';}
  }catch(e){diagnostic=e.message;}
- const plan={...selectPlan(files,{comparisonVerified,policyExecutionChanged,commonCspVerified,publicProtectionVerified,nativeAdSettingsVerified,hasDeletions,forceFull:process.argv.includes('--full')}),base,head,diagnostic,tree:'committed comparison'};
+ const plan={...selectPlan(files,{comparisonVerified,policyExecutionChanged,commonCspVerified,publicProtectionVerified,nativeAdSettingsVerified,campaignLabelsVerified,hasDeletions,forceFull:process.argv.includes('--full')}),base,head,diagnostic,tree:'committed comparison'};
  const out=arg('out')||path.join(root,'speech-site/audits/change-testing');fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'plan.json'),JSON.stringify(plan,null,2)+'\n');
  if(process.env.GITHUB_OUTPUT)fs.appendFileSync(process.env.GITHUB_OUTPUT,Object.entries({ask:plan.ask,portal:plan.portal,focused:plan.focused,scope:plan.scope,needs_browser:!!plan.needsBrowser,selection:JSON.stringify(plan)}).map(([k,v])=>k+'='+v+'\n').join(''));
  if(process.argv.includes('--run')&&plan.focused){const mismatch=executionMismatch({head:g(['rev-parse',head+'^{tree}']),current:g(['rev-parse','HEAD^{tree}']),dirty:!!g(['status','--porcelain','--untracked-files=normal'])});if(mismatch)throw Error(mismatch);}

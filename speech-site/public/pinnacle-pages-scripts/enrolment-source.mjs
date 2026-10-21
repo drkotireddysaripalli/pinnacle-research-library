@@ -13,7 +13,7 @@ export const KNOWN_GOOGLE_ADS_CAMPAIGN_IDS=Object.freeze(["15340172547","1534277
 export function safeAcquisitionValue(value,key){
  if(typeof value!=='string'||!ACQUISITION_KEYS.includes(key))return null;
  value=value.trim();const click=CLICK_KEYS.has(key);
- if(!value||value.length>(click?256:128)||!(click?/^[A-Za-z0-9._~-]+$/:/^[A-Za-z0-9][A-Za-z0-9._~ -]*$/).test(value))return null;
+ if(!value||value.length>(click?256:128)||!(click?/^[A-Za-z0-9._~-]+$/:key==='utm_id'?/^[A-Za-z0-9][A-Za-z0-9._~ -]*$/:/^(?![A-Za-z][A-Za-z0-9+.-]*:\/\/)(?![Ww][Ww][Ww]\.)(?![A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+\/)[\p{L}\p{N}][\p{L}\p{M}\p{N} ._~:()&,+\/'’–—-]*$/u).test(value))return null;
  if(key==='utm_id'&&/^[1-9][0-9]{0,19}$/.test(value))return value;
  const words=value.replace(/[._~-]/g,' '),parts=value.match(/(?:^|[^A-Za-z0-9])\+?\d[\d ().-]*\d(?=$|[^A-Za-z0-9])/g)||[];
  if(/@|%[0-9a-f]{2}/i.test(value)||parts.some(p=>p.replace(/\D/g,'').length>=10)||(/^[\d ().+-]+$/.test(value)&&value.replace(/\D/g,'').length>=7)||/\b(?:private|secret|password|token)\b/i.test(words)||/\b(?:my|our)\b.*\b(?:child|son|daughter|patient)\b/i.test(words)||/\b(?:child|patient)\s+(?:name|id|details?|records?)\b/i.test(words)||/\b(?:email|phone|mobile|diagnosis|symptoms|report)\s+(?:address|number|name|id|details?|records?|result|value)\b/i.test(words))return null;
