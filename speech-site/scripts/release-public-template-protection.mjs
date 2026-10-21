@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {fingerprint} from './change-test-plan.mjs';
 
 const [phase, directory, baseline='origin/main']=process.argv.slice(2).filter(arg=>!arg.startsWith('--'));
 const contactScript=process.argv.includes('--contact-script'),sharedScript=contactScript||process.argv.includes('--shared-script');
@@ -77,7 +78,23 @@ if(phase==='prepare'){
   assert.equal(receipt.phase,'prepared');unchanged(await snapshot(),before);
   const commit=g(['rev-parse','HEAD']);assert.equal(g(['ls-remote','origin','refs/heads/main']).split(/\s/)[0],commit,'Merge the exact source to canonical main before upload');
   assert.equal(g(['diff','HEAD','--','speech-site/deployment','speech-site/scripts']),'','Tracked release inputs must be committed');
-  const runs=JSON.parse(execFileSync('gh',['run','list','--workflow','portal-quality.yml','--event','push','--commit',commit,'--json','databaseId,headSha,status,conclusion,url'],{cwd:repo,encoding:'utf8'}));const ci=runs.find(r=>r.headSha===commit&&r.status==='completed'&&r.conclusion==='success');assert(ci,'Exact main source CI must pass before upload');
+  const runs=JSON.parse(execFileSync('gh',['run','list','--workflow','portal-quality.yml','--event','push','--commit',commit,'--json','databaseId,headSha,status,conclusion,url'],{cwd:repo,encoding:'utf8'}));let ci=runs.find(r=>r.headSha===commit&&r.status==='completed'&&r.conclusion==='success');
+  const localIndex=process.argv.indexOf('--local-acceptance');
+  if(localIndex!==-1){
+   assert(sharedScript,'Local acceptance is scoped to this shared-script repair');
+   const file=path.resolve(process.argv[localIndex+1]||''),proof=JSON.parse(await fs.readFile(file,'utf8'));
+   assert.deepEqual(proof.plan.components,['native-ad-settings']);assert.equal(proof.plan.scope,'runtime');assert(!proof.plan.portal&&!proof.plan.ask);
+   const commands=[['--test','scripts/test-change-test-plan.mjs'],['--test','--test-name-pattern=eligible public pages|existing Google tag','scripts/test-measurement.mjs'],['--check','scripts/release-public-template-protection.mjs']];
+   assert.equal(proof.results.length,commands.length);
+   for(const command of commands){
+    const matches=proof.results.filter(record=>JSON.stringify(record.command)===JSON.stringify(command));assert.equal(matches.length,1);
+    const record=matches[0];assert.equal(record.source,commit);assert.equal(record.status,'passed');assert.equal(record.exitCode,0);assert(record.cacheable&&!record.reused);assert.equal(record.context.node,process.version);
+    assert.equal(sha(await fs.readFile(record.log)),record.logSHA256);
+    assert.equal(fingerprint({files:record.inputs,readFile:f=>gitBytes(['show',commit+':'+f]),command,context:record.context}),record.key,'Current committed input fingerprint');
+   }
+   ci={type:'verified-local-acceptance',headSha:commit,status:'completed',conclusion:'success',evidence:file,sha256:sha(await fs.readFile(file)),remoteStatus:runs};
+  }
+  assert(ci,'Exact main source acceptance must pass before upload');
   let candidate=await fs.readFile(path.join(site,'deployment',sourceModuleName));assert.equal(sha(candidate),sha(gitBytes(['show',commit+':speech-site/deployment/'+sourceModuleName])),'Generated candidate differs from commit');
   const entries=await Promise.all(Object.keys(receipt.originalHashes).map(async name=>({name,bytes:await fs.readFile(path.join(out,'captured',name))})));
   for(const m of entries)assert.equal(sha(m.bytes),receipt.originalHashes[m.name],'Captured module changed: '+m.name);
