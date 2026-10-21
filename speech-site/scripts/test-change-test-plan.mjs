@@ -110,3 +110,14 @@ test('native advertising shortcut accepts only the exact source and generated al
  assert.deepEqual(selectPlan(files,{nativeAdSettingsVerified:true}).components,['native-ad-settings']);
  assert.equal(selectPlan([...files,'speech-site/package-lock.json'],{nativeAdSettingsVerified:true}).scope,'full');
 });
+
+test('contact packaged measurement shortcut preserves all other asset records and module code',()=>{
+ const source='speech-site/public/pinnacle-pages-scripts/speech-measurement.js',asset='speech-site/deployment/contact-receipt-assets.mjs';
+ const original="a,ad_personalization:'denied';b,ad_personalization:'denied';c,allow_google_signals:false,allow_ad_personalization_signals:false";
+ const body=original.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false','');
+ const module=value=>'// generated\nexport const contactReceiptAssetSources='+JSON.stringify({'/pinnacle-pages-scripts/speech-measurement.js':{body:value,sha256:createHash('sha256').update(value).digest('hex')},'/other.js':{body:'keep'}})+';\n';
+ const readBefore=file=>file===source?body:module(original),readAfter=file=>file===source?body:module(body);
+ assert(nativeAdSettingsDiffIsSafe([asset],{readBefore,readAfter}));
+ assert(!nativeAdSettingsDiffIsSafe([asset,source,'speech-site/deployment/book-attribution-assets.mjs'],{readBefore,readAfter}));
+ for(const mutated of [module(body)+'evil();',module(body).replace('keep','change')])assert(!nativeAdSettingsDiffIsSafe([asset],{readBefore,readAfter:file=>file===asset?mutated:body}));
+});

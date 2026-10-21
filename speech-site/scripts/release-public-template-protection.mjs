@@ -3,14 +3,17 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
+import {fingerprint} from './change-test-plan.mjs';
 
 const [phase, directory, baseline='origin/main']=process.argv.slice(2).filter(arg=>!arg.startsWith('--'));
-const sharedScript=process.argv.includes('--shared-script');
+const contactScript=process.argv.includes('--contact-script'),sharedScript=contactScript||process.argv.includes('--shared-script');
 assert(['prepare','upload','promote','verify','rollback'].includes(phase)&&directory,'Pass phase and evidence directory');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),out=path.resolve(directory);
-const worker=sharedScript?'pinnacle-verify-route':'pinnacle-legacy-social-metadata',moduleName=sharedScript?'book-attribution-assets.mjs':'public-template-protection.runtime.mjs',entryName='public-template-protection-entry.mjs';
+const worker=sharedScript?'pinnacle-verify-route':'pinnacle-legacy-social-metadata',moduleName=contactScript?'shared-clearance-runtime.mjs':sharedScript?'book-attribution-assets.mjs':'public-template-protection.runtime.mjs',entryName='public-template-protection-entry.mjs';
+const sourceModuleName=contactScript?'contact-receipt-assets.mjs':moduleName;
 const account='862998def1cd610fdb86b8e5c1d6ed4d',zone='8b13f18e0589996b5d6512552372b434';
 const protectedNames=['pinnacle-verify-route','pinnacle-legacy-social-metadata','pinnacle-root-sitemap','materials-mobile-desktop-tracker','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-ask','pinnacle-google-ads-call-measurement','pinnacle-helpline','pbn-planetscale'].filter(name=>name!==worker);
 const g=args=>execFileSync('git',args,{cwd:repo,encoding:'utf8'}).trim();
@@ -45,12 +48,22 @@ function unchanged(now,before,expected=before.workers[worker]){
  assert.deepEqual(now.routes,before.routes,'Route drift');assert.deepEqual(stable(now.settings),stable(before.settings),'Settings or binding drift');assert.deepEqual(now.assets,before.assets,'Asset runtime drift');
  assert.deepEqual(now.workers[worker],expected,'Serving Worker version drift');for(const name of protectedNames)assert.deepEqual(now.workers[name],before.workers[name],name+' version drift');
 }
+function contactRecord(bytes){return JSON.parse(bytes.toString().match(/export const contactReceiptAssetSources=(\{[^\n]+\});/)?.[1]||'null')['/pinnacle-pages-scripts/speech-measurement.js'];}
+function patchCapturedContact(bytes,previous,next){
+ const text=bytes.toString(),pattern=/("\/pinnacle-pages-scripts\/speech-measurement\.js":\{body:)(`(?:\\[\s\S]|[^`\\])*`)(,sha256:")([a-f0-9]{64})("\})/g;
+ const matches=[...text.matchAll(pattern)];assert.equal(matches.length,1,'One compiled contact measurement record required');
+ const m=matches[0];assert.equal(vm.runInNewContext(m[2]),previous.body,'Captured compiled measurement preimage');assert.equal(m[4],previous.sha256);
+ const literal=m[2].replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false','');
+ assert.equal(vm.runInNewContext(literal),next.body,'Only authorized properties removed in compiled string');assert.equal(sha(next.body),next.sha256);
+ return Buffer.from(text.slice(0,m.index)+m[1]+literal+m[3]+next.sha256+m[5]+text.slice(m.index+m[0].length));
+}
 await fs.mkdir(out,{recursive:true});
 if(phase==='prepare'){
  assert(!(await fs.stat(path.join(out,'release.json')).catch(()=>null)),'Resume the existing release receipt');
  const before=await snapshot(),captured=await modules();
  for(const pattern of sharedScript?['www.pinnacleblooms.org/pinnacle-pages-scripts/*','www.pinnacleblooms.org/books/*']:['www.pinnacleblooms.org/m/*','www.pinnacleblooms.org/skills/*'])assert(before.routes.some(r=>r.pattern===pattern&&r.script===worker),'Affected route belongs to another Worker: '+pattern);
- if(sharedScript)assert.equal(sha(captured.entries.find(m=>m.name===moduleName)?.bytes||''),sha(gitBytes(['show',baseline+':speech-site/deployment/'+moduleName])),'Live shared scripts differ from canonical baseline');
+ if(contactScript){const original=contactRecord(gitBytes(['show',baseline+':speech-site/deployment/'+sourceModuleName]));const bytes=captured.entries.find(m=>m.name===moduleName)?.bytes;assert(bytes);assert(patchCapturedContact(bytes,original,{body:original.body.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''),sha256:sha(original.body.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''))}));}
+ else if(sharedScript)assert.equal(sha(captured.entries.find(m=>m.name===moduleName)?.bytes||''),sha(gitBytes(['show',baseline+':speech-site/deployment/'+sourceModuleName])),'Live shared scripts differ from canonical baseline');
  else assert(!captured.entries.some(m=>[moduleName,entryName].includes(m.name)),'Protection wrapper already exists; reconcile the existing release');
  await save('before.json',before);await fs.mkdir(path.join(out,'captured'),{recursive:true});
  for(const m of captured.entries){const file=path.join(out,'captured',m.name);await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file,m.bytes,{mode:0o600});}
@@ -58,23 +71,44 @@ if(phase==='prepare'){
 }else{
  const receipt=await read('release.json'),before=await read('before.json');
  assert.equal(receipt.sharedScript??false,sharedScript,'Resume with the same release scope');
+ assert(receipt.changedModules.includes(moduleName),'Resume the same asset module');
  if(phase==='rollback'){
   assert(receipt.deployment,'Nothing has been promoted');unchanged(await snapshot(),before,[{version_id:receipt.version,percentage:100}]);const result=await api(base(worker)+'/deployments','POST',{strategy:'percentage',versions:receipt.rollback});receipt.rollbackDeployment=result.id;receipt.phase='rolled-back';await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,deployment:result.id}));
  }else if(phase==='upload'){
   assert.equal(receipt.phase,'prepared');unchanged(await snapshot(),before);
   const commit=g(['rev-parse','HEAD']);assert.equal(g(['ls-remote','origin','refs/heads/main']).split(/\s/)[0],commit,'Merge the exact source to canonical main before upload');
   assert.equal(g(['diff','HEAD','--','speech-site/deployment','speech-site/scripts']),'','Tracked release inputs must be committed');
-  const runs=JSON.parse(execFileSync('gh',['run','list','--workflow','portal-quality.yml','--event','push','--commit',commit,'--json','databaseId,headSha,status,conclusion,url'],{cwd:repo,encoding:'utf8'}));const ci=runs.find(r=>r.headSha===commit&&r.status==='completed'&&r.conclusion==='success');assert(ci,'Exact main source CI must pass before upload');
-  const candidate=await fs.readFile(path.join(site,'deployment',moduleName));assert.equal(sha(candidate),sha(gitBytes(['show',commit+':speech-site/deployment/'+moduleName])),'Generated candidate differs from commit');
+  const runs=JSON.parse(execFileSync('gh',['run','list','--workflow','portal-quality.yml','--event','push','--commit',commit,'--json','databaseId,headSha,status,conclusion,url'],{cwd:repo,encoding:'utf8'}));let ci=runs.find(r=>r.headSha===commit&&r.status==='completed'&&r.conclusion==='success');
+  const localIndex=process.argv.indexOf('--local-acceptance');
+  if(localIndex!==-1){
+   assert(sharedScript,'Local acceptance is scoped to this shared-script repair');
+   const file=path.resolve(process.argv[localIndex+1]||''),proof=JSON.parse(await fs.readFile(file,'utf8'));
+   assert.deepEqual(proof.plan.components,['native-ad-settings']);assert.equal(proof.plan.scope,'runtime');assert(!proof.plan.portal&&!proof.plan.ask);
+   const commands=[['--test','scripts/test-change-test-plan.mjs'],['--test','--test-name-pattern=eligible public pages|existing Google tag','scripts/test-measurement.mjs'],['--check','scripts/release-public-template-protection.mjs']];
+   assert.equal(proof.results.length,commands.length);
+   for(const command of commands){
+    const matches=proof.results.filter(record=>JSON.stringify(record.command)===JSON.stringify(command));assert.equal(matches.length,1);
+    const record=matches[0];assert.equal(record.source,commit);assert.equal(record.status,'passed');assert.equal(record.exitCode,0);assert(record.cacheable&&!record.reused);assert.equal(record.context.node,process.version);
+    assert.equal(sha(await fs.readFile(record.log)),record.logSHA256);
+    assert.equal(fingerprint({files:record.inputs,readFile:f=>gitBytes(['show',commit+':'+f]),command,context:record.context}),record.key,'Current committed input fingerprint');
+   }
+   ci={type:'verified-local-acceptance',headSha:commit,status:'completed',conclusion:'success',evidence:file,sha256:sha(await fs.readFile(file)),remoteStatus:runs};
+  }
+  assert(ci,'Exact main source acceptance must pass before upload');
+  let candidate=await fs.readFile(path.join(site,'deployment',sourceModuleName));assert.equal(sha(candidate),sha(gitBytes(['show',commit+':speech-site/deployment/'+sourceModuleName])),'Generated candidate differs from commit');
   const entries=await Promise.all(Object.keys(receipt.originalHashes).map(async name=>({name,bytes:await fs.readFile(path.join(out,'captured',name))})));
   for(const m of entries)assert.equal(sha(m.bytes),receipt.originalHashes[m.name],'Captured module changed: '+m.name);
   if(sharedScript){
    const current=entries.find(m=>m.name===moduleName);assert(current,'Shared script module absent');
-   const parse=b=>JSON.parse(b.toString().match(/export const attributionScripts=(\{[^\n]+\});/)?.[1]||'null');const previous=parse(current.bytes),next=parse(candidate);assert(previous&&next);assert.deepEqual(Object.keys(next),Object.keys(previous));
-   for(const key of Object.keys(previous))if(['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js'].includes(key)){
-    assert.equal(next[key].text,previous[key].text.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''));assert.equal(next[key].sha256,sha(next[key].text));
+   const pattern=contactScript?/export const contactReceiptAssetSources=(\{[^\n]+\});/:/export const attributionScripts=(\{[^\n]+\});/;
+   const exportName=contactScript?'contactReceiptAssetSources':'attributionScripts',bodyKey=contactScript?'body':'text';
+   const parse=b=>JSON.parse(b.toString().match(pattern)?.[1]||'null');const originalSource=contactScript?gitBytes(['show',receipt.baseline+':speech-site/deployment/'+sourceModuleName]):current.bytes;const previous=parse(originalSource),next=parse(candidate);assert(previous&&next);assert.deepEqual(Object.keys(next),Object.keys(previous));
+   for(const key of Object.keys(previous))if(['/pinnacle-pages-scripts/speech-measurement.js',...(!contactScript?['/books/resources/measurement-v1.js']:[])].includes(key)){
+    const body=previous[key][bodyKey].replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false','');
+    assert.deepEqual(next[key],{...previous[key],[bodyKey]:body,sha256:sha(body)});
    }else assert.deepEqual(next[key],previous[key],'Unrelated shared asset changed: '+key);
-   assert.equal(candidate.toString(),current.bytes.toString().replace(/export const attributionScripts=(\{[^\n]+\});/,'export const attributionScripts='+JSON.stringify(next)+';'),'Unrelated generated module code changed');
+   assert.equal(candidate.toString(),originalSource.toString().replace(pattern,'export const '+exportName+'='+JSON.stringify(next)+';'),'Unrelated generated module code changed');
+   if(contactScript)candidate=patchCapturedContact(current.bytes,contactRecord(originalSource),contactRecord(candidate));
    current.bytes=candidate;
   }else{
    const entry=Buffer.from("import original from './"+receipt.entry+"';export * from './"+receipt.entry+"';import {withPublicTemplateProtection} from './"+moduleName+"';export default withPublicTemplateProtection(original);\n");
