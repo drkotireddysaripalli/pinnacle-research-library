@@ -322,3 +322,24 @@ test('paid enquiry navigation ignores optional metadata while retaining function
  assert.equal(h.events().filter(e=>e[1]==='enquiry_link_click').length,1);
  const ambiguous=harness();ambiguous.click('hero-assessment',origin+enrolment+'?centre=suchitra&centre=other&utm_source=google');assert.equal(ambiguous.events().filter(e=>e[1]==='enquiry_link_click').length,0);
 });
+
+test('ordinary Unicode and punctuated campaign labels survive browser and private validation',()=>{
+ for(const label of ['Pinnacle: Hyderabad','పిన్నాకిల్ హైదరాబాద్',"Pinnacle (Hyderabad) / Parents’ Support"]){
+  const query=new URLSearchParams({utm_source:'google',utm_medium:'cpc',utm_campaign:label,utm_term:'speech therapy',utm_content:'Call: Hyderabad',utm_id:'31415926535',gclid:'CLICK_ABC123'});
+  const h=harness({url:origin+enrolment+'?'+query});
+  const acquisition=JSON.parse(JSON.stringify(h.window.pinnacleEnquirySource()));
+  assert.equal(acquisition.fields.utm_campaign,label);assert.equal(acquisition.fields.utm_content,'Call: Hyderabad');
+  assert.equal(acquisition.fields.utm_id,'31415926535');assert.equal(acquisition.fields.gclid,'CLICK_ABC123');
+  assert.equal(command(h,'config','G-2BYLRLFRDJ')[2].campaign_name,label);
+  assert.deepEqual(normaliseAcquisition(acquisition),acquisition);
+ }
+});
+
+test('campaign punctuation never permits raw URLs or changes click-ID validation',()=>{
+ for(const value of ['https://example.com/path','www.example.com/path','example.com/path']){
+  const h=harness({url:origin+enrolment+'?utm_source=google&utm_medium=cpc&utm_campaign='+encodeURIComponent(value)});
+  assert.equal(h.window.pinnacleEnquirySource().fields.utm_campaign,undefined);
+ }
+ const h=harness({url:origin+enrolment+'?utm_source=google&utm_medium=cpc&gclid=bad%3Aclick'});
+ assert.equal(h.window.pinnacleEnquirySource().fields.gclid,undefined);
+});

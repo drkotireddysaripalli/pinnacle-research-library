@@ -130,3 +130,11 @@ test('narrow private receiver candidate preserves legacy response and notificati
   assert.equal(await (await send(toLegacyEnrolment(publicPayload))).text(),'true');assert.equal(calls,2);
  }finally{f.close();}
 });
+
+test('receipt metadata retains ordinary Unicode and punctuation labels',()=>{
+ for(const label of ['Pinnacle: Hyderabad','పిన్నాకిల్ హైదరాబాద్']){
+  const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:label,utm_id:'31415926535'}};
+  const input=toReceiptEnrolment(toLegacyEnrolment(publicPayload),publicPayload.requestId,{...publicPayload.source,acquisition});
+  assert.deepEqual(parseReceiptEnrolment(input,publicPayload.requestId).source.acquisition,acquisition);
+ }
+});
