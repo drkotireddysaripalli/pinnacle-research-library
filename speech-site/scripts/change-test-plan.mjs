@@ -45,6 +45,16 @@ export function publicProtectionDiffIsSafe(files,{readBefore,readAfter}){
 // This exception accepts only the founder-authorized three-property removal.
 export function nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}){
  const source='speech-site/public/pinnacle-pages-scripts/speech-measurement.js',asset='speech-site/deployment/book-attribution-assets.mjs';
+ const contact='speech-site/deployment/contact-receipt-assets.mjs';
+ if(files.includes(contact)&&!files.includes(source)&&!files.includes(asset))try{
+  const before=String(readBefore(contact)),after=String(readAfter(contact)),pattern=/export const contactReceiptAssetSources=(\{[^\n]+\});/;
+  const old=JSON.parse(before.match(pattern)?.[1]||'null'),next=JSON.parse(after.match(pattern)?.[1]||'null'),key='/pinnacle-pages-scripts/speech-measurement.js';
+  if(!old||!next)return false;
+  const original=old[key].body,body=original.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false','');
+  if(original.split(",ad_personalization:'denied'").length!==3||original.split(',allow_google_signals:false,allow_ad_personalization_signals:false').length!==2||body!==String(readAfter(source)))return false;
+  old[key]={...old[key],body,sha256:hash(body)};
+  return JSON.stringify(old)===JSON.stringify(next)&&before.replace(pattern,'export const contactReceiptAssetSources='+JSON.stringify(old)+';')===after;
+ }catch{return false;}
  if(!files.includes(source)||!files.includes(asset))return false;
  try{
   const before=String(readBefore(source)),after=String(readAfter(source));
@@ -61,7 +71,7 @@ export function nativeAdSettingsDiffIsSafe(files,{readBefore,readAfter}){
 }
 export function selectPlan(files,{comparisonVerified=true,policyExecutionChanged=false,commonCspVerified=false,publicProtectionVerified=false,nativeAdSettingsVerified=false,forceFull=false,hasDeletions=false}={}){
  const changed=[...new Set(files)].sort();let scope='full',reason='Unmapped/runtime/configuration change: keep the existing full portal gates.';
- const nativeFiles=new Set(['speech-site/public/pinnacle-pages-scripts/speech-measurement.js','speech-site/deployment/book-attribution-assets.mjs','speech-site/scripts/build-book-attribution.mjs','speech-site/scripts/test-measurement.mjs','speech-site/scripts/release-public-template-protection.mjs','speech-site/scripts/change-test-plan.mjs','speech-site/scripts/test-change-test-plan.mjs']);
+ const nativeFiles=new Set(['speech-site/deployment/contact-receipt-assets.mjs','speech-site/public/pinnacle-pages-scripts/speech-measurement.js','speech-site/deployment/book-attribution-assets.mjs','speech-site/scripts/build-book-attribution.mjs','speech-site/scripts/test-measurement.mjs','speech-site/scripts/release-public-template-protection.mjs','speech-site/scripts/change-test-plan.mjs','speech-site/scripts/test-change-test-plan.mjs']);
  if(comparisonVerified&&!forceFull&&!hasDeletions&&nativeAdSettingsVerified&&changed.every(file=>nativeFiles.has(file)))return {
   schemaVersion:2,scope:'runtime',reason:'Exact three-property advertising override removal; all other shared measurement source and assets unchanged.',changed,comparisonVerified,components:['native-ad-settings'],ask:false,portal:false,focused:true,productionDeployment:false,needsBrowser:false,timeIndependent:true,
   suites:['scripts/test-change-test-plan.mjs'],commands:[{label:'native-ad-initialization',args:['--test','--test-name-pattern=eligible public pages|existing Google tag','scripts/test-measurement.mjs']},{label:'shared-release-syntax',args:['--check','scripts/release-public-template-protection.mjs']}],inputPrefixes:componentInputPrefixes,

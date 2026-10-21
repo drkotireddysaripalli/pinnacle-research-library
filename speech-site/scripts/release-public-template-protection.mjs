@@ -7,10 +7,10 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 
 const [phase, directory, baseline='origin/main']=process.argv.slice(2).filter(arg=>!arg.startsWith('--'));
-const sharedScript=process.argv.includes('--shared-script');
+const contactScript=process.argv.includes('--contact-script'),sharedScript=contactScript||process.argv.includes('--shared-script');
 assert(['prepare','upload','promote','verify','rollback'].includes(phase)&&directory,'Pass phase and evidence directory');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),out=path.resolve(directory);
-const worker=sharedScript?'pinnacle-verify-route':'pinnacle-legacy-social-metadata',moduleName=sharedScript?'book-attribution-assets.mjs':'public-template-protection.runtime.mjs',entryName='public-template-protection-entry.mjs';
+const worker=sharedScript?'pinnacle-verify-route':'pinnacle-legacy-social-metadata',moduleName=contactScript?'contact-receipt-assets.mjs':sharedScript?'book-attribution-assets.mjs':'public-template-protection.runtime.mjs',entryName='public-template-protection-entry.mjs';
 const account='862998def1cd610fdb86b8e5c1d6ed4d',zone='8b13f18e0589996b5d6512552372b434';
 const protectedNames=['pinnacle-verify-route','pinnacle-legacy-social-metadata','pinnacle-root-sitemap','materials-mobile-desktop-tracker','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-ask','pinnacle-google-ads-call-measurement','pinnacle-helpline','pbn-planetscale'].filter(name=>name!==worker);
 const g=args=>execFileSync('git',args,{cwd:repo,encoding:'utf8'}).trim();
@@ -58,6 +58,7 @@ if(phase==='prepare'){
 }else{
  const receipt=await read('release.json'),before=await read('before.json');
  assert.equal(receipt.sharedScript??false,sharedScript,'Resume with the same release scope');
+ assert(receipt.changedModules.includes(moduleName),'Resume the same asset module');
  if(phase==='rollback'){
   assert(receipt.deployment,'Nothing has been promoted');unchanged(await snapshot(),before,[{version_id:receipt.version,percentage:100}]);const result=await api(base(worker)+'/deployments','POST',{strategy:'percentage',versions:receipt.rollback});receipt.rollbackDeployment=result.id;receipt.phase='rolled-back';await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,deployment:result.id}));
  }else if(phase==='upload'){
@@ -70,11 +71,14 @@ if(phase==='prepare'){
   for(const m of entries)assert.equal(sha(m.bytes),receipt.originalHashes[m.name],'Captured module changed: '+m.name);
   if(sharedScript){
    const current=entries.find(m=>m.name===moduleName);assert(current,'Shared script module absent');
-   const parse=b=>JSON.parse(b.toString().match(/export const attributionScripts=(\{[^\n]+\});/)?.[1]||'null');const previous=parse(current.bytes),next=parse(candidate);assert(previous&&next);assert.deepEqual(Object.keys(next),Object.keys(previous));
-   for(const key of Object.keys(previous))if(['/pinnacle-pages-scripts/speech-measurement.js','/books/resources/measurement-v1.js'].includes(key)){
-    assert.equal(next[key].text,previous[key].text.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''));assert.equal(next[key].sha256,sha(next[key].text));
+   const pattern=contactScript?/export const contactReceiptAssetSources=(\{[^\n]+\});/:/export const attributionScripts=(\{[^\n]+\});/;
+   const exportName=contactScript?'contactReceiptAssetSources':'attributionScripts',bodyKey=contactScript?'body':'text';
+   const parse=b=>JSON.parse(b.toString().match(pattern)?.[1]||'null');const previous=parse(current.bytes),next=parse(candidate);assert(previous&&next);assert.deepEqual(Object.keys(next),Object.keys(previous));
+   for(const key of Object.keys(previous))if(['/pinnacle-pages-scripts/speech-measurement.js',...(!contactScript?['/books/resources/measurement-v1.js']:[])].includes(key)){
+    const body=previous[key][bodyKey].replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false','');
+    assert.deepEqual(next[key],{...previous[key],[bodyKey]:body,sha256:sha(body)});
    }else assert.deepEqual(next[key],previous[key],'Unrelated shared asset changed: '+key);
-   assert.equal(candidate.toString(),current.bytes.toString().replace(/export const attributionScripts=(\{[^\n]+\});/,'export const attributionScripts='+JSON.stringify(next)+';'),'Unrelated generated module code changed');
+   assert.equal(candidate.toString(),current.bytes.toString().replace(pattern,'export const '+exportName+'='+JSON.stringify(next)+';'),'Unrelated generated module code changed');
    current.bytes=candidate;
   }else{
    const entry=Buffer.from("import original from './"+receipt.entry+"';export * from './"+receipt.entry+"';import {withPublicTemplateProtection} from './"+moduleName+"';export default withPublicTemplateProtection(original);\n");
