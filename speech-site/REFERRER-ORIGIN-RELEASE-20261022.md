@@ -36,3 +36,11 @@ Backward-compatible private code goes first; public assets go second. Roll back 
 ## Not claimed
 
 Source READY is not a deployed release. An observed host is not proof of paid attribution, genuine activity or a received native conversion. Historical 10 October enquiries remain unclassified; this change cannot recreate missing evidence. PR152's classification remains independently client-observed or unknown.
+
+## Current-runtime publication
+
+Use `scripts/prepare-referrer-origin.mjs` with the verified PR152 artifact folder. It copies the full verified module union, refreshes the deployment versions from that release receipt and applies exact bounded function/asset substitutions. It refuses an unknown patch seam. The retained receiver index must remain byte-identical, including the restored invoice function and staff exports.
+
+`scripts/release-asset-regressions.mjs <phase> <folder> --referrer-origin` runs prepare, check, upload, promote and verify against those checkpoints. The upload requires clean canonical main and matching source/test/candidate hashes. Public HTTP acceptance uses `scripts/verify-referrer-origin-live.mjs <folder>`. Keep `acceptance.json` as the immutable execution proof and use a distinct `completion.json` for the final summary, including on case-insensitive macOS volumes.
+
+The actual compiled-candidate verifier exercises the current receipt helpers and public handlers with local fixtures. It must prove origin-only helpline handoff as well as the retained campaign and QA behavior. Live acceptance only reads public assets/pages; it creates no production receipt or native event.
