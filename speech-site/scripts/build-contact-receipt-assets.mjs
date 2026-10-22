@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import './refresh-enquiry-validation.mjs';
+import './refresh-enquiry-referrer.mjs';
 
 const names = [
   'contact-receipt.js',
@@ -9,6 +10,7 @@ const names = [
   'enrolment-api.mjs',
   'enrolment-source.mjs',
   'enquiry-validation.mjs',
+  'enquiry-referrer.mjs',
   'speech-measurement.js',
   'protection-consumer.mjs'
 ];

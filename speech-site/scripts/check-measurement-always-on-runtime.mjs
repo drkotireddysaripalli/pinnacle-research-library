@@ -40,6 +40,6 @@ for(const name of [
  'deployment/public-ad-call.mjs'
 ]){const bytes=await fs.readFile(path.join(root,name));hashes[name]=createHash('sha256').update(bytes).digest('hex');}
 const collector=await fs.readFile(path.join(root,'public/pinnacle-pages-scripts/speech-measurement.js'),'utf8');
-for(const required of ["measurement_mode:'automatic'","analytics_storage:'granted'","ad_storage:'granted'","ad_user_data:'granted'","ad_personalization:'denied'","gtag('set','ads_data_redaction',false)"])assert(collector.includes(required),required);
-for(const unwanted of ['navigator.globalPrivacyControl','data-measurement-choice','website-preferences'])assert(!collector.includes(unwanted),unwanted);
+for(const required of ["measurement_mode:'automatic'","analytics_storage:'granted'","ad_storage:'granted'","ad_user_data:'granted'","gtag('set','ads_data_redaction',false)"])assert(collector.includes(required),required);
+for(const unwanted of ['navigator.globalPrivacyControl','data-measurement-choice','website-preferences','ad_personalization','allow_google_signals','allow_ad_personalization_signals'])assert(!collector.includes(unwanted),unwanted);
 console.log(JSON.stringify({passed:true,scannedFiles:files.length,violations,hashes},null,2));

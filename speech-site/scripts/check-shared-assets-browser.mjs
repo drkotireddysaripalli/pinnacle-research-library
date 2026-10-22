@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {chromium, firefox, webkit} from '@playwright/test';
 import {assets, rewrites} from '../deployment/shared-assets-repair-assets.mjs';
+import {transform} from 'esbuild';
 
 const out = 'outputs/semrush-assets-20261012';
 const origin = 'https://www.pinnacleblooms.org';
@@ -9,9 +10,11 @@ const callPath = '/pinnacle-pages-assets/google-ads-call-consent.FqeWzaS9.mjs';
 const legacyPath = '/bundles/newmirracleportal?v=42';
 await fs.mkdir(out, {recursive: true});
 
-// Compare the reviewed automatic source with the deterministic minified asset
-// that replaces the retired consent-gated URL in public HTML.
+// Compare current automatic source with its deterministically minified fixture.
+// Historical pinned assets are not the active call module and remain unchanged.
 const call = await fs.readFile('src/lib/google-ads-call-consent.mjs', 'utf8');
+const minifiedCall = (await transform(call,{loader:'js',target:'es2018',minify:true,keepNames:true,legalComments:'none'})).code;
+const currentFixturePath='/pinnacle-pages-scripts/fixture-current-call.min.mjs';
 const legacy = await fs.readFile('deployment/shared-asset-sources/newmirracleportal-v42.js', 'utf8');
 const results = [];
 
@@ -25,7 +28,7 @@ for (const [engine, launcher] of Object.entries(process.platform === 'win32' ? {
         const requests = [];
         const errors = [];
         const errorDetails = [];
-        const script = candidate ? rewrites[callPath] : callPath;
+        const script = candidate ? currentFixturePath : callPath;
         const classic = candidate ? rewrites[legacyPath] : legacyPath;
         const html = `<!doctype html><html><head><title>Isolated shared asset journey fixture</title><script>var newsId=null;</script></head><body><main><h1>Isolated enquiry fixture</h1><a id="central" href="tel:+919100181181">Call 9100 181 181</a><a id="branch" href="tel:+914012345678">Branch alternative</a><a id="enquiry" href="/enroll-autism-speech-aba-therapies-india?centre=suchitra&service=speech">Request a callback</a></main><script src="${classic}" defer></script><script src="${script}" type="module"></script></body></html>`;
 
@@ -41,6 +44,7 @@ for (const [engine, launcher] of Object.entries(process.platform === 'win32' ? {
           }
           if (url.pathname.startsWith('/top-speech-therapy-center-india-proven-improvement-rate') || url.pathname.startsWith('/enroll-autism-')) return route.fulfill({status: 200, contentType: 'text/html', body: html});
           if (['/pinnacle-pages-scripts/protection-consumer.mjs','/pinnacle-pages-scripts/cheq-protection.js'].includes(url.pathname)) return route.fulfill({status:200,contentType:'text/javascript',body:await fs.readFile('public'+url.pathname)});
+          if (url.pathname === currentFixturePath) return route.fulfill({status:200,contentType:'text/javascript',body:minifiedCall});
           if (assets[url.pathname]) return route.fulfill({status: 200, contentType: 'text/javascript', body: assets[url.pathname].body});
           if (url.pathname === callPath) return route.fulfill({status: 200, contentType: 'text/javascript', body: call});
           if (url.pathname + url.search === legacyPath) return route.fulfill({status: 200, contentType: 'text/javascript', body: legacy});
@@ -76,7 +80,11 @@ for (const [engine, launcher] of Object.entries(process.platform === 'win32' ? {
         assert.equal(before.branch, 'tel:+914012345678');
         assert.equal(before.loader, 1);
         assert(before.commands.some(value => value[0] === 'config' && value[1] === 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'), 'Automatic call measurement must configure the reviewed action');
-        assert(before.commands.some(value => value[0] === 'consent' && value[1] === 'update' && value[2]?.ad_storage === 'granted' && value[2]?.ad_user_data === 'granted' && value[2]?.ad_personalization === 'denied'), 'Automatic call consent state must be explicit');
+        const consent=before.commands.filter(value=>value[0]==='consent');
+        assert.deepEqual(consent.map(value=>[value[1],value[2]]),[
+          ['default',{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted'}],
+          ['update',{ad_storage:'granted',ad_user_data:'granted'}]
+        ],'Current automatic call consent must preserve the published settings without retired overrides');
 
         await page.evaluate(() => {
           const command = Array.from(window.dataLayer || [], value => Array.from(value)).find(value => value[0] === 'config');

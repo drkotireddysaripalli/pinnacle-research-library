@@ -25,7 +25,8 @@ export async function readEnquiryAnalytics(execute,{startMs,endMs,limit=1000}={}
   return {receiptId:r.receiptId,leadReference:r.leadReference??null,state:r.state,
    createdAtMs:Number(r.createdAtMs),updatedAtMs:Number(r.updatedAtMs),
    event:r.state==='accepted'&&r.leadReference?'enquiry_accepted':null,
-   acquisition:acquisition||null,sourceStatus:acquisition?'permitted_campaign':'unknown',
+   acquisition:acquisition||null,sourceStatus:acquisition?(Object.keys(acquisition.fields).length?'permitted_campaign':'observed_referrer'):'unknown',
+    referrerOrigin:acquisition?.referrerOrigin||null,
     validation,trafficClassification:validation?'client_marked_qa':'unknown',
    googleDelivery:'unknown',qualification:'unknown',appointment:'unknown',attendance:'unknown',admission:'unknown'};
  });
@@ -33,5 +34,6 @@ export async function readEnquiryAnalytics(execute,{startMs,endMs,limit=1000}={}
   definition:'One business event per durable accepted website receipt with its exact protected intake reference. Google delivery and downstream outcomes require their own records.',
   timeBasis:'Receipt creation cohort with current durable states at read time; not acceptance-event time',countScope:'whole_receipt_creation_cohort',counts,
   rowCountScope:'returned_rows',rowCounts:{...states,enquiryAccepted:rows.filter(r=>r.event==='enquiry_accepted').length,
-   acceptedWithPermittedCampaign:rows.filter(r=>r.event==='enquiry_accepted'&&r.acquisition).length},rows};
+   acceptedWithPermittedCampaign:rows.filter(r=>r.event==='enquiry_accepted'&&r.sourceStatus==='permitted_campaign').length,
+   acceptedWithObservedReferrer:rows.filter(r=>r.event==='enquiry_accepted'&&r.sourceStatus==='observed_referrer').length},rows};
 }

@@ -10,7 +10,7 @@ import {LEGACY_TAGS} from '../deployment/legacy-measurement-fingerprints.mjs';
 import {assertReceiverPublication} from './receiver-publication-guard.mjs';
 import {PUBLIC_AD_CALL_PATH} from '../deployment/public-ad-call.mjs';
 const [phase,folder]=process.argv.slice(2);
-const completion=process.argv.includes('--completion'),qa=process.argv.includes('--qa-provenance');
+const completion=process.argv.includes('--completion'),origin=process.argv.includes('--referrer-origin'),qa=process.argv.includes('--qa-provenance')||origin;
 assert(['prepare','check','upload','promote','verify','rollback'].includes(phase)&&folder);
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),out=path.resolve(folder);
 const manifest=JSON.parse(await fs.readFile(path.join(out,'preimage/manifest.json'),'utf8'));
@@ -75,7 +75,7 @@ async function candidates(){
   return result;
 }
 const candidate=await candidates();
-const inputFiles=qa?['scripts/release-asset-regressions.mjs','scripts/qa-provenance-patch.mjs','scripts/prepare-qa-provenance.mjs','scripts/verify-qa-provenance-candidate.mjs','scripts/receiver-publication-guard.mjs','scripts/test-enquiry-validation.mjs','scripts/test-enquiry-analytics.mjs','scripts/refresh-enquiry-validation.mjs','scripts/build-contact-receipt-assets.mjs','scripts/build-book-attribution.mjs','deployment/contact-receipt-assets.mjs','deployment/book-attribution-assets.mjs','deployment/contact-handler.mjs','deployment/contact-receipt-contract.mjs','deployment/enrolment-receipt.mjs','deployment/enrolment-analytics.mjs','public/pinnacle-pages-scripts/enquiry-validation.mjs','public/pinnacle-pages-scripts/speech-measurement.js','public/pinnacle-pages-scripts/enrolment-source.mjs','public/pinnacle-pages-scripts/enrolment-api.mjs','public/pinnacle-pages-scripts/contact-api.mjs','../helpline-site/phone-analytics.js','../helpline-site/build.mjs']:['deployment/public-ad-call.mjs','deployment/legacy-measurement.runtime.mjs','deployment/legacy-measurement-fingerprints.mjs','deployment/interventions-index-root.mjs','src/lib/google-ads-call-consent.mjs','src/lib/public-ad-call-aliases.json','scripts/build-public-ad-call.mjs','scripts/build-legacy-measurement.mjs','scripts/asset-regression-patch.mjs','scripts/release-asset-regressions.mjs','scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['deployment/legacy-courses-tracking.mjs','scripts/test-call-asset-priority.mjs']:[])];
+const inputFiles=qa?['scripts/release-asset-regressions.mjs','scripts/qa-provenance-patch.mjs','scripts/prepare-qa-provenance.mjs','scripts/verify-qa-provenance-candidate.mjs','scripts/receiver-publication-guard.mjs','scripts/test-enquiry-validation.mjs','scripts/test-enquiry-analytics.mjs','scripts/refresh-enquiry-validation.mjs','scripts/build-contact-receipt-assets.mjs','scripts/build-book-attribution.mjs','deployment/contact-receipt-assets.mjs','deployment/book-attribution-assets.mjs','deployment/contact-handler.mjs','deployment/contact-receipt-contract.mjs','deployment/enrolment-receipt.mjs','deployment/enrolment-analytics.mjs','public/pinnacle-pages-scripts/enquiry-validation.mjs','public/pinnacle-pages-scripts/speech-measurement.js','public/pinnacle-pages-scripts/enrolment-source.mjs','public/pinnacle-pages-scripts/enrolment-api.mjs','public/pinnacle-pages-scripts/contact-api.mjs','../helpline-site/phone-analytics.js','../helpline-site/build.mjs',...(origin?['scripts/referrer-origin-patch.mjs','scripts/prepare-referrer-origin.mjs','scripts/verify-referrer-origin-candidate.mjs','scripts/verify-referrer-origin-live.mjs','scripts/test-enquiry-referrer.mjs','scripts/refresh-enquiry-referrer.mjs','public/pinnacle-pages-scripts/enquiry-referrer.mjs']:[])]:['deployment/public-ad-call.mjs','deployment/legacy-measurement.runtime.mjs','deployment/legacy-measurement-fingerprints.mjs','deployment/interventions-index-root.mjs','src/lib/google-ads-call-consent.mjs','src/lib/public-ad-call-aliases.json','scripts/build-public-ad-call.mjs','scripts/build-legacy-measurement.mjs','scripts/asset-regression-patch.mjs','scripts/release-asset-regressions.mjs','scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['deployment/legacy-courses-tracking.mjs','scripts/test-call-asset-priority.mjs']:[])];
 const inputs=Object.fromEntries(await Promise.all(inputFiles.map(async f=>[f,sha(await read(f))])));
 if(phase==='prepare'){
   assert(!(await fs.stat(path.join(out,'release.json')).catch(()=>null)),'Reuse existing receipt');await assertUnchanged();
@@ -96,7 +96,7 @@ if(phase==='prepare'){
   await save('release.json',{phase:'prepared',at:new Date().toISOString(),inputs,workers,currentPath:PUBLIC_AD_CALL_PATH});
   console.log(JSON.stringify({phase:'prepared',workers}));
 }else if(phase==='check'){
-  const tests=qa?['scripts/test-enquiry-validation.mjs','scripts/test-enquiry-analytics.mjs']:['scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['scripts/test-call-asset-priority.mjs']:[])];
+  const tests=qa?['scripts/test-enquiry-validation.mjs','scripts/test-enquiry-analytics.mjs',...(origin?['scripts/test-enquiry-referrer.mjs']:[])]:['scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['scripts/test-call-asset-priority.mjs']:[])];
   let log=execFileSync(process.execPath,['--test',...tests],{cwd:site,encoding:'utf8'});
   await fs.writeFile(path.join(out,'acceptance.log'),log,{mode:0o600});
   for(const [worker,modules]of Object.entries(candidate)){
@@ -104,6 +104,7 @@ if(phase==='prepare'){
     for(const [name,bytes]of Object.entries(modules))await fs.writeFile(path.join(dir,name),bytes,{mode:0o600});
   }
   if(qa){
+    if(origin)log+=execFileSync(process.execPath,['scripts/verify-referrer-origin-candidate.mjs',out],{cwd:site,encoding:'utf8'});
     const privateDir=path.join(out,'candidate/pbn-planetscale');
     log+=execFileSync(process.execPath,['scripts/verify-qa-provenance-candidate.mjs',privateDir],{cwd:site,encoding:'utf8'});
     log+=execFileSync(process.execPath,['scripts/verify-contact-source-receiver-candidate.mjs',path.join(privateDir,'website-enrolment-receipt.mjs')],{cwd:site,encoding:'utf8'});
@@ -138,7 +139,7 @@ if(phase==='prepare'){
     for(const w of manifest.workers){
       if(!receipt.workers[w.name].changed.length)continue;
       if(qa&&w.name==='pbn-planetscale')await assertReceiverPublication(Object.entries(candidate[w.name]).map(([name,bytes])=>({name,bytes})),await fs.readFile(path.join(out,'preimage',w.name,'index.js')));
-      const s=w.settings,metadata={main_module:receipt.workers[w.name].entry,...(w.details.resources?.script_runtime?.assets?{keep_assets:true}:{}),compatibility_date:s.compatibility_date,compatibility_flags:s.compatibility_flags||[],bindings:s.bindings.map(b=>({name:b.name,type:'inherit'})),annotations:{'workers/message':qa?'bounded-observed-qa-provenance-20261022':'reviewed-asset-regressions-20261022'}};
+      const s=w.settings,metadata={main_module:receipt.workers[w.name].entry,...(w.details.resources?.script_runtime?.assets?{keep_assets:true}:{}),compatibility_date:s.compatibility_date,compatibility_flags:s.compatibility_flags||[],bindings:s.bindings.map(b=>({name:b.name,type:'inherit'})),annotations:{'workers/message':origin?'bounded-observed-referrer-origin-20261022':qa?'bounded-observed-qa-provenance-20261022':'reviewed-asset-regressions-20261022'}};
       for(const k of ['placement','tail_consumers','logpush','observability','limits','usage_model'])if(s[k]!==undefined)metadata[k]=s[k];
       const body=new FormData();body.set('metadata',JSON.stringify(metadata));
       for(const [name,bytes]of Object.entries(candidate[w.name])){assert.equal(sha(bytes),proof.candidateHashes[w.name][name]);body.set(name,new Blob([bytes],{type:'application/javascript+module'}),name);}
