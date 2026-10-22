@@ -33,5 +33,5 @@ export function validPublicEnrolmentSource(source){
  // Optional attribution must not reject a valid enquiry, including when a
  // parent's clock differs from the server. The private adapter drops it unless
  // normaliseAcquisition passes; required page identity remains exact.
- return !!source&&source.page==='/enroll-autism-speech-aba-therapies-india'&&Object.keys(source).every(k=>['page','acquisition'].includes(k));
+ return !!source&&source.page==='/enroll-autism-speech-aba-therapies-india'&&Object.keys(source).every(k=>['page','acquisition','validation'].includes(k));
 }
