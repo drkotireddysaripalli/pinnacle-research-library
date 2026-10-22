@@ -1,3 +1,4 @@
+import {normaliseValidationHints,readClientQaHints} from './enquiry-validation.mjs?v=qa-provenance-20261022';
 import {normaliseAcquisition} from './enrolment-source.mjs?v=contact-source-20261020';
 import {facilityOperatingHold} from './centre-operating-holds.mjs?v=centre-operating-holds-20261017';
 import {CONTACT_PATH,CONTACT_TITLES,CONTACT_TOPICS,CONTACT_FACILITIES} from './contact-options.mjs?v=contact-source-20261020';
@@ -14,7 +15,7 @@ export function validateContact(values){
  if(typeof values.message!=='string'||!values.message.trim()||values.message.trim().length>1000)errors.message='Enter your message (up to 1,000 characters).';
  return errors;
 }
-export function makeContactPayload(values,requestId,acquisition){
- const permitted=normaliseAcquisition(acquisition);
- return {schemaVersion:1,formType:'contact',requestId,contact:{name:values.name.trim(),title:values.title,phone:values.phone.trim(),email:values.email.trim()},preferences:{facilityId:values.facilityId,subject:values.subject},message:values.message.trim(),source:{page:CONTACT_PATH,...(permitted?{acquisition:permitted}:{})}};
+export function makeContactPayload(values,requestId,acquisition,validation=readClientQaHints()){
+ const permitted=normaliseAcquisition(acquisition),qa=normaliseValidationHints(validation);
+ return {schemaVersion:1,formType:'contact',requestId,contact:{name:values.name.trim(),title:values.title,phone:values.phone.trim(),email:values.email.trim()},preferences:{facilityId:values.facilityId,subject:values.subject},message:values.message.trim(),source:{page:CONTACT_PATH,...(permitted?{acquisition:permitted}:{}),...(qa?{validation:qa}:{})}};
 }

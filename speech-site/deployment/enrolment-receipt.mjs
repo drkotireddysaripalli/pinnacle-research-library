@@ -1,3 +1,4 @@
+import {normaliseValidationHints} from '../public/pinnacle-pages-scripts/enquiry-validation.mjs';
 // Private receiver helper. This module is never published as a browser asset.
 // The database's unique request key and conditional updates are the authority;
 // an in-memory map, KV read/write pair, or HTTP 200 is not a durable receipt.
@@ -8,7 +9,7 @@ const KEY=/^[A-Za-z0-9-]{8,100}$/;
 const ID=/^[A-Za-z0-9-]{8,100}$/;
 const LEGACY_FIELDS=['FormType','Name','MobileNumber','Message','EmailId','Services','FacilityIds','Title','Languages'];
 
-export function receiptSource(source){const acquisition=normaliseAcquisition(source?.acquisition);return {page:ENROLMENT_SOURCE_PAGE,contract:'website_enrolment_v1',...(acquisition?{acquisition}:{})};}
+export function receiptSource(source){const acquisition=normaliseAcquisition(source?.acquisition),validation=normaliseValidationHints(source?.validation);return {page:ENROLMENT_SOURCE_PAGE,contract:'website_enrolment_v1',...(acquisition?{acquisition}:{}),...(validation?{validation}:{})};}
 export function validReceiptEnvelope(receipt,requestId){
  return receipt?.schemaVersion===1&&receipt.requestId===requestId&&typeof receipt.id==='string'&&ID.test(receipt.id);
 }
@@ -18,7 +19,7 @@ export function toReceiptEnrolment(legacy,requestId,source){
 export function parseReceiptEnrolment(body,idempotencyKey){
  const contract=body?.WebsiteReceipt;
  if(body?.FormType!=='Enroll'||contract?.schemaVersion!==1||!KEY.test(contract?.requestId||'')||idempotencyKey!==contract.requestId)return null;
- if(contract.source?.page!==ENROLMENT_SOURCE_PAGE||contract.source?.contract!=='website_enrolment_v1'||Object.keys(contract.source).some(k=>!['page','contract','acquisition'].includes(k))||(Object.hasOwn(contract.source,'acquisition')&&!normaliseAcquisition(contract.source.acquisition)))return null;
+ if(contract.source?.page!==ENROLMENT_SOURCE_PAGE||contract.source?.contract!=='website_enrolment_v1'||Object.keys(contract.source).some(k=>!['page','contract','acquisition','validation'].includes(k))||(Object.hasOwn(contract.source,'acquisition')&&!normaliseAcquisition(contract.source.acquisition)))return null;
  const lead={};for(const field of LEGACY_FIELDS){if(!Object.hasOwn(body,field))return null;lead[field]=body[field];}
  if(['Name','MobileNumber','Message','EmailId','Title'].some(field=>typeof lead[field]!=='string'))return null;
  if(!lead.Name.trim()||lead.Name.length>100||lead.MobileNumber.length>25||!/^[+\d\s().-]+$/.test(lead.MobileNumber)||lead.MobileNumber.replace(/\D/g,'').length<7||lead.MobileNumber.replace(/\D/g,'').length>15||lead.Message.length>1000||lead.EmailId.length>254||lead.Title!=='Mx')return null;
