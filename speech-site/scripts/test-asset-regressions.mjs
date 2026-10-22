@@ -4,7 +4,8 @@ import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {PUBLIC_AD_CALL_PATH,servePublicAdCall} from '../deployment/public-ad-call.mjs';
 import {removeInvalidIndexPreview,repairInterventionsIndexHTML,repairInterventionsIndex} from '../deployment/interventions-index-root.mjs';
-const source=await fs.readFile(new URL('../src/lib/google-ads-call-consent.mjs',import.meta.url),'utf8');
+import {replaceBundledCall,replaceSelectedReference} from './asset-regression-patch.mjs';
+const source=(await fs.readFile(new URL('../src/lib/google-ads-call-consent.mjs',import.meta.url),'utf8')).replace(/\r\n/g,'\n');
 const aliases=JSON.parse(await fs.readFile(new URL('../src/lib/public-ad-call-aliases.json',import.meta.url),'utf8'));
 const base='https://www.pinnacleblooms.org';
 const desktop='<html><head><title>Interventions</title></head><body><main><h1>Pinnacle Blooms Interventions Library</h1><section data-pinnacle-interventions-index="true"><a href="/sensory-processing">Existing domain</a><a href="tel:+919100181181">9100 181 181</a></section></main></body></html>';
@@ -23,7 +24,7 @@ test('only the three reviewed historical call URLs resolve in one hop to the cur
  assert.equal(aliases.length,3);
  for(const path of aliases){
   const r=servePublicAdCall(new Request(base+path+'?v=old'));
-  assert.equal(r.status,308);assert.equal(r.headers.get('location'),PUBLIC_AD_CALL_PATH+'?v=old');
+  assert.equal(r.status,308);assert.equal(r.headers.get('access-control-allow-origin'),'*');assert.equal(r.headers.get('location'),PUBLIC_AD_CALL_PATH+'?v=old');
   assert.equal(servePublicAdCall(new Request(new URL(r.headers.get('location'),base))).status,200);
   const head=servePublicAdCall(new Request(base+path,{method:'HEAD'}));assert.equal(head.status,308);assert.equal(await head.text(),'');
  }
@@ -63,4 +64,15 @@ test('legacy generated module shares the same call asset and permits historical 
  const {serveLegacyMeasurementCall}=await import('../deployment/legacy-measurement.runtime.mjs');
  assert.equal(await serveLegacyMeasurementCall(new Request(base+PUBLIC_AD_CALL_PATH)).text(),source);
  for(const path of aliases)assert.equal(serveLegacyMeasurementCall(new Request(base+path)).status,308);
+});
+test('compiled legacy patch keeps every byte outside the reviewed call block',()=>{
+ const old='before\n// deployment/public-ad-call.mjs\nold helper\n// deployment/legacy-measurement.mjs\nafter';
+ const next='unused\n// speech-site/deployment/public-ad-call.mjs\nnew helper\n// speech-site/deployment/legacy-measurement.mjs\nunused';
+ assert.equal(replaceBundledCall(old,next),'before\n// speech-site/deployment/public-ad-call.mjs\nnew helper\nvar publicAdCallMarkup = "";\n// deployment/legacy-measurement.mjs\nafter');
+ assert.throws(()=>replaceBundledCall('unknown',next));
+});
+test('embedded reference patch removes only the reviewed obsolete choices and path',()=>{
+ const old='prefix var v="/pinnacle-pages-scripts/portal-ad-call-1b357bec67c18321.mjs",R=\'<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden>old choices</details>\';suffix';
+ assert.equal(replaceSelectedReference(old,PUBLIC_AD_CALL_PATH),'prefix var v="'+PUBLIC_AD_CALL_PATH+'",R=\'\';suffix');
+ assert.throws(()=>replaceSelectedReference(old.replace('data-ad-call-preferences','unrecognized'),PUBLIC_AD_CALL_PATH));
 });

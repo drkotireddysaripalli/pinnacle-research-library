@@ -1,21 +1,21 @@
 // Root-only correction for the existing published library; no item-route or source-admission changes.
 const origin='https://interventions.pinnacleblooms.org';
-const title='Pinnacle BloomsÂ® Interventions Library';
+const title='Pinnacle Blooms® Interventions Library';
 const invalidPDF='https://images.pinnacleblooms.org/Assets/InterventionTechniquePdf/pdf/index.pdf';
 // Existing links and labels from the saved public library root, not newly invented destinations.
 const domains=[
- ['/sensory-processing','View Sensory Processing Interventions â†’'],
- ['/communication','View Communication Interventions â†’'],
- ['/social-emotional-development','View Social-Emotional Interventions â†’'],
- ['/behavior','View Behaviour Interventions â†’'],
- ['/daily-living-skills','View Daily Living Skills Interventions â†’'],
- ['/motor-skills','View Motor Skills Interventions â†’'],
- ['/play-cognitive','View Play and Cognitive Interventions â†’'],
- ['/school-academic','View School and Academic Interventions â†’'],
- ['/transitions-life-events','View Transitions and Life Events Interventions â†’'],
- ['/community-outings','View Community and Outings Interventions â†’'],
- ['/family-caregiver','View Family and Caregiver Interventions â†’'],
- ['/therapy-implementation','View Therapy Implementation Interventions â†’']
+ ['/sensory-processing','View Sensory Processing Interventions →'],
+ ['/communication','View Communication Interventions →'],
+ ['/social-emotional-development','View Social-Emotional Interventions →'],
+ ['/behavior','View Behaviour Interventions →'],
+ ['/daily-living-skills','View Daily Living Skills Interventions →'],
+ ['/motor-skills','View Motor Skills Interventions →'],
+ ['/play-cognitive','View Play and Cognitive Interventions →'],
+ ['/school-academic','View School and Academic Interventions →'],
+ ['/transitions-life-events','View Transitions and Life Events Interventions →'],
+ ['/community-outings','View Community and Outings Interventions →'],
+ ['/family-caregiver','View Family and Caregiver Interventions →'],
+ ['/therapy-implementation','View Therapy Implementation Interventions →']
 ];
 // The Android-only index preview is generated from a nonexistent index.pdf.
 // Remove only the complete, ordered set of these twenty verified-absent URLs.

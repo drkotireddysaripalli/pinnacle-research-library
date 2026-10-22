@@ -8,7 +8,7 @@ Ahrefs cohort: 1,288 recorded referring pages. Exact missing URLs end in 1b357be
 
 This patch removes the three retired advertising overrides from the maintained call source, regenerates its content-addressed module and legacy measurement runtime, and registers only those three reviewed historical URLs as short-cached, one-hop 308 aliases to the full current executable module. Unknown hashes remain unmatched. No stub or blanket redirect is introduced.
 
-The release owner must update the one embedded PUBLIC_AD_CALL_PATH in captured selected-reference-legacy-runtime.mjs (3,087,141 bytes; preimage SHA256 e6865c172dc472731d1054bca6d28b731cc098d212155922b7db90218463c8fe) while preserving the remaining bytes, and publish the generated call module to its actual portal owner. Preserve all other modules, routes, assets and bindings. Do not substitute an older Worker.
+Mac integration replaces only the bundled call-helper block in each captured live legacy runtime, retaining its distinct handlers. The selected-reference bundle receives the new path. Both older bundles also receive the already-approved empty preference controls and automatic early-click queue through exact checked seams; unrelated bytes are retained. A captured migration test protects the legacy-only empty-markup binding that the new bundle otherwise tree-shakes away. The generated executable uses canonical LF bytes (b195ad3cfeaad488), and all three aliases retain CORS for cached apex and Ask pages. Full captured module unions, entrypoints, routes, bindings and asset configuration are preserved with version-matched promotion and rollback.
 
 ## Interventions
 
@@ -18,6 +18,6 @@ Fresh desktop and AhrefsBot root responses already contain the catalogue correct
 
 ## Validation and release boundary
 
-`node scripts/build-public-ad-call.mjs`, `node scripts/build-legacy-measurement.mjs`, and `node --test scripts/test-asset-regressions.mjs`. Eight focused checks pass. A second private local run against the captured full desktop/mobile HTML also passed the exact-removal checks. No production calls, enquiries, vendor events, R2 writes or deployment from this patch owner.
+`node scripts/release-asset-regressions.mjs check <evidence-directory>` runs 21 focused cases for automatic calls, forwarding-number callbacks, aliases/CORS, exact gallery removal, unchanged resources, and compiled-patch boundaries. It checks the composed captured legacy runtime and records candidate hashes. Fresh full desktop/Android root fixtures confirm desktop unchanged and all twenty Android references removed. Release phases reuse these exact source hashes; no Astro rebuild, paid click, customer submission, vendor event or R2 write is required. Independent review also caught and corrected the draft UTF-8 text corruption and Windows CRLF content-hash mismatch before release.
 
 Mac Web Build is the integration/release owner. Final acceptance: both old call URLs follow once to HTTP200 JavaScript; representative parents across ma/t/b/c/certified-courses reference the current module; current call behavior remains; Android root has zero index-preview references and keeps catalogue/contact; desktop and one existing individual resource stay unchanged. The 1,288 number is recorded impact, not a post-release clearance count.
