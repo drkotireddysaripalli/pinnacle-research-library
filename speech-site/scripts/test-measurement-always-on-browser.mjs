@@ -46,8 +46,8 @@ try{
  const commands=proof.dataLayer.filter(Array.isArray),events=commands.filter(row=>row[0]==='event');
  const defaults=commands.find(row=>row[0]==='consent'&&row[1]==='default')?.[2];
  const updates=commands.filter(row=>row[0]==='consent'&&row[1]==='update').map(row=>row[2]);
- assert.equal(defaults?.analytics_storage,'granted');assert.equal(defaults?.ad_storage,'granted');assert.equal(defaults?.ad_user_data,'granted');assert.equal(defaults?.ad_personalization,'denied');
- assert(updates.some(value=>value.analytics_storage==='granted'&&value.ad_storage==='granted'&&value.ad_user_data==='granted'&&value.ad_personalization==='denied'));
+ assert.equal(defaults?.analytics_storage,'granted');assert.equal(defaults?.ad_storage,'granted');assert.equal(defaults?.ad_user_data,'granted');assert(!Object.hasOwn(defaults,'ad_personalization'),'Common measurement must not restore the retired personalisation override');
+ assert(updates.some(value=>value.analytics_storage==='granted'&&value.ad_storage==='granted'&&value.ad_user_data==='granted'&&!Object.hasOwn(value,'ad_personalization')));
  assert(commands.some(row=>row[0]==='config'&&row[1]==='G-2BYLRLFRDJ'&&row[2]?.send_page_view===false));
  assert(commands.some(row=>row[0]==='config'&&row[1]==='AW-10810823199/VNUcCMSy3YobEJ-kgKMo'&&row[2]?.phone_conversion_number==='9100 181 181'));
  assert.equal(events.filter(row=>row[1]==='page_view').length,1);
