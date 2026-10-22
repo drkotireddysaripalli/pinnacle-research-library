@@ -35,8 +35,12 @@ test('helpline and enrolment measurement start automatically and ignore retired 
  assert(form.events().some(row=>row[1]==='page_view'&&row[2].measurement_mode==='automatic'));
  for(const stream of [h,form]){
   assert.equal(consentRows(stream).length,2);
-  assert(consentRows(stream).every(row=>row[2].analytics_storage==='granted'&&row[2].ad_storage==='granted'&&row[2].ad_user_data==='granted'&&row[2].ad_personalization==='denied'));
+  assert(consentRows(stream).every(row=>row[2].analytics_storage==='granted'&&row[2].ad_storage==='granted'&&row[2].ad_user_data==='granted'));
  }
+ // Preserve the already-published provider settings independently: the common
+ // collector leaves personalisation unset; the dedicated helpline sets denied.
+ assert(consentRows(h).every(row=>row[2].ad_personalization==='denied'));
+ assert(consentRows(form).every(row=>!Object.hasOwn(row[2],'ad_personalization')));
 });
 
 test('accepted attribution uses its submitted snapshot despite a concurrent source or weaker GBP URL',()=>{
