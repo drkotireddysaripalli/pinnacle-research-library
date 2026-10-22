@@ -126,6 +126,31 @@
   const production = location.protocol==='https:'&&['www.pinnacleblooms.org','pinnacleblooms.org'].includes(location.hostname)&&!privateAskPath;
   if (isAsk) routes.add('/ask');
   if (knowledgePath) routes.add('/'+knowledgePath);
+/* PINNACLE_REFERRER_ORIGIN_START */
+function normaliseReferrerOrigin(value,ownOrigin='https://www.pinnacleblooms.org') {
+ if(typeof value!=='string'||!value||value.length>8192||/[\u0000-\u0020\u007f\\]/.test(value))return null;
+ try{
+  const url=new URL(value);
+  if(!['https:','http:'].includes(url.protocol)||url.username||url.password||url.port)return null;
+  const host=url.hostname.toLowerCase().replace(/\.$/,'');
+  if(host.length>253||!host.includes('.')||host.includes(':')||/^\d+(?:\.\d+){3}$/.test(host))return null;
+  const labels=host.split('.');
+  if(labels.some(label=>!label||label.length>63||!/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(label))||!/^(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})$/.test(labels.at(-1)))return null;
+  const reserved=['localhost','local','internal','lan','home','invalid','test','example','onion','arpa','intranet','corp'];
+  if(reserved.some(suffix=>host===suffix||host.endsWith('.'+suffix)))return null;
+  const ownHost=new URL(ownOrigin).hostname.toLowerCase().replace(/\.$/,'').replace(/^www\./,'');
+  if(host===ownHost||host.endsWith('.'+ownHost))return null;
+  url.hostname=host;
+  return url.origin;
+ }catch{return null;}
+}
+function originOnlyAcquisition(retained,referrer,landingPath,capturedAt=Date.now()) {
+ // A valid retained source (including paid) wins, and its clock is not renewed.
+ if(retained)return retained;
+ const referrerOrigin=normaliseReferrerOrigin(referrer);
+ return referrerOrigin?{schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields:{},referrerOrigin}:null;
+}
+/* PINNACLE_REFERRER_ORIGIN_END */
   let validationTraffic = new URL(location.href).searchParams.has('validation_test');
   // Keep an explicitly labelled QA journey out of live totals after its query
   // disappears during navigation. This tab-only flag contains no URL or user ID.
@@ -152,17 +177,21 @@
     if(!enabled)return null;
     try{
       const saved=snapshot===undefined?JSON.parse(localStorage.getItem(sourceKey)):snapshot;
-      if(!saved||Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(key))||saved.schemaVersion!==1||saved.consent!=='analytics_accepted'||!Number.isSafeInteger(saved.capturedAt)||saved.capturedAt>Date.now()||Date.now()-saved.capturedAt>sourceLifetime||!acquisitionPaths.has(saved.landingPath)){if(saved&&snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
+      if(!saved||Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields','referrerOrigin'].includes(key))||saved.schemaVersion!==1||saved.consent!=='analytics_accepted'||!Number.isSafeInteger(saved.capturedAt)||saved.capturedAt>Date.now()||Date.now()-saved.capturedAt>sourceLifetime||!acquisitionPaths.has(saved.landingPath)){if(saved&&snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
       const fields={};for(const [field,value]of Object.entries(saved.fields||{})){if(![...campaignKeys,...clickKeys].includes(field)||safeAttribution(value,field)!==value)return null;fields[field]=value;}
-      if(!Object.keys(fields).length)return null;
-      return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields};
+      const referrerOrigin=normaliseReferrerOrigin(saved.referrerOrigin);
+      if(!Object.keys(fields).length&&(!referrerOrigin||referrerOrigin!==saved.referrerOrigin))return null;
+      return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields,...(!Object.keys(fields).length?{referrerOrigin}:{})};
     }catch{return null;}
   };
   const rememberSource=()=>{
     if(!production||knowledgeSearch||isBookshop||validationTraffic||!acquisitionPaths.has(acquisitionPath))return;
     const fields=Object.fromEntries(measurementURL.searchParams);
     // A direct return retains the last permitted campaign instead of erasing it.
-    if(!Object.keys(fields).length)return;
+    if(!Object.keys(fields).length){
+      try{const prior=readSource(),candidate=originOnlyAcquisition(prior,document.referrer,acquisitionPath);if(candidate&&!prior)localStorage.setItem(sourceKey,JSON.stringify(candidate));}catch{}
+      return;
+    }
     // Internal links may carry the same validated campaign into Enrolment.
     // Keep that journey's original landing and capture time; a different complete
     // field set still starts a new source, without combining old and new fields.
@@ -180,7 +209,7 @@
   window.pinnacleEnquirySource=()=>production&&enabled&&!knowledgeSearch&&!isBookshop&&!validationTraffic?readSource():null;
   const permittedCampaigns=()=>{
     const retained=window.pinnacleEnquirySource();
-    if(!Object.keys(Object.fromEntries(measurementURL.searchParams)).length&&retained?.landingPath===helplinePath){
+    if(!Object.keys(Object.fromEntries(measurementURL.searchParams)).length&&retained?.landingPath===helplinePath&&Object.keys(retained.fields).length){
       return {...campaigns,campaign_source:retained.fields.utm_source,campaign_medium:retained.fields.utm_medium,campaign_name:retained.fields.utm_campaign};
     }
     return campaigns;

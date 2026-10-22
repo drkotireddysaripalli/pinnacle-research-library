@@ -7,6 +7,31 @@
   const sourceKey = 'pinnacle-enquiry-source-v1', sourceLifetime = 30 * 86400000;
   const landingPath = '/national-autism-helpline', capturedAt = Date.now();
   const production = location.origin === 'https://www.pinnacleblooms.org' && location.pathname === landingPath;
+/* PINNACLE_REFERRER_ORIGIN_START */
+function normaliseReferrerOrigin(value,ownOrigin='https://www.pinnacleblooms.org') {
+ if(typeof value!=='string'||!value||value.length>8192||/[\u0000-\u0020\u007f\\]/.test(value))return null;
+ try{
+  const url=new URL(value);
+  if(!['https:','http:'].includes(url.protocol)||url.username||url.password||url.port)return null;
+  const host=url.hostname.toLowerCase().replace(/\.$/,'');
+  if(host.length>253||!host.includes('.')||host.includes(':')||/^\d+(?:\.\d+){3}$/.test(host))return null;
+  const labels=host.split('.');
+  if(labels.some(label=>!label||label.length>63||!/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(label))||!/^(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})$/.test(labels.at(-1)))return null;
+  const reserved=['localhost','local','internal','lan','home','invalid','test','example','onion','arpa','intranet','corp'];
+  if(reserved.some(suffix=>host===suffix||host.endsWith('.'+suffix)))return null;
+  const ownHost=new URL(ownOrigin).hostname.toLowerCase().replace(/\.$/,'').replace(/^www\./,'');
+  if(host===ownHost||host.endsWith('.'+ownHost))return null;
+  url.hostname=host;
+  return url.origin;
+ }catch{return null;}
+}
+function originOnlyAcquisition(retained,referrer,landingPath,capturedAt=Date.now()) {
+ // A valid retained source (including paid) wins, and its clock is not renewed.
+ if(retained)return retained;
+ const referrerOrigin=normaliseReferrerOrigin(referrer);
+ return referrerOrigin?{schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields:{},referrerOrigin}:null;
+}
+/* PINNACLE_REFERRER_ORIGIN_END */
   let validationTraffic = new URL(location.href).searchParams.has('validation_test');
   try {
     if (validationTraffic) sessionStorage.setItem('pinnacle-validation-v1', String(Date.now()));
@@ -44,10 +69,12 @@ function safeAcquisitionValue(value,key){
   const readSource = () => {
     try {
       const saved = JSON.parse(localStorage.getItem(sourceKey));
-      if (!saved || Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(key)) || saved.schemaVersion !== 1 || saved.consent !== 'analytics_accepted' || !Number.isSafeInteger(saved.capturedAt) || saved.capturedAt > Date.now() || Date.now()-saved.capturedAt > sourceLifetime || typeof saved.landingPath !== 'string' || !acquisitionPath.test(saved.landingPath)) return null;
+      if (!saved || Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields','referrerOrigin'].includes(key)) || saved.schemaVersion !== 1 || saved.consent !== 'analytics_accepted' || !Number.isSafeInteger(saved.capturedAt) || saved.capturedAt > Date.now() || Date.now()-saved.capturedAt > sourceLifetime || typeof saved.landingPath !== 'string' || !acquisitionPath.test(saved.landingPath)) return null;
       const entries = Object.entries(saved.fields || {});
-      if (!entries.length || entries.length > ACQUISITION_KEYS.length || entries.some(([key,value])=>safeAcquisitionValue(value,key)!==value)) return null;
-      return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields:{...saved.fields}};
+      if (entries.length > ACQUISITION_KEYS.length || entries.some(([key,value])=>safeAcquisitionValue(value,key)!==value)) return null;
+      const referrerOrigin=normaliseReferrerOrigin(saved.referrerOrigin);
+      if(!entries.length&&(!referrerOrigin||referrerOrigin!==saved.referrerOrigin))return null;
+      return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields:{...saved.fields},...(!entries.length?{referrerOrigin}:{})};
     } catch { return null; }
   };
   const paidEvidence = value => !!value && (['gclid','gbraid','wbraid','dclid','msclkid'].some(key=>!!value[key]) || ['cpc','ppc','paid','paid_search','paidsearch','paid-search','paid search','cpm','cpv','display','paid_social','paid_video'].includes(value.utm_medium?.toLowerCase()));
@@ -58,6 +85,9 @@ function safeAcquisitionValue(value,key){
       const gbp = fields.utm_source?.toLowerCase()==='google' && fields.utm_medium?.toLowerCase()==='organic' && fields.utm_campaign?.toLowerCase()==='gbp';
       if (!same && !(gbp && paidEvidence(prior?.fields))) localStorage.setItem(sourceKey,JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields}));
     } catch {} // Optional source storage must never obstruct calling.
+  }
+  else{
+    try{const prior=readSource(),candidate=originOnlyAcquisition(prior,document.referrer,landingPath,capturedAt);if(candidate&&!prior)localStorage.setItem(sourceKey,JSON.stringify(candidate));}catch{}
   }
   window.pinnacleEnquirySource = readSource;
   const campaignFields = {utm_id:'campaign_id',utm_source:'campaign_source',utm_medium:'campaign_medium',utm_campaign:'campaign_name',utm_term:'campaign_term',utm_content:'campaign_content'};

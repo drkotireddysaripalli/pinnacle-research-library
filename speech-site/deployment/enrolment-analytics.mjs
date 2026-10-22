@@ -23,7 +23,8 @@ export async function readEnquiryAnalytics(execute,{startMs,endMs,limit=1000}={}
   return {receiptId:r.receiptId,leadReference:r.leadReference??null,state:r.state,
    createdAtMs:Number(r.createdAtMs),updatedAtMs:Number(r.updatedAtMs),
    event:r.state==='accepted'&&r.leadReference?'enquiry_accepted':null,
-   acquisition:acquisition||null,sourceStatus:acquisition?'permitted_campaign':'unknown',
+   acquisition:acquisition||null,sourceStatus:acquisition?(Object.keys(acquisition.fields).length?'permitted_campaign':'observed_referrer'):'unknown',
+    referrerOrigin:acquisition?.referrerOrigin||null,
    googleDelivery:'unknown',qualification:'unknown',appointment:'unknown',attendance:'unknown',admission:'unknown'};
  });
  return {schemaVersion:1,generatedAt:new Date().toISOString(),timeZone:'Asia/Calcutta',cohort:{startMs,endMs},truncated:raw.length>limit,

@@ -1,3 +1,4 @@
+import {normaliseReferrerOrigin} from './enquiry-referrer.mjs';
 // Shared public/private validation. No raw URL, referrer, form field or free text
 // belongs in the protected acquisition envelope.
 export const ACQUISITION_LIFETIME_MS=30*86400000;
@@ -20,14 +21,16 @@ export function safeAcquisitionValue(value,key){
  return value;
 }
 export function normaliseAcquisition(value,now=Date.now()){
- if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).some(k=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(k))||value.schemaVersion!==1||value.consent!=='analytics_accepted')return null;
+ if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).some(k=>!['schemaVersion','consent','capturedAt','landingPath','fields','referrerOrigin'].includes(k))||value.schemaVersion!==1||value.consent!=='analytics_accepted')return null;
  if(!Number.isSafeInteger(value.capturedAt)||value.capturedAt>now+60000||now-value.capturedAt>ACQUISITION_LIFETIME_MS)return null;
  // Only coarse public acquisition surfaces, never a question, child or account URL.
  if(typeof value.landingPath!=='string'||value.landingPath.length>160||!/^\/(?:national-autism-helpline|contact-national-autism-helpline-24-7|centers|autism-therapy|speech-aba-autism-assessments|top-speech-therapy-center-india-proven-improvement-rate|best-occupational-therapy-center-india-proven-improvement-rate|best-aba-therapy-center-india-proven-improvement-rate|best-special-education-center-call-9100181181|enroll-autism-speech-aba-therapies-india|certified-courses|pinnacleai|abilityscore|seven-readiness-indexes|personal-development-kernel|prognose|therapeuticai|everyday-therapy|fusion-module|reassess-review-repeat|self-sufficient|mainstream|faq|sunshine|allmirracles)?$/.test(value.landingPath))return null;
  if(!value.fields||typeof value.fields!=='object'||Array.isArray(value.fields))return null;
- const entries=Object.entries(value.fields);if(!entries.length||entries.length>ACQUISITION_KEYS.length)return null;
+ const entries=Object.entries(value.fields);if(entries.length>ACQUISITION_KEYS.length)return null;
  const fields={};for(const [key,raw]of entries){const safe=safeAcquisitionValue(raw,key);if(safe===null||safe!==raw)return null;fields[key]=safe;}
- return {schemaVersion:1,consent:'analytics_accepted',capturedAt:value.capturedAt,landingPath:value.landingPath,fields};
+ const referrerOrigin=normaliseReferrerOrigin(value.referrerOrigin);
+ if(!entries.length&&(!referrerOrigin||referrerOrigin!==value.referrerOrigin))return null;
+ return {schemaVersion:1,consent:'analytics_accepted',capturedAt:value.capturedAt,landingPath:value.landingPath,fields,...(!entries.length?{referrerOrigin}:{})};
 }
 export function validPublicEnrolmentSource(source){
  // Optional attribution must not reject a valid enquiry, including when a
