@@ -100,7 +100,7 @@ const sharedHelper = sharedKeys.replace('export ','')+'\n'+sharedAcquisition.sli
 let phoneAnalytics = (await readFile(path.join(directory,'phone-analytics.js'),'utf8')).replaceAll('\r\n','\n').replaceAll('\r','\n');
 const sharedMarker = /(?:  )?\/\* PINNACLE_SHARED_ACQUISITION_START \*\/[\s\S]*?\/\* PINNACLE_SHARED_ACQUISITION_END \*\//g;
 if((phoneAnalytics.match(sharedMarker)||[]).length!==1)throw new Error('Expected one inline acquisition helper block');
-phoneAnalytics=phoneAnalytics.replace(sharedMarker,'  /* PINNACLE_SHARED_ACQUISITION_START */\n'+sharedHelper+'\n  /* PINNACLE_SHARED_ACQUISITION_END */');
+if(!process.argv.includes('--qa-only'))phoneAnalytics=phoneAnalytics.replace(sharedMarker,'  /* PINNACLE_SHARED_ACQUISITION_START */\n'+sharedHelper+'\n  /* PINNACLE_SHARED_ACQUISITION_END */');
 await writeFile(path.join(directory,'phone-analytics.js'),phoneAnalytics);
 html = html.replace('@@PHONE_ANALYTICS@@', phoneAnalytics);
 const analyticsHash = createHash('sha256').update(phoneAnalytics).digest('base64');

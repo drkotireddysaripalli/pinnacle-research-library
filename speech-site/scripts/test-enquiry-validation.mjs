@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import vm from 'node:vm';
 import {normaliseValidationHints,readClientQaHints} from '../public/pinnacle-pages-scripts/enquiry-validation.mjs';
 import {normaliseAcquisition,validPublicEnrolmentSource} from '../public/pinnacle-pages-scripts/enrolment-source.mjs';
 import {makePayload} from '../public/pinnacle-pages-scripts/enrolment-api.mjs';
@@ -33,10 +34,24 @@ test('bounded tab hints survive source-to-form navigation and expire',()=>{
  assert.deepEqual(readClientQaHints({search:'',storage,now:now+100}),qa);
  assert.equal(readClientQaHints({search:'',storage,now:now+86400001}),null);
 });
-test('existing tab marker is recognized without treating unmarked sessions as genuine',()=>{
+test('legacy suppression flags remain unknown without bounded observed evidence',()=>{
  const storage=memory();storage.setItem('pinnacle-validation-v1',String(now));
- assert.deepEqual(readClientQaHints({storage,now}).hints,['validation_test']);
+ assert.equal(readClientQaHints({storage,now}),null);
  assert.equal(readClientQaHints({storage:memory(),now}),null);
+});
+test('actual collector suppression cannot turn invalid URL hints into form provenance',()=>{
+ for(const file of ['public/pinnacle-pages-scripts/speech-measurement.js','../helpline-site/phone-analytics.js']){
+  const text=fs.readFileSync(new URL('../'+file,import.meta.url),'utf8');
+  const start=text.indexOf('/* PINNACLE_QA_PROVENANCE_START */');
+  const end=text.indexOf(file.startsWith('../')?'  if (!production':'  const callPlacements',start);
+  assert(start>=0&&end>start);
+  for(const search of ['?validation_test=false','?validation_test=a&validation_test=b','?validation_test=bad%40value','?validation_test=offline']){
+   const storage=memory();vm.runInNewContext(text.slice(start,end),{URL,URLSearchParams,Date,Set,sessionStorage:storage,location:{href:'https://www.pinnacleblooms.org/'+search,search}});
+   assert(storage.getItem('pinnacle-validation-v1'),'Existing suppression is unchanged');
+   const result=readClientQaHints({search:'',storage});
+   if(search==='?validation_test=offline')assert.deepEqual(result?.hints,['validation_test']);else assert.equal(result,null);
+  }
+ }
 });
 test('storage failure does not prevent bounded current-page observation',()=>{
  const storage={getItem(){throw Error('disabled');},setItem(){throw Error('disabled');}};

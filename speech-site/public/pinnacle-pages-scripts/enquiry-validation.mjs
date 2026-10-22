@@ -21,9 +21,7 @@ export function readClientQaHints({search=globalThis.location?.search||'',storag
   const saved=JSON.parse(storage?.getItem(key)||'null');
   const prior=normaliseValidationHints(saved?.value);
   if(prior&&Number.isSafeInteger(saved.at)&&saved.at<=now&&now-saved.at<lifetime){capturedAt=Math.min(capturedAt,saved.at);for(const hint of prior.hints)hints.add(hint);}
-  // Preserve the existing tab-level validation marker, whose only meaning is QA.
-  const legacyAt=Number(storage?.getItem('pinnacle-validation-v1'));
-  if(legacyAt>0&&legacyAt<=now&&now-legacyAt<lifetime){capturedAt=Math.min(capturedAt,legacyAt);hints.add('validation_test');}
+  // Legacy suppression timestamps do not retain the original value and cannot establish provenance.
  }catch{}
  const value=normaliseValidationHints({schemaVersion:1,provenance:'client_observed',hints:[...hints]});
  if(value)try{storage?.setItem(key,JSON.stringify({at:capturedAt,value}));}catch{}
