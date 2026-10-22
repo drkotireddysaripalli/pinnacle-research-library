@@ -42,7 +42,7 @@ test('eligible public pages start one Ads call configuration automatically',()=>
  assert.equal(h.googleScripts()[0].src,'https://www.googletagmanager.com/gtag/js?id=AW-10810823199');
  assert.equal(h.commands().filter(x=>x[0]==='config'&&x[1]===action).length,1);
  const state={};for(const command of h.commands().filter(x=>x[0]==='consent'))Object.assign(state,command[2]);
- assert.deepEqual(state,{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});
+ assert.deepEqual(state,{analytics_storage:'granted',ad_storage:'granted',ad_user_data:'granted'});
  assert(h.commands().some(x=>x[0]==='set'&&x[1]==='ads_data_redaction'&&x[2]===false));
 });
 

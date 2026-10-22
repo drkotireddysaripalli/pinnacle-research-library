@@ -1,4 +1,4 @@
-// deployment/legacy-measurement-fingerprints.mjs
+// speech-site/deployment/legacy-measurement-fingerprints.mjs
 var LEGACY_TAGS = ["<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-W9ZHX459');<\/script>", '<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"><\/script>', "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'AW-10810823199');\r\n    <\/script>", "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'G-2BYLRLFRDJ');\r\n\r\n        /**/<\/script>", "<script>\r\n  gtag('config', 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo', {\r\n    'phone_conversion_number': '9100181181'\r\n  });\r\n<\/script>", '<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ"><\/script>'];
 var LEGACY_NOSCRIPT_TAGS = ['<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9ZHX459"\r\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>'];
 var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
@@ -76,8 +76,9 @@ var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
         }, 4000);\r
     <\/script>`]];
 
-// deployment/public-ad-call.mjs
-var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-7f1663ac50806f5c.mjs";
+// speech-site/deployment/public-ad-call.mjs
+var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-b195ad3cfeaad488.mjs";
+var historicalPaths = /* @__PURE__ */ new Set(["/pinnacle-pages-scripts/portal-ad-call-1b357bec67c18321.mjs", "/pinnacle-pages-scripts/portal-ad-call-ce2939f4e8137e9f.mjs", "/pinnacle-pages-scripts/portal-ad-call-7f1663ac50806f5c.mjs"]);
 var source = `// Shared advertising call measurement for eligible public Pinnacle pages.
 // There is no visitor choice gate: site-owner approved measurement starts once.
 export const preferencesMarkup = '';
@@ -132,14 +133,12 @@ export function installAdCallMeasurement() {
     window.gtag('consent', 'default', {
       analytics_storage: 'granted',
       ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'denied'
+      ad_user_data: 'granted'
     });
   }
   window.gtag('consent', 'update', {
     ad_storage: 'granted',
-    ad_user_data: 'granted',
-    ad_personalization: 'denied'
+    ad_user_data: 'granted'
   });
   window.gtag('set', 'ads_data_redaction', false);
 
@@ -193,9 +192,7 @@ export function installAdCallMeasurement() {
       } : {}),
       phone_conversion_number: originalDisplay,
       phone_conversion_callback: callback,
-      send_page_view: false,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false
+      send_page_view: false
     });
     if (!document.querySelector('script[data-pinnacle-ad-call-loader]') &&
         !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
@@ -214,14 +211,17 @@ export function installAdCallMeasurement() {
 }
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') installAdCallMeasurement();
+
 `;
 function servePublicAdCall(request) {
   const u = new URL(request.url);
-  if (u.hostname !== "www.pinnacleblooms.org" || u.pathname !== PUBLIC_AD_CALL_PATH) return null;
+  if (u.hostname !== "www.pinnacleblooms.org" || u.pathname !== PUBLIC_AD_CALL_PATH && !historicalPaths.has(u.pathname)) return null;
+  if (!["GET", "HEAD"].includes(request.method)) return new Response(null, { status: 405, headers: { allow: "GET, HEAD" } });
+  if (u.pathname !== PUBLIC_AD_CALL_PATH) return new Response(null, { status: 308, headers: { "access-control-allow-origin": "*", location: PUBLIC_AD_CALL_PATH + u.search, "cache-control": "public, max-age=300", "x-pinnacle-call-asset": "reviewed-historical-alias" } });
   return new Response(["GET", "HEAD"].includes(request.method) && request.method !== "HEAD" ? source : null, { status: ["GET", "HEAD"].includes(request.method) ? 200 : 405, headers: { "access-control-allow-origin": "*", "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=31536000, immutable", "x-content-type-options": "nosniff", allow: "GET, HEAD" } });
 }
 
-// deployment/protection-csp.mjs
+// speech-site/deployment/protection-csp.mjs
 var origin = "https://www.pinnacleblooms.org";
 var protect = "https://protect.pinnacleblooms.org";
 var paths = /* @__PURE__ */ new Set(["/", "/centers", "/top-speech-therapy-center-india-proven-improvement-rate", "/best-occupational-therapy-center-india-proven-improvement-rate", "/best-aba-therapy-center-india-proven-improvement-rate", "/best-special-education-center-call-9100181181", "/autism-therapy", "/speech-aba-autism-assessments", "/enroll-autism-speech-aba-therapies-india", "/speech-therapy/service-information", "/speech-therapy/first-visit-guide", "/speech-therapy/teacher-observation-guide"]);
@@ -250,7 +250,7 @@ function protectionCsp(request, response) {
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers: h });
 }
 
-// deployment/public-template-protection.mjs
+// speech-site/deployment/public-template-protection.mjs
 var PUBLIC_TEMPLATE_PROTECTION_SOURCE = "/pinnacle-pages-scripts/protection-consumer.mjs?v=protection-default-20261020";
 var marker = "existing-consumer-v1";
 function repairPublicTemplateProtection(request, response) {
@@ -277,7 +277,7 @@ function repairPublicTemplateProtection(request, response) {
   return protectionCsp(request, rewritten);
 }
 
-// deployment/legacy-measurement.mjs
+// speech-site/deployment/legacy-measurement.mjs
 var serveLegacyMeasurementCall = servePublicAdCall;
 var normal = (text) => text.replaceAll("\r\n", "\n").trim();
 var fingerprints = new Set(LEGACY_TAGS.map(normal));

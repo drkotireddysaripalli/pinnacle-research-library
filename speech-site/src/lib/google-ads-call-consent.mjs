@@ -52,14 +52,12 @@ export function installAdCallMeasurement() {
     window.gtag('consent', 'default', {
       analytics_storage: 'granted',
       ad_storage: 'granted',
-      ad_user_data: 'granted',
-      ad_personalization: 'denied'
+      ad_user_data: 'granted'
     });
   }
   window.gtag('consent', 'update', {
     ad_storage: 'granted',
-    ad_user_data: 'granted',
-    ad_personalization: 'denied'
+    ad_user_data: 'granted'
   });
   window.gtag('set', 'ads_data_redaction', false);
 
@@ -113,9 +111,7 @@ export function installAdCallMeasurement() {
       } : {}),
       phone_conversion_number: originalDisplay,
       phone_conversion_callback: callback,
-      send_page_view: false,
-      allow_google_signals: false,
-      allow_ad_personalization_signals: false
+      send_page_view: false
     });
     if (!document.querySelector('script[data-pinnacle-ad-call-loader]') &&
         !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
@@ -134,3 +130,4 @@ export function installAdCallMeasurement() {
 }
 
 if (typeof window !== 'undefined' && typeof document !== 'undefined') installAdCallMeasurement();
+
