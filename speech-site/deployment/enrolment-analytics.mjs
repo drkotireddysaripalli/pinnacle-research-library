@@ -31,5 +31,6 @@ export async function readEnquiryAnalytics(execute,{startMs,endMs,limit=1000}={}
   definition:'One business event per durable accepted website receipt with its exact protected intake reference. Google delivery and downstream outcomes require their own records.',
   timeBasis:'Receipt creation cohort with current durable states at read time; not acceptance-event time',countScope:'whole_receipt_creation_cohort',counts,
   rowCountScope:'returned_rows',rowCounts:{...states,enquiryAccepted:rows.filter(r=>r.event==='enquiry_accepted').length,
-   acceptedWithPermittedCampaign:rows.filter(r=>r.event==='enquiry_accepted'&&r.acquisition).length},rows};
+   acceptedWithPermittedCampaign:rows.filter(r=>r.event==='enquiry_accepted'&&r.sourceStatus==='permitted_campaign').length,
+   acceptedWithObservedReferrer:rows.filter(r=>r.event==='enquiry_accepted'&&r.sourceStatus==='observed_referrer').length},rows};
 }

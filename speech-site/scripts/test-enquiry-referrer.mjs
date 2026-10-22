@@ -92,4 +92,5 @@ test('private projection distinguishes observed origin, manual campaign and unkn
  const raw=[refSource(),campaign(),null].map((a,i)=>({receiptId:'offline-'+i,leadReference:'lead_v1:'+i,state:'accepted',createdAtMs:at,sourceJson:JSON.stringify({acquisition:a})}));
  const result=await readEnquiryAnalytics(async sql=>sql===ENQUIRY_ANALYTICS_COUNTS_SQL?{rows:[{state:'accepted',receiptCount:3,enquiryAccepted:3}]}:{rows:raw},{startMs:at,endMs:at+1});
  assert.deepEqual(result.rows.map(r=>r.sourceStatus),['observed_referrer','permitted_campaign','unknown']);assert.equal(result.rows[0].referrerOrigin,'https://chatgpt.com');assert.equal(result.rows[1].referrerOrigin,null);assert.equal(result.rows[0].qualification,'unknown');assert.equal(result.rows[0].googleDelivery,'unknown');
+ assert.equal(result.rowCounts.acceptedWithPermittedCampaign,1);assert.equal(result.rowCounts.acceptedWithObservedReferrer,1);
 });
