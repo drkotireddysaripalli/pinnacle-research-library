@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {assertReceiverExports,assertInvoiceFunction,invoiceSpan} from './receiver-publication-guard.mjs';
+const baseline=Buffer.from('const x={};class Staff{};export {x as default,Staff};');
+const valid="throw Error('must not execute');const x={};class Staff{};class WebsiteEnrolmentReceipts{};export {x as default,Staff,WebsiteEnrolmentReceipts};";
+const modules=text=>[{name:'index.js',bytes:Buffer.from(text)}];
+test('parses current exports without running private source',async()=>assert.equal((await assertReceiverExports(modules(valid),baseline)).exports.length,3));
+test('rejects lost receipt export',async()=>assert.rejects(assertReceiverExports(modules(valid.replace(',WebsiteEnrolmentReceipts};','};')),baseline),/Missing receiver export/));
+test('rejects lost staff export',async()=>assert.rejects(assertReceiverExports(modules(valid.replace(',Staff,',',')),baseline),/Missing receiver export/));
+test('rejects missing relative helper',async()=>assert.rejects(assertReceiverExports(modules("import './missing.mjs';"+valid),baseline),/Missing receiver module/));
+test('rejects an unapproved invoice function even with the expected name',()=>assert.throws(()=>assertInvoiceFunction(Buffer.from('async function GetAllUsers(){return [];}\n__name(GetAllUsers, "GetAllUsers");')),/optimization changed/));
+test('rejects duplicate invoice functions',()=>assert.throws(()=>invoiceSpan(Buffer.from('async function GetAllUsers(){}\n__name(GetAllUsers, "GetAllUsers");\nasync function GetAllUsers(){}')),/Duplicate invoice function/));

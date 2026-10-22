@@ -8,15 +8,17 @@ import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fingerprint} from './change-test-plan.mjs';
+import {assertReceiverPublication,invoiceSpan} from './receiver-publication-guard.mjs';
 import {assertLabelSourceDelta,patchCompiledLabels,patchCompiledAsset,assertGeneratedLabels} from './campaign-label-patch.mjs';
 
 const [phase, directory, baseline='origin/main']=process.argv.slice(2).filter(arg=>!arg.startsWith('--'));
-const restoreReceipt=process.argv.includes('--restore-receipt'),campaignLabels=process.argv.includes('--campaign-labels'),contactScript=process.argv.includes('--contact-script'),sharedScript=restoreReceipt||campaignLabels||contactScript||process.argv.includes('--shared-script');
+const restoreInvoice=process.argv.includes('--restore-invoice');
+const restoreReceipt=process.argv.includes('--restore-receipt'),campaignLabels=process.argv.includes('--campaign-labels'),contactScript=process.argv.includes('--contact-script'),sharedScript=restoreInvoice||restoreReceipt||campaignLabels||contactScript||process.argv.includes('--shared-script');
 assert(['prepare','upload','promote','verify','rollback'].includes(phase)&&directory,'Pass phase and evidence directory');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),out=path.resolve(directory);
-const worker=restoreReceipt?'pbn-planetscale':sharedScript?'pinnacle-verify-route':'pinnacle-legacy-social-metadata',moduleName=restoreReceipt?'index.js':contactScript?'shared-clearance-runtime.mjs':sharedScript?'book-attribution-assets.mjs':'public-template-protection.runtime.mjs',entryName='public-template-protection-entry.mjs';
+const worker=(restoreInvoice||restoreReceipt)?'pbn-planetscale':sharedScript?'pinnacle-verify-route':'pinnacle-legacy-social-metadata',moduleName=(restoreInvoice||restoreReceipt)?'index.js':contactScript?'shared-clearance-runtime.mjs':sharedScript?'book-attribution-assets.mjs':'public-template-protection.runtime.mjs',entryName='public-template-protection-entry.mjs';
 const sourceModuleName=contactScript?'contact-receipt-assets.mjs':moduleName;
-const changedModules=restoreReceipt?['index.js','website-enrolment-receipt.mjs','website-enrolment-analytics.mjs']:campaignLabels?['book-attribution-assets.mjs','shared-clearance-runtime.mjs','enrolment-handler.mjs']:sharedScript?[moduleName]:[moduleName,entryName];
+const changedModules=restoreInvoice?['index.js']:restoreReceipt?['index.js','website-enrolment-receipt.mjs','website-enrolment-analytics.mjs']:campaignLabels?['book-attribution-assets.mjs','shared-clearance-runtime.mjs','enrolment-handler.mjs']:sharedScript?[moduleName]:[moduleName,entryName];
 const account='862998def1cd610fdb86b8e5c1d6ed4d',zone='8b13f18e0589996b5d6512552372b434';
 const protectedNames=['pinnacle-verify-route','pinnacle-legacy-social-metadata','pinnacle-root-sitemap','materials-mobile-desktop-tracker','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-ask','pinnacle-google-ads-call-measurement','pinnacle-helpline','pbn-planetscale'].filter(name=>name!==worker);
 const g=args=>execFileSync('git',args,{cwd:repo,encoding:'utf8'}).trim();
@@ -64,6 +66,18 @@ async function receiptCandidates(original){
  assert(result.get('index.js').toString().includes('export {WebsiteEnrolmentReceipts};'));
  return result;
 }
+async function invoiceCandidates(entries){
+ const arg=process.argv.indexOf('--candidate-dir');assert(arg>=0,'Pass reviewed private invoice candidate directory');const dir=path.resolve(process.argv[arg+1]);
+ const proof=JSON.parse(await fs.readFile(path.join(dir,'patch-receipt.json'),'utf8'));
+ const original=entries.find(m=>m.name==='index.js')?.bytes,candidate=await fs.readFile(path.join(dir,'index.js'));
+ assert.equal(sha(original),proof.inputSha256,'Fresh invoice preimage changed');assert.equal(sha(candidate),proof.candidateSha256);
+ const oldSpan=invoiceSpan(original),newSpan=invoiceSpan(candidate);
+ assert(original.subarray(0,oldSpan.start).equals(candidate.subarray(0,newSpan.start)),'Unrelated invoice prefix changed');
+ assert(original.subarray(oldSpan.end).equals(candidate.subarray(newSpan.end)),'Unrelated invoice suffix changed');
+ const next=entries.map(m=>m.name==='index.js'?{...m,bytes:candidate}:m);
+ await assertReceiverPublication(next,original);
+ return candidate;
+}
 async function campaignCandidates(entries,beforeRef,afterRef){
  const readSource=(ref,name)=>gitBytes(['show',ref+':speech-site/public/pinnacle-pages-scripts/'+name]).toString();
  const previous={},next={};for(const name of ['speech-measurement.js','enrolment-source.mjs']){
@@ -92,18 +106,20 @@ await fs.mkdir(out,{recursive:true});
 if(phase==='prepare'){
  assert(!(await fs.stat(path.join(out,'release.json')).catch(()=>null)),'Resume the existing release receipt');
  const before=await snapshot(),captured=await modules();
- for(const pattern of restoreReceipt?[]:sharedScript?['www.pinnacleblooms.org/pinnacle-pages-scripts/*','www.pinnacleblooms.org/books/*']:['www.pinnacleblooms.org/m/*','www.pinnacleblooms.org/skills/*'])assert(before.routes.some(r=>r.pattern===pattern&&r.script===worker),'Affected route belongs to another Worker: '+pattern);
- if(restoreReceipt)await receiptCandidates(captured.entries.find(m=>m.name==='index.js').bytes);
+ for(const pattern of (restoreInvoice||restoreReceipt)?[]:sharedScript?['www.pinnacleblooms.org/pinnacle-pages-scripts/*','www.pinnacleblooms.org/books/*']:['www.pinnacleblooms.org/m/*','www.pinnacleblooms.org/skills/*'])assert(before.routes.some(r=>r.pattern===pattern&&r.script===worker),'Affected route belongs to another Worker: '+pattern);
+ if(restoreInvoice)await invoiceCandidates(captured.entries);
+ else if(restoreReceipt)await receiptCandidates(captured.entries.find(m=>m.name==='index.js').bytes);
  else if(campaignLabels)await campaignCandidates(captured.entries,baseline);
  else if(contactScript){const original=contactRecord(gitBytes(['show',baseline+':speech-site/deployment/'+sourceModuleName]));const bytes=captured.entries.find(m=>m.name===moduleName)?.bytes;assert(bytes);assert(patchCapturedContact(bytes,original,{body:original.body.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''),sha256:sha(original.body.replaceAll(",ad_personalization:'denied'",'').replace(',allow_google_signals:false,allow_ad_personalization_signals:false',''))}));}
  else if(sharedScript)assert.equal(sha(captured.entries.find(m=>m.name===moduleName)?.bytes||''),sha(gitBytes(['show',baseline+':speech-site/deployment/'+sourceModuleName])),'Live shared scripts differ from canonical baseline');
  else assert(!captured.entries.some(m=>[moduleName,entryName].includes(m.name)),'Protection wrapper already exists; reconcile the existing release');
  await save('before.json',before);await fs.mkdir(path.join(out,'captured'),{recursive:true});
  for(const m of captured.entries){const file=path.join(out,'captured',m.name);await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file,m.bytes,{mode:0o600});}
- const receipt={phase:'prepared',sharedScript,preparedAt:before.at,baseline:g(['rev-parse',baseline]),worker,entry:captured.entry,changedModules,originalHashes:Object.fromEntries(captured.entries.map(m=>[m.name,sha(m.bytes)])),contentTypes:Object.fromEntries(captured.entries.map(m=>[m.name,m.type])),rollback:before.workers[worker],moduleCount:captured.entries.length};await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,modules:receipt.moduleCount,routes:before.routes.length,rollback:receipt.rollback}));
+ const receipt={phase:'prepared',sharedScript,restoreInvoice,preparedAt:before.at,baseline:g(['rev-parse',baseline]),worker,entry:captured.entry,changedModules,originalHashes:Object.fromEntries(captured.entries.map(m=>[m.name,sha(m.bytes)])),contentTypes:Object.fromEntries(captured.entries.map(m=>[m.name,m.type])),rollback:before.workers[worker],moduleCount:captured.entries.length};await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,modules:receipt.moduleCount,routes:before.routes.length,rollback:receipt.rollback}));
 }else{
  const receipt=await read('release.json'),before=await read('before.json');
  assert.equal(receipt.sharedScript??false,sharedScript,'Resume with the same release scope');
+ assert.equal(receipt.restoreInvoice??false,restoreInvoice,'Resume with same invoice scope');
  assert(receipt.changedModules.includes(moduleName),'Resume the same asset module');
  if(phase==='rollback'){
   assert(receipt.deployment,'Nothing has been promoted');unchanged(await snapshot(),before,[{version_id:receipt.version,percentage:100}]);const result=await api(base(worker)+'/deployments','POST',{strategy:'percentage',versions:receipt.rollback});receipt.rollbackDeployment=result.id;receipt.phase='rolled-back';await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,deployment:result.id}));
@@ -129,11 +145,21 @@ if(phase==='prepare'){
    }
    ci={type:'verified-local-acceptance',headSha:commit,status:'completed',conclusion:'success',evidence:file,sha256:sha(await fs.readFile(file)),remoteStatus:runs};
   }
+  if(restoreInvoice){
+   const arg=process.argv.indexOf('--invoice-acceptance');assert(arg>=0,'Pass exact-source invoice acceptance');
+   const file=path.resolve(process.argv[arg+1]),proof=JSON.parse(await fs.readFile(file,'utf8'));
+   assert.equal(proof.status,'passed');assert.equal(proof.commit,commit);assert(proof.invalidOriginalRejectedBeforeUpload);assert(proof.allOtherBytesPreserved);assert.equal(proof.originalSha256,receipt.originalHashes['index.js']);
+   for(const [name,hash]of Object.entries(proof.sourceInputs))assert.equal(sha(await fs.readFile(path.join(site,name))),hash,'Invoice acceptance source changed');
+   assert.equal(sha(await fs.readFile(proof.log)),proof.logSHA256);
+   ci={type:'verified-local-invoice-acceptance',headSha:commit,status:'completed',conclusion:'success',evidence:file,sha256:sha(await fs.readFile(file))};
+  }
   assert(ci,'Exact main source acceptance must pass before upload');
-  let candidate;if(!restoreReceipt){candidate=await fs.readFile(path.join(site,'deployment',sourceModuleName));assert.equal(sha(candidate),sha(gitBytes(['show',commit+':speech-site/deployment/'+sourceModuleName])),'Generated candidate differs from commit');}
+  let candidate;if(!restoreReceipt&&!restoreInvoice){candidate=await fs.readFile(path.join(site,'deployment',sourceModuleName));assert.equal(sha(candidate),sha(gitBytes(['show',commit+':speech-site/deployment/'+sourceModuleName])),'Generated candidate differs from commit');}
   const entries=await Promise.all(Object.keys(receipt.originalHashes).map(async name=>({name,bytes:await fs.readFile(path.join(out,'captured',name))})));
   for(const m of entries)assert.equal(sha(m.bytes),receipt.originalHashes[m.name],'Captured module changed: '+m.name);
-  if(restoreReceipt){
+  if(restoreInvoice){
+   entries.find(m=>m.name==='index.js').bytes=await invoiceCandidates(entries);
+  }else if(restoreReceipt){
    const candidates=await receiptCandidates(entries.find(m=>m.name==='index.js').bytes);for(const [name,bytes]of candidates){const old=entries.find(m=>m.name===name);if(old)old.bytes=bytes;else entries.push({name,bytes});}
   }else if(campaignLabels){
    const candidates=await campaignCandidates(entries,receipt.baseline,commit);for(const item of entries)if(candidates.has(item.name))item.bytes=candidates.get(item.name);
@@ -153,9 +179,11 @@ if(phase==='prepare'){
    const entry=Buffer.from("import original from './"+receipt.entry+"';export * from './"+receipt.entry+"';import {withPublicTemplateProtection} from './"+moduleName+"';export default withPublicTemplateProtection(original);\n");
    entries.push({name:moduleName,bytes:candidate},{name:entryName,bytes:entry});
   }
-  const s=before.settings,metadata={main_module:sharedScript?receipt.entry:entryName,...(before.assets?{keep_assets:true}:{}),compatibility_date:s.compatibility_date,compatibility_flags:s.compatibility_flags||[],bindings:s.bindings.map(b=>({name:b.name,type:'inherit'})),annotations:{'workers/message':restoreReceipt?'restore-receipt-additive-20261021':campaignLabels?'campaign-labels-20261021':sharedScript?'native-ad-settings-20261021':'public-template-protection-20261021'}};
+  if(restoreInvoice||restoreReceipt){receipt.receiverPublicationGuard=await assertReceiverPublication(entries,await fs.readFile(path.join(out,'captured/index.js')));}
+  const s=before.settings,metadata={main_module:sharedScript?receipt.entry:entryName,...(before.assets?{keep_assets:true}:{}),compatibility_date:s.compatibility_date,compatibility_flags:s.compatibility_flags||[],bindings:s.bindings.map(b=>({name:b.name,type:'inherit'})),annotations:{'workers/message':restoreInvoice?'restore-approved-invoice-20261022':restoreReceipt?'restore-receipt-additive-20261021':campaignLabels?'campaign-labels-20261021':sharedScript?'native-ad-settings-20261021':'public-template-protection-20261021'}};
   for(const k of ['placement','tail_consumers','logpush','observability','limits','usage_model'])if(s[k]!==undefined)metadata[k]=s[k];
   const body=new FormData();body.set('metadata',JSON.stringify(metadata));for(const m of entries)body.set(m.name,new Blob([m.bytes],{type:receipt.contentTypes[m.name]||'application/javascript+module'}),m.name);
+  if(restoreInvoice||restoreReceipt)unchanged(await snapshot(),before);
   const uploaded=await api(base(worker)+'/versions?bindings_inherit=strict','POST',body);receipt.commit=commit;receipt.ci=ci;receipt.version=uploaded.id;receipt.hashes=Object.fromEntries(entries.map(m=>[m.name,sha(m.bytes)]));receipt.phase='uploaded';receipt.uploadedAt=new Date().toISOString();await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,commit,version:receipt.version,changedModules:receipt.changedModules}));
  }else if(phase==='promote'){
   assert.equal(receipt.phase,'uploaded');unchanged(await snapshot(),before);const result=await api(base(worker)+'/deployments','POST',{strategy:'percentage',versions:[{version_id:receipt.version,percentage:100}]});receipt.deployment=result.id;receipt.phase='promoted';receipt.promotedAt=new Date().toISOString();await save('release.json',receipt);console.log(JSON.stringify({phase:receipt.phase,version:receipt.version,deployment:receipt.deployment}));
