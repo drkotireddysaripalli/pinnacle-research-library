@@ -7,13 +7,14 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {replaceBundledCall,replaceSelectedReference,replaceAutomaticLegacyDefaults} from './asset-regression-patch.mjs';
 import {LEGACY_TAGS} from '../deployment/legacy-measurement-fingerprints.mjs';
+import {assertReceiverPublication} from './receiver-publication-guard.mjs';
 import {PUBLIC_AD_CALL_PATH} from '../deployment/public-ad-call.mjs';
 const [phase,folder]=process.argv.slice(2);
-const completion=process.argv.includes('--completion');
+const completion=process.argv.includes('--completion'),qa=process.argv.includes('--qa-provenance');
 assert(['prepare','check','upload','promote','verify','rollback'].includes(phase)&&folder);
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),out=path.resolve(folder);
 const manifest=JSON.parse(await fs.readFile(path.join(out,'preimage/manifest.json'),'utf8'));
-const names=['pinnacle-verify-route','pinnacle-legacy-social-metadata','materials-mobile-desktop-tracker'];
+const names=qa?['pbn-planetscale','pinnacle-verify-route','pinnacle-legacy-social-metadata','pinnacle-helpline']:['pinnacle-verify-route','pinnacle-legacy-social-metadata','materials-mobile-desktop-tracker'];
 assert.deepEqual(manifest.workers.map(w=>w.name),names);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const git=args=>execFileSync('git',args,{cwd:repo,encoding:'utf8'}).trim();
@@ -41,6 +42,15 @@ async function assertUnchanged(receipt={workers:{}}){
   }
 }
 async function candidates(){
+  if(qa){
+    const proof=await load('candidate-proof.json'),result={};
+    for(const w of manifest.workers){result[w.name]={};for(const m of w.modules){
+      const bytes=await fs.readFile(path.join(out,'candidate',w.name,m.name));assert.equal(sha(bytes),proof.hashes[w.name][m.name]);result[w.name][m.name]=bytes;
+    }}
+    assert.equal(sha(result['pbn-planetscale']['index.js']),manifest.workers[0].modules.find(m=>m.name==='index.js').sha256,'Staff and invoice source unchanged');
+    await assertReceiverPublication(Object.entries(result['pbn-planetscale']).map(([name,bytes])=>({name,bytes})),result['pbn-planetscale']['index.js']);
+    return result;
+  }
   const generated=(await read('deployment/legacy-measurement.runtime.mjs')).toString(),result={};
   for(const w of manifest.workers){
     result[w.name]={};
@@ -65,7 +75,7 @@ async function candidates(){
   return result;
 }
 const candidate=await candidates();
-const inputFiles=['deployment/public-ad-call.mjs','deployment/legacy-measurement.runtime.mjs','deployment/legacy-measurement-fingerprints.mjs','deployment/interventions-index-root.mjs','src/lib/google-ads-call-consent.mjs','src/lib/public-ad-call-aliases.json','scripts/build-public-ad-call.mjs','scripts/build-legacy-measurement.mjs','scripts/asset-regression-patch.mjs','scripts/release-asset-regressions.mjs','scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['deployment/legacy-courses-tracking.mjs','scripts/test-call-asset-priority.mjs']:[])];
+const inputFiles=qa?['scripts/release-asset-regressions.mjs','scripts/qa-provenance-patch.mjs','scripts/prepare-qa-provenance.mjs','scripts/verify-qa-provenance-candidate.mjs','scripts/receiver-publication-guard.mjs','scripts/test-enquiry-validation.mjs','scripts/test-enquiry-analytics.mjs','scripts/refresh-enquiry-validation.mjs','scripts/build-contact-receipt-assets.mjs','scripts/build-book-attribution.mjs','deployment/contact-receipt-assets.mjs','deployment/book-attribution-assets.mjs','deployment/contact-handler.mjs','deployment/contact-receipt-contract.mjs','deployment/enrolment-receipt.mjs','deployment/enrolment-analytics.mjs','public/pinnacle-pages-scripts/enquiry-validation.mjs','public/pinnacle-pages-scripts/speech-measurement.js','public/pinnacle-pages-scripts/enrolment-source.mjs','public/pinnacle-pages-scripts/enrolment-api.mjs','public/pinnacle-pages-scripts/contact-api.mjs','../helpline-site/phone-analytics.js','../helpline-site/build.mjs']:['deployment/public-ad-call.mjs','deployment/legacy-measurement.runtime.mjs','deployment/legacy-measurement-fingerprints.mjs','deployment/interventions-index-root.mjs','src/lib/google-ads-call-consent.mjs','src/lib/public-ad-call-aliases.json','scripts/build-public-ad-call.mjs','scripts/build-legacy-measurement.mjs','scripts/asset-regression-patch.mjs','scripts/release-asset-regressions.mjs','scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['deployment/legacy-courses-tracking.mjs','scripts/test-call-asset-priority.mjs']:[])];
 const inputs=Object.fromEntries(await Promise.all(inputFiles.map(async f=>[f,sha(await read(f))])));
 if(phase==='prepare'){
   assert(!(await fs.stat(path.join(out,'release.json')).catch(()=>null)),'Reuse existing receipt');await assertUnchanged();
@@ -73,21 +83,33 @@ if(phase==='prepare'){
   for(const w of manifest.workers){
     const old=Object.fromEntries(w.modules.map(m=>[m.name,m.sha256]));
     const changed=Object.entries(candidate[w.name]).filter(([name,bytes])=>sha(bytes)!==old[name]).map(([name])=>name);
-    workers[w.name]={changed,entry:completion?(w.name===names[0]?'call-asset-priority-entry-20261022.mjs':w.name===names[1]?'courses-tracking-entry-20261022.mjs':w.entry):w.entry,rollback:w.deployment.versions,moduleCount:Object.keys(candidate[w.name]).length};
+    workers[w.name]={changed,entry:completion&&!qa?(w.name===names[0]?'call-asset-priority-entry-20261022.mjs':w.name===names[1]?'courses-tracking-entry-20261022.mjs':w.entry):w.entry,rollback:w.deployment.versions,moduleCount:Object.keys(candidate[w.name]).length};
   }
+  if(qa){
+    const expected={'pbn-planetscale':['website-enrolment-analytics.mjs','website-enrolment-receipt.mjs'],'pinnacle-verify-route':['book-attribution-assets.mjs','enrolment-handler.mjs','shared-clearance-runtime.mjs'],'pinnacle-legacy-social-metadata':[],'pinnacle-helpline':['worker.mjs']};
+    for(const name of names)assert.deepEqual(workers[name].changed.sort(),expected[name]);
+  }else{
   assert.deepEqual(workers[names[0]].changed.sort(),completion?['call-asset-priority-entry-20261022.mjs']:['legacy-measurement.runtime.mjs','public-ad-call.mjs']);
   assert.deepEqual(workers[names[1]].changed.sort(),completion?['courses-tracking-entry-20261022.mjs','legacy-courses-tracking.mjs']:['legacy-measurement.runtime.mjs','selected-reference-legacy-runtime.mjs']);
   assert.deepEqual(workers[names[2]].changed,completion?[]:['interventions-index-runtime-20261016.mjs']);
+  }
   await save('release.json',{phase:'prepared',at:new Date().toISOString(),inputs,workers,currentPath:PUBLIC_AD_CALL_PATH});
   console.log(JSON.stringify({phase:'prepared',workers}));
 }else if(phase==='check'){
-  const tests=['scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['scripts/test-call-asset-priority.mjs']:[])];
-  const log=execFileSync(process.execPath,['--test',...tests],{cwd:site,encoding:'utf8'});
+  const tests=qa?['scripts/test-enquiry-validation.mjs','scripts/test-enquiry-analytics.mjs']:['scripts/test-asset-regressions.mjs','scripts/test-ad-call-consent.mjs','scripts/test-interventions-index-root.mjs',...(completion?['scripts/test-call-asset-priority.mjs']:[])];
+  let log=execFileSync(process.execPath,['--test',...tests],{cwd:site,encoding:'utf8'});
   await fs.writeFile(path.join(out,'acceptance.log'),log,{mode:0o600});
   for(const [worker,modules]of Object.entries(candidate)){
     const dir=path.join(out,'candidate',worker);await fs.mkdir(dir,{recursive:true});
     for(const [name,bytes]of Object.entries(modules))await fs.writeFile(path.join(dir,name),bytes,{mode:0o600});
   }
+  if(qa){
+    const privateDir=path.join(out,'candidate/pbn-planetscale');
+    log+=execFileSync(process.execPath,['scripts/verify-qa-provenance-candidate.mjs',privateDir],{cwd:site,encoding:'utf8'});
+    log+=execFileSync(process.execPath,['scripts/verify-contact-source-receiver-candidate.mjs',path.join(privateDir,'website-enrolment-receipt.mjs')],{cwd:site,encoding:'utf8'});
+    log+=execFileSync(process.execPath,['scripts/test-current-receiver-runtime.mjs'],{cwd:site,env:{...process.env,PINNACLE_RECEIVER_CANDIDATE_DIR:privateDir},encoding:'utf8'});
+    await fs.writeFile(path.join(out,'acceptance.log'),log,{mode:0o600});
+  }else{
   const module=await import(path.join(out,'candidate',names[1],'legacy-measurement.runtime.mjs')+'?check='+Date.now());
   const r=module.serveLegacyMeasurementCall(new Request('https://www.pinnacleblooms.org'+PUBLIC_AD_CALL_PATH));
   assert.equal(await r.text(),(await read('src/lib/google-ads-call-consent.mjs')).toString().replace(/\r\n/g,'\n'));
@@ -103,9 +125,10 @@ if(phase==='prepare'){
     });
     assert((await result.text()).includes(PUBLIC_AD_CALL_PATH));
   }
+  }
   const receipt=await load('release.json');assert.equal(receipt.phase,'prepared');receipt.inputs=inputs;await save('release.json',receipt);
   await save('acceptance.json',{status:'passed',commit:git(['rev-parse','HEAD']),at:new Date().toISOString(),inputs,logSHA256:sha(log),candidateHashes:Object.fromEntries(Object.entries(candidate).map(([w,ms])=>[w,Object.fromEntries(Object.entries(ms).map(([n,b])=>[n,sha(b)]))]))});
-  console.log(log.trim());console.log('Captured legacy composition and full candidate hashes passed.');
+  console.log(log.trim());console.log('Captured candidate composition and full candidate hashes passed.');
 }else{
   const receipt=await load('release.json');assert.deepEqual(receipt.inputs,inputs);await assertUnchanged(receipt);
   if(phase==='upload'){
@@ -114,7 +137,8 @@ if(phase==='prepare'){
     const proof=await load('acceptance.json');assert.equal(proof.status,'passed');assert.equal(proof.commit,commit);assert.deepEqual(proof.inputs,inputs);assert.equal(proof.logSHA256,sha(await fs.readFile(path.join(out,'acceptance.log'))));
     for(const w of manifest.workers){
       if(!receipt.workers[w.name].changed.length)continue;
-      const s=w.settings,metadata={main_module:receipt.workers[w.name].entry,...(w.details.resources?.script_runtime?.assets?{keep_assets:true}:{}),compatibility_date:s.compatibility_date,compatibility_flags:s.compatibility_flags||[],bindings:s.bindings.map(b=>({name:b.name,type:'inherit'})),annotations:{'workers/message':'reviewed-asset-regressions-20261022'}};
+      if(qa&&w.name==='pbn-planetscale')await assertReceiverPublication(Object.entries(candidate[w.name]).map(([name,bytes])=>({name,bytes})),await fs.readFile(path.join(out,'preimage',w.name,'index.js')));
+      const s=w.settings,metadata={main_module:receipt.workers[w.name].entry,...(w.details.resources?.script_runtime?.assets?{keep_assets:true}:{}),compatibility_date:s.compatibility_date,compatibility_flags:s.compatibility_flags||[],bindings:s.bindings.map(b=>({name:b.name,type:'inherit'})),annotations:{'workers/message':qa?'bounded-observed-qa-provenance-20261022':'reviewed-asset-regressions-20261022'}};
       for(const k of ['placement','tail_consumers','logpush','observability','limits','usage_model'])if(s[k]!==undefined)metadata[k]=s[k];
       const body=new FormData();body.set('metadata',JSON.stringify(metadata));
       for(const [name,bytes]of Object.entries(candidate[w.name])){assert.equal(sha(bytes),proof.candidateHashes[w.name][name]);body.set(name,new Blob([bytes],{type:'application/javascript+module'}),name);}

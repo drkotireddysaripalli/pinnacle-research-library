@@ -94,3 +94,19 @@ test('private projection distinguishes observed origin, manual campaign and unkn
  assert.deepEqual(result.rows.map(r=>r.sourceStatus),['observed_referrer','permitted_campaign','unknown']);assert.equal(result.rows[0].referrerOrigin,'https://chatgpt.com');assert.equal(result.rows[1].referrerOrigin,null);assert.equal(result.rows[0].qualification,'unknown');assert.equal(result.rows[0].googleDelivery,'unknown');
  assert.equal(result.rowCounts.acceptedWithPermittedCampaign,1);assert.equal(result.rowCounts.acceptedWithObservedReferrer,1);
 });
+test('compose with installed QA provenance without merging origin and classification',async t=>{
+ const module=new URL('../public/pinnacle-pages-scripts/enquiry-validation.mjs',import.meta.url);
+ if(!fs.existsSync(module))return t.skip('Independent branch: PR152 is not installed');
+ const {readClientQaHints}=await import(module.href);
+ const validation=readClientQaHints({search:'?qa_mode=test'}),acquisition=refSource();
+ const p=makePayload({name:'OFFLINE FIXTURE',phone:'0000000000',email:'',service:'speech',centre:'',message:''},'offline-composed-origin',acquisition,validation);
+ const body=toReceiptEnrolment({FormType:'Enroll',Name:p.contact.name,MobileNumber:p.contact.phone,Message:'',EmailId:'',Services:['Speech Therapy'],FacilityIds:[''],Title:'Mx',Languages:['English']},p.requestId,p.source);
+ const f=fixtureLedger();try{
+  assert.equal((await receiveReceiptEnrolment(body,{idempotencyKey:p.requestId,ledger:f.ledger,handoff:async()=> 'lead_v1:1'})).status,'accepted');
+  const source=JSON.parse(f.db.prepare('SELECT source_json FROM website_enrolment_receipts').get().source_json);
+  assert.deepEqual(source.acquisition,acquisition);assert.deepEqual(source.validation,validation);assert.deepEqual(source.acquisition.fields,{});
+  const raw={state:'accepted',receiptId:'offline',leadReference:'lead_v1:1',createdAtMs:at,sourceJson:source};
+  const report=await readEnquiryAnalytics(async sql=>sql===ENQUIRY_ANALYTICS_COUNTS_SQL?{rows:[{state:'accepted',receiptCount:1,enquiryAccepted:1}]}:{rows:[raw]},{startMs:at,endMs:at+1});
+  assert.equal(report.rows[0].sourceStatus,'observed_referrer');assert.equal(report.rows[0].trafficClassification,'client_marked_qa');assert.equal(report.rows[0].googleDelivery,'unknown');
+ }finally{f.close();}
+});

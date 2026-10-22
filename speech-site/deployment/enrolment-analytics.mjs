@@ -1,3 +1,4 @@
+import {normaliseValidationHints} from '../public/pinnacle-pages-scripts/enquiry-validation.mjs';
 // Protected first-party reporting. Every accepted receipt is recorded by the
 // receiver transaction, without depending on Google, scripts or cookie choice.
 // This is a projection of those records; it creates no leads or conversions.
@@ -20,11 +21,13 @@ export async function readEnquiryAnalytics(execute,{startMs,endMs,limit=1000}={}
   // Validate the stored permission at intake time. Device expiry must not erase
   // a valid historical source from an already accepted business record.
   const acquisition=normaliseAcquisition(source?.acquisition,Number(r.createdAtMs));
+   const validation=normaliseValidationHints(source?.validation);
   return {receiptId:r.receiptId,leadReference:r.leadReference??null,state:r.state,
    createdAtMs:Number(r.createdAtMs),updatedAtMs:Number(r.updatedAtMs),
    event:r.state==='accepted'&&r.leadReference?'enquiry_accepted':null,
    acquisition:acquisition||null,sourceStatus:acquisition?(Object.keys(acquisition.fields).length?'permitted_campaign':'observed_referrer'):'unknown',
     referrerOrigin:acquisition?.referrerOrigin||null,
+    validation,trafficClassification:validation?'client_marked_qa':'unknown',
    googleDelivery:'unknown',qualification:'unknown',appointment:'unknown',attendance:'unknown',admission:'unknown'};
  });
  return {schemaVersion:1,generatedAt:new Date().toISOString(),timeZone:'Asia/Calcutta',cohort:{startMs,endMs},truncated:raw.length>limit,
