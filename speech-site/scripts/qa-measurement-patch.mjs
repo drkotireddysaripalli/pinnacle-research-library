@@ -8,7 +8,8 @@ export const changedModules={
  'pbn-planetscale':[],
  'pinnacle-verify-route':['book-attribution-assets.mjs','legacy-measurement.runtime.mjs','public-ad-call.mjs','shared-clearance-runtime.mjs'],
  'pinnacle-legacy-social-metadata':['legacy-measurement.runtime.mjs','selected-reference-legacy-runtime.mjs'],
- 'pinnacle-helpline':['worker.mjs']
+ 'pinnacle-helpline':['worker.mjs'],
+ 'pinnacle-google-ads-call-measurement':['index.mjs']
 };
 export function assetBody(text,key){
  const marker=JSON.stringify(key)+':{body:';
@@ -20,6 +21,14 @@ export function assetBody(text,key){
 export function exportedLiteral(text,name){
  const m=text.match(new RegExp('export const '+name+' = ([^\\n]+);'));assert(m);return JSON.parse(m[1]);
 }
+export function patchBootstrap(text,before,after){
+ const re=/^var BOOTSTRAP = (`(?:\\[\s\S]|[^`\\])*`|"(?:\\.|[^"\\])*");$/m,m=text.match(re);assert(m,'Existing call bootstrap literal');
+ const body=vm.runInNewContext(m[1]),oldGate=qaGate(body);
+ if(before!==null)assert.equal(oldGate,qaGate(before),'Known previous QA gate');
+ const updated=body.replace(oldGate,qaGate(after));
+ return text.replace(re,()=> 'var BOOTSTRAP = '+JSON.stringify(updated)+';');
+}
+export function qaGate(body){const a=body.indexOf('  let qa='),b=body.indexOf('  if(!window.__pinnacleProtectionContainer)',a);assert(a>=0&&b>a);return body.slice(a,b);}
 export function patchModules(modules,{oldSource,newSource,oldCallModule,newCallModule,newLegacy}){
  const result=Object.fromEntries(Object.entries(modules).map(([w,ms])=>[w,{...ms}]));
  const update=(w,n,fn)=>result[w][n]=Buffer.from(fn(result[w][n].toString()));
@@ -42,5 +51,6 @@ export function patchModules(modules,{oldSource,newSource,oldCallModule,newCallM
  const newPath='/pinnacle-pages-scripts/portal-ad-call-'+sha(newSource['google-ads-call-consent.mjs']).slice(0,16)+'.mjs';
  update(legacy,'selected-reference-legacy-runtime.mjs',s=>{assert.equal(s.split(oldPath).length,2);return s.replace(oldPath,newPath);});
  update('pinnacle-helpline','worker.mjs',s=>patchHelpline(s,oldSource['phone-analytics.js'],newSource['phone-analytics.js']));
+ update('pinnacle-google-ads-call-measurement','index.mjs',s=>patchBootstrap(s,oldSource['google-ads-call-consent.mjs'],newSource['google-ads-call-consent.mjs']));
  return result;
 }

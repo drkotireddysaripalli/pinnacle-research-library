@@ -3,6 +3,12 @@ const source = await fs.readFile(new URL('../src/lib/google-ads-call-consent.mjs
 const bootstrap = source.replace(/^export /gm, '');
 const file = new URL('../workers/google-ads-call-measurement/index.mjs', import.meta.url);
 const wrapper = await fs.readFile(file, 'utf8');
+if(process.argv.includes('--qa-only')){
+ const {patchBootstrap}=await import('./qa-measurement-patch.mjs');
+ await fs.writeFile(file,patchBootstrap(wrapper,null,source));
+ console.log('Updated only the QA gate in the retained call bootstrap.');
+ process.exit(0);
+}
 const begin = wrapper.indexOf('var BOOTSTRAP = ');
 const end = wrapper.indexOf('\nvar VERIFY_READER', begin);
 if (begin < 0 || end < 0) throw Error('Bootstrap build boundary missing');

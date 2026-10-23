@@ -16,7 +16,7 @@ const completion=process.argv.includes('--completion'),origin=process.argv.inclu
 assert(['prepare','check','upload','promote','verify','rollback'].includes(phase)&&folder);
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),out=path.resolve(folder);
 const manifest=JSON.parse(await fs.readFile(path.join(out,'preimage/manifest.json'),'utf8'));
-const names=qa?['pbn-planetscale','pinnacle-verify-route','pinnacle-legacy-social-metadata','pinnacle-helpline']:['pinnacle-verify-route','pinnacle-legacy-social-metadata','materials-mobile-desktop-tracker'];
+const names=qa?['pbn-planetscale','pinnacle-verify-route','pinnacle-legacy-social-metadata','pinnacle-helpline',...(qaMeasurement?['pinnacle-google-ads-call-measurement']:[])]:['pinnacle-verify-route','pinnacle-legacy-social-metadata','materials-mobile-desktop-tracker'];
 assert.deepEqual(manifest.workers.map(w=>w.name),names);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const git=args=>execFileSync('git',args,{cwd:repo,encoding:'utf8'}).trim();
