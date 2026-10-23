@@ -2,6 +2,8 @@ import fs from 'node:fs/promises';import path from 'node:path';import assert fro
 import {sha,assetBody,exportedLiteral} from './qa-measurement-patch.mjs';
 const out=path.resolve(process.argv[2]),site=path.resolve(import.meta.dirname,'..');
 const proof=JSON.parse(await fs.readFile(out+'/candidate-proof.json','utf8'));
+const canonical={'speech-measurement.js':'public/pinnacle-pages-scripts/speech-measurement.js','protection-consumer.mjs':'public/pinnacle-pages-scripts/protection-consumer.mjs','google-ads-call-consent.mjs':'src/lib/google-ads-call-consent.mjs','phone-analytics.js':'../helpline-site/phone-analytics.js'};
+for(const [name,file]of Object.entries(canonical))assert.equal(sha(await fs.readFile(path.resolve(site,file))),proof.sourceHashes[name],'Candidate must match current canonical source: '+name);
 for(const [w,ms]of Object.entries(proof.hashes))for(const[n,h]of Object.entries(ms))assert.equal(sha(await fs.readFile(out+'/candidate/'+w+'/'+n)),h);
 const root=out+'/extracted',portal=out+'/candidate/pinnacle-verify-route/';
 await fs.mkdir(root+'/speech-site/public/pinnacle-pages-scripts',{recursive:true});await fs.mkdir(root+'/speech-site/src/lib',{recursive:true});await fs.mkdir(root+'/helpline-site',{recursive:true});

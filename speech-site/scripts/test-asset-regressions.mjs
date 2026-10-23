@@ -20,8 +20,8 @@ test('current call asset is real executable source with matching content hash an
  for(const key of ['ad_personalization:','allow_google_signals:','allow_ad_personalization_signals:'])assert(!source.includes(key));
  assert.match(source,/preferencesMarkup = ''/);
 });
-test('only the three reviewed historical call URLs resolve in one hop to the current working asset',async()=>{
- assert.equal(aliases.length,3);
+test('only the four reviewed historical call URLs resolve in one hop to the current working asset',async()=>{
+ assert.deepEqual(aliases,['1b357bec67c18321','ce2939f4e8137e9f','7f1663ac50806f5c','b195ad3cfeaad488'].map(hash=>'/pinnacle-pages-scripts/portal-ad-call-'+hash+'.mjs'));
  for(const path of aliases){
   const r=servePublicAdCall(new Request(base+path+'?v=old'));
   assert.equal(r.status,308);assert.equal(r.headers.get('access-control-allow-origin'),'*');assert.equal(r.headers.get('location'),PUBLIC_AD_CALL_PATH+'?v=old');
