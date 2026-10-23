@@ -1,4 +1,4 @@
-// speech-site/deployment/legacy-measurement-fingerprints.mjs
+// deployment/legacy-measurement-fingerprints.mjs
 var LEGACY_TAGS = ["<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-W9ZHX459');<\/script>", '<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"><\/script>', "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'AW-10810823199');\r\n    <\/script>", "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'G-2BYLRLFRDJ');\r\n\r\n        /**/<\/script>", "<script>\r\n  gtag('config', 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo', {\r\n    'phone_conversion_number': '9100181181'\r\n  });\r\n<\/script>", '<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ"><\/script>'];
 var LEGACY_NOSCRIPT_TAGS = ['<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9ZHX459"\r\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>'];
 var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
@@ -76,9 +76,9 @@ var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
         }, 4000);\r
     <\/script>`]];
 
-// speech-site/deployment/public-ad-call.mjs
-var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-b195ad3cfeaad488.mjs";
-var historicalPaths = /* @__PURE__ */ new Set(["/pinnacle-pages-scripts/portal-ad-call-1b357bec67c18321.mjs", "/pinnacle-pages-scripts/portal-ad-call-ce2939f4e8137e9f.mjs", "/pinnacle-pages-scripts/portal-ad-call-7f1663ac50806f5c.mjs"]);
+// deployment/public-ad-call.mjs
+var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-9fe06bc1fa41a76b.mjs";
+var historicalPaths = /* @__PURE__ */ new Set(["/pinnacle-pages-scripts/portal-ad-call-1b357bec67c18321.mjs", "/pinnacle-pages-scripts/portal-ad-call-ce2939f4e8137e9f.mjs", "/pinnacle-pages-scripts/portal-ad-call-7f1663ac50806f5c.mjs", "/pinnacle-pages-scripts/portal-ad-call-b195ad3cfeaad488.mjs"]);
 var source = `// Shared advertising call measurement for eligible public Pinnacle pages.
 // There is no visitor choice gate: site-owner approved measurement starts once.
 export const preferencesMarkup = '';
@@ -112,7 +112,17 @@ export function installAdCallMeasurement() {
     ['/assessments/stuttering-assessment', '/certified-courses', '/certified-courses/'].includes(location.pathname);
   const privatePath=/^\\/(?:account|auth|admin|api|internal|private|customer|customers|patient|patients|payroll|reports?|documents?|cart|checkout)(?:\\/|$)|^\\/(?:ask\\/(?:te\\/)?(?:account|auth|api|search)|shop\\/(?:cart|checkout)|books\\/download)(?:\\/|$)/i;
   if(location.protocol!=='https:'||!hosts.has(location.hostname)||privatePath.test(location.pathname))return;
-  let qa=false;try{qa=new URL(location.href).searchParams.has('validation_test');if(qa)sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));else{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));qa=at>0&&at<=Date.now()&&Date.now()-at<86400000;}}catch{}
+  let qa=false;
+  try{
+    const p=new URL(location.href).searchParams,mode=p.getAll('measurement_mode'),hint=p.getAll('qa_mode');
+    qa=p.has('validation_test')||(hint.length===1&&/^(?:1|true|qa|test|validation|internal|fixture)$/i.test(hint[0]))||(mode.length===1&&/^qa$/i.test(mode[0]));
+    if(qa)try{sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));}catch{}
+    try{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));qa=qa||(at>0&&at<=Date.now()&&Date.now()-at<86400000);}catch{}
+    try{
+      const observed=JSON.parse(sessionStorage.getItem('pinnacle-observed-qa-v1')||'null'),v=observed?.value;
+      qa=qa||!!(observed&&Number.isSafeInteger(observed.at)&&observed.at<=Date.now()&&Date.now()-observed.at<86400000&&v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).every(key=>['schemaVersion','provenance','hints'].includes(key))&&v.schemaVersion===1&&v.provenance==='client_observed'&&Array.isArray(v.hints)&&v.hints.length>0&&v.hints.length<=2&&new Set(v.hints).size===v.hints.length&&v.hints.every(name=>['validation_test','qa_mode'].includes(name)));
+    }catch{}
+  }catch{}
   if(qa)return;
   if(!window.__pinnacleProtectionContainer){
    window.__pinnacleProtectionContainer={status:'pending'};
@@ -221,7 +231,7 @@ function servePublicAdCall(request) {
   return new Response(["GET", "HEAD"].includes(request.method) && request.method !== "HEAD" ? source : null, { status: ["GET", "HEAD"].includes(request.method) ? 200 : 405, headers: { "access-control-allow-origin": "*", "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=31536000, immutable", "x-content-type-options": "nosniff", allow: "GET, HEAD" } });
 }
 
-// speech-site/deployment/protection-csp.mjs
+// deployment/protection-csp.mjs
 var origin = "https://www.pinnacleblooms.org";
 var protect = "https://protect.pinnacleblooms.org";
 var paths = /* @__PURE__ */ new Set(["/", "/centers", "/top-speech-therapy-center-india-proven-improvement-rate", "/best-occupational-therapy-center-india-proven-improvement-rate", "/best-aba-therapy-center-india-proven-improvement-rate", "/best-special-education-center-call-9100181181", "/autism-therapy", "/speech-aba-autism-assessments", "/enroll-autism-speech-aba-therapies-india", "/speech-therapy/service-information", "/speech-therapy/first-visit-guide", "/speech-therapy/teacher-observation-guide"]);
@@ -250,7 +260,7 @@ function protectionCsp(request, response) {
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers: h });
 }
 
-// speech-site/deployment/public-template-protection.mjs
+// deployment/public-template-protection.mjs
 var PUBLIC_TEMPLATE_PROTECTION_SOURCE = "/pinnacle-pages-scripts/protection-consumer.mjs?v=protection-default-20261020";
 var marker = "existing-consumer-v1";
 function repairPublicTemplateProtection(request, response) {
@@ -277,7 +287,7 @@ function repairPublicTemplateProtection(request, response) {
   return protectionCsp(request, rewritten);
 }
 
-// speech-site/deployment/legacy-measurement.mjs
+// deployment/legacy-measurement.mjs
 var serveLegacyMeasurementCall = servePublicAdCall;
 var normal = (text) => text.replaceAll("\r\n", "\n").trim();
 var fingerprints = new Set(LEGACY_TAGS.map(normal));

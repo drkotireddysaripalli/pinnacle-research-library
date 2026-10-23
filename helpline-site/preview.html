@@ -233,12 +233,15 @@ function originOnlyAcquisition(retained,referrer,landingPath,capturedAt=Date.now
  return referrerOrigin?{schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields:{},referrerOrigin}:null;
 }
 /* PINNACLE_REFERRER_ORIGIN_END */
-  let validationTraffic = new URL(location.href).searchParams.has('validation_test');
+  const qaParameters = new URL(location.href).searchParams;
+  const explicitQaTraffic = qaParameters.has('validation_test') || readClientQaHints({storage:null}) !== null ||
+    (qaParameters.getAll('measurement_mode').length === 1 && /^qa$/i.test(qaParameters.get('measurement_mode')));
+  let validationTraffic = explicitQaTraffic || readClientQaHints() !== null;
   try {
-    if (validationTraffic) sessionStorage.setItem('pinnacle-validation-v1', String(Date.now()));
+    if (explicitQaTraffic) sessionStorage.setItem('pinnacle-validation-v1', String(Date.now()));
     else {
       const at = Number(sessionStorage.getItem('pinnacle-validation-v1'));
-      validationTraffic = at > 0 && at <= Date.now() && Date.now() - at < 86400000;
+      validationTraffic = validationTraffic || (at > 0 && at <= Date.now() && Date.now() - at < 86400000);
     }
   } catch {}
   if (!production || validationTraffic || window.__pinnacleHelplineMeasurement) return;

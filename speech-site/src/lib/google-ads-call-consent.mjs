@@ -31,7 +31,17 @@ export function installAdCallMeasurement() {
     ['/assessments/stuttering-assessment', '/certified-courses', '/certified-courses/'].includes(location.pathname);
   const privatePath=/^\/(?:account|auth|admin|api|internal|private|customer|customers|patient|patients|payroll|reports?|documents?|cart|checkout)(?:\/|$)|^\/(?:ask\/(?:te\/)?(?:account|auth|api|search)|shop\/(?:cart|checkout)|books\/download)(?:\/|$)/i;
   if(location.protocol!=='https:'||!hosts.has(location.hostname)||privatePath.test(location.pathname))return;
-  let qa=false;try{qa=new URL(location.href).searchParams.has('validation_test');if(qa)sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));else{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));qa=at>0&&at<=Date.now()&&Date.now()-at<86400000;}}catch{}
+  let qa=false;
+  try{
+    const p=new URL(location.href).searchParams,mode=p.getAll('measurement_mode'),hint=p.getAll('qa_mode');
+    qa=p.has('validation_test')||(hint.length===1&&/^(?:1|true|qa|test|validation|internal|fixture)$/i.test(hint[0]))||(mode.length===1&&/^qa$/i.test(mode[0]));
+    if(qa)try{sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));}catch{}
+    try{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));qa=qa||(at>0&&at<=Date.now()&&Date.now()-at<86400000);}catch{}
+    try{
+      const observed=JSON.parse(sessionStorage.getItem('pinnacle-observed-qa-v1')||'null'),v=observed?.value;
+      qa=qa||!!(observed&&Number.isSafeInteger(observed.at)&&observed.at<=Date.now()&&Date.now()-observed.at<86400000&&v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).every(key=>['schemaVersion','provenance','hints'].includes(key))&&v.schemaVersion===1&&v.provenance==='client_observed'&&Array.isArray(v.hints)&&v.hints.length>0&&v.hints.length<=2&&new Set(v.hints).size===v.hints.length&&v.hints.every(name=>['validation_test','qa_mode'].includes(name)));
+    }catch{}
+  }catch{}
   if(qa)return;
   if(!window.__pinnacleProtectionContainer){
    window.__pinnacleProtectionContainer={status:'pending'};
