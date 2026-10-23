@@ -181,10 +181,13 @@ function originOnlyAcquisition(retained,referrer,landingPath,capturedAt=Date.now
  return referrerOrigin?{schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields:{},referrerOrigin}:null;
 }
 /* PINNACLE_REFERRER_ORIGIN_END */
-  let validationTraffic = new URL(location.href).searchParams.has('validation_test');
+  const qaParameters = new URL(location.href).searchParams;
+  const explicitQaTraffic = qaParameters.has('validation_test') || readClientQaHints({storage:null}) !== null ||
+    (qaParameters.getAll('measurement_mode').length === 1 && /^qa$/i.test(qaParameters.get('measurement_mode')));
+  let validationTraffic = explicitQaTraffic || readClientQaHints() !== null;
   // Keep an explicitly labelled QA journey out of live totals after its query
   // disappears during navigation. This tab-only flag contains no URL or user ID.
-  try{if(validationTraffic)sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));else{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));validationTraffic=at>0&&at<=Date.now()&&Date.now()-at<86400000;}}catch{}
+  try{if(explicitQaTraffic)sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));else{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));validationTraffic=validationTraffic||(at>0&&at<=Date.now()&&Date.now()-at<86400000);}}catch{}
   const callPlacements = new Set(['callback-call','knowledge-call','ask-call','ask-answer-call','header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call','family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']);
   const enquiryPlacements = new Set(['knowledge-enrol','header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','final-assessment','mobile-assessment','centre-enquiry','ot-final-enrol','aba-final-enrol','autism-first-enquiry']);
   const occupationalNavigation = new Set(['ot-hero-centres','ot-final-centres']);

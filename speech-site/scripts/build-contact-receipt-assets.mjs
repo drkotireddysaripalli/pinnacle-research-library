@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import './refresh-enquiry-validation.mjs';
-import './refresh-enquiry-referrer.mjs';
+// Both refreshers write the same collectors; finish each before starting the next.
+await import('./refresh-enquiry-validation.mjs');
+await import('./refresh-enquiry-referrer.mjs');
 
 const names = [
   'contact-receipt.js',

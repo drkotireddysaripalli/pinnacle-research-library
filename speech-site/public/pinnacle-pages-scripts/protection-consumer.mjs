@@ -39,8 +39,22 @@ export function installPublicProtection(win,doc){
   try{
    const u=new URL(win.location.href);
    if(u.protocol!=='https:'||!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)||/^\/(?:account|auth|admin|api|internal|private|customer|customers|patient|patients|payroll|reports?|documents?|cart|checkout)(?:\/|$)|^\/(?:ask\/(?:te\/)?(?:account|auth|api|search)|shop\/(?:cart|checkout)|books\/download)(?:\/|$)/i.test(u.pathname))return false;
-   if(u.searchParams.has('validation_test'))return false;
-   try{const at=Number(win.sessionStorage?.getItem('pinnacle-validation-v1'));if(at>0&&at<=Date.now()&&Date.now()-at<86400000)return false;}catch{}
+   const qa=u.searchParams.getAll('qa_mode'),mode=u.searchParams.getAll('measurement_mode');
+   const explicitQa=u.searchParams.has('validation_test') ||
+    (qa.length===1&&/^(?:1|true|qa|test|validation|internal|fixture)$/i.test(qa[0])) ||
+    (mode.length===1&&/^qa$/i.test(mode[0]));
+   if(explicitQa){try{win.sessionStorage?.setItem('pinnacle-validation-v1',String(Date.now()));}catch{}return false;}
+   try{
+    const at=Number(win.sessionStorage?.getItem('pinnacle-validation-v1'));
+    if(at>0&&at<=Date.now()&&Date.now()-at<86400000)return false;
+   }catch{}
+   try{
+    const observed=JSON.parse(win.sessionStorage?.getItem('pinnacle-observed-qa-v1')||'null'),v=observed?.value;
+    if(observed&&Number.isSafeInteger(observed.at)&&observed.at<=Date.now()&&Date.now()-observed.at<86400000&&
+     v&&typeof v==='object'&&!Array.isArray(v)&&Object.keys(v).every(key=>['schemaVersion','provenance','hints'].includes(key))&&
+     v.schemaVersion===1&&v.provenance==='client_observed'&&Array.isArray(v.hints)&&v.hints.length>0&&v.hints.length<=2&&
+     new Set(v.hints).size===v.hints.length&&v.hints.every(name=>['validation_test','qa_mode'].includes(name)))return false;
+   }catch{}
    return true;
   }catch{return false;}
  };

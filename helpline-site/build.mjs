@@ -1,6 +1,7 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises';
-import '../speech-site/scripts/refresh-enquiry-validation.mjs';
-import '../speech-site/scripts/refresh-enquiry-referrer.mjs';
+// These refreshers share their output files and must not race their writes.
+await import('../speech-site/scripts/refresh-enquiry-validation.mjs');
+await import('../speech-site/scripts/refresh-enquiry-referrer.mjs');
 import { createHash } from 'node:crypto';
 import { gzipSync } from 'node:zlib';
 import { fileURLToPath } from 'node:url';
