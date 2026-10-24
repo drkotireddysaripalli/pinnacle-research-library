@@ -449,7 +449,7 @@ function originOnlyAcquisition(retained,referrer,landingPath,capturedAt=Date.now
     if (!limitedActionNames.has(name) || !parameters || parameters.page_group!==pageGroup) return false;
     const placement=parameters.link_placement,destination=parameters.destination;
     if (name==='phone_link_click' && parameters.schema_version===2 && destination==='national_helpline' && (callPlacements.has(placement)||placement==='central-phone')) return send(name,{schema_version:2,link_placement:placement,destination});
-    if (name==='phone_link_click' && parameters.schema_version===2 && destination==='centre_direct' && directCallPlacements.has(placement) && directCentreIds.has(parameters.centre_id)) return send(name,{schema_version:2,link_placement:placement,destination,centre_id:parameters.centre_id});
+    if (name==='phone_link_click' && parameters.schema_version===2 && destination==='centre_direct' && directCallPlacements.has(placement) && directCentreIds.has(parameters.publiccentre_id)) return send(name,{schema_version:2,link_placement:placement,destination,publiccentre_id:parameters.publiccentre_id});
     if (name==='whatsapp_link_click' && parameters.schema_version===4 && destination==='national_helpline' && ['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp','central-whatsapp'].includes(placement)) return send(name,{schema_version:4,link_placement:placement,destination});
     if (name==='enquiry_link_click' && parameters.schema_version===2 && destination==='existing_enrolment_form' && enquiryPlacements.has(placement)) return send(name,{schema_version:2,link_placement:placement,destination});
     return false;
@@ -544,7 +544,7 @@ function originOnlyAcquisition(retained,referrer,landingPath,capturedAt=Date.now
       }
       if(centreId){
         if(directClickEvents.has(event))return;
-        if(sendPublicIntent('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'centre_direct',centre_id:centreId}))directClickEvents.add(event);
+        if(sendPublicIntent('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'centre_direct',publiccentre_id:centreId}))directClickEvents.add(event);
         return; // One intent event; the browser retains its original tel action.
       }
     }

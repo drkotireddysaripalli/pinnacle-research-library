@@ -29,14 +29,14 @@ function harness({pathname=speech,search='',qaAt,reload=false}={}){
 const phoneEvents=r=>r.events.filter(e=>e[1]==='phone_link_click');
 test('all 54 published direct-centre links emit one safe centre intent with no vendor conversion',()=>{
  assert.equal(published.length,54);assert(published.some(c=>c.id==='gajuwaka'));assert(published.some(c=>c.id==='jagadamba'));
- const h=harness();for(const c of published){const href='tel:'+c.directTelephone,r=h.click({href,cardId:'centre-'+c.id});const events=phoneEvents(r);assert.equal(events.length,1,c.id);assert.equal(events[0][2].centre_id,c.id);assert.equal(events[0][2].destination,'centre_direct');assert.equal(events[0][2].link_placement,'centre-direct-call');assert.equal(r.link.href,href);assert(!JSON.stringify(events).includes(c.directTelephone));assert(!r.events.some(e=>e[1]==='google_ads_phone_click'));}assert.equal(h.signals().length,0);
+ const h=harness();for(const c of published){const href='tel:'+c.directTelephone,r=h.click({href,cardId:'centre-'+c.id});const events=phoneEvents(r);assert.equal(events.length,1,c.id);assert.equal(events[0][2].publiccentre_id,c.id);assert.equal(events[0][2].destination,'centre_direct');assert.equal(events[0][2].link_placement,'centre-direct-call');assert.equal(r.link.href,href);assert(!JSON.stringify(events).includes(c.directTelephone));assert(!r.events.some(e=>e[1]==='google_ads_phone_click'));}assert.equal(h.signals().length,0);
 });
 test('Attapur local alternative uses its exact published profile and keeps the dialled number',()=>{
  const c=published.find(c=>c.id==='attapur'),h=harness({pathname:new URL(c.profileUrl).pathname});const href='tel:'+c.directTelephone,r=h.click({href,cta:'local-centre-call',localArea:true});
- assert.equal(phoneEvents(r).length,1);assert.equal(phoneEvents(r)[0][2].centre_id,'attapur');assert.equal(phoneEvents(r)[0][2].link_placement,'local-centre-call');assert.equal(r.link.href,href);assert.equal(h.signals().length,0);
+ assert.equal(phoneEvents(r).length,1);assert.equal(phoneEvents(r)[0][2].publiccentre_id,'attapur');assert.equal(phoneEvents(r)[0][2].link_placement,'local-centre-call');assert.equal(r.link.href,href);assert.equal(h.signals().length,0);
 });
 test('national and forwarded central calls retain their existing classification',()=>{
- const h=harness();for(const c of [{href:'tel:+919100181181',cardId:'centre-suchitra'},{href:'tel:+18005550100',cardId:'centre-suchitra',forwarded:true}]){const r=h.click(c);assert.equal(phoneEvents(r).length,1);assert.equal(phoneEvents(r)[0][2].destination,'national_helpline');assert(!Object.hasOwn(phoneEvents(r)[0][2],'centre_id'));assert.equal(r.link.href,c.href);}
+ const h=harness();for(const c of [{href:'tel:+919100181181',cardId:'centre-suchitra'},{href:'tel:+18005550100',cardId:'centre-suchitra',forwarded:true}]){const r=h.click(c);assert.equal(phoneEvents(r).length,1);assert.equal(phoneEvents(r)[0][2].destination,'national_helpline');assert(!Object.hasOwn(phoneEvents(r)[0][2],'publiccentre_id'));assert.equal(r.link.href,c.href);}
 });
 test('unknown centres, wrong containers and malformed telephone URLs are not counted',()=>{
  const h=harness();for(const c of [{href:'tel:+919100222183',cardId:'centre-unknown'},{href:'tel:+919100222183'},{href:'tel:+919100222183?secret=x',cardId:'centre-suchitra'},{href:'tel:+919100222183;ext=22',cardId:'centre-suchitra'},{href:'javascript:alert(1)',cardId:'centre-suchitra'},{href:'tel:12',cardId:'centre-suchitra'},{href:'tel:+919100222183',cardId:'not-centre-suchitra'}])assert.equal(phoneEvents(h.click(c)).length,0);
@@ -53,7 +53,7 @@ test('QA flags and retained QA suppress direct events while navigation still wor
 });
 test('paid source survives but phone, text and arbitrary metadata never enter the event',()=>{
  const h=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=Speech&gclid=offline-fixture'}),r=h.click({href:'tel:+919100222183',cardId:'centre-suchitra',extra:{phone:'private-number',patient:'private-patient',centreId:'invented'}}),p=phoneEvents(r)[0][2];
- assert.equal(p.campaign_source,'google');assert.equal(p.campaign_medium,'cpc');assert.equal(p.campaign_name,'Speech');assert.equal(p.centre_id,'suchitra');
+ assert.equal(p.campaign_source,'google');assert.equal(p.campaign_medium,'cpc');assert.equal(p.campaign_name,'Speech');assert.equal(p.publiccentre_id,'suchitra');
  for(const key of ['phone','href','text','patient','centreId'])assert(!Object.hasOwn(p,key));assert(!JSON.stringify(p).includes('private-'));
 });
 test('reinstalling the canonical collector does not duplicate a direct click',()=>{

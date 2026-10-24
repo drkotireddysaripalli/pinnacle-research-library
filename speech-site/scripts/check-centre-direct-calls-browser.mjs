@@ -28,7 +28,7 @@ try{for(const [name,pathname,expected]of fixtures){
    const events=entries.filter(x=>x[0]==='event'&&x[1]==='phone_link_click');
    const payload=events[0]?.[2],card=link.closest('#centre-cards .directory-card[id]');
    const expectedId=card?.id.replace(/^centre-/,'')||'attapur';
-   records.push({centreId:expectedId,count:events.length,destination:payload?.destination,reportedId:payload?.centre_id,placement:payload?.link_placement,navigationPreserved:link.getAttribute('href')===href,numberExcluded:!JSON.stringify(events).includes(href.slice(4)),adsCalls:entries.filter(x=>x[0]==='event'&&x[1]==='google_ads_phone_click').length});
+   records.push({centreId:expectedId,count:events.length,destination:payload?.destination,reportedId:payload?.publiccentre_id,placement:payload?.link_placement,navigationPreserved:link.getAttribute('href')===href,numberExcluded:!JSON.stringify(events).includes(href.slice(4)),adsCalls:entries.filter(x=>x[0]==='event'&&x[1]==='google_ads_phone_click').length});
   }
   return{expected,records,intercepted};
  },{expected});
