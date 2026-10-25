@@ -1,0 +1,7 @@
+import fs from'node:fs/promises';import path from'node:path';import assert from'node:assert/strict';import{build}from'esbuild';import{sha,patchHeadCsp}from'./head-csp-patch.mjs';
+const out=path.resolve(process.argv[2]),site=path.resolve(import.meta.dirname,'..'),manifest=JSON.parse(await fs.readFile(path.join(out,'preimage/manifest.json'),'utf8'));
+assert(!(await fs.stat(path.join(out,'release.json')).catch(()=>null)));const before=await fs.readFile(path.join(out,'preimage/pinnacle-verify-route/shared-navigation.mjs'),'utf8');
+const code=(await build({absWorkingDir:site,entryPoints:[path.join(site,'deployment/shared-navigation.mjs')],bundle:true,format:'esm',write:false,external:['./public-ad-call.mjs']})).outputFiles[0].text;
+assert(sha(code)===sha(patchHeadCsp(before)),'Only HEAD acceptance and its header-only return may change');const hashes={},changed={};
+for(const w of manifest.workers){hashes[w.name]={};changed[w.name]=[];const dir=path.join(out,'candidate',w.name);await fs.mkdir(dir,{recursive:true});for(const m of w.modules){let b=await fs.readFile(path.join(out,'preimage',w.name,m.name));assert.equal(sha(b),m.sha256);if(w.name==='pinnacle-verify-route'&&m.name==='shared-navigation.mjs'){b=Buffer.from(code);changed[w.name].push(m.name);}await fs.writeFile(path.join(dir,m.name),b,{mode:0o600});hashes[w.name][m.name]=sha(b);}}
+await fs.writeFile(path.join(out,'candidate-proof.json'),JSON.stringify({at:new Date().toISOString(),changed,hashes},null,2));console.log(JSON.stringify({changed}));
