@@ -38,9 +38,17 @@ for(const section of ['materials','interventions'])test(section+' root and detai
   const html='<html><head><title>Original library</title></head><body><main>Original content</main><a href="/original">Original link</a></body></html>';
   const res=await addLibraryRegistration(req,new Response(html,{headers:{'content-type':'text/html','etag':'old','content-length':'20'}}));const body=await res.text();
   assert.equal((body.match(/data-pinnacle-reader-signup=/g)||[]).length,1);assert(body.includes('returnTo='+encodeURIComponent('/'+section+(path==='/'?'':path))));
-  assert(body.includes('<main>Original content</main><a href="/original">Original link</a>'));assert.equal(res.headers.get('etag'),null);
+  assert.equal(body.replace(/<aside data-pinnacle-reader-signup=[\s\S]*?<\/aside>/,''),html);assert.equal(res.headers.get('etag'),null);
   const repeat=await addLibraryRegistration(req,new Response(body,{headers:{'content-type':'text/html'}}));assert.equal(await repeat.text(),body);
  }
+});
+for(const [label,html,anchor]of[
+ ['existing main','<html><body><header>Fixed header</header><main id="content">Library content</main></body></html>','<main id="content">'],
+ ['body fallback','<html><body class="library">Library content</body></html>','<body class="library">']
+])test('signup starts inside '+label,async()=>{
+ const res=await addLibraryRegistration(new Request('https://materials.pinnacleblooms.org/'),new Response(html,{headers:{'content-type':'text/html'}}));
+ const body=await res.text();assert(body.includes(anchor+'<aside data-pinnacle-reader-signup='));
+ assert.equal(body.replace(/<aside data-pinnacle-reader-signup=[\s\S]*?<\/aside>/,''),html);
 });
 test('assets, failed responses and other hosts are untouched',async()=>{
  for(const [url,status,type] of [['https://other.invalid/',200,'text/html'],['https://materials.pinnacleblooms.org/missing',404,'text/html'],['https://interventions.pinnacleblooms.org/app.js',200,'text/javascript']]){
