@@ -1,3 +1,4 @@
+import {addLibraryRegistration} from './library-registration.mjs';
 // Root-only correction for the existing published library; no item-route or source-admission changes.
 const origin='https://interventions.pinnacleblooms.org';
 const title='Pinnacle Blooms® Interventions Library';
@@ -51,4 +52,4 @@ export async function repairInterventionsIndex(request,response){
  headers.set('x-pinnacle-interventions-index','20261022-mobile-preview');
  return new Response(fixed,{status:response.status,statusText:response.statusText,headers});
 }
-export function createInterventionsIndexWrapper(original){return {...original,async fetch(request,env,ctx){return repairInterventionsIndex(request,await original.fetch(request,env,ctx));}};}
+export function createInterventionsIndexWrapper(original){return {...original,async fetch(request,env,ctx){return addLibraryRegistration(request,await repairInterventionsIndex(request,await original.fetch(request,env,ctx)));}};}
