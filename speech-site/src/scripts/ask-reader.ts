@@ -1,6 +1,6 @@
 // Identity is fetched separately: public SSR content never contains user data.
 import {setupAskVerification} from './ask-verification';
-import {readerLibrary} from '../lib/knowledge/journey.mjs';
+import {readerContext} from '../lib/reader-source.mjs';
 type GoogleIdentity={initialize:(options:Record<string,unknown>)=>void;renderButton:(element:HTMLElement,options:Record<string,unknown>)=>void;disableAutoSelect:()=>void};
 const googleIdentity=()=> (window as unknown as {google?:{accounts?:{id?:GoogleIdentity}}}).google?.accounts?.id;
 let googleLoader:Promise<void>|undefined;
@@ -27,8 +27,10 @@ if(gate){
  current.searchParams.delete('ask_signin');
  if(reason)history.replaceState(null,'',current.pathname+current.search+current.hash);
  if(reason==='signed-out')try{localStorage.setItem('ask-auth-change',String(Date.now()));}catch{}
- const returnTo=current.pathname+current.search+current.hash;
- const library=readerLibrary(current.pathname)||'ask';
+ const entry=readerContext(current.href);
+ // Keep the validated public return context in the URL until sign-in succeeds, so reload/retry preserves its source.
+ const {returnTo,library}=entry;
+ if(entry.forwarded)gate.querySelector<HTMLElement>('#ask-gate-title')!.textContent=library==='materials'?'Pinnacle Materials':'Pinnacle Interventions';
  signIn.querySelector<HTMLInputElement>('[name=library]')!.value=library;
  for(const form of [signIn,signOut])form.querySelector<HTMLInputElement>('[name=returnTo]')!.value=returnTo;
  const lock=()=>{verification.close();profile.hidden=true;profile.open=false;openButton.hidden=false;if(!gate.open)gate.showModal();};
@@ -52,6 +54,7 @@ if(gate){
      if(data.profile.avatar){image.onload=()=>{image.hidden=false;fallback.hidden=true;};image.onerror=()=>{image.hidden=true;fallback.hidden=false;};image.src=data.profile.avatar;}
     });
     profile.hidden=false;openButton.hidden=true;gate!.close();
+    if(entry.forwarded)location.replace(entry.destination);
    }else{
     lock();
     if(data.google){

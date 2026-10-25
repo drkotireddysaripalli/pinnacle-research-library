@@ -1,3 +1,4 @@
+import {addLibraryRegistration} from './library-registration.mjs';
 import { repairMaterialsMedia } from './materials-media-repair.mjs';
 import { repairResponse } from './repair.mjs';
 export default {
@@ -86,7 +87,7 @@ if (url.pathname.startsWith("/cdn-cgi/")) {
       return new Response("Not Found", { status: 404 });
     }
 
-    response = repairMaterialsMedia(request, await repairResponse(response, url));
+    response = await addLibraryRegistration(request, repairMaterialsMedia(request, await repairResponse(response, url)));
 
     /* =====================================================
        7. RETURN FINAL RESPONSE
