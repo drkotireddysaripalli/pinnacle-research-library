@@ -11,8 +11,8 @@ test('Reader registration buckets contain no question, identity or diagnosis his
  assert.equal(readerLibrary('/shop/cart'),null);assert.equal(readerLibrary('/api/gl/swfs'),null);
 });
 test('Exact approved library returns and permitted campaign identifiers survive Google',()=>{
- for(const path of ['/allmirracles','/allmirracles/category/Speech%20Therapy','/mirracles/10369/published-video','/faq/hindi/speech-therapy?gclid=qaClickAbc123','/ask/pincer-grasp?utm_source=google&utm_medium=cpc&page=1'])assert.equal(safeReturn(path),path);
- for(const path of ['//evil.example','/mirracles/account','/mirracles/1/../account','/allmirracles/category/%2faccount','/ask/auth/google','/ask/reader-shell','/materials/not-migrated','/ask/pincer-grasp?email=private@example.org','/faq?gclid=a&gclid=b'])assert.equal(safeReturn(path),'/ask');
+ for(const path of ['/materials/not-migrated','/interventions','/interventions/communication','/allmirracles','/allmirracles/category/Speech%20Therapy','/mirracles/10369/published-video','/faq/hindi/speech-therapy?gclid=qaClickAbc123','/ask/pincer-grasp?utm_source=google&utm_medium=cpc&page=1'])assert.equal(safeReturn(path),path);
+ for(const path of ['//evil.example','/mirracles/account','/mirracles/1/../account','/allmirracles/category/%2faccount','/ask/auth/google','/ask/reader-shell','/ask/pincer-grasp?email=private@example.org','/faq?gclid=a&gclid=b'])assert.equal(safeReturn(path),'/ask');
 });
 test('One shared reading block preserves medical-care and franchise exceptions',async()=>{
  const answer=await fs.readFile('src/components/ask/AskAnswer.astro','utf8');assert(answer.indexOf('<ReaderJourney')>answer.indexOf('data-ask-answer'));assert(answer.includes('a.medicalSafetyPage?'));
