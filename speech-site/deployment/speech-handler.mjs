@@ -1,3 +1,4 @@
+import {readerProfileShell,readerProfileResponseHeaders} from './reader-profile-shell.mjs';
 import {hasStoreChoices,addStoreChoices,STORE_CHOICE_RELEASE} from './book-store-choices.mjs';
 import {createMirraclesLibrary} from './mirracles-library.mjs';
 import {createGuruRecovery} from './guru-recovery.mjs';
@@ -58,7 +59,7 @@ async function serveMirraclesLibrary(request,env){
  if(!mirraclesPublicHandler){
   let shellPromise;
   const read=async name=>{if(!/^(?:catalogue|details-\d+|shell|reader)$/.test(name))throw Error('Unknown public video asset');const r=await env.ASSETS.fetch(new Request('https://assets.local/mirracles-library-data/'+name+'.json'));if(r.status!==200)throw Error('Public video asset unavailable');return r.json();};
-  mirraclesPublicHandler=createMirraclesLibrary({loadJson:read,shell:async()=>{shellPromise??=Promise.all([read('shell'),read('reader')]).then(([shell,reader])=>({...shell,reader})).catch(e=>{shellPromise=undefined;throw e});return shellPromise},responseHeaders:{'Content-Security-Policy':"object-src 'none'; base-uri 'self'; frame-ancestors 'self'",'X-Pinnacle-Mirracles-Library':'public-reader-20261008'}});
+  mirraclesPublicHandler=createMirraclesLibrary({loadJson:read,shell:async()=>{shellPromise??=Promise.all([read('shell'),read('reader')]).then(([shell,reader])=>({...shell,reader:readerProfileShell(reader)})).catch(e=>{shellPromise=undefined;throw e});return shellPromise},responseHeaders:readerProfileResponseHeaders});
  }
  if(u.hostname==='pinnacleblooms.org'){u.hostname='www.pinnacleblooms.org';const known=await mirraclesPublicHandler(new Request(u.href,request));return known?new Response(null,{status:301,headers:{location:u.href,'cache-control':'private, no-store'}}):null;}
  return mirraclesPublicHandler(request);

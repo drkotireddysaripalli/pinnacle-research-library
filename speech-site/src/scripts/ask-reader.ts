@@ -1,5 +1,6 @@
 // Identity is fetched separately: public SSR content never contains user data.
 import {setupAskVerification} from './ask-verification';
+import {setupReaderProfile} from './ask-reader-profile';
 import {readerContext} from '../lib/reader-source.mjs';
 type GoogleIdentity={initialize:(options:Record<string,unknown>)=>void;renderButton:(element:HTMLElement,options:Record<string,unknown>)=>void;disableAutoSelect:()=>void};
 const googleIdentity=()=> (window as unknown as {google?:{accounts?:{id?:GoogleIdentity}}}).google?.accounts?.id;
@@ -17,6 +18,7 @@ const gate=document.querySelector<HTMLDialogElement>('#ask-reader-gate');
 if(gate){
  const signIn=document.querySelector<HTMLFormElement>('[data-ask-google-form]')!;
  const signOut=document.querySelector<HTMLFormElement>('[data-ask-logout]')!;
+ const completion=document.createElement('input');completion.type='hidden';completion.name='completeProfile';completion.value='yes';signIn.append(completion);
  const profile=document.querySelector<HTMLDetailsElement>('[data-ask-profile]')!;
  const openButton=document.querySelector<HTMLButtonElement>('[data-ask-sign-in]')!;
  const status=gate.querySelector<HTMLElement>('[data-ask-gate-status]')!;
@@ -33,7 +35,7 @@ if(gate){
  if(entry.forwarded)gate.querySelector<HTMLElement>('#ask-gate-title')!.textContent=library==='materials'?'Pinnacle Materials':'Pinnacle Interventions';
  signIn.querySelector<HTMLInputElement>('[name=library]')!.value=library;
  for(const form of [signIn,signOut])form.querySelector<HTMLInputElement>('[name=returnTo]')!.value=returnTo;
- const lock=()=>{verification.close();profile.hidden=true;profile.open=false;openButton.hidden=false;if(!gate.open)gate.showModal();};
+ const lock=()=>{verification.close();readerDetails.update(null,'');profile.hidden=true;profile.open=false;openButton.hidden=false;if(!gate.matches(':modal')){if(gate.open)gate.close();gate.showModal();}};
  gate.addEventListener('cancel',event=>event.preventDefault());
  openButton.addEventListener('click',lock);
  let pending=false;
@@ -45,6 +47,7 @@ if(gate){
    if(!response.ok)throw Error('session');
    const data=await response.json();if(!/^[0-9a-f-]{36}$/.test(data.csrf||''))throw Error('session');
    verification.update(data.profile?.whatsappVerified===true,data.csrf);
+   readerDetails.update(data.profile?data.readerProfile||null:null,data.csrf,data.googleProfileImport,data.profile?.whatsappVerified===true);
    for(const form of [signIn,signOut])form.querySelector<HTMLInputElement>('[name=csrf]')!.value=data.csrf;
    if(data.profile){
     const name=String(data.profile.name||'Ask reader');
@@ -54,7 +57,8 @@ if(gate){
      if(data.profile.avatar){image.onload=()=>{image.hidden=false;fallback.hidden=true;};image.onerror=()=>{image.hidden=true;fallback.hidden=false;};image.src=data.profile.avatar;}
     });
     profile.hidden=false;openButton.hidden=true;gate!.close();
-    if(entry.forwarded)location.replace(entry.destination);
+    const continueReading=()=>{if(entry.forwarded)location.replace(entry.destination);};
+    if(!readerDetails.offer(continueReading))continueReading();
    }else{
     lock();
     if(data.google){
@@ -73,6 +77,7 @@ if(gate){
   finally{pending=false;}
  }
  const verification=setupAskVerification(check);
+ const readerDetails=setupReaderProfile(loadGoogle,phone=>{const input=document.querySelector<HTMLInputElement>('[data-ask-phone-form] [name=phone]');if(input)input.value=phone;document.querySelector<HTMLButtonElement>('[data-ask-verify-open]')?.click();});
  retry.addEventListener('click',()=>void check());
  signIn.addEventListener('submit',()=>{button.disabled=true;status.textContent='Opening Google…';});
  signOut.addEventListener('submit',()=>{googleIdentity()?.disableAutoSelect();lock();});

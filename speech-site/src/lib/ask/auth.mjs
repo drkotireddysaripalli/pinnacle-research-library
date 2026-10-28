@@ -1,6 +1,7 @@
 import {libraryReturn,readerDestination,readerSignInPath,registrationSection} from '../reader-source.mjs';
 import {createServerClient,parseCookieHeader,serializeCookieHeader} from '@supabase/ssr';
 import {createClient} from '@supabase/supabase-js';
+import {readerProfile,saveReaderProfile,importGoogleProfile,GOOGLE_PROFILE_SCOPES} from './reader-profile.mjs';
 // Keep paths/codes out of referrers while retaining the Origin on native POST forms.
 // no-referrer makes browsers send Origin: null, which correctly fails the CSRF guard.
 export const AUTH_HEADERS={'cache-control':'private, no-store, max-age=0','cdn-cache-control':'no-store','cloudflare-cdn-cache-control':'no-store','x-robots-tag':'noindex, nofollow','referrer-policy':'strict-origin','x-content-type-options':'nosniff'};
@@ -104,7 +105,7 @@ export async function action(request,env,kind){
   const profile=googleProfile(user);
   if(profile&&!await registerReader(env,user,request.headers.get('x-pinnacle-reader-library')))return c.reply('Your registration could not be saved. Please try again.',503);
   c.headers.set('content-type','application/json; charset=utf-8');
-  return c.reply(JSON.stringify({profile:profile?{...profile,whatsappVerified:registrationComplete(user)}:null,csrf:csrf(c),...(!profile&&googleClientId(env)?{google:await googleConfiguration(c,env)}:{})}));
+  return c.reply(JSON.stringify({profile:profile?{...profile,whatsappVerified:registrationComplete(user)}:null,csrf:csrf(c),...(profile?{readerProfile:readerProfile(user),...(env.ASK_GOOGLE_PROFILE_IMPORT_ENABLED==='true'&&googleClientId(env)?{googleProfileImport:{clientId:googleClientId(env),scopes:GOOGLE_PROFILE_SCOPES}}:{})}:{}),...(!profile&&googleClientId(env)?{google:await googleConfiguration(c,env)}:{})}));
  }
  if(kind==='callback'){
   if(request.method!=='GET')return c.reply('Method not allowed',405);
@@ -113,11 +114,12 @@ export async function action(request,env,kind){
   if(error||!googleProfile(data.user)){await c.auth.auth.signOut({scope:'local'});return back('sign-in');}
   if(!await registerReader(env,data.user,c.cookies.get('pinnacle-ask-library')))return back('registration');
   const returnTo=safeReturn(c.cookies.get('pinnacle-ask-return'));c.set('pinnacle-ask-return','',{maxAge:0});
-  c.set('pinnacle-ask-library','',{maxAge:0});return c.redirect(readerDestination(returnTo));
+  const complete=c.cookies.get('pinnacle-ask-complete-profile')==='yes'&&!readerProfile(data.user).reviewed;c.set('pinnacle-ask-complete-profile','',{maxAge:0});
+  c.set('pinnacle-ask-library','',{maxAge:0});return c.redirect(complete&&libraryReturn(returnTo)?readerSignInPath(returnTo):readerDestination(returnTo));
  }
  if(request.method!=='POST')return c.reply('Method not allowed',405);
  if(!request.headers.get('content-type')?.startsWith('application/x-www-form-urlencoded'))return c.reply('Unsupported request',415);
- const text=await request.text();if(text.length>(kind==='google-id-token'?16384:4096))return c.reply('Request too large',413);
+ const text=await request.text();if(text.length>(['google-id-token','google-profile'].includes(kind)?16384:4096))return c.reply('Request too large',413);
  const form=new URLSearchParams(text);if(!validPost(c,form))return c.reply('Please reopen the account page and try again.',403);
  if(kind==='google-id-token'){
   const returnTo=safeReturn(form.get('returnTo'));
@@ -130,20 +132,30 @@ export async function action(request,env,kind){
   const {data,error}=await c.auth.auth.signInWithIdToken({provider:'google',token,nonce});
   if(error||!googleProfile(data.user)){await c.auth.auth.signOut({scope:'local'});return retry('sign-in');}
   if(!await registerReader(env,data.user,form.get('library'),safeReturn(form.get('returnTo'))===form.get('returnTo')?returnTo:null))return retry('registration');
-  c.set('pinnacle-ask-library','',{maxAge:0});return c.redirect(readerDestination(returnTo));
+  c.set('pinnacle-ask-library','',{maxAge:0});return c.redirect(form.get('completeProfile')==='yes'&&!readerProfile(data.user).reviewed&&libraryReturn(returnTo)?readerSignInPath(returnTo):readerDestination(returnTo));
  }
  if(Object.hasOwn(OAUTH_PROVIDERS,kind)){
   if(!enabledProviders(env).includes(kind))return c.reply('This sign-in option is not available yet.',503);
   if(await limited(env,'oauth:'+request.headers.get('cf-connecting-ip')))return back('wait');
   c.set('pinnacle-ask-return',safeReturn(form.get('returnTo')),{maxAge:1800});
+  c.set('pinnacle-ask-complete-profile',form.get('completeProfile')==='yes'?'yes':'',{maxAge:1800});
   const library=registrationSection(form.get('library'),safeReturn(form.get('returnTo'))===form.get('returnTo')?form.get('returnTo'):null);c.set('pinnacle-ask-library',library,{maxAge:1800});
   const {data,error}=await c.auth.auth.signInWithOAuth({provider:kind,options:{redirectTo:c.url.origin+'/ask/auth/callback',skipBrowserRedirect:true,...(OAUTH_PROVIDERS[kind].scopes?{scopes:OAUTH_PROVIDERS[kind].scopes}:{})}});
   return error||!data.url?back('sign-in'):c.redirect(data.url);
  }
- if(kind==='logout'){const {error}=await c.auth.auth.signOut({scope:'local'});if(error)return c.reply('Sign out could not be completed. Please try again.',503);for(const name of ['pinnacle-ask-phone','pinnacle-ask-return','pinnacle-ask-library','pinnacle-ask-csrf',GOOGLE_NONCE_COOKIE])c.set(name,'',{maxAge:0});const target=new URL(safeReturn(form.get('returnTo')),c.url.origin);target.searchParams.set('ask_signin','signed-out');return c.redirect(target.pathname+target.search+target.hash);}
+ if(kind==='logout'){const {error}=await c.auth.auth.signOut({scope:'local'});if(error)return c.reply('Sign out could not be completed. Please try again.',503);for(const name of ['pinnacle-ask-phone','pinnacle-ask-return','pinnacle-ask-library','pinnacle-ask-complete-profile','pinnacle-ask-csrf',GOOGLE_NONCE_COOKIE])c.set(name,'',{maxAge:0});const target=new URL(safeReturn(form.get('returnTo')),c.url.origin);target.searchParams.set('ask_signin','signed-out');return c.redirect(target.pathname+target.search+target.hash);}
  const {data:{user},error}=await c.auth.auth.getUser();
  if(error||!hasSupportedIdentity(user))return back('sign-in');
  if(await limited(env,kind+':'+user.id))return back('wait');
+ if(kind==='reader-profile'||kind==='google-profile'){
+  if(!googleProfile(user))return back('sign-in');
+  let result;
+  if(kind==='google-profile')result=env.ASK_GOOGLE_PROFILE_IMPORT_ENABLED==='true'?await importGoogleProfile(env,user,form.get('access_token')):{status:'google-profile-unavailable'};
+  else if(!['save','skip'].includes(form.get('mode')))result={status:'profile-format'};
+  else result=await saveReaderProfile(env,user,Object.fromEntries(['phone','city','postal_code','country'].map(k=>[k,form.get(k)])),form.get('mode')==='skip'?'skip':'user');
+  c.headers.set('content-type','application/json; charset=utf-8');
+  return c.reply(JSON.stringify(result),['profile-saved','profile-skipped'].includes(result.status)?200:/unavailable|save$/.test(result.status)?503:400);
+ }
  if(kind==='contact'){
   if(!googleProfile(user)||!registrationComplete(user))return back('verification-required');
   const mode=form.get('mode');if(!['call','whatsapp'].includes(mode))return back('invalid-contact');
