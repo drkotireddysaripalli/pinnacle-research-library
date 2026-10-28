@@ -17,11 +17,11 @@ try{for(const width of (mirracles?[390,1440]:[320,390,1440]))for(const scenario 
    if(scenario==='empty'&&u.pathname.endsWith('google-profile'))return route.fulfill({status:400,json:{status:'google-profile-empty'}});
    return route.fulfill({json:{status:body.mode==='skip'?'profile-skipped':'profile-saved',readerProfile:{fields:u.pathname.endsWith('google-profile')?fields:body,reviewed:body.mode==='save'}}});
   }
-  if(u.pathname==='/ask/reader-profile-client.js')return route.fulfill({body:js,contentType:'text/javascript'});
+  if(u.pathname==='/ask/_assets/reader-profile-client.js')return route.fulfill({body:js,contentType:'text/javascript'});
   if(req.isNavigationRequest())return route.fulfill({body:u.hostname==='materials.pinnacleblooms.org'?'LIBRARY RETURN':html,contentType:'text/html; charset=utf-8',...(mirracles?{headers:readerProfileResponseHeaders}:{})});
   return route.abort();
  });
- const forwarded=['skip-forwarded','pending-skip'].includes(scenario);await page.goto('https://pinnacleblooms.org'+(mirracles?'/allmirracles':'/ask')+(forwarded?'?reader_return=%2Fmaterials%2Fsample-topic':''));await page.addScriptTag({url:'https://pinnacleblooms.org/ask/reader-profile-client.js'});
+ const forwarded=['skip-forwarded','pending-skip'].includes(scenario);await page.goto('https://pinnacleblooms.org'+(mirracles?'/allmirracles':'/ask')+(forwarded?'?reader_return=%2Fmaterials%2Fsample-topic':''));await page.addScriptTag({url:'https://pinnacleblooms.org/ask/_assets/reader-profile-client.js'});
  if(scenario==='anonymous'){await page.getByRole('button',{name:'Google sign-in fixture'}).waitFor();assert(await page.locator('#ask-reader-gate').evaluate(e=>e.matches(':modal')));assert.equal(await page.locator('[data-ask-google-form] [name=library]').inputValue(),'mirracles');assert.equal(await page.locator('[name=completeProfile]').inputValue(),'yes');assert.deepEqual(errors,[]);records.push({width,scenario,status:'PASS',requestCount:requests.length});await page.close();continue;}
  const dialog=page.locator('#ask-reader-details');
  if(scenario==='reviewed'){await page.locator('[data-ask-profile]').waitFor({state:'visible'});assert(!await dialog.isVisible());}
