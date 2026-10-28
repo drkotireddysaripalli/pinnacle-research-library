@@ -9,8 +9,8 @@ export function profileFields(input){
 }
 export function readerProfile(user){
  const stored=user?.app_metadata?.ask_profile||{},fields=stored.fields||{};
- const safe=profileFields(Object.fromEntries(keys.map(k=>[k,fields[k]?.value||''])))||{phone:'',city:'',postal_code:'',country:''};
- return {fields:safe,reviewed:!!(stored.reviewed_at||stored.skipped_at),sources:Object.fromEntries(keys.filter(k=>safe[k]).map(k=>[k,['google','user'].includes(fields[k]?.source)?fields[k].source:'unknown']))};
+ const safe=profileFields(Object.fromEntries(keys.map(k=>[k,fields[k]?.value||(k==='phone'&&!fields[k]&&user.phone?profilePhone('+'+String(user.phone).replace(/^\+/,'')):'')||''])))||{phone:'',city:'',postal_code:'',country:''};
+ return {fields:safe,reviewed:!!(stored.reviewed_at||stored.skipped_at),sources:Object.fromEntries(keys.filter(k=>safe[k]).map(k=>[k,['google','user'].includes(fields[k]?.source)?fields[k].source:k==='phone'&&!fields[k]&&user.phone?'account':'unknown']))};
 }
 function adminClient(env){return createClient(env.SUPABASE_URL,env.ASK_AUTH_SECRET_KEY,{auth:{persistSession:false,autoRefreshToken:false},global:{fetch:(input,init)=>fetch(input,{...init,signal:AbortSignal.timeout(8000)})}});}
 export async function saveReaderProfile(env,user,input,mode='user'){

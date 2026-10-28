@@ -35,7 +35,7 @@ if(gate){
  if(entry.forwarded)gate.querySelector<HTMLElement>('#ask-gate-title')!.textContent=library==='materials'?'Pinnacle Materials':'Pinnacle Interventions';
  signIn.querySelector<HTMLInputElement>('[name=library]')!.value=library;
  for(const form of [signIn,signOut])form.querySelector<HTMLInputElement>('[name=returnTo]')!.value=returnTo;
- const lock=()=>{verification.close();readerDetails.update(null,'');profile.hidden=true;profile.open=false;openButton.hidden=false;if(!gate.open)gate.showModal();};
+ const lock=()=>{verification.close();readerDetails.update(null,'');profile.hidden=true;profile.open=false;openButton.hidden=false;if(!gate.matches(':modal')){if(gate.open)gate.close();gate.showModal();}};
  gate.addEventListener('cancel',event=>event.preventDefault());
  openButton.addEventListener('click',lock);
  let pending=false;
@@ -47,7 +47,7 @@ if(gate){
    if(!response.ok)throw Error('session');
    const data=await response.json();if(!/^[0-9a-f-]{36}$/.test(data.csrf||''))throw Error('session');
    verification.update(data.profile?.whatsappVerified===true,data.csrf);
-   readerDetails.update(data.profile?data.readerProfile||null:null,data.csrf,data.googleProfileImport);
+   readerDetails.update(data.profile?data.readerProfile||null:null,data.csrf,data.googleProfileImport,data.profile?.whatsappVerified===true);
    for(const form of [signIn,signOut])form.querySelector<HTMLInputElement>('[name=csrf]')!.value=data.csrf;
    if(data.profile){
     const name=String(data.profile.name||'Ask reader');
